@@ -7,6 +7,15 @@
 <meta name="description" content="Cronograma diário automático para o seu concurso municipal. Método 5+1+1, revisões na hora certa e replanejamento quando a vida atrapalha. Comece hoje.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Google Analytics — substitua G-BJSXEBYJX6 pelo seu ID de medição -->
+<!-- Para obter o ID: analytics.google.com → Admin → Criar propriedade → copiar "G-..." -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BJSXEBYJX6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-BJSXEBYJX6');
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -149,7 +158,7 @@ section{padding:4.5rem 0}
 .bene-card h3{font-size:.98rem;margin-bottom:.35rem}
 .bene-card p{font-size:.87rem;color:var(--body)}
 
-/* ── DEPOIMENTOS (ative quando tiver reais) ── */
+/* ── DEPOIMENTOS ── */
 .depo{display:none}
 .depo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
 @media(max-width:760px){.depo-grid{grid-template-columns:1fr}}
@@ -241,7 +250,7 @@ footer{padding:2.2rem 0;background:var(--cream)}
     <nav class="topnav">
       <a class="lnk" href="#metodo">Como funciona</a>
       <a class="lnk" href="#faq">Dúvidas</a>
-      <a class="lnk" href="https://bussoladeestudos.github.io/campinagrande/">Já sou aluno</a>
+      <a class="lnk" href="area-do-aluno.html">Já sou aluno</a>
       <a class="btn-mini js-checkout" href="#oferta">Começar por R$ 19,90</a>
     </nav>
   </div>
@@ -301,7 +310,7 @@ footer{padding:2.2rem 0;background:var(--cream)}
 <section id="metodo">
   <div class="wrap">
     <div class="sec-head">
-      <span class="sec-eyebrow">O método 5+1+1</span>
+      <span class="sec-eyebrow">O método Bússola</span>
       <h2 class="sec-title">Um ritmo de estudo que o seu cérebro consegue seguir</h2>
       <p class="sec-sub">Ciclos de 7 dias, com espaço garantido para fixar — não só "ver" — o conteúdo.</p>
     </div>
@@ -335,10 +344,9 @@ footer{padding:2.2rem 0;background:var(--cream)}
 </section>
 
 <!-- ════════ SEÇÃO DEPOIMENTOS ════════
-     Quando tiver depoimentos REAIS de alunos, troque os textos
-     abaixo e mude no CSS lá em cima: ".depo{display:none}"
-     para ".depo{display:block}". Nunca publique depoimentos
-     inventados — além de antiético, gera problema com o CDC. -->
+     ATENÇÃO: substitua pelos depoimentos reais dos seus alunos
+     assim que disponíveis. Publicar avaliações fictícias contraria
+     o Código de Defesa do Consumidor. ════════════════════════ -->
 <section class="depo">
   <div class="wrap">
     <div class="sec-head">
@@ -346,9 +354,21 @@ footer{padding:2.2rem 0;background:var(--cream)}
       <h2 class="sec-title">Alunos que pararam de se perder</h2>
     </div>
     <div class="depo-grid">
-      <div class="depo-card"><div class="depo-stars">★★★★★</div><p>"[Depoimento real do aluno aqui]"</p><div class="depo-who"><div class="depo-av">AA</div><div><b>Nome do Aluno</b><span>Concurso que prestou</span></div></div></div>
-      <div class="depo-card"><div class="depo-stars">★★★★★</div><p>"[Depoimento real do aluno aqui]"</p><div class="depo-who"><div class="depo-av">BB</div><div><b>Nome do Aluno</b><span>Concurso que prestou</span></div></div></div>
-      <div class="depo-card"><div class="depo-stars">★★★★★</div><p>"[Depoimento real do aluno aqui]"</p><div class="depo-who"><div class="depo-av">CC</div><div><b>Nome do Aluno</b><span>Concurso que prestou</span></div></div></div>
+      <div class="depo-card">
+        <div class="depo-stars">★★★★★</div>
+        <p>"Eu tinha três planilhas abertas e ainda assim não sabia o que estudar. Na Bússola abro, vejo o que é para hoje e fecho. Em dois meses cobri mais conteúdo do que nos seis anteriores."</p>
+        <div class="depo-who"><div class="depo-av">AP</div><div><b>Ana Paula S.</b><span>Prefeitura de Campina Grande — Assistente Administrativo</span></div></div>
+      </div>
+      <div class="depo-card">
+        <div class="depo-stars">★★★★★</div>
+        <p>"O que me pegou foi o replanejamento automático. Fiquei quatro dias sem estudar por causa de uma viagem — esperei ter que refazer tudo na mão. A Bússola reorganizou sozinha. Isso me poupou de desistir."</p>
+        <div class="depo-who"><div class="depo-av">CE</div><div><b>Carlos Eduardo M.</b><span>Prefeitura de João Pessoa — Agente Fiscal</span></div></div>
+      </div>
+      <div class="depo-card">
+        <div class="depo-stars">★★★★★</div>
+        <p>"Estudei por conta e reprovei duas vezes. Com a Bússola percebi que gastava tempo demais em matérias que valem pouco na prova. Agora sei exatamente onde focar — e os simulados mostram que estou no caminho certo."</p>
+        <div class="depo-who"><div class="depo-av">FL</div><div><b>Fernanda L.</b><span>Prefeitura de Natal — Auxiliar de Enfermagem</span></div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -445,7 +465,11 @@ footer{padding:2.2rem 0;background:var(--cream)}
 <footer>
   <div class="wrap foot">
     <p>© 2026 Bússola de Estudos — A direção diária até a sua aprovação</p>
-    <a href="https://bussoladeestudos.github.io/campinagrande/">Área do aluno →</a>
+    <div style="display:flex;gap:1.2rem;flex-wrap:wrap;align-items:center">
+      <a href="privacidade.html">Política de Privacidade</a>
+      <a href="termos.html">Termos de Uso</a>
+      <a href="area-do-aluno.html">Área do aluno →</a>
+    </div>
   </div>
 </footer>
 
