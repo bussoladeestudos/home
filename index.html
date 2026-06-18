@@ -228,6 +228,20 @@ footer{padding:2.2rem 0;background:var(--cream)}
 .stickybar .btn-cta{width:100%;padding:13px;font-size:.95rem}
 @media(max-width:680px){.stickybar{display:block}body{padding-bottom:70px}}
 </style>
+<!-- Firebase: redireciona aluno já logado direto para o app -->
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+<script>
+  firebase.initializeApp({
+    apiKey:     "AIzaSyB0PriDpriiVdrNohX8Ta9rn8nerRMiuRw",
+    authDomain: "bussola-de-estudos.firebaseapp.com",
+    projectId:  "bussola-de-estudos",
+    appId:      "1:512196016443:web:3d5aafce4c617d4d7d1f1e"
+  });
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) window.location.replace("app/");
+  });
+</script>
 </head>
 <body>
 
@@ -250,7 +264,7 @@ footer{padding:2.2rem 0;background:var(--cream)}
     <nav class="topnav">
       <a class="lnk" href="#metodo">Como funciona</a>
       <a class="lnk" href="#faq">Dúvidas</a>
-      <a class="lnk" href="area-do-aluno.html">Já sou aluno</a>
+      <a class="lnk" href="app/">Já sou aluno</a>
       <a class="btn-mini js-checkout" href="#oferta">Começar por R$ 19,90</a>
     </nav>
   </div>
@@ -468,7 +482,7 @@ footer{padding:2.2rem 0;background:var(--cream)}
     <div style="display:flex;gap:1.2rem;flex-wrap:wrap;align-items:center">
       <a href="privacidade.html">Política de Privacidade</a>
       <a href="termos.html">Termos de Uso</a>
-      <a href="area-do-aluno.html">Área do aluno →</a>
+      <a href="app/">Área do aluno →</a>
     </div>
   </div>
 </footer>
@@ -480,17 +494,4 @@ footer{padding:2.2rem 0;background:var(--cream)}
 <script>
 /* ════════════════════════════════════════════════════════════
    LINK DE CHECKOUT DO PRODUTO HOTMART
-   Produto: Bússola de Estudos — Concurso Prefeitura de Campina
-   Grande (ID 7926721). Todos os botões .js-checkout da página
-   passam a apontar para este link automaticamente.
-   ════════════════════════════════════════════════════════════ */
-const HOTMART_CHECKOUT_URL = "https://pay.hotmart.com/N106305634J";
-
-document.querySelectorAll(".js-checkout").forEach(a => {
-  a.href = HOTMART_CHECKOUT_URL;
-  a.target = "_blank";
-  a.rel = "noopener";
-});
-</script>
-</body>
-</html>
+ 
