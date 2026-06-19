@@ -1,0 +1,51 @@
+[
+  {
+    "id": "campina-grande-2026",
+    "municipio": "Campina Grande",
+    "estado": "PB",
+    "orgao": "Prefeitura Municipal",
+    "banca": "IDECAN",
+    "dataProva": "2026-08-30",
+    "edital": "Edital 01/2026",
+    "ativo": true,
+    "cargos": [
+      "Agente Administrativo",
+      "Professor Educação Infantil",
+      "Professor Anos Iniciais",
+      "Professor de Língua Portuguesa",
+      "Professor de Matemática",
+      "Supervisor Educacional"
+    ],
+    "descricao": "Concurso público com 525 vagas para cargos de nível médio e superior.",
+    "hotmartLink": "https://pay.hotmart.com/N106305634J"
+  },
+  {
+    "id": "sedes-df-2026",
+    "municipio": "Brasília",
+    "estado": "DF",
+    "orgao": "Secretaria de Desenvolvimento Social (SEDES/DF)",
+    "banca": "Instituto Quadrix",
+    "dataProva": "2026-09-06",
+    "edital": "Edital 01/2026 (Ret. 02/2026)",
+    "ativo": true,
+    "cargos": [
+      "Agente Social (TDAS)",
+      "Cuidador Social (TDAS)",
+      "Técnico Administrativo (TDAS)",
+      "Administração (EDAS)",
+      "Ciências Contábeis (EDAS)",
+      "Comunicação Social (EDAS)",
+      "Direito e Legislação (EDAS)",
+      "Economia (EDAS)",
+      "Educador Social (EDAS)",
+      "Estatística (EDAS)",
+      "Nutrição (EDAS)",
+      "Pedagogia (EDAS)",
+      "Psicologia (EDAS)",
+      "Serviço Social (EDAS)",
+      "Sociologia (EDAS)"
+    ],
+    "descricao": "Concurso com 2.596 vagas imediatas + cadastro de reserva para cargos de nível médio (TDAS) e superior (EDAS) nas secretarias de Desenvolvimento Social, da Mulher e de Justiça e Cidadania do DF.",
+    "hotmartLink": "https://pay.hotmart.com/N106305634J"
+  }
+]

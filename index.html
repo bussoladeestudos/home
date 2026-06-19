@@ -64,6 +64,28 @@ img{max-width:100%}
 .btn-mini:hover{background:#1FB456}
 @media(max-width:680px){.topnav a.lnk{display:none}}
 
+/* ── DROPDOWN CONCURSOS ── */
+.nav-drop-wrap{position:relative}
+.nav-drop-btn{background:none;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.88rem;font-weight:500;color:var(--body);display:flex;align-items:center;gap:.35rem;padding:4px 2px;transition:color .15s}
+.nav-drop-btn:hover,.nav-drop-btn[aria-expanded="true"]{color:var(--ink)}
+.nav-drop-badge{background:var(--green-viv);color:#fff;font-size:.6rem;font-weight:800;padding:2px 7px;border-radius:99px;font-family:'Plus Jakarta Sans',sans-serif;letter-spacing:.03em;line-height:1.4;display:none}
+.nav-drop-badge.visivel{display:inline-block}
+.nav-drop-arrow{font-size:.7rem;color:var(--green);transition:transform .2s;display:inline-block}
+.nav-drop-btn[aria-expanded="true"] .nav-drop-arrow{transform:rotate(180deg)}
+.nav-drop{position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%);width:280px;background:var(--white);border:1.5px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-md);display:none;z-index:200;overflow:hidden}
+.nav-drop-btn[aria-expanded="true"] + .nav-drop{display:block}
+.nav-drop-hd{font-size:.65rem;font-weight:800;text-transform:uppercase;letter-spacing:.09em;color:var(--soft);padding:.75rem 1rem .4rem;background:var(--cream);border-bottom:1px solid var(--line)}
+.nav-drop-item{display:flex;align-items:center;gap:.75rem;padding:.75rem 1rem;cursor:pointer;border-bottom:1px solid var(--line);transition:background .12s;text-decoration:none}
+.nav-drop-item:last-child{border-bottom:none}
+.nav-drop-item:hover{background:var(--green-soft)}
+.nav-drop-dot{width:34px;height:34px;border-radius:10px;background:var(--green-soft);border:1px solid var(--green-line);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0}
+.nav-drop-txt strong{display:block;font-family:'Plus Jakarta Sans',sans-serif;font-size:.82rem;color:var(--ink);font-weight:700;line-height:1.2}
+.nav-drop-txt small{font-size:.7rem;color:var(--soft)}
+.nav-drop-loading{padding:1rem;font-size:.85rem;color:var(--soft);text-align:center}
+.nav-drop-footer{padding:.7rem 1rem;background:var(--cream);border-top:1px solid var(--line);text-align:center}
+.nav-drop-footer a{font-size:.8rem;color:var(--green);font-weight:700;text-decoration:none}
+.nav-drop-footer a:hover{color:var(--ink)}
+
 /* ── PREÇO ── */
 .preco{text-align:center;margin-bottom:1.5rem;padding:1.2rem;background:var(--green-soft);border:1px solid var(--green-line);border-radius:var(--r-lg)}
 .preco-de{font-size:.88rem;color:var(--soft)}
@@ -122,6 +144,59 @@ section{padding:4.5rem 0}
 .sec-eyebrow{display:inline-block;font-size:.74rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:.7rem}
 .sec-title{font-size:clamp(1.5rem,3.2vw,2.1rem);font-weight:800;margin-bottom:.7rem}
 .sec-sub{color:var(--body);font-size:1rem}
+
+/* ── CONCURSOS DISPONÍVEIS ── */
+.conc-destaque{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.conc-layout{display:grid;grid-template-columns:270px 1fr;gap:0;border:1.5px solid var(--line);border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--shadow-md);background:var(--white)}
+@media(max-width:780px){.conc-layout{grid-template-columns:1fr}}
+.conc-sidebar{background:var(--cream);border-right:1px solid var(--line);padding:.7rem}
+@media(max-width:780px){.conc-sidebar{border-right:none;border-bottom:1px solid var(--line)}}
+.conc-sidebar-hd{font-size:.67rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--soft);padding:.35rem .6rem .55rem}
+.conc-nav-item{display:flex;align-items:center;gap:.8rem;padding:.8rem .9rem;border-radius:var(--r-md);cursor:pointer;border:1.5px solid transparent;margin-bottom:.25rem;transition:background .15s,border-color .15s}
+.conc-nav-item:hover{background:var(--cream-2);border-color:var(--line)}
+.conc-nav-item.ativo{background:var(--green-soft);border-color:var(--green-line)}
+.conc-nav-dot{width:38px;height:38px;border-radius:10px;background:var(--cream-2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:1.05rem;flex-shrink:0;transition:background .15s,border-color .15s}
+.conc-nav-item.ativo .conc-nav-dot{background:var(--green-viv);border-color:var(--green-viv)}
+.conc-nav-txt{flex:1;min-width:0}
+.conc-nav-txt strong{display:block;font-family:'Plus Jakarta Sans',sans-serif;font-size:.82rem;color:var(--ink);font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.conc-nav-txt span{font-size:.71rem;color:var(--soft)}
+.conc-detail{padding:2rem 2.5rem;background:var(--white)}
+@media(max-width:780px){.conc-detail{padding:1.4rem 1.5rem}}
+.conc-detail-badge{display:inline-flex;align-items:center;gap:5px;background:var(--green-soft);color:var(--green);font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:4px 12px;border-radius:99px;margin-bottom:.9rem}
+.conc-detail-nome{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.3rem;font-weight:800;color:var(--ink);margin-bottom:.3rem;line-height:1.25}
+.conc-detail-desc{font-size:.9rem;color:var(--body);margin-bottom:1.1rem}
+.conc-detail-meta{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.25rem}
+.conc-detail-meta .m{display:inline-flex;align-items:center;gap:.4rem;font-size:.82rem;color:var(--body);background:var(--cream);border:1px solid var(--line);border-radius:var(--r-sm);padding:5px 12px}
+.conc-cargos-hd{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--soft);margin-bottom:.55rem}
+.conc-cargos-list{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.6rem}
+.conc-cargo-tag{font-size:.8rem;background:var(--cream);border:1px solid var(--line);border-radius:var(--r-sm);padding:4px 12px;color:var(--body)}
+.conc-detail-cta{display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.conc-detail-cta a.c-comprar{background:var(--green-viv);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:.95rem;padding:13px 28px;border-radius:99px;text-decoration:none;box-shadow:var(--shadow-cta);transition:background .15s,transform .15s}
+.conc-detail-cta a.c-comprar:hover{background:#1FB456;transform:translateY(-1px)}
+.conc-detail-cta span{font-size:.8rem;color:var(--soft)}
+/* menu trigger */
+.conc-menu-trigger{width:100%;display:flex;align-items:center;gap:.75rem;background:var(--white);border:1.5px solid var(--line);border-radius:var(--r-md);padding:.9rem 1rem;cursor:pointer;text-align:left;transition:border-color .15s,box-shadow .15s;box-shadow:var(--shadow-sm)}
+.conc-menu-trigger:hover{border-color:var(--green-line);box-shadow:0 4px 14px rgba(34,197,94,.12)}
+.conc-menu-icon{font-size:1.3rem;flex-shrink:0}
+.conc-menu-label{flex:1;min-width:0;display:flex;flex-direction:column;gap:1px}
+.conc-menu-label strong{font-family:'Plus Jakarta Sans',sans-serif;font-size:.88rem;color:var(--ink);font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.conc-menu-label small{font-size:.72rem;color:var(--soft)}
+.conc-menu-arrow{font-size:.9rem;color:var(--green);flex-shrink:0;transition:transform .2s}
+.conc-menu-arrow.aberto{transform:rotate(180deg)}
+.conc-lista{display:none;margin-top:.5rem;background:var(--white);border:1.5px solid var(--line);border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-md)}
+.conc-lista.aberta{display:block}
+.conc-lista-hd{font-size:.65rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--soft);padding:.6rem 1rem .4rem;background:var(--cream);border-bottom:1px solid var(--line)}
+.conc-lista-item{display:flex;flex-direction:column;gap:2px;padding:.75rem 1rem;cursor:pointer;border-bottom:1px solid var(--line);transition:background .12s}
+.conc-lista-item:last-child{border-bottom:none}
+.conc-lista-item:hover{background:var(--green-soft)}
+.conc-lista-item.ativo{background:var(--green-soft)}
+.conc-lista-item span{font-family:'Plus Jakarta Sans',sans-serif;font-size:.84rem;font-weight:700;color:var(--ink)}
+.conc-lista-item small{font-size:.72rem;color:var(--soft)}
+.conc-lista-item.ativo span{color:var(--green)}
+button.c-comprar{background:var(--green-viv);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:.95rem;padding:13px 28px;border-radius:99px;border:none;cursor:pointer;box-shadow:var(--shadow-cta);transition:background .15s,transform .15s}
+button.c-comprar:hover{background:#1FB456;transform:translateY(-1px)}
+.conc-skeleton{background:var(--cream-2);border-radius:var(--r-lg);animation:pulse 1.5s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
 
 /* ── DOR ── */
 .dor{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -262,6 +337,16 @@ footer{padding:2.2rem 0;background:var(--cream)}
       <div><div class="brand-name">Bússola</div><div class="brand-sub">A direção diária até a aprovação</div></div>
     </a>
     <nav class="topnav">
+      <div class="nav-drop-wrap" id="navConcursos">
+        <button class="lnk nav-drop-btn" aria-expanded="false">
+          Concursos <span class="nav-drop-badge" id="navConcBadge"></span> <span class="nav-drop-arrow">▾</span>
+        </button>
+        <div class="nav-drop" id="navDropMenu">
+          <div class="nav-drop-inner" id="navDropList">
+            <div class="nav-drop-loading">Carregando...</div>
+          </div>
+        </div>
+      </div>
       <a class="lnk" href="#metodo">Como funciona</a>
       <a class="lnk" href="#faq">Dúvidas</a>
       <a class="lnk" href="app/">Já sou aluno</a>
@@ -302,6 +387,27 @@ footer{padding:2.2rem 0;background:var(--cream)}
         <div class="mock-task t3"><div class="ic">⭐</div><p><b>Ponto fraco detectado:</b> Lei Orgânica — reforço agendado p/ sábado</p></div>
       </div>
       <div class="float-badge fb2">✅ Plano refeito após 3 dias parado</div>
+    </div>
+  </div>
+</section>
+
+<section id="concursos" class="conc-destaque">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-eyebrow">Editais disponíveis</span>
+      <h2 class="sec-title">Concursos com a Bússola pronta</h2>
+      <p class="sec-sub">Matérias, pesos e tópicos já configurados. Escolha seu concurso e comece hoje.</p>
+    </div>
+    <div class="conc-layout" id="concLayout">
+      <div class="conc-sidebar">
+        <div class="conc-skeleton" style="height:58px;margin-bottom:.4rem;border-radius:var(--r-md)"></div>
+      </div>
+      <div class="conc-detail">
+        <div class="conc-skeleton" style="height:24px;width:40%;margin-bottom:.8rem"></div>
+        <div class="conc-skeleton" style="height:32px;width:75%;margin-bottom:.5rem"></div>
+        <div class="conc-skeleton" style="height:18px;width:90%;margin-bottom:1rem"></div>
+        <div class="conc-skeleton" style="height:120px"></div>
+      </div>
     </div>
   </div>
 </section>
@@ -456,7 +562,7 @@ footer{padding:2.2rem 0;background:var(--cream)}
       <h2 class="sec-title">O que os candidatos perguntam</h2>
     </div>
     <div class="faq-list">
-      <details><summary>Para qual concurso a Bússola funciona?</summary><p>O acesso é vendido por concurso: você recebe a Bússola já configurado com o edital do certame que vai prestar — matérias, pesos e tópicos prontos. Confira na página de compra qual concurso está disponível nesta turma.</p></details>
+      <details><summary>Para qual concurso a Bússola funciona?</summary><p>Um acesso dá direito a todos os concursos disponíveis na plataforma. Confira a seção "Editais disponíveis" acima para ver os concursos ativos. Dentro do app, você seleciona o seu cargo e a Bússola monta o cronograma com as matérias, pesos e tópicos do edital correspondente.</p></details>
       <details><summary>A Bússola substitui curso ou apostila?</summary><p>Não — e nem deveria. Ele organiza o seu estudo: diz o que estudar a cada dia, agenda as revisões na hora certa e mostra onde você está fraco. Você usa o material que preferir junto com ele.</p></details>
       <details><summary>E se eu ficar dias sem estudar?</summary><p>Acontece com todo mundo. A Bússola detecta os dias perdidos e oferece três saídas: redistribuir os tópicos nos próximos dias, pular e seguir em frente, ou concentrar a recuperação no sábado. O plano se adapta a você — não o contrário.</p></details>
       <details><summary>Preciso instalar alguma coisa? Funciona no celular?</summary><p>Nada de instalação. A Bússola roda direto no navegador do celular, tablet ou computador. Basta acessar o link que você recebe após a compra.</p></details>
@@ -466,6 +572,202 @@ footer{padding:2.2rem 0;background:var(--cream)}
     </div>
   </div>
 </section>
+
+<script>
+/* ── DROPDOWN TOPBAR ── */
+(async function initNavDrop() {
+  const btn   = document.querySelector('.nav-drop-btn');
+  const menu  = document.getElementById('navDropMenu');
+  const list  = document.getElementById('navDropList');
+  const badge = document.getElementById('navConcBadge');
+  if (!btn || !menu) return;
+
+  // Toggle dropdown on click
+  btn.addEventListener('click', e => {
+    e.stopPropagation();
+    const open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+  });
+
+  // Close on outside click
+  document.addEventListener('click', () => {
+    btn.setAttribute('aria-expanded', 'false');
+  });
+  menu.addEventListener('click', e => e.stopPropagation());
+
+  // Load concursos
+  try {
+    const r = await fetch('concursos/index.json', { cache: 'no-store' });
+    if (!r.ok) throw new Error();
+    const concursos = await r.json();
+    const ativos = concursos.filter(c => c.ativo);
+    if (!ativos.length) { list.innerHTML = '<div class="nav-drop-loading">Nenhum concurso ativo.</div>'; return; }
+
+    const sorted = [...ativos].sort((a, b) => a.municipio.localeCompare(b.municipio, 'pt-BR'));
+    const emojis = ["🏙️","🌆","🏛️","🌇","🏘️","🌃","🏢","🎓"];
+
+    // Badge com quantidade
+    badge.textContent = ativos.length + ' disponível' + (ativos.length > 1 ? 'is' : '');
+    badge.classList.add('visivel');
+
+    // Montar HTML do dropdown
+    list.innerHTML =
+      `<div class="nav-drop-hd">Concursos disponíveis</div>` +
+      sorted.map((c, i) => {
+        const dt = c.dataProva ? (() => { const [y,m,d]=c.dataProva.split('-'); return `${d}/${m}/${y}`; })() : '';
+        return `<div class="nav-drop-item" data-id="${c.id}">
+          <div class="nav-drop-dot">${emojis[i % emojis.length]}</div>
+          <div class="nav-drop-txt">
+            <strong>${c.municipio} — ${c.estado}</strong>
+            <small>${c.orgao}${dt ? ' · Prova: ' + dt : ''}</small>
+          </div>
+        </div>`;
+      }).join('') +
+      `<div class="nav-drop-footer"><a href="#concursos">Ver todos os detalhes ↓</a></div>`;
+
+    // Ao clicar num item: fecha dropdown + scrolla para seção + seleciona concurso
+    list.querySelectorAll('.nav-drop-item').forEach(el => {
+      el.addEventListener('click', () => {
+        btn.setAttribute('aria-expanded', 'false');
+        document.getElementById('concursos').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Dispara seleção na seção principal se já renderizada
+        setTimeout(() => {
+          const target = document.querySelector(`.conc-lista-item[data-id="${el.dataset.id}"]`);
+          if (target) target.click();
+        }, 600);
+      });
+    });
+
+  } catch(e) {
+    // Fallback estático
+    badge.textContent = '1 disponível';
+    badge.classList.add('visivel');
+    list.innerHTML =
+      `<div class="nav-drop-hd">Concursos disponíveis</div>
+       <div class="nav-drop-item" onclick="document.getElementById('concursos').scrollIntoView({behavior:'smooth'});document.querySelector('.nav-drop-btn').setAttribute('aria-expanded','false')">
+         <div class="nav-drop-dot">🏙️</div>
+         <div class="nav-drop-txt">
+           <strong>Campina Grande — PB</strong>
+           <small>Prefeitura Municipal · Prova: 30/08/2026</small>
+         </div>
+       </div>
+       <div class="nav-drop-footer"><a href="#concursos">Ver detalhes ↓</a></div>`;
+  }
+})();
+
+/* ── SEÇÃO CONCURSOS ── */
+(async function carregarConcursos() {
+  const layout = document.getElementById("concLayout");
+  if (!layout) return;
+
+  function fmtData(iso) {
+    const [y, m, d] = iso.split("-");
+    return `${d}/${m}/${y}`;
+  }
+
+  function abrirLink(url) {
+    if (url && url.startsWith('http')) {
+      window.open(url, '_blank');
+    } else {
+      document.getElementById('oferta').scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  function renderDetail(c) {
+    return `
+      <span class="conc-detail-badge">📍 ${c.municipio} — ${c.estado}</span>
+      <div class="conc-detail-nome">${c.orgao}</div>
+      <p class="conc-detail-desc">${c.descricao || ""}</p>
+      <div class="conc-detail-meta">
+        <span class="m">📅 Prova: ${fmtData(c.dataProva)}</span>
+        <span class="m">🏛️ Banca: ${c.banca}</span>
+        <span class="m">📋 ${c.edital}</span>
+      </div>
+      <div class="conc-cargos-hd">Cargos disponíveis</div>
+      <div class="conc-cargos-list">${c.cargos.map(g => `<span class="conc-cargo-tag">${g}</span>`).join("")}</div>
+      <div class="conc-detail-cta">
+        <button class="c-comprar btn-comprar-conc" data-url="${c.hotmartLink || ''}">Garantir acesso — R$ 19,90 →</button>
+        <span>Acesso imediato · garantia de 7 dias</span>
+      </div>`;
+  }
+
+  function render(ativos, activeId, listOpen) {
+    const sorted = [...ativos].sort((a, b) => a.municipio.localeCompare(b.municipio, 'pt-BR'));
+    const active = ativos.find(c => c.id === activeId) || ativos[0];
+
+    layout.innerHTML =
+      `<div class="conc-sidebar">
+        <button class="conc-menu-trigger" id="concMenuTrigger">
+          <span class="conc-menu-icon">📋</span>
+          <span class="conc-menu-label"><strong>${active.municipio} — ${active.estado}</strong><small>${active.orgao}</small></span>
+          <span class="conc-menu-arrow${listOpen ? ' aberto' : ''}">▾</span>
+        </button>
+        <div class="conc-lista${listOpen ? ' aberta' : ''}" id="concLista">
+          <div class="conc-lista-hd">Todos os concursos — ordem alfabética</div>
+          ${sorted.map(c => `
+            <div class="conc-lista-item${c.id === activeId ? " ativo" : ""}" data-id="${c.id}">
+              <span>${c.municipio} — ${c.estado}</span>
+              <small>${c.orgao}</small>
+            </div>`).join("")}
+        </div>
+      </div>
+      <div class="conc-detail" id="concDetail">${renderDetail(active)}</div>`;
+
+    document.getElementById("concMenuTrigger").addEventListener("click", () => {
+      render(ativos, activeId, !listOpen);
+    });
+
+    layout.querySelectorAll(".conc-lista-item").forEach(el => {
+      el.addEventListener("click", () => render(ativos, el.dataset.id, false));
+    });
+
+    layout.querySelectorAll(".btn-comprar-conc").forEach(btn => {
+      btn.addEventListener("click", () => abrirLink(btn.dataset.url));
+    });
+  }
+
+  try {
+    const r = await fetch("concursos/index.json", { cache: "no-store" });
+    if (!r.ok) throw new Error();
+    const concursos = await r.json();
+    const ativos = concursos.filter(c => c.ativo);
+    if (!ativos.length) { layout.innerHTML = ""; return; }
+    render(ativos, ativos[0].id, false);
+  } catch (e) {
+    layout.innerHTML = `
+      <div class="conc-sidebar">
+        <button class="conc-menu-trigger">
+          <span class="conc-menu-icon">📋</span>
+          <span class="conc-menu-label"><strong>Campina Grande — PB</strong><small>Prefeitura Municipal</small></span>
+          <span class="conc-menu-arrow">▾</span>
+        </button>
+      </div>
+      <div class="conc-detail">
+        <span class="conc-detail-badge">📍 Campina Grande — PB</span>
+        <div class="conc-detail-nome">Prefeitura Municipal de Campina Grande</div>
+        <p class="conc-detail-desc">Concurso público com 525 vagas para cargos de nível médio e superior.</p>
+        <div class="conc-detail-meta">
+          <span class="m">📅 Prova: 30/08/2026</span>
+          <span class="m">🏛️ Banca: IDECAN</span>
+          <span class="m">📋 Edital 01/2026</span>
+        </div>
+        <div class="conc-cargos-hd">Cargos disponíveis</div>
+        <div class="conc-cargos-list">
+          <span class="conc-cargo-tag">Agente Administrativo</span>
+          <span class="conc-cargo-tag">Prof. Educação Infantil</span>
+          <span class="conc-cargo-tag">Prof. Anos Iniciais</span>
+          <span class="conc-cargo-tag">Prof. de Língua Portuguesa</span>
+          <span class="conc-cargo-tag">Prof. de Matemática</span>
+          <span class="conc-cargo-tag">Supervisor Educacional</span>
+        </div>
+        <div class="conc-detail-cta">
+          <button class="c-comprar btn-comprar-conc" onclick="window.open('https://pay.hotmart.com/N106305634J','_blank')">Garantir acesso — R$ 19,90 →</button>
+          <span>Acesso imediato · garantia de 7 dias</span>
+        </div>
+      </div>`;
+  }
+})();
+</script>
 
 <section class="final">
   <div class="wrap">
@@ -494,4 +796,20 @@ footer{padding:2.2rem 0;background:var(--cream)}
 <script>
 /* ════════════════════════════════════════════════════════════
    LINK DE CHECKOUT DO PRODUTO HOTMART
- 
+   Cole aqui o link do seu produto (ex: https://pay.hotmart.com/XXXXX)
+   ════════════════════════════════════════════════════════════ */
+const HOTMART_CHECKOUT_URL = 'https://pay.hotmart.com/N106305634J';
+
+document.querySelectorAll('.js-checkout').forEach(function(el) {
+  el.addEventListener('click', function(e) {
+    e.preventDefault();
+    if (HOTMART_CHECKOUT_URL) {
+      window.open(HOTMART_CHECKOUT_URL, '_blank');
+    } else {
+      document.getElementById('oferta').scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+</script>
+</body>
+</html>
