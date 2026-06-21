@@ -721,43 +721,36 @@ footer{padding:2.2rem 0;background:var(--cream)}
   });
   menu.addEventListener('click', e => e.stopPropagation());
 
-  try {
-    const r = await fetch('certificacoes/cfp.json', { cache: 'no-store' });
-    if (!r.ok) throw new Error();
-    const cfp = await r.json();
+  // Carrega as 3 certificações em paralelo
+  const CERTS_LIST = [
+    { file: 'certificacoes/cfp.json',   fallback: { id:'cfp',   nome:'CFP® — Certified Financial Planner', organizacao:'PLANEJAR', area:'Planejamento Financeiro', nivel:'Avançado', modulos:[{numero:1,nome:'Planejamento Financeiro e Ética',descricao:''},{numero:2,nome:'Gestão Financeira',descricao:''},{numero:3,nome:'Planejamento de Investimentos',descricao:''},{numero:4,nome:'Planejamento de Aposentadoria',descricao:''},{numero:5,nome:'Gestão de Riscos e Seguros',descricao:''},{numero:6,nome:'Planejamento Tributário',descricao:''},{numero:7,nome:'Planejamento Patrimonial e Sucessório',descricao:''},{numero:8,nome:'Psicologia no Planejamento Financeiro',descricao:''}], descricao:'A certificação CFP® é o padrão global de excelência para planejadores financeiros, reconhecida em mais de 27 países.', hotmartLink:'https://pay.hotmart.com/N106305634J' } },
+    { file: 'certificacoes/ca600.json', fallback: { id:'ca600', nome:'CA-600 — Crédito Imobiliário', organizacao:'ABECIP', area:'Crédito Imobiliário', nivel:'Intermediário', modulos:[{numero:1,nome:'Sistema Financeiro Nacional',descricao:''},{numero:2,nome:'Sistema Financeiro da Habitação',descricao:''},{numero:3,nome:'Sistema de Financiamento Imobiliário',descricao:''},{numero:4,nome:'Garantias Imobiliárias',descricao:''},{numero:5,nome:'Produtos para Pessoa Física',descricao:''},{numero:6,nome:'Seguros Habitacionais',descricao:''},{numero:7,nome:'Custos e Tributação',descricao:''},{numero:8,nome:'LGPD',descricao:''},{numero:9,nome:'Código de Defesa do Consumidor',descricao:''},{numero:10,nome:'Ouvidoria e Ética',descricao:''},{numero:11,nome:'Matemática Financeira',descricao:''},{numero:12,nome:'Pós-Contratação',descricao:''}], descricao:'Certificação ABECIP para crédito imobiliário, abrangendo SFH, SFI, garantias, produtos, seguros habitacionais e matemática financeira.' } },
+    { file: 'certificacoes/fbb100.json',fallback: { id:'fbb100',nome:'FBB100 — Certificação Profissional FEBRABAN', organizacao:'FEBRABAN', area:'Correspondente Bancário', nivel:'Básico / Intermediário', modulos:[{numero:1,nome:'Sistema Financeiro Nacional e Correspondente',descricao:''},{numero:2,nome:'IOF e Prevenção à Lavagem de Dinheiro',descricao:''},{numero:3,nome:'Matemática Financeira',descricao:''},{numero:4,nome:'Crédito: Conceitos e Modalidades',descricao:''},{numero:5,nome:'Relacionamento com o Consumidor e Ética',descricao:''},{numero:6,nome:'Crédito Consignado — Legislação Específica',descricao:''},{numero:7,nome:'Financiamento de Veículos e LGPD',descricao:''}], descricao:'Certificação FEBRABAN para correspondentes bancários: Consignado, CDC e Financiamento de Veículos. Atende à Resolução CMN 4.935.' } }
+  ];
 
-    badge.textContent = '1 disponível';
-    badge.classList.add('visivel');
+  const certs = await Promise.all(CERTS_LIST.map(async c => {
+    try {
+      const r = await fetch(c.file, { cache: 'no-store' });
+      return r.ok ? await r.json() : c.fallback;
+    } catch(e) { return c.fallback; }
+  }));
 
-    list.innerHTML =
-      `<div class="nav-drop-hd">Certificações disponíveis</div>
-       <div class="nav-drop-item cert-item" id="navCertCFP">
+  badge.textContent = `${certs.length} disponíveis`;
+  badge.classList.add('visivel');
+  const scrollCert = () => {
+    btn.setAttribute('aria-expanded', 'false');
+    document.getElementById('certificacoes').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+  list.innerHTML = `<div class="nav-drop-hd">Certificações disponíveis</div>`
+    + certs.map(c => `
+       <div class="nav-drop-item cert-item" onclick="(${scrollCert.toString()})()">
          <div class="nav-drop-dot" style="background:var(--blue-soft);border-color:var(--blue-line)">📜</div>
          <div class="nav-drop-txt">
-           <strong>${cfp.nome}</strong>
-           <small>${cfp.organizacao} · ${cfp.area}</small>
+           <strong>${c.nome}</strong>
+           <small>${c.organizacao} · ${c.area}</small>
          </div>
-       </div>
-       <div class="nav-drop-footer"><a href="#certificacoes" style="color:var(--blue)">Ver todos os detalhes ↓</a></div>`;
-
-    document.getElementById('navCertCFP').addEventListener('click', () => {
-      btn.setAttribute('aria-expanded', 'false');
-      document.getElementById('certificacoes').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  } catch(e) {
-    badge.textContent = '1 disponível';
-    badge.classList.add('visivel');
-    list.innerHTML =
-      `<div class="nav-drop-hd">Certificações disponíveis</div>
-       <div class="nav-drop-item cert-item" onclick="document.getElementById('certificacoes').scrollIntoView({behavior:'smooth'});document.getElementById('navCertBtn').setAttribute('aria-expanded','false')">
-         <div class="nav-drop-dot" style="background:var(--blue-soft);border-color:var(--blue-line)">📜</div>
-         <div class="nav-drop-txt">
-           <strong>CFP® — Certified Financial Planner</strong>
-           <small>PLANEJAR · Planejamento Financeiro</small>
-         </div>
-       </div>
-       <div class="nav-drop-footer"><a href="#certificacoes" style="color:var(--blue)">Ver detalhes ↓</a></div>`;
-  }
+       </div>`).join('')
+    + `<div class="nav-drop-footer"><a href="#certificacoes" style="color:var(--blue)">Ver todos os detalhes ↓</a></div>`;
 })();
 
 /* ── SEÇÃO CERTIFICAÇÕES ── */
@@ -765,82 +758,70 @@ footer{padding:2.2rem 0;background:var(--cream)}
   const layout = document.getElementById("certLayout");
   if (!layout) return;
 
-  function renderCertDetail(cfp) {
+  const CERTS_LIST = [
+    { file: 'certificacoes/cfp.json',    fallback: { id:'cfp',    nome:'CFP® — Certified Financial Planner',      organizacao:'PLANEJAR', area:'Planejamento Financeiro',   nivel:'Avançado',              descricao:'A certificação CFP® é o padrão global de excelência para planejadores financeiros, reconhecida em mais de 27 países.', hotmartLink:'https://pay.hotmart.com/N106305634J', modulos:[{numero:1,nome:'Planejamento Financeiro e Ética',descricao:''},{numero:2,nome:'Gestão Financeira',descricao:''},{numero:3,nome:'Planejamento de Investimentos e Gestão de Ativos',descricao:''},{numero:4,nome:'Planejamento de Aposentadoria',descricao:''},{numero:5,nome:'Gestão de Riscos e Seguros',descricao:''},{numero:6,nome:'Planejamento Tributário',descricao:''},{numero:7,nome:'Planejamento Patrimonial e Sucessório',descricao:''},{numero:8,nome:'Psicologia no Planejamento Financeiro',descricao:''}] } },
+    { file: 'certificacoes/ca600.json',  fallback: { id:'ca600',  nome:'CA-600 — Crédito Imobiliário',            organizacao:'ABECIP',   area:'Crédito Imobiliário',       nivel:'Intermediário',         descricao:'Certificação ABECIP para crédito imobiliário, abrangendo SFH, SFI, garantias, produtos, seguros habitacionais e matemática financeira.', modulos:[{numero:1,nome:'Sistema Financeiro Nacional',descricao:''},{numero:2,nome:'Sistema Financeiro da Habitação',descricao:''},{numero:3,nome:'Sistema de Financiamento Imobiliário',descricao:''},{numero:4,nome:'Garantias Imobiliárias',descricao:''},{numero:5,nome:'Produtos para Pessoa Física',descricao:''},{numero:6,nome:'Seguros Habitacionais',descricao:''},{numero:7,nome:'Custos e Tributação',descricao:''},{numero:8,nome:'LGPD',descricao:''},{numero:9,nome:'Código de Defesa do Consumidor',descricao:''},{numero:10,nome:'Ouvidoria e Ética',descricao:''},{numero:11,nome:'Matemática Financeira',descricao:''},{numero:12,nome:'Pós-Contratação',descricao:''}] } },
+    { file: 'certificacoes/fbb100.json', fallback: { id:'fbb100', nome:'FBB100 — Certificação Profissional FEBRABAN', organizacao:'FEBRABAN', area:'Correspondente Bancário', nivel:'Básico / Intermediário', descricao:'Certificação FEBRABAN para correspondentes bancários: Consignado, CDC e Financiamento de Veículos. Atende à Resolução CMN 4.935.', modulos:[{numero:1,nome:'Sistema Financeiro Nacional e Correspondente',descricao:''},{numero:2,nome:'IOF e Prevenção à Lavagem de Dinheiro',descricao:''},{numero:3,nome:'Matemática Financeira',descricao:''},{numero:4,nome:'Crédito: Conceitos e Modalidades',descricao:''},{numero:5,nome:'Relacionamento com o Consumidor e Ética',descricao:''},{numero:6,nome:'Crédito Consignado — Legislação Específica',descricao:''},{numero:7,nome:'Financiamento de Veículos e LGPD',descricao:''}] } }
+  ];
+
+  const certs = await Promise.all(CERTS_LIST.map(async c => {
+    try {
+      const r = await fetch(c.file, { cache: 'no-store' });
+      return r.ok ? await r.json() : c.fallback;
+    } catch(e) { return c.fallback; }
+  }));
+
+  let ativo = 0;
+
+  function renderCertDetail(c) {
+    const ctaHtml = c.hotmartLink
+      ? `<div class="conc-detail-cta">
+           <button class="cert-comprar" onclick="window.open('${c.hotmartLink}','_blank')">Garantir acesso — R$ 29,90 →</button>
+           <span>Acesso imediato · garantia de 7 dias</span>
+         </div>`
+      : `<div class="conc-detail-cta">
+           <a href="/app/" class="btn btn-prim" style="display:inline-block;text-decoration:none">Começar cronograma gratuito →</a>
+         </div>`;
     return `
-      <span class="cert-detail-badge">📜 ${cfp.organizacao} · ${cfp.area}</span>
-      <div class="conc-detail-nome">${cfp.nome}</div>
-      <p class="conc-detail-desc">${cfp.descricao}</p>
+      <span class="cert-detail-badge">📜 ${c.organizacao} · ${c.area}</span>
+      <div class="conc-detail-nome">${c.nome}</div>
+      <p class="conc-detail-desc">${c.descricao}</p>
       <div class="conc-detail-meta">
-        <span class="m" style="background:var(--blue-soft);border-color:var(--blue-line)">🎓 Nível: ${cfp.nivel}</span>
-        <span class="m" style="background:var(--blue-soft);border-color:var(--blue-line)">📚 ${cfp.modulos.length} módulos</span>
+        <span class="m" style="background:var(--blue-soft);border-color:var(--blue-line)">🎓 Nível: ${c.nivel}</span>
+        <span class="m" style="background:var(--blue-soft);border-color:var(--blue-line)">📚 ${c.modulos.length} módulos</span>
       </div>
       <div class="cert-modulos-hd">Módulos da certificação</div>
       <div class="cert-modulos-list">
-        ${cfp.modulos.map(m => `
+        ${c.modulos.map(m => `
           <div class="cert-modulo-item">
             <span class="cert-modulo-num">M${m.numero}</span>
-            <div class="cert-modulo-txt">${m.nome}<small>${m.descricao}</small></div>
+            <div class="cert-modulo-txt">${m.nome}${m.descricao ? `<small>${m.descricao}</small>` : ''}</div>
           </div>`).join('')}
       </div>
-      <div class="conc-detail-cta">
-        <button class="cert-comprar" onclick="window.open('${cfp.hotmartLink}','_blank')">Garantir acesso — R$ 29,90 →</button>
-        <span>Acesso imediato · garantia de 7 dias</span>
-      </div>`;
+      ${ctaHtml}`;
   }
 
-  function renderCertSidebar(cfp) {
-    return `
-      <div class="conc-sidebar">
-        <div class="conc-sidebar-hd">Certificações disponíveis</div>
-        <div class="conc-nav-item ativo" style="cursor:default">
-          <div class="conc-nav-dot" style="background:var(--blue);border-color:var(--blue)">📜</div>
-          <div class="conc-nav-txt">
-            <strong>CFP®</strong>
-            <span>Certified Financial Planner</span>
-          </div>
+  function render() {
+    const sidebarItems = certs.map((c, i) => `
+      <div class="conc-nav-item${i === ativo ? ' ativo' : ''}" onclick="window._certSelIdx=${i};window._certRender()" style="cursor:pointer">
+        <div class="conc-nav-dot" style="background:${i === ativo ? 'var(--blue)' : 'var(--blue-soft)'};border-color:${i === ativo ? 'var(--blue)' : 'var(--blue-line)'}">📜</div>
+        <div class="conc-nav-txt">
+          <strong>${c.organizacao}</strong>
+          <span>${c.nome.split('—')[0].trim()}</span>
         </div>
-      </div>
-      <div class="conc-detail" id="certDetail">${renderCertDetail(cfp)}</div>`;
-  }
+      </div>`).join('');
 
-  try {
-    const r = await fetch("certificacoes/cfp.json", { cache: "no-store" });
-    if (!r.ok) throw new Error();
-    const cfp = await r.json();
-    layout.innerHTML = renderCertSidebar(cfp);
-  } catch(e) {
     layout.innerHTML = `
       <div class="conc-sidebar">
         <div class="conc-sidebar-hd">Certificações disponíveis</div>
-        <div class="conc-nav-item ativo" style="cursor:default">
-          <div class="conc-nav-dot" style="background:var(--blue);border-color:var(--blue)">📜</div>
-          <div class="conc-nav-txt">
-            <strong>CFP®</strong>
-            <span>Certified Financial Planner</span>
-          </div>
-        </div>
+        ${sidebarItems}
       </div>
-      <div class="conc-detail">
-        <span class="cert-detail-badge">📜 PLANEJAR · Planejamento Financeiro</span>
-        <div class="conc-detail-nome">CFP® — Certified Financial Planner</div>
-        <p class="conc-detail-desc">A certificação CFP® é o padrão global de excelência para planejadores financeiros, reconhecida em mais de 27 países.</p>
-        <div class="cert-modulos-hd">Módulos da certificação</div>
-        <div class="cert-modulos-list">
-          <div class="cert-modulo-item"><span class="cert-modulo-num">M1</span><div class="cert-modulo-txt">Planejamento Financeiro e Ética</div></div>
-          <div class="cert-modulo-item"><span class="cert-modulo-num">M2</span><div class="cert-modulo-txt">Gestão Financeira</div></div>
-          <div class="cert-modulo-item"><span class="cert-modulo-num">M3</span><div class="cert-modulo-txt">Planejamento de Investimentos e Gestão de Ativos</div></div>
-          <div class="cert-modulo-item"><span class="cert-modulo-num">M4</span><div class="cert-modulo-txt">Planejamento de Aposentadoria</div></div>
-          <div class="cert-modulo-item"><span class="cert-modulo-num">M5</span><div class="cert-modulo-txt">Gestão de Riscos e Seguros</div></div>
-          <div class="cert-modulo-item"><span class="cert-modulo-num">M6</span><div class="cert-modulo-txt">Planejamento Tributário</div></div>
-          <div class="cert-modulo-item"><span class="cert-modulo-num">M7</span><div class="cert-modulo-txt">Planejamento Patrimonial e Sucessório</div></div>
-          <div class="cert-modulo-item"><span class="cert-modulo-num">M8</span><div class="cert-modulo-txt">Psicologia no Planejamento Financeiro</div></div>
-        </div>
-        <div class="conc-detail-cta">
-          <button class="cert-comprar" onclick="window.open('https://pay.hotmart.com/N106305634J','_blank')">Garantir acesso — R$ 29,90 →</button>
-          <span>Acesso imediato · garantia de 7 dias</span>
-        </div>
-      </div>`;
+      <div class="conc-detail" id="certDetail">${renderCertDetail(certs[ativo])}</div>`;
   }
+
+  window._certSelIdx = 0;
+  window._certRender = () => { ativo = window._certSelIdx; render(); };
+  render();
 })();
 
 /* ── SEÇÃO CONCURSOS ── */

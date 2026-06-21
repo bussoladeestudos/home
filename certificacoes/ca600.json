@@ -1,0 +1,162 @@
+{
+  "id": "ca600",
+  "nome": "CA-600 — Crédito Imobiliário",
+  "organizacao": "ABECIP",
+  "tipo": "certificacao",
+  "area": "Crédito Imobiliário",
+  "nivel": "Intermediário",
+  "descricao": "A certificação CA-600 é concedida pela ABECIP e atesta conhecimentos técnicos para atuação em operações de crédito imobiliário, abrangendo o Sistema Financeiro da Habitação, garantias imobiliárias, produtos para pessoa física, seguros habitacionais e matemática financeira aplicada.",
+  "modulos": [
+    {
+      "numero": 1,
+      "nome": "Sistema Financeiro Nacional – SFN",
+      "descricao": "Intermediários financeiros, bancos múltiplos, sociedades de crédito imobiliário, cooperativas e órgãos reguladores (CMN, BACEN, CVM, CNSP).",
+      "topicos": [
+        "Bancos múltiplos, comerciais e de investimento",
+        "Sociedades de crédito imobiliário e companhias hipotecárias",
+        "Associações de poupança e empréstimo",
+        "Cooperativas de crédito rural",
+        "CMN, BACEN, CVM e CNSP: conceitos e atribuições"
+      ]
+    },
+    {
+      "numero": 2,
+      "nome": "Sistema Financeiro da Habitação – SFH",
+      "descricao": "Finalidade e recursos do SFH: poupança, FGTS e SBPE.",
+      "topicos": [
+        "Finalidade e intermediários financeiros do SFH",
+        "Poupança: definição e remuneração",
+        "FGTS: definição, agente operador e agentes financeiros",
+        "SBPE: definição"
+      ]
+    },
+    {
+      "numero": 3,
+      "nome": "Sistema de Financiamento Imobiliário – SFI",
+      "descricao": "Entidades, características das operações, Cédula de Crédito Imobiliário e CRI.",
+      "topicos": [
+        "Finalidades e entidades do SFI",
+        "Características das operações",
+        "Cédula de Crédito Imobiliário (CCI): definição",
+        "Certificado de Recebíveis Imobiliários (CRI): definição"
+      ]
+    },
+    {
+      "numero": 4,
+      "nome": "Garantias Imobiliárias",
+      "descricao": "Alienação fiduciária, hipoteca, fiança e cessão de recebíveis: definições, propriedade vs posse e procedimentos de inadimplência.",
+      "topicos": [
+        "Alienação fiduciária: definição e propriedade vs posse",
+        "Alienação fiduciária: inadimplência, cobrança e recuperação (PF)",
+        "Hipoteca: definição e propriedade vs posse",
+        "Hipoteca: inadimplência, cobrança e recuperação (PF)",
+        "Fiança: definição",
+        "Cessão de recebíveis ou penhor: definição"
+      ]
+    },
+    {
+      "numero": 5,
+      "nome": "Produtos para Pessoa Física",
+      "descricao": "Análise de aquisição, construção e CGI; enquadramento SFH/SFI; sistemas de amortização e formalização.",
+      "topicos": [
+        "Aquisição: análise do proponente, imóvel e vendedor",
+        "FGTS na moradia própria: requisitos e documentos",
+        "Construção: análise, liberação de parcelas e FGTS",
+        "Crédito com Garantia de Imóvel (CGI)",
+        "Enquadramento SFH/SFI: LTV, prazo, taxa de juros",
+        "Plano de reajuste, sistemas de amortização (Price, SAC, SACRE)",
+        "CET, CEM e CESH",
+        "Formalização: contratos, registro e liberação"
+      ]
+    },
+    {
+      "numero": 6,
+      "nome": "Seguros / Seguradoras",
+      "descricao": "Seguros obrigatórios e opcionais no financiamento habitacional.",
+      "topicos": [
+        "Seguro de Morte e Invalidez Permanente (MIP)",
+        "Seguro de Danos Físicos ao Imóvel (DFI)",
+        "Seguro de Responsabilidade Civil do Construtor (RCC)",
+        "Livre escolha de seguro e seguradora"
+      ]
+    },
+    {
+      "numero": 7,
+      "nome": "Custos e Tributação",
+      "descricao": "ITBI/ITIV, Foro/Laudêmio e IOF nas operações imobiliárias.",
+      "topicos": [
+        "ITBI / ITIV: imposto sobre transmissão de bens imóveis",
+        "Foro e Laudêmio",
+        "IOF: seguro habitacional",
+        "IOF: operações de crédito imobiliário"
+      ]
+    },
+    {
+      "numero": 8,
+      "nome": "Lei Geral de Proteção de Dados (LGPD)",
+      "descricao": "Disposições, princípios, direitos do titular, agentes de tratamento e sanções.",
+      "topicos": [
+        "Disposições preliminares: exclusões e conceitos",
+        "Princípios da LGPD",
+        "Tratamento de dados pessoais",
+        "Direitos do titular",
+        "Transferência de dados para o exterior",
+        "Agentes de tratamento de dados pessoais",
+        "Segurança e boas práticas",
+        "Sanções administrativas"
+      ]
+    },
+    {
+      "numero": 9,
+      "nome": "Código de Defesa do Consumidor",
+      "descricao": "Fornecedor, serviços, direitos básicos, práticas abusivas, cobrança e sanções.",
+      "topicos": [
+        "Fornecedor e serviços: conceitos",
+        "Política Nacional de Relações de Consumo",
+        "Direitos básicos do consumidor",
+        "Solidariedade pelos danos na prestação de serviços",
+        "Vícios na qualidade e disparidade de oferta",
+        "Direito de reclamar e prazos",
+        "Publicidade, práticas abusivas e cobrança de dívidas",
+        "Proteção contratual e sanções administrativas",
+        "SAC – Serviço de Atendimento ao Consumidor"
+      ]
+    },
+    {
+      "numero": 10,
+      "nome": "Ouvidoria e Ética",
+      "descricao": "Instituição, objetivos e atribuições da ouvidoria; ética no atendimento ao cliente.",
+      "topicos": [
+        "Ouvidoria: instituição e objetivos",
+        "Ouvidoria: atribuições",
+        "Ética no atendimento ao cliente"
+      ]
+    },
+    {
+      "numero": 11,
+      "nome": "Matemática Financeira",
+      "descricao": "Juros simples e compostos, taxas, sistemas de amortização (Price, SAC, SACRE).",
+      "topicos": [
+        "Juros simples e juros compostos",
+        "Taxa proporcional e taxa equivalente",
+        "Taxa nominal vs taxa efetiva",
+        "Juros pré-fixados vs pós-fixados",
+        "Tabela Price (TP)",
+        "Sistema de Amortização Constante (SAC)",
+        "Sistema de Amortização Crescente (SACRE)"
+      ]
+    },
+    {
+      "numero": 12,
+      "nome": "Pós-Contratação",
+      "descricao": "Amortização e liquidação antecipada com recursos próprios ou FGTS; pagamento parcial de prestações.",
+      "topicos": [
+        "Amortização antecipada com recursos próprios",
+        "Liquidação antecipada com FGTS: requisitos e documentos",
+        "Interstício mínimo entre utilizações do FGTS",
+        "Pagamento parcial de prestações com FGTS: requisitos",
+        "Financiamento inadimplente e limites de utilização"
+      ]
+    }
+  ]
+}

@@ -1097,10 +1097,10 @@ function fazerLogout() {
       <input class="form-input" id="inputNome" type="text" placeholder="Ex: João Ribeiro">
     </div>
     <div class="form-row">
-      <label class="form-label">Concurso</label>
+      <label class="form-label">Concurso / Certificação</label>
       <div class="concurso-picker">
         <button type="button" class="concurso-trigger" id="concursoTrigger" onclick="toggleConcursoDropdown()" aria-haspopup="listbox" aria-expanded="false">
-          <span class="concurso-trigger-text concurso-trigger-placeholder" id="concursoTriggerText">Selecione o concurso ▾</span>
+          <span class="concurso-trigger-text concurso-trigger-placeholder" id="concursoTriggerText">Selecione ▾</span>
           <span class="concurso-trigger-arrow">▼</span>
         </button>
         <div class="concurso-dropdown" id="concursoDropdown" role="listbox">
@@ -2028,6 +2028,209 @@ let EDITAIS = {
         "PNE vigente, Fundeb (Lei 14.113/2020), DCNs e BNCC"
       ]
     }
+  },
+  "ca600Abecip": {
+    "nome": "CA-600 — Crédito Imobiliário (ABECIP)",
+    "estado": "BR",
+    "_info": "Certificação ABECIP para crédito imobiliário. Sem data de prova fixa — defina a data do seu exame ao configurar.",
+    "cargos": ["CA-600 ABECIP — Crédito Imobiliário"],
+    "materias": [
+      {"nome": "Sistema Financeiro Nacional", "peso": 5},
+      {"nome": "Sistema Financeiro da Habitação", "peso": 8},
+      {"nome": "Sistema de Financiamento Imobiliário", "peso": 7},
+      {"nome": "Garantias Imobiliárias", "peso": 10},
+      {"nome": "Produtos para Pessoa Física", "peso": 25},
+      {"nome": "Seguros Habitacionais", "peso": 8},
+      {"nome": "Custos e Tributação", "peso": 5},
+      {"nome": "LGPD", "peso": 10},
+      {"nome": "Código de Defesa do Consumidor", "peso": 10},
+      {"nome": "Ouvidoria e Ética", "peso": 4},
+      {"nome": "Matemática Financeira", "peso": 6},
+      {"nome": "Pós-Contratação", "peso": 2}
+    ],
+    "topicos": {
+      "Sistema Financeiro Nacional": [
+        "Bancos múltiplos, comerciais e de investimento",
+        "Sociedades de crédito imobiliário e companhias hipotecárias",
+        "Associações de poupança e empréstimo",
+        "Cooperativas de crédito rural",
+        "CMN, BACEN, CVM e CNSP: conceitos e atribuições"
+      ],
+      "Sistema Financeiro da Habitação": [
+        "Finalidade e intermediários financeiros do SFH",
+        "Poupança: definição e remuneração dos depósitos",
+        "FGTS: definição, agente operador e agentes financeiros",
+        "SBPE: definição e direcionamento de recursos"
+      ],
+      "Sistema de Financiamento Imobiliário": [
+        "Finalidades e entidades do SFI",
+        "Características das operações do SFI",
+        "Cédula de Crédito Imobiliário (CCI): definição",
+        "Certificado de Recebíveis Imobiliários (CRI): definição"
+      ],
+      "Garantias Imobiliárias": [
+        "Alienação fiduciária: definição e propriedade vs posse",
+        "Alienação fiduciária: inadimplência e procedimentos de cobrança (PF)",
+        "Alienação fiduciária: recuperação de garantia (PF)",
+        "Hipoteca: definição, propriedade vs posse e inadimplência",
+        "Fiança: definição e características",
+        "Cessão de recebíveis ou penhor: definição"
+      ],
+      "Produtos para Pessoa Física": [
+        "Aquisição: análise do proponente (crédito, seguro e documentação)",
+        "Aquisição: análise do imóvel (avaliação e documentação)",
+        "Aquisição: análise do vendedor PF ou PJ",
+        "FGTS na aquisição de imóvel residencial concluído",
+        "FGTS na aquisição de imóvel em construção",
+        "Crédito com Garantia de Imóvel (CGI): definição e análise",
+        "Enquadramento SFH/SFI: LTV, prazo, taxa de juros e tarifas",
+        "Plano de reajuste e sistemas de amortização (Price, SAC, SACRE)",
+        "CET, CEM e CESH",
+        "Formalização: contratos, registro e liberação do valor"
+      ],
+      "Seguros Habitacionais": [
+        "Seguro de Morte e Invalidez Permanente (MIP)",
+        "Seguro de Danos Físicos ao Imóvel (DFI)",
+        "Seguro de Responsabilidade Civil do Construtor (RCC)",
+        "Livre escolha de seguro e seguradora"
+      ],
+      "Custos e Tributação": [
+        "ITBI / ITIV: imposto sobre transmissão de bens imóveis",
+        "Foro e Laudêmio",
+        "IOF: incidência no seguro habitacional",
+        "IOF: incidência em operações de crédito imobiliário"
+      ],
+      "LGPD": [
+        "Disposições preliminares: exclusões e conceitos",
+        "Princípios da LGPD",
+        "Tratamento de dados pessoais",
+        "Direitos do titular de dados",
+        "Transferência de dados para o exterior",
+        "Agentes de tratamento de dados pessoais",
+        "Segurança e boas práticas",
+        "Sanções administrativas"
+      ],
+      "Código de Defesa do Consumidor": [
+        "Fornecedor e serviços: conceitos",
+        "Política Nacional de Relações de Consumo: objetivos e princípios",
+        "Direitos básicos do consumidor",
+        "Solidariedade pelos danos causados na prestação de serviços",
+        "Vícios na qualidade e disparidade de oferta",
+        "Direito de reclamar: prazos",
+        "Publicidade do produto ofertado",
+        "Práticas abusivas e cobrança de dívidas",
+        "Proteção contratual e sanções administrativas",
+        "SAC — Serviço de Atendimento ao Consumidor"
+      ],
+      "Ouvidoria e Ética": [
+        "Ouvidoria: instituição e objetivos",
+        "Ouvidoria: atribuições",
+        "Ética no atendimento ao cliente"
+      ],
+      "Matemática Financeira": [
+        "Juros simples e juros compostos",
+        "Taxa proporcional e taxa equivalente",
+        "Taxa nominal vs taxa efetiva",
+        "Juros pré-fixados vs pós-fixados",
+        "Tabela Price (TP)",
+        "Sistema de Amortização Constante (SAC)",
+        "Sistema de Amortização Crescente (SACRE)"
+      ],
+      "Pós-Contratação": [
+        "Amortização antecipada com recursos próprios",
+        "Liquidação antecipada com FGTS: requisitos e documentos",
+        "Interstício mínimo entre utilizações do FGTS",
+        "Pagamento parcial de prestações com FGTS",
+        "Financiamento inadimplente e limites de utilização"
+      ]
+    },
+    "grupo": "Certificações",
+    "id": "ca600Abecip"
+  },
+  "fbb100Febraban": {
+    "nome": "FBB100 — Certificação Profissional FEBRABAN",
+    "estado": "BR",
+    "_info": "Certificação FEBRABAN para correspondentes bancários. Exame com 50 questões, aprovação ≥ 70%. Sem data de prova fixa — defina a data do seu exame ao configurar.",
+    "cargos": ["FBB100 FEBRABAN — Correspondente Bancário"],
+    "materias": [
+      {"nome": "Sistema Financeiro Nacional e Correspondente", "peso": 20},
+      {"nome": "IOF e Prevenção à Lavagem de Dinheiro", "peso": 15},
+      {"nome": "Matemática Financeira", "peso": 15},
+      {"nome": "Crédito: Conceitos e Modalidades", "peso": 15},
+      {"nome": "Relacionamento com o Consumidor e Ética", "peso": 15},
+      {"nome": "Crédito Consignado — Legislação Específica", "peso": 10},
+      {"nome": "Financiamento de Veículos e LGPD", "peso": 10}
+    ],
+    "topicos": {
+      "Sistema Financeiro Nacional e Correspondente": [
+        "CMN, BACEN e CVM: atribuições (Lei 4.595/64, Lei 6.385/76, LC 179/2021)",
+        "Bancos, caixas econômicas, fintechs, SCD e SEP",
+        "Cooperativas de crédito, corretoras e administradoras de consórcios",
+        "Contratação de correspondente no País (Res. 4.935/21)",
+        "Liquidação antecipada: Res. CMN 3.516/2007 e 5.004/2022",
+        "CET: Custo Efetivo Total (Res. CMN 4.881/2020)",
+        "Tarifas bancárias: serviços essenciais, prioritários e especiais (Res. 3.919/2010)",
+        "Sigilo bancário (LC 105/01)",
+        "ISS no mercado financeiro (LC 116/03)"
+      ],
+      "IOF e Prevenção à Lavagem de Dinheiro": [
+        "IOF: incidência e alíquotas sobre operações de crédito (Decretos 6.306/2007 e 6.339/2008)",
+        "Lavagem de dinheiro: etapas (colocação, ocultação, integração)",
+        "Penalidades no descumprimento da Lei 9.613/98",
+        "Identificação de clientes e manutenção de registros",
+        "Políticas e controles internos (Circular BACEN 3.978/2020)",
+        "Prevenção ao financiamento do terrorismo"
+      ],
+      "Matemática Financeira": [
+        "Juros: noções gerais, simples e compostos",
+        "Taxa pré-fixada e taxa pós-fixada",
+        "Capitalização: critérios",
+        "Taxa proporcional e taxa equivalente",
+        "Taxa nominal vs taxa efetiva",
+        "CET: Custo Efetivo Total (cálculo)",
+        "Sistema de Amortização Constante (SAC)",
+        "Sistema Price de Amortização (PRICE)"
+      ],
+      "Crédito: Conceitos e Modalidades": [
+        "Crédito Direto ao Consumidor (CDC)",
+        "Crédito Pessoal (CP)",
+        "Crédito Consignado (CC): desconto em folha",
+        "Autorregulação das operações de crédito consignado (FEBRABAN)",
+        "Características e diferenças entre as modalidades"
+      ],
+      "Relacionamento com o Consumidor e Ética": [
+        "CDC: relação de consumo, direitos básicos e proteção contratual (Lei 8.078/90)",
+        "Vício de produto/serviço, oferta, publicidade e práticas abusivas",
+        "Cobrança de dívidas, bancos de dados e cadastros de consumidores",
+        "Superendividamento (Lei 14.181/2021)",
+        "SAC: Decreto Federal 11.034/2022",
+        "Política de relacionamento com clientes (Res. CMN 4.949/2021)",
+        "Ouvidorias: constituição e funcionamento (Res. CMN 4.860/2020)",
+        "Código de Conduta Ética e Autorregulação Bancária (SARB 27/2023)",
+        "Não perturbe (legislações estaduais)"
+      ],
+      "Crédito Consignado — Legislação Específica": [
+        "Lei 10.820/03: desconto de prestações em folha de pagamento",
+        "Decreto 4.840/2003: regulamentação do consignado",
+        "Decreto 8.690/2016: consignado para servidores públicos federais",
+        "Lei 8.112/90: regime jurídico dos servidores públicos federais",
+        "Lei 8.213/91: plano de benefícios da previdência social",
+        "Circular BCB 2.905/1999: prazos mínimos e remuneração",
+        "IN PRES/INSS 138/2022: consignações em benefícios previdenciários"
+      ],
+      "Financiamento de Veículos e LGPD": [
+        "Arrendamento mercantil: aspectos tributários (Lei 6.099/74)",
+        "Leasing de veículos automotivos (Lei 11.649/2008)",
+        "Arrendamento mercantil financeiro e operacional (Res. CMN 4.977/2021)",
+        "Quitação antecipada de contratos de leasing (Carta-Circular 3.248/2006)",
+        "LGPD: dados pessoais e dados pessoais sensíveis (Lei 13.709/2018)",
+        "Bases legais, relatório de impacto e incidentes de segurança",
+        "Cadastro Positivo, Open Banking e Privacy by design",
+        "Atuação da ANPD"
+      ]
+    },
+    "grupo": "Certificações",
+    "id": "fbb100Febraban"
   }
 };
 
