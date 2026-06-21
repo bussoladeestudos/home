@@ -1109,7 +1109,7 @@ function fazerLogout() {
       </div>
     </div>
     <div class="form-row" id="cargoRow" style="display:none">
-      <label class="form-label">Cargo</label>
+      <label class="form-label">Cargo / Vaga</label>
       <select class="form-input" id="inputCargo"></select>
     </div>
     <div class="form-grid">
@@ -1451,6 +1451,7 @@ let EDITAIS = {
   "cgAgenteAdm": {
     "nome": "Prefeitura de Campina Grande — Agente Administrativo",
     "estado": "PB",
+    "grupo": "Campina Grande PB",
     "_info": "Concurso Prefeitura de Campina Grande/PB — Edital 01/2026 (IDECAN). Prova objetiva: 30/08/2026. 40 questões / 60 pontos.",
     "cargos": [
       "Agente Administrativo (Nível Médio) — 80 vagas"
@@ -1542,6 +1543,7 @@ let EDITAIS = {
   "cgProfInfantil": {
     "nome": "Prefeitura de Campina Grande — Professor Educação Infantil",
     "estado": "PB",
+    "grupo": "Campina Grande PB",
     "_info": "Concurso Prefeitura de Campina Grande/PB — Edital 01/2026 (IDECAN). Prova objetiva: 30/08/2026. 40 questões / 60 pontos. Professores: prova de títulos classificatória (10 pts).",
     "cargos": [
       "Professor Educação Infantil 40h — 200 vagas"
@@ -1640,6 +1642,7 @@ let EDITAIS = {
   "cgProfAnosIniciais": {
     "nome": "Prefeitura de Campina Grande — Professor Básico 2 (Anos Iniciais)",
     "estado": "PB",
+    "grupo": "Campina Grande PB",
     "_info": "Concurso Prefeitura de Campina Grande/PB — Edital 01/2026 (IDECAN). Prova objetiva: 30/08/2026. 40 questões / 60 pontos. Professores: prova de títulos classificatória (10 pts).",
     "cargos": [
       "Professor Básico 2 — Anos Iniciais 30h — 200 vagas"
@@ -1739,6 +1742,7 @@ let EDITAIS = {
   "cgProfPortugues": {
     "nome": "Prefeitura de Campina Grande — Professor Básico 3 (Língua Portuguesa)",
     "estado": "PB",
+    "grupo": "Campina Grande PB",
     "_info": "Concurso Prefeitura de Campina Grande/PB — Edital 01/2026 (IDECAN). Prova objetiva: 30/08/2026. 40 questões / 60 pontos. Professores: prova de títulos classificatória (10 pts).",
     "cargos": [
       "Professor Básico 3 — Língua Portuguesa — 20 vagas"
@@ -1833,6 +1837,7 @@ let EDITAIS = {
   "cgProfMatematica": {
     "nome": "Prefeitura de Campina Grande — Professor Básico 3 (Matemática)",
     "estado": "PB",
+    "grupo": "Campina Grande PB",
     "_info": "Concurso Prefeitura de Campina Grande/PB — Edital 01/2026 (IDECAN). Prova objetiva: 30/08/2026. 40 questões / 60 pontos. Professores: prova de títulos classificatória (10 pts).",
     "cargos": [
       "Professor Básico 3 — Matemática — 20 vagas"
@@ -1930,6 +1935,7 @@ let EDITAIS = {
   "cgSupervisor": {
     "nome": "Prefeitura de Campina Grande — Supervisor Educacional",
     "estado": "PB",
+    "grupo": "Campina Grande PB",
     "_info": "Concurso Prefeitura de Campina Grande/PB — Edital 01/2026 (IDECAN). Prova objetiva: 30/08/2026. 40 questões / 60 pontos. Professores: prova de títulos classificatória (10 pts).",
     "cargos": [
       "Supervisor Educacional — 25 vagas"
@@ -2366,7 +2372,6 @@ window.addEventListener("DOMContentLoaded",async ()=>{
   renderPrefButtons();
   const hoje=new Date();
   document.getElementById("inputInicio").value=fmt(hoje);
-  document.getElementById("inputProva").value="2026-08-30";
   load();
   try{ if(!localStorage.getItem("bussola_metodo_fechado")) toggleInfo511(true); }catch(e){}
   _dowSelected=[...(STATE.diasLivres||[])];
@@ -2409,37 +2414,78 @@ window.addEventListener("DOMContentLoaded",async ()=>{
 function fmt(d){ const y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,"0"),dd=String(d.getDate()).padStart(2,"0"); return `${y}-${m}-${dd}`; }
 function parseDate(s){ const p=s.split("-"); return new Date(+p[0],+p[1]-1,+p[2]); }
 
-function renderPrefButtons(){
-  const grid=document.getElementById("prefGrid");
-  grid.innerHTML=Object.entries(EDITAIS).map(([key,e])=>
-    `<button class="pref-btn${key===_prefSelecionada?" selected":""}" id="pref-btn-${key}" onclick="selecionarPref('${key}',true)" role="option" aria-selected="${key===_prefSelecionada}" type="button">
-      <span class="pref-btn-name">${e.nome.replace("Prefeitura de ","")}</span>
-      <span class="pref-btn-estado">${e.estado}</span>
-    </button>`
-  ).join("");
+/* ── SELEÇÃO EM DOIS NÍVEIS: grupo → cargo/vaga ── */
+function getGrupos(){
+  const grupos={};
+  for(const [key,ed] of Object.entries(EDITAIS)){
+    const g=ed.grupo||ed.estado||"Outros";
+    if(!grupos[g]) grupos[g]=[];
+    grupos[g].push({key,ed});
+  }
+  return grupos;
 }
 
-let _prefSelecionada="campinas";
-function selecionarPref(key, userAction){
-  _prefSelecionada=key;
+let _grupoSelecionado=null;
+let _prefSelecionada=Object.keys(EDITAIS||{})[0]||"cgAgenteAdm";
+
+function renderPrefButtons(){
+  const grid=document.getElementById("prefGrid");
+  const grupos=getGrupos();
+  grid.innerHTML=Object.keys(grupos).map(g=>`<button class="pref-btn${_grupoSelecionado===g?" selected":""}" id="grupo-btn-${CSS.escape(g)}" onclick="selecionarGrupo('${g.replace(/'/g,"\\'")}',true)" role="option" aria-selected="${_grupoSelecionado===g}" type="button">
+      <span class="pref-btn-name">${g}</span>
+    </button>`).join("");
+}
+
+function _setupCargoOnChange(){
+  const cargoSel=document.getElementById("inputCargo");
+  cargoSel.onchange=function(){
+    _prefSelecionada=this.value;
+    const ed=EDITAIS[_prefSelecionada];
+    if(ed&&ed.dataProva) document.getElementById("inputProva").value=ed.dataProva;
+  };
+}
+
+function selecionarGrupo(grupo, userAction){
+  _grupoSelecionado=grupo;
   document.querySelectorAll(".pref-btn").forEach(b=>{b.classList.remove("selected");b.setAttribute("aria-selected","false");});
-  const btn=document.getElementById("pref-btn-"+key);
-  if(btn){ btn.classList.add("selected"); btn.setAttribute("aria-selected","true"); }
+  const btn=document.getElementById("grupo-btn-"+CSS.escape(grupo));
+  if(btn){btn.classList.add("selected");btn.setAttribute("aria-selected","true");}
+  const triggerText=document.getElementById("concursoTriggerText");
+  if(triggerText){triggerText.textContent=grupo;triggerText.classList.remove("concurso-trigger-placeholder");}
+  closeConcursoDropdown();
+  const grupos=getGrupos();
+  const items=grupos[grupo]||[];
+  const cargoSel=document.getElementById("inputCargo");
+  cargoSel.innerHTML=items.map(({key,ed})=>`<option value="${key}">${ed.cargos&&ed.cargos[0]?ed.cargos[0]:ed.nome}</option>`).join("");
+  _prefSelecionada=cargoSel.value;
+  const firstEd=EDITAIS[_prefSelecionada];
+  if(firstEd&&firstEd.dataProva) document.getElementById("inputProva").value=firstEd.dataProva;
+  document.getElementById("cargoRow").style.display="block";
+  _setupCargoOnChange();
+  if(userAction&&STATE.inicio) document.getElementById("inputNome").value=STATE.nome||"";
+}
+
+/* backward-compat: dado key do edital, restaura grupo+cargo corretos */
+function selecionarPref(key, userAction){
   const ed=EDITAIS[key];
   if(!ed) return;
-  const cargoSel=document.getElementById("inputCargo");
-  cargoSel.innerHTML=ed.cargos.map(c=>`<option value="${c}">${c}</option>`).join("");
-  document.getElementById("cargoRow").style.display="block";
-  if(userAction && STATE.inicio){
-    document.getElementById("inputNome").value=STATE.nome||"";
-  }
-  // Update trigger button text and close dropdown
+  _prefSelecionada=key;
+  const grupo=ed.grupo||ed.estado||"Outros";
+  _grupoSelecionado=grupo;
+  document.querySelectorAll(".pref-btn").forEach(b=>{b.classList.remove("selected");b.setAttribute("aria-selected","false");});
+  const btn=document.getElementById("grupo-btn-"+CSS.escape(grupo));
+  if(btn){btn.classList.add("selected");btn.setAttribute("aria-selected","true");}
   const triggerText=document.getElementById("concursoTriggerText");
-  if(triggerText){
-    triggerText.textContent=ed.nome.replace("Prefeitura de ","")+" · "+ed.estado;
-    triggerText.classList.remove("concurso-trigger-placeholder");
-  }
-  closeConcursoDropdown();
+  if(triggerText){triggerText.textContent=grupo;triggerText.classList.remove("concurso-trigger-placeholder");}
+  const grupos=getGrupos();
+  const items=grupos[grupo]||[];
+  const cargoSel=document.getElementById("inputCargo");
+  cargoSel.innerHTML=items.map(({key:k,ed:e})=>`<option value="${k}"${k===key?" selected":""}>${e.cargos&&e.cargos[0]?e.cargos[0]:e.nome}</option>`).join("");
+  cargoSel.value=key;
+  if(ed.dataProva) document.getElementById("inputProva").value=ed.dataProva;
+  document.getElementById("cargoRow").style.display="block";
+  _setupCargoOnChange();
+  if(userAction&&STATE.inicio) document.getElementById("inputNome").value=STATE.nome||"";
 }
 
 function toggleConcursoDropdown(){
@@ -2578,7 +2624,9 @@ function openSetupModal(){
   _dowSelected=STATE.inicio?[...(STATE.diasLivres||[])]:[]; 
   document.getElementById("inputNome").value=STATE.nome||"";
   document.getElementById("inputInicio").value=STATE.inicio||"";
-  document.getElementById("inputProva").value="2026-08-30";
+  const _edAtual=EDITAIS[STATE.prefeitura]||EDITAIS[_prefSelecionada];
+  document.getElementById("inputProva").value=(_edAtual&&_edAtual.dataProva)||STATE.prova||"2026-08-30";
+  if(STATE.prefeitura&&EDITAIS[STATE.prefeitura]) selecionarPref(STATE.prefeitura,false);
   document.getElementById("inputHoras").value=STATE.horasDia||3;
   const hasInicio=!!STATE.inicio;
   document.getElementById("restartSection").style.display=hasInicio?"block":"none";
@@ -2595,7 +2643,9 @@ function fecharModal(){
 
 function iniciarBússola(){
   const nome=document.getElementById("inputNome").value.trim()||"Candidato";
-  const cargo=document.getElementById("inputCargo").value;
+  const editKey=document.getElementById("inputCargo").value||_prefSelecionada;
+  const ed=EDITAIS[editKey];
+  const cargoText=ed&&ed.cargos&&ed.cargos[0]?ed.cargos[0]:editKey;
   const i=document.getElementById("inputInicio").value;
   const p=document.getElementById("inputProva").value;
   const h=parseInt(document.getElementById("inputHoras").value)||3;
@@ -2603,8 +2653,9 @@ function iniciarBússola(){
   if(i>=p){ showToast("⚠️ A data da prova deve ser posterior ao início!"); return; }
   const btn=document.getElementById("btnIniciarBússola");
   if(btn){ btn.disabled=true; btn.textContent="⏳ Criando cronograma..."; }
-  STATE.nome=nome; STATE.prefeitura=_prefSelecionada; STATE.cargo=cargo;
-  STATE.concurso=`${EDITAIS[_prefSelecionada].nome} — ${cargo}`;
+  _prefSelecionada=editKey;
+  STATE.nome=nome; STATE.prefeitura=editKey; STATE.cargo=cargoText;
+  STATE.concurso=ed?`${ed.nome.replace("Prefeitura de ","")} — ${cargoText}`:editKey;
   STATE.inicio=i; STATE.prova=p; STATE.horasDia=h;
   STATE.diasLivres=[..._dowSelected].sort((a,b)=>a-b);
   STATE.semanaOffset=0; save();
@@ -4931,69 +4982,4 @@ function selectRecovery(option){
   });
   const btn=document.getElementById("btnAplicarRecovery");
   btn.disabled=false;
-  const labels={redistribuir:"⚖️ Redistribuir e continuar",pular:"➡️ Pular e seguir em frente",sabado:"⚡ Agendar no Sábado"};
-  btn.textContent=labels[option]||"Aplicar";
-}
-
-function applyRecovery(){
-  if(!_recoveryOption||!_missedDays.length) return;
-  let msg="";
-
-  if(_recoveryOption==="redistribuir"){
-    // Redistribui ANTES de marcar como pulado (precisa dos tópicos originais)
-    const n=redistribuirTopicos(_missedDays);
-    _missedDays.forEach(k=>{ if(!STATE.dias[k]) STATE.dias[k]={}; STATE.dias[k].skipped=true; });
-    STATE.redistribuindo=true;
-    STATE.diasRedistribuir=_missedDays.length;
-    msg=`⚖️ ${n} tópico(s) redistribuído(s) nos próximos dias de estudo!`;
-  } else if(_recoveryOption==="pular"){
-    _missedDays.forEach(k=>{ if(!STATE.dias[k]) STATE.dias[k]={}; STATE.dias[k].skipped=true; });
-    msg="➡️ Dias marcados como pulados. Seguindo em frente!";
-  } else if(_recoveryOption==="sabado"){
-    const topicosRecuperacao=[];
-    _missedDays.forEach(k=>{
-      if(!STATE.dias[k]) STATE.dias[k]={};
-      STATE.dias[k].skipped=true;
-      const td=getTopicoDiaByKey(k);
-      if(td) topicosRecuperacao.push(`${td.mat}: ${td.top}`);
-    });
-    STATE.sabadoRecuperacao=topicosRecuperacao;
-    STATE.sabadoRecuperacaoData=fmt(getProximoSabado());
-    msg=`⚡ ${topicosRecuperacao.length} tópico(s) agendado(s) para o próximo Sábado!`;
-  }
-
-  STATE.recoveryShownDate=fmt(new Date());
-  _missedDays=[];
-  save();
-  document.getElementById("recoveryModal").classList.remove("open");
-  renderTudo();
-  if(msg) showToast(msg);
-}
-
-/* ── TOAST DE FEEDBACK ── */
-function showToast(msg,duracao){
-  let el=document.getElementById("cronosToast");
-  if(!el){
-    el=document.createElement("div");
-    el.id="cronosToast"; el.className="cronos-toast";
-    el.setAttribute("role","status"); el.setAttribute("aria-live","polite");
-    document.body.appendChild(el);
-  }
-  el.textContent=msg;
-  el.classList.add("show");
-  clearTimeout(el._timer);
-  el._timer=setTimeout(()=>el.classList.remove("show"),duracao||3500);
-}
-
-function getProximoSabado(){
-  const hoje=new Date(); hoje.setHours(0,0,0,0);
-  const dow=hoje.getDay(); // 0=dom, 6=sab
-  const diasAteSab=dow===6?7:(6-dow); // se já é sábado, pega o próximo
-  const sab=new Date(hoje); sab.setDate(sab.getDate()+diasAteSab);
-  return sab;
-}
-
-
-</script>
-</body>
-</html>
+ 

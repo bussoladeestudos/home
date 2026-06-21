@@ -75,7 +75,8 @@
       ]
     },
     "dataProva": "2026-08-30",
-    "id": "cgAgenteAdm"
+    "id": "cgAgenteAdm",
+    "grupo": "Campina Grande PB"
   },
   "cgProfInfantil": {
     "nome": "Prefeitura de Campina Grande — Professor Educação Infantil",
@@ -160,7 +161,8 @@
       ]
     },
     "dataProva": "2026-08-30",
-    "id": "cgProfInfantil"
+    "id": "cgProfInfantil",
+    "grupo": "Campina Grande PB"
   },
   "cgProfAnosIniciais": {
     "nome": "Prefeitura de Campina Grande — Professor Básico 2 (Anos Iniciais)",
@@ -246,7 +248,8 @@
       ]
     },
     "dataProva": "2026-08-30",
-    "id": "cgProfAnosIniciais"
+    "id": "cgProfAnosIniciais",
+    "grupo": "Campina Grande PB"
   },
   "cgProfPortugues": {
     "nome": "Prefeitura de Campina Grande — Professor Básico 3 (Língua Portuguesa)",
@@ -327,7 +330,8 @@
       ]
     },
     "dataProva": "2026-08-30",
-    "id": "cgProfPortugues"
+    "id": "cgProfPortugues",
+    "grupo": "Campina Grande PB"
   },
   "cgProfMatematica": {
     "nome": "Prefeitura de Campina Grande — Professor Básico 3 (Matemática)",
@@ -411,7 +415,8 @@
       ]
     },
     "dataProva": "2026-08-30",
-    "id": "cgProfMatematica"
+    "id": "cgProfMatematica",
+    "grupo": "Campina Grande PB"
   },
   "cgSupervisor": {
     "nome": "Prefeitura de Campina Grande — Supervisor Educacional",
@@ -494,7 +499,8 @@
       ]
     },
     "dataProva": "2026-08-30",
-    "id": "cgSupervisor"
+    "id": "cgSupervisor",
+    "grupo": "Campina Grande PB"
   },
   "sedesDfTdasTecAdm": {
     "nome": "SEDES/DF — Técnico Administrativo (TDAS)",
@@ -663,7 +669,8 @@
         "Etapas do processo de compras: planejamento, pesquisa de preços e contratação",
         "Modalidades de licitação: pregão, concorrência, concurso, leilão e diálogo competitivo"
       ]
-    }
+    },
+    "grupo": "SEDES-DF"
   },
   "sedesDfTdasAgenSoc": {
     "nome": "SEDES/DF — Agente Social (TDAS)",
@@ -827,7 +834,8 @@
         "Lei de Acesso à Informação (Lei nº 12.527/2011)",
         "Ética no serviço público e sigilo das informações dos usuários"
       ]
-    }
+    },
+    "grupo": "SEDES-DF"
   },
   "sedesDfEdasServSoc": {
     "nome": "SEDES/DF — Serviço Social (EDAS)",
@@ -991,7 +999,8 @@
         "Elaboração, monitoramento e avaliação de planos, programas e projetos sociais",
         "Orçamento público aplicado às políticas sociais: PPA, LDO e LOA"
       ]
-    }
+    },
+    "grupo": "SEDES-DF"
   },
   "sedesDfEdasPedagogia": {
     "nome": "SEDES/DF — Pedagogia (EDAS)",
@@ -1155,6 +1164,7 @@
         "Educação e tecnologias: integração de recursos digitais no processo pedagógico",
         "Gestão educacional e coordenação pedagógica no contexto socioassistencial"
       ]
-    }
+    },
+    "grupo": "SEDES-DF"
   }
 }
