@@ -4982,4 +4982,33 @@ function selectRecovery(option){
   });
   const btn=document.getElementById("btnAplicarRecovery");
   btn.disabled=false;
- 
+  const labels={"redistribuir":"\u2696\uFE0F Redistribuir t\u00F3picos","pular":"\u27A1\uFE0F Pular e seguir em frente","sabado":"\u26A1\uFE0F Agendar no s\u00E1bado"};
+  btn.textContent=labels[option]||"Aplicar recupera\u00E7\u00E3o";
+}
+
+function applyRecovery(){
+  if(!_recoveryOption||!_missedDays.length) return;
+  if(_recoveryOption==="redistribuir"){
+    const n=redistribuirTopicos(_missedDays);
+    if(n>0){ STATE.redistribuindo=true; STATE.diasRedistribuir=_missedDays.length; }
+  } else if(_recoveryOption==="pular"){
+    _missedDays.forEach(k=>{ if(!STATE.dias[k]) STATE.dias[k]={}; STATE.dias[k].skipped=true; });
+  } else if(_recoveryOption==="sabado"){
+    const tops=[];
+    _missedDays.forEach(k=>{getTopicosDiaBase(k).forEach(t=>{ if(t) tops.push(t); });});
+    if(tops.length){
+      STATE.sabadoRecuperacao=[...(STATE.sabadoRecuperacao||[]),...tops.map(t=>`${t.mat}: ${t.top}`)];
+      STATE.sabadoRecuperacaoData=fmt(getProximoSabado());
+    }
+    _missedDays.forEach(k=>{ if(!STATE.dias[k]) STATE.dias[k]={}; STATE.dias[k].skipped=true; });
+  }
+  STATE.recoveryShownDate=fmt(new Date());
+  save();
+  document.getElementById("recoveryModal").classList.remove("open");
+  renderTudo();
+  navTo("hoje");
+  showToast("\u2705 Recupera\u00E7\u00E3o aplicada!");
+}
+</script>
+</body>
+</html>
