@@ -1118,7 +1118,7 @@ function fazerLogout() {
         <input class="form-input" id="inputInicio" type="date">
       </div>
       <div class="form-row">
-        <label class="form-label">Data da Prova <span style="color:#2FB374;font-size:.7rem;font-weight:700">🔒 fixada pelo edital</span></label>
+        <label class="form-label">Data da Prova <span id="provaLockSpan" style="color:#2FB374;font-size:.7rem;font-weight:700">🔒 fixada pelo edital</span></label>
         <input class="form-input" id="inputProva" type="date" readonly style="background:#f8fafc;color:#64748b;cursor:default;" title="Data fixada pelo edital">
       </div>
     </div>
@@ -2644,8 +2644,27 @@ function _setupCargoOnChange(){
   cargoSel.onchange=function(){
     _prefSelecionada=this.value;
     const ed=EDITAIS[_prefSelecionada];
+    const isCert=!ed||!ed.dataProva;
     if(ed&&ed.dataProva) document.getElementById("inputProva").value=ed.dataProva;
+    else document.getElementById("inputProva").value="";
+    atualizarModoProva(isCert);
   };
+}
+
+function atualizarModoProva(isCert){
+  const provaEl=document.getElementById("inputProva");
+  const lockSpan=document.getElementById("provaLockSpan");
+  if(isCert){
+    provaEl.removeAttribute("readonly");
+    provaEl.style.background="";provaEl.style.color="";provaEl.style.cursor="";
+    provaEl.title="Defina a data do seu exame";
+    if(lockSpan){lockSpan.textContent="📅 você define a data";lockSpan.style.color="#2563EB";}
+  } else {
+    provaEl.setAttribute("readonly","");
+    provaEl.style.background="#f8fafc";provaEl.style.color="#64748b";provaEl.style.cursor="default";
+    provaEl.title="Data fixada pelo edital";
+    if(lockSpan){lockSpan.textContent="🔒 fixada pelo edital";lockSpan.style.color="#2FB374";}
+  }
 }
 
 function selecionarGrupo(grupo, userAction){
@@ -2662,7 +2681,10 @@ function selecionarGrupo(grupo, userAction){
   cargoSel.innerHTML=items.map(({key,ed})=>`<option value="${key}">${ed.cargos&&ed.cargos[0]?ed.cargos[0]:ed.nome}</option>`).join("");
   _prefSelecionada=cargoSel.value;
   const firstEd=EDITAIS[_prefSelecionada];
+  const isCertGrupo=!firstEd||!firstEd.dataProva;
   if(firstEd&&firstEd.dataProva) document.getElementById("inputProva").value=firstEd.dataProva;
+  else if(isCertGrupo) document.getElementById("inputProva").value="";
+  atualizarModoProva(isCertGrupo);
   document.getElementById("cargoRow").style.display="block";
   _setupCargoOnChange();
   if(userAction&&STATE.inicio) document.getElementById("inputNome").value=STATE.nome||"";
@@ -2685,7 +2707,10 @@ function selecionarPref(key, userAction){
   const cargoSel=document.getElementById("inputCargo");
   cargoSel.innerHTML=items.map(({key:k,ed:e})=>`<option value="${k}"${k===key?" selected":""}>${e.cargos&&e.cargos[0]?e.cargos[0]:e.nome}</option>`).join("");
   cargoSel.value=key;
+  const isCertPref=!ed.dataProva;
   if(ed.dataProva) document.getElementById("inputProva").value=ed.dataProva;
+  else document.getElementById("inputProva").value=STATE.prova||"";
+  atualizarModoProva(isCertPref);
   document.getElementById("cargoRow").style.display="block";
   _setupCargoOnChange();
   if(userAction&&STATE.inicio) document.getElementById("inputNome").value=STATE.nome||"";
@@ -2825,16 +2850,21 @@ function toggleDow(i){
 function openSetupModal(){
   // Só restaura dias salvos se o cronograma já foi configurado; caso contrário começa vazio
   _dowSelected=STATE.inicio?[...(STATE.diasLivres||[])]:[]; 
+  const _hojeIso=(new Date()).toISOString().split('T')[0];
   document.getElementById("inputNome").value=STATE.nome||"";
-  document.getElementById("inputInicio").value=STATE.inicio||"";
+  document.getElementById("inputInicio").value=STATE.inicio||_hojeIso;
   const _edAtual=EDITAIS[STATE.prefeitura]||EDITAIS[_prefSelecionada];
-  document.getElementById("inputProva").value=(_edAtual&&_edAtual.dataProva)||STATE.prova||"2026-08-30";
+  const _isCertAtual=_edAtual&&!_edAtual.dataProva;
+  document.getElementById("inputProva").value=(_edAtual&&_edAtual.dataProva)||(STATE.prova&&!_isCertAtual?STATE.prova:"")||"";
+  atualizarModoProva(_isCertAtual);
   if(STATE.prefeitura&&EDITAIS[STATE.prefeitura]) selecionarPref(STATE.prefeitura,false);
   document.getElementById("inputHoras").value=STATE.horasDia||3;
   const hasInicio=!!STATE.inicio;
   document.getElementById("restartSection").style.display=hasInicio?"block":"none";
   document.getElementById("btnFecharModal").style.display=hasInicio?"flex":"none";
-  document.getElementById("btnIniciarBússola").textContent=hasInicio?"💾 Salvar Configurações":"⚡ Iniciar Meu Cronograma";
+  const btnSalvar=document.getElementById("btnIniciarBússola");
+  btnSalvar.textContent=hasInicio?"💾 Salvar Configurações":"⚡ Iniciar Meu Cronograma";
+  btnSalvar.disabled=false;
   document.getElementById("modalTitle").textContent=hasInicio?"Configurações do Cronograma":"Configure seu Cronograma";
   renderDowGrid();
   document.getElementById("setupModal").classList.add("open");
@@ -2855,13 +2885,14 @@ function iniciarBússola(){
   if(!i||!p){ showToast("⚠️ Preencha as datas de início e da prova!"); return; }
   if(i>=p){ showToast("⚠️ A data da prova deve ser posterior ao início!"); return; }
   const btn=document.getElementById("btnIniciarBússola");
-  if(btn){ btn.disabled=true; btn.textContent="⏳ Criando cronograma..."; }
+  if(btn){ btn.disabled=true; btn.textContent="⏳ Salvando..."; }
   _prefSelecionada=editKey;
   STATE.nome=nome; STATE.prefeitura=editKey; STATE.cargo=cargoText;
   STATE.concurso=ed?`${ed.nome.replace("Prefeitura de ","")} — ${cargoText}`:editKey;
   STATE.inicio=i; STATE.prova=p; STATE.horasDia=h;
   STATE.diasLivres=[..._dowSelected].sort((a,b)=>a-b);
   STATE.semanaOffset=0; save();
+  if(btn){ btn.disabled=false; btn.textContent="💾 Salvar Configurações"; }
   document.getElementById("setupModal").classList.remove("open");
   renderTudo();
   navTo("hoje");
