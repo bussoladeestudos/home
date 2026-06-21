@@ -1,0 +1,113 @@
+{
+  "id": "cfp",
+  "nome": "CFP® — Certified Financial Planner",
+  "organizacao": "PLANEJAR",
+  "tipo": "certificacao",
+  "area": "Planejamento Financeiro",
+  "nivel": "Avançado",
+  "descricao": "A certificação CFP® é o padrão global de excelência para planejadores financeiros. Reconhecida em mais de 27 países, é concedida pela PLANEJAR no Brasil e exige aprovação em 8 módulos que cobrem todas as dimensões do planejamento financeiro pessoal.",
+  "hotmartLink": "https://pay.hotmart.com/N106305634J",
+  "modulos": [
+    {
+      "numero": 1,
+      "nome": "Planejamento Financeiro e Ética",
+      "descricao": "Princípios do planejamento financeiro, processo estruturado de atendimento ao cliente, modelos de remuneração, códigos de ética e normativos da profissão.",
+      "topicos": [
+        "Princípios e processo do planejamento financeiro",
+        "Etapas do atendimento ao cliente",
+        "Modelos de remuneração do planejador",
+        "Código de ética da PLANEJAR",
+        "Normativos e regulação da profissão"
+      ]
+    },
+    {
+      "numero": 2,
+      "nome": "Gestão Financeira",
+      "descricao": "Controle de orçamento pessoal e familiar, análise de fluxo de caixa, comportamento de consumo, uso consciente de crédito e gestão do endividamento.",
+      "topicos": [
+        "Orçamento pessoal e familiar",
+        "Fluxo de caixa e demonstrações financeiras pessoais",
+        "Comportamento de consumo",
+        "Crédito: modalidades e custos",
+        "Gestão e renegociação de dívidas"
+      ]
+    },
+    {
+      "numero": 3,
+      "nome": "Planejamento de Investimentos e Gestão de Ativos",
+      "descricao": "Macroeconomia aplicada, produtos de renda fixa e variável, derivativos, fundos de investimento, gestão de risco e construção de portfólio.",
+      "topicos": [
+        "Macroeconomia: indicadores e política monetária",
+        "Renda fixa: Tesouro Direto, CDB, LCI, LCA, debêntures",
+        "Renda variável: ações, BDRs, ETFs, FIIs",
+        "Derivativos: opções, futuros e swaps",
+        "Fundos de investimento",
+        "Gestão de risco e teoria de portfólio",
+        "Análise fundamentalista e técnica"
+      ]
+    },
+    {
+      "numero": 4,
+      "nome": "Planejamento de Aposentadoria",
+      "descricao": "Regimes de previdência pública (INSS/RPPS), previdência privada aberta (PGBL e VGBL) e fechada (fundos de pensão), e cálculos de projeção de aposentadoria.",
+      "topicos": [
+        "INSS: regras, benefícios e cálculo de aposentadoria",
+        "RPPS: regime próprio dos servidores públicos",
+        "Previdência privada aberta: PGBL vs VGBL",
+        "Fundos de pensão (previdência fechada)",
+        "Tabelas progressiva e regressiva de IR",
+        "Projeção e planejamento da aposentadoria"
+      ]
+    },
+    {
+      "numero": 5,
+      "nome": "Gestão de Riscos e Seguros",
+      "descricao": "Noções de risco pessoal e familiar, seguros de vida, patrimoniais, de saúde e de responsabilidade civil.",
+      "topicos": [
+        "Conceitos de risco e probabilidade",
+        "Seguro de vida individual e em grupo",
+        "Seguros patrimoniais: residencial, automóvel",
+        "Seguro saúde e planos de saúde",
+        "Seguro de responsabilidade civil",
+        "Como integrar seguros ao planejamento financeiro"
+      ]
+    },
+    {
+      "numero": 6,
+      "nome": "Planejamento Tributário",
+      "descricao": "Imposto de Renda Pessoa Física (IRPF), tributação de ganho de capital, investimentos e estratégias de diferimento e redução fiscal.",
+      "topicos": [
+        "IRPF: declaração, deduções e tabelas",
+        "Ganho de capital: cálculo e isenções",
+        "Tributação de investimentos por produto",
+        "Estratégias de diferimento fiscal",
+        "Planejamento tributário legal (elisão fiscal)"
+      ]
+    },
+    {
+      "numero": 7,
+      "nome": "Planejamento Patrimonial e Sucessório",
+      "descricao": "Instrumentos de transferência de patrimônio: inventário, testamento, doações, holdings familiares, holdings patrimoniais e estruturas offshore.",
+      "topicos": [
+        "Inventário judicial e extrajudicial",
+        "Testamento: tipos e requisitos",
+        "Doações em vida e antecipação de herança",
+        "Holdings familiares e patrimoniais",
+        "Estruturas offshore e planejamento internacional",
+        "Aspectos jurídicos do planejamento sucessório"
+      ]
+    },
+    {
+      "numero": 8,
+      "nome": "Psicologia no Planejamento Financeiro",
+      "descricao": "Finanças comportamentais, vieses cognitivos, heurísticas e como compreender e lidar com o perfil emocional do cliente.",
+      "topicos": [
+        "Finanças comportamentais: fundamentos",
+        "Vieses cognitivos: ancoragem, aversão à perda, excesso de confiança",
+        "Heurísticas e atalhos mentais",
+        "Perfil de risco e tolerância emocional do cliente",
+        "Comunicação e relacionamento com o cliente"
+      ]
+    }
+  ]
+}

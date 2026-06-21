@@ -196,6 +196,23 @@ section{padding:4.5rem 0}
 button.c-comprar{background:var(--green-viv);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:.95rem;padding:13px 28px;border-radius:99px;border:none;cursor:pointer;box-shadow:var(--shadow-cta);transition:background .15s,transform .15s}
 button.c-comprar:hover{background:#1FB456;transform:translateY(-1px)}
 .conc-skeleton{background:var(--cream-2);border-radius:var(--r-lg);animation:pulse 1.5s ease-in-out infinite}
+/* ── CERTIFICAÇÕES ── */
+.cert-destaque{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cert-detail-badge{display:inline-flex;align-items:center;gap:5px;background:var(--blue-soft);color:var(--blue);font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:4px 12px;border-radius:99px;margin-bottom:.9rem}
+.cert-modulos-hd{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--soft);margin-bottom:.75rem}
+.cert-modulos-list{display:flex;flex-direction:column;gap:.55rem;margin-bottom:1.6rem}
+.cert-modulo-item{display:flex;align-items:flex-start;gap:.75rem;background:var(--blue-soft);border:1px solid var(--blue-line);border-radius:var(--r-sm);padding:.65rem .9rem}
+.cert-modulo-num{font-family:'Plus Jakarta Sans',sans-serif;font-size:.7rem;font-weight:800;color:var(--blue);background:var(--white);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;flex-shrink:0;line-height:1.4;margin-top:.05rem}
+.cert-modulo-txt{font-size:.83rem;color:var(--ink);font-weight:600;line-height:1.35}
+.cert-modulo-txt small{display:block;font-weight:400;color:var(--body);margin-top:.15rem;font-size:.78rem}
+.cert-comprar{background:var(--blue);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:.95rem;padding:13px 28px;border-radius:99px;border:none;cursor:pointer;box-shadow:0 8px 24px rgba(37,99,235,.28);transition:background .15s,transform .15s}
+.cert-comprar:hover{background:#1d4ed8;transform:translateY(-1px)}
+/* dropdown azul */
+.nav-drop-item.cert-item:hover{background:var(--blue-soft)}
+.nav-drop-btn-cert:hover,.nav-drop-btn-cert[aria-expanded="true"]{color:var(--ink)}
+.nav-drop-btn-cert[aria-expanded="true"] .nav-drop-arrow{transform:rotate(180deg)}
+.nav-drop-btn-cert[aria-expanded="true"] + .nav-drop{display:block}
+.nav-cert-badge{background:var(--blue)}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
 
 /* ── DOR ── */
@@ -345,6 +362,16 @@ footer{padding:2.2rem 0;background:var(--cream)}
           </div>
         </div>
       </div>
+      <div class="nav-drop-wrap" id="navCertificacoes">
+        <button class="lnk nav-drop-btn-cert" id="navCertBtn" aria-expanded="false">
+          Certificações <span class="nav-drop-badge nav-cert-badge" id="navCertBadge"></span> <span class="nav-drop-arrow">▾</span>
+        </button>
+        <div class="nav-drop" id="navCertMenu">
+          <div class="nav-drop-inner" id="navCertList">
+            <div class="nav-drop-loading">Carregando...</div>
+          </div>
+        </div>
+      </div>
       <a class="lnk" href="#metodo">Como funciona</a>
       <a class="lnk" href="#faq">Dúvidas</a>
       <a class="lnk" href="app/">Já sou aluno</a>
@@ -405,6 +432,27 @@ footer{padding:2.2rem 0;background:var(--cream)}
         <div class="conc-skeleton" style="height:32px;width:75%;margin-bottom:.5rem"></div>
         <div class="conc-skeleton" style="height:18px;width:90%;margin-bottom:1rem"></div>
         <div class="conc-skeleton" style="height:120px"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certificacoes" class="cert-destaque">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-eyebrow">Certificações profissionais</span>
+      <h2 class="sec-title">Certificações com a Bússola pronta</h2>
+      <p class="sec-sub">Plano de estudos estruturado por módulos. Escolha sua certificação e comece hoje.</p>
+    </div>
+    <div class="conc-layout" id="certLayout">
+      <div class="conc-sidebar">
+        <div class="conc-skeleton" style="height:58px;margin-bottom:.4rem;border-radius:var(--r-md)"></div>
+      </div>
+      <div class="conc-detail">
+        <div class="conc-skeleton" style="height:24px;width:40%;margin-bottom:.8rem"></div>
+        <div class="conc-skeleton" style="height:32px;width:75%;margin-bottom:.5rem"></div>
+        <div class="conc-skeleton" style="height:18px;width:90%;margin-bottom:1rem"></div>
+        <div class="conc-skeleton" style="height:200px"></div>
       </div>
     </div>
   </div>
@@ -583,6 +631,8 @@ footer{padding:2.2rem 0;background:var(--cream)}
   // Toggle dropdown on click
   btn.addEventListener('click', e => {
     e.stopPropagation();
+    // Fecha dropdown de certificações se estiver aberto
+    document.getElementById('navCertBtn')?.setAttribute('aria-expanded', 'false');
     const open = btn.getAttribute('aria-expanded') === 'true';
     btn.setAttribute('aria-expanded', String(!open));
   });
@@ -650,6 +700,149 @@ footer{padding:2.2rem 0;background:var(--cream)}
          </div>
        </div>
        <div class="nav-drop-footer"><a href="#concursos">Ver detalhes ↓</a></div>`;
+  }
+})();
+
+/* ── DROPDOWN CERTIFICAÇÕES ── */
+(async function initCertNavDrop() {
+  const btn   = document.getElementById('navCertBtn');
+  const menu  = document.getElementById('navCertMenu');
+  const list  = document.getElementById('navCertList');
+  const badge = document.getElementById('navCertBadge');
+  if (!btn || !menu) return;
+
+  btn.addEventListener('click', e => {
+    e.stopPropagation();
+    // Fecha dropdown de concursos se estiver aberto
+    document.querySelector('.nav-drop-btn')?.setAttribute('aria-expanded', 'false');
+    const open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+  });
+
+  document.addEventListener('click', () => {
+    btn.setAttribute('aria-expanded', 'false');
+  });
+  menu.addEventListener('click', e => e.stopPropagation());
+
+  try {
+    const r = await fetch('certificacoes/cfp.json', { cache: 'no-store' });
+    if (!r.ok) throw new Error();
+    const cfp = await r.json();
+
+    badge.textContent = '1 disponível';
+    badge.classList.add('visivel');
+
+    list.innerHTML =
+      `<div class="nav-drop-hd">Certificações disponíveis</div>
+       <div class="nav-drop-item cert-item" id="navCertCFP">
+         <div class="nav-drop-dot" style="background:var(--blue-soft);border-color:var(--blue-line)">📜</div>
+         <div class="nav-drop-txt">
+           <strong>${cfp.nome}</strong>
+           <small>${cfp.organizacao} · ${cfp.area}</small>
+         </div>
+       </div>
+       <div class="nav-drop-footer"><a href="#certificacoes" style="color:var(--blue)">Ver todos os detalhes ↓</a></div>`;
+
+    document.getElementById('navCertCFP').addEventListener('click', () => {
+      btn.setAttribute('aria-expanded', 'false');
+      document.getElementById('certificacoes').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  } catch(e) {
+    badge.textContent = '1 disponível';
+    badge.classList.add('visivel');
+    list.innerHTML =
+      `<div class="nav-drop-hd">Certificações disponíveis</div>
+       <div class="nav-drop-item cert-item" onclick="document.getElementById('certificacoes').scrollIntoView({behavior:'smooth'});document.getElementById('navCertBtn').setAttribute('aria-expanded','false')">
+         <div class="nav-drop-dot" style="background:var(--blue-soft);border-color:var(--blue-line)">📜</div>
+         <div class="nav-drop-txt">
+           <strong>CFP® — Certified Financial Planner</strong>
+           <small>PLANEJAR · Planejamento Financeiro</small>
+         </div>
+       </div>
+       <div class="nav-drop-footer"><a href="#certificacoes" style="color:var(--blue)">Ver detalhes ↓</a></div>`;
+  }
+})();
+
+/* ── SEÇÃO CERTIFICAÇÕES ── */
+(async function carregarCertificacoes() {
+  const layout = document.getElementById("certLayout");
+  if (!layout) return;
+
+  function renderCertDetail(cfp) {
+    return `
+      <span class="cert-detail-badge">📜 ${cfp.organizacao} · ${cfp.area}</span>
+      <div class="conc-detail-nome">${cfp.nome}</div>
+      <p class="conc-detail-desc">${cfp.descricao}</p>
+      <div class="conc-detail-meta">
+        <span class="m" style="background:var(--blue-soft);border-color:var(--blue-line)">🎓 Nível: ${cfp.nivel}</span>
+        <span class="m" style="background:var(--blue-soft);border-color:var(--blue-line)">📚 ${cfp.modulos.length} módulos</span>
+      </div>
+      <div class="cert-modulos-hd">Módulos da certificação</div>
+      <div class="cert-modulos-list">
+        ${cfp.modulos.map(m => `
+          <div class="cert-modulo-item">
+            <span class="cert-modulo-num">M${m.numero}</span>
+            <div class="cert-modulo-txt">${m.nome}<small>${m.descricao}</small></div>
+          </div>`).join('')}
+      </div>
+      <div class="conc-detail-cta">
+        <button class="cert-comprar" onclick="window.open('${cfp.hotmartLink}','_blank')">Garantir acesso — R$ 19,90 →</button>
+        <span>Acesso imediato · garantia de 7 dias</span>
+      </div>`;
+  }
+
+  function renderCertSidebar(cfp) {
+    return `
+      <div class="conc-sidebar">
+        <div class="conc-sidebar-hd">Certificações disponíveis</div>
+        <div class="conc-nav-item ativo" style="cursor:default">
+          <div class="conc-nav-dot" style="background:var(--blue);border-color:var(--blue)">📜</div>
+          <div class="conc-nav-txt">
+            <strong>CFP®</strong>
+            <span>Certified Financial Planner</span>
+          </div>
+        </div>
+      </div>
+      <div class="conc-detail" id="certDetail">${renderCertDetail(cfp)}</div>`;
+  }
+
+  try {
+    const r = await fetch("certificacoes/cfp.json", { cache: "no-store" });
+    if (!r.ok) throw new Error();
+    const cfp = await r.json();
+    layout.innerHTML = renderCertSidebar(cfp);
+  } catch(e) {
+    layout.innerHTML = `
+      <div class="conc-sidebar">
+        <div class="conc-sidebar-hd">Certificações disponíveis</div>
+        <div class="conc-nav-item ativo" style="cursor:default">
+          <div class="conc-nav-dot" style="background:var(--blue);border-color:var(--blue)">📜</div>
+          <div class="conc-nav-txt">
+            <strong>CFP®</strong>
+            <span>Certified Financial Planner</span>
+          </div>
+        </div>
+      </div>
+      <div class="conc-detail">
+        <span class="cert-detail-badge">📜 PLANEJAR · Planejamento Financeiro</span>
+        <div class="conc-detail-nome">CFP® — Certified Financial Planner</div>
+        <p class="conc-detail-desc">A certificação CFP® é o padrão global de excelência para planejadores financeiros, reconhecida em mais de 27 países.</p>
+        <div class="cert-modulos-hd">Módulos da certificação</div>
+        <div class="cert-modulos-list">
+          <div class="cert-modulo-item"><span class="cert-modulo-num">M1</span><div class="cert-modulo-txt">Planejamento Financeiro e Ética</div></div>
+          <div class="cert-modulo-item"><span class="cert-modulo-num">M2</span><div class="cert-modulo-txt">Gestão Financeira</div></div>
+          <div class="cert-modulo-item"><span class="cert-modulo-num">M3</span><div class="cert-modulo-txt">Planejamento de Investimentos e Gestão de Ativos</div></div>
+          <div class="cert-modulo-item"><span class="cert-modulo-num">M4</span><div class="cert-modulo-txt">Planejamento de Aposentadoria</div></div>
+          <div class="cert-modulo-item"><span class="cert-modulo-num">M5</span><div class="cert-modulo-txt">Gestão de Riscos e Seguros</div></div>
+          <div class="cert-modulo-item"><span class="cert-modulo-num">M6</span><div class="cert-modulo-txt">Planejamento Tributário</div></div>
+          <div class="cert-modulo-item"><span class="cert-modulo-num">M7</span><div class="cert-modulo-txt">Planejamento Patrimonial e Sucessório</div></div>
+          <div class="cert-modulo-item"><span class="cert-modulo-num">M8</span><div class="cert-modulo-txt">Psicologia no Planejamento Financeiro</div></div>
+        </div>
+        <div class="conc-detail-cta">
+          <button class="cert-comprar" onclick="window.open('https://pay.hotmart.com/N106305634J','_blank')">Garantir acesso — R$ 19,90 →</button>
+          <span>Acesso imediato · garantia de 7 dias</span>
+        </div>
+      </div>`;
   }
 })();
 
