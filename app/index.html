@@ -1237,6 +1237,10 @@ function fazerLogout() {
     <a href="javascript:void(0)" class="nav-item" id="nav-materias" onclick="navTo('materias')"><span class="nav-icon">📚</span><span class="nav-label">Conteúdo programático</span></a>
     <a href="javascript:void(0)" class="nav-item" id="nav-edital" onclick="navTo('edital')"><span class="nav-icon">🔍</span><span class="nav-label">Análise do Edital</span></a>
   </nav>
+  <span class="sidebar-section-label">Recursos</span>
+  <nav class="sidebar-nav">
+    <a href="javascript:void(0)" class="nav-item" id="nav-loja" onclick="navTo('loja')"><span class="nav-icon">🎓</span><span class="nav-label">Material de Estudos</span><span class="nav-badge" style="background:var(--yellow-viv);color:var(--navy);">10%</span></a>
+  </nav>
   <span class="sidebar-section-label">Configurações</span>
   <nav class="sidebar-nav">
     <a href="javascript:void(0)" class="nav-item" onclick="openSetupModal()"><span class="nav-icon">🔁</span><span class="nav-label">Reconfigurar</span></a>
@@ -1422,6 +1426,104 @@ function fazerLogout() {
     <div id="revResumo" style="display:none;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-bottom:1.25rem"></div>
     <div style="display:none;align-items:center;gap:.5rem;margin-bottom:.85rem;flex-wrap:wrap" id="revFiltros"></div>
     <div id="revisoesConteudo" style="display:none"></div>
+  </div>
+
+  <!-- PAGE: LOJA / MATERIAL DE ESTUDOS -->
+  <div class="page" id="page-loja">
+    <div class="page-title">🎓 Material de Estudos</div>
+    <div class="page-sub">Recursos recomendados para turbinar sua preparação.</div>
+
+    <!-- Card Gran Cursos -->
+    <div style="max-width:720px">
+      <div style="background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.06)">
+
+        <!-- Header do card -->
+        <div style="background:linear-gradient(135deg,#0d1b3e 0%,#1a2f66 100%);padding:2rem 2rem 1.5rem;position:relative;overflow:hidden">
+          <div style="position:absolute;top:-30px;right:-30px;width:160px;height:160px;background:rgba(255,255,255,.04);border-radius:50%"></div>
+          <div style="position:absolute;bottom:-50px;right:60px;width:120px;height:120px;background:rgba(255,255,255,.03);border-radius:50%"></div>
+
+          <!-- Logo Gran -->
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:1rem">
+            <div style="background:white;border-radius:10px;padding:8px 14px;display:inline-flex;align-items:center">
+              <span style="font-family:'Bricolage Grotesque',sans-serif;font-size:1.4rem;font-weight:800;color:#0d1b3e;letter-spacing:-1px">
+                <span style="color:#c0392b">G</span>RAN
+              </span>
+            </div>
+            <div>
+              <div style="font-size:.75rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em">Cursos Online</div>
+            </div>
+          </div>
+
+          <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(232,148,58,.15);border:1px solid rgba(232,148,58,.4);border-radius:99px;padding:4px 14px;margin-bottom:.85rem">
+            <span style="font-size:.75rem;color:#E8943A;font-weight:700">🏷️ PARCEIRO EXCLUSIVO</span>
+          </div>
+
+          <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:1.6rem;font-weight:800;color:white;line-height:1.2;margin-bottom:.4rem">
+            10% de desconto em todos os cursos
+          </div>
+          <div style="font-size:.9rem;color:rgba(255,255,255,.6)">
+            Use o link abaixo e garanta o desconto automaticamente no checkout.
+          </div>
+        </div>
+
+        <!-- Corpo do card -->
+        <div style="padding:1.75rem 2rem">
+
+          <!-- Benefícios -->
+          <div style="margin-bottom:1.75rem">
+            <div style="font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gray-500);margin-bottom:.85rem">O que você encontra</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:.65rem">
+              <div style="display:flex;align-items:flex-start;gap:.6rem">
+                <span style="font-size:1rem;margin-top:1px">📖</span>
+                <div>
+                  <div style="font-size:.85rem;font-weight:600;color:var(--gray-700)">Videoaulas completas</div>
+                  <div style="font-size:.75rem;color:var(--gray-500)">Professores especialistas por banca</div>
+                </div>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:.6rem">
+                <span style="font-size:1rem;margin-top:1px">📝</span>
+                <div>
+                  <div style="font-size:.85rem;font-weight:600;color:var(--gray-700)">Questões comentadas</div>
+                  <div style="font-size:.75rem;color:var(--gray-500)">Banco com milhares de questões</div>
+                </div>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:.6rem">
+                <span style="font-size:1rem;margin-top:1px">📄</span>
+                <div>
+                  <div style="font-size:.85rem;font-weight:600;color:var(--gray-700)">Apostilas em PDF</div>
+                  <div style="font-size:.75rem;color:var(--gray-500)">Material completo para download</div>
+                </div>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:.6rem">
+                <span style="font-size:1rem;margin-top:1px">🎯</span>
+                <div>
+                  <div style="font-size:.85rem;font-weight:600;color:var(--gray-700)">Simulados cronometrados</div>
+                  <div style="font-size:.75rem;color:var(--gray-500)">Treine como na prova real</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Separador -->
+          <div style="border-top:1px solid var(--gray-200);margin-bottom:1.5rem"></div>
+
+          <!-- CTA -->
+          <div style="display:flex;flex-direction:column;align-items:center;gap:.75rem;text-align:center">
+            <a href="https://mais.app/6ga90M" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;gap:.5rem;background:linear-gradient(135deg,#0d1b3e 0%,#1a2f66 100%);color:white;font-size:1rem;font-weight:700;padding:.85rem 2.5rem;border-radius:var(--radius-md);text-decoration:none;transition:opacity .2s;width:100%;max-width:360px" onmouseover="this.style.opacity='.88'" onmouseout="this.style.opacity='1'">
+              🎓 Acessar Gran Cursos com 10% Off
+            </a>
+            <div style="font-size:.76rem;color:var(--gray-400)">O desconto é aplicado automaticamente via link de parceiro.</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Aviso -->
+      <div style="margin-top:1rem;padding:.75rem 1rem;background:var(--yellow-pale);border:1px solid var(--yellow-mid);border-radius:var(--radius-sm);display:flex;align-items:flex-start;gap:.6rem">
+        <span style="font-size:.9rem;margin-top:1px">ℹ️</span>
+        <div style="font-size:.78rem;color:var(--yellow);line-height:1.5">Esta é uma indicação de parceiro. Ao comprar pelo link, você apoia a Bússola de Estudos e recebe 10% de desconto no Gran Cursos.</div>
+      </div>
+    </div>
   </div>
 
 </main>
