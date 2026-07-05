@@ -981,3 +981,9 @@ body.aguardando-auth > *:not(#loginScreen) { visibility:hidden !important; point
   .topbar-concurso-name{ max-width:26vw; }
   .mini-cards{ gap:.5rem; }
 }
+
+/* ── Evolução por Matéria: nomes sem truncar no desktop ── */
+@media(min-width:1025px){
+  .mapa-header,.mapa-item{ grid-template-columns:minmax(200px,280px) 1fr 110px; }
+  .mapa-materia{ white-space:normal; line-height:1.3; }
+}
