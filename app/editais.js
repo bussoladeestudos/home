@@ -1,0 +1,1550 @@
+/* ════════════════════════════════════════════
+   EDITAIS — FONTE ÚNICA de concursos e certificações.
+   Para adicionar/editar um concurso, edite apenas este arquivo.
+   Formato de cada chave: ver comentário no index.html.
+   ════════════════════════════════════════════ */
+window.EDITAIS_DATA = {
+  "cgAgenteAdm": {
+    "nome": "Prefeitura de Campina Grande — Agente Administrativo",
+    "estado": "PB",
+    "_info": "Concurso Prefeitura de Campina Grande/PB — Edital 01/2026 (IDECAN). Prova objetiva: 30/08/2026. 40 questões / 60 pontos.",
+    "cargos": [
+      "Agente Administrativo (Nível Médio) — 80 vagas"
+    ],
+    "materias": [
+      {
+        "nome": "Língua Portuguesa",
+        "peso": 17
+      },
+      {
+        "nome": "Raciocínio Lógico",
+        "peso": 8
+      },
+      {
+        "nome": "História de Campina Grande",
+        "peso": 5
+      },
+      {
+        "nome": "Legislação e Ética no Serviço Público",
+        "peso": 5
+      },
+      {
+        "nome": "Conhecimentos Específicos",
+        "peso": 65
+      }
+    ],
+    "topicos": {
+      "Língua Portuguesa": [
+        "Leitura, compreensão e interpretação de textos",
+        "Estruturação do texto e dos parágrafos; articulação e conectivos",
+        "Significação contextual; equivalência e transformação de estruturas",
+        "Sintaxe: coordenação e subordinação",
+        "Tempos e modos verbais; pontuação",
+        "Concordância nominal e verbal",
+        "Regência nominal e verbal; pronomes e colocação",
+        "Morfologia: estrutura, formação e classes de palavras",
+        "Ortografia oficial e acentuação gráfica"
+      ],
+      "Raciocínio Lógico": [
+        "Estruturas lógicas e dedução de informações",
+        "Raciocínio verbal, sequencial e orientação espacial/temporal",
+        "Operações com conjuntos",
+        "Problemas aritméticos, geométricos e matriciais"
+      ],
+      "História de Campina Grande": [
+        "Formação histórica do município de Campina Grande",
+        "Campina Grande contemporânea: economia, cultura e símbolos"
+      ],
+      "Legislação e Ética no Serviço Público": [
+        "Lei Orgânica do Município de Campina Grande",
+        "LGPD (Lei 13.709/2018) e Lei de Acesso à Informação (12.527/2011)",
+        "Ética no serviço público e princípios da Administração (LIMPE)"
+      ],
+      "Conhecimentos Específicos": [
+        "Redação oficial: correspondências, ofícios e requerimentos",
+        "Documentos oficiais: leis, decretos, portarias; siglas e formas de tratamento",
+        "Documentação e arquivo: sistemas e métodos de arquivamento",
+        "Noções de arquivística; rotinas de documentos; atas e relatórios",
+        "Atos administrativos: conceito, requisitos, atributos e classificação",
+        "Protocolo e gestão documental",
+        "Técnicas secretariais; organização de reuniões e eventos",
+        "Atendimento presencial, telefônico e virtual; qualidade no serviço",
+        "Administração Pública: princípios constitucionais e organização",
+        "Poderes administrativos e processo administrativo",
+        "Controle interno e externo; responsabilidade do servidor",
+        "Licitações e contratos: Lei 14.133/2021",
+        "Orçamento público: PPA, LDO e LOA",
+        "Lei 4.320/1964 e Lei de Responsabilidade Fiscal",
+        "LAI e proteção de dados na prática administrativa",
+        "Rotinas administrativas e sistemas informatizados"
+      ]
+    },
+    "dataProva": "2026-08-30",
+    "id": "cgAgenteAdm",
+    "grupo": "Campina Grande PB"
+  },
+  "cgProfInfantil": {
+    "nome": "Prefeitura de Campina Grande — Professor Educação Infantil",
+    "estado": "PB",
+    "_info": "Concurso Prefeitura de Campina Grande/PB — Edital 01/2026 (IDECAN). Prova objetiva: 30/08/2026. 40 questões / 60 pontos. Professores: prova de títulos classificatória (10 pts).",
+    "cargos": [
+      "Professor Educação Infantil 40h — 200 vagas"
+    ],
+    "materias": [
+      {
+        "nome": "Língua Portuguesa",
+        "peso": 17
+      },
+      {
+        "nome": "Noções de Informática",
+        "peso": 8
+      },
+      {
+        "nome": "História de Campina Grande",
+        "peso": 5
+      },
+      {
+        "nome": "Legislação e Ética no Serviço Público",
+        "peso": 5
+      },
+      {
+        "nome": "Conhecimentos Específicos",
+        "peso": 65
+      }
+    ],
+    "topicos": {
+      "Língua Portuguesa": [
+        "Leitura, compreensão e interpretação de textos",
+        "Estruturação do texto e dos parágrafos; articulação e conectivos",
+        "Significação contextual; equivalência e transformação de estruturas",
+        "Sintaxe: coordenação e subordinação",
+        "Tempos e modos verbais; pontuação",
+        "Concordância nominal e verbal",
+        "Regência nominal e verbal; pronomes e colocação",
+        "Morfologia: estrutura, formação e classes de palavras",
+        "Ortografia oficial e acentuação gráfica"
+      ],
+      "Noções de Informática": [
+        "Hardware, dispositivos de armazenamento e arquivos",
+        "Sistemas operacionais Windows/Linux; pastas e atalhos",
+        "Editor de textos: formatação, tabelas e impressão",
+        "Planilhas eletrônicas: fórmulas, funções e gráficos",
+        "Correio eletrônico e ferramentas de reunião on-line",
+        "Internet, navegadores e computação em nuvem",
+        "Segurança da informação: malwares, antivírus e backup"
+      ],
+      "História de Campina Grande": [
+        "Formação histórica do município de Campina Grande",
+        "Campina Grande contemporânea: economia, cultura e símbolos"
+      ],
+      "Legislação e Ética no Serviço Público": [
+        "Lei Orgânica do Município de Campina Grande",
+        "LGPD (Lei 13.709/2018) e Lei de Acesso à Informação (12.527/2011)",
+        "Ética no serviço público e princípios da Administração (LIMPE)"
+      ],
+      "Conhecimentos Específicos": [
+        "Avaliação na Educação Infantil: diagnóstica e formativa",
+        "Instrumentos avaliativos: observação, registros e portfólios",
+        "Teorias do desenvolvimento e aprendizagem",
+        "Desenvolvimento cognitivo, emocional e social",
+        "Práticas pedagógicas: brincadeiras dirigidas e espontâneas",
+        "Interdisciplinaridade, contextualização e metodologias ativas",
+        "Alfabetização e letramento; consciência fonológica",
+        "Educação inclusiva: práticas adaptadas",
+        "Diversidade cultural e relações étnico-raciais",
+        "Gestão da sala de aula e mediação de conflitos",
+        "Relação escola-família-comunidade",
+        "Lei 11.738/2008 (piso do magistério) e carreira docente",
+        "Temas transversais na educação",
+        "Pensadores da educação: Piaget, Vygotsky, Freire, Dewey, Montessori, Saviani",
+        "Escolas pedagógicas: da tradicional à histórico-crítica; Waldorf e Montessori",
+        "Projeto Político-Pedagógico e gestão democrática",
+        "Currículo, avaliação e recuperação da aprendizagem",
+        "Educação especial, acessibilidade e AEE",
+        "Legislação educacional: CF arts. 205-214, LDB e ECA",
+        "PNE vigente, Fundeb (Lei 14.113/2020), DCNs e BNCC"
+      ]
+    },
+    "dataProva": "2026-08-30",
+    "id": "cgProfInfantil",
+    "grupo": "Campina Grande PB"
+  },
+  "cgProfAnosIniciais": {
+    "nome": "Prefeitura de Campina Grande — Professor Básico 2 (Anos Iniciais)",
+    "estado": "PB",
+    "_info": "Concurso Prefeitura de Campina Grande/PB — Edital 01/2026 (IDECAN). Prova objetiva: 30/08/2026. 40 questões / 60 pontos. Professores: prova de títulos classificatória (10 pts).",
+    "cargos": [
+      "Professor Básico 2 — Anos Iniciais 30h — 200 vagas"
+    ],
+    "materias": [
+      {
+        "nome": "Língua Portuguesa",
+        "peso": 17
+      },
+      {
+        "nome": "Noções de Informática",
+        "peso": 8
+      },
+      {
+        "nome": "História de Campina Grande",
+        "peso": 5
+      },
+      {
+        "nome": "Legislação e Ética no Serviço Público",
+        "peso": 5
+      },
+      {
+        "nome": "Conhecimentos Específicos",
+        "peso": 65
+      }
+    ],
+    "topicos": {
+      "Língua Portuguesa": [
+        "Leitura, compreensão e interpretação de textos",
+        "Estruturação do texto e dos parágrafos; articulação e conectivos",
+        "Significação contextual; equivalência e transformação de estruturas",
+        "Sintaxe: coordenação e subordinação",
+        "Tempos e modos verbais; pontuação",
+        "Concordância nominal e verbal",
+        "Regência nominal e verbal; pronomes e colocação",
+        "Morfologia: estrutura, formação e classes de palavras",
+        "Ortografia oficial e acentuação gráfica"
+      ],
+      "Noções de Informática": [
+        "Hardware, dispositivos de armazenamento e arquivos",
+        "Sistemas operacionais Windows/Linux; pastas e atalhos",
+        "Editor de textos: formatação, tabelas e impressão",
+        "Planilhas eletrônicas: fórmulas, funções e gráficos",
+        "Correio eletrônico e ferramentas de reunião on-line",
+        "Internet, navegadores e computação em nuvem",
+        "Segurança da informação: malwares, antivírus e backup"
+      ],
+      "História de Campina Grande": [
+        "Formação histórica do município de Campina Grande",
+        "Campina Grande contemporânea: economia, cultura e símbolos"
+      ],
+      "Legislação e Ética no Serviço Público": [
+        "Lei Orgânica do Município de Campina Grande",
+        "LGPD (Lei 13.709/2018) e Lei de Acesso à Informação (12.527/2011)",
+        "Ética no serviço público e princípios da Administração (LIMPE)"
+      ],
+      "Conhecimentos Específicos": [
+        "Avaliação educacional nos Anos Iniciais: diagnóstica e formativa",
+        "Avaliação no processo de alfabetização e letramento",
+        "Organização do trabalho pedagógico: rotina, sequência didática e projetos",
+        "Ludicidade, leitura e literatura infantil",
+        "Desenvolvimento da motricidade, linguagens e cognição",
+        "Histórico e teóricos da Educação Infantil",
+        "Didática e metodologia do ensino nos Anos Iniciais",
+        "Alfabetização: linguagem oral e escrita; produção de textos",
+        "Consciência fonológica e sistema alfabético-ortográfico",
+        "Teorias de aprendizagem e desenvolvimento",
+        "Planejamento docente e projetos de letramento",
+        "Currículo e didática: teorias e tendências atuais",
+        "Projeto Político-Pedagógico e função social da escola",
+        "Tendências e concepções pedagógicas brasileiras",
+        "Educação inclusiva e pedagogia da infância",
+        "Educação das relações étnico-raciais",
+        "Mídias e tecnologias do conhecimento",
+        "Componentes curriculares dos Anos Iniciais",
+        "Diretrizes Curriculares do Ensino Fundamental de 9 anos",
+        "Legislação educacional: CF arts. 205-214, LDB e ECA",
+        "PNE vigente, Fundeb (Lei 14.113/2020), DCNs e BNCC"
+      ]
+    },
+    "dataProva": "2026-08-30",
+    "id": "cgProfAnosIniciais",
+    "grupo": "Campina Grande PB"
+  },
+  "cgProfPortugues": {
+    "nome": "Prefeitura de Campina Grande — Professor Básico 3 (Língua Portuguesa)",
+    "estado": "PB",
+    "_info": "Concurso Prefeitura de Campina Grande/PB — Edital 01/2026 (IDECAN). Prova objetiva: 30/08/2026. 40 questões / 60 pontos. Professores: prova de títulos classificatória (10 pts).",
+    "cargos": [
+      "Professor Básico 3 — Língua Portuguesa — 20 vagas"
+    ],
+    "materias": [
+      {
+        "nome": "Língua Portuguesa",
+        "peso": 17
+      },
+      {
+        "nome": "Noções de Informática",
+        "peso": 8
+      },
+      {
+        "nome": "História de Campina Grande",
+        "peso": 5
+      },
+      {
+        "nome": "Legislação e Ética no Serviço Público",
+        "peso": 5
+      },
+      {
+        "nome": "Conhecimentos Específicos",
+        "peso": 65
+      }
+    ],
+    "topicos": {
+      "Língua Portuguesa": [
+        "Leitura, compreensão e interpretação de textos",
+        "Estruturação do texto e dos parágrafos; articulação e conectivos",
+        "Significação contextual; equivalência e transformação de estruturas",
+        "Sintaxe: coordenação e subordinação",
+        "Tempos e modos verbais; pontuação",
+        "Concordância nominal e verbal",
+        "Regência nominal e verbal; pronomes e colocação",
+        "Morfologia: estrutura, formação e classes de palavras",
+        "Ortografia oficial e acentuação gráfica"
+      ],
+      "Noções de Informática": [
+        "Hardware, dispositivos de armazenamento e arquivos",
+        "Sistemas operacionais Windows/Linux; pastas e atalhos",
+        "Editor de textos: formatação, tabelas e impressão",
+        "Planilhas eletrônicas: fórmulas, funções e gráficos",
+        "Correio eletrônico e ferramentas de reunião on-line",
+        "Internet, navegadores e computação em nuvem",
+        "Segurança da informação: malwares, antivírus e backup"
+      ],
+      "História de Campina Grande": [
+        "Formação histórica do município de Campina Grande",
+        "Campina Grande contemporânea: economia, cultura e símbolos"
+      ],
+      "Legislação e Ética no Serviço Público": [
+        "Lei Orgânica do Município de Campina Grande",
+        "LGPD (Lei 13.709/2018) e Lei de Acesso à Informação (12.527/2011)",
+        "Ética no serviço público e princípios da Administração (LIMPE)"
+      ],
+      "Conhecimentos Específicos": [
+        "Compreensão e interpretação: produção, recepção e propósito comunicativo",
+        "Gêneros e tipologia textual; elementos composicionais",
+        "Tese, opiniões e inferências; textos multimodais",
+        "Intertextualidade, hipertextualidade, paráfrase e citação",
+        "Sequências narrativas e argumentativas",
+        "Recursos expressivos: figuras de linguagem, conotação e denotação",
+        "Coesão lexical e pronominal; coerência",
+        "Fonética, fonologia e ortografia",
+        "Morfologia e morfossintaxe",
+        "Sintaxe: período simples e composto",
+        "Concordância e regência nominal e verbal",
+        "Variação linguística e preconceito linguístico",
+        "Semântica: polissemia, ambiguidade e modalizações",
+        "BNCC e o ensino de Língua Portuguesa",
+        "Legislação educacional: CF arts. 205-214, LDB e ECA",
+        "PNE vigente, Fundeb (Lei 14.113/2020), DCNs e BNCC"
+      ]
+    },
+    "dataProva": "2026-08-30",
+    "id": "cgProfPortugues",
+    "grupo": "Campina Grande PB"
+  },
+  "cgProfMatematica": {
+    "nome": "Prefeitura de Campina Grande — Professor Básico 3 (Matemática)",
+    "estado": "PB",
+    "_info": "Concurso Prefeitura de Campina Grande/PB — Edital 01/2026 (IDECAN). Prova objetiva: 30/08/2026. 40 questões / 60 pontos. Professores: prova de títulos classificatória (10 pts).",
+    "cargos": [
+      "Professor Básico 3 — Matemática — 20 vagas"
+    ],
+    "materias": [
+      {
+        "nome": "Língua Portuguesa",
+        "peso": 17
+      },
+      {
+        "nome": "Noções de Informática",
+        "peso": 8
+      },
+      {
+        "nome": "História de Campina Grande",
+        "peso": 5
+      },
+      {
+        "nome": "Legislação e Ética no Serviço Público",
+        "peso": 5
+      },
+      {
+        "nome": "Conhecimentos Específicos",
+        "peso": 65
+      }
+    ],
+    "topicos": {
+      "Língua Portuguesa": [
+        "Leitura, compreensão e interpretação de textos",
+        "Estruturação do texto e dos parágrafos; articulação e conectivos",
+        "Significação contextual; equivalência e transformação de estruturas",
+        "Sintaxe: coordenação e subordinação",
+        "Tempos e modos verbais; pontuação",
+        "Concordância nominal e verbal",
+        "Regência nominal e verbal; pronomes e colocação",
+        "Morfologia: estrutura, formação e classes de palavras",
+        "Ortografia oficial e acentuação gráfica"
+      ],
+      "Noções de Informática": [
+        "Hardware, dispositivos de armazenamento e arquivos",
+        "Sistemas operacionais Windows/Linux; pastas e atalhos",
+        "Editor de textos: formatação, tabelas e impressão",
+        "Planilhas eletrônicas: fórmulas, funções e gráficos",
+        "Correio eletrônico e ferramentas de reunião on-line",
+        "Internet, navegadores e computação em nuvem",
+        "Segurança da informação: malwares, antivírus e backup"
+      ],
+      "História de Campina Grande": [
+        "Formação histórica do município de Campina Grande",
+        "Campina Grande contemporânea: economia, cultura e símbolos"
+      ],
+      "Legislação e Ética no Serviço Público": [
+        "Lei Orgânica do Município de Campina Grande",
+        "LGPD (Lei 13.709/2018) e Lei de Acesso à Informação (12.527/2011)",
+        "Ética no serviço público e princípios da Administração (LIMPE)"
+      ],
+      "Conhecimentos Específicos": [
+        "Conjuntos numéricos: propriedades e operações",
+        "Divisibilidade, números primos, MDC e MMC",
+        "Equações e inequações: 1º e 2º grau, exponencial e logarítmica",
+        "Funções polinomiais, exponenciais e logarítmicas",
+        "Trigonometria e funções trigonométricas",
+        "Progressões aritmética e geométrica",
+        "Matrizes, determinantes e sistemas lineares",
+        "Análise combinatória e probabilidade",
+        "Estatística",
+        "Matemática financeira; razão, proporção e porcentagem",
+        "Geometria plana",
+        "Geometria espacial",
+        "Geometria analítica e cônicas",
+        "Números complexos, polinômios e equações algébricas",
+        "Cálculo: limites, derivadas e integrais",
+        "Educação Matemática: teorias, avaliação e BNCC",
+        "Competências e habilidades no ensino de Matemática",
+        "Legislação educacional: CF arts. 205-214, LDB e ECA",
+        "PNE vigente, Fundeb (Lei 14.113/2020), DCNs e BNCC"
+      ]
+    },
+    "dataProva": "2026-08-30",
+    "id": "cgProfMatematica",
+    "grupo": "Campina Grande PB"
+  },
+  "cgSupervisor": {
+    "nome": "Prefeitura de Campina Grande — Supervisor Educacional",
+    "estado": "PB",
+    "_info": "Concurso Prefeitura de Campina Grande/PB — Edital 01/2026 (IDECAN). Prova objetiva: 30/08/2026. 40 questões / 60 pontos. Professores: prova de títulos classificatória (10 pts).",
+    "cargos": [
+      "Supervisor Educacional — 25 vagas"
+    ],
+    "materias": [
+      {
+        "nome": "Língua Portuguesa",
+        "peso": 17
+      },
+      {
+        "nome": "Noções de Informática",
+        "peso": 8
+      },
+      {
+        "nome": "História de Campina Grande",
+        "peso": 5
+      },
+      {
+        "nome": "Legislação e Ética no Serviço Público",
+        "peso": 5
+      },
+      {
+        "nome": "Conhecimentos Específicos",
+        "peso": 65
+      }
+    ],
+    "topicos": {
+      "Língua Portuguesa": [
+        "Leitura, compreensão e interpretação de textos",
+        "Estruturação do texto e dos parágrafos; articulação e conectivos",
+        "Significação contextual; equivalência e transformação de estruturas",
+        "Sintaxe: coordenação e subordinação",
+        "Tempos e modos verbais; pontuação",
+        "Concordância nominal e verbal",
+        "Regência nominal e verbal; pronomes e colocação",
+        "Morfologia: estrutura, formação e classes de palavras",
+        "Ortografia oficial e acentuação gráfica"
+      ],
+      "Noções de Informática": [
+        "Hardware, dispositivos de armazenamento e arquivos",
+        "Sistemas operacionais Windows/Linux; pastas e atalhos",
+        "Editor de textos: formatação, tabelas e impressão",
+        "Planilhas eletrônicas: fórmulas, funções e gráficos",
+        "Correio eletrônico e ferramentas de reunião on-line",
+        "Internet, navegadores e computação em nuvem",
+        "Segurança da informação: malwares, antivírus e backup"
+      ],
+      "História de Campina Grande": [
+        "Formação histórica do município de Campina Grande",
+        "Campina Grande contemporânea: economia, cultura e símbolos"
+      ],
+      "Legislação e Ética no Serviço Público": [
+        "Lei Orgânica do Município de Campina Grande",
+        "LGPD (Lei 13.709/2018) e Lei de Acesso à Informação (12.527/2011)",
+        "Ética no serviço público e princípios da Administração (LIMPE)"
+      ],
+      "Conhecimentos Específicos": [
+        "PPP e os artigos 12 e 13 da LDB; construção coletiva",
+        "PPP como diretriz do currículo: planos de ensino e avaliação cíclica",
+        "Gestão colegiada e democracia escolar",
+        "Interdisciplinaridade no ensino-aprendizagem",
+        "BNCC e o Conselho Nacional de Educação: dissensos e consensos",
+        "Jornada Pedagógica anual: função e resultados",
+        "Educação, desigualdade social e cidadania",
+        "Educação e diversidade cultural",
+        "Princípios e diretrizes curriculares da Educação Básica",
+        "Função social da escola; a educação em Paulo Freire",
+        "Teorias da aprendizagem e avaliação",
+        "Interação pedagógica: aluno, professor, tempos e espaços",
+        "Tendências pedagógicas no Brasil",
+        "Currículo: concepções e implicações",
+        "Ação supervisora e formação continuada de professores",
+        "Políticas públicas e financiamento da Educação Básica",
+        "Legislação educacional: CF arts. 205-214, LDB e ECA",
+        "PNE vigente, Fundeb (Lei 14.113/2020), DCNs e BNCC"
+      ]
+    },
+    "dataProva": "2026-08-30",
+    "id": "cgSupervisor",
+    "grupo": "Campina Grande PB"
+  },
+  "sedesDfTdasTecAdm": {
+    "nome": "SEDES/DF — Técnico Administrativo (TDAS)",
+    "estado": "DF",
+    "_info": "SEDES/DF — Edital 01/2026, Ret. 02/2026 (Instituto Quadrix). Prova: 06/09/2026. 20 questões Conhecimentos Gerais (peso 1) + 40 questões Conhecimentos Específicos (peso 2). Nível médio. 4.776 vagas totais.",
+    "cargos": [
+      "Técnico Administrativo — Cargo 202 (4.776 vagas)"
+    ],
+    "materias": [
+      {
+        "nome": "Língua Portuguesa",
+        "peso": 8,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "Raciocínio Lógico",
+        "peso": 7,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "Atualidades do DF, Legislação e Primeiros Socorros",
+        "peso": 5,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "SUAS: Fundamentos e Gestão",
+        "peso": 16,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "Programas Socioassistenciais do DF",
+        "peso": 8,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "Direito Constitucional",
+        "peso": 14,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "Direito Administrativo e Legislação",
+        "peso": 14,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "Rotinas Administrativas e Arquivologia",
+        "peso": 16,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "Recursos Materiais, Patrimônio e Compras",
+        "peso": 12,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      }
+    ],
+    "topicos": {
+      "Língua Portuguesa": [
+        "Leitura, compreensão e interpretação de textos",
+        "Tipologia e gêneros textuais; intertextualidade e coerência",
+        "Estruturação do texto e dos parágrafos; articulação e conectivos",
+        "Significação das palavras: sinonímia, antonímia e polissemia",
+        "Sintaxe: coordenação e subordinação; período composto",
+        "Concordância nominal e verbal",
+        "Regência nominal e verbal",
+        "Pronomes: emprego e colocação pronominal",
+        "Tempos, modos e vozes verbais",
+        "Pontuação e acentuação gráfica",
+        "Morfologia: estrutura e formação de palavras; classes gramaticais",
+        "Ortografia oficial (Acordo Ortográfico vigente)",
+        "Redação oficial: linguagem, clareza e objetividade"
+      ],
+      "Raciocínio Lógico": [
+        "Estruturas lógicas: proposições, conectivos e tabelas-verdade",
+        "Equivalências e negações lógicas",
+        "Raciocínio dedutivo: silogismos e inferências",
+        "Raciocínio verbal e sequencial",
+        "Orientação espacial e temporal",
+        "Operações com conjuntos (diagramas de Venn)",
+        "Problemas aritméticos: razão, proporção e regra de três",
+        "Problemas com sequências numéricas e geométricas",
+        "Raciocínio matricial e combinatório básico"
+      ],
+      "Atualidades do DF, Legislação e Primeiros Socorros": [
+        "Realidade étnica, social, histórica, geográfica, cultural, política e econômica do DF",
+        "RIDE/DF — Lei Complementar Federal nº 94/1998 e Decreto Federal nº 7.469/2011",
+        "Plano Distrital de Política para Mulheres (PDPM)",
+        "Lei Orgânica do Distrito Federal — Título VI: Da Ordem Social e do Meio Ambiente",
+        "Lei Complementar nº 840/2011: Deveres, Regime Disciplinar e Processo Administrativo Disciplinar",
+        "Lei Federal nº 11.340/2006 (Lei Maria da Penha)",
+        "Lei Distrital nº 7.484/2024",
+        "Primeiros socorros: reconhecimento de urgência/emergência e acionamento do socorro",
+        "Primeiros socorros: engasgo, sangramento, fratura, queimadura, desmaio, convulsão e intoxicação"
+      ],
+      "SUAS: Fundamentos e Gestão": [
+        "PNAS/2004: princípios, diretrizes, objetivos e proteções afiançadas",
+        "Proteção Social Básica (PSB) e Proteção Social Especial (PSE): diferenças e serviços",
+        "Matricialidade sociofamiliar, descentralização político-administrativa e territorialização",
+        "SUAS: princípios, diretrizes, organização e seguranças socioassistenciais",
+        "Seguranças do SUAS: acolhida, convívio, renda e autonomia",
+        "NOB/SUAS 2012: responsabilidades dos entes federados",
+        "NOB/SUAS 2012: cofinanciamento e pactuação",
+        "NOB/SUAS 2012: gestão do trabalho no SUAS",
+        "Vigilância socioassistencial: conceito, objetivos e ferramentas"
+      ],
+      "Programas Socioassistenciais do DF": [
+        "Programa Cartão Prato Cheio: Lei Distrital nº 7.009/2021 e Decreto nº 42.873/2021",
+        "Programa Cartão Gás: Lei Distrital nº 6.938/2021 e Decreto nº 42.376/2021",
+        "Plano DF Social: Lei Distrital nº 7.008/2021, Decreto nº 42.872/2021 e Portaria nº 42/2023",
+        "Benefícios Eventuais da Assistência Social do DF: Lei Distrital nº 5.165/2013 e Decreto nº 35.191/2014",
+        "SISAN e Restaurantes Comunitários: Decreto nº 33.329/2011"
+      ],
+      "Direito Constitucional": [
+        "CF/1988: princípios fundamentais da República (art. 1º ao 4º)",
+        "Direitos e deveres individuais e coletivos (art. 5º)",
+        "Direitos sociais (art. 6º ao 11)",
+        "Organização do Estado: disposições gerais (art. 18 ao 36)",
+        "Administração Pública: princípios e disposições gerais (art. 37 ao 38)",
+        "Servidores públicos civis: direitos, deveres e vedações (art. 39 ao 41)"
+      ],
+      "Direito Administrativo e Legislação": [
+        "Estado, governo e administração pública: conceitos e elementos",
+        "Ato administrativo: conceito, requisitos (competência, forma, motivo, objeto, finalidade)",
+        "Atributos do ato administrativo: presunção de legitimidade, imperatividade e autoexecutoriedade",
+        "Classificação dos atos administrativos; extinção: anulação e revogação",
+        "Poderes da Administração: hierárquico, disciplinar, regulamentar e de polícia",
+        "Regime Jurídico dos Servidores do DF — LC nº 840/2011: provimento e vacância",
+        "Regime Jurídico dos Servidores do DF — LC nº 840/2011: direitos e deveres",
+        "Regime Jurídico dos Servidores do DF — LC nº 840/2011: responsabilidade e PAD"
+      ],
+      "Rotinas Administrativas e Arquivologia": [
+        "Qualidade no atendimento ao público: princípios e boas práticas",
+        "Trabalho em equipe: comunicação, cooperação e resolução de conflitos",
+        "Redação oficial: normas do Manual de Redação da Presidência da República",
+        "Comunicações administrativas: ofício, memorando, circular, despacho e relatório",
+        "Protocolo: recebimento, registro, distribuição e tramitação de documentos",
+        "Arquivologia: conceitos, teoria das três idades (corrente, intermediário, permanente)",
+        "Tipos de arquivos e métodos de arquivamento (alfabético, numérico, geográfico, temático)",
+        "Preservação e conservação de documentos",
+        "Digitalização de documentos: conceitos, normas e boas práticas"
+      ],
+      "Recursos Materiais, Patrimônio e Compras": [
+        "Administração de materiais: classificação e codificação",
+        "Gestão de estoques: controle, inventário e técnicas (PEPS, UEPS, custo médio)",
+        "Armazenagem: organização, layout e boas práticas de almoxarifado",
+        "Gestão patrimonial: tombamento, registro e controle de bens",
+        "Inventário e baixa de bens patrimoniais",
+        "Compras no setor público: Lei Federal nº 14.133/2021 — disposições gerais",
+        "Etapas do processo de compras: planejamento, pesquisa de preços e contratação",
+        "Modalidades de licitação: pregão, concorrência, concurso, leilão e diálogo competitivo"
+      ]
+    },
+    "dataProva": "2026-09-06",
+    "grupo": "SEDES-DF"
+  },
+  "sedesDfTdasAgenSoc": {
+    "nome": "SEDES/DF — Agente Social (TDAS)",
+    "estado": "DF",
+    "_info": "SEDES/DF — Edital 01/2026, Ret. 02/2026 (Instituto Quadrix). Prova: 06/09/2026. 20 questões Conhecimentos Gerais (peso 1) + 40 questões Conhecimentos Específicos (peso 2). Nível médio. 1.596 vagas totais.",
+    "cargos": [
+      "Agente Social — Cargo 200 (1.596 vagas)"
+    ],
+    "materias": [
+      {
+        "nome": "Língua Portuguesa",
+        "peso": 8,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "Raciocínio Lógico",
+        "peso": 7,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "Atualidades do DF, Legislação e Primeiros Socorros",
+        "peso": 5,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "SUAS: Fundamentos e Gestão",
+        "peso": 15,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "Programas Socioassistenciais do DF",
+        "peso": 8,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "Rede Socioassistencial e Trabalho no Território",
+        "peso": 20,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "Abordagem Social, Escuta e Acompanhamento",
+        "peso": 18,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "Grupos em Situação de Vulnerabilidade",
+        "peso": 10,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "Legislação Social e Proteção de Direitos",
+        "peso": 9,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      }
+    ],
+    "topicos": {
+      "Língua Portuguesa": [
+        "Leitura, compreensão e interpretação de textos",
+        "Tipologia e gêneros textuais; intertextualidade e coerência",
+        "Estruturação do texto e dos parágrafos; articulação e conectivos",
+        "Significação das palavras: sinonímia, antonímia e polissemia",
+        "Sintaxe: coordenação e subordinação; período composto",
+        "Concordância nominal e verbal",
+        "Regência nominal e verbal",
+        "Pronomes: emprego e colocação pronominal",
+        "Tempos, modos e vozes verbais",
+        "Pontuação e acentuação gráfica",
+        "Morfologia: estrutura e formação de palavras; classes gramaticais",
+        "Ortografia oficial (Acordo Ortográfico vigente)"
+      ],
+      "Raciocínio Lógico": [
+        "Estruturas lógicas: proposições, conectivos e tabelas-verdade",
+        "Equivalências e negações lógicas",
+        "Raciocínio dedutivo: silogismos e inferências",
+        "Raciocínio verbal e sequencial",
+        "Orientação espacial e temporal",
+        "Operações com conjuntos (diagramas de Venn)",
+        "Problemas aritméticos: razão, proporção e regra de três",
+        "Problemas com sequências numéricas e geométricas",
+        "Raciocínio matricial e combinatório básico"
+      ],
+      "Atualidades do DF, Legislação e Primeiros Socorros": [
+        "Realidade étnica, social, histórica, geográfica, cultural, política e econômica do DF",
+        "RIDE/DF — Lei Complementar Federal nº 94/1998 e Decreto Federal nº 7.469/2011",
+        "Plano Distrital de Política para Mulheres (PDPM)",
+        "Lei Orgânica do DF — Título VI: Da Ordem Social e do Meio Ambiente",
+        "Lei Complementar nº 840/2011: Deveres, Regime Disciplinar e PAD",
+        "Lei Federal nº 11.340/2006 (Lei Maria da Penha)",
+        "Lei Distrital nº 7.484/2024",
+        "Primeiros socorros: reconhecimento de urgência/emergência e acionamento do socorro",
+        "Primeiros socorros: engasgo, sangramento, fratura, queimadura, desmaio, convulsão e intoxicação"
+      ],
+      "SUAS: Fundamentos e Gestão": [
+        "PNAS/2004: princípios, diretrizes, objetivos e proteções afiançadas",
+        "Proteção Social Básica (PSB) e Proteção Social Especial (PSE): diferenças e serviços",
+        "Matricialidade sociofamiliar, descentralização político-administrativa e territorialização",
+        "SUAS: princípios, diretrizes, organização e seguranças socioassistenciais",
+        "Seguranças do SUAS: acolhida, convívio, renda e autonomia",
+        "NOB/SUAS 2012: responsabilidades dos entes federados e cofinanciamento",
+        "NOB/SUAS 2012: gestão do trabalho no SUAS",
+        "Vigilância socioassistencial: conceito, objetivos e ferramentas"
+      ],
+      "Programas Socioassistenciais do DF": [
+        "Programa Cartão Prato Cheio: Lei Distrital nº 7.009/2021 e Decreto nº 42.873/2021",
+        "Programa Cartão Gás: Lei Distrital nº 6.938/2021 e Decreto nº 42.376/2021",
+        "Plano DF Social: Lei Distrital nº 7.008/2021, Decreto nº 42.872/2021 e Portaria nº 42/2023",
+        "Benefícios Eventuais da Assistência Social do DF: Lei Distrital nº 5.165/2013 e Decreto nº 35.191/2014",
+        "SISAN e Restaurantes Comunitários: Decreto nº 33.329/2011"
+      ],
+      "Rede Socioassistencial e Trabalho no Território": [
+        "Organização e funcionamento dos CRAS: serviços, equipe de referência e público-alvo",
+        "Organização e funcionamento dos CREAS: serviços, equipe de referência e público-alvo",
+        "Unidades de Acolhimento: tipos, funcionamento e fluxos de encaminhamento",
+        "Territorialização e diagnóstico socioterritorial",
+        "Articulação com a rede intersetorial: saúde, educação, assistência jurídica e segurança pública",
+        "Tipificação Nacional de Serviços Socioassistenciais: serviços de PSB e PSE",
+        "CadÚnico: objetivos, cadastramento e atualização cadastral",
+        "Encaminhamentos e fluxos entre serviços socioassistenciais"
+      ],
+      "Abordagem Social, Escuta e Acompanhamento": [
+        "Acolhida, escuta qualificada e abordagem social humanizada",
+        "Entrevista social: técnicas e registro de informações",
+        "Acompanhamento de famílias e indivíduos em situação de vulnerabilidade",
+        "Visita domiciliar: objetivos, planejamento e registro",
+        "Trabalho em equipe multiprofissional no SUAS",
+        "Estudo de caso e encaminhamentos no contexto socioassistencial",
+        "Elaboração de relatórios e registros técnicos",
+        "Abordagem social em situação de rua: princípios e fluxos"
+      ],
+      "Grupos em Situação de Vulnerabilidade": [
+        "Criança e adolescente: ECA (Lei nº 8.069/1990) e sistema de garantia de direitos",
+        "Idoso: Estatuto da Pessoa Idosa (Lei nº 10.741/2003)",
+        "Pessoa com deficiência: Lei Brasileira de Inclusão (Lei nº 13.146/2015)",
+        "Mulher em situação de violência: fluxos de atendimento e rede de proteção",
+        "População em situação de rua: Política Nacional (Decreto nº 7.053/2009)",
+        "Criança e adolescente em situação de acolhimento: plano individual e familiar"
+      ],
+      "Legislação Social e Proteção de Direitos": [
+        "LOAS — Lei Orgânica da Assistência Social (Lei nº 8.742/1993 e alterações)",
+        "Benefício de Prestação Continuada (BPC): critérios de acesso e concessão",
+        "Programa Bolsa Família / CadÚnico: legislação e operacionalização",
+        "LGPD (Lei nº 13.709/2018): proteção de dados no contexto socioassistencial",
+        "Lei de Acesso à Informação (Lei nº 12.527/2011)",
+        "Ética no serviço público e sigilo das informações dos usuários"
+      ]
+    },
+    "dataProva": "2026-09-06",
+    "grupo": "SEDES-DF"
+  },
+  "sedesDfEdasServSoc": {
+    "nome": "SEDES/DF — Serviço Social (EDAS)",
+    "estado": "DF",
+    "_info": "SEDES/DF — Edital 01/2026, Ret. 02/2026 (Instituto Quadrix). Prova: 06/09/2026. 20 questões Conhecimentos Gerais (peso 1) + 40 questões Conhecimentos Específicos (peso 2). Nível superior. 500 vagas totais. Avaliação de Títulos (classificatória).",
+    "cargos": [
+      "Serviço Social (EDAS) — Cargo 410 (500 vagas)"
+    ],
+    "materias": [
+      {
+        "nome": "Língua Portuguesa",
+        "peso": 8,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "Raciocínio Lógico",
+        "peso": 7,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "Atualidades do DF, Legislação e Primeiros Socorros",
+        "peso": 5,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "LOAS, SUAS e Políticas Sociais",
+        "peso": 15,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "Direitos, Vulnerabilidades e Legislação Social",
+        "peso": 10,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "Fundamentos Históricos e Teórico-Metodológicos",
+        "peso": 15,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "Ética e Legislação Profissional",
+        "peso": 10,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "Dimensão Técnico-Operativa e Pesquisa Social",
+        "peso": 15,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "Estado, Políticas Sociais e Gestão",
+        "peso": 15,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      }
+    ],
+    "topicos": {
+      "Língua Portuguesa": [
+        "Leitura, compreensão e interpretação de textos",
+        "Tipologia e gêneros textuais; intertextualidade e coerência",
+        "Estruturação do texto e dos parágrafos; articulação e conectivos",
+        "Significação das palavras: sinonímia, antonímia e polissemia",
+        "Sintaxe: coordenação e subordinação; período composto",
+        "Concordância nominal e verbal",
+        "Regência nominal e verbal; pronomes e colocação pronominal",
+        "Tempos, modos e vozes verbais; pontuação e acentuação gráfica",
+        "Morfologia: estrutura e formação de palavras; classes gramaticais",
+        "Ortografia oficial (Acordo Ortográfico vigente)"
+      ],
+      "Raciocínio Lógico": [
+        "Estruturas lógicas: proposições, conectivos e tabelas-verdade",
+        "Equivalências e negações lógicas",
+        "Raciocínio dedutivo: silogismos e inferências",
+        "Raciocínio verbal, sequencial e orientação espacial/temporal",
+        "Operações com conjuntos (diagramas de Venn)",
+        "Problemas aritméticos: razão, proporção e regra de três",
+        "Problemas com sequências numéricas e geométricas"
+      ],
+      "Atualidades do DF, Legislação e Primeiros Socorros": [
+        "Realidade étnica, social, histórica, geográfica, cultural, política e econômica do DF",
+        "RIDE/DF — Lei Complementar Federal nº 94/1998 e Decreto Federal nº 7.469/2011",
+        "Plano Distrital de Política para Mulheres (PDPM)",
+        "Lei Orgânica do DF — Título VI: Da Ordem Social e do Meio Ambiente",
+        "Lei Complementar nº 840/2011: Deveres, Regime Disciplinar e PAD",
+        "Lei Federal nº 11.340/2006 (Lei Maria da Penha)",
+        "Lei Distrital nº 7.484/2024",
+        "Primeiros socorros: reconhecimento de urgência/emergência e acionamento do socorro",
+        "Primeiros socorros: engasgo, sangramento, fratura, queimadura, desmaio, convulsão e intoxicação"
+      ],
+      "LOAS, SUAS e Políticas Sociais": [
+        "LOAS (Lei nº 8.742/1993): princípios, diretrizes, organização e benefícios",
+        "BPC: conceito, critérios de acesso e revisão",
+        "PNAS/2004 e SUAS: princípios, diretrizes, proteções e seguranças socioassistenciais",
+        "Tipificação Nacional de Serviços Socioassistenciais: PSB e PSE",
+        "NOB/SUAS 2012: responsabilidades dos entes, cofinanciamento e gestão do trabalho",
+        "NOB-RH/SUAS (Resolução CNAS nº 269/2006): equipes de referência e NOB-RH",
+        "Instâncias de pactuação e controle social: CIT, CIB, Conselhos e Conferências",
+        "CadÚnico e Protocolo de Gestão Integrada de Serviços, Benefícios e Transferências de Renda",
+        "MROSC (Lei nº 13.019/2014): parcerias, chamamento público e prestação de contas",
+        "Programas Socioassistenciais do DF: Cartão Prato Cheio, Cartão Gás, Plano DF Social"
+      ],
+      "Direitos, Vulnerabilidades e Legislação Social": [
+        "ECA (Lei nº 8.069/1990): direitos, sistema de garantias e medidas de proteção",
+        "Estatuto da Pessoa Idosa (Lei nº 10.741/2003): direitos e proteção",
+        "Lei Brasileira de Inclusão (Lei nº 13.146/2015): direitos da pessoa com deficiência",
+        "Violência doméstica e familiar: Lei Maria da Penha (Lei nº 11.340/2006) e rede de proteção",
+        "Tráfico de pessoas: definição, fluxos e políticas de enfrentamento",
+        "Trabalho infantil: legislação, prevenção e erradicação (PETI)",
+        "População em situação de rua: Política Nacional (Decreto nº 7.053/2009)",
+        "LGPD (Lei nº 13.709/2018): proteção de dados no contexto socioassistencial"
+      ],
+      "Fundamentos Históricos e Teórico-Metodológicos": [
+        "O processo sócio-histórico de constituição do Serviço Social no Brasil e no mundo",
+        "O significado social da profissão e sua inserção na divisão sociotécnica do trabalho",
+        "Perspectivas teórico-metodológicas: conservadorismo e reconceituação",
+        "A perspectiva crítico-dialética e a influência do materialismo histórico-dialético",
+        "A questão social e suas expressões na contemporaneidade",
+        "Neoliberalismo, reestruturação produtiva e impactos nas demandas profissionais",
+        "Transformações societárias e o trabalho do assistente social hoje"
+      ],
+      "Ética e Legislação Profissional": [
+        "Fundamentos ontológicos da ética e da moral no Serviço Social",
+        "O projeto ético-político do Serviço Social",
+        "Código de Ética Profissional do Assistente Social: princípios, direitos, deveres e vedações",
+        "Lei de Regulamentação da Profissão (Lei nº 8.662/1993 e alterações)",
+        "Sigilo profissional e normativas do CFESS aplicadas ao exercício profissional",
+        "Ética em pesquisa envolvendo seres humanos"
+      ],
+      "Dimensão Técnico-Operativa e Pesquisa Social": [
+        "A relação entre teoria, método e prática: a práxis profissional",
+        "Instrumentos de intervenção: acolhimento, entrevista, visita domiciliar, observação e estudo social",
+        "Trabalho social com famílias: metodologias e referência nas equipes do SUAS",
+        "Elaboração de documentos técnicos: relatórios sociais, laudos sociais e pareceres sociais",
+        "Interdisciplinaridade e multidisciplinaridade no trabalho em equipes de referência",
+        "Pesquisa social: métodos qualitativos e quantitativos",
+        "A perspectiva crítico-dialética na investigação e elaboração de projetos de pesquisa/intervenção"
+      ],
+      "Estado, Políticas Sociais e Gestão": [
+        "Estado, políticas sociais e cidadania; paradigmas teóricos (marxismo, liberalismo, social-democracia)",
+        "Estado de Bem-Estar Social (Welfare State) e sua crise",
+        "Seguridade Social na CF/1988: Saúde, Previdência e Assistência Social",
+        "Financiamento das políticas sociais e fundo público",
+        "Gestão e planejamento: teoria das organizações e administração pública",
+        "Elaboração, monitoramento e avaliação de planos, programas e projetos sociais",
+        "Orçamento público aplicado às políticas sociais: PPA, LDO e LOA"
+      ]
+    },
+    "dataProva": "2026-09-06",
+    "grupo": "SEDES-DF"
+  },
+  "sedesDfEdasPedagogia": {
+    "nome": "SEDES/DF — Pedagogia (EDAS)",
+    "estado": "DF",
+    "_info": "SEDES/DF — Edital 01/2026, Ret. 02/2026 (Instituto Quadrix). Prova: 06/09/2026. 20 questões Conhecimentos Gerais (peso 1) + 40 questões Conhecimentos Específicos (peso 2). Nível superior. 484 vagas totais. Avaliação de Títulos (classificatória).",
+    "cargos": [
+      "Pedagogia (EDAS) — Cargo 408 (484 vagas)"
+    ],
+    "materias": [
+      {
+        "nome": "Língua Portuguesa",
+        "peso": 8,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "Raciocínio Lógico",
+        "peso": 7,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "Atualidades do DF, Legislação e Primeiros Socorros",
+        "peso": 5,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "LOAS, SUAS e Políticas Sociais",
+        "peso": 12,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "Direitos, Vulnerabilidades e Legislação Social",
+        "peso": 8,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "Fundamentos e Teorias da Educação",
+        "peso": 15,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "Políticas Educacionais e Legislação",
+        "peso": 15,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "Psicologia do Desenvolvimento e Aprendizagem",
+        "peso": 15,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      },
+      {
+        "nome": "Didática, Currículo e Avaliação",
+        "peso": 15,
+        "prog": 0,
+        "conf": 0,
+        "cor": "gray"
+      }
+    ],
+    "topicos": {
+      "Língua Portuguesa": [
+        "Leitura, compreensão e interpretação de textos",
+        "Tipologia e gêneros textuais; intertextualidade e coerência",
+        "Estruturação do texto e dos parágrafos; articulação e conectivos",
+        "Significação das palavras: sinonímia, antonímia e polissemia",
+        "Sintaxe: coordenação e subordinação; período composto",
+        "Concordância nominal e verbal",
+        "Regência nominal e verbal; pronomes e colocação pronominal",
+        "Tempos, modos e vozes verbais; pontuação e acentuação gráfica",
+        "Morfologia: estrutura e formação de palavras; classes gramaticais",
+        "Ortografia oficial (Acordo Ortográfico vigente)"
+      ],
+      "Raciocínio Lógico": [
+        "Estruturas lógicas: proposições, conectivos e tabelas-verdade",
+        "Equivalências e negações lógicas",
+        "Raciocínio dedutivo: silogismos e inferências",
+        "Raciocínio verbal, sequencial e orientação espacial/temporal",
+        "Operações com conjuntos (diagramas de Venn)",
+        "Problemas aritméticos: razão, proporção e regra de três",
+        "Problemas com sequências numéricas e geométricas"
+      ],
+      "Atualidades do DF, Legislação e Primeiros Socorros": [
+        "Realidade étnica, social, histórica, geográfica, cultural, política e econômica do DF",
+        "RIDE/DF — Lei Complementar Federal nº 94/1998 e Decreto Federal nº 7.469/2011",
+        "Plano Distrital de Política para Mulheres (PDPM)",
+        "Lei Orgânica do DF — Título VI: Da Ordem Social e do Meio Ambiente",
+        "Lei Complementar nº 840/2011: Deveres, Regime Disciplinar e PAD",
+        "Lei Federal nº 11.340/2006 (Lei Maria da Penha)",
+        "Lei Distrital nº 7.484/2024",
+        "Primeiros socorros: reconhecimento de urgência/emergência e acionamento do socorro",
+        "Primeiros socorros: engasgo, sangramento, fratura, queimadura, desmaio, convulsão e intoxicação"
+      ],
+      "LOAS, SUAS e Políticas Sociais": [
+        "LOAS (Lei nº 8.742/1993): princípios, diretrizes, organização e benefícios",
+        "PNAS/2004 e SUAS: princípios, diretrizes, proteções e seguranças socioassistenciais",
+        "Tipificação Nacional de Serviços Socioassistenciais: PSB e PSE",
+        "NOB/SUAS 2012: responsabilidades dos entes, cofinanciamento e gestão do trabalho",
+        "NOB-RH/SUAS: equipes de referência e composição no SUAS",
+        "Instâncias de pactuação e controle social: CIT, CIB, Conselhos e Conferências",
+        "CadÚnico e Protocolo de Gestão Integrada de Serviços, Benefícios e Transferências",
+        "MROSC (Lei nº 13.019/2014): parcerias com organizações da sociedade civil",
+        "Programas Socioassistenciais do DF: Cartão Prato Cheio, Cartão Gás, Plano DF Social"
+      ],
+      "Direitos, Vulnerabilidades e Legislação Social": [
+        "ECA (Lei nº 8.069/1990): direitos, sistema de garantias e medidas de proteção",
+        "Estatuto da Pessoa Idosa (Lei nº 10.741/2003): direitos e proteção",
+        "Lei Brasileira de Inclusão (Lei nº 13.146/2015): direitos da pessoa com deficiência",
+        "Lei Maria da Penha (Lei nº 11.340/2006) e rede de proteção à mulher",
+        "Trabalho infantil: legislação, prevenção e erradicação (PETI)",
+        "LGPD (Lei nº 13.709/2018): proteção de dados no contexto socioassistencial"
+      ],
+      "Fundamentos e Teorias da Educação": [
+        "História da educação: pensamento pedagógico ocidental e brasileiro",
+        "Filosofia da educação: correntes filosóficas e seus fundamentos para a prática pedagógica",
+        "Sociologia da educação: educação e sociedade, desigualdades e diversidade",
+        "Pedagogia Social e Educação Social: fundamentos e campo de atuação",
+        "Educação não formal e informal: conceitos e espaços socioassistenciais",
+        "Concepções pedagógicas: tradicional, escola nova, construtivismo e pedagogia crítica",
+        "Paulo Freire: educação popular, conscientização e pedagogia do oprimido"
+      ],
+      "Políticas Educacionais e Legislação": [
+        "CF/1988: direito à educação (art. 205 a 214)",
+        "LDB (Lei nº 9.394/1996): estrutura, níveis, modalidades e organização da educação nacional",
+        "Plano Nacional de Educação (PNE — Lei nº 13.005/2014): metas e estratégias",
+        "BNCC: competências gerais e organização por etapas",
+        "Educação Especial e Inclusiva: Política Nacional (Decreto nº 7.611/2011) e marcos legais",
+        "ECA (Lei nº 8.069/1990): direito à educação da criança e do adolescente",
+        "Educação de Jovens e Adultos (EJA): legislação e políticas",
+        "Financiamento da educação: FUNDEB (EC nº 108/2020) e outros mecanismos"
+      ],
+      "Psicologia do Desenvolvimento e Aprendizagem": [
+        "Desenvolvimento humano: concepções teóricas (Piaget, Vygotsky, Wallon)",
+        "Teoria histórico-cultural de Vygotsky: ZDP, mediação e aprendizagem",
+        "Epistemologia genética de Piaget: estágios do desenvolvimento cognitivo",
+        "Psicologia da aprendizagem: behaviorismo, cognitivismo e humanismo",
+        "Desenvolvimento socioemocional e afetividade na aprendizagem",
+        "Dificuldades e transtornos de aprendizagem: identificação e intervenção pedagógica",
+        "Psicologia social aplicada à educação em contextos de vulnerabilidade"
+      ],
+      "Didática, Currículo e Avaliação": [
+        "Didática: fundamentos, planejamento de ensino e relação professor-aluno",
+        "Currículo: teorias, organização e construção coletiva do projeto pedagógico",
+        "Planejamento educacional: plano de aula, projeto e sequência didática",
+        "Metodologias ativas de ensino e aprendizagem",
+        "Avaliação da aprendizagem: funções diagnóstica, formativa e somativa",
+        "Educação inclusiva na prática: adaptações curriculares e estratégias pedagógicas",
+        "Educação e tecnologias: integração de recursos digitais no processo pedagógico",
+        "Gestão educacional e coordenação pedagógica no contexto socioassistencial"
+      ]
+    },
+    "dataProva": "2026-09-06",
+    "grupo": "SEDES-DF"
+  },
+  "cfpPlanejar": {
+    "nome": "CFP® — Certified Financial Planner (PLANEJAR)",
+    "estado": "BR",
+    "_info": "Certificação CFP® concedida pela PLANEJAR. Exame com 150 questões em 8 módulos. Sem data de prova fixa — defina a data do seu exame ao configurar.",
+    "cargos": [
+      "CFP® PLANEJAR — Planejamento Financeiro"
+    ],
+    "materias": [
+      {
+        "nome": "Planejamento Financeiro e Ética",
+        "peso": 8
+      },
+      {
+        "nome": "Gestão Financeira",
+        "peso": 8
+      },
+      {
+        "nome": "Planejamento de Investimentos e Gestão de Ativos",
+        "peso": 25
+      },
+      {
+        "nome": "Planejamento de Aposentadoria",
+        "peso": 15
+      },
+      {
+        "nome": "Gestão de Riscos e Seguros",
+        "peso": 10
+      },
+      {
+        "nome": "Planejamento Tributário",
+        "peso": 10
+      },
+      {
+        "nome": "Planejamento Patrimonial e Sucessório",
+        "peso": 12
+      },
+      {
+        "nome": "Psicologia no Planejamento Financeiro",
+        "peso": 12
+      }
+    ],
+    "topicos": {
+      "Planejamento Financeiro e Ética": [
+        "Princípios e processo do planejamento financeiro",
+        "Etapas do atendimento ao cliente",
+        "Modelos de remuneração do planejador",
+        "Código de ética da PLANEJAR",
+        "Normativos e regulação da profissão"
+      ],
+      "Gestão Financeira": [
+        "Orçamento pessoal e familiar",
+        "Fluxo de caixa e demonstrações financeiras pessoais",
+        "Comportamento de consumo",
+        "Crédito: modalidades e custos",
+        "Gestão e renegociação de dívidas"
+      ],
+      "Planejamento de Investimentos e Gestão de Ativos": [
+        "Macroeconomia: indicadores e política monetária",
+        "Renda fixa: Tesouro Direto, CDB, LCI, LCA, debêntures",
+        "Renda variável: ações, BDRs, ETFs, FIIs",
+        "Derivativos: opções, futuros e swaps",
+        "Fundos de investimento",
+        "Gestão de risco e teoria de portfólio",
+        "Análise fundamentalista e técnica"
+      ],
+      "Planejamento de Aposentadoria": [
+        "INSS: regras, benefícios e cálculo de aposentadoria",
+        "RPPS: regime próprio dos servidores públicos",
+        "Previdência privada aberta: PGBL vs VGBL",
+        "Fundos de pensão (previdência fechada)",
+        "Tabelas progressiva e regressiva de IR",
+        "Projeção e planejamento da aposentadoria"
+      ],
+      "Gestão de Riscos e Seguros": [
+        "Conceitos de risco e probabilidade",
+        "Seguro de vida individual e em grupo",
+        "Seguros patrimoniais: residencial, automóvel",
+        "Seguro saúde e planos de saúde",
+        "Seguro de responsabilidade civil",
+        "Como integrar seguros ao planejamento financeiro"
+      ],
+      "Planejamento Tributário": [
+        "IRPF: declaração, deduções e tabelas",
+        "Ganho de capital: cálculo e isenções",
+        "Tributação de investimentos por produto",
+        "Estratégias de diferimento fiscal",
+        "Planejamento tributário legal (elisão fiscal)"
+      ],
+      "Planejamento Patrimonial e Sucessório": [
+        "Inventário judicial e extrajudicial",
+        "Testamento: tipos e requisitos",
+        "Doações em vida e antecipação de herança",
+        "Holdings familiares e patrimoniais",
+        "Estruturas offshore e planejamento internacional",
+        "Aspectos jurídicos do planejamento sucessório"
+      ],
+      "Psicologia no Planejamento Financeiro": [
+        "Finanças comportamentais: fundamentos",
+        "Vieses cognitivos: ancoragem, aversão à perda, excesso de confiança",
+        "Heurísticas e atalhos mentais",
+        "Perfil de risco e tolerância emocional do cliente",
+        "Comunicação e relacionamento com o cliente"
+      ]
+    },
+    "grupo": "Certificações",
+    "id": "cfpPlanejar"
+  },
+  "ca600Abecip": {
+    "nome": "CA-600 — Crédito Imobiliário (ABECIP)",
+    "estado": "BR",
+    "_info": "Certificação ABECIP para crédito imobiliário. Exame de múltipla escolha. Sem data de prova fixa — defina a data do seu exame ao configurar.",
+    "cargos": [
+      "CA-600 ABECIP — Crédito Imobiliário"
+    ],
+    "materias": [
+      {
+        "nome": "Sistema Financeiro Nacional",
+        "peso": 5
+      },
+      {
+        "nome": "Sistema Financeiro da Habitação",
+        "peso": 8
+      },
+      {
+        "nome": "Sistema de Financiamento Imobiliário",
+        "peso": 7
+      },
+      {
+        "nome": "Garantias Imobiliárias",
+        "peso": 10
+      },
+      {
+        "nome": "Produtos para Pessoa Física",
+        "peso": 25
+      },
+      {
+        "nome": "Seguros Habitacionais",
+        "peso": 8
+      },
+      {
+        "nome": "Custos e Tributação",
+        "peso": 5
+      },
+      {
+        "nome": "LGPD",
+        "peso": 10
+      },
+      {
+        "nome": "Código de Defesa do Consumidor",
+        "peso": 10
+      },
+      {
+        "nome": "Ouvidoria e Ética",
+        "peso": 4
+      },
+      {
+        "nome": "Matemática Financeira",
+        "peso": 6
+      },
+      {
+        "nome": "Pós-Contratação",
+        "peso": 2
+      }
+    ],
+    "topicos": {
+      "Sistema Financeiro Nacional": [
+        "Bancos múltiplos, comerciais e de investimento",
+        "Sociedades de crédito imobiliário e companhias hipotecárias",
+        "Associações de poupança e empréstimo",
+        "Cooperativas de crédito rural",
+        "CMN, BACEN, CVM e CNSP: conceitos e atribuições"
+      ],
+      "Sistema Financeiro da Habitação": [
+        "Finalidade e intermediários financeiros do SFH",
+        "Poupança: definição e remuneração dos depósitos",
+        "FGTS: definição, agente operador e agentes financeiros",
+        "SBPE: definição e direcionamento de recursos"
+      ],
+      "Sistema de Financiamento Imobiliário": [
+        "Finalidades e entidades do SFI",
+        "Características das operações do SFI",
+        "Cédula de Crédito Imobiliário (CCI): definição",
+        "Certificado de Recebíveis Imobiliários (CRI): definição"
+      ],
+      "Garantias Imobiliárias": [
+        "Alienação fiduciária: definição e propriedade vs posse",
+        "Alienação fiduciária: inadimplência e procedimentos de cobrança (PF)",
+        "Alienação fiduciária: recuperação de garantia (PF)",
+        "Hipoteca: definição, propriedade vs posse e inadimplência",
+        "Fiança: definição e características",
+        "Cessão de recebíveis ou penhor: definição"
+      ],
+      "Produtos para Pessoa Física": [
+        "Aquisição: análise do proponente (crédito, seguro e documentação)",
+        "Aquisição: análise do imóvel (avaliação e documentação)",
+        "Aquisição: análise do vendedor PF ou PJ",
+        "FGTS na aquisição de imóvel residencial concluído",
+        "FGTS na aquisição de imóvel em construção",
+        "Crédito com Garantia de Imóvel (CGI): definição e análise",
+        "Enquadramento SFH/SFI: LTV, prazo, taxa de juros e tarifas",
+        "Plano de reajuste e sistemas de amortização (Price, SAC, SACRE)",
+        "CET, CEM e CESH",
+        "Formalização: contratos, registro e liberação do valor"
+      ],
+      "Seguros Habitacionais": [
+        "Seguro de Morte e Invalidez Permanente (MIP)",
+        "Seguro de Danos Físicos ao Imóvel (DFI)",
+        "Seguro de Responsabilidade Civil do Construtor (RCC)",
+        "Livre escolha de seguro e seguradora"
+      ],
+      "Custos e Tributação": [
+        "ITBI / ITIV: imposto sobre transmissão de bens imóveis",
+        "Foro e Laudêmio",
+        "IOF: incidência no seguro habitacional",
+        "IOF: incidência em operações de crédito imobiliário"
+      ],
+      "LGPD": [
+        "Disposições preliminares: exclusões e conceitos",
+        "Princípios da LGPD",
+        "Tratamento de dados pessoais",
+        "Direitos do titular de dados",
+        "Transferência de dados para o exterior",
+        "Agentes de tratamento de dados pessoais",
+        "Segurança e boas práticas",
+        "Sanções administrativas"
+      ],
+      "Código de Defesa do Consumidor": [
+        "Fornecedor e serviços: conceitos",
+        "Política Nacional de Relações de Consumo: objetivos e princípios",
+        "Direitos básicos do consumidor",
+        "Solidariedade pelos danos causados na prestação de serviços",
+        "Vícios na qualidade e disparidade de oferta",
+        "Direito de reclamar: prazos",
+        "Publicidade do produto ofertado",
+        "Práticas abusivas e cobrança de dívidas",
+        "Proteção contratual e sanções administrativas",
+        "SAC — Serviço de Atendimento ao Consumidor"
+      ],
+      "Ouvidoria e Ética": [
+        "Ouvidoria: instituição e objetivos",
+        "Ouvidoria: atribuições",
+        "Ética no atendimento ao cliente"
+      ],
+      "Matemática Financeira": [
+        "Juros simples e juros compostos",
+        "Taxa proporcional e taxa equivalente",
+        "Taxa nominal vs taxa efetiva",
+        "Juros pré-fixados vs pós-fixados",
+        "Tabela Price (TP)",
+        "Sistema de Amortização Constante (SAC)",
+        "Sistema de Amortização Crescente (SACRE)"
+      ],
+      "Pós-Contratação": [
+        "Amortização antecipada com recursos próprios",
+        "Liquidação antecipada com FGTS: requisitos e documentos",
+        "Interstício mínimo entre utilizações do FGTS",
+        "Pagamento parcial de prestações com FGTS",
+        "Financiamento inadimplente e limites de utilização"
+      ]
+    },
+    "grupo": "Certificações",
+    "id": "ca600Abecip"
+  },
+  "fbb100Febraban": {
+    "nome": "FBB100 — Certificação Profissional FEBRABAN",
+    "estado": "BR",
+    "_info": "Certificação FEBRABAN para correspondentes bancários (Consignado, CDC e Financiamento de Veículos). Exame com 50 questões, aprovação ≥ 70%. Sem data de prova fixa — defina a data do seu exame ao configurar.",
+    "cargos": [
+      "FBB100 FEBRABAN — Correspondente Bancário"
+    ],
+    "materias": [
+      {
+        "nome": "Sistema Financeiro Nacional e Correspondente",
+        "peso": 20
+      },
+      {
+        "nome": "IOF e Prevenção à Lavagem de Dinheiro",
+        "peso": 15
+      },
+      {
+        "nome": "Matemática Financeira",
+        "peso": 15
+      },
+      {
+        "nome": "Crédito: Conceitos e Modalidades",
+        "peso": 15
+      },
+      {
+        "nome": "Relacionamento com o Consumidor e Ética",
+        "peso": 15
+      },
+      {
+        "nome": "Crédito Consignado — Legislação Específica",
+        "peso": 10
+      },
+      {
+        "nome": "Financiamento de Veículos e LGPD",
+        "peso": 10
+      }
+    ],
+    "topicos": {
+      "Sistema Financeiro Nacional e Correspondente": [
+        "CMN, BACEN e CVM: atribuições (Lei 4.595/64, Lei 6.385/76, LC 179/2021)",
+        "Bancos, caixas econômicas, fintechs, SCD e SEP",
+        "Cooperativas de crédito, corretoras e administradoras de consórcios",
+        "Contratação de correspondente no País (Res. 4.935/21)",
+        "Liquidação antecipada: Res. CMN 3.516/2007 e 5.004/2022",
+        "CET: Custo Efetivo Total (Res. CMN 4.881/2020)",
+        "Tarifas bancárias: serviços essenciais, prioritários e especiais (Res. 3.919/2010)",
+        "Sigilo bancário (LC 105/01)",
+        "ISS no mercado financeiro (LC 116/03)"
+      ],
+      "IOF e Prevenção à Lavagem de Dinheiro": [
+        "IOF: incidência e alíquotas sobre operações de crédito (Decretos 6.306/2007 e 6.339/2008)",
+        "Lavagem de dinheiro: etapas (colocação, ocultação, integração)",
+        "Penalidades no descumprimento da Lei 9.613/98",
+        "Identificação de clientes e manutenção de registros",
+        "Políticas e controles internos (Circular BACEN 3.978/2020)",
+        "Prevenção ao financiamento do terrorismo"
+      ],
+      "Matemática Financeira": [
+        "Juros: noções gerais, simples e compostos",
+        "Taxa pré-fixada e taxa pós-fixada",
+        "Capitalização: critérios",
+        "Taxa proporcional e taxa equivalente",
+        "Taxa nominal vs taxa efetiva",
+        "CET: Custo Efetivo Total (cálculo)",
+        "Sistema de Amortização Constante (SAC)",
+        "Sistema Price de Amortização (PRICE)"
+      ],
+      "Crédito: Conceitos e Modalidades": [
+        "Crédito Direto ao Consumidor (CDC)",
+        "Crédito Pessoal (CP)",
+        "Crédito Consignado (CC): desconto em folha",
+        "Autorregulação das operações de crédito consignado (FEBRABAN)",
+        "Características e diferenças entre as modalidades"
+      ],
+      "Relacionamento com o Consumidor e Ética": [
+        "CDC: relação de consumo, direitos básicos e proteção contratual (Lei 8.078/90)",
+        "Vício de produto/serviço, oferta, publicidade e práticas abusivas",
+        "Cobrança de dívidas, bancos de dados e cadastros de consumidores",
+        "Superendividamento (Lei 14.181/2021)",
+        "SAC: Decreto Federal 11.034/2022",
+        "Política de relacionamento com clientes (Res. CMN 4.949/2021)",
+        "Ouvidorias: constituição e funcionamento (Res. CMN 4.860/2020)",
+        "Código de Conduta Ética e Autorregulação Bancária (SARB 27/2023)",
+        "Não perturbe (legislações estaduais)"
+      ],
+      "Crédito Consignado — Legislação Específica": [
+        "Lei 10.820/03: desconto de prestações em folha de pagamento",
+        "Decreto 4.840/2003: regulamentação do consignado",
+        "Decreto 8.690/2016: consignado para servidores públicos federais",
+        "Lei 8.112/90: regime jurídico dos servidores públicos federais",
+        "Lei 8.213/91: plano de benefícios da previdência social",
+        "Circular BCB 2.905/1999: prazos mínimos e remuneração",
+        "IN PRES/INSS 138/2022: consignações em benefícios previdenciários"
+      ],
+      "Financiamento de Veículos e LGPD": [
+        "Arrendamento mercantil: aspectos tributários (Lei 6.099/74)",
+        "Leasing de veículos automotivos (Lei 11.649/2008)",
+        "Arrendamento mercantil financeiro e operacional (Res. CMN 4.977/2021)",
+        "Quitação antecipada de contratos de leasing (Carta-Circular 3.248/2006)",
+        "LGPD: dados pessoais e dados pessoais sensíveis (Lei 13.709/2018)",
+        "Bases legais, relatório de impacto e incidentes de segurança",
+        "Cadastro Positivo, Open Banking e Privacy by design",
+        "Atuação da ANPD"
+      ]
+    },
+    "grupo": "Certificações",
+    "id": "fbb100Febraban"
+  }
+};
