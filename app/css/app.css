@@ -913,3 +913,71 @@ body.aguardando-auth > *:not(#loginScreen) { visibility:hidden !important; point
 @keyframes syncPulse { 0%,100%{opacity:.45} 50%{opacity:1} }
 .sync-dot.sync { animation:syncPulse 1s ease-in-out infinite; }
 .sync-dot.err { color:#F2B8AC; }
+
+/* ════════════════════════════════════════════════════════════════
+   RESPONSIVIDADE MOBILE — bloco consolidado (≤768px)
+   Complementa o bloco 768px original (sidebar/hambúrguer/planner).
+   ════════════════════════════════════════════════════════════════ */
+@media (max-width:768px){
+
+  /* ── Antivazamento horizontal ── */
+  html,body{ overflow-x:hidden; }
+  .main{ max-width:100vw; padding:1rem .8rem 4rem; }
+  .dia-topico,.dia-subtopico,.multi-topico-text,.rcc-topic-text,.dfc-info,.pomo-topico{ overflow-wrap:anywhere; }
+
+  /* ── Topbar compacta: ☁️ + ⏱ + avatar sem sobreposição ── */
+  .topbar{ gap:.45rem; padding-right:.6rem; }
+  .topbar-date{ display:none; }               /* data por extenso não cabe */
+  .topbar-notif{ display:none; }              /* redundante com os badges do menu */
+  .topbar-concurso{ min-width:0; padding:5px 9px; }
+  .topbar-concurso-name{ font-size:.74rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:32vw; }
+  .topbar-concurso-city{ display:none; }
+  .sync-dot{ width:30px; height:30px; flex-shrink:0; }
+  .topbar-avatar{ width:30px; height:30px; flex-shrink:0; }
+  .pomo-fixed{ left:8px; right:8px; display:flex; justify-content:flex-end; }
+  .pomo-panel{ width:min(300px,calc(100vw - 16px)); }
+
+  /* ── Dashboard: hero e cartões empilham ── */
+  #dashHero>div{ grid-template-columns:1fr !important; }
+  #dashHero [style*="grid-template-rows"]{ grid-template-rows:none !important; grid-template-columns:1fr 1fr !important; }
+  .painel-collapsed{ flex-wrap:wrap; row-gap:.25rem; }
+  /* grids montados com estilo inline (Hoje, Revisões, Simulados, Loja):
+     4 colunas → 2×2 · 3 colunas → pilha · 2 colunas → pilha */
+  [style*="grid-template-columns:repeat(4,1fr)"]{ grid-template-columns:repeat(2,1fr) !important; }
+  [style*="grid-template-columns:repeat(3,1fr)"]{ grid-template-columns:1fr !important; }
+  [style*="grid-template-columns:1fr 1fr"]{ grid-template-columns:1fr !important; }
+
+  /* ── Cronograma sem vazamento ── */
+  .semana-grid{ gap:.7rem; }
+  .semana-header,.mes-header,.view-toggle{ flex-wrap:wrap; gap:.5rem; }
+  .semana-progress-bar{ gap:.6rem; padding:.8rem .9rem; }
+  .spb-stat{ margin-left:0; width:100%; }
+  /* visão mensal: 7 colunas compactas dentro da tela */
+  .cal-grid{ gap:3px; }
+  .cal-cell{ padding:3px 2px; min-height:52px; }
+  .cal-mat{ display:none; }                   /* nome da matéria não cabe na célula */
+  .cal-num{ font-size:.7rem; }
+  .cal-badge{ font-size:.5rem; padding:1px 4px; }
+
+  /* ── Alvos de toque confortáveis (~44px) ── */
+  .check-item{ padding:8px 0; }
+  .check-box{ width:22px; height:22px; font-size:.8rem; }
+  .star-btn{ font-size:1.7rem; padding:6px 5px; }
+  .sab-star{ font-size:1.35rem; padding:5px 6px; }
+  span[data-action="setStarHoje"]{ padding:6px 4px; }
+  .nav-item{ padding:12px; }
+  .dfc-limpar{ padding:8px 10px; }
+  .rcc-topic{ padding:10px 8px; }
+  .rev-tab-btn,.view-btn,.btn-backup,.pomo-btn,.pomo-cta,.rg-btn-confirm,.rg-btn-cancel,.btn-recovery{ min-height:42px; }
+  .pomo-dchip{ padding:6px 12px; font-size:.8rem; }
+  /* inputs com 16px evitam o zoom automático do iOS ao focar */
+  .form-input,.notas-semana-textarea,.rg-score-input{ font-size:16px; }
+  .form-input{ min-height:44px; }
+}
+
+/* Telas bem pequenas (≤400px) */
+@media (max-width:400px){
+  .page-title{ font-size:1.15rem; }
+  .topbar-concurso-name{ max-width:26vw; }
+  .mini-cards{ gap:.5rem; }
+}
