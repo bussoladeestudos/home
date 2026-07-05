@@ -284,7 +284,7 @@ function fazerLogout() {
       <input class="form-input" id="inputHoras" type="number" value="3" min="1" max="12">
     </div>
     <div class="form-row">
-      <label class="form-label">Dias de descanso <span>(marque os dias que NÃO vai estudar)</span></label>
+      <label class="form-label">Dias de descanso <span>(marque até 4 dias que NÃO vai estudar)</span></label>
       <div class="dow-grid" id="dowGrid"></div>
     </div>
     <button class="btn-start" id="btnIniciarBússola" data-action="iniciarBussola">⚡ Iniciar Meu Cronograma</button>
@@ -398,6 +398,8 @@ function fazerLogout() {
   <nav class="sidebar-nav">
     <a href="javascript:void(0)" class="nav-item" id="nav-loja" data-action="navTo" data-page="loja"><span class="nav-icon">🎓</span><span class="nav-label">Material de Estudos</span><span class="nav-badge" style="background:var(--yellow-viv);color:var(--navy);">10%</span></a>
     <a href="javascript:void(0)" class="nav-item" data-action="pomodoroAbrir"><span class="nav-icon">⏱</span><span class="nav-label">Modo Foco</span></a>
+    <a href="javascript:void(0)" class="nav-item" id="nav-coach" data-action="navTo" data-page="coach"><span class="nav-icon">✦</span><span class="nav-label">Palavra do Coach</span><span class="nav-badge blue" id="coachNavBadge" style="display:none">!</span></a>
+    <a href="javascript:void(0)" class="nav-item" id="nav-agenda" data-action="navTo" data-page="agenda"><span class="nav-icon">📅</span><span class="nav-label">Exportar para Agenda</span></a>
   </nav>
   <span class="sidebar-section-label">Configurações</span>
   <nav class="sidebar-nav">
@@ -431,9 +433,13 @@ function fazerLogout() {
     <div class="page-title" id="mainTitle" style="font-size:2rem;">Seu progresso</div>
     <div class="page-sub" id="mainSub">Visão geral de quanto do edital você já dominou.</div>
     <div id="dashHero" style="margin-bottom:1.5rem;"></div>
+    <div style="background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:1.25rem 1.4rem;margin-bottom:1.5rem;">
+      <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:1.02rem;font-weight:700;color:var(--navy);margin-bottom:.9rem;">📚 Evolução por Matéria</div>
+      <div class="mapa-grid" id="mapaGrid"></div>
+    </div>
     <div class="painel-wrapper">
       <div class="painel-collapsed" data-action="togglePainel">
-        <span class="painel-toggle-icon open" id="painelIcon">▼</span>
+        <span class="painel-toggle-icon" id="painelIcon">▼</span>
         <span class="painel-collapsed-label">Painel Estratégico</span>
         <div class="painel-collapsed-stats">
           <span class="pcs-sep">|</span>
@@ -444,7 +450,7 @@ function fazerLogout() {
           <span class="pcs-item" id="pcsConf">🧠 — confiança</span>
         </div>
       </div>
-      <div class="painel-expanded open" id="painelContent">
+      <div class="painel-expanded" id="painelContent">
         <div class="coach-block" id="coachBlock">
           <div class="coach-header"><span class="coach-badge" id="coachBadge">✦ Coach Bússola</span></div>
           <div class="coach-text" id="coachText">Configure seu concurso para ativar o Coach.</div>
@@ -464,8 +470,6 @@ function fazerLogout() {
           <div class="mini-card"><div class="mini-card-icon mc-yellow">🔄</div><div><div class="mc-value" id="mcRevisoes">0</div><div class="mc-label">Ciclos disponíveis</div></div><div class="mc-delta delta-warn" id="mcRevDelta" style="display:none"></div></div>
           <div class="mini-card"><div class="mini-card-icon mc-red">🎯</div><div><div class="mc-value" id="mcConf">—</div><div class="mc-label">Confiança média</div></div><div class="mc-delta delta-up" id="mcConfDelta" style="display:none"></div></div>
         </div>
-        <div class="mapa-label">🌡️ Mapa de Calor — Progresso &amp; Confiança por Matéria</div>
-        <div class="mapa-grid" id="mapaGrid"></div>
       </div>
     </div>
     <div id="retaFinalBanner" style="display:none"></div>
@@ -585,6 +589,20 @@ function fazerLogout() {
     <div id="revResumo" style="display:none;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-bottom:1.25rem"></div>
     <div style="display:none;align-items:center;gap:.5rem;margin-bottom:.85rem;flex-wrap:wrap" id="revFiltros"></div>
     <div id="revisoesConteudo" style="display:none"></div>
+  </div>
+
+  <!-- PAGE: EXPORTAR PARA AGENDA -->
+  <div class="page" id="page-agenda">
+    <div class="page-title">📅 Exportar para Agenda</div>
+    <div class="page-sub">Leve a semana de estudos para o calendário do celular e receba o lembrete diário com o tópico do dia.</div>
+    <div id="agendaConteudo"></div>
+  </div>
+
+  <!-- PAGE: PALAVRA DO COACH -->
+  <div class="page" id="page-coach">
+    <div class="page-title">✦ Palavra do Coach</div>
+    <div class="page-sub">A análise completa do seu momento na preparação — atualizada todos os dias.</div>
+    <div id="coachPageConteudo"></div>
   </div>
 
   <!-- PAGE: LOJA / MATERIAL DE ESTUDOS -->
