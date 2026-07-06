@@ -72,7 +72,7 @@ const ACTIONS={
     a.download="bussola-semana.ics";
     document.body.appendChild(a); a.click();
     setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},1000);
-    showToast("📅 Agenda da semana baixada! Importe no Google Agenda.");
+    showToast("📅 Arquivo da semana baixado! Toque nele para adicionar ao seu calendário.");
   },
   abrirRevisaoGeral:d=>abrirRevisaoGeral(d.key),
   confirmarRevisaoGeral:()=>confirmarRevisaoGeral(),
@@ -1126,7 +1126,7 @@ function renderAgendaPage(){
   const el=document.getElementById("agendaConteudo");
   if(!el) return;
   if(!STATE.inicio){
-    el.innerHTML=`<div style="text-align:center;padding:3rem 1rem;color:var(--gray-400)"><div style="font-size:2rem;margin-bottom:.5rem">📅</div><div style="font-weight:700;color:var(--gray-600)">Configure seu concurso primeiro</div><div style="font-size:.83rem">A agenda é gerada a partir do seu cronograma.</div></div>`;
+    el.innerHTML=`<div style="text-align:center;padding:3rem 1rem;color:var(--gray-400)"><div style="font-size:2rem;margin-bottom:.5rem">📅</div><div style="font-weight:700;color:var(--gray-600)">Configure seu concurso primeiro</div><div style="font-size:.83rem">O calendário é gerado a partir do seu cronograma.</div></div>`;
     return;
   }
   const hora=STATE.agendaHora||"19:00";
@@ -1147,19 +1147,24 @@ function renderAgendaPage(){
       <div style="display:flex;align-items:center;gap:.6rem;flex-wrap:wrap">
         <label style="font-size:.78rem;font-weight:600;color:var(--gray-600)">Horário de estudo:</label>
         <input type="time" value="${hora}" data-change="agendaHora" style="border:1.5px solid var(--gray-200);border-radius:10px;padding:7px 10px;font-family:inherit;font-size:16px;color:var(--gray-700)">
-        <button data-action="exportarAgendaIcs" style="background:#173E2C;color:#fff;border:none;border-radius:11px;padding:10px 18px;font-size:.85rem;font-weight:700;cursor:pointer;font-family:inherit" class="hv-dim">⬇ Baixar agenda da semana</button>
+        <button data-action="exportarAgendaIcs" style="background:#173E2C;color:#fff;border:none;border-radius:11px;padding:10px 18px;font-size:.85rem;font-weight:700;cursor:pointer;font-family:inherit" class="hv-dim">📅 Adicionar ao meu calendário</button>
       </div>
     </div>
     <div>${lista}</div>
   </div>
   <div style="background:#FBF6ED;border:1px solid #ECE2D1;border-radius:14px;padding:1.1rem 1.3rem;">
-    <div style="font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#8A7322;margin-bottom:.6rem">Como importar no Google Agenda</div>
-    <div style="font-size:.84rem;color:#4A4339;line-height:1.8">
-      1. Baixe o arquivo acima (<strong>bussola-semana.ics</strong>)<br>
-      2. No Google Agenda (computador): ⚙️ <strong>Configurações → Importar e exportar → Importar</strong><br>
-      3. Selecione o arquivo e, em "Adicionar à agenda", escolha (ou crie) uma agenda chamada <strong>Bússola</strong><br>
-      4. Nas configurações dessa agenda, ative uma <strong>notificação padrão</strong> (ex.: 15 minutos antes)<br>
-      <span style="color:#8A7322">💡 Repita toda segunda-feira: a exportação é semanal de propósito, para a agenda acompanhar qualquer ajuste do cronograma. Reimportar substitui os eventos, sem duplicar.</span>
+    <div style="font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#8A7322;margin-bottom:.7rem">Como adicionar ao seu calendário</div>
+    <div style="font-size:.84rem;color:#4A4339;line-height:1.7;margin-bottom:.9rem">
+      <strong>📱 iPhone:</strong> toque no botão acima, abra o arquivo <strong>bussola-semana.ics</strong> baixado e escolha <strong>"Adicionar tudo"</strong> ao seu Calendário.
+    </div>
+    <div style="font-size:.84rem;color:#4A4339;line-height:1.7;margin-bottom:.9rem">
+      <strong>🤖 Android:</strong> toque no botão acima e, ao abrir o arquivo baixado, selecione seu app de calendário para importar os eventos.
+    </div>
+    <div style="font-size:.84rem;color:#4A4339;line-height:1.7;margin-bottom:.9rem">
+      <strong>💻 No computador (Google / Outlook):</strong> baixe o arquivo e importe-o. No Google: ⚙️ <strong>Configurações → Importar e exportar → Importar</strong>. Depois, ative uma <strong>notificação padrão</strong> (ex.: 15 min antes).
+    </div>
+    <div style="font-size:.8rem;color:#8A7322;line-height:1.6;border-top:1px solid #ECE2D1;padding-top:.7rem">
+      💡 Repita toda segunda-feira: a exportação é semanal de propósito, para o calendário acompanhar qualquer ajuste do cronograma. Reimportar substitui os eventos, sem duplicar.
     </div>
   </div>`;
 }
