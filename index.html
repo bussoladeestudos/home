@@ -10,41 +10,42 @@
 <!-- Google Analytics — substitua G-BJSXEBYJX6 pelo seu ID de medição -->
 <!-- Para obter o ID: analytics.google.com → Admin → Criar propriedade → copiar "G-..." -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BJSXEBYJX6"></script>
+<script src="dados-site.js"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-BJSXEBYJX6');
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesque:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --ink:#1A2B4A;          /* texto títulos */
-  --body:#46546C;         /* texto corrido */
-  --soft:#7B889E;         /* texto secundário */
-  --cream:#FBF9F4;        /* fundo principal, quente */
+  --ink:#173E2C;          /* texto títulos */
+  --body:#4A4339;         /* texto corrido */
+  --soft:#8A8072;         /* texto secundário */
+  --cream:#F6F0E4;        /* fundo principal, quente */
   --cream-2:#F4F0E6;      /* fundo alternado */
   --white:#FFFFFF;
-  --green:#15803D; --green-viv:#22C55E; --green-soft:#E8F7EE; --green-line:#BFE8CE;
-  --blue:#2563EB; --blue-soft:#EAF1FE; --blue-line:#C7DBFC;
-  --amber:#B45309; --amber-viv:#F59E0B; --amber-soft:#FEF5E0;
-  --line:#E8E3D8;
+  --green:#1C7A4B; --green-viv:#2FB374; --green-soft:#E4F4EA; --green-line:#A6E2BE;
+  --blue:#2E7D54; --blue-soft:#E7F5ED; --blue-line:#9FE0BF;
+  --amber:#B5791F; --amber-viv:#E8943A; --amber-soft:#FBF1D7;
+  --line:#E7DECE;
   --r-sm:10px; --r-md:14px; --r-lg:20px; --r-xl:28px;
-  --shadow-sm:0 2px 10px rgba(26,43,74,.06);
-  --shadow-md:0 10px 32px rgba(26,43,74,.10);
-  --shadow-cta:0 8px 24px rgba(34,197,94,.32);
+  --shadow-sm:0 2px 10px rgba(23,62,44,.06);
+  --shadow-md:0 10px 32px rgba(23,62,44,.10);
+  --shadow-cta:0 8px 24px rgba(47,179,116,.32);
 }
 html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;color:var(--body);background:var(--cream);font-size:16px;line-height:1.7}
-h1,h2,h3{font-family:'Plus Jakarta Sans',sans-serif;color:var(--ink);line-height:1.2;letter-spacing:-.01em}
+body{font-family:'Hanken Grotesque',sans-serif;color:var(--body);background:var(--cream);font-size:16px;line-height:1.7}
+h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;color:var(--ink);line-height:1.2;letter-spacing:-.01em}
 .wrap{max-width:1060px;margin:0 auto;padding:0 1.4rem}
 img{max-width:100%}
 
 /* ── BOTÕES ── */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;text-decoration:none;border:none;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;text-decoration:none;border:none;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s}
 .btn-cta{background:var(--green-viv);color:#fff;font-size:1.05rem;padding:16px 34px;border-radius:99px;box-shadow:var(--shadow-cta)}
-.btn-cta:hover{transform:translateY(-2px);background:#1FB456;box-shadow:0 12px 30px rgba(34,197,94,.42)}
+.btn-cta:hover{transform:translateY(-2px);background:#1FB456;box-shadow:0 12px 30px rgba(47,179,116,.42)}
 .btn-ghost{background:var(--white);color:var(--ink);font-size:.9rem;padding:11px 22px;border-radius:99px;border:1.5px solid var(--line);font-weight:700}
 .btn-ghost:hover{border-color:var(--ink)}
 .cta-sub{font-size:.8rem;color:var(--soft);margin-top:.7rem}
@@ -54,21 +55,25 @@ img{max-width:100%}
 .topbar{position:sticky;top:0;background:rgba(251,249,244,.92);backdrop-filter:blur(10px);z-index:60;border-bottom:1px solid var(--line)}
 .topbar-in{display:flex;align-items:center;justify-content:space-between;height:68px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
-.brand-icon{width:40px;height:40px;background:linear-gradient(135deg,var(--green-viv),#15803D);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;box-shadow:0 3px 10px rgba(34,197,94,.3)}
-.brand-name{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.15rem;color:var(--ink)}
-.brand-sub{font-size:.66rem;color:var(--soft);margin-top:-2px}
+.brand-icon{width:40px;height:40px;background:linear-gradient(135deg,var(--green-viv),#1C7A4B);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;box-shadow:0 3px 10px rgba(47,179,116,.3)}
+.brand-name{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.15rem;color:var(--ink)}
+.brand-sub{font-size:.66rem;color:var(--soft);margin-top:-2px;white-space:nowrap}
 .topnav{display:flex;align-items:center;gap:1.4rem}
-.topnav a.lnk{color:var(--body);text-decoration:none;font-size:.88rem;font-weight:500}
+.topnav a.lnk{color:var(--body);text-decoration:none;font-size:.88rem;font-weight:500;white-space:nowrap}
 .topnav a.lnk:hover{color:var(--ink)}
-.btn-mini{background:var(--green-viv);color:#fff;font-size:.84rem;font-weight:800;padding:10px 20px;border-radius:99px;text-decoration:none;font-family:'Plus Jakarta Sans',sans-serif;box-shadow:0 3px 12px rgba(34,197,94,.3)}
-.btn-mini:hover{background:#1FB456}
-@media(max-width:680px){.topnav a.lnk{display:none}}
+.btn-mini{background:var(--ink);color:#fff;font-size:.86rem;font-weight:700;padding:11px 20px;border-radius:12px;text-decoration:none;font-family:'Bricolage Grotesque',sans-serif;letter-spacing:.01em;white-space:nowrap;box-shadow:0 4px 14px rgba(23,62,44,.22);transition:transform .15s,box-shadow .15s,background .15s}
+.btn-mini:hover{background:#0E2A1D;transform:translateY(-1px);box-shadow:0 6px 18px rgba(23,62,44,.28)}
+.lnk-aluno{border:1.5px solid var(--line);border-radius:11px;padding:8px 15px;font-weight:700 !important;color:var(--ink) !important;transition:border-color .15s,background .15s}
+.lnk-aluno:hover{border-color:var(--green-line);background:var(--green-soft)}
+.nav-sep{width:1px;height:22px;background:var(--line);flex-shrink:0}
+@media(max-width:900px){.brand-sub{display:none}}
+@media(max-width:680px){.topnav a.lnk{display:none}.nav-sep{display:none}}
 
 /* ── DROPDOWN CONCURSOS ── */
 .nav-drop-wrap{position:relative}
-.nav-drop-btn{background:none;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.88rem;font-weight:500;color:var(--body);display:flex;align-items:center;gap:.35rem;padding:4px 2px;transition:color .15s}
+.nav-drop-btn{background:none;border:none;cursor:pointer;font-family:'Hanken Grotesque',sans-serif;font-size:.88rem;font-weight:500;color:var(--body);display:flex;align-items:center;gap:.4rem;padding:4px 2px;transition:color .15s;white-space:nowrap}
 .nav-drop-btn:hover,.nav-drop-btn[aria-expanded="true"]{color:var(--ink)}
-.nav-drop-badge{background:var(--green-viv);color:#fff;font-size:.6rem;font-weight:800;padding:2px 7px;border-radius:99px;font-family:'Plus Jakarta Sans',sans-serif;letter-spacing:.03em;line-height:1.4;display:none}
+.nav-drop-badge{background:var(--green-soft);color:var(--green);border:1px solid var(--green-line);font-size:.66rem;font-weight:800;padding:1px 7px;border-radius:7px;font-family:'Bricolage Grotesque',sans-serif;line-height:1.5;min-width:1.6em;text-align:center;display:none}
 .nav-drop-badge.visivel{display:inline-block}
 .nav-drop-arrow{font-size:.7rem;color:var(--green);transition:transform .2s;display:inline-block}
 .nav-drop-btn[aria-expanded="true"] .nav-drop-arrow{transform:rotate(180deg)}
@@ -79,7 +84,7 @@ img{max-width:100%}
 .nav-drop-item:last-child{border-bottom:none}
 .nav-drop-item:hover{background:var(--green-soft)}
 .nav-drop-dot{width:34px;height:34px;border-radius:10px;background:var(--green-soft);border:1px solid var(--green-line);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0}
-.nav-drop-txt strong{display:block;font-family:'Plus Jakarta Sans',sans-serif;font-size:.82rem;color:var(--ink);font-weight:700;line-height:1.2}
+.nav-drop-txt strong{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:.82rem;color:var(--ink);font-weight:700;line-height:1.2}
 .nav-drop-txt small{font-size:.7rem;color:var(--soft)}
 .nav-drop-loading{padding:1rem;font-size:.85rem;color:var(--soft);text-align:center}
 .nav-drop-footer{padding:.7rem 1rem;background:var(--cream);border-top:1px solid var(--line);text-align:center}
@@ -90,7 +95,7 @@ img{max-width:100%}
 .preco{text-align:center;margin-bottom:1.5rem;padding:1.2rem;background:var(--green-soft);border:1px solid var(--green-line);border-radius:var(--r-lg)}
 .preco-de{font-size:.88rem;color:var(--soft)}
 .preco-de s{color:#B91C1C;text-decoration:line-through}
-.preco-num{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:3.2rem;color:var(--green);line-height:1.05}
+.preco-num{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:3.2rem;color:var(--green);line-height:1.05}
 .preco-num .cif{font-size:1.2rem;vertical-align:super;margin-right:.2rem}
 .preco-num .cent{font-size:1.6rem}
 .preco-nota{font-size:.78rem;color:var(--body)}
@@ -98,14 +103,14 @@ img{max-width:100%}
 
 /* ── HERO ── */
 .hero{padding:2.75rem 0 3.5rem;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:-180px;right:-160px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(34,197,94,.12),transparent 65%)}
-.hero::after{content:'';position:absolute;bottom:-220px;left:-180px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(37,99,235,.08),transparent 65%)}
+.hero::before{content:'';position:absolute;top:-180px;right:-160px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(47,179,116,.12),transparent 65%)}
+.hero::after{content:'';position:absolute;bottom:-220px;left:-180px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(232,148,58,.10),transparent 65%)}
 .hero-in{display:grid;grid-template-columns:1.05fr .95fr;gap:3.5rem;align-items:center;position:relative;z-index:1}
 @media(max-width:880px){.hero-in{grid-template-columns:1fr;gap:2.5rem}}
 .chip{display:inline-flex;align-items:center;gap:7px;background:var(--green-soft);border:1px solid var(--green-line);color:var(--green);font-size:.78rem;font-weight:700;padding:6px 16px;border-radius:99px;margin-bottom:1.2rem}
 .hero h1{font-size:clamp(2rem,4.6vw,3rem);font-weight:800;margin-bottom:1.1rem}
 .hero h1 .hl{position:relative;white-space:nowrap}
-.hero h1 .hl::after{content:'';position:absolute;left:0;right:0;bottom:4px;height:.38em;background:rgba(34,197,94,.25);z-index:-1;border-radius:3px}
+.hero h1 .hl::after{content:'';position:absolute;left:0;right:0;bottom:4px;height:.38em;background:rgba(47,179,116,.25);z-index:-1;border-radius:3px}
 .hero p.lead{font-size:1.1rem;color:var(--body);max-width:30rem;margin-bottom:1.8rem}
 .hero-bullets{display:flex;flex-direction:column;gap:.5rem;margin-bottom:2rem}
 .hero-bullets div{display:flex;gap:.6rem;font-size:.95rem;color:var(--body);align-items:flex-start}
@@ -115,11 +120,11 @@ img{max-width:100%}
 .mockwrap{position:relative}
 .mock{background:var(--white);border:1px solid var(--line);border-radius:var(--r-xl);padding:1.5rem;box-shadow:var(--shadow-md)}
 .mock-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem}
-.mock-title{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:.95rem;color:var(--ink)}
+.mock-title{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:.95rem;color:var(--ink)}
 .mock-chip{font-size:.68rem;font-weight:700;background:var(--blue-soft);color:var(--blue);padding:3px 10px;border-radius:99px}
 .mock-stats{display:flex;gap:.6rem;margin-bottom:1rem}
 .mock-stat{flex:1;background:var(--cream);border:1px solid var(--line);border-radius:var(--r-md);padding:.75rem .85rem}
-.mock-stat b{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.3rem;color:var(--ink);display:block;line-height:1.1}
+.mock-stat b{font-family:'Bricolage Grotesque',sans-serif;font-size:1.3rem;color:var(--ink);display:block;line-height:1.1}
 .mock-stat span{font-size:.66rem;color:var(--soft)}
 .mock-bar-label{display:flex;justify-content:space-between;font-size:.74rem;color:var(--soft);margin-bottom:.35rem}
 .mock-bar-label b{color:var(--ink)}
@@ -158,12 +163,12 @@ section{padding:4.5rem 0}
 .conc-nav-dot{width:38px;height:38px;border-radius:10px;background:var(--cream-2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:1.05rem;flex-shrink:0;transition:background .15s,border-color .15s}
 .conc-nav-item.ativo .conc-nav-dot{background:var(--green-viv);border-color:var(--green-viv)}
 .conc-nav-txt{flex:1;min-width:0}
-.conc-nav-txt strong{display:block;font-family:'Plus Jakarta Sans',sans-serif;font-size:.82rem;color:var(--ink);font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.conc-nav-txt strong{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:.82rem;color:var(--ink);font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .conc-nav-txt span{font-size:.71rem;color:var(--soft)}
 .conc-detail{padding:2rem 2.5rem;background:var(--white)}
 @media(max-width:780px){.conc-detail{padding:1.4rem 1.5rem}}
 .conc-detail-badge{display:inline-flex;align-items:center;gap:5px;background:var(--green-soft);color:var(--green);font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:4px 12px;border-radius:99px;margin-bottom:.9rem}
-.conc-detail-nome{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.3rem;font-weight:800;color:var(--ink);margin-bottom:.3rem;line-height:1.25}
+.conc-detail-nome{font-family:'Bricolage Grotesque',sans-serif;font-size:1.3rem;font-weight:800;color:var(--ink);margin-bottom:.3rem;line-height:1.25}
 .conc-detail-desc{font-size:.9rem;color:var(--body);margin-bottom:1.1rem}
 .conc-detail-meta{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.25rem}
 .conc-detail-meta .m{display:inline-flex;align-items:center;gap:.4rem;font-size:.82rem;color:var(--body);background:var(--cream);border:1px solid var(--line);border-radius:var(--r-sm);padding:5px 12px}
@@ -171,15 +176,15 @@ section{padding:4.5rem 0}
 .conc-cargos-list{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.6rem}
 .conc-cargo-tag{font-size:.8rem;background:var(--cream);border:1px solid var(--line);border-radius:var(--r-sm);padding:4px 12px;color:var(--body)}
 .conc-detail-cta{display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
-.conc-detail-cta a.c-comprar{background:var(--green-viv);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:.95rem;padding:13px 28px;border-radius:99px;text-decoration:none;box-shadow:var(--shadow-cta);transition:background .15s,transform .15s}
+.conc-detail-cta a.c-comprar{background:var(--green-viv);color:#fff;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:.95rem;padding:13px 28px;border-radius:99px;text-decoration:none;box-shadow:var(--shadow-cta);transition:background .15s,transform .15s}
 .conc-detail-cta a.c-comprar:hover{background:#1FB456;transform:translateY(-1px)}
 .conc-detail-cta span{font-size:.8rem;color:var(--soft)}
 /* menu trigger */
 .conc-menu-trigger{width:100%;display:flex;align-items:center;gap:.75rem;background:var(--white);border:1.5px solid var(--line);border-radius:var(--r-md);padding:.9rem 1rem;cursor:pointer;text-align:left;transition:border-color .15s,box-shadow .15s;box-shadow:var(--shadow-sm)}
-.conc-menu-trigger:hover{border-color:var(--green-line);box-shadow:0 4px 14px rgba(34,197,94,.12)}
+.conc-menu-trigger:hover{border-color:var(--green-line);box-shadow:0 4px 14px rgba(47,179,116,.12)}
 .conc-menu-icon{font-size:1.3rem;flex-shrink:0}
 .conc-menu-label{flex:1;min-width:0;display:flex;flex-direction:column;gap:1px}
-.conc-menu-label strong{font-family:'Plus Jakarta Sans',sans-serif;font-size:.88rem;color:var(--ink);font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.conc-menu-label strong{font-family:'Bricolage Grotesque',sans-serif;font-size:.88rem;color:var(--ink);font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .conc-menu-label small{font-size:.72rem;color:var(--soft)}
 .conc-menu-arrow{font-size:.9rem;color:var(--green);flex-shrink:0;transition:transform .2s}
 .conc-menu-arrow.aberto{transform:rotate(180deg)}
@@ -190,10 +195,10 @@ section{padding:4.5rem 0}
 .conc-lista-item:last-child{border-bottom:none}
 .conc-lista-item:hover{background:var(--green-soft)}
 .conc-lista-item.ativo{background:var(--green-soft)}
-.conc-lista-item span{font-family:'Plus Jakarta Sans',sans-serif;font-size:.84rem;font-weight:700;color:var(--ink)}
+.conc-lista-item span{font-family:'Bricolage Grotesque',sans-serif;font-size:.84rem;font-weight:700;color:var(--ink)}
 .conc-lista-item small{font-size:.72rem;color:var(--soft)}
 .conc-lista-item.ativo span{color:var(--green)}
-button.c-comprar{background:var(--green-viv);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:.95rem;padding:13px 28px;border-radius:99px;border:none;cursor:pointer;box-shadow:var(--shadow-cta);transition:background .15s,transform .15s}
+button.c-comprar{background:var(--green-viv);color:#fff;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:.95rem;padding:13px 28px;border-radius:99px;border:none;cursor:pointer;box-shadow:var(--shadow-cta);transition:background .15s,transform .15s}
 button.c-comprar:hover{background:#1FB456;transform:translateY(-1px)}
 .conc-skeleton{background:var(--cream-2);border-radius:var(--r-lg);animation:pulse 1.5s ease-in-out infinite}
 /* ── CERTIFICAÇÕES ── */
@@ -202,17 +207,15 @@ button.c-comprar:hover{background:#1FB456;transform:translateY(-1px)}
 .cert-modulos-hd{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--soft);margin-bottom:.75rem}
 .cert-modulos-list{display:flex;flex-direction:column;gap:.55rem;margin-bottom:1.6rem}
 .cert-modulo-item{display:flex;align-items:flex-start;gap:.75rem;background:var(--blue-soft);border:1px solid var(--blue-line);border-radius:var(--r-sm);padding:.65rem .9rem}
-.cert-modulo-num{font-family:'Plus Jakarta Sans',sans-serif;font-size:.7rem;font-weight:800;color:var(--blue);background:var(--white);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;flex-shrink:0;line-height:1.4;margin-top:.05rem}
+.cert-modulo-num{font-family:'Bricolage Grotesque',sans-serif;font-size:.7rem;font-weight:800;color:var(--blue);background:var(--white);border:1px solid var(--blue-line);border-radius:6px;padding:2px 7px;flex-shrink:0;line-height:1.4;margin-top:.05rem}
 .cert-modulo-txt{font-size:.83rem;color:var(--ink);font-weight:600;line-height:1.35}
 .cert-modulo-txt small{display:block;font-weight:400;color:var(--body);margin-top:.15rem;font-size:.78rem}
-.cert-comprar{background:var(--blue);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:.95rem;padding:13px 28px;border-radius:99px;border:none;cursor:pointer;box-shadow:0 8px 24px rgba(37,99,235,.28);transition:background .15s,transform .15s}
+.cert-comprar{background:var(--green-viv);color:#fff;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:.95rem;padding:13px 28px;border-radius:99px;border:none;cursor:pointer;box-shadow:0 8px 24px rgba(46,125,84,.28);transition:background .15s,transform .15s}
 .cert-comprar:hover{background:#1d4ed8;transform:translateY(-1px)}
 /* dropdown certificações (azul) */
 .nav-drop-item.cert-item:hover{background:var(--blue-soft)}
 .nav-drop-item.cert-item .nav-drop-dot{background:var(--blue-soft);border-color:var(--blue-line)}
 .nav-drop-item.cert-item .nav-drop-arrow-cert{color:var(--blue)}
-.nav-drop-btn-cert .nav-drop-arrow{color:var(--blue)}
-.nav-cert-badge{background:var(--blue)}
 .nav-cert-footer a{color:var(--blue)!important}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
 
@@ -231,7 +234,7 @@ button.c-comprar:hover{background:#1FB456;transform:translateY(-1px)}
 .passos{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;counter-reset:passo}
 @media(max-width:760px){.passos{grid-template-columns:1fr}}
 .passo{background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);padding:1.7rem 1.5rem;position:relative;box-shadow:var(--shadow-sm)}
-.passo-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:.8rem;padding:5px 14px;border-radius:99px;margin-bottom:1rem}
+.passo-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:.8rem;padding:5px 14px;border-radius:99px;margin-bottom:1rem}
 .p1 .passo-tag{background:var(--blue-soft);color:var(--blue)}
 .p2 .passo-tag{background:var(--amber-soft);color:var(--amber)}
 .p3 .passo-tag{background:var(--green-soft);color:var(--green)}
@@ -259,7 +262,7 @@ button.c-comprar:hover{background:#1FB456;transform:translateY(-1px)}
 .depo-stars{color:var(--amber-viv);font-size:.9rem;margin-bottom:.6rem}
 .depo-card p{font-size:.9rem;color:var(--body);margin-bottom:.9rem}
 .depo-who{display:flex;align-items:center;gap:.6rem}
-.depo-av{width:38px;height:38px;border-radius:50%;background:var(--blue-soft);color:var(--blue);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.8rem;font-family:'Plus Jakarta Sans',sans-serif}
+.depo-av{width:38px;height:38px;border-radius:50%;background:var(--blue-soft);color:var(--blue);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.8rem;font-family:'Bricolage Grotesque',sans-serif}
 .depo-who b{font-size:.84rem;color:var(--ink);display:block;line-height:1.2}
 .depo-who span{font-size:.72rem;color:var(--soft)}
 
@@ -268,7 +271,7 @@ button.c-comprar:hover{background:#1FB456;transform:translateY(-1px)}
 .comp-row{display:grid;grid-template-columns:1.3fr 1fr 1fr;border-bottom:1px solid var(--line)}
 .comp-row:last-child{border-bottom:none}
 .comp-row>div{padding:.85rem 1.1rem;font-size:.87rem;display:flex;align-items:center}
-.comp-row.head>div{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:.82rem;color:var(--ink);background:var(--cream)}
+.comp-row.head>div{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:.82rem;color:var(--ink);background:var(--cream)}
 .comp-row .lbl{color:var(--body)}
 .comp-no{color:#B91C1C}
 .comp-yes{color:var(--green);font-weight:600}
@@ -296,7 +299,7 @@ button.c-comprar:hover{background:#1FB456;transform:translateY(-1px)}
 /* ── FAQ ── */
 .faq-list{max-width:44rem;margin:0 auto}
 .faq-list details{background:var(--white);border:1px solid var(--line);border-radius:var(--r-md);padding:1.05rem 1.3rem;margin-bottom:.65rem}
-.faq-list summary{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.94rem;cursor:pointer;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.faq-list summary{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:.94rem;cursor:pointer;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem}
 .faq-list summary::-webkit-details-marker{display:none}
 .faq-list summary::after{content:'+';font-size:1.25rem;color:var(--green);flex-shrink:0;font-weight:600}
 .faq-list details[open] summary::after{content:'–'}
@@ -317,9 +320,17 @@ footer{padding:2.2rem 0;background:var(--cream)}
 .foot a:hover{color:var(--ink)}
 
 /* ── BARRA FIXA MOBILE ── */
-.stickybar{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--white);border-top:1px solid var(--line);padding:.7rem 1rem;z-index:70;box-shadow:0 -6px 20px rgba(26,43,74,.08)}
+.stickybar{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--white);border-top:1px solid var(--line);padding:.7rem 1rem;z-index:70;box-shadow:0 -6px 20px rgba(23,62,44,.08)}
 .stickybar .btn-cta{width:100%;padding:13px;font-size:.95rem}
 @media(max-width:680px){.stickybar{display:block}body{padding-bottom:70px}}
+
+/* ── Acordeão dos módulos de certificação ── */
+.cert-mods-acc summary{list-style:none;cursor:pointer;user-select:none;display:flex;align-items:center;gap:.4rem}
+.cert-mods-acc summary::-webkit-details-marker{display:none}
+.cert-mods-acc .acc-chev{transition:transform .25s;font-size:.8em}
+.cert-mods-acc[open] .acc-chev{transform:rotate(180deg)}
+.cert-mods-acc .cert-modulos-list{margin-top:.6rem}
+.conc-sidebar{align-self:start}
 </style>
 <!-- Firebase: redireciona aluno já logado direto para o app -->
 <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
@@ -375,8 +386,9 @@ footer{padding:2.2rem 0;background:var(--cream)}
       </div>
       <a class="lnk" href="#metodo">Como funciona</a>
       <a class="lnk" href="#faq">Dúvidas</a>
-      <a class="lnk" href="app/">Já sou aluno</a>
-      <a class="btn-mini js-checkout" href="#oferta">Começar por R$ 29,90</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a class="lnk lnk-aluno" href="app/index.html">Já sou aluno</a>
+      <a class="btn-mini js-checkout" href="#oferta">Começar — R$ 29,90</a>
     </nav>
   </div>
 </header>
@@ -391,6 +403,11 @@ footer{padding:2.2rem 0;background:var(--cream)}
         <div>Revisões automáticas em 7 e 30 dias — você não esquece o que estudou</div>
         <div>Perdeu dias? O plano se refaz sozinho, sem culpa e sem bagunça</div>
       </div>
+      <div style="margin-top:1.9rem;display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap">
+        <a class="btn btn-cta js-checkout" href="#oferta">Começar agora — R$ 29,90 →</a>
+        <a href="#metodo" style="font-size:.92rem;font-weight:700;color:var(--green);text-decoration:none">Ver como funciona ↓</a>
+      </div>
+      <div style="margin-top:.8rem;font-size:.8rem;color:var(--soft)">✓ Acesso imediato &nbsp;·&nbsp; ✓ Garantia de 7 dias &nbsp;·&nbsp; ✓ Funciona no celular</div>
     </div>
     <div class="mockwrap">
       <div class="float-badge fb1">🔥 12 dias seguidos de estudo</div>
@@ -641,19 +658,16 @@ footer{padding:2.2rem 0;background:var(--cream)}
   });
   menu.addEventListener('click', e => e.stopPropagation());
 
-  // Load concursos
-  try {
-    const r = await fetch('concursos/index.json', { cache: 'no-store' });
-    if (!r.ok) throw new Error();
-    const concursos = await r.json();
-    const ativos = concursos.filter(c => c.ativo);
+  // Fonte única: dados-site.js (sem fetch — funciona em file:// e servidor)
+  const concursos = window.CONCURSOS_DATA || [];
+  const ativos = concursos.filter(c => c.ativo);
     if (!ativos.length) { list.innerHTML = '<div class="nav-drop-loading">Nenhum concurso ativo.</div>'; return; }
 
     const sorted = [...ativos].sort((a, b) => a.municipio.localeCompare(b.municipio, 'pt-BR'));
     const emojis = ["🏙️","🌆","🏛️","🌇","🏘️","🌃","🏢","🎓"];
 
     // Badge com quantidade
-    badge.textContent = ativos.length + ' disponível' + (ativos.length > 1 ? 'is' : '');
+    badge.textContent = ativos.length;
     badge.classList.add('visivel');
 
     // Montar HTML do dropdown
@@ -683,22 +697,6 @@ footer{padding:2.2rem 0;background:var(--cream)}
         }, 600);
       });
     });
-
-  } catch(e) {
-    // Fallback estático
-    badge.textContent = '1 disponível';
-    badge.classList.add('visivel');
-    list.innerHTML =
-      `<div class="nav-drop-hd">Concursos disponíveis</div>
-       <div class="nav-drop-item" onclick="document.getElementById('concursos').scrollIntoView({behavior:'smooth'});document.querySelector('.nav-drop-btn').setAttribute('aria-expanded','false')">
-         <div class="nav-drop-dot">🏙️</div>
-         <div class="nav-drop-txt">
-           <strong>Campina Grande — PB</strong>
-           <small>Prefeitura Municipal · Prova: 30/08/2026</small>
-         </div>
-       </div>
-       <div class="nav-drop-footer"><a href="#concursos">Ver detalhes ↓</a></div>`;
-  }
 })();
 
 /* ── DROPDOWN CERTIFICAÇÕES ── */
@@ -722,21 +720,9 @@ footer{padding:2.2rem 0;background:var(--cream)}
   });
   menu.addEventListener('click', e => e.stopPropagation());
 
-  // Carrega as 3 certificações em paralelo
-  const CERTS_LIST = [
-    { file: 'certificacoes/cfp.json',   fallback: { id:'cfp',   nome:'CFP® — Certified Financial Planner', organizacao:'PLANEJAR', area:'Planejamento Financeiro', nivel:'Avançado', modulos:[{numero:1,nome:'Planejamento Financeiro e Ética',descricao:''},{numero:2,nome:'Gestão Financeira',descricao:''},{numero:3,nome:'Planejamento de Investimentos',descricao:''},{numero:4,nome:'Planejamento de Aposentadoria',descricao:''},{numero:5,nome:'Gestão de Riscos e Seguros',descricao:''},{numero:6,nome:'Planejamento Tributário',descricao:''},{numero:7,nome:'Planejamento Patrimonial e Sucessório',descricao:''},{numero:8,nome:'Psicologia no Planejamento Financeiro',descricao:''}], descricao:'A certificação CFP® é o padrão global de excelência para planejadores financeiros, reconhecida em mais de 27 países.', hotmartLink:'https://pay.hotmart.com/N106305634J' } },
-    { file: 'certificacoes/ca600.json', fallback: { id:'ca600', nome:'CA-600 — Crédito Imobiliário', organizacao:'ABECIP', area:'Crédito Imobiliário', nivel:'Intermediário', modulos:[{numero:1,nome:'Sistema Financeiro Nacional',descricao:''},{numero:2,nome:'Sistema Financeiro da Habitação',descricao:''},{numero:3,nome:'Sistema de Financiamento Imobiliário',descricao:''},{numero:4,nome:'Garantias Imobiliárias',descricao:''},{numero:5,nome:'Produtos para Pessoa Física',descricao:''},{numero:6,nome:'Seguros Habitacionais',descricao:''},{numero:7,nome:'Custos e Tributação',descricao:''},{numero:8,nome:'LGPD',descricao:''},{numero:9,nome:'Código de Defesa do Consumidor',descricao:''},{numero:10,nome:'Ouvidoria e Ética',descricao:''},{numero:11,nome:'Matemática Financeira',descricao:''},{numero:12,nome:'Pós-Contratação',descricao:''}], descricao:'Certificação ABECIP para crédito imobiliário, abrangendo SFH, SFI, garantias, produtos, seguros habitacionais e matemática financeira.' } },
-    { file: 'certificacoes/fbb100.json',fallback: { id:'fbb100',nome:'FBB100 — Certificação Profissional FEBRABAN', organizacao:'FEBRABAN', area:'Correspondente Bancário', nivel:'Básico / Intermediário', modulos:[{numero:1,nome:'Sistema Financeiro Nacional e Correspondente',descricao:''},{numero:2,nome:'IOF e Prevenção à Lavagem de Dinheiro',descricao:''},{numero:3,nome:'Matemática Financeira',descricao:''},{numero:4,nome:'Crédito: Conceitos e Modalidades',descricao:''},{numero:5,nome:'Relacionamento com o Consumidor e Ética',descricao:''},{numero:6,nome:'Crédito Consignado — Legislação Específica',descricao:''},{numero:7,nome:'Financiamento de Veículos e LGPD',descricao:''}], descricao:'Certificação FEBRABAN para correspondentes bancários: Consignado, CDC e Financiamento de Veículos. Atende à Resolução CMN 4.935.' } }
-  ];
+  const certs = window.CERTIFICACOES_DATA || [];
 
-  const certs = await Promise.all(CERTS_LIST.map(async c => {
-    try {
-      const r = await fetch(c.file, { cache: 'no-store' });
-      return r.ok ? await r.json() : c.fallback;
-    } catch(e) { return c.fallback; }
-  }));
-
-  badge.textContent = `${certs.length} disponíveis`;
+  badge.textContent = certs.length;
   badge.classList.add('visivel');
   list.innerHTML = `<div class="nav-drop-hd">Certificações disponíveis</div>`
     + certs.map((c, i) => `
@@ -767,18 +753,7 @@ footer{padding:2.2rem 0;background:var(--cream)}
   const layout = document.getElementById("certLayout");
   if (!layout) return;
 
-  const CERTS_LIST = [
-    { file: 'certificacoes/cfp.json',    fallback: { id:'cfp',    nome:'CFP® — Certified Financial Planner',      organizacao:'PLANEJAR', area:'Planejamento Financeiro',   nivel:'Avançado',              descricao:'A certificação CFP® é o padrão global de excelência para planejadores financeiros, reconhecida em mais de 27 países.', hotmartLink:'https://pay.hotmart.com/N106305634J', modulos:[{numero:1,nome:'Planejamento Financeiro e Ética',descricao:''},{numero:2,nome:'Gestão Financeira',descricao:''},{numero:3,nome:'Planejamento de Investimentos e Gestão de Ativos',descricao:''},{numero:4,nome:'Planejamento de Aposentadoria',descricao:''},{numero:5,nome:'Gestão de Riscos e Seguros',descricao:''},{numero:6,nome:'Planejamento Tributário',descricao:''},{numero:7,nome:'Planejamento Patrimonial e Sucessório',descricao:''},{numero:8,nome:'Psicologia no Planejamento Financeiro',descricao:''}] } },
-    { file: 'certificacoes/ca600.json',  fallback: { id:'ca600',  nome:'CA-600 — Crédito Imobiliário',            organizacao:'ABECIP',   area:'Crédito Imobiliário',       nivel:'Intermediário',         descricao:'Certificação ABECIP para crédito imobiliário, abrangendo SFH, SFI, garantias, produtos, seguros habitacionais e matemática financeira.', modulos:[{numero:1,nome:'Sistema Financeiro Nacional',descricao:''},{numero:2,nome:'Sistema Financeiro da Habitação',descricao:''},{numero:3,nome:'Sistema de Financiamento Imobiliário',descricao:''},{numero:4,nome:'Garantias Imobiliárias',descricao:''},{numero:5,nome:'Produtos para Pessoa Física',descricao:''},{numero:6,nome:'Seguros Habitacionais',descricao:''},{numero:7,nome:'Custos e Tributação',descricao:''},{numero:8,nome:'LGPD',descricao:''},{numero:9,nome:'Código de Defesa do Consumidor',descricao:''},{numero:10,nome:'Ouvidoria e Ética',descricao:''},{numero:11,nome:'Matemática Financeira',descricao:''},{numero:12,nome:'Pós-Contratação',descricao:''}] } },
-    { file: 'certificacoes/fbb100.json', fallback: { id:'fbb100', nome:'FBB100 — Certificação Profissional FEBRABAN', organizacao:'FEBRABAN', area:'Correspondente Bancário', nivel:'Básico / Intermediário', descricao:'Certificação FEBRABAN para correspondentes bancários: Consignado, CDC e Financiamento de Veículos. Atende à Resolução CMN 4.935.', modulos:[{numero:1,nome:'Sistema Financeiro Nacional e Correspondente',descricao:''},{numero:2,nome:'IOF e Prevenção à Lavagem de Dinheiro',descricao:''},{numero:3,nome:'Matemática Financeira',descricao:''},{numero:4,nome:'Crédito: Conceitos e Modalidades',descricao:''},{numero:5,nome:'Relacionamento com o Consumidor e Ética',descricao:''},{numero:6,nome:'Crédito Consignado — Legislação Específica',descricao:''},{numero:7,nome:'Financiamento de Veículos e LGPD',descricao:''}] } }
-  ];
-
-  const certs = await Promise.all(CERTS_LIST.map(async c => {
-    try {
-      const r = await fetch(c.file, { cache: 'no-store' });
-      return r.ok ? await r.json() : c.fallback;
-    } catch(e) { return c.fallback; }
-  }));
+  const certs = window.CERTIFICACOES_DATA || [];
 
   let ativo = 0;
 
@@ -789,7 +764,8 @@ footer{padding:2.2rem 0;background:var(--cream)}
            <span>Acesso imediato · garantia de 7 dias</span>
          </div>`
       : `<div class="conc-detail-cta">
-           <a href="/app/" class="btn btn-prim" style="display:inline-block;text-decoration:none">Começar cronograma gratuito →</a>
+           <button class="cert-comprar" onclick="window.open('https://pay.hotmart.com/N106305634J','_blank')">Garantir acesso — R$ 29,90 →</button>
+           <span>Acesso imediato · garantia de 7 dias</span>
          </div>`;
     return `
       <span class="cert-detail-badge">📜 ${c.organizacao} · ${c.area}</span>
@@ -799,14 +775,16 @@ footer{padding:2.2rem 0;background:var(--cream)}
         <span class="m" style="background:var(--blue-soft);border-color:var(--blue-line)">🎓 Nível: ${c.nivel}</span>
         <span class="m" style="background:var(--blue-soft);border-color:var(--blue-line)">📚 ${c.modulos.length} módulos</span>
       </div>
-      <div class="cert-modulos-hd">Módulos da certificação</div>
-      <div class="cert-modulos-list">
+      <details class="cert-mods-acc">
+        <summary class="cert-modulos-hd">📚 Ver os ${c.modulos.length} módulos da certificação <span class="acc-chev">▾</span></summary>
+        <div class="cert-modulos-list">
         ${c.modulos.map(m => `
           <div class="cert-modulo-item">
             <span class="cert-modulo-num">M${m.numero}</span>
             <div class="cert-modulo-txt">${m.nome}${m.descricao ? `<small>${m.descricao}</small>` : ''}</div>
           </div>`).join('')}
-      </div>
+        </div>
+      </details>
       ${ctaHtml}`;
   }
 
@@ -904,46 +882,9 @@ footer{padding:2.2rem 0;background:var(--cream)}
     });
   }
 
-  try {
-    const r = await fetch("concursos/index.json", { cache: "no-store" });
-    if (!r.ok) throw new Error();
-    const concursos = await r.json();
-    const ativos = concursos.filter(c => c.ativo);
-    if (!ativos.length) { layout.innerHTML = ""; return; }
-    render(ativos, ativos[0].id, false);
-  } catch (e) {
-    layout.innerHTML = `
-      <div class="conc-sidebar">
-        <button class="conc-menu-trigger">
-          <span class="conc-menu-icon">📋</span>
-          <span class="conc-menu-label"><strong>Campina Grande — PB</strong><small>Prefeitura Municipal</small></span>
-          <span class="conc-menu-arrow">▾</span>
-        </button>
-      </div>
-      <div class="conc-detail">
-        <span class="conc-detail-badge">📍 Campina Grande — PB</span>
-        <div class="conc-detail-nome">Prefeitura Municipal de Campina Grande</div>
-        <p class="conc-detail-desc">Concurso público com 525 vagas para cargos de nível médio e superior.</p>
-        <div class="conc-detail-meta">
-          <span class="m">📅 Prova: 30/08/2026</span>
-          <span class="m">🏛️ Banca: IDECAN</span>
-          <span class="m">📋 Edital 01/2026</span>
-        </div>
-        <div class="conc-cargos-hd">Cargos disponíveis</div>
-        <div class="conc-cargos-list">
-          <span class="conc-cargo-tag">Agente Administrativo</span>
-          <span class="conc-cargo-tag">Prof. Educação Infantil</span>
-          <span class="conc-cargo-tag">Prof. Anos Iniciais</span>
-          <span class="conc-cargo-tag">Prof. de Língua Portuguesa</span>
-          <span class="conc-cargo-tag">Prof. de Matemática</span>
-          <span class="conc-cargo-tag">Supervisor Educacional</span>
-        </div>
-        <div class="conc-detail-cta">
-          <button class="c-comprar btn-comprar-conc" onclick="window.open('https://pay.hotmart.com/N106305634J','_blank')">Garantir acesso — R$ 29,90 →</button>
-          <span>Acesso imediato · garantia de 7 dias</span>
-        </div>
-      </div>`;
-  }
+  const concursos = window.CONCURSOS_DATA || [];
+  const ativos = concursos.filter(c => c.ativo);
+  if (!ativos.length) { layout.innerHTML = ""; } else { render(ativos, ativos[0].id, false); }
 })();
 </script>
 
@@ -962,7 +903,7 @@ footer{padding:2.2rem 0;background:var(--cream)}
     <div style="display:flex;gap:1.2rem;flex-wrap:wrap;align-items:center">
       <a href="privacidade.html">Política de Privacidade</a>
       <a href="termos.html">Termos de Uso</a>
-      <a href="app/">Área do aluno →</a>
+      <a href="app/index.html">Área do aluno →</a>
     </div>
   </div>
 </footer>
