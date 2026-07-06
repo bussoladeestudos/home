@@ -154,6 +154,15 @@ async function cloudOnLogin(user){
     STATE._syncUid=user.uid;
     save(); // grava local e agenda o push (nuvem termina igual ao vencedor)
     _syncStatus("ok");
+    // Nuvem trouxe cronograma configurado → este NÃO é um primeiro acesso:
+    // fecha o fluxo de boas-vindas/configuração que o boot deste dispositivo
+    // pode ter aberto antes do login resolver (corrida boot × nuvem).
+    if(STATE.inicio&&typeof document!=="undefined"){
+      const w=document.getElementById("welcomeOverlay"); if(w) w.classList.remove("open");
+      const m=document.getElementById("setupModal");     if(m) m.classList.remove("open");
+      try{ localStorage.setItem("bussola_onboard_done","1"); }catch(e){}
+      if(typeof selecionarPref==="function"&&EDITAIS[STATE.prefeitura]) selecionarPref(STATE.prefeitura,false);
+    }
     // Re-renderiza com os dados vencedores (a UI pode já ter desenhado o boot)
     if(typeof renderTudo==="function"){
       renderTudo();

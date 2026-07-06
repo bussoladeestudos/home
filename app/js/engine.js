@@ -254,10 +254,94 @@ function getTopicosFracos(seg){
   return out;
 }
 
+function isProvaDay(dateKey){
+  return !!(STATE.prova&&dateKey===STATE.prova);
+}
+function isRevisaoGeralDay(dateKey){
+  if(!STATE.prova||!STATE.inicio) return false;
+  const prova=parseDate(STATE.prova);
+  const rv=new Date(prova); rv.setDate(rv.getDate()-7);
+  return fmt(rv)===dateKey && dateKey!==STATE.prova && dateKey>=STATE.inicio;
+}
+
+// Dia está na semana final (entre a Revisão Geral e a prova)?
+// Usado pela visão mensal e pelo badge "Hoje" — nesses dias não há tópico regular.
+function isRetaFinalDay(dateKey){
+  if(!STATE.prova||!STATE.inicio) return false;
+  const prova=parseDate(STATE.prova);
+  const rv=new Date(prova); rv.setDate(rv.getDate()-7);
+  return dateKey>fmt(rv)&&dateKey<STATE.prova&&dateKey>=STATE.inicio;
+}
+
+/* ── EXPORTAR PARA AGENDA (.ics, RFC 5545) ──
+   Gera os eventos da SEMANA escolhida em formato iCalendar.
+   Semana curta por design: se o cronograma mudar, o aluno reexporta
+   na segunda-feira — a agenda nunca fica meses desatualizada.
+   UIDs estáveis por data: reimportar no mesmo calendário ATUALIZA
+   os eventos em vez de duplicar. */
+const AGENDA_PAINEL_LINK="https://bussoladeestudos.com.br/app/";
+function _icsEsc(s){ return String(s||"").replace(/\\/g,"\\\\").replace(/;/g,"\\;").replace(/,/g,"\\,").replace(/\r?\n/g,"\\n"); }
+function _icsFold(line){
+  let out="";
+  while(line.length>73){ out+=line.slice(0,73)+"\r\n "; line=line.slice(73); }
+  return out+line;
+}
+function buildAgendaSemanaICS(segKey,horaInicio){
+  const seg=parseDate(segKey);
+  const partes=(horaInicio||"19:00").split(":");
+  const hh=Math.min(23,Math.max(0,parseInt(partes[0])||19));
+  const mm=Math.min(59,Math.max(0,parseInt(partes[1])||0));
+  const durH=Math.max(1,Math.min(6,parseInt(STATE.horasDia)||2));
+  const fimH=Math.min(23,hh+durH);
+  const eventos=[];
+  for(let i=0;i<7;i++){
+    const d=new Date(seg); d.setDate(d.getDate()+i);
+    const k=fmt(d);
+    let titulo=null,desc="";
+    if(isProvaDay(k)){ titulo="🏆 DIA DA PROVA"; desc="É o grande dia. Respire fundo e confie no processo."; }
+    else if(isRevisaoGeralDay(k)){ titulo="📋 Revisão Geral — Simulado Completo"; desc="Simule a prova no formato real e registre o resultado no painel."; }
+    else if(isSimuladoDay(k)){ titulo="🎯 Mini Simulado — Bússola"; desc="Resolva ~20 questões dos temas das últimas revisões e registre seus acertos."; }
+    else{
+      const pos=getCicloPos(k);
+      if(pos===-1) continue; // dia livre: sem evento
+      if(pos===5){ titulo="⚡ Retorno Técnico — Bússola"; desc="Reavalie a confiança dos tópicos estudados na semana."; }
+      else if(pos===6){ titulo="📝 Exercícios de Revisão — Bússola"; desc="Pratique questões dos ciclos encerrados. Não releia: resolva."; }
+      else{
+        const tops=getTopicosDoDia(k);
+        if(!tops.length){ titulo="🧭 Dia 1 — Leitura do Edital"; desc="Leia o edital na íntegra e estude a Análise da Banca no painel."; }
+        else{
+          titulo="📚 "+tops[0].mat+": "+tops[0].top+(tops.length>1?" (+"+(tops.length-1)+")":"");
+          desc="Tópico do dia: "+tops.map(t=>t.mat+" — "+t.top).join(" · ")+".";
+        }
+      }
+    }
+    eventos.push({k,titulo,desc});
+  }
+  const agora=new Date();
+  const stamp=fmt(agora).replace(/-/g,"")+"T"+String(agora.getHours()).padStart(2,"0")+String(agora.getMinutes()).padStart(2,"0")+"00";
+  const H=String(hh).padStart(2,"0"),M=String(mm).padStart(2,"0"),FH=String(fimH).padStart(2,"0");
+  let ics="BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Bussola de Estudos//Agenda Semanal//PT-BR\r\nCALSCALE:GREGORIAN\r\n";
+  eventos.forEach(ev=>{
+    const dt=ev.k.replace(/-/g,"");
+    const descComLink=ev.desc+"\n\nPronto para focar? Acesse seu painel: "+AGENDA_PAINEL_LINK;
+    ics+="BEGIN:VEVENT\r\n"
+      +"UID:bussola-"+ev.k+"@bussoladeestudos.com.br\r\n"
+      +"DTSTAMP:"+stamp+"\r\n"
+      +"DTSTART:"+dt+"T"+H+M+"00\r\n"
+      +"DTEND:"+dt+"T"+FH+M+"00\r\n"
+      +_icsFold("SUMMARY:"+_icsEsc(ev.titulo))+"\r\n"
+      +_icsFold("DESCRIPTION:"+_icsEsc(descComLink))+"\r\n"
+      +"BEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:Hora de estudar — Bússola\r\nTRIGGER:-PT15M\r\nEND:VALARM\r\n"
+      +"END:VEVENT\r\n";
+  });
+  ics+="END:VCALENDAR\r\n";
+  return {ics,eventos};
+}
+
 /* ── Export para Node (testes). No navegador, as funções já são globais. ── */
 if(typeof module!=="undefined"&&module.exports){
   module.exports={fmt,parseDate,isDiaLivre,isDiaEstudo,getCicloPos,getNumRevisao,
     getMaterias,getTopicos,getTopicoDiaByKey,getTopicosDiaBase,getTopicosDoDia,
-    getExtrasDoDia,getPrevNonFreeDay,isSimuladoDay,calcRevisoes,calcExpectedPerSubject,getTopicosFracos,
+    getExtrasDoDia,getPrevNonFreeDay,isSimuladoDay,calcRevisoes,calcExpectedPerSubject,getTopicosFracos,buildAgendaSemanaICS,isProvaDay,isRevisaoGeralDay,isRetaFinalDay,
     _densityFor};
 }

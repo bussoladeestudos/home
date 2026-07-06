@@ -64,6 +64,16 @@ const ACTIONS={
   filtrarRevMat:d=>filtrarRevMat(d.mat),
   marcarRevisada:d=>marcarRevisada(d.key,d.tipo),
   abrirSimulado:d=>abrirSimulado(d.key),
+  exportarAgendaIcs:()=>{
+    const {ics}=buildAgendaSemanaICS(fmt(_agendaSegundaAtual()),STATE.agendaHora||"19:00");
+    const blob=new Blob([ics],{type:"text/calendar;charset=utf-8"});
+    const a=document.createElement("a");
+    a.href=URL.createObjectURL(blob);
+    a.download="bussola-semana.ics";
+    document.body.appendChild(a); a.click();
+    setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},1000);
+    showToast("📅 Agenda da semana baixada! Importe no Google Agenda.");
+  },
   abrirRevisaoGeral:d=>abrirRevisaoGeral(d.key),
   confirmarRevisaoGeral:()=>confirmarRevisaoGeral(),
   fecharRgModal:()=>fecharRgModal(),
@@ -78,7 +88,13 @@ document.addEventListener("click",e=>{
   if(fn) fn(el.dataset,el,e);
 });
 document.addEventListener("change",e=>{
-  if(e.target.dataset&&e.target.dataset.change==="importarDados") importarDados(e);
+  if(!e.target.dataset) return;
+  if(e.target.dataset.change==="importarDados") importarDados(e);
+  else if(e.target.dataset.change==="agendaHora"){
+    window._bussolaUserActed=true;
+    STATE.agendaHora=e.target.value||"19:00";
+    save();
+  }
 });
 document.addEventListener("input",e=>{
   if(e.target.dataset&&e.target.dataset.input==="salvarNotaSemana"){ window._bussolaUserActed=true; salvarNotaSemana(e.target.value); }
@@ -622,9 +638,12 @@ function renderDowGrid(){
 }
 function toggleDow(i){
   const idx=_dowSelected.indexOf(i);
-  // Garantir ao menos 5 dias disponíveis (não deixa marcar mais de 2 dias livres)
+  // Mínimo de 3 dias de estudo por semana (até 4 dias livres).
+  // O ciclo 5+1+1 conta dias de ESTUDO, então continua íntegro — apenas
+  // se distribui por mais dias de calendário; a densidade de tópicos/dia
+  // se ajusta sozinha (getTopicosDiaBase).
   if(idx>=0) _dowSelected.splice(idx,1);
-  else{ if(_dowSelected.length>=2){ alert("Máximo de 2 dias de descanso."); return; } _dowSelected.push(i); }
+  else{ if(_dowSelected.length>=4){ alert("Máximo de 4 dias de descanso — o plano precisa de pelo menos 3 dias de estudo por semana."); return; } _dowSelected.push(i); }
   renderDowGrid();
 }
 
@@ -792,6 +811,8 @@ function navTo(pg){
   if(pg==="simulado")   renderSimuladoPage();
   if(pg==="hoje")       renderHoje();
   if(pg==="edital")     renderEdital();
+  if(pg==="coach")      renderCoachPage();
+  if(pg==="agenda")     renderAgendaPage();
   // fechar sidebar no mobile
   closeSidebarMobile();
 }
@@ -827,6 +848,10 @@ function updateNavBadges(){
   }
   const hojeBadgeEl=document.getElementById("hojeBadge");
   if(hojeBadgeEl) hojeBadgeEl.style.display=hojeFeito?"none":"inline-block";
+  // coachNavBadge — leitura diária da Palavra do Coach
+  const coachPendente=!!STATE.inicio&&STATE.coachLidoEm!==hojeKey;
+  const coachNavEl=document.getElementById("coachNavBadge");
+  if(coachNavEl) coachNavEl.style.display=coachPendente?"inline-block":"none";
   // revBadge — só conta blocos com tópicos disponíveis
   const _bl=buildBlocosRevisao();
   const _revDisp=_bl.filter(b=>b.estado==="disponivel"&&b.total>0).length;
@@ -847,7 +872,7 @@ function updateNavBadges(){
   if(simBadgeEl) simBadgeEl.style.display=simPendente?"inline-block":"none";
   // notifDot
   const notifDotEl=document.getElementById("notifDot");
-  if(notifDotEl) notifDotEl.style.display=(_revDisp>0||simPendente||!hojeFeito)?"block":"none";
+  if(notifDotEl) notifDotEl.style.display=(_revDisp>0||simPendente||!hojeFeito||coachPendente)?"block":"none";
 }
 
 function renderTudo(){
@@ -964,9 +989,15 @@ function renderCoach(prog, conf, ritmo, projecao, totalRev){
   const hl=document.getElementById("coachHighlight");
   const badge=document.getElementById("coachBadge");
   if(badge&&!isRetaFinal().active) badge.textContent="✦ Coach Bússola";
+  if(el) el.innerHTML=buildCoachHtml(prog,conf,ritmo,projecao,totalRev);
+  if(hl) hl.style.display="none";
+}
+
+/* Gera o HTML da análise do Coach — usado no Dashboard (painel) e na
+   página "Palavra do Coach" (menu Recursos). */
+function buildCoachHtml(prog, conf, ritmo, projecao, totalRev){
   if(!STATE.inicio){
-    el.innerHTML=`<span style="color:#94a3b8">Configure seu concurso para ativar o Coach Bússola.</span>`;
-    hl.style.display="none"; return;
+    return `<span style="color:#94a3b8">Configure seu concurso para ativar o Coach Bússola.</span>`;
   }
 
   const diasRestantes=calcDiasRestantes();
@@ -1081,8 +1112,83 @@ function renderCoach(prog, conf, ritmo, projecao, totalRev){
   }
 
   html+=`</div>`;
-  el.innerHTML=html;
-  hl.style.display="none";
+  return html;
+}
+
+/* ── PÁGINA EXPORTAR PARA AGENDA ── */
+function _agendaSegundaAtual(){
+  const hoje=new Date(); hoje.setHours(0,0,0,0);
+  const dow=hoje.getDay();
+  const seg=new Date(hoje); seg.setDate(seg.getDate()+(dow===0?-6:1-dow));
+  return seg;
+}
+function renderAgendaPage(){
+  const el=document.getElementById("agendaConteudo");
+  if(!el) return;
+  if(!STATE.inicio){
+    el.innerHTML=`<div style="text-align:center;padding:3rem 1rem;color:var(--gray-400)"><div style="font-size:2rem;margin-bottom:.5rem">📅</div><div style="font-weight:700;color:var(--gray-600)">Configure seu concurso primeiro</div><div style="font-size:.83rem">A agenda é gerada a partir do seu cronograma.</div></div>`;
+    return;
+  }
+  const hora=STATE.agendaHora||"19:00";
+  const seg=_agendaSegundaAtual();
+  const fim=new Date(seg); fim.setDate(fim.getDate()+6);
+  const {eventos}=buildAgendaSemanaICS(fmt(seg),hora);
+  const nomes=["Dom","Seg","Ter","Qua","Qui","Sex","Sáb"];
+  const lista=eventos.length
+    ?eventos.map(ev=>{const d=parseDate(ev.k);return`<div style="display:flex;gap:.7rem;align-items:flex-start;padding:.55rem 0;border-bottom:1px solid var(--gray-100)"><span style="flex-shrink:0;font-size:.7rem;font-weight:800;color:var(--navy);background:var(--gray-100);border-radius:8px;padding:4px 8px;min-width:60px;text-align:center">${nomes[d.getDay()]} ${d.toLocaleDateString("pt-BR",{day:"2-digit",month:"2-digit"})}</span><span style="font-size:.82rem;color:var(--gray-700);line-height:1.45">${esc(ev.titulo)}</span></div>`;}).join("")
+    :`<div style="font-size:.83rem;color:var(--gray-400);font-style:italic">Nenhum dia de estudo nesta semana (dias livres ou após a prova).</div>`;
+  el.innerHTML=`
+  <div style="background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:1.25rem 1.4rem;margin-bottom:1rem;">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:.9rem;">
+      <div>
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:1rem;font-weight:700;color:var(--navy)">Semana de ${seg.toLocaleDateString("pt-BR",{day:"2-digit",month:"2-digit"})} a ${fim.toLocaleDateString("pt-BR",{day:"2-digit",month:"2-digit"})}</div>
+        <div style="font-size:.78rem;color:var(--gray-500);margin-top:2px">${eventos.length} evento${eventos.length!==1?"s":""} de estudo, com lembrete e link de volta ao painel</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:.6rem;flex-wrap:wrap">
+        <label style="font-size:.78rem;font-weight:600;color:var(--gray-600)">Horário de estudo:</label>
+        <input type="time" value="${hora}" data-change="agendaHora" style="border:1.5px solid var(--gray-200);border-radius:10px;padding:7px 10px;font-family:inherit;font-size:16px;color:var(--gray-700)">
+        <button data-action="exportarAgendaIcs" style="background:#173E2C;color:#fff;border:none;border-radius:11px;padding:10px 18px;font-size:.85rem;font-weight:700;cursor:pointer;font-family:inherit" class="hv-dim">⬇ Baixar agenda da semana</button>
+      </div>
+    </div>
+    <div>${lista}</div>
+  </div>
+  <div style="background:#FBF6ED;border:1px solid #ECE2D1;border-radius:14px;padding:1.1rem 1.3rem;">
+    <div style="font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#8A7322;margin-bottom:.6rem">Como importar no Google Agenda</div>
+    <div style="font-size:.84rem;color:#4A4339;line-height:1.8">
+      1. Baixe o arquivo acima (<strong>bussola-semana.ics</strong>)<br>
+      2. No Google Agenda (computador): ⚙️ <strong>Configurações → Importar e exportar → Importar</strong><br>
+      3. Selecione o arquivo e, em "Adicionar à agenda", escolha (ou crie) uma agenda chamada <strong>Bússola</strong><br>
+      4. Nas configurações dessa agenda, ative uma <strong>notificação padrão</strong> (ex.: 15 minutos antes)<br>
+      <span style="color:#8A7322">💡 Repita toda segunda-feira: a exportação é semanal de propósito, para a agenda acompanhar qualquer ajuste do cronograma. Reimportar substitui os eventos, sem duplicar.</span>
+    </div>
+  </div>`;
+}
+
+/* ── PÁGINA PALAVRA DO COACH ── */
+function renderCoachPage(){
+  const el=document.getElementById("coachPageConteudo");
+  if(!el) return;
+  const prog=calcProgresso();
+  const conf=calcConfiancaMedia();
+  const ritmo=calcRitmo();
+  const projecao=calcProjecao();
+  const {rev7,rev30}=calcRevisoes();
+  el.innerHTML=`
+    <div class="coach-block" style="margin-bottom:1rem;">
+      <div class="coach-header"><span class="coach-badge">✦ Coach Bússola</span></div>
+      <div class="coach-text">${buildCoachHtml(prog,conf,ritmo,projecao,rev7.length+rev30.length)}</div>
+    </div>
+    <div style="background:#FBF6ED;border:1px solid #ECE2D1;border-radius:14px;padding:1rem 1.25rem;">
+      <div style="font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#8A7322;margin-bottom:.4rem;">💡 Dica do dia</div>
+      <div style="font-size:.9rem;color:#4A4339;line-height:1.6;">${getDicaDoDia()}</div>
+    </div>`;
+  // Registra a leitura do dia (persiste e sincroniza) e apaga o badge
+  const hojeKey=fmt(new Date());
+  if(STATE.inicio&&STATE.coachLidoEm!==hojeKey){
+    STATE.coachLidoEm=hojeKey;
+    save();
+    updateNavBadges();
+  }
 }
 
 /* ── PÁGINA HOJE ── */
@@ -1805,7 +1911,7 @@ function renderMaterias(){
 }
 
 /* ── PAINEL ── */
-let painelAberto=true;
+let painelAberto=false; // Coach recolhido por padrão — resumo na barra já informa o essencial
 function togglePainel(){
   painelAberto=!painelAberto;
   document.getElementById("painelContent").classList.toggle("open",painelAberto);
@@ -1930,25 +2036,7 @@ function setCronView(v){
 }
 
 
-function isProvaDay(dateKey){
-  return !!(STATE.prova&&dateKey===STATE.prova);
-}
-function isRevisaoGeralDay(dateKey){
-  if(!STATE.prova||!STATE.inicio) return false;
-  const prova=parseDate(STATE.prova);
-  const rv=new Date(prova); rv.setDate(rv.getDate()-7);
-  return fmt(rv)===dateKey && dateKey!==STATE.prova && dateKey>=STATE.inicio;
-}
-
-// Dia está na semana final (entre a Revisão Geral e a prova)?
-// Usado pela visão mensal e pelo badge "Hoje" — nesses dias não há tópico regular.
-function isRetaFinalDay(dateKey){
-  if(!STATE.prova||!STATE.inicio) return false;
-  const prova=parseDate(STATE.prova);
-  const rv=new Date(prova); rv.setDate(rv.getDate()-7);
-  return dateKey>fmt(rv)&&dateKey<STATE.prova&&dateKey>=STATE.inicio;
-}
-
+/* isProvaDay / isRevisaoGeralDay / isRetaFinalDay → movidas para js/engine.js */
 // Percepção efetiva do dia (cobre dias multi-tópico: o pior nível prevalece)
 function getDayPercepcao(dateKey){
   const est=STATE.dias[dateKey]||{};
