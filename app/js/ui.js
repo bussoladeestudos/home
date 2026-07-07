@@ -785,14 +785,28 @@ function endTour(skipped){
   if(!skipped) showToast("🧭 Tudo pronto! Bons estudos.");
 }
 
-/* ── ANÁLISE DO EDITAL (PDF servido como arquivo) ── */
-const EDITAL_PDF_URL="edital-campina.pdf";
-function getEditalUrl(){ return EDITAL_PDF_URL; }
+/* ── ANÁLISE DO EDITAL (PDF servido como arquivo) ──
+   A análise certa é escolhida pelo GRUPO do edital ativo (STATE.prefeitura).
+   Para adicionar a análise de um novo concurso: suba o PDF na pasta app/ e
+   registre uma entrada { url, sub, arquivo } por grupo abaixo. */
+const EDITAL_ANALISES={
+  "Campina Grande PB":{ url:"edital-campina.pdf",  sub:"Análise Estratégica — Edital Campina Grande",              arquivo:"Analise_Estrategica_Edital_Campina_Grande.pdf" },
+  "SEDES-DF":         { url:"edital-sedes-df.pdf", sub:"Análise Estratégica — Edital SEDES/DF (Instituto Quadrix)", arquivo:"Analise_Estrategica_Edital_SEDES_DF.pdf" }
+};
+const EDITAL_ANALISE_FALLBACK=EDITAL_ANALISES["Campina Grande PB"];
+function getEditalAnalise(){
+  const ed=(typeof EDITAIS!=="undefined"&&EDITAIS[STATE.prefeitura])||null;
+  return (ed&&EDITAL_ANALISES[ed.grupo])||EDITAL_ANALISE_FALLBACK;
+}
+function getEditalUrl(){ return getEditalAnalise().url; }
 function renderEdital(){
+  const a=getEditalAnalise();
   const f=document.getElementById("editalFrame");
-  if(f&&!f.getAttribute("src")) f.src=getEditalUrl();
+  if(f&&f.getAttribute("src")!==a.url) f.src=a.url;
   const d=document.getElementById("editalDownload");
-  if(d) d.href=getEditalUrl();
+  if(d){ d.href=a.url; d.setAttribute("download",a.arquivo); }
+  const s=document.getElementById("editalSubtitulo");
+  if(s) s.textContent=a.sub;
 }
 
 /* ── NAVEGAÇÃO ── */
