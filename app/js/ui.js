@@ -786,17 +786,24 @@ function endTour(skipped){
 }
 
 /* ── ANÁLISE DO EDITAL (PDF servido como arquivo) ──
-   A análise certa é escolhida pelo GRUPO do edital ativo (STATE.prefeitura).
+   A análise é escolhida em 3 níveis: primeiro por CHAVE de edital (override,
+   útil quando um grupo tem vários exames distintos — ex.: Certificações),
+   depois pelo GRUPO do edital ativo, e por fim o fallback.
    Para adicionar a análise de um novo concurso: suba o PDF na pasta app/ e
-   registre uma entrada { url, sub, arquivo } por grupo abaixo. */
+   registre uma entrada { url, sub, arquivo } por grupo (ou por chave). */
 const EDITAL_ANALISES={
   "Campina Grande PB":{ url:"edital-campina.pdf",  sub:"Análise Estratégica — Edital Campina Grande",              arquivo:"Analise_Estrategica_Edital_Campina_Grande.pdf" },
   "SEDES-DF":         { url:"edital-sedes-df.pdf", sub:"Análise Estratégica — Edital SEDES/DF (Instituto Quadrix)", arquivo:"Analise_Estrategica_Edital_SEDES_DF.pdf" }
 };
+const EDITAL_ANALISES_POR_CHAVE={
+  "cfpPlanejar":{ url:"edital-cfp.pdf", sub:"Análise Estratégica — Certificação CFP® (Planejar)", arquivo:"Analise_Estrategica_Certificacao_CFP.pdf" }
+};
 const EDITAL_ANALISE_FALLBACK=EDITAL_ANALISES["Campina Grande PB"];
 function getEditalAnalise(){
   const ed=(typeof EDITAIS!=="undefined"&&EDITAIS[STATE.prefeitura])||null;
-  return (ed&&EDITAL_ANALISES[ed.grupo])||EDITAL_ANALISE_FALLBACK;
+  return EDITAL_ANALISES_POR_CHAVE[STATE.prefeitura]
+      || (ed&&EDITAL_ANALISES[ed.grupo])
+      || EDITAL_ANALISE_FALLBACK;
 }
 function getEditalUrl(){ return getEditalAnalise().url; }
 function renderEdital(){
