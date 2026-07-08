@@ -10,6 +10,20 @@
 /* ── Escape de HTML (B10) ── */
 function esc(s){ return String(s??"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;"); }
 
+/* ── SUPORTE / FALE CONOSCO (MVP: link externo, sem backend) ──────────────
+   >>> COLE AQUI o seu link de suporte (WhatsApp, formulário ou e-mail).
+       WhatsApp:  https://wa.me/55DDDNUMERO   (ex.: https://wa.me/5561996278462)
+       Formulário: cole a URL do Google Forms
+       E-mail:     "mailto:seuemail@dominio.com?subject=Suporte%20Bussola"
+   Enquanto ficar vazio, o clique só mostra um aviso (não abre aba quebrada). */
+const SUPORTE_URL = "mailto:suporte@bussoladeestudos.com.br?subject=Suporte%20B%C3%BAssola%20de%20Estudos";   // <-- link do Fale Conosco
+function abrirSuporte(){
+  if(!SUPORTE_URL){ showToast("💬 Canal de suporte em configuração. Volte em breve!"); return; }
+  if(SUPORTE_URL.indexOf("mailto:")===0) window.location.href=SUPORTE_URL;  // e-mail: abre o app de e-mail, sem perder o painel
+  else window.open(SUPORTE_URL, "_blank", "noopener");                      // link web (WhatsApp/formulário): nova aba
+  closeSidebarMobile();
+}
+
 /* ── Registro central de ações (data-action → função) ── */
 const ACTIONS={
   // navegação e layout
@@ -77,6 +91,8 @@ const ACTIONS={
   abrirRevisaoGeral:d=>abrirRevisaoGeral(d.key),
   confirmarRevisaoGeral:()=>confirmarRevisaoGeral(),
   fecharRgModal:()=>fecharRgModal(),
+  // Fale Conosco (link externo)
+  abrirSuporte:()=>abrirSuporte(),
 };
 
 /* ── Dispatcher (event delegation) ── */
