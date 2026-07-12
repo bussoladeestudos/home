@@ -338,10 +338,19 @@ function buildAgendaSemanaICS(segKey,horaInicio){
   return {ics,eventos};
 }
 
+/* Agregação das notas por tópico (dias multi-tópico).
+   O dia só é considerado concluído quando TODOS os tópicos têm nota;
+   o agregado é a PIOR nota — mesma regra de getDayPercepcao (ui.js). */
+function aggregateEstrelas(estrelasList,totalTopicos){
+  const notas=Object.values(estrelasList||{}).filter(n=>n>0);
+  if(totalTopicos<1||notas.length<totalTopicos) return null;
+  return Math.min(...notas);
+}
+
 /* ── Export para Node (testes). No navegador, as funções já são globais. ── */
 if(typeof module!=="undefined"&&module.exports){
   module.exports={fmt,parseDate,isDiaLivre,isDiaEstudo,getCicloPos,getNumRevisao,
     getMaterias,getTopicos,getTopicoDiaByKey,getTopicosDiaBase,getTopicosDoDia,
     getExtrasDoDia,getPrevNonFreeDay,isSimuladoDay,calcRevisoes,calcExpectedPerSubject,getTopicosFracos,buildAgendaSemanaICS,isProvaDay,isRevisaoGeralDay,isRetaFinalDay,
-    _densityFor};
+    _densityFor,aggregateEstrelas};
 }
