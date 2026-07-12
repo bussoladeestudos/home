@@ -364,6 +364,12 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
 .star-btn { background:none; border:none; cursor:pointer; font-size:1.3rem; line-height:1; padding:1px; color:var(--gray-300); transition:color .12s,transform .12s; -webkit-tap-highlight-color:transparent; }
 .star-btn:hover { transform:scale(1.2); color:#FBBF24; }
 .star-btn.lit-low{color:var(--red-viv)} .star-btn.lit-mid{color:var(--yellow-viv)} .star-btn.lit-high{color:#FBBF24}
+/* Estrelas por tópico (dias multi-tópico / modo intensivo) */
+.star-rating-topico { gap:.45rem; padding:.18rem 0; }
+.star-rating-topico .multi-topico-num { margin-top:0; }
+.star-rating-topico .star-btn { font-size:1.05rem; }
+.srt-topico-label { font-size:.68rem; font-weight:600; color:var(--gray-600); flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.srt-stars { display:flex; gap:2px; align-items:center; flex-shrink:0; }
 .star-label { margin-left:7px; font-size:.7rem; font-weight:700; min-width:46px; }
 .star-label.lbl-low{color:var(--red)} .star-label.lbl-mid{color:var(--yellow)} .star-label.lbl-high{color:var(--green)}
 .sabado-title { font-size:.78rem; font-weight:600; color:var(--yellow); margin-bottom:.35rem; }
@@ -963,6 +969,7 @@ body.aguardando-auth > *:not(#loginScreen) { visibility:hidden !important; point
   .check-item{ padding:8px 0; }
   .check-box{ width:22px; height:22px; font-size:.8rem; }
   .star-btn{ font-size:1.7rem; padding:6px 5px; }
+  .star-rating-topico .star-btn{ font-size:1.45rem; padding:4px 3px; }
   .sab-star{ font-size:1.35rem; padding:5px 6px; }
   span[data-action="setStarHoje"]{ padding:6px 4px; }
   .nav-item{ padding:12px; }
