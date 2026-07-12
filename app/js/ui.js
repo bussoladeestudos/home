@@ -66,8 +66,9 @@ const ACTIONS={
   toggleDia:d=>toggleDia(d.key),
   toggleCheck:d=>toggleCheck(d.key,d.campo),
   setStar:d=>setStar(d.key,+d.n),
+  setStarTopico:d=>setStarTopico(d.key,+d.ti,+d.n),
   setStarHoje:d=>setStarHoje(+d.n,d.key),
-  setSabStar:d=>setSabStar(d.key,+d.n,d.source),
+  setSabStar:d=>setSabStar(d.key,+d.n,d.source,d.ti),
   limparDia:(d,el,e)=>{e.stopPropagation();limparDia(d.key);},
   marcarDia1Concluido:d=>marcarDia1Concluido(d.key),
   calCellClick:d=>calCellClick(d.key),
@@ -136,13 +137,15 @@ document.addEventListener("mouseover",e=>{
   const el=e.target.closest("[data-hover]");
   if(!el) return;
   if(el.dataset.hover==="star") hoverStar(el.dataset.key,+el.dataset.n);
-  else if(el.dataset.hover==="sabstar") hoverSabStar(el.dataset.key,+el.dataset.n);
+  else if(el.dataset.hover==="starTopico") paintStars(el.dataset.key+"-"+el.dataset.ti,+el.dataset.n);
+  else if(el.dataset.hover==="sabstar") hoverSabStar(el.dataset.key,+el.dataset.n,el.dataset.ti);
 });
 document.addEventListener("mouseout",e=>{
   const el=e.target.closest("[data-hover]");
   if(!el) return;
   if(el.dataset.hover==="star") unhoverStar(el.dataset.key);
-  else if(el.dataset.hover==="sabstar") unhoverSabStar(el.dataset.key,+el.dataset.cur,el.dataset.source);
+  else if(el.dataset.hover==="starTopico") unhoverStarTopico(el.dataset.key,el.dataset.ti);
+  else if(el.dataset.hover==="sabstar") unhoverSabStar(el.dataset.key,+el.dataset.cur,el.dataset.source,el.dataset.ti);
 });
 
 /* ════════════════════════════════════════════
@@ -2594,10 +2597,12 @@ function renderDiaNormal(dia,idx,key,est,isHoje,isPast,nomeDia){
       ${percHint}
       <div class="percepcao-selector ${percShow}" id="perc-${key}">
         <div class="percepcao-label-text">⭐ Avalie sua confiança — isso agenda sua revisão:</div>
-        <div class="star-rating" id="stars-${key}">
+        ${isMulti
+          ?tops.map((t,ti)=>`<div class="star-rating star-rating-topico"><span class="multi-topico-num">${ti+1}</span><span class="srt-topico-label" title="${esc(t.mat)}: ${esc(t.top)}">${esc(t.top)}</span><span class="srt-stars" id="stars-${key}-${ti}">${[1,2,3,4,5].map(n=>`<button class="star-btn" data-n="${n}" aria-label="${n} de 5 estrelas" data-action="setStarTopico" data-hover="starTopico" data-key="${key}" data-ti="${ti}" data-n="${n}">★</button>`).join("")}</span></div>`).join("")
+          :`<div class="star-rating" id="stars-${key}">
           ${[1,2,3,4,5].map(n=>`<button class="star-btn" data-n="${n}" aria-label="${n} de 5 estrelas" data-action="setStar" data-hover="star" data-key="${key}" data-n="${n}">★</button>`).join("")}
           <span class="star-label" id="starlabel-${key}"></span>
-        </div>
+        </div>`}
         <div style="font-size:.67rem;color:var(--gray-400);margin-top:.3rem">1–2★ volta em 7 dias · 3–4★ em 30 dias · 5★ dominado</div>
       </div>
     </div>
@@ -2609,29 +2614,35 @@ function renderDiaNormal(dia,idx,key,est,isHoje,isPast,nomeDia){
   </div>`;
 }
 
-function sabStarHTML(key,n,source){
+function _sabId(key,ti){ return "sab-stars-"+key+(ti!=null&&ti!==""?"-"+ti:""); }
+function sabStarHTML(key,n,source,ti){
   const nivel=starToNivel(n);
+  const tiAttr=ti!=null&&ti!==""?` data-ti="${ti}"`:"";
   return [1,2,3,4,5].map(s=>{
     const lit=s<=n?(nivel==="alta"?"lit-high":nivel==="media"?"lit-mid":"lit-low"):"";
-    return`<button class="sab-star ${lit}" data-n="${s}" aria-label="${s} de 5 estrelas" data-action="setSabStar" data-hover="sabstar" data-key="${key}" data-n="${s}" data-cur="${n}" data-source="${source}">★</button>`;
+    return`<button class="sab-star ${lit}" data-n="${s}" aria-label="${s} de 5 estrelas" data-action="setSabStar" data-hover="sabstar" data-key="${key}" data-n="${s}" data-cur="${n}" data-source="${source}"${tiAttr}>★</button>`;
   }).join("");
 }
-function setSabStar(key,n,source){
-  if(!STATE.dias[key]) STATE.dias[key]={};
-  STATE.dias[key].estrelas=n; STATE.dias[key].percepcao=starToNivel(n);
+function setSabStar(key,n,source,ti){
+  if(ti!=null&&ti!==""){ gravarNotaTopico(key,+ti,n); }
+  else{
+    if(!STATE.dias[key]) STATE.dias[key]={};
+    STATE.dias[key].estrelas=n; STATE.dias[key].percepcao=starToNivel(n);
+  }
   save();
   renderTudo();
   if(source==="rev"){ renderRevisoesPage(); }
   else { renderSemana(); }
 }
-function hoverSabStar(key,n){
-  const container=document.getElementById("sab-stars-"+key); if(!container) return;
+function hoverSabStar(key,n,ti){
+  const container=document.getElementById(_sabId(key,ti)); if(!container) return;
   const nivel=starToNivel(n);
   container.querySelectorAll(".sab-star").forEach(btn=>{ const bn=parseInt(btn.dataset.n); const lit=bn<=n?(nivel==="alta"?"lit-high":nivel==="media"?"lit-mid":"lit-low"):""; btn.className="sab-star "+(lit||""); });
 }
-function unhoverSabStar(key,currentN,source){
-  const container=document.getElementById("sab-stars-"+key); if(!container) return;
-  const n=STATE.dias[key]?.estrelas||currentN||0;
+function unhoverSabStar(key,currentN,source,ti){
+  const container=document.getElementById(_sabId(key,ti)); if(!container) return;
+  const est=STATE.dias[key]||{};
+  const n=(ti!=null&&ti!==""?(est.estrelasList||{})[ti]:est.estrelas)||currentN||0;
   const nivel=n?starToNivel(n):"";
   container.querySelectorAll(".sab-star").forEach(btn=>{ const bn=parseInt(btn.dataset.n); btn.className="sab-star "+(bn<=n&&nivel?(nivel==="alta"?"lit-high":nivel==="media"?"lit-mid":"lit-low"):""); });
 }
@@ -2662,14 +2673,17 @@ function renderDiaSabado(dia,key,est,isHoje,isPast,fraquezas){
     // Filtra itens que precisam de reforço (baixa, média, ou não avaliado)
     // Só mostrar dias que o estudante realmente estudou (percepcao registrada)
     const itensPendentes=todosItens.filter(f=>{
-      const conf=STATE.dias[f.key]?.percepcao||"";
+      const est=STATE.dias[f.key]||{};
+      const conf=(f.topIdx!=null?(est.percepcoes||{})[f.topIdx]:est.percepcao)||"";
       return conf&&conf!=="alta"; // só exibe se estudado e não dominado
     });
     if(itensPendentes.length>0){
       itensPendentes.forEach(f=>{
-        const cur=STATE.dias[f.key]?.estrelas||nivelToStars(STATE.dias[f.key]?.percepcao||"");
-        const stHtml=sabStarHTML(f.key,cur,"sab");
-        const conf=STATE.dias[f.key]?.percepcao||f.perc||"";
+        const estF=STATE.dias[f.key]||{};
+        const isTop=f.topIdx!=null;
+        const conf=(isTop?(estF.percepcoes||{})[f.topIdx]:estF.percepcao)||f.perc||"";
+        const cur=(isTop?(estF.estrelasList||{})[f.topIdx]:estF.estrelas)||nivelToStars(conf);
+        const stHtml=sabStarHTML(f.key,cur,"sab",isTop?f.topIdx:null);
         const isFraco=conf==="baixa";
         const badge=conf==="media"?`<span class="sab-conf-dot" style="color:#d97706" title="Confiança Média">●</span>`
           :conf==="baixa"?`<span class="sab-conf-dot" style="color:#dc2626" title="Baixa Confiança">●</span>`
@@ -2681,13 +2695,13 @@ function renderDiaSabado(dia,key,est,isHoje,isPast,fraquezas){
             <span style="font-size:.72rem;font-weight:600;color:var(--gray-700);flex:1;line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${esc(f.text)}">${esc(f.text)}</span>
           </div>
           <div style="display:flex;align-items:center;gap:6px;padding-left:13px">
-            <div class="sab-stars" id="sab-stars-${f.key}">${stHtml}</div>
+            <div class="sab-stars" id="${_sabId(f.key,isTop?f.topIdx:null)}">${stHtml}</div>
             ${badge}
           </div>
         </div>`;
       });
     } else {
-      const algumEstudado=todosItens.some(f=>STATE.dias[f.key]?.percepcao);
+      const algumEstudado=todosItens.some(f=>f.perc);
       if(algumEstudado){
         itens=`<div class="sabado-empty">🏆 Todos os tópicos desta semana com Alta Confiança! Aproveite para adiantar conteúdo.</div>`;
       } else {
@@ -2921,6 +2935,28 @@ function unhoverStar(key){ paintStars(key,STATE.dias[key]?.estrelas||0); }
 function setStar(key,n){
   if(!STATE.dias[key]) STATE.dias[key]={};
   STATE.dias[key].estrelas=n; STATE.dias[key].percepcao=starToNivel(n); STATE.dias[key].collapsed=true;
+  save(); renderSemana(); renderTudo();
+}
+function unhoverStarTopico(key,ti){
+  paintStars(key+"-"+ti,(STATE.dias[key]?.estrelasList||{})[ti]||0);
+}
+/* Grava a nota de UM tópico e recalcula o agregado do dia (engine.aggregateEstrelas):
+   dia completo = todos os tópicos avaliados; agregado = PIOR nota.
+   Enquanto incompleto, percepcao/estrelas do dia ficam ausentes — getDayPercepcao
+   prioriza est.percepcao e mascararia edições por tópico se ele persistisse. */
+function gravarNotaTopico(key,ti,n){
+  if(!STATE.dias[key]) STATE.dias[key]={};
+  const est=STATE.dias[key];
+  est.estrelasList=Object.assign({},est.estrelasList,{[ti]:n});
+  est.percepcoes=Object.assign({},est.percepcoes,{[ti]:starToNivel(n)});
+  const agg=aggregateEstrelas(est.estrelasList,getTopicosDiaBase(key).length);
+  if(agg!=null){ est.estrelas=agg; est.percepcao=starToNivel(agg); }
+  else{ delete est.estrelas; delete est.percepcao; }
+  return agg;
+}
+function setStarTopico(key,ti,n){
+  const agg=gravarNotaTopico(key,ti,n);
+  if(agg!=null) STATE.dias[key].collapsed=true;
   save(); renderSemana(); renderTudo();
 }
 function repaintAllStars(){
