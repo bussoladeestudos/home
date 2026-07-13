@@ -17,6 +17,13 @@ function esc(s){ return String(s??"").replace(/&/g,"&amp;").replace(/</g,"&lt;")
        E-mail:     "mailto:seuemail@dominio.com?subject=Suporte%20Bussola"
    Enquanto ficar vazio, o clique só mostra um aviso (não abre aba quebrada). */
 const SUPORTE_URL = "mailto:suporte@bussoladeestudos.com.br?subject=Suporte%20B%C3%BAssola%20de%20Estudos";   // <-- link do Fale Conosco
+
+/* ── COACH COM IA (redação) ──
+   URL do Cloudflare Worker que redige a Palavra do Coach (cloud/coach-ia-worker.js).
+   Vazio = desativado (Coach usa só o motor de regras, como sempre).
+   A chave da IA vive NO WORKER — nunca neste repositório (regra do handoff).
+   Cache: 1 chamada por aluno/dia, guardada em STATE.coachIA {texto,data}. */
+const COACH_IA_URL = "https://coach-bussola.adriano-m-goulart.workers.dev";
 function abrirSuporte(){
   if(!SUPORTE_URL){ showToast("💬 Canal de suporte em configuração. Volte em breve!"); return; }
   if(SUPORTE_URL.indexOf("mailto:")===0) window.location.href=SUPORTE_URL;  // e-mail: abre o app de e-mail, sem perder o painel
@@ -1031,6 +1038,64 @@ function renderCoach(prog, conf, ritmo, projecao, totalRev){
   if(badge&&!isRetaFinal().active) badge.textContent="✦ Coach Bússola";
   if(el) el.innerHTML=buildCoachHtml(prog,conf,ritmo,projecao,totalRev);
   if(hl) hl.style.display="none";
+  atualizarCoachIA(montarCoachDiagnostico(prog,conf,ritmo,projecao,totalRev));
+}
+
+/* ── COACH COM IA (redação) ──
+   O motor de regras continua diagnosticando (montarCoachDiagnostico coleta
+   APENAS números e nomes de matérias já calculados); a IA apenas redige.
+   Fallback garantido: sem URL, sem rede, sem login, file:// ou erro ->
+   buildCoachHtml segue com o texto de regras. */
+function montarCoachDiagnostico(prog,conf,ritmo,projecao,totalRev){
+  const materias=calcMateriasStats();
+  const cob=calcCobertura(), det=calcProgressoDetalhado();
+  const atras=materias.filter(m=>m.prog>0&&m.prog<cob.pct-10).sort((a,b)=>b.peso-a.peso).slice(0,2)
+    .map(m=>({nome:m.nome,peso:m.peso,progPct:m.prog,confPct:m.conf}));
+  const fracas=materias.filter(m=>m.conf>0&&m.conf<50).sort((a,b)=>a.conf-b.conf).slice(0,2)
+    .map(m=>({nome:m.nome,peso:m.peso,confPct:m.conf}));
+  return {
+    nome:(STATE.nome||"").split(" ")[0]||"Candidato",
+    concurso:(EDITAIS[STATE.prefeitura]||{}).nome||"",
+    diasRestantes:calcDiasRestantes(),
+    aderenciaPct:prog,
+    ritmo:ritmo&&ritmo.emoji==="🟢"?"acima do planejado":ritmo&&ritmo.emoji==="🟡"?"moderado":"abaixo do planejado",
+    diasConcluidos:det.done, diasEsperados:Math.max(det.total,det.done),
+    sequenciaDias:calcStreak(),
+    topicosCobertos:cob.cobertos, totalTopicos:cob.total, coberturaPct:cob.pct,
+    confiancaMediaPct:conf,
+    revisoesPendentes:totalRev,
+    diasSemRegistro:getMissedDays().length,
+    materiasAtrasadas:atras, materiasFracas:fracas,
+    recuperacaoAtiva:!!STATE.redistribuindo
+  };
+}
+let _coachIABusy=false;
+async function atualizarCoachIA(diag){
+  if(!COACH_IA_URL||!STATE.inicio||_coachIABusy) return;
+  if(typeof location!=="undefined"&&location.protocol==="file:") return;
+  const hoje=fmt(new Date());
+  if(STATE.coachIA&&STATE.coachIA.data===hoje&&STATE.coachIA.texto) return; // cache do dia
+  if(!Object.values(STATE.dias).some(d=>d.percepcao)) return; // onboarding fica com o guia de regras
+  if(typeof firebase==="undefined"||!firebase.auth||!firebase.auth().currentUser) return;
+  _coachIABusy=true;
+  try{
+    const token=await firebase.auth().currentUser.getIdToken();
+    const resp=await fetch(COACH_IA_URL,{method:"POST",
+      headers:{"Content-Type":"application/json","Authorization":"Bearer "+token},
+      body:JSON.stringify(diag)});
+    if(resp.ok){
+      const d=await resp.json();
+      if(d&&d.texto){ STATE.coachIA={texto:String(d.texto).slice(0,2500),data:hoje}; save(); renderTudo(); }
+    }
+  }catch(e){ /* silencioso: o texto de regras permanece */ }
+  _coachIABusy=false;
+}
+function getCoachIAHtml(){
+  const c=STATE.coachIA;
+  if(!c||!c.texto||c.data!==fmt(new Date())) return null;
+  const pars=String(c.texto).split(/\n+/).map(s=>s.trim()).filter(Boolean);
+  if(!pars.length) return null;
+  return pars.map((p,i)=>`<p style="margin:0 0 ${i<pars.length-1?".8rem":"0"}">${esc(p)}</p>`).join("");
 }
 
 /* Gera o HTML da análise do Coach — usado no Dashboard (painel) e na
@@ -1078,6 +1143,14 @@ function buildCoachHtml(prog, conf, ritmo, projecao, totalRev){
     html+=`<p style="margin:0 0 .6rem;font-size:.82rem;color:#475569;padding-left:.9rem">A cada ciclo de Exercícios concluído, um ciclo de revisão é liberado. Registre os exercícios para desbloqueios em cascata. O <strong>Dashboard</strong> rastreia cobertura e confiança por matéria.</p>`;
     const topStr=topPeso.map(m=>`<strong>${m.nome}</strong> (${m.peso}%)`).join(", ");
     html+=`<p style="margin:0;font-size:.82rem;color:#475569">Para começar: acesse <strong>Hoje</strong>, leia o edital, avalie com as estrelas e siga o cronograma. Priorize: ${topStr}.</p>`;
+  } else if(getCoachIAHtml()){
+    // ── Redação da IA (diagnóstico continua vindo do motor de regras) ──
+    if(STATE.redistribuindo){
+      const extrasPend=calcExtrasPendentes();
+      if(extrasPend>0) html+=`<p style="margin:0 0 .8rem;font-size:.85rem;color:#1d4ed8;background:rgba(29,78,216,.06);border:1px solid rgba(29,78,216,.15);border-radius:8px;padding:.5rem .7rem">⚖️ <strong>Recuperação em andamento:</strong> ${extrasPend} tópico(s) extra(s) distribuído(s) no cronograma.</p>`;
+    }
+    html+=getCoachIAHtml();
+    html+=`<p style="margin:.8rem 0 0;font-size:.68rem;color:#94a3b8">✦ Redigido com IA a partir dos seus números de hoje</p>`;
   } else {
     // ── Parágrafo 1: situação geral ────────────────────────────
     let p1="";
