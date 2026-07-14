@@ -515,11 +515,6 @@ function fazerLogout() {
 
     <!-- VISÃO SEMANAL -->
     <div id="viewSemana">
-      <div class="semana-progress-bar" id="semanaProgressBar" style="margin-top:1.25rem">
-        <span class="spb-label">Semana atual</span>
-        <div class="spb-days" id="spbDays"></div>
-        <span class="spb-stat" id="spbStat"></span>
-      </div>
       <div class="semana-header">
         <div></div>
         <div class="semana-nav">
@@ -529,6 +524,12 @@ function fazerLogout() {
         </div>
       </div>
       <div class="semana-grid" id="semanaGrid"></div>
+      <!-- Resumo da semana: rodape da grade (movido do topo para liberar a dobra) -->
+      <div class="semana-progress-bar" id="semanaProgressBar" style="margin-top:1.1rem">
+        <span class="spb-label">Semana atual</span>
+        <div class="spb-days" id="spbDays"></div>
+        <span class="spb-stat" id="spbStat"></span>
+      </div>
     </div>
 
     <!-- VISÃO MENSAL -->
