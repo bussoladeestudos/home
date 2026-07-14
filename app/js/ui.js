@@ -79,6 +79,7 @@ const ACTIONS={
   toggleSabMais:d=>toggleSabMais(d.key),
   popupSegundaAgenda:()=>popupSegundaAgenda(),
   fecharPopupSegunda:()=>fecharPopupSegunda(),
+  fecharBannerMetodo:()=>fecharBannerMetodo(),
   limparDia:(d,el,e)=>{e.stopPropagation();limparDia(d.key);},
   marcarDia1Concluido:d=>marcarDia1Concluido(d.key),
   calCellClick:d=>calCellClick(d.key),
@@ -603,6 +604,11 @@ document.addEventListener("click",function(e){
 /* ── BACKUP: EXPORTAR / IMPORTAR ── */
 /* Banner "Como funciona o Método Bússola": aberto por padrão até o aluno
    fechá-lo uma vez (preferência lembrada no navegador). */
+function fecharBannerMetodo(){
+  STATE.bannerMetodoFechado=true; save();
+  const b=document.getElementById("info511"); if(b) b.style.display="none";
+  showToast("👍 Guia do método ocultado. Qualquer dúvida, ele está na Palavra do Coach.");
+}
 function toggleInfo511(forcar){
   const body=document.getElementById("info511Body");
   const tog=document.getElementById("info511Toggle");
@@ -909,7 +915,13 @@ function navTo(pg){
   const navEl=document.getElementById("nav-"+pg);
   if(pageEl) pageEl.classList.add("active");
   if(navEl)  navEl.classList.add("active");
-  if(pg==="cronograma"){ setCronView(STATE.cronView||"semana"); }
+  if(pg==="cronograma"){
+    setCronView(STATE.cronView||"semana");
+    const b511=document.getElementById("info511");
+    if(b511) b511.style.display=STATE.bannerMetodoFechado?"none":"flex";
+    // Mobile: aluno cai direto no card de hoje (visão semanal, semana atual)
+    if(window.innerWidth<=768&&(STATE.cronView||"semana")==="semana"&&!STATE.semanaOffset) scrollAteCardHoje();
+  }
   if(pg==="dashboard")  { renderMapaCalorPage("mapaGrid"); renderDashboard(); }
   if(pg==="materias")   renderMaterias();
   if(pg==="revisoes")   renderRevisoesPage();
@@ -2387,9 +2399,7 @@ function irParaSimulados(key){
   },350);
 }
 
-function irParaHojeCronograma(){
-  STATE.semanaOffset=0; STATE.cronView="semana"; save();
-  navTo("cronograma");
+function scrollAteCardHoje(){
   setTimeout(()=>{
     requestAnimationFrame(()=>{
       const key=fmt(new Date());
@@ -2402,6 +2412,11 @@ function irParaHojeCronograma(){
       card.addEventListener("animationend",()=>card.classList.remove("card-pulse"),{once:true});
     });
   },350);
+}
+function irParaHojeCronograma(){
+  STATE.semanaOffset=0; STATE.cronView="semana"; save();
+  navTo("cronograma");
+  scrollAteCardHoje();
 }
 
 function navegarMes(d){ STATE.mesOffset=(STATE.mesOffset||0)+d; save(); renderMes(); }
