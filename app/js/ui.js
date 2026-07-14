@@ -76,6 +76,9 @@ const ACTIONS={
   setStarTopico:d=>setStarTopico(d.key,+d.ti,+d.n),
   setStarHoje:d=>setStarHoje(+d.n,d.key),
   setSabStar:d=>setSabStar(d.key,+d.n,d.source,d.ti),
+  toggleSabMais:d=>toggleSabMais(d.key),
+  popupSegundaAgenda:()=>popupSegundaAgenda(),
+  fecharPopupSegunda:()=>fecharPopupSegunda(),
   limparDia:(d,el,e)=>{e.stopPropagation();limparDia(d.key);},
   marcarDia1Concluido:d=>marcarDia1Concluido(d.key),
   calCellClick:d=>calCellClick(d.key),
@@ -842,6 +845,61 @@ function renderEdital(){
   if(s) s.textContent=a.sub;
 }
 
+/* ── POPUP DE SEGUNDA-FEIRA (motivação + Adicionar ao Calendário) ──
+   Abre 1x por semana, só na segunda, para aluno com cronograma ativo.
+   A frase é determinística pela semana (a mesma o dia inteiro, mesmo
+   recarregando). STATE.popupSegundaEm guarda a segunda já exibida e
+   sincroniza via Firestore — não reaparece em outro dispositivo. */
+const FRASES_SEGUNDA=[
+  "Aprovação não é um evento — é o acúmulo silencioso de semanas como a que você começa agora.",
+  "Enquanto a maioria espera motivação, você tem um método. Siga o plano de hoje.",
+  "Cada tópico estudado nesta semana é uma questão a menos que te assusta no dia da prova.",
+  "Constância vence talento quando o talento não é constante. Sua sequência começa hoje.",
+  "A banca não pergunta se você estava inspirado — pergunta se você estudou. Segunda é dia de responder.",
+  "Você não precisa de uma semana perfeita. Precisa de uma semana feita.",
+  "O edital é o mesmo para todos. A diferença é quem transforma segunda-feira em vantagem.",
+  "Pequenos progressos diários se tornam resultados irreversíveis. Comece pelo tópico de hoje.",
+  "Seu futuro cargo está sendo decidido agora, nas semanas que ninguém vê.",
+  "Disciplina é escolher entre o que você quer agora e o que você quer mais. Bora estudar.",
+  "A revisão de hoje vale mais que a maratona de véspera. Confie no método.",
+  "Quem estuda com plano não corre atrás do tempo — anda ao lado dele.",
+  "Uma semana de foco constrói o que um mês de ansiedade não constrói.",
+  "Não conte os dias até a prova. Faça os dias contarem — começando por este.",
+  "O concurseiro que revisa é o candidato que lembra. Sua semana 5+1+1 começa agora.",
+  "Todo aprovado já foi alguém começando mais uma segunda-feira. Igual a você, agora.",
+  "Estudar cansado vale mais que planejar descansado. Um passo hoje.",
+  "A concorrência diminui a cada tópico que você domina. Diminua-a hoje.",
+  "Seu cronograma já pensou por você. Sua única tarefa é executar o dia de hoje.",
+  "Consistência é o único atalho que existe. E ela começa toda segunda.",
+  "Não deixe para a reta final o que a constância resolve agora.",
+  "A prova é um dia. Sua preparação é todos os dias — especialmente hoje.",
+  "Grandes aprovações começam com semanas comuns, bem executadas.",
+  "Você está exatamente onde precisa estar: diante de uma nova semana e de um plano claro.",
+];
+function checarPopupSegunda(){
+  if(!STATE.inicio) return;
+  const hoje=new Date();
+  if(hoje.getDay()!==1) return;                        // só segunda-feira
+  const hojeKey=fmt(hoje);
+  if(STATE.prova&&hojeKey>STATE.prova) return;         // depois da prova, não
+  if(STATE.popupSegundaEm===hojeKey) return;           // já mostrou esta semana
+  if(document.getElementById("popupSegunda")) return;  // já está aberto
+  const idx=Math.floor(hoje.getTime()/604800000)%FRASES_SEGUNDA.length;
+  const ov=document.createElement("div");
+  ov.className="ps-overlay"; ov.id="popupSegunda";
+  ov.innerHTML=`<div class="ps-card">
+    <div class="ps-emoji">🧭</div>
+    <div class="ps-titulo">Boa semana de estudos!</div>
+    <p class="ps-frase">${esc(FRASES_SEGUNDA[idx])}</p>
+    <button class="ps-cta" data-action="popupSegundaAgenda">📅 Adicionar a semana ao meu calendário</button>
+    <button class="ps-depois" data-action="fecharPopupSegunda">Agora não</button>
+  </div>`;
+  document.body.appendChild(ov);
+  STATE.popupSegundaEm=hojeKey; save();
+}
+function fecharPopupSegunda(){ const el=document.getElementById("popupSegunda"); if(el) el.remove(); }
+function popupSegundaAgenda(){ fecharPopupSegunda(); navTo("agenda"); }
+
 /* ── NAVEGAÇÃO ── */
 function navTo(pg){
   STATE.pagina=pg; save();
@@ -1027,6 +1085,7 @@ function renderDashboard(){
 
   // Coach
   renderCoach(prog, conf, ritmo, projecao, totalRev);
+  setTimeout(checarPopupSegunda,600);
   renderRetaFinal();
   renderMapaCalorPage("mapaGrid");
 }
@@ -2501,9 +2560,6 @@ function renderSemana(){
       else if(_ciclo===5) html+=renderDiaSabado(dia,key,est,isHoje,isPast,fraquezas);
       else html+=renderDiaNormal(dia,i,key,est,isHoje,isPast,nomes[i]);
     }
-    // Divisor visual entre Seg–Sex e a linha de consolidação (Sáb/Dom/Anotações),
-    // para o aluno perceber que a semana continua abaixo
-    if(i===4) html+=`<div class="semana-divisor"><span class="sd-linha"></span><span class="sd-label">👇 A semana continua — Retorno Técnico · Exercícios de Revisão · Anotações</span><span class="sd-linha"></span></div>`;
   }
   html+=renderNotasSemana(seg);
   document.getElementById("semanaGrid").innerHTML=html;
@@ -2660,7 +2716,7 @@ function renderDiaNormal(dia,idx,key,est,isHoje,isPast,nomeDia){
     <div class="dia-body" id="body-${key}" style="${bodyStyle}">
       ${medalHtml}
       ${isMulti
-        ?`<div class="multi-topico-header"><span class="multi-topico-tag">📚 ${tops.length} tópicos · Modo intensivo</span></div><div class="multi-topico-list">${tops.map((t,i)=>`<div class="multi-topico-row"><span class="multi-topico-num">${i+1}</span><span class="multi-topico-mat">${t.mat.length>14?t.mat.slice(0,13)+'…':t.mat}</span><span class="multi-topico-text">${t.top}</span></div>`).join("")}</div>`
+        ?`<div class="multi-topico-header"><span class="multi-topico-tag">📚 ${tops.length} tópicos · Modo intensivo</span></div><div class="multi-topico-list">${tops.map((t,i)=>`<div class="multi-topico-row"><div class="mtr-head"><span class="multi-topico-num">${i+1}</span><span class="multi-topico-mat" title="${esc(t.mat)}">${esc(t.mat)}</span></div><div class="multi-topico-text">${t.top}</div></div>`).join("")}</div>`
         :`<div class="dia-topico">${mat}</div><div class="dia-subtopico">${top}</div><div class="dia-peso">Peso ${peso}%</div>`}
       ${getExtrasDoDia(key).length?`<div class="dia-extras">${getExtrasDoDia(key).map(e=>`<div class="dia-extra-item">➕ <strong>${esc(e.mat)}</strong>: ${esc(e.top)}</div>`).join("")}<div class="dia-extra-tag">⚖️ Recuperação de conteúdo</div></div>`:""}
       <div class="check-group">
@@ -2687,6 +2743,14 @@ function renderDiaNormal(dia,idx,key,est,isHoje,isPast,nomeDia){
   </div>`;
 }
 
+function toggleSabMais(key){
+  const el=document.getElementById("sabmais-"+key); if(!el) return;
+  const aberto=el.style.display!=="none";
+  el.style.display=aberto?"none":"block";
+  const btn=document.querySelector(`.sab-vermais[data-key="${key}"]`);
+  if(btn) btn.textContent=aberto?`▾ Ver todos os ${btn.dataset.n} tópicos`:"▴ Mostrar menos";
+  setTimeout(()=>repaintAllStars(),0);
+}
 function _sabId(key,ti){ return "sab-stars-"+key+(ti!=null&&ti!==""?"-"+ti:""); }
 function sabStarHTML(key,n,source,ti){
   const nivel=starToNivel(n);
@@ -2751,6 +2815,7 @@ function renderDiaSabado(dia,key,est,isHoje,isPast,fraquezas){
       return conf&&conf!=="alta"; // só exibe se estudado e não dominado
     });
     if(itensPendentes.length>0){
+      const _sabRows=[];
       itensPendentes.forEach(f=>{
         const estF=STATE.dias[f.key]||{};
         const isTop=f.topIdx!=null;
@@ -2762,7 +2827,7 @@ function renderDiaSabado(dia,key,est,isHoje,isPast,fraquezas){
           :conf==="baixa"?`<span class="sab-conf-dot" style="color:#dc2626" title="Baixa Confiança">●</span>`
           :`<span class="sab-conf-dot" style="color:#cbd5e1" title="Pendente">○</span>`;
         const dotStyle=isFraco?"background:var(--red-viv)":conf==="media"?"background:var(--yellow-viv)":"";
-        itens+=`<div class="sab-item-row">
+        _sabRows.push(`<div class="sab-item-row">
           <div style="display:flex;align-items:center;gap:6px">
             <div class="sabado-dot" style="flex-shrink:0;${dotStyle}"></div>
             <span style="font-size:.72rem;font-weight:600;color:var(--gray-700);flex:1;line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${esc(f.text)}">${esc(f.text)}</span>
@@ -2771,8 +2836,14 @@ function renderDiaSabado(dia,key,est,isHoje,isPast,fraquezas){
             <div class="sab-stars" id="${_sabId(f.key,isTop?f.topIdx:null)}">${stHtml}</div>
             ${badge}
           </div>
-        </div>`;
+        </div>`);
       });
+      const LIM_SAB=4;
+      itens+=_sabRows.slice(0,LIM_SAB).join("");
+      if(_sabRows.length>LIM_SAB){
+        itens+=`<div class="sab-mais" id="sabmais-${sabKey}" style="display:none">${_sabRows.slice(LIM_SAB).join("")}</div>`;
+        itens+=`<button class="sab-vermais" data-action="toggleSabMais" data-key="${sabKey}" data-n="${_sabRows.length}">▾ Ver todos os ${_sabRows.length} tópicos</button>`;
+      }
     } else {
       const algumEstudado=todosItens.some(f=>f.perc);
       if(algumEstudado){
