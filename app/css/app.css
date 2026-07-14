@@ -963,7 +963,10 @@ body.aguardando-auth > *:not(#loginScreen) { visibility:hidden !important; point
 
   /* ── Cronograma sem vazamento ── */
   .semana-grid{ gap:.7rem; }
-  .semana-header,.mes-header,.view-toggle{ flex-wrap:wrap; gap:.5rem; }
+  .semana-header,.mes-header{ flex-wrap:wrap; gap:.5rem; }
+  /* Seletor de visões: 3 segmentos lado a lado, largura total (antes empilhava) */
+  .view-toggle{ width:100%; }
+  .view-btn{ flex:1; justify-content:center; padding:9px 6px; font-size:.78rem; }
   .semana-progress-bar{ gap:.6rem; padding:.8rem .9rem; }
   .spb-stat{ margin-left:0; width:100%; }
   /* visão mensal: 7 colunas compactas dentro da tela */
