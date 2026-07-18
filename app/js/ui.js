@@ -80,6 +80,8 @@ const ACTIONS={
   popupSegundaAgenda:()=>popupSegundaAgenda(),
   fecharPopupSegunda:()=>fecharPopupSegunda(),
   fecharBannerMetodo:()=>fecharBannerMetodo(),
+  instalarPwa:()=>instalarPwa(),
+  adiarPwa:()=>adiarPwa(),
   limparDia:(d,el,e)=>{e.stopPropagation();limparDia(d.key);},
   marcarDia1Concluido:d=>marcarDia1Concluido(d.key),
   calCellClick:d=>calCellClick(d.key),
@@ -906,6 +908,72 @@ function checarPopupSegunda(){
 function fecharPopupSegunda(){ const el=document.getElementById("popupSegunda"); if(el) el.remove(); }
 function popupSegundaAgenda(){ fecharPopupSegunda(); navTo("agenda"); }
 
+/* ── BALÃO DE INSTALAÇÃO DO PWA ──
+   Intercepta o prompt nativo do navegador (beforeinstallprompt) e mostra,
+   no lugar, um convite no estilo do app — bolha de chat do Coach, no canto
+   inferior. Regras: só celular, só aluno com cronograma, só se o app ainda
+   não está instalado, e "agora não" silencia por 14 dias (localStorage —
+   instalação é por aparelho, não sincroniza). iPhone não tem o prompt:
+   o botão mostra o passo a passo do Safari. */
+let _pwaPromptEvt=null;
+if(typeof window!=="undefined"){
+  window.addEventListener("beforeinstallprompt",(e)=>{
+    e.preventDefault();          // cala o aviso nativo do navegador
+    _pwaPromptEvt=e;
+    setTimeout(checarBalaoPwa,1200);
+  });
+}
+function _pwaInstalado(){
+  try{
+    return (window.matchMedia&&window.matchMedia("(display-mode: standalone)").matches)||window.navigator.standalone===true;
+  }catch(e){ return false; }
+}
+function _ehIos(){ return /iphone|ipad|ipod/i.test(navigator.userAgent); }
+function checarBalaoPwa(){
+  if(_pwaInstalado()) return;
+  if(!STATE.inicio) return;
+  if(window.innerWidth>768) return;                       // foco no celular
+  if(!_pwaPromptEvt&&!_ehIos()) return;                    // sem como instalar
+  if(document.getElementById("pwaBalao")) return;
+  if(document.getElementById("popupSegunda")) return;      // não concorre com o popup
+  try{
+    const adiado=+localStorage.getItem("bussola_pwa_adiado")||0;
+    if(Date.now()-adiado<14*86400000) return;              // adiado há menos de 14 dias
+  }catch(e){}
+  const b=document.createElement("div");
+  b.className="pwa-balao"; b.id="pwaBalao";
+  b.innerHTML=`<div class="pb-avatar">🧭</div>
+    <div class="pb-corpo">
+      <div class="pb-texto"><strong>Estude pelo app!</strong> Instale a Bússola na sua tela inicial: tela cheia, mais rápido e funciona offline.</div>
+      <div class="pb-acoes">
+        <button class="pb-instalar" data-action="instalarPwa">📲 Instalar</button>
+        <button class="pb-depois" data-action="adiarPwa">Agora não</button>
+      </div>
+    </div>`;
+  document.body.appendChild(b);
+}
+async function instalarPwa(){
+  const b=document.getElementById("pwaBalao");
+  if(_pwaPromptEvt){
+    const evt=_pwaPromptEvt; _pwaPromptEvt=null;
+    if(b) b.remove();
+    try{
+      evt.prompt();
+      const r=await evt.userChoice;
+      if(r&&r.outcome==="accepted") showToast("📲 Bússola instalada! Procure o ícone na sua tela inicial.");
+    }catch(e){}
+    return;
+  }
+  // iPhone/iPad: sem prompt — vira passo a passo
+  if(b) b.querySelector(".pb-corpo").innerHTML=`
+    <div class="pb-texto"><strong>No iPhone é assim:</strong><br>1. Toque em <strong>Compartilhar</strong> (□↑) na barra do Safari<br>2. Escolha <strong>"Adicionar à Tela de Início"</strong></div>
+    <div class="pb-acoes"><button class="pb-depois" data-action="adiarPwa">Entendi</button></div>`;
+}
+function adiarPwa(){
+  try{ localStorage.setItem("bussola_pwa_adiado",String(Date.now())); }catch(e){}
+  const b=document.getElementById("pwaBalao"); if(b) b.remove();
+}
+
 /* ── NAVEGAÇÃO ── */
 function navTo(pg){
   STATE.pagina=pg; save();
@@ -1098,6 +1166,7 @@ function renderDashboard(){
   // Coach
   renderCoach(prog, conf, ritmo, projecao, totalRev);
   setTimeout(checarPopupSegunda,600);
+  setTimeout(checarBalaoPwa,2500);
   renderRetaFinal();
   renderMapaCalorPage("mapaGrid");
 }
