@@ -82,6 +82,7 @@ const ACTIONS={
   fecharBannerMetodo:()=>fecharBannerMetodo(),
   instalarPwa:()=>instalarPwa(),
   adiarPwa:()=>adiarPwa(),
+  menuInstalarApp:()=>menuInstalarApp(),
   limparDia:(d,el,e)=>{e.stopPropagation();limparDia(d.key);},
   marcarDia1Concluido:d=>marcarDia1Concluido(d.key),
   calCellClick:d=>calCellClick(d.key),
@@ -940,6 +941,9 @@ function checarBalaoPwa(){
     const adiado=+localStorage.getItem("bussola_pwa_adiado")||0;
     if(Date.now()-adiado<14*86400000) return;              // adiado há menos de 14 dias
   }catch(e){}
+  _montarBalaoPwa();
+}
+function _montarBalaoPwa(){
   const b=document.createElement("div");
   b.className="pwa-balao"; b.id="pwaBalao";
   b.innerHTML=`<div class="pb-avatar">🧭</div>
@@ -951,6 +955,21 @@ function checarBalaoPwa(){
       </div>
     </div>`;
   document.body.appendChild(b);
+}
+/* Menu Recursos -> "Instalar o App": caminho manual para quem dispensou o
+   balão e mudou de ideia (ou quer instalar no computador). */
+function menuInstalarApp(){
+  if(typeof closeSidebarMobile==="function") closeSidebarMobile();
+  if(_pwaInstalado()){ showToast("📲 Você já está usando o app instalado!"); return; }
+  try{ localStorage.removeItem("bussola_pwa_adiado"); }catch(e){}
+  if(_pwaPromptEvt){ instalarPwa(); return; }
+  if(_ehIos()){
+    const b=document.getElementById("pwaBalao"); if(b) b.remove();
+    _montarBalaoPwa();
+    instalarPwa();                       // troca o balão pelo passo a passo do Safari
+    return;
+  }
+  showToast("📲 No menu do navegador (⋮ ou barra de endereço), toque em \"Instalar app\" / \"Adicionar à tela inicial\".");
 }
 async function instalarPwa(){
   const b=document.getElementById("pwaBalao");
