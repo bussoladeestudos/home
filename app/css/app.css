@@ -652,10 +652,19 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
   .sidebar.open{transform:none}
   .sidebar-overlay.open{display:block}
   .semana-grid { grid-template-columns:1fr; }
-  .mapa-item{grid-template-columns:1fr auto}
+  /* Evolução por Matéria (mobile): card empilhado — nome + confiança em
+     cima, BARRA DE PROGRESSO em largura total embaixo. Corrige o badge
+     vazando do card (nome com nowrap estourava o grid) e devolve as
+     barras que ficavam ocultas (.mapa-prog-col display:none). */
   .mapa-header{grid-template-columns:1fr auto}
-  .mapa-prog-col{display:none}
   .mapa-header-cell.center{display:none}
+  .mapa-item{ grid-template-columns:1fr auto; grid-template-areas:"nome conf" "prog prog"; row-gap:.5rem; }
+  .mapa-item > div:nth-child(1){ grid-area:nome; min-width:0; }
+  .mapa-prog-col{ grid-area:prog; }
+  .mapa-conf-col{ grid-area:conf; align-self:start; }
+  .mapa-materia{ white-space:normal; line-height:1.35; overflow-wrap:anywhere; }
+  .conf-badge{ min-width:54px; padding:4px 9px; }
+  .conf-badge .cb-pct{ font-size:.85rem; }
   .mini-cards{grid-template-columns:1fr 1fr}
   .main{padding:1rem}
   /* concurso-dropdown adapts automatically on mobile */
