@@ -75,7 +75,7 @@ const ACTIONS={
   setStar:d=>setStar(d.key,+d.n),
   setStarTopico:d=>setStarTopico(d.key,+d.ti,+d.n),
   setStarHoje:d=>setStarHoje(+d.n,d.key),
-  setSabStar:d=>setSabStar(d.key,+d.n,d.source,d.ti),
+  setSabStar:d=>setSabStar(d.key,+d.n,d.source,d.ti,d.sab),
   toggleSabMais:d=>toggleSabMais(d.key),
   popupSegundaAgenda:()=>popupSegundaAgenda(),
   fecharPopupSegunda:()=>fecharPopupSegunda(),
@@ -83,6 +83,8 @@ const ACTIONS={
   instalarPwa:()=>instalarPwa(),
   adiarPwa:()=>adiarPwa(),
   menuInstalarApp:()=>menuInstalarApp(),
+  toggleMapaTudo:()=>toggleMapaTudo(),
+  navegarMesHabito:d=>navegarMesHabito(+d.dir),
   limparDia:(d,el,e)=>{e.stopPropagation();limparDia(d.key);},
   marcarDia1Concluido:d=>marcarDia1Concluido(d.key),
   calCellClick:d=>calCellClick(d.key),
@@ -860,30 +862,30 @@ function renderEdital(){
    recarregando). STATE.popupSegundaEm guarda a segunda já exibida e
    sincroniza via Firestore — não reaparece em outro dispositivo. */
 const FRASES_SEGUNDA=[
-  "Aprovação não é um evento — é o acúmulo silencioso de semanas como a que você começa agora.",
-  "Enquanto a maioria espera motivação, você tem um método. Siga o plano de hoje.",
-  "Cada tópico estudado nesta semana é uma questão a menos que te assusta no dia da prova.",
-  "Constância vence talento quando o talento não é constante. Sua sequência começa hoje.",
-  "A banca não pergunta se você estava inspirado — pergunta se você estudou. Segunda é dia de responder.",
-  "Você não precisa de uma semana perfeita. Precisa de uma semana feita.",
-  "O edital é o mesmo para todos. A diferença é quem transforma segunda-feira em vantagem.",
-  "Pequenos progressos diários se tornam resultados irreversíveis. Comece pelo tópico de hoje.",
-  "Seu futuro cargo está sendo decidido agora, nas semanas que ninguém vê.",
-  "Disciplina é escolher entre o que você quer agora e o que você quer mais. Bora estudar.",
-  "A revisão de hoje vale mais que a maratona de véspera. Confie no método.",
-  "Quem estuda com plano não corre atrás do tempo — anda ao lado dele.",
-  "Uma semana de foco constrói o que um mês de ansiedade não constrói.",
-  "Não conte os dias até a prova. Faça os dias contarem — começando por este.",
-  "O concurseiro que revisa é o candidato que lembra. Sua semana 5+1+1 começa agora.",
-  "Todo aprovado já foi alguém começando mais uma segunda-feira. Igual a você, agora.",
-  "Estudar cansado vale mais que planejar descansado. Um passo hoje.",
-  "A concorrência diminui a cada tópico que você domina. Diminua-a hoje.",
-  "Seu cronograma já pensou por você. Sua única tarefa é executar o dia de hoje.",
-  "Consistência é o único atalho que existe. E ela começa toda segunda.",
-  "Não deixe para a reta final o que a constância resolve agora.",
-  "A prova é um dia. Sua preparação é todos os dias — especialmente hoje.",
-  "Grandes aprovações começam com semanas comuns, bem executadas.",
-  "Você está exatamente onde precisa estar: diante de uma nova semana e de um plano claro.",
+  "Ninguém decora um edital numa semana. Aprova quem soma segundas como esta, uma depois da outra.",
+  "Enquanto a maioria espera a vontade aparecer, você já tem o dia de hoje decidido. Abra o cronograma.",
+  "Cada tópico que você fecha nesta semana é uma questão a menos para te assustar na prova.",
+  "Talento resolve um dia bom. Aprovação exige o dia comum, feito mesmo sem vontade.",
+  "A banca não pergunta se você estava inspirado. Ela pergunta o conteúdo. Segunda é dia de responder.",
+  "Sua semana não precisa ser perfeita. Precisa acontecer.",
+  "O edital chegou igual para todo mundo. A diferença aparece no que você faz com a segunda-feira.",
+  "Cinco dias de conteúdo, um de retorno técnico, um de exercícios. Parece pouco. É isso que vira nomeação.",
+  "As semanas que ninguém vê são as que decidem o resultado que todo mundo comenta.",
+  "Estudar hoje custa algumas horas. Recomeçar do zero no próximo edital custa um ano.",
+  "Revisão de 7 dias rende mais que maratona de véspera. O método já sabe disso por você.",
+  "Quem estuda com plano não corre atrás do tempo. Anda ao lado dele.",
+  "Ansiedade não cobre matéria. Uma semana de execução, sim.",
+  "A data da prova não muda. Muda quanto do edital você leva até lá.",
+  "Quem revisa é quem lembra na hora da questão. Seu ciclo recomeça agora.",
+  "Todo aprovado que você admira já começou numa segunda-feira comum, igual a esta.",
+  "Estudar cansado ainda conta. Planejar descansado, não.",
+  "A cada tópico dominado, encolhe o grupo de concorrentes que sabe aquilo tão bem quanto você.",
+  "Seu cronograma já decidiu o que estudar hoje. Sobrou a parte mais simples: fazer.",
+  "Consistência é o único atalho que existe. Ele começa toda segunda.",
+  "O que a constância resolve agora, a reta final cobra com juros.",
+  "A prova dura uma manhã. A preparação é todo dia, inclusive hoje.",
+  "Aprovação é feita de semanas comuns, bem executadas. Esta é uma delas.",
+  "Você tem uma semana nova e um plano pronto. Falta abrir o cronograma e começar.",
 ];
 function checarPopupSegunda(){
   if(!STATE.inicio) return;
@@ -1098,7 +1100,8 @@ function renderTudo(){
   // Saudação
   const hr=new Date().getHours();
   const saud=hr<12?"Bom dia":hr<18?"Boa tarde":"Boa noite";
-  document.getElementById("mainTitle").textContent=`${saud}! 👋`;
+  const _mt=document.getElementById("mainTitle");
+  if(_mt) _mt.textContent=`${saud}! 👋`;   // o dashboard não tem mais título: a bússola ocupa o topo
   // Hoje título
   document.getElementById("hojeTitulo").textContent="🎯 Foco de Hoje";
   document.getElementById("hojeSub").textContent="Sua missão de hoje.";
@@ -1156,40 +1159,307 @@ function renderDashboard(){
   const heroEl=document.getElementById("dashHero");
   if(heroEl && STATE.inicio){
     const rp = ritmo.emoji==="🟢"?{bg:"#E4F4EA",c:"#1C7A4B",t:"▲ adiantado"}:ritmo.emoji==="🟡"?{bg:"#FBF1D7",c:"#8A6212",t:"● no ritmo"}:{bg:"#FBE8E4",c:"#B5483F",t:"▼ atrasado"};
+    /* Hero enxuto: só o card de aderência (sequência migrou para o card de
+       Consistência e revisões viraram o chip clicável abaixo). */
     heroEl.innerHTML=`
-    <div style="display:grid;grid-template-columns:1.15fr .85fr;gap:16px;">
-      <div style="background:#fff;border:1px solid #EEE5D6;border-radius:20px;padding:22px 24px;">
-        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:16px;">
-          <div><div style="font-size:.85rem;color:#9A9082;font-weight:500;">Aderência ao plano de estudos</div>
-          <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:2.5rem;color:#241F18;line-height:1.05;">${prog}%</div>
-          <div style="font-size:.72rem;color:#A89E8E;">dos dias previstos até hoje foram concluídos</div></div>
-          <span style="background:${rp.bg};color:${rp.c};font-size:.76rem;font-weight:700;padding:5px 11px;border-radius:99px;white-space:nowrap;">${rp.t}</span>
-        </div>
-        <div style="height:11px;background:#F0EADF;border-radius:99px;overflow:hidden;"><div style="width:${prog}%;height:100%;background:linear-gradient(90deg,#2FB374,#5FD79A);border-radius:99px;"></div></div>
-        <div style="display:flex;justify-content:space-between;margin-top:9px;font-size:.76rem;color:#A89E8E;"><span>${det.done} de ${Math.max(det.total,det.done)} dias previstos até hoje</span><span>${diasR!==null?"Prova em "+diasR+" dias":""}</span></div>
-        <div style="margin-top:9px;padding-top:9px;border-top:1px dashed #F0EADF;font-size:.76rem;color:#8A8072;line-height:1.5;">📚 Cobertura do edital: <strong style="color:#1C7A4B">${cob.pct}%</strong> (${cob.cobertos} de ${cob.total} tópicos). Aderência mede se você está seguindo o plano; cobertura mede quanto do edital já foi estudado.</div>
+    <div class="hero-card">
+      <div class="hero-top">
+        <span class="hero-lbl">Aderência ao plano de estudos</span>
+        <span class="hero-badge" style="background:${rp.bg};color:${rp.c}">${rp.t}</span>
       </div>
-      <div style="display:grid;grid-template-rows:1fr 1fr;gap:16px;">
-        <div style="background:#FBF1D7;border:1px solid #F2E2AE;border-radius:20px;padding:16px 20px;display:flex;align-items:center;gap:13px;">
-          <span style="font-size:1.5rem;">🔥</span>
-          <div><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.4rem;color:#8A6212;line-height:1;">${streak} dia${streak!==1?"s":""}</div><div style="font-size:.76rem;color:#A98A3E;">de sequência</div></div>
+      <div class="hero-mid">
+        <div class="hero-num">${prog}%<span class="hero-num-sub">dos dias previstos</span></div>
+        <div class="hero-barcol">
+          <div class="hero-bar"><div class="hero-bar-fill" style="width:${prog}%"></div></div>
+          <div class="hero-legend"><span>${det.done} de ${Math.max(det.total,det.done)} dias previstos até hoje</span><span>${diasR!==null?"Prova em "+diasR+" dias":""}</span></div>
         </div>
-        <div style="background:#EDE7F7;border:1px solid #DBD0F0;border-radius:20px;padding:16px 20px;display:flex;align-items:center;gap:13px;">
-          <span style="font-size:1.4rem;">🔄</span>
-          <div><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.4rem;color:#5B43A0;line-height:1;">${totalRev}</div><div style="font-size:.76rem;color:#8472BC;">revisões pendentes</div></div>
-        </div>
+      </div>
+      <div class="hero-foot">
+        <span class="hero-cob" title="Aderência mede se você está seguindo o plano; cobertura mede quanto do edital já foi estudado.">📚 Cobertura do edital: <strong>${cob.pct}%</strong> (${cob.cobertos}/${cob.total} tópicos)</span>
+        <span class="hero-chips">
+          <span class="dash-chip ${totalRev>0?"dc-alerta":"dc-ok"}" data-action="navTo" data-page="revisoes" role="button" tabindex="0">🔄 ${totalRev>0?totalRev+(totalRev!==1?" revisões pendentes":" revisão pendente"):"Revisões em dia"} →</span>
+          <span class="dash-chip dc-neutro" data-action="navTo" data-page="cronograma" role="button" tabindex="0">🔥 ${streak} dia${streak!==1?"s":""}</span>
+        </span>
       </div>
     </div>`;
   } else if(heroEl){ heroEl.innerHTML=""; }
 
   // Coach
   renderCoach(prog, conf, ritmo, projecao, totalRev);
+  renderHabito();
+  renderBussola(prog);
+  renderMedalhas();
   setTimeout(checarPopupSegunda,600);
   setTimeout(checarBalaoPwa,2500);
   renderRetaFinal();
   renderMapaCalorPage("mapaGrid");
 }
 
+/* Carimba a data REAL do registro (base do gráfico "quando você estuda").
+   Campo aditivo e opcional — dias antigos simplesmente não têm. */
+function _carimbarRegistro(key){
+  if(!STATE.dias[key]) STATE.dias[key]={};
+  if(!STATE.dias[key].registradoEm) STATE.dias[key].registradoEm=fmt(new Date());
+}
+
+/* ── DASHBOARD: HÁBITO (consistência + ritmo semanal) ──
+   SVG desenhado à mão (sem libs, sem build). Os cálculos vivem no engine. */
+const _DOW_CURTO=["D","S","T","Q","Q","S","S"];
+const _DOW_PLURAL=["domingos","segundas","terças","quartas","quintas","sextas","sábados"];
+const _MES_CURTO=["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"];
+/* Chama viva: o fogo cresce com a sequência (0 apagado -> 4 fogueira). */
+function _nivelChama(n){ return n<=0?0:n<7?1:n<14?2:n<30?3:4; }
+function _blocoGamificacao(r){
+  const mk=calcMarcos(r.sequencia,r.recorde);
+  const alvo=r.recordeAnterior||0;
+  const batendo=r.sequencia>0&&r.sequencia>=alvo;
+  const pctRec=alvo>0?Math.min(100,Math.round(r.sequencia/alvo*100)):(r.sequencia?100:0);
+  const linha=!r.sequencia
+    ? "Comece hoje: um dia registrado já inicia sua sequência."
+    : batendo
+      ? `🏆 <strong>Seu melhor momento!</strong> ${r.sequencia} dia${r.sequencia!==1?"s":""} seguidos — nunca chegou tão longe.`
+      : `Faltam <strong>${alvo-r.sequencia+1} dia${alvo-r.sequencia+1!==1?"s":""}</strong> para bater seu recorde de ${alvo}.`;
+  const medalhas=mk.lista.map(function(m){
+    const ok=mk.conquistados.indexOf(m)>=0;
+    const prox=m===mk.proximo;
+    return `<span class="gm-medalha${ok?" gm-on":""}${prox?" gm-next":""}" title="${ok?"Conquistada: ":"Marca de "}${m} dias seguidos">${m}</span>`;
+  }).join("");
+  const escudo=r.escudoUsado
+    ? `<span class="gm-escudo gm-esc-usado" title="Seu escudo deste mês já perdoou uma falha. Ele volta no próximo mês.">🛡️ escudo usado</span>`
+    : `<span class="gm-escudo" title="Uma falha por mês é perdoada e não zera sua sequência.">🛡️ escudo ativo</span>`;
+  return `<div class="gm-bloco">
+    <div class="gm-topo">
+      <span class="gm-chama" data-nivel="${_nivelChama(r.sequencia)}">🔥</span>
+      <div class="gm-num"><b>${r.sequencia}</b><span>dia${r.sequencia!==1?"s":""} seguidos</span></div>
+      ${escudo}
+    </div>
+    <div class="gm-barra"><div class="gm-barra-fill${batendo?" gm-recorde":""}" style="width:${pctRec}%"></div></div>
+    <div class="gm-linha">${linha}</div>
+    <div class="gm-medalhas">${medalhas}${mk.proximo?`<span class="gm-faltam">próxima em ${mk.faltam} dia${mk.faltam!==1?"s":""}</span>`:`<span class="gm-faltam">todas conquistadas 🎖️</span>`}</div>
+  </div>`;
+}
+/* Celebra uma única vez cada marca atingida (STATE.marcosVistos sincroniza). */
+function _celebrarMarco(seq){
+  if(!seq) return;
+  if(MARCOS_SEQUENCIA.indexOf(seq)<0) return;
+  const vistos=STATE.marcosVistos||[];
+  if(vistos.indexOf(seq)>=0) return;
+  STATE.marcosVistos=vistos.concat([seq]); save();
+  setTimeout(function(){
+    showToast(`🏅 ${seq} dias seguidos! Marca desbloqueada — sua consistência está virando hábito.`);
+    const el=document.querySelector(".gm-bloco");
+    if(el){ el.classList.remove("gm-pop"); void el.offsetWidth; el.classList.add("gm-pop"); }
+  },400);
+}
+function _corHeat(c){
+  if(c.estado==="livre") return "#E6E1D6";
+  if(c.estado==="falha") return "#F0E4D2";
+  const n=c.estrelas||3;
+  return n>=5?"#173E2C":n>=4?"#2FB374":n>=3?"#5FD79A":"#A9DCC2";
+}
+const _MES_LONGO=["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"];
+let _habMesOffset=0;
+function navegarMesHabito(dir){
+  const novo=_habMesOffset+dir;
+  if(novo>0) return;                     // não navega para o futuro
+  _habMesOffset=novo; renderHabito();
+}
+/* Grade mensal do dashboard: leitura de ritmo (cheio x buraco), não de
+   conteúdo. Clicar num dia abre o Cronograma. Cores sólidas, sem gradiente. */
+function _htmlMes(mc){
+  const r=mc.resumo;
+  const dows=["D","S","T","Q","Q","S","S"];
+  let cels=dows.map(function(d){return `<span class="cm-dow">${d}</span>`;}).join("");
+  mc.celulas.forEach(function(c){
+    if(c.vazio){ cels+=`<span class="cm-cel cm-vazio"></span>`; return; }
+    const cls=["cm-cel","cm-"+c.estado];
+    if(c.marco) cls.push("cm-marco");
+    if(c.hoje) cls.push("cm-hoje");
+    const tit=c.dia+"/"+String(mc.mes+1).padStart(2,"0")+" · "+
+      (c.estado==="feito"?"você estudou":c.estado==="falha"?"sem registro":c.estado==="livre"?"descanso":c.estado==="futuro"?"a fazer":"fora do plano");
+    const clicavel=c.estado!=="fora"?` data-action="calCellClick" data-key="${c.key}" role="button" tabindex="0"`:"";
+    cels+=`<span class="${cls.join(" ")}" title="${esc(tit)}"${clicavel}>${c.dia}</span>`;
+  });
+  return `<div class="cm-head">
+      <button class="cm-nav" data-action="navegarMesHabito" data-dir="-1" aria-label="Mês anterior">◀</button>
+      <span class="cm-mes">${_MES_LONGO[mc.mes]} ${mc.ano}</span>
+      <button class="cm-nav" data-action="navegarMesHabito" data-dir="1" aria-label="Próximo mês"${_habMesOffset>=0?" disabled":""}>▶</button>
+    </div>
+    <div class="cm-grid">${cels}</div>`;
+}
+/* Resumo abaixo do calendário: sem caixas, tipografia uniforme.
+   Destaque é quanto o aluno estudou; comparação usa o MESMO período do mês
+   anterior (percentual só com o mês fechado, senão todo mês "despenca"). */
+function _htmlMesResumo(mc,hmResumo){
+  const r=mc.resumo;
+  const mesNome=_MES_LONGO[mc.mes], mesAnt=_MES_LONGO[(mc.mes+11)%12];
+  let comparacao="";
+  if(r.mesFechado&&r.variacao!=null){
+    comparacao=`<em>${r.variacao>=0?`<span class="cm-up">+${r.variacao}%</span>`:`<span class="cm-down">${r.variacao}%</span>`} que em ${mesAnt}</em>`;
+  } else if(r.mesAnterior){
+    comparacao=`<em>${r.mesAnterior} no mesmo período de ${mesAnt}</em>`;
+  }
+  return `<div class="cm-destaque">
+      <b>${r.estudados}</b><span>dia${r.estudados!==1?"s":""} com estudo em ${mesNome}</span>
+      ${comparacao}
+    </div>
+    <div class="cm-mini">
+      <div class="cm-stat"><b>${r.pct!=null?r.pct+"%":"—"}</b><span>do previsto</span></div>
+      <div class="cm-stat"><b>${hmResumo.recorde}</b><span>recorde</span></div>
+      <div class="cm-stat"><b>${hmResumo.cumprimento30==null?"—":hmResumo.cumprimento30+"%"}</b><span>últimos 30 dias</span></div>
+      <div class="cm-stat"><b>${hmResumo.melhorSemana}</b><span>melhor semana</span></div>
+    </div>`;
+}
+function _svgHeatmap(hm){
+  const P=16,C=13,L=22,T=15;
+  const w=L+hm.colunas.length*P, h=T+7*P;
+  let s=`<svg class="hab-svg" viewBox="0 0 ${w} ${h}" role="img" aria-label="Calendário de consistência">`;
+  [1,3,5].forEach(function(r){ s+=`<text x="0" y="${T+r*P+10}" class="hab-lbl">${_DOW_CURTO[r]}</text>`; });
+  let mesAnt=-1;
+  hm.colunas.forEach(function(col,ci){
+    const prim=col.find(function(c){return c.estado!=="fora";})||col[0];
+    if(prim&&prim.mes!==mesAnt){ mesAnt=prim.mes; s+=`<text x="${L+ci*P}" y="10" class="hab-lbl">${_MES_CURTO[prim.mes]}</text>`; }
+    col.forEach(function(c,ri){
+      if(c.estado==="fora"){
+        s+=`<rect x="${L+ci*P}" y="${T+ri*P}" width="${C}" height="${C}" rx="3" fill="#FBF6ED" opacity=".55"/>`;
+        return;
+      }
+      const stroke=c.hoje?'stroke="#173E2C" stroke-width="1.6"':(c.marco?'stroke="#E8B23A" stroke-width="1.6"':"");
+      const tit=("0"+c.dia).slice(-2)+"/"+_MES_CURTO[c.mes]+(c.estado==="feito"?" · "+(c.estrelas||"?")+"★":c.estado==="livre"?" · descanso":" · sem registro");
+      s+=`<rect x="${L+ci*P}" y="${T+ri*P}" width="${C}" height="${C}" rx="3" fill="${_corHeat(c)}" ${stroke}><title>${esc(tit)}</title></rect>`;
+    });
+  });
+  return s+"</svg>";
+}
+function _htmlRitmo(res){
+  const ritmo=res.dias;
+  const pico=Math.max.apply(null,ritmo.map(function(r){return r.pct||0;}))||100;
+  let barras="";
+  for(let i=1;i<=7;i++){
+    const r=ritmo[i%7];
+    const alt=!r.registros?4:Math.max(6,Math.round((r.pct/pico)*70));
+    const cor=!r.registros?"#EDE6DA":(r.livre?"#8AB6A0":"#2FB374");
+    const rot=r.registros?r.pct+"%":"—";
+    barras+=`<div class="rt-col" title="${esc(_DOW_PLURAL[r.dow])}: ${r.registros} dia${r.registros!==1?"s":""} registrado${r.registros!==1?"s":""}${r.livre?" · dia de descanso":""}">`+
+      `<div class="rt-pct">${rot}</div><div class="rt-bar-wrap"><div class="rt-bar" style="height:${alt}px;background:${cor}"></div></div>`+
+      `<div class="rt-dow">${_DOW_CURTO[r.dow]}</div></div>`;
+  }
+  return `<div class="rt-cols">${barras}</div>`;
+}
+function _insightRitmo(res){
+  if(!res.total) return "Assim que você registrar seus primeiros dias, a Bússola mostra aqui em que dias da semana você realmente estuda.";
+  const L=res.maiorLote;
+  if(L&&L.qtd>=3){
+    const d=parseDate(L.data);
+    return `Você registrou <strong>${L.qtd} dias de uma vez</strong> em ${("0"+d.getDate()).slice(-2)}/${("0"+(d.getMonth()+1)).slice(-2)} — por isso este gráfico concentra tudo naquele dia. Marcando cada dia no próprio dia, ele passa a refletir seu ritmo real.`;
+  }
+  const ord=res.dias.slice().sort(function(a,b){return b.registros-a.registros;});
+  const top=ord[0];
+  if(!top.registros) return "Ainda sem registros suficientes para identificar seu padrão semanal.";
+  const zerados=res.dias.filter(function(r){return !r.registros&&!r.livre;});
+  if(top.pct>=40){
+    const extra=top.livre?" — e ele é justamente seu dia de descanso no plano.":"";
+    return `<strong>${top.pct}%</strong> dos seus registros acontecem <strong>${top.dow===0?"aos":"às"} ${_DOW_PLURAL[top.dow]}</strong>${extra} Concentrar demais num dia costuma cobrar caro na semana seguinte.`;
+  }
+  if(zerados.length) return `Seu estudo se espalha bem pela semana. Ponto de atenção: você ainda não registrou nenhum dia ${zerados[0].dow===0?"aos":"às"} <strong>${_DOW_PLURAL[zerados[0].dow]}</strong>.`;
+  return `Ritmo bem distribuído — nenhum dia concentra mais de <strong>${top.pct}%</strong> dos registros. É assim que a revisão espaçada rende mais.`;
+}
+/* Bússola do rumo: agulha aponta o Norte (Aprovação) quando o aluno está
+   em dia com o plano e desvia conforme a aderência cai. */
+function renderBussola(prog){
+  const el=document.getElementById("bussolaRumo");
+  if(!el) return;
+  if(!STATE.inicio){ el.innerHTML=""; return; }
+  const temReg=Object.keys(STATE.dias||{}).some(function(k){ return _diaFeito(k); });
+  const r=calcRumo(prog,temReg);
+  const girando=r.angulo==null;
+  el.innerHTML=`<div class="bz-wrap bz-${r.nivel}">
+    <svg class="bz-svg" viewBox="0 0 120 120" role="img" aria-label="Bússola do seu rumo de estudos">
+      <circle cx="60" cy="60" r="52" class="bz-aro"/>
+      <circle cx="60" cy="60" r="44" class="bz-fundo"/>
+      <text x="60" y="20" class="bz-card bz-n">N</text>
+      <text x="60" y="107" class="bz-card">S</text>
+      <text x="107" y="65" class="bz-card">L</text>
+      <text x="13" y="65" class="bz-card">O</text>
+      <g class="bz-base${girando?" bz-girando":""}" style="transform:rotate(${girando?0:r.angulo}deg)">
+        <g class="bz-osc">
+          <polygon points="60,22 68,60 60,54 52,60" class="bz-norte"/>
+          <polygon points="60,98 52,60 60,66 68,60" class="bz-sul"/>
+        </g>
+      </g>
+      <circle cx="60" cy="60" r="5" class="bz-pino"/>
+    </svg>
+    <div class="bz-txt">
+      <span class="bz-alvo">APROVAÇÃO</span>
+      <span class="bz-frase">${esc(r.frase)}</span>
+    </div>
+  </div>`;
+}
+
+/* Galeria de medalhas: mostra TODAS as conquistas, as bloqueadas em cinza.
+   Ver o que falta motiva mais do que ver só o que já foi feito. Cor por
+   nível: 1 bronze, 2 prata, 3 ouro. Fica ao lado da bússola, no topo. */
+function renderMedalhas(){
+  const el=document.getElementById("dashMedalhas");
+  if(!el) return;
+  if(!STATE.inicio){ el.innerHTML=""; return; }
+  const m=calcMedalhas(calcCobertura().pct);
+  const p=m.patente;
+  const icones=m.medalhas.map(function(x){
+    const tit=x.ok?`${x.nome} — ${x.desc}`:`${x.nome} (bloqueada) — ${x.desc}. Faltam ${x.falta}`;
+    return `<span class="md-icone md-n${x.nivel}${x.ok?"":" md-off"}" title="${esc(tit)}">${x.icone}</span>`;
+  }).join("");
+  const prox=m.proxima
+    ? `<div class="md-prox" title="${esc(m.proxima.desc)}">A caminho: <strong>${esc(m.proxima.nome)}</strong> · faltam ${m.proxima.falta}${m.proxima.id.indexOf("cob")===0?"%":""}</div>`
+    : `<div class="md-prox">Galeria completa. Todas as medalhas conquistadas.</div>`;
+  el.innerHTML=`<div class="md-wrap md-p${p.indice}">
+    <div class="md-head">
+      <span class="md-tit">🏅 Quadro de Medalhas</span>
+      <span class="md-conta">${m.conquistadas} de ${m.total} conquistadas</span>
+    </div>
+    <div class="md-topo">
+      <span class="md-patente"><i class="md-selo"></i>${esc(p.nome)}</span>
+    </div>
+    <div class="md-barra"><div class="md-barra-fill" style="width:${p.pct}%"></div></div>
+    <div class="md-xp">${m.xp} XP${p.xpProx?` · faltam ${p.xpProx-m.xp} para ${esc(p.proxNome)}`:" · nível máximo"}</div>
+    <div class="md-lista">${icones}</div>
+    ${prox}
+  </div>`;
+}
+function renderHabito(){
+  const el=document.getElementById("dashHabito");
+  if(!el) return;
+  if(!STATE.inicio){ el.innerHTML=""; return; }
+  const semanas=window.innerWidth<=480?8:12;
+  const hm=calcHeatmapConsistencia(semanas);
+  const mc=calcMesConsistencia(_habMesOffset);
+  const rt=calcRitmoSemanal();
+  const r=hm.resumo;
+  el.innerHTML=`<div class="hab-stack">
+    <div class="hab-card">
+      <div class="hab-head"><span class="hab-tit">📊 Quando você estuda</span><span class="hab-sub">distribuição dos seus registros</span></div>
+      ${_htmlRitmo(rt)}
+      <div class="rt-insight">${_insightRitmo(rt)}</div>
+    </div>
+    <div class="hab-card">
+      <div class="hab-head"><span class="hab-tit">🔥 Consistência</span><span class="hab-sub">seu ritmo no mês</span></div>
+      <div class="cm-layout">
+        <div class="cm-cal">${_htmlMes(mc)}</div>
+        <div class="cm-lado">${_htmlMesResumo(mc,r)}</div>
+      </div>
+      <div class="hab-leg">
+        <span><i style="background:#1C6B45"></i> dia com estudo</span>
+        <span><i class="cm-leg-dot"></i> simulado ou retorno técnico</span>
+        <span><i class="cm-leg-hoje"></i> hoje</span>
+      </div>
+    </div>
+    <div class="hab-card">
+      <div class="hab-head"><span class="hab-tit">🏅 Desafios</span><span class="hab-sub">sequência e marcas</span></div>
+      ${_blocoGamificacao(r)}
+    </div>
+  </div>`;
+  _celebrarMarco(r.sequencia);
+}
 function renderCoach(prog, conf, ritmo, projecao, totalRev){
   const el=document.getElementById("coachText");
   const hl=document.getElementById("coachHighlight");
@@ -1661,7 +1931,7 @@ function toggleCheckHoje(campo){
 function setStarHoje(n,key){
   const k=key||fmt(new Date());
   if(!STATE.dias[k]) STATE.dias[k]={};
-  STATE.dias[k].estrelas=n; STATE.dias[k].percepcao=starToNivel(n);
+  STATE.dias[k].estrelas=n; STATE.dias[k].percepcao=starToNivel(n); _carimbarRegistro(k);
   save(); renderHoje(); renderTudo();
 }
 
@@ -2111,7 +2381,9 @@ function renderMapaCalorPage(targetId){
       <div class="mapa-header-cell right">Confiança</div>
     </div>`;
 
-  html+=ordenadas.map(m=>{
+  const _LIM_MAT=6;
+  const _lista=_mapaTudo?ordenadas:ordenadas.slice(0,_LIM_MAT);
+  html+=_lista.map(m=>{
     const exp=expectedProg[m.nome]??overallProg;
     const gap=m.prog-exp;
     let barClass, stClass, stLabel;
@@ -2148,8 +2420,15 @@ function renderMapaCalorPage(targetId){
     </div>`;
   }).join("");
 
+  if(ordenadas.length>_LIM_MAT){
+    html+=`<button class="mapa-vermais" data-action="toggleMapaTudo">${_mapaTudo?"▴ Mostrar só as "+_LIM_MAT+" prioritárias":"▾ Ver todas as "+ordenadas.length+" matérias"}</button>`;
+  }
   grid.innerHTML=html;
 }
+/* Lista de matérias compacta por padrão: mostra as prioritárias e expande
+   sob demanda (preferência só da sessão, não vai para o STATE). */
+let _mapaTudo=false;
+function toggleMapaTudo(){ _mapaTudo=!_mapaTudo; renderMapaCalorPage("mapaGrid"); }
 
 function renderMaterias(){
   const grid=document.getElementById("mapaGridMaterias");
@@ -2379,7 +2658,7 @@ function confirmarRevisaoGeral(){
   const score=parseInt(inp?.value||"");
   if(isNaN(score)||score<0||score>100){ showToast("⚠️ Informe um número de 0 a 100."); return; }
   if(!STATE.dias[_rgKey]) STATE.dias[_rgKey]={};
-  STATE.dias[_rgKey].revisaoGeralFeita=true;
+  STATE.dias[_rgKey].revisaoGeralFeita=true; _carimbarRegistro(_rgKey);
   STATE.dias[_rgKey].revisaoGeralScore=score;
   fecharRgModal();
   save(); renderSemana(); renderSimuladoPage(); updateNavBadges();
@@ -2464,7 +2743,7 @@ function abrirSimulado(key){
   const score=parseInt(scoreStr);
   if(isNaN(score)||score<0||score>100){ alert("Informe um número de 0 a 100."); return; }
   if(!STATE.dias[key]) STATE.dias[key]={};
-  STATE.dias[key].simuladoFeito=true;
+  STATE.dias[key].simuladoFeito=true; _carimbarRegistro(key);
   STATE.dias[key].simuladoScore=score;
   save(); renderSemana(); renderSimuladoPage(); updateNavBadges();
 }
@@ -2855,20 +3134,28 @@ function toggleSabMais(key){
   setTimeout(()=>repaintAllStars(),0);
 }
 function _sabId(key,ti){ return "sab-stars-"+key+(ti!=null&&ti!==""?"-"+ti:""); }
-function sabStarHTML(key,n,source,ti){
+function sabStarHTML(key,n,source,ti,sabKey){
   const nivel=starToNivel(n);
-  const tiAttr=ti!=null&&ti!==""?` data-ti="${ti}"`:"";
+  const tiAttr=(ti!=null&&ti!==""?` data-ti="${ti}"`:"")+(sabKey?` data-sab="${sabKey}"`:"");
   return [1,2,3,4,5].map(s=>{
     const lit=s<=n?(nivel==="alta"?"lit-high":nivel==="media"?"lit-mid":"lit-low"):"";
     return`<button class="sab-star ${lit}" data-n="${s}" aria-label="${s} de 5 estrelas" data-action="setSabStar" data-hover="sabstar" data-key="${key}" data-n="${s}" data-cur="${n}" data-source="${source}"${tiAttr}>★</button>`;
   }).join("");
 }
-function setSabStar(key,n,source,ti){
+function setSabStar(key,n,source,ti,sabKey){
+  /* Reavaliar no Retorno Técnico marca o PRÓPRIO dia do RT como cumprido —
+     as notas vão para os dias dos tópicos, então sem isso o sábado ficava
+     eternamente "sem registro" no calendário de consistência. */
+  if(sabKey){
+    if(!STATE.dias[sabKey]) STATE.dias[sabKey]={};
+    STATE.dias[sabKey].rtFeito=true; _carimbarRegistro(sabKey);
+  }
   if(ti!=null&&ti!==""){ gravarNotaTopico(key,+ti,n); }
   else{
     if(!STATE.dias[key]) STATE.dias[key]={};
     STATE.dias[key].estrelas=n; STATE.dias[key].percepcao=starToNivel(n);
   }
+  _carimbarRegistro(key);
   save();
   renderTudo();
   if(source==="rev"){ renderRevisoesPage(); }
@@ -2924,7 +3211,7 @@ function renderDiaSabado(dia,key,est,isHoje,isPast,fraquezas){
         const isTop=f.topIdx!=null;
         const conf=(isTop?(estF.percepcoes||{})[f.topIdx]:estF.percepcao)||f.perc||"";
         const cur=(isTop?(estF.estrelasList||{})[f.topIdx]:estF.estrelas)||nivelToStars(conf);
-        const stHtml=sabStarHTML(f.key,cur,"sab",isTop?f.topIdx:null);
+        const stHtml=sabStarHTML(f.key,cur,"sab",isTop?f.topIdx:null,sabKey);
         const isFraco=conf==="baixa";
         const badge=conf==="media"?`<span class="sab-conf-dot" style="color:#d97706" title="Confiança Média">●</span>`
           :conf==="baixa"?`<span class="sab-conf-dot" style="color:#dc2626" title="Baixa Confiança">●</span>`
@@ -3156,7 +3443,7 @@ function limparDia(key){
 // Dia 1 do cronograma: o clique em "Análise do Edital" conclui a tarefa e abre o edital
 function marcarDia1Concluido(key){
   if(!STATE.dias[key]) STATE.dias[key]={};
-  STATE.dias[key].percepcao="alta";
+  STATE.dias[key].percepcao="alta"; _carimbarRegistro(key);
   STATE.dias[key].estrelas=5;
   STATE.dias[key].lido=true;
   STATE.dias[key].exercicios=true;
@@ -3181,7 +3468,7 @@ function hoverStar(key,n){ paintStars(key,n); }
 function unhoverStar(key){ paintStars(key,STATE.dias[key]?.estrelas||0); }
 function setStar(key,n){
   if(!STATE.dias[key]) STATE.dias[key]={};
-  STATE.dias[key].estrelas=n; STATE.dias[key].percepcao=starToNivel(n); STATE.dias[key].collapsed=true;
+  STATE.dias[key].estrelas=n; STATE.dias[key].percepcao=starToNivel(n); STATE.dias[key].collapsed=true; _carimbarRegistro(key);
   save(); renderSemana(); renderTudo();
 }
 function unhoverStarTopico(key,ti){
@@ -3197,7 +3484,7 @@ function gravarNotaTopico(key,ti,n){
   est.estrelasList=Object.assign({},est.estrelasList,{[ti]:n});
   est.percepcoes=Object.assign({},est.percepcoes,{[ti]:starToNivel(n)});
   const agg=aggregateEstrelas(est.estrelasList,getTopicosDiaBase(key).length);
-  if(agg!=null){ est.estrelas=agg; est.percepcao=starToNivel(agg); }
+  if(agg!=null){ est.estrelas=agg; est.percepcao=starToNivel(agg); _carimbarRegistro(key); }
   else{ delete est.estrelas; delete est.percepcao; }
   return agg;
 }

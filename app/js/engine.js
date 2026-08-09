@@ -347,10 +347,328 @@ function aggregateEstrelas(estrelasList,totalTopicos){
   return Math.min(...notas);
 }
 
+/* ── HÁBITO E CONSISTÊNCIA (dashboard) ──
+   Puro, sem DOM. Regra comum: dia livre planejado NUNCA conta como falha
+   (o método prevê até 4 dias livres/semana). Todas aceitam hojeRef (ISO)
+   para os testes — no app, omitido = hoje real. */
+function _diaPrevisto(dateKey){
+  if(!STATE.inicio||dateKey<STATE.inicio) return false;
+  if(STATE.prova&&dateKey>STATE.prova) return false;
+  return !isDiaLivre(parseDate(dateKey).getDay());
+}
+/* Um dia do plano é CUMPRIDO por qualquer entrega prevista para ele:
+   conteúdo novo (percepcao), Retorno Técnico (rtFeito), mini simulado
+   (simuladoFeito) ou Revisão Geral (revisaoGeralFeita). Sem isso, sábados
+   de RT e dias de simulado apareciam como falha mesmo tendo sido feitos. */
+function _diaFeito(dateKey){
+  const e=(STATE.dias||{})[dateKey]||{};
+  return !!(e.percepcao||e.rtFeito||e.simuladoFeito||e.revisaoGeralFeita);
+}
+
+/* Sequência atual, recorde e ESCUDO DE SEQUÊNCIA: uma falha por mês é
+   perdoada (não zera a corrente, mas também não soma). Sem isso, a
+   gamificação vira fonte de culpa — e aluno culpado abandona o app.
+   recordeAnterior = maior sequência JÁ FECHADA, usada como alvo a bater. */
+const MARCOS_SEQUENCIA=[7,14,21,30,60,100];
+function calcStreaks(hojeRef){
+  const vazio={atual:0,recorde:0,recordeAnterior:0,escudoUsado:false,perdoados:0};
+  if(!STATE.inicio) return vazio;
+  const hojeKey=hojeRef||fmt(new Date());
+  let recorde=0,recordeAnterior=0,corrente=0,perdoados=0,escudoUsado=false;
+  const escudoMes={};
+  const fim=parseDate(hojeKey);
+  for(let x=parseDate(STATE.inicio); x<=fim; x.setDate(x.getDate()+1)){
+    const k=fmt(x);
+    if(!_diaPrevisto(k)) continue;
+    if(_diaFeito(k)){
+      corrente++; if(corrente>recorde) recorde=corrente;
+      continue;
+    }
+    if(k===hojeKey) continue;             // hoje pendente não quebra nada
+    const mes=k.slice(0,7);
+    if(corrente>0&&!escudoMes[mes]){      // escudo do mês: perdoa 1 falha
+      escudoMes[mes]=true; perdoados++;
+      if(mes===hojeKey.slice(0,7)) escudoUsado=true;
+      continue;
+    }
+    if(corrente>recordeAnterior) recordeAnterior=corrente;
+    corrente=0;
+  }
+  return {atual:corrente,recorde:recorde,recordeAnterior:recordeAnterior,
+    escudoUsado:escudoUsado,perdoados:perdoados};
+}
+
+/* Medalhas de marco: conquistadas pelo recorde; a próxima é medida contra a
+   sequência atual, para virar meta de curto prazo. */
+function calcMarcos(atual,recorde){
+  const conquistados=MARCOS_SEQUENCIA.filter(function(m){return recorde>=m;});
+  const proximo=MARCOS_SEQUENCIA.find(function(m){return m>atual;})||null;
+  return {lista:MARCOS_SEQUENCIA.slice(),conquistados:conquistados,
+    proximo:proximo,faltam:proximo?proximo-atual:0};
+}
+
+/* Grade de consistência: colunas = semanas (domingo a sábado), 7 linhas.
+   estado por célula: feito | falha | livre | fora (fora da janela do plano). */
+function calcHeatmapConsistencia(nSemanas,hojeRef){
+  const semanas=Math.max(1,nSemanas||12);
+  const hojeKey=hojeRef||fmt(new Date());
+  const hoje=parseDate(hojeKey);
+  const domAtual=new Date(hoje); domAtual.setDate(domAtual.getDate()-domAtual.getDay());
+  const ini=new Date(domAtual); ini.setDate(ini.getDate()-(semanas-1)*7);
+  const colunas=[]; let feitos=0,previstos=0,melhorSemana=0;
+  for(let s=0;s<semanas;s++){
+    const col=[]; let naSemana=0;
+    for(let dw=0;dw<7;dw++){
+      const d=new Date(ini); d.setDate(d.getDate()+s*7+dw);
+      const k=fmt(d); const est=(STATE.dias||{})[k]||{};
+      let estado="fora";
+      if(k<=hojeKey&&STATE.inicio&&k>=STATE.inicio&&!(STATE.prova&&k>STATE.prova)){
+        estado=isDiaLivre(d.getDay())?"livre":(_diaFeito(k)?"feito":"falha");
+      }
+      if(estado==="feito"){ feitos++; naSemana++; }
+      if(estado==="feito"||estado==="falha") previstos++;
+      col.push({key:k,estado:estado,estrelas:est.estrelas||0,dia:d.getDate(),mes:d.getMonth(),
+        hoje:k===hojeKey,
+        marco:estado!=="fora"&&(isSimuladoDay(k)||isRevisaoGeralDay(k))});
+    }
+    if(naSemana>melhorSemana) melhorSemana=naSemana;
+    colunas.push(col);
+  }
+  let p30=0,f30=0;
+  for(let i=0;i<30;i++){
+    const d=new Date(hoje); d.setDate(d.getDate()-i);
+    const k=fmt(d);
+    if(k>hojeKey||!_diaPrevisto(k)) continue;
+    p30++; if(_diaFeito(k)) f30++;
+  }
+  const st=calcStreaks(hojeKey);
+  return {colunas:colunas,resumo:{feitos:feitos,previstos:previstos,melhorSemana:melhorSemana,
+    cumprimento30:p30?Math.round(f30/p30*100):null,sequencia:st.atual,recorde:st.recorde,
+    recordeAnterior:st.recordeAnterior,escudoUsado:st.escudoUsado,perdoados:st.perdoados}};
+}
+
+/* Distribuição dos registros por dia da semana (0=dom..6=sáb).
+   Usa registradoEm (data em que o aluno REALMENTE marcou) — só assim o
+   gráfico responde "em que dias eu estudo". Registros antigos, sem o campo,
+   caem na própria data planejada (aproximação; não há como recuperar).
+   maiorLote detecta marcação retroativa em massa (N dias na mesma data). */
+function calcRitmoSemanal(hojeRef){
+  const dias=[];
+  for(let dw=0;dw<7;dw++) dias.push({dow:dw,registros:0,pct:null,livre:isDiaLivre(dw)});
+  const res={dias:dias,total:0,maiorLote:null};
+  if(!STATE.inicio) return res;
+  const hojeKey=hojeRef||fmt(new Date());
+  const porData={};
+  Object.keys(STATE.dias||{}).forEach(function(k){
+    const est=STATE.dias[k]||{};
+    if(!_diaFeito(k)||k<STATE.inicio) return;
+    const ref=est.registradoEm||k;
+    if(ref>hojeKey) return;
+    dias[parseDate(ref).getDay()].registros++;
+    res.total++;
+    if(est.registradoEm){
+      if(!porData[ref]) porData[ref]={};
+      porData[ref][k]=1;
+    }
+  });
+  dias.forEach(function(d){ d.pct=res.total?Math.round(d.registros/res.total*100):null; });
+  Object.keys(porData).forEach(function(dt){
+    const q=Object.keys(porData[dt]).length;
+    if(!res.maiorLote||q>res.maiorLote.qtd) res.maiorLote={data:dt,qtd:q};
+  });
+  return res;
+}
+
+/* RUMO DA BÚSSOLA: converte a aderência ao plano num ângulo de agulha.
+   100% de aderência aponta o Norte (0°, "Aprovação"); quanto menor a
+   aderência, mais a agulha desvia, até 90° (leste) em 0%.
+   Sem nenhum dia registrado, devolve angulo null (agulha calibrando). */
+function calcRumo(aderenciaPct,temRegistro){
+  if(!temRegistro) return {angulo:null,nivel:"calibrando",
+    frase:"Bússola calibrando. Registre seu primeiro dia de estudo para achar o Norte."};
+  const p=Math.max(0,Math.min(120,aderenciaPct||0));
+  const angulo=Math.round(Math.max(0,Math.min(90,(100-p)*0.9)));
+  let nivel,frase;
+  if(p>=100){ nivel="norte";  frase="Norte encontrado. No ritmo atual, você chega à prova com o edital coberto."; }
+  else if(p>=85){ nivel="rota"; frase="Rota firme. Falta pouco para a agulha travar no Norte."; }
+  else if(p>=60){ nivel="desvio"; frase="Você desviou um pouco do plano. Dá para corrigir ainda esta semana."; }
+  else if(p>=30){ nivel="fora"; frase="Rota desviada. Comece pelo dia de hoje para voltar ao curso."; }
+  else { nivel="perdido"; frase="Fora de rota. Um dia registrado já começa a corrigir o rumo."; }
+  return {angulo:angulo,nivel:nivel,frase:frase};
+}
+
+/* Consistência de um MÊS (grade de calendário do dashboard).
+   offset 0 = mês atual, -1 = anterior.
+   REGRA (09/08): o crédito vai para o dia em que o aluno REGISTROU
+   (est.registradoEm), não para o dia planejado. Registrar cinco dias
+   atrasados num domingo pinta o domingo, que é quando o estudo aconteceu.
+   Registros antigos, sem o campo, caem na própria data planejada.
+   Estados sólidos: feito | falha | livre | futuro | fora. */
+function _diasComRegistro(){
+  const set={};
+  Object.keys(STATE.dias||{}).forEach(function(k){
+    if(!_diaFeito(k)) return;
+    const est=STATE.dias[k]||{};
+    set[est.registradoEm||k]=true;
+  });
+  return set;
+}
+function calcMesConsistencia(offset,hojeRef){
+  const hojeKey=hojeRef||fmt(new Date());
+  const hoje=parseDate(hojeKey);
+  const base=new Date(hoje.getFullYear(),hoje.getMonth()+(offset||0),1);
+  const ano=base.getFullYear(), mes=base.getMonth();
+  const ultimo=new Date(ano,mes+1,0).getDate();
+  const inicioDow=new Date(ano,mes,1).getDay();
+  const comRegistro=_diasComRegistro();
+  const mesCorrente=(ano===hoje.getFullYear()&&mes===hoje.getMonth());
+  const diaCorte=mesCorrente?hoje.getDate():ultimo;   // até onde o mês "já aconteceu"
+  const celulas=[];
+  for(let i=0;i<inicioDow;i++) celulas.push({estado:"fora",vazio:true});
+  let estudados=0,previstos=0;
+  for(let d=1;d<=ultimo;d++){
+    const dt=new Date(ano,mes,d);
+    const k=fmt(dt);
+    const estudou=!!comRegistro[k];
+    let estado="fora";
+    if(k<=hojeKey&&STATE.inicio&&k>=STATE.inicio&&!(STATE.prova&&k>STATE.prova)){
+      /* Estudar em dia livre conta como estudo. O dia de hoje sem registro
+         fica como "a fazer", nunca como falha. */
+      estado=estudou?"feito"
+        :(isDiaLivre(dt.getDay())?"livre":(k===hojeKey?"futuro":"falha"));
+    } else if(STATE.inicio&&k>hojeKey&&(!STATE.prova||k<=STATE.prova)){
+      estado=estudou?"feito":"futuro";
+    }
+    if(estado==="feito") estudados++;
+    if(_diaPrevisto(k)&&k<hojeKey) previstos++;      // previstos JÁ decorridos
+    celulas.push({key:k,dia:d,estado:estado,hoje:k===hojeKey,
+      marco:(estado!=="fora")&&(isSimuladoDay(k)||isRevisaoGeralDay(k)||getCicloPos(k)===5)});
+  }
+  /* Comparação com o mês anterior no MESMO PERÍODO: no dia 9, compara com
+     os 9 primeiros dias do mês passado. Comparar 9 dias contra um mês
+     inteiro faria todo aluno "despencar" até o fim de todo mês. */
+  const ant=new Date(ano,mes-1,1);
+  const ultAnt=new Date(ant.getFullYear(),ant.getMonth()+1,0).getDate();
+  let antMesmoPeriodo=0,antTotal=0;
+  for(let d=1;d<=ultAnt;d++){
+    const k=fmt(new Date(ant.getFullYear(),ant.getMonth(),d));
+    if(k>hojeKey||!comRegistro[k]) continue;
+    if(STATE.inicio&&k<STATE.inicio) continue;   // fora da janela do plano
+    antTotal++;
+    if(d<=diaCorte) antMesmoPeriodo++;
+  }
+  const mesFechado=!mesCorrente;
+  return {ano:ano,mes:mes,celulas:celulas,mesCorrente:mesCorrente,diaCorte:diaCorte,
+    resumo:{estudados:estudados,cumpridos:estudados,previstos:previstos,
+      pct:previstos?Math.round(estudados/previstos*100):null,
+      mesAnterior:antMesmoPeriodo,mesAnteriorTotal:antTotal,mesFechado:mesFechado,
+      /* percentual só quando o mês fechou: aí a comparação é entre iguais */
+      variacao:(mesFechado&&antTotal)?Math.round((estudados-antTotal)/antTotal*100):null}};
+}
+
+/* ── MEDALHAS E PATENTE ──────────────────────────────────────────
+   Puro, sem DOM. Sete famílias de medalha, cada uma com níveis, e uma
+   patente calculada por XP acumulado. Tudo sai de dados que o app já
+   grava: dias com estudo, estrelas por tópico, revisões, simulados,
+   Retornos Técnicos e cobertura do edital (esta vem como parâmetro,
+   porque calcCobertura mora no ui.js). */
+/* Níveis em escala universal (metais), não jargão náutico: qualquer aluno
+   entende sem explicação. */
+const PATENTES=[
+  {nome:"Iniciante",xp:0},
+  {nome:"Bronze",xp:300},
+  {nome:"Prata",xp:800},
+  {nome:"Ouro",xp:1600},
+  {nome:"Platina",xp:2800},
+  {nome:"Diamante",xp:4500}
+];
+function _contadoresMedalhas(){
+  const dias=STATE.dias||{};
+  let diasEstudo=0,topicos5=0,revisoes=0,simulados=0,somaSim=0,rts=0;
+  const porMes={};
+  Object.keys(dias).forEach(function(k){
+    const e=dias[k]||{};
+    if(_diaFeito(k)){
+      const ref=e.registradoEm||k;
+      diasEstudo++;
+      const m=ref.slice(0,7); porMes[m]=(porMes[m]||0)+1;
+    }
+    if(e.estrelas===5) topicos5++;
+    if(e.estrelasList) Object.keys(e.estrelasList).forEach(function(t){ if(e.estrelasList[t]===5) topicos5++; });
+    if(e.rev7feito) revisoes++;
+    if(e.rev30feito) revisoes++;
+    if(e.simuladoFeito){ simulados++; if(typeof e.simuladoScore==="number") somaSim+=e.simuladoScore; }
+    if(e.revisaoGeralFeita){ simulados++; if(typeof e.revisaoGeralScore==="number") somaSim+=e.revisaoGeralScore; }
+    if(e.rtFeito) rts++;
+  });
+  let melhorMes=0;
+  Object.keys(porMes).forEach(function(m){ if(porMes[m]>melhorMes) melhorMes=porMes[m]; });
+  // Resiliência: voltou a estudar depois de 3+ dias previstos em branco
+  let retomou=false;
+  if(STATE.inicio){
+    let seguidosSemEstudo=0;
+    const hojeKey=fmt(new Date());
+    for(let x=parseDate(STATE.inicio); fmt(x)<=hojeKey; x.setDate(x.getDate()+1)){
+      const k=fmt(x);
+      if(!_diaPrevisto(k)) continue;
+      if(_diaFeito(k)){ if(seguidosSemEstudo>=3) retomou=true; seguidosSemEstudo=0; }
+      else seguidosSemEstudo++;
+    }
+  }
+  return {diasEstudo:diasEstudo,topicos5:topicos5,revisoes:revisoes,simulados:simulados,
+    mediaSim:simulados?Math.round(somaSim/simulados):0,rts:rts,melhorMes:melhorMes,retomou:retomou};
+}
+function calcMedalhas(coberturaPct){
+  const c=_contadoresMedalhas();
+  const st=calcStreaks();
+  const cob=coberturaPct||0;
+  const def=[
+    {id:"seq7",nv:1,   fam:"Constância", ic:"🔥", nome:"Primeira semana",   desc:"7 dias seguidos de estudo",        valor:st.recorde, meta:7},
+    {id:"seq21",nv:2,  fam:"Constância", ic:"🔥", nome:"Hábito formado",    desc:"21 dias seguidos de estudo",       valor:st.recorde, meta:21},
+    {id:"seq60",nv:3,  fam:"Constância", ic:"🔥", nome:"Inabalável",        desc:"60 dias seguidos de estudo",       valor:st.recorde, meta:60},
+    {id:"cob25",nv:1,  fam:"Edital",     ic:"🗺️", nome:"Primeiro quarto",   desc:"25% do edital estudado",           valor:cob, meta:25},
+    {id:"cob50",nv:2,  fam:"Edital",     ic:"🗺️", nome:"Meio do caminho",   desc:"50% do edital estudado",           valor:cob, meta:50},
+    {id:"cob90",nv:3,  fam:"Edital",     ic:"🗺️", nome:"Edital na mão",     desc:"90% do edital estudado",           valor:cob, meta:90},
+    {id:"dom10",nv:1,  fam:"Domínio",    ic:"🧠", nome:"Base sólida",       desc:"10 tópicos com 5 estrelas",        valor:c.topicos5, meta:10},
+    {id:"dom30",nv:2,  fam:"Domínio",    ic:"🧠", nome:"Especialista",      desc:"30 tópicos com 5 estrelas",        valor:c.topicos5, meta:30},
+    {id:"dom60",nv:3,  fam:"Domínio",    ic:"🧠", nome:"Mestre do edital",  desc:"60 tópicos com 5 estrelas",        valor:c.topicos5, meta:60},
+    {id:"rev10",nv:1,  fam:"Revisão",    ic:"🔁", nome:"Revisor",           desc:"10 revisões concluídas",           valor:c.revisoes, meta:10},
+    {id:"rev40",nv:2,  fam:"Revisão",    ic:"🔁", nome:"Memória de elefante", desc:"40 revisões concluídas",         valor:c.revisoes, meta:40},
+    {id:"rev100",nv:3, fam:"Revisão",    ic:"🔁", nome:"Blindado",          desc:"100 revisões concluídas",          valor:c.revisoes, meta:100},
+    {id:"sim1",nv:1,   fam:"Simulado",   ic:"🎯", nome:"Estreia",           desc:"1º simulado registrado",           valor:c.simulados, meta:1},
+    {id:"sim5",nv:2,   fam:"Simulado",   ic:"🎯", nome:"Ritmo de prova",    desc:"5 simulados registrados",          valor:c.simulados, meta:5},
+    {id:"sim12",nv:3,  fam:"Simulado",   ic:"🎯", nome:"Veterano",          desc:"12 simulados registrados",         valor:c.simulados, meta:12},
+    {id:"pont70",nv:3, fam:"Simulado",   ic:"🏹", nome:"Pontaria",          desc:"70% de média com 3+ simulados",    valor:(c.simulados>=3?c.mediaSim:0), meta:70},
+    {id:"rt4",nv:1,    fam:"Retorno",    ic:"🔍", nome:"Autoconhecimento",  desc:"4 Retornos Técnicos feitos",       valor:c.rts, meta:4},
+    {id:"rt12",nv:2,   fam:"Retorno",    ic:"🔍", nome:"Diagnóstico fino",  desc:"12 Retornos Técnicos feitos",      valor:c.rts, meta:12},
+    {id:"mes20",nv:2,  fam:"Volume",     ic:"📅", nome:"Mês cheio",         desc:"20 dias de estudo num mês",        valor:c.melhorMes, meta:20},
+    {id:"volta",nv:1,  fam:"Resiliência",ic:"💪", nome:"De volta ao rumo",  desc:"Retomou após 3+ dias parado",      valor:(c.retomou?1:0), meta:1}
+  ];
+  const medalhas=def.map(function(m){
+    return {id:m.id,familia:m.fam,icone:m.ic,nome:m.nome,desc:m.desc,nivel:m.nv,
+      valor:m.valor,meta:m.meta,ok:m.valor>=m.meta,
+      falta:Math.max(0,m.meta-m.valor)};
+  });
+  const conquistadas=medalhas.filter(function(m){return m.ok;}).length;
+  const xp=c.diasEstudo*10+c.topicos5*15+c.revisoes*8+c.simulados*25+c.rts*12+conquistadas*50;
+  let idx=0;
+  for(let i=0;i<PATENTES.length;i++) if(xp>=PATENTES[i].xp) idx=i;
+  const atual=PATENTES[idx], prox=PATENTES[idx+1]||null;
+  const pct=prox?Math.min(100,Math.round((xp-atual.xp)/(prox.xp-atual.xp)*100)):100;
+  // próxima medalha a cair: a não conquistada mais perto da meta
+  const pendentes=medalhas.filter(function(m){return !m.ok&&m.meta>0;})
+    .sort(function(a,b){ return (a.falta/a.meta)-(b.falta/b.meta); });
+  return {medalhas:medalhas,conquistadas:conquistadas,total:medalhas.length,
+    xp:xp,contadores:c,
+    patente:{indice:idx,nome:atual.nome,xpBase:atual.xp,xpProx:prox?prox.xp:null,
+      proxNome:prox?prox.nome:null,pct:pct},
+    proxima:pendentes[0]||null};
+}
+
 /* ── Export para Node (testes). No navegador, as funções já são globais. ── */
 if(typeof module!=="undefined"&&module.exports){
   module.exports={fmt,parseDate,isDiaLivre,isDiaEstudo,getCicloPos,getNumRevisao,
     getMaterias,getTopicos,getTopicoDiaByKey,getTopicosDiaBase,getTopicosDoDia,
     getExtrasDoDia,getPrevNonFreeDay,isSimuladoDay,calcRevisoes,calcExpectedPerSubject,getTopicosFracos,buildAgendaSemanaICS,isProvaDay,isRevisaoGeralDay,isRetaFinalDay,
-    _densityFor,aggregateEstrelas};
+    _densityFor,aggregateEstrelas,calcStreaks,calcHeatmapConsistencia,calcRitmoSemanal,calcMarcos,MARCOS_SEQUENCIA,calcRumo,calcMesConsistencia,calcMedalhas,PATENTES};
 }
