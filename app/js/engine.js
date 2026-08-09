@@ -483,18 +483,31 @@ function calcRitmoSemanal(hojeRef){
    100% de aderência aponta o Norte (0°, "Aprovação"); quanto menor a
    aderência, mais a agulha desvia, até 90° (leste) em 0%.
    Sem nenhum dia registrado, devolve angulo null (agulha calibrando). */
+/* O diagnóstico virou ETIQUETA (tag+icone) e a frase ficou só com a AÇÃO.
+   Antes a frase repetia o diagnóstico ("Rota desviada. Comece pelo..."),
+   o que soaria redundante ao lado de um badge dizendo a mesma coisa. */
+const RUMO_TAGS={
+  norte:     {tag:"No Ritmo",        icone:"🎯"},
+  rota:      {tag:"Rota Firme",      icone:"🧭"},
+  desvio:    {tag:"Pequeno Desvio",  icone:"⚠️"},
+  fora:      {tag:"Rota Desviada",   icone:"⚠️"},
+  perdido:   {tag:"Fora de Rota",    icone:"🚩"},
+  calibrando:{tag:"Calibrando",      icone:"⏳"}
+};
 function calcRumo(aderenciaPct,temRegistro){
-  if(!temRegistro) return {angulo:null,nivel:"calibrando",
-    frase:"Bússola calibrando. Registre seu primeiro dia de estudo para achar o Norte."};
+  const _t=function(nivel,angulo,frase){
+    const m=RUMO_TAGS[nivel];
+    return {angulo:angulo,nivel:nivel,frase:frase,tag:m.tag,icone:m.icone};
+  };
+  if(!temRegistro) return _t("calibrando",null,
+    "Registre seu primeiro dia de estudo para a agulha achar o Norte.");
   const p=Math.max(0,Math.min(120,aderenciaPct||0));
   const angulo=Math.round(Math.max(0,Math.min(90,(100-p)*0.9)));
-  let nivel,frase;
-  if(p>=100){ nivel="norte";  frase="Norte encontrado. No ritmo atual, você chega à prova com o edital coberto."; }
-  else if(p>=85){ nivel="rota"; frase="Rota firme. Falta pouco para a agulha travar no Norte."; }
-  else if(p>=60){ nivel="desvio"; frase="Você desviou um pouco do plano. Dá para corrigir ainda esta semana."; }
-  else if(p>=30){ nivel="fora"; frase="Rota desviada. Comece pelo dia de hoje para voltar ao curso."; }
-  else { nivel="perdido"; frase="Fora de rota. Um dia registrado já começa a corrigir o rumo."; }
-  return {angulo:angulo,nivel:nivel,frase:frase};
+  if(p>=100) return _t("norte",angulo,"Você chega à prova com o edital coberto se mantiver esse passo.");
+  if(p>=85)  return _t("rota",angulo,"Falta pouco para a agulha travar no Norte.");
+  if(p>=60)  return _t("desvio",angulo,"Dá para corrigir ainda esta semana.");
+  if(p>=30)  return _t("fora",angulo,"Comece pelo dia de hoje para voltar ao curso.");
+  return _t("perdido",angulo,"Um dia registrado já começa a corrigir o rumo.");
 }
 
 /* Consistência de um MÊS (grade de calendário do dashboard).
@@ -687,6 +700,6 @@ if(typeof module!=="undefined"&&module.exports){
   module.exports={fmt,parseDate,isDiaLivre,isDiaEstudo,getCicloPos,getNumRevisao,
     getMaterias,getTopicos,getTopicoDiaByKey,getTopicosDiaBase,getTopicosDoDia,
     getExtrasDoDia,getPrevNonFreeDay,isSimuladoDay,calcRevisoes,calcExpectedPerSubject,getTopicosFracos,buildAgendaSemanaICS,isProvaDay,isRevisaoGeralDay,isRetaFinalDay,
-    _densityFor,aggregateEstrelas,calcStreaks,calcHeatmapConsistencia,calcRitmoSemanal,calcMarcos,MARCOS_SEQUENCIA,calcRumo,calcMesConsistencia,calcMedalhas,PATENTES,
+    _densityFor,aggregateEstrelas,calcStreaks,calcHeatmapConsistencia,calcRitmoSemanal,calcMarcos,MARCOS_SEQUENCIA,calcRumo,RUMO_TAGS,calcMesConsistencia,calcMedalhas,PATENTES,
     calcDominio,DOMINIO_MIN_AMOSTRA};
 }

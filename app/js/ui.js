@@ -1387,10 +1387,28 @@ function renderBussola(prog){
   const temReg=Object.keys(STATE.dias||{}).some(function(k){ return _diaFeito(k); });
   const r=calcRumo(prog,temReg);
   const girando=r.angulo==null;
+  // Mostrador com profundidade: gradiente radial de luz + sombra interna
+  // (SVG filter, porque box-shadow inset não vale para forma SVG).
   el.innerHTML=`<div class="bz-wrap bz-${r.nivel}">
     <svg class="bz-svg" viewBox="0 0 120 120" role="img" aria-label="Bússola do seu rumo de estudos">
+      <defs>
+        <radialGradient id="bzFace" cx="36%" cy="30%" r="80%">
+          <stop offset="0%" stop-color="#FFFFFF" stop-opacity=".95"/>
+          <stop offset="58%" stop-color="#FBF6EC" stop-opacity=".7"/>
+          <stop offset="100%" stop-color="#E4D8C2" stop-opacity=".65"/>
+        </radialGradient>
+        <filter id="bzInset" x="-30%" y="-30%" width="160%" height="160%">
+          <feComponentTransfer in="SourceAlpha"><feFuncA type="table" tableValues="1 0"/></feComponentTransfer>
+          <feGaussianBlur stdDeviation="2.6"/>
+          <feOffset dy="1.6" result="sombra"/>
+          <feFlood flood-color="#8A7757" flood-opacity=".5"/>
+          <feComposite in2="sombra" operator="in"/>
+          <feComposite in2="SourceAlpha" operator="in"/>
+          <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode/></feMerge>
+        </filter>
+      </defs>
       <circle cx="60" cy="60" r="52" class="bz-aro"/>
-      <circle cx="60" cy="60" r="44" class="bz-fundo"/>
+      <circle cx="60" cy="60" r="44" class="bz-fundo" fill="url(#bzFace)" filter="url(#bzInset)"/>
       <text x="60" y="20" class="bz-card bz-n">N</text>
       <text x="60" y="107" class="bz-card">S</text>
       <text x="107" y="65" class="bz-card">L</text>
@@ -1404,6 +1422,7 @@ function renderBussola(prog){
       <circle cx="60" cy="60" r="5" class="bz-pino"/>
     </svg>
     <div class="bz-txt">
+      <span class="bz-badge">${r.icone} ${esc(r.tag)}</span>
       <span class="bz-alvo">APROVAÇÃO</span>
       <span class="bz-frase">${esc(r.frase)}</span>
     </div>
