@@ -389,32 +389,90 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
    Cor por nível da medalha: 1 bronze, 2 prata, 3 ouro. Bloqueadas ficam
    em cinza, para o aluno ver o que ainda dá para conquistar. O nível do
    aluno (md-p0..md-p5) tinge o selo e a barra de XP. */
-.md-wrap { --md-cor:#8A8072; background:#FBF6ED; border:1.5px solid #E5DAC8; border-color:color-mix(in srgb, var(--md-cor) 45%, #E5DAC8); border-radius:var(--radius-lg); padding:.55rem .75rem .6rem; }
-.md-p0 { --md-cor:#8A8072; }
-.md-p1 { --md-cor:#C08552; }
-.md-p2 { --md-cor:#8E99A4; }
-.md-p3 { --md-cor:#D9A441; }
-.md-p4 { --md-cor:#5E93A6; }
-.md-p5 { --md-cor:#3FA7CF; }
-.md-head { display:flex; align-items:baseline; justify-content:space-between; gap:.5rem; margin-bottom:.3rem; }
-.md-tit { font-family:'Bricolage Grotesque',sans-serif; font-size:.88rem; font-weight:800; color:var(--navy); }
-.md-topo { display:flex; align-items:center; gap:.5rem; margin-bottom:.28rem; }
-.md-patente { display:flex; align-items:center; gap:5px; font-family:'Bricolage Grotesque',sans-serif; font-size:.8rem; font-weight:800; color:var(--md-cor); }
-.md-selo { width:11px; height:11px; border-radius:50%; background:var(--md-cor); box-shadow:0 0 0 2.5px color-mix(in srgb, var(--md-cor) 22%, transparent); flex-shrink:0; }
-.md-conta { font-size:.66rem; color:var(--gray-400); white-space:nowrap; }
-.md-barra { height:5px; background:#F0EADF; border-radius:99px; overflow:hidden; }
-.md-barra-fill { height:100%; background:var(--md-cor); border-radius:99px; transition:width .9s cubic-bezier(.4,0,.2,1); }
-.md-xp { font-size:.62rem; color:var(--gray-400); margin-top:3px; }
-.md-lista { display:grid; grid-template-columns:repeat(10,1fr); gap:.4rem; margin-top:.45rem; }
-.md-icone { aspect-ratio:1; display:flex; align-items:center; justify-content:center; font-size:clamp(.62rem,1.5vw,.95rem); border-radius:50%; border:1.2px solid; cursor:help; transition:transform .15s; }
-.md-icone:hover { transform:scale(1.18); }
-.md-n1 { background:#F7EAD9; border-color:#C08552; }
-.md-n2 { background:#EFF2F5; border-color:#9AA5B1; }
-.md-n3 { background:#FBF1D7; border-color:#E8B23A; }
-.md-off { background:#F2EDE3; border-color:#E0D8CA; filter:grayscale(1); opacity:.4; }
-.md-prox { font-size:.64rem; color:var(--gray-500); margin-top:.4rem; line-height:1.35; }
-.md-prox strong { color:var(--navy); }
-@media(max-width:420px){ .md-lista { grid-template-columns:repeat(7,1fr); } }
+/* ── GALERIA DE TROFÉUS ────────────────────────────────────────
+   O quadro é o único bloco ESCURO do dashboard, de propósito: entre
+   cards claros de relatório, a vitrine precisa parecer outro material
+   (vidro escuro flutuando) para a conquista valer como recompensa.
+   Estrutura: cabeçalho + hero (nível atual, XP) + coleção (20 peças).
+   REGRA DE ALTURA: hero e coleção ficam LADO A LADO no desktop porque
+   empilhar empurra o calendário de Consistência para fora da 1ª tela. */
+.md-gal {
+  --md-cor:#8A8072;
+  position:relative;
+  background:
+    radial-gradient(120% 130% at 12% 0%, rgba(255,255,255,.10), transparent 55%),
+    radial-gradient(90% 120% at 100% 100%, color-mix(in srgb, var(--md-cor) 26%, transparent), transparent 60%),
+    linear-gradient(155deg, #1E4C36 0%, #173E2C 52%, #102C1F 100%);
+  border:none;
+  border-radius:24px;
+  padding:.9rem 1.05rem 1rem;
+  box-shadow:0 18px 38px -14px rgba(9,32,21,.55), 0 4px 12px -4px rgba(9,32,21,.35);
+  overflow:hidden;
+}
+/* fio de luz no topo: dá a leitura de vidro, não de papel */
+.md-gal::before {
+  content:""; position:absolute; inset:0 0 auto 0; height:1px;
+  background:linear-gradient(90deg, transparent, rgba(255,255,255,.28), transparent);
+}
+.md-p0 { --md-cor:#B9AE9B; }
+.md-p1 { --md-cor:#D08C56; }
+.md-p2 { --md-cor:#B9C4CF; }
+.md-p3 { --md-cor:#F0BC4E; }
+.md-p4 { --md-cor:#7FBBD1; }
+.md-p5 { --md-cor:#6FD6F5; }
+
+.md-head { display:flex; align-items:baseline; justify-content:space-between; gap:.5rem; margin-bottom:.7rem; }
+.md-tit { font-family:'Bricolage Grotesque',sans-serif; font-size:.92rem; font-weight:800; color:#FFF; letter-spacing:.01em; }
+.md-conta { font-size:.66rem; font-weight:600; color:rgba(255,255,255,.55); white-space:nowrap; }
+
+.md-corpo { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.15fr); gap:1rem; align-items:center; }
+
+/* Hero: o nível atual, em tamanho de troféu */
+.md-hero { display:flex; align-items:center; gap:.7rem; min-width:0; }
+.md-selo {
+  width:52px; height:52px; flex-shrink:0; border-radius:50%;
+  display:flex; align-items:center; justify-content:center; font-size:1.5rem;
+  background:radial-gradient(circle at 32% 28%, color-mix(in srgb, var(--md-cor) 85%, #fff) 0%, var(--md-cor) 58%, color-mix(in srgb, var(--md-cor) 62%, #000) 100%);
+  box-shadow:0 0 0 4px color-mix(in srgb, var(--md-cor) 18%, transparent), 0 6px 16px -4px color-mix(in srgb, var(--md-cor) 55%, transparent);
+}
+.md-hero-txt { min-width:0; flex:1; }
+.md-patente { display:block; font-family:'Bricolage Grotesque',sans-serif; font-size:1rem; font-weight:800; color:var(--md-cor); line-height:1.2; }
+.md-barra { height:6px; background:rgba(255,255,255,.13); border-radius:99px; overflow:hidden; margin-top:.4rem; }
+.md-barra-fill { height:100%; border-radius:99px; background:linear-gradient(90deg, color-mix(in srgb, var(--md-cor) 70%, #fff), var(--md-cor)); box-shadow:0 0 10px -1px color-mix(in srgb, var(--md-cor) 70%, transparent); transition:width .9s cubic-bezier(.4,0,.2,1); }
+.md-xp { font-size:.63rem; color:rgba(255,255,255,.55); margin-top:5px; line-height:1.3; }
+
+/* Coleção: as 20 peças da vitrine */
+.md-lista { display:grid; grid-template-columns:repeat(auto-fit,minmax(30px,1fr)); gap:.4rem; min-width:0; }
+.md-icone {
+  aspect-ratio:1; display:flex; align-items:center; justify-content:center;
+  font-size:clamp(.7rem,1.35vw,1rem); border-radius:50%; cursor:help;
+  background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.13);
+  transition:transform .18s cubic-bezier(.34,1.4,.64,1), box-shadow .18s, filter .18s;
+}
+.md-icone:hover, .md-icone:focus-visible { transform:scale(1.1); outline:none; }
+/* Conquistada: cor plena + brilho da própria medalha */
+.md-n1 { border-color:rgba(208,140,86,.7);  box-shadow:inset 0 0 12px -4px rgba(208,140,86,.9); }
+.md-n2 { border-color:rgba(185,196,207,.7); box-shadow:inset 0 0 12px -4px rgba(185,196,207,.9); }
+.md-n3 { border-color:rgba(240,188,78,.75); box-shadow:inset 0 0 12px -4px rgba(240,188,78,.95); }
+.md-n1, .md-n2, .md-n3 { filter:drop-shadow(0 1px 3px rgba(0,0,0,.35)); }
+.md-n1:hover { box-shadow:inset 0 0 12px -4px rgba(208,140,86,.9), 0 0 14px -2px rgba(208,140,86,.6); }
+.md-n2:hover { box-shadow:inset 0 0 12px -4px rgba(185,196,207,.9), 0 0 14px -2px rgba(185,196,207,.6); }
+.md-n3:hover { box-shadow:inset 0 0 12px -4px rgba(240,188,78,.95), 0 0 16px -2px rgba(240,188,78,.7); }
+/* Bloqueada: silhueta apagada na vitrine */
+.md-off { background:rgba(255,255,255,.04); border-color:rgba(255,255,255,.09); box-shadow:none; filter:grayscale(100%) opacity(40%); }
+.md-off:hover { filter:grayscale(100%) opacity(65%); }
+
+.md-prox { font-size:.65rem; color:rgba(255,255,255,.6); margin-top:.7rem; line-height:1.4; border-top:1px solid rgba(255,255,255,.09); padding-top:.55rem; }
+.md-prox strong { color:#FFF; font-weight:700; }
+
+/* Mobile: hero em cima, vitrine embaixo */
+@media(max-width:768px){
+  .md-gal { border-radius:20px; padding:.85rem .9rem .9rem; }
+  .md-corpo { grid-template-columns:1fr; gap:.8rem; }
+  .md-lista { grid-template-columns:repeat(auto-fit,minmax(34px,1fr)); }
+  .md-selo { width:46px; height:46px; font-size:1.35rem; }
+}
+@media(prefers-reduced-motion:reduce){ .md-icone, .md-barra-fill { transition:none; } }
 .bz-wrap { display:flex; align-items:center; justify-content:center; gap:1.2rem; padding:0 .8rem; }
 .bz-svg { width:96px; height:96px; flex-shrink:0; }
 .bz-aro { fill:none; stroke:#DFD3BE; stroke-width:2; }
