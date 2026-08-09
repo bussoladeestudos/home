@@ -84,6 +84,7 @@ const ACTIONS={
   adiarPwa:()=>adiarPwa(),
   menuInstalarApp:()=>menuInstalarApp(),
   toggleMapaTudo:()=>toggleMapaTudo(),
+  toggleMedalhas:()=>toggleMedalhas(),
   navegarMesHabito:d=>navegarMesHabito(+d.dir),
   limparDia:(d,el,e)=>{e.stopPropagation();limparDia(d.key);},
   marcarDia1Concluido:d=>marcarDia1Concluido(d.key),
@@ -1438,11 +1439,22 @@ function renderMedalhas(){
   if(!STATE.inicio){ el.innerHTML=""; return; }
   const m=calcMedalhas(calcCobertura().pct);
   const p=m.patente;
-  // tabindex nas peças: a vitrine também se navega pelo teclado
-  const icones=m.medalhas.map(function(x){
+  // Vitrine RESUMIDA por padrão: conquistadas primeiro, depois as mais
+  // perto de cair. Ver 20 silhuetas cinzas de uma vez ocupa meia tela e
+  // empurra os cards de baixo, então o resto fica atrás de um botão.
+  const _LIM_MED=10;
+  const conquistadas=m.medalhas.filter(function(x){return x.ok;});
+  const pendentes=m.medalhas.filter(function(x){return !x.ok;});
+  const visiveis=_medExpandido?m.medalhas:conquistadas.concat(pendentes).slice(0,_LIM_MED);
+  const ocultas=m.medalhas.length-visiveis.length;
+  const icones=visiveis.map(function(x){
     const tit=x.ok?`${x.nome} — ${x.desc}`:`${x.nome} (bloqueada) — ${x.desc}. Faltam ${x.falta}`;
     return `<span class="md-icone md-n${x.nivel}${x.ok?"":" md-off"}" tabindex="0" role="img" aria-label="${esc(tit)}" title="${esc(tit)}">${x.icone}</span>`;
-  }).join("");
+  }).join("")+(
+    ocultas>0
+      ? `<button class="md-icone md-mais" data-action="toggleMedalhas" title="Ver as ${ocultas} medalhas restantes" aria-label="Ver as ${ocultas} medalhas restantes">+${ocultas}</button>`
+      : (_medExpandido?`<button class="md-icone md-mais" data-action="toggleMedalhas" title="Mostrar menos" aria-label="Mostrar menos">−</button>`:"")
+  );
   const prox=m.proxima
     ? `<div class="md-prox" title="${esc(m.proxima.desc)}">A caminho: <strong>${esc(m.proxima.nome)}</strong> · faltam ${m.proxima.falta}${m.proxima.id.indexOf("cob")===0?"%":""}</div>`
     : `<div class="md-prox">Galeria completa. Todas as medalhas conquistadas.</div>`;
@@ -2478,6 +2490,8 @@ function renderMapaCalorPage(targetId){
 /* Lista de matérias compacta por padrão: mostra as prioritárias e expande
    sob demanda (preferência só da sessão, não vai para o STATE). */
 let _mapaTudo=false;
+let _medExpandido=false;
+function toggleMedalhas(){ _medExpandido=!_medExpandido; renderMedalhas(); }
 function toggleMapaTudo(){ _mapaTudo=!_mapaTudo; renderMapaCalorPage("mapaGrid"); }
 
 function renderMaterias(){
