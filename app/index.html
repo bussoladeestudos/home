@@ -439,12 +439,24 @@ function fazerLogout() {
 
   <!-- PAGE: DASHBOARD -->
   <div class="page active" id="page-dashboard">
-    <div class="page-title" id="mainTitle" style="font-size:2rem;">Seu progresso</div>
-    <div class="page-sub" id="mainSub">Visão geral de quanto do edital você já dominou.</div>
-    <div id="dashHero" style="margin-bottom:1.5rem;"></div>
-    <div style="background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:1.25rem 1.4rem;margin-bottom:1.5rem;">
-      <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:1.02rem;font-weight:700;color:var(--navy);margin-bottom:.9rem;">📚 Evolução por Matéria</div>
-      <div class="mapa-grid" id="mapaGrid"></div>
+    <!-- Cabeçalho do dashboard: a bússola do rumo substitui saudação e subtítulo -->
+    <div class="dash-saudacao">
+      <div id="bussolaRumo"></div>
+      <div id="dashMedalhas"></div>
+    </div>
+    <!-- Dashboard em 2 colunas. Esquerda: Aderência + Evolução por Matéria.
+         Direita: Ritmo + Consistência (sobem para o topo da tela, ao lado da
+         Aderência). No mobile vira 1 coluna: Aderência -> hábito -> matérias
+         (a .dash-main usa display:contents para permitir essa reordenação). -->
+    <div class="dash-cols">
+      <div class="dash-main">
+        <div id="dashHero"></div>
+        <div class="card-evolucao" style="background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:1.25rem 1.4rem;">
+          <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:1.02rem;font-weight:700;color:var(--navy);margin-bottom:.9rem;">📚 Evolução por Matéria</div>
+          <div class="mapa-grid" id="mapaGrid"></div>
+        </div>
+      </div>
+      <div class="dash-side" id="dashHabito"></div>
     </div>
     <div class="painel-wrapper">
       <div class="painel-collapsed" data-action="togglePainel">
