@@ -382,7 +382,7 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
    rotações independentes: .bz-base aponta o rumo (transição suave quando
    a aderência muda) e .bz-osc oscila de leve o tempo todo, como bússola
    de verdade. Sem registros, .bz-girando assume e ela procura o Norte. */
-.dash-saudacao { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); align-items:center; gap:1rem; margin-bottom:1.1rem; }
+.dash-saudacao { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); align-items:center; gap:.9rem; margin-bottom:.75rem; }
 .dash-saudacao > #bussolaRumo { display:flex; justify-content:center; }
 @media(max-width:1024px){ .dash-saudacao { grid-template-columns:1fr; } }
 /* ── Galeria de medalhas (topo do dashboard, ao lado da bússola) ──
@@ -405,7 +405,7 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
     linear-gradient(155deg, #1E4C36 0%, #173E2C 52%, #102C1F 100%);
   border:none;
   border-radius:24px;
-  padding:.9rem 1.05rem 1rem;
+  padding:.72rem .95rem .8rem;
   box-shadow:0 18px 38px -14px rgba(9,32,21,.55), 0 4px 12px -4px rgba(9,32,21,.35);
   overflow:hidden;
 }
@@ -421,7 +421,7 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
 .md-p4 { --md-cor:#7FBBD1; }
 .md-p5 { --md-cor:#6FD6F5; }
 
-.md-head { display:flex; align-items:baseline; justify-content:space-between; gap:.5rem; margin-bottom:.7rem; }
+.md-head { display:flex; align-items:baseline; justify-content:space-between; gap:.5rem; margin-bottom:.55rem; }
 .md-tit { font-family:'Bricolage Grotesque',sans-serif; font-size:.92rem; font-weight:800; color:#FFF; letter-spacing:.01em; }
 .md-conta { font-size:.66rem; font-weight:600; color:rgba(255,255,255,.55); white-space:nowrap; }
 
@@ -430,7 +430,7 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
 /* Hero: o nível atual, em tamanho de troféu */
 .md-hero { display:flex; align-items:center; gap:.7rem; min-width:0; }
 .md-selo {
-  width:52px; height:52px; flex-shrink:0; border-radius:50%;
+  width:46px; height:46px; flex-shrink:0; border-radius:50%;
   display:flex; align-items:center; justify-content:center; font-size:1.5rem;
   background:radial-gradient(circle at 32% 28%, color-mix(in srgb, var(--md-cor) 85%, #fff) 0%, var(--md-cor) 58%, color-mix(in srgb, var(--md-cor) 62%, #000) 100%);
   box-shadow:0 0 0 4px color-mix(in srgb, var(--md-cor) 18%, transparent), 0 6px 16px -4px color-mix(in srgb, var(--md-cor) 55%, transparent);
@@ -462,25 +462,30 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
 .md-off { background:rgba(255,255,255,.04); border-color:rgba(255,255,255,.09); box-shadow:none; filter:grayscale(100%) opacity(40%); }
 .md-off:hover { filter:grayscale(100%) opacity(65%); }
 
-.md-prox { font-size:.65rem; color:rgba(255,255,255,.6); margin-top:.7rem; line-height:1.4; border-top:1px solid rgba(255,255,255,.09); padding-top:.55rem; }
+.md-prox { font-size:.65rem; color:rgba(255,255,255,.6); margin-top:.55rem; line-height:1.35; border-top:1px solid rgba(255,255,255,.09); padding-top:.45rem; }
 .md-prox strong { color:#FFF; font-weight:700; }
 
 /* Mobile: hero em cima, vitrine embaixo */
 @media(max-width:768px){
+  .bz-svg { width:76px; height:76px; }
   .md-gal { border-radius:20px; padding:.85rem .9rem .9rem; }
   .md-corpo { grid-template-columns:1fr; gap:.8rem; }
   .md-lista { grid-template-columns:repeat(auto-fit,minmax(34px,1fr)); }
-  .md-selo { width:46px; height:46px; font-size:1.35rem; }
+  .md-selo { width:42px; height:42px; font-size:1.25rem; }
 }
 @media(prefers-reduced-motion:reduce){ .md-icone, .md-barra-fill { transition:none; } }
-.bz-wrap { display:flex; align-items:center; justify-content:center; gap:1.2rem; padding:0 .8rem; }
-.bz-svg { width:96px; height:96px; flex-shrink:0; }
+/* Contêiner fantasma: mesma cor do fundo, borda quase invisível. Delimita
+   a área sem competir com os cartões brancos de verdade do dashboard. */
+.bz-wrap { --bz-cor:#2FB374; display:flex; align-items:center; justify-content:center; gap:1.1rem;
+  padding:.5rem .9rem; border:1px solid rgba(0,0,0,.05); border-radius:18px;
+  background:linear-gradient(180deg, rgba(255,255,255,.28), rgba(255,255,255,0)); }
+.bz-svg { width:84px; height:84px; flex-shrink:0; }
 .bz-aro { fill:none; stroke:#DFD3BE; stroke-width:2; }
-.bz-fundo { fill:rgba(255,255,255,.34); stroke:none; }
+.bz-fundo { stroke:none; }
 .bz-card { font-size:9px; font-weight:800; fill:#B6A88E; text-anchor:middle; font-family:'Bricolage Grotesque',sans-serif; }
 .bz-card.bz-n { fill:#173E2C; font-size:12px; }
 .bz-base { transform-origin:60px 60px; transition:transform 1.4s cubic-bezier(.2,.9,.25,1); }
-.bz-osc { transform-origin:60px 60px; animation:bzOscila 2.6s ease-in-out infinite; }
+.bz-osc { transform-origin:60px 60px; animation:bzOscila 2.6s ease-in-out infinite; filter:drop-shadow(0 1.6px 1.7px rgba(92,74,46,.42)); }
 /* Ritmo irregular de propósito: agulha magnética não oscila em senoide
    perfeita, ela vai e volta com pequenas correções. */
 @keyframes bzOscila {
@@ -491,17 +496,23 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
   76%  { transform:rotate(-1.8deg) }
   100% { transform:rotate(-2.6deg) }
 }
-.bz-norte { fill:#2FB374; }
 .bz-sul { fill:#DDD1BD; }
-.bz-pino { fill:#173E2C; }
+.bz-pino { fill:#173E2C; filter:drop-shadow(0 1px 1.5px rgba(92,74,46,.5)); }
 .bz-girando { animation:bzGira 5s linear infinite; }
 @keyframes bzGira { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
-.bz-txt { display:flex; flex-direction:column; gap:3px; max-width:390px; }
-.bz-alvo { font-family:'Bricolage Grotesque',sans-serif; font-size:1.05rem; font-weight:800; letter-spacing:.13em; color:#173E2C; line-height:1.1; }
-.bz-frase { font-size:.86rem; line-height:1.5; color:var(--gray-600); }
-.bz-wrap.bz-fora .bz-norte, .bz-wrap.bz-perdido .bz-norte { fill:#DC7A5A; }
-.bz-wrap.bz-desvio .bz-norte { fill:#E8B23A; }
-.bz-wrap.bz-calibrando .bz-norte { fill:#C3B69F; }
+.bz-txt { display:flex; flex-direction:column; align-items:flex-start; gap:3px; max-width:390px; }
+/* Etiqueta de status: diagnóstico estruturado em vez de texto corrido */
+.bz-badge { display:inline-flex; align-items:center; gap:4px; font-size:.63rem; font-weight:800;
+  letter-spacing:.03em; text-transform:uppercase; padding:2px 8px; border-radius:99px;
+  background:color-mix(in srgb, var(--bz-cor) 14%, transparent);
+  color:color-mix(in srgb, var(--bz-cor) 72%, #3A3226);
+  border:1px solid color-mix(in srgb, var(--bz-cor) 32%, transparent); margin-bottom:1px; }
+.bz-alvo { font-family:'Bricolage Grotesque',sans-serif; font-size:1rem; font-weight:800; letter-spacing:.13em; color:#173E2C; line-height:1.1; }
+.bz-frase { font-size:.83rem; line-height:1.45; color:var(--gray-600); }
+.bz-wrap.bz-desvio { --bz-cor:#E8B23A; }
+.bz-wrap.bz-fora, .bz-wrap.bz-perdido { --bz-cor:#DC7A5A; }
+.bz-wrap.bz-calibrando { --bz-cor:#B0A48F; }
+.bz-norte { fill:var(--bz-cor); }
 @media(max-width:560px){
   .bz-svg { width:72px; height:72px; }
   .bz-alvo { font-size:.92rem; }
@@ -616,8 +627,6 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
 .cm-hoje { box-shadow:0 0 0 1.5px #173E2C; }
 .cm-fora { background:transparent; color:#E4DCCE; }
 /* Legenda mínima: o verde fala sozinho */
-.cm-leg-dot { width:9px; height:9px; border-radius:50%; background:#E8B23A; display:inline-block; }
-.cm-leg-hoje { width:9px; height:9px; border-radius:2px; background:transparent; box-shadow:0 0 0 1.5px #173E2C; display:inline-block; }
 
 /* Calendário e números lado a lado: a grade fica compacta sem deixar o card oco */
 /* Calendário em largura total; os números vêm abaixo, nunca na lateral */
