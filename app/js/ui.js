@@ -1291,7 +1291,14 @@ function _htmlMes(mc){
       <span class="cm-mes">${_MES_LONGO[mc.mes]} ${mc.ano}</span>
       <button class="cm-nav" data-action="navegarMesHabito" data-dir="1" aria-label="Próximo mês"${_habMesOffset>=0?" disabled":""}>▶</button>
     </div>
-    <div class="cm-grid">${cels}</div>`;
+    <div class="cm-grid">${cels}</div>
+    <div class="cm-leg">
+      <span><i class="cm-sw-feito"></i>estudou</span>
+      <span><i class="cm-sw-falha"></i>previsto, sem registro</span>
+      <span><i class="cm-sw-livre"></i>descanso</span>
+      <span><i class="cm-sw-marco"></i>simulado ou retorno técnico</span>
+      <span><i class="cm-sw-hoje"></i>hoje</span>
+    </div>`;
 }
 /* Resumo abaixo do calendário: sem caixas, tipografia uniforme.
    Destaque é quanto o aluno estudou; comparação usa o MESMO período do mês
@@ -1301,19 +1308,20 @@ function _htmlMesResumo(mc,hmResumo){
   const mesNome=_MES_LONGO[mc.mes], mesAnt=_MES_LONGO[(mc.mes+11)%12];
   let comparacao="";
   if(r.mesFechado&&r.variacao!=null){
-    comparacao=`<em>${r.variacao>=0?`<span class="cm-up">+${r.variacao}%</span>`:`<span class="cm-down">${r.variacao}%</span>`} que em ${mesAnt}</em>`;
+    comparacao=`<em>(${r.variacao>=0?`<span class="cm-up">+${r.variacao}%</span>`:`<span class="cm-down">${r.variacao}%</span>`} que em ${mesAnt})</em>`;
   } else if(r.mesAnterior){
-    comparacao=`<em>${r.mesAnterior} no mesmo período de ${mesAnt}</em>`;
+    comparacao=`<em>(vs. ${r.mesAnterior} no mesmo período de ${mesAnt})</em>`;
   }
+  const _d=function(n){return n===1?"dia":"dias";};
   return `<div class="cm-destaque">
-      <b>${r.estudados}</b><span>dia${r.estudados!==1?"s":""} com estudo em ${mesNome}</span>
+      🔥 <b>${r.estudados}</b><span>${_d(r.estudados)} com estudo em ${mesNome}</span>
       ${comparacao}
     </div>
     <div class="cm-mini">
-      <div class="cm-stat"><b>${r.pct!=null?r.pct+"%":"—"}</b><span>do previsto</span></div>
-      <div class="cm-stat"><b>${hmResumo.recorde}</b><span>recorde</span></div>
-      <div class="cm-stat"><b>${hmResumo.cumprimento30==null?"—":hmResumo.cumprimento30+"%"}</b><span>últimos 30 dias</span></div>
-      <div class="cm-stat"><b>${hmResumo.melhorSemana}</b><span>melhor semana</span></div>
+      <div class="cm-stat" title="Dos dias que o plano previa neste mês, quantos você cumpriu"><b>${r.pct!=null?r.pct+"%":"—"}</b><span>aderência ao plano</span></div>
+      <div class="cm-stat" title="Seu recorde de dias seguidos estudando"><b>${hmResumo.recorde}<i>${_d(hmResumo.recorde)}</i></b><span>maior sequência</span></div>
+      <div class="cm-stat" title="Percentual dos dias previstos que você cumpriu nos últimos 30 dias"><b>${hmResumo.cumprimento30==null?"—":hmResumo.cumprimento30+"%"}</b><span>ritmo (30 dias)</span></div>
+      <div class="cm-stat" title="Maior número de dias estudados numa mesma semana"><b>${hmResumo.melhorSemana}<i>${_d(hmResumo.melhorSemana)}</i></b><span>na melhor semana</span></div>
     </div>`;
 }
 function _svgHeatmap(hm){
@@ -1463,11 +1471,6 @@ function renderHabito(){
       <div class="cm-layout">
         <div class="cm-cal">${_htmlMes(mc)}</div>
         <div class="cm-lado">${_htmlMesResumo(mc,r)}</div>
-      </div>
-      <div class="hab-leg">
-        <span><i style="background:#1C6B45"></i> dia com estudo</span>
-        <span><i class="cm-leg-dot"></i> simulado ou retorno técnico</span>
-        <span><i class="cm-leg-hoje"></i> hoje</span>
       </div>
     </div>
     <div class="hab-card">
