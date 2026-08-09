@@ -399,3 +399,21 @@ test("calcDominio: limiar de amostra parcial é o DOMINIO_MIN_AMOSTRA",()=>{
   assert.strictEqual(E.calcDominio(90,49).confParcial,true);
   assert.strictEqual(E.calcDominio(90,50).confParcial,false);
 });
+
+/* Etiqueta de status da bússola: cada nível tem tag e ícone, e a frase
+   não pode repetir o que o badge já diz. */
+test("calcRumo: todo nível devolve tag e ícone, e a frase não repete o badge",()=>{
+  const E=freshEngine({},FIX_EDITAIS);
+  const casos=[[100,"norte","No Ritmo"],[90,"rota","Rota Firme"],[70,"desvio","Pequeno Desvio"],
+               [40,"fora","Rota Desviada"],[0,"perdido","Fora de Rota"]];
+  casos.forEach(([pct,nivel,tag])=>{
+    const r=E.calcRumo(pct,true);
+    assert.strictEqual(r.nivel,nivel);
+    assert.strictEqual(r.tag,tag);
+    assert.ok(r.icone&&r.icone.length>0,"sem ícone em "+nivel);
+    assert.ok(!r.frase.toLowerCase().startsWith(tag.toLowerCase()),"frase repete o badge em "+nivel);
+  });
+  const cal=E.calcRumo(0,false);
+  assert.strictEqual(cal.tag,"Calibrando");
+  assert.strictEqual(cal.angulo,null);
+});
