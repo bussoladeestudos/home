@@ -1411,24 +1411,35 @@ function renderMedalhas(){
   if(!STATE.inicio){ el.innerHTML=""; return; }
   const m=calcMedalhas(calcCobertura().pct);
   const p=m.patente;
+  // tabindex nas peças: a vitrine também se navega pelo teclado
   const icones=m.medalhas.map(function(x){
     const tit=x.ok?`${x.nome} — ${x.desc}`:`${x.nome} (bloqueada) — ${x.desc}. Faltam ${x.falta}`;
-    return `<span class="md-icone md-n${x.nivel}${x.ok?"":" md-off"}" title="${esc(tit)}">${x.icone}</span>`;
+    return `<span class="md-icone md-n${x.nivel}${x.ok?"":" md-off"}" tabindex="0" role="img" aria-label="${esc(tit)}" title="${esc(tit)}">${x.icone}</span>`;
   }).join("");
   const prox=m.proxima
     ? `<div class="md-prox" title="${esc(m.proxima.desc)}">A caminho: <strong>${esc(m.proxima.nome)}</strong> · faltam ${m.proxima.falta}${m.proxima.id.indexOf("cob")===0?"%":""}</div>`
     : `<div class="md-prox">Galeria completa. Todas as medalhas conquistadas.</div>`;
-  el.innerHTML=`<div class="md-wrap md-p${p.indice}">
+  // Selo do hero: a última medalha conquistada dá a cara da vitrine.
+  // Sem nenhuma ainda, um troféu neutro segura o lugar.
+  const ultima=m.medalhas.filter(function(x){return x.ok;}).pop();
+  const seloIcone=ultima?ultima.icone:"🏆";
+  const seloTit=ultima?`Última conquista: ${ultima.nome}`:"Sua primeira medalha aparece aqui";
+  el.innerHTML=`<div class="md-gal md-p${p.indice}">
     <div class="md-head">
-      <span class="md-tit">🏅 Quadro de Medalhas</span>
+      <span class="md-tit">🏅 Galeria de Troféus</span>
       <span class="md-conta">${m.conquistadas} de ${m.total} conquistadas</span>
     </div>
-    <div class="md-topo">
-      <span class="md-patente"><i class="md-selo"></i>${esc(p.nome)}</span>
+    <div class="md-corpo">
+      <div class="md-hero">
+        <span class="md-selo" title="${esc(seloTit)}" role="img" aria-label="${esc(seloTit)}">${seloIcone}</span>
+        <div class="md-hero-txt">
+          <span class="md-patente">${esc(p.nome)}</span>
+          <div class="md-barra"><div class="md-barra-fill" style="width:${p.pct}%"></div></div>
+          <div class="md-xp">${m.xp} XP${p.xpProx?` · faltam ${p.xpProx-m.xp} para ${esc(p.proxNome)}`:" · nível máximo"}</div>
+        </div>
+      </div>
+      <div class="md-lista">${icones}</div>
     </div>
-    <div class="md-barra"><div class="md-barra-fill" style="width:${p.pct}%"></div></div>
-    <div class="md-xp">${m.xp} XP${p.xpProx?` · faltam ${p.xpProx-m.xp} para ${esc(p.proxNome)}`:" · nível máximo"}</div>
-    <div class="md-lista">${icones}</div>
     ${prox}
   </div>`;
 }
