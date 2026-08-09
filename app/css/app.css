@@ -169,7 +169,7 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
 .mapa-header-cell { font-size:.65rem; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--gray-400); }
 .mapa-header-cell.right { text-align:right; }
 /* Linha de dados */
-.mapa-item { display:grid; grid-template-columns:170px 1fr 130px; align-items:center; gap:.75rem; padding:.65rem .9rem; background:var(--white); border:1px solid var(--gray-200); border-radius:var(--radius-md); transition:background .15s,box-shadow .15s; }
+.mapa-item { display:grid; grid-template-columns:170px 1fr 142px; align-items:center; gap:.75rem; padding:.65rem .9rem; background:var(--white); border:1px solid var(--gray-200); border-radius:var(--radius-md); transition:background .15s,box-shadow .15s; }
 .mapa-item:hover { background:var(--gray-50); box-shadow:0 2px 8px rgba(0,0,0,.05); }
 /* Coluna matéria */
 .mapa-materia { font-size:.82rem; font-weight:600; color:var(--gray-800); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
@@ -191,7 +191,12 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
 .mapa-status.st-nodata  { color:var(--gray-400); }
 /* Coluna confiança */
 .mapa-conf-col { display:flex; justify-content:flex-end; }
-.conf-badge { display:flex; flex-direction:column; align-items:center; gap:1px; padding:5px 12px; border-radius:var(--radius-sm); font-size:.7rem; font-weight:700; min-width:70px; text-align:center; }
+.conf-badge { display:flex; flex-direction:column; align-items:center; gap:1px; padding:5px 10px; border-radius:var(--radius-sm); font-size:.7rem; font-weight:700; min-width:96px; text-align:center; cursor:help; }
+/* Base da amostra: sem ela o número de cima vira promessa vazia */
+.conf-badge .cb-base { font-size:.56rem; font-weight:600; opacity:.8; line-height:1.2; white-space:nowrap; letter-spacing:.01em; }
+/* Amostra pequena: tira o peso visual do badge para não virar falso "estou seguro" */
+.conf-badge.cb-parcial { background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.55) 0 5px,transparent 5px 10px); }
+.conf-badge.cb-parcial .cb-pct::after { content:"*"; font-size:.7em; vertical-align:super; opacity:.7; }
 .cb-green  { background:var(--green-pale);  color:var(--green); border:1px solid var(--green-mid); }
 .cb-yellow { background:var(--yellow-pale); color:var(--yellow); border:1px solid var(--yellow-mid); }
 .cb-red    { background:var(--red-pale);    color:var(--red);   border:1px solid var(--red-mid); }
@@ -873,7 +878,7 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
   :root{--sidebar-w:200px}
   /* Planner em telas médias: 2 células por linha */
   .semana-grid { grid-template-columns:repeat(2,1fr); }
-  .mapa-item{grid-template-columns:130px 1fr 110px} .mapa-header{grid-template-columns:130px 1fr 110px}
+  .mapa-item{grid-template-columns:120px 1fr 120px} .mapa-header{grid-template-columns:120px 1fr 120px}
 }
 @media (max-width:768px) {
   :root{--sidebar-w:0px}
@@ -894,7 +899,7 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
   .mapa-prog-col{ grid-area:prog; }
   .mapa-conf-col{ grid-area:conf; align-self:start; }
   .mapa-materia{ white-space:normal; line-height:1.35; overflow-wrap:anywhere; }
-  .conf-badge{ min-width:54px; padding:4px 9px; }
+  .conf-badge{ min-width:88px; padding:4px 8px; }
   .conf-badge .cb-pct{ font-size:.85rem; }
   .mini-cards{grid-template-columns:1fr 1fr}
   .main{padding:1rem}
@@ -1252,6 +1257,6 @@ body.aguardando-auth > *:not(#loginScreen) { visibility:hidden !important; point
 
 /* ── Evolução por Matéria: nomes sem truncar no desktop ── */
 @media(min-width:1025px){
-  .mapa-header,.mapa-item{ grid-template-columns:minmax(200px,280px) 1fr 110px; }
+  .mapa-header,.mapa-item{ grid-template-columns:minmax(200px,280px) 1fr 142px; }
   .mapa-materia{ white-space:normal; line-height:1.3; }
 }
