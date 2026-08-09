@@ -372,6 +372,237 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
 /* Botão "ver todos" do Retorno Técnico compacto */
 .sab-vermais { width:100%; margin-top:.45rem; background:transparent; border:1.5px dashed #E0C98F; color:#8A7322; border-radius:8px; padding:6px 8px; font-size:.72rem; font-weight:700; cursor:pointer; font-family:inherit; transition:background .15s; }
 .sab-vermais:hover { background:rgba(138,115,34,.06); }
+/* ── Bússola do rumo (cabeçalho do dashboard) ──
+   Sem card: fica sobre o tom de areia da página. A agulha combina duas
+   rotações independentes: .bz-base aponta o rumo (transição suave quando
+   a aderência muda) e .bz-osc oscila de leve o tempo todo, como bússola
+   de verdade. Sem registros, .bz-girando assume e ela procura o Norte. */
+.dash-saudacao { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); align-items:center; gap:1rem; margin-bottom:1.1rem; }
+.dash-saudacao > #bussolaRumo { display:flex; justify-content:center; }
+@media(max-width:1024px){ .dash-saudacao { grid-template-columns:1fr; } }
+/* ── Galeria de medalhas (topo do dashboard, ao lado da bússola) ──
+   Cor por nível da medalha: 1 bronze, 2 prata, 3 ouro. Bloqueadas ficam
+   em cinza, para o aluno ver o que ainda dá para conquistar. O nível do
+   aluno (md-p0..md-p5) tinge o selo e a barra de XP. */
+.md-wrap { --md-cor:#8A8072; background:#FBF6ED; border:1.5px solid #E5DAC8; border-color:color-mix(in srgb, var(--md-cor) 45%, #E5DAC8); border-radius:var(--radius-lg); padding:.55rem .75rem .6rem; }
+.md-p0 { --md-cor:#8A8072; }
+.md-p1 { --md-cor:#C08552; }
+.md-p2 { --md-cor:#8E99A4; }
+.md-p3 { --md-cor:#D9A441; }
+.md-p4 { --md-cor:#5E93A6; }
+.md-p5 { --md-cor:#3FA7CF; }
+.md-head { display:flex; align-items:baseline; justify-content:space-between; gap:.5rem; margin-bottom:.3rem; }
+.md-tit { font-family:'Bricolage Grotesque',sans-serif; font-size:.88rem; font-weight:800; color:var(--navy); }
+.md-topo { display:flex; align-items:center; gap:.5rem; margin-bottom:.28rem; }
+.md-patente { display:flex; align-items:center; gap:5px; font-family:'Bricolage Grotesque',sans-serif; font-size:.8rem; font-weight:800; color:var(--md-cor); }
+.md-selo { width:11px; height:11px; border-radius:50%; background:var(--md-cor); box-shadow:0 0 0 2.5px color-mix(in srgb, var(--md-cor) 22%, transparent); flex-shrink:0; }
+.md-conta { font-size:.66rem; color:var(--gray-400); white-space:nowrap; }
+.md-barra { height:5px; background:#F0EADF; border-radius:99px; overflow:hidden; }
+.md-barra-fill { height:100%; background:var(--md-cor); border-radius:99px; transition:width .9s cubic-bezier(.4,0,.2,1); }
+.md-xp { font-size:.62rem; color:var(--gray-400); margin-top:3px; }
+.md-lista { display:grid; grid-template-columns:repeat(10,1fr); gap:.4rem; margin-top:.45rem; }
+.md-icone { aspect-ratio:1; display:flex; align-items:center; justify-content:center; font-size:clamp(.62rem,1.5vw,.95rem); border-radius:50%; border:1.2px solid; cursor:help; transition:transform .15s; }
+.md-icone:hover { transform:scale(1.18); }
+.md-n1 { background:#F7EAD9; border-color:#C08552; }
+.md-n2 { background:#EFF2F5; border-color:#9AA5B1; }
+.md-n3 { background:#FBF1D7; border-color:#E8B23A; }
+.md-off { background:#F2EDE3; border-color:#E0D8CA; filter:grayscale(1); opacity:.4; }
+.md-prox { font-size:.64rem; color:var(--gray-500); margin-top:.4rem; line-height:1.35; }
+.md-prox strong { color:var(--navy); }
+@media(max-width:420px){ .md-lista { grid-template-columns:repeat(7,1fr); } }
+.bz-wrap { display:flex; align-items:center; justify-content:center; gap:1.2rem; padding:0 .8rem; }
+.bz-svg { width:96px; height:96px; flex-shrink:0; }
+.bz-aro { fill:none; stroke:#DFD3BE; stroke-width:2; }
+.bz-fundo { fill:rgba(255,255,255,.34); stroke:none; }
+.bz-card { font-size:9px; font-weight:800; fill:#B6A88E; text-anchor:middle; font-family:'Bricolage Grotesque',sans-serif; }
+.bz-card.bz-n { fill:#173E2C; font-size:12px; }
+.bz-base { transform-origin:60px 60px; transition:transform 1.4s cubic-bezier(.2,.9,.25,1); }
+.bz-osc { transform-origin:60px 60px; animation:bzOscila 2.6s ease-in-out infinite; }
+/* Ritmo irregular de propósito: agulha magnética não oscila em senoide
+   perfeita, ela vai e volta com pequenas correções. */
+@keyframes bzOscila {
+  0%   { transform:rotate(-2.6deg) }
+  22%  { transform:rotate(2.2deg) }
+  41%  { transform:rotate(-1.1deg) }
+  58%  { transform:rotate(2.6deg) }
+  76%  { transform:rotate(-1.8deg) }
+  100% { transform:rotate(-2.6deg) }
+}
+.bz-norte { fill:#2FB374; }
+.bz-sul { fill:#DDD1BD; }
+.bz-pino { fill:#173E2C; }
+.bz-girando { animation:bzGira 5s linear infinite; }
+@keyframes bzGira { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+.bz-txt { display:flex; flex-direction:column; gap:3px; max-width:390px; }
+.bz-alvo { font-family:'Bricolage Grotesque',sans-serif; font-size:1.05rem; font-weight:800; letter-spacing:.13em; color:#173E2C; line-height:1.1; }
+.bz-frase { font-size:.86rem; line-height:1.5; color:var(--gray-600); }
+.bz-wrap.bz-fora .bz-norte, .bz-wrap.bz-perdido .bz-norte { fill:#DC7A5A; }
+.bz-wrap.bz-desvio .bz-norte { fill:#E8B23A; }
+.bz-wrap.bz-calibrando .bz-norte { fill:#C3B69F; }
+@media(max-width:560px){
+  .bz-svg { width:72px; height:72px; }
+  .bz-alvo { font-size:.92rem; }
+  .bz-frase { font-size:.8rem; }
+  .bz-txt { max-width:none; }
+}
+/* quem prefere menos movimento não vê a agulha oscilar */
+@media(prefers-reduced-motion:reduce){
+  .bz-osc, .bz-girando { animation:none; }
+}
+/* ── Dashboard: card de aderência (compacto — número e barra na mesma linha) ── */
+.hero-card { background:#fff; border:1px solid #EEE5D6; border-radius:18px; padding:14px 20px 12px; }
+.hero-top { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:8px; }
+.hero-lbl { font-size:.82rem; color:#9A9082; font-weight:600; }
+.hero-badge { font-size:.72rem; font-weight:700; padding:4px 11px; border-radius:99px; white-space:nowrap; }
+.hero-mid { display:flex; align-items:center; gap:18px; }
+.hero-num { font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:2.1rem; color:#241F18; line-height:1; flex-shrink:0; }
+.hero-num-sub { display:block; font-family:inherit; font-size:.62rem; font-weight:600; color:#A89E8E; margin-top:3px; letter-spacing:.02em; }
+.hero-barcol { flex:1; min-width:0; }
+.hero-bar { height:10px; background:#F0EADF; border-radius:99px; overflow:hidden; }
+.hero-bar-fill { height:100%; background:linear-gradient(90deg,#2FB374,#5FD79A); border-radius:99px; transition:width .8s cubic-bezier(.4,0,.2,1); }
+.hero-legend { display:flex; justify-content:space-between; gap:10px; margin-top:6px; font-size:.72rem; color:#A89E8E; }
+.hero-foot { display:flex; align-items:center; justify-content:space-between; gap:8px; flex-wrap:wrap; margin-top:10px; padding-top:9px; border-top:1px dashed #F0EADF; }
+.hero-cob { font-size:.74rem; color:#8A8072; cursor:help; }
+.hero-cob strong { color:#1C7A4B; }
+.hero-chips { display:flex; gap:6px; flex-wrap:wrap; }
+@media(max-width:520px){
+  .hero-num { font-size:1.75rem; }
+  .hero-legend { font-size:.67rem; }
+  .hero-foot { gap:6px; }
+}
+/* ── Dashboard: grade de 2 colunas (matérias | hábito) ── */
+.dash-cols { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); gap:1rem; align-items:start; margin-bottom:1.5rem; }
+.dash-main { display:flex; flex-direction:column; gap:1rem; min-width:0; }
+.dash-side { display:block; min-width:0; }
+.dash-chip { display:inline-flex; align-items:center; gap:5px; font-size:.74rem; font-weight:700; border-radius:99px; padding:5px 12px; cursor:pointer; border:1px solid transparent; transition:filter .15s; }
+.dash-chip:hover { filter:brightness(.97); }
+.dc-alerta { background:#EDE7F7; border-color:#DBD0F0; color:#5B43A0; }
+.dc-ok { background:#E4F4EA; border-color:#C4E6CE; color:#1C7A4B; }
+.dc-neutro { background:#FBF1D7; border-color:#F2E2AE; color:#8A6212; }
+.mapa-vermais { width:100%; margin-top:.6rem; background:transparent; border:1.5px dashed var(--gray-200); color:var(--gray-500); border-radius:10px; padding:8px; font-size:.76rem; font-weight:700; cursor:pointer; font-family:inherit; transition:background .15s; }
+.mapa-vermais:hover { background:var(--gray-50); }
+@media(max-width:1024px){
+  /* 1 coluna: display:contents dissolve a .dash-main para reordenar os 3 cards */
+  .dash-cols { display:flex; flex-direction:column; gap:1rem; }
+  .dash-main { display:contents; }
+  #dashHero { order:1; }
+  .dash-side { order:2; }        /* hábito antes da lista longa de matérias */
+  .card-evolucao { order:3; }
+}
+/* ── Dashboard: hábito (consistência + ritmo semanal) ── */
+.hab-stack { display:flex; flex-direction:column; gap:.8rem; }
+.hab-card { background:var(--white); border:1px solid var(--gray-200); border-radius:var(--radius-lg); padding:.8rem 1.05rem .85rem; }
+.hab-head { display:flex; align-items:baseline; justify-content:space-between; gap:.6rem; flex-wrap:wrap; margin-bottom:.55rem; }
+.hab-tit { font-family:'Bricolage Grotesque',sans-serif; font-size:.95rem; font-weight:800; color:var(--navy); }
+.hab-sub { font-size:.7rem; color:var(--gray-400); }
+/* Gamificação do card Consistência */
+.gm-bloco { background:linear-gradient(135deg,#FBF6ED,#F7F1E4); border:1px solid #EFE4D2; border-radius:14px; padding:.7rem .8rem .75rem; margin-bottom:0; }
+.gm-pop { animation:gmPop .5s cubic-bezier(.34,1.56,.64,1); }
+@keyframes gmPop { 0%{transform:scale(1)} 45%{transform:scale(1.04)} 100%{transform:scale(1)} }
+.gm-topo { display:flex; align-items:center; gap:.55rem; margin-bottom:.5rem; }
+.gm-chama { line-height:1; transition:font-size .3s,filter .3s; }
+.gm-chama[data-nivel="0"] { font-size:1.1rem; filter:grayscale(1); opacity:.45; }
+.gm-chama[data-nivel="1"] { font-size:1.25rem; }
+.gm-chama[data-nivel="2"] { font-size:1.5rem; }
+.gm-chama[data-nivel="3"] { font-size:1.75rem; filter:drop-shadow(0 0 4px rgba(232,148,58,.5)); }
+.gm-chama[data-nivel="4"] { font-size:2rem; filter:drop-shadow(0 0 7px rgba(232,148,58,.75)); animation:gmFogo 1.8s ease-in-out infinite; }
+@keyframes gmFogo { 0%,100%{transform:scale(1)} 50%{transform:scale(1.09)} }
+.gm-num { display:flex; align-items:baseline; gap:5px; flex:1; min-width:0; }
+.gm-num b { font-family:'Bricolage Grotesque',sans-serif; font-size:1.5rem; font-weight:800; color:#8A6212; line-height:1; }
+.gm-num span { font-size:.72rem; color:#A98A3E; }
+.gm-escudo { font-size:.62rem; font-weight:700; color:#1C7A4B; background:#E4F4EA; border:1px solid #C4E6CE; border-radius:99px; padding:3px 8px; white-space:nowrap; cursor:help; }
+.gm-esc-usado { color:#9A8B73; background:#F0EADF; border-color:#E0D6C5; }
+.gm-barra { height:7px; background:#EFE4D2; border-radius:99px; overflow:hidden; }
+.gm-barra-fill { height:100%; background:linear-gradient(90deg,#E8943A,#F0B360); border-radius:99px; transition:width .8s cubic-bezier(.4,0,.2,1); }
+.gm-barra-fill.gm-recorde { background:linear-gradient(90deg,#2FB374,#5FD79A); }
+.gm-linha { font-size:.74rem; color:#6B6155; line-height:1.5; margin-top:.45rem; }
+.gm-medalhas { display:flex; align-items:center; gap:5px; flex-wrap:wrap; margin-top:.55rem; }
+.gm-medalha { font-size:.63rem; font-weight:800; color:#C3B69F; background:#F4EEE4; border:1.5px solid #E5DAC8; border-radius:50%; width:26px; height:26px; display:flex; align-items:center; justify-content:center; cursor:help; }
+.gm-medalha.gm-on { color:#8A6212; background:#FBF1D7; border-color:#E8B23A; }
+.gm-medalha.gm-next { border-style:dashed; border-color:#8A6212; color:#8A6212; }
+.gm-faltam { font-size:.64rem; color:#A89E8E; margin-left:auto; }
+.hab-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:.5rem; margin:.6rem 0 0; }
+
+.hb-stat { background:var(--gray-50); border:1px solid var(--gray-100); border-radius:var(--radius-sm); padding:.45rem .3rem; text-align:center; }
+.hb-stat b { display:block; font-family:'Bricolage Grotesque',sans-serif; font-size:1.15rem; font-weight:800; color:var(--navy); line-height:1.1; }
+.hb-stat span { font-size:.6rem; color:var(--gray-400); line-height:1.2; display:block; margin-top:2px; }
+.hab-svg { width:100%; height:auto; display:block; }
+/* Calendário mensal do dashboard — UMA cor forte só.
+   Verde escuro = dia com estudo. Todo o resto recua para o fundo: dia sem
+   registro não leva tracejado nem contorno (vazio informa sem acusar),
+   descanso fica só com o número mais apagado, marco vira um ponto dourado
+   dentro da célula e hoje ganha um anel fino. */
+.cm-head { display:flex; align-items:center; justify-content:center; gap:.7rem; margin-bottom:.55rem; }
+.cm-mes { font-family:'Bricolage Grotesque',sans-serif; font-size:.76rem; font-weight:800; color:var(--navy); text-transform:capitalize; min-width:104px; text-align:center; }
+.cm-nav { background:transparent; border:1px solid var(--gray-200); border-radius:8px; width:24px; height:24px; cursor:pointer; color:var(--gray-500); font-size:.7rem; line-height:1; }
+.cm-nav:hover:not([disabled]) { background:var(--gray-50); color:var(--navy); }
+.cm-nav[disabled] { opacity:.3; cursor:default; }
+.cm-dow { font-size:.55rem; font-weight:700; color:#C9BCA6; text-align:center; padding-bottom:2px; }
+.cm-grid { display:grid; grid-template-columns:repeat(7,1fr); gap:4px; }
+.cm-cel { position:relative; height:30px; display:flex; align-items:center; justify-content:center; border-radius:6px; font-size:.68rem; font-weight:600; color:#CFC3AE; background:transparent; }
+.cm-cel[role="button"] { cursor:pointer; }
+.cm-cel[role="button"]:hover { background:#F3EDE2; }
+.cm-vazio { background:transparent; }
+.cm-falha  { background:#FAF6EE; color:#C9BCA6; }
+.cm-futuro { background:transparent; color:#DCD1BE; }
+.cm-livre  { background:transparent; color:#E2D8C7; font-style:italic; }
+.cm-feito  { background:#1C6B45; color:#fff; font-weight:700; }
+.cm-feito:hover { background:#175A3A; }
+.cm-marco::after { content:""; position:absolute; bottom:2px; left:50%; transform:translateX(-50%); width:3.5px; height:3.5px; border-radius:50%; background:#E8B23A; }
+.cm-feito.cm-marco::after { background:#F5D08A; }
+.cm-hoje { box-shadow:0 0 0 1.5px #173E2C; }
+/* Legenda mínima: o verde fala sozinho */
+.cm-leg-dot { width:9px; height:9px; border-radius:50%; background:#E8B23A; display:inline-block; }
+.cm-leg-hoje { width:9px; height:9px; border-radius:2px; background:transparent; box-shadow:0 0 0 1.5px #173E2C; display:inline-block; }
+
+/* Calendário e números lado a lado: a grade fica compacta sem deixar o card oco */
+/* Calendário em largura total; os números vêm abaixo, nunca na lateral */
+.cm-layout { display:block; }
+.cm-cal { width:100%; }
+.cm-lado { display:block; margin-top:.7rem; padding-top:.6rem; border-top:1px solid var(--gray-100); }
+.cm-destaque { display:flex; align-items:baseline; gap:.4rem; flex-wrap:wrap; }
+.cm-destaque b { font-family:'Bricolage Grotesque',sans-serif; font-size:1.35rem; font-weight:800; color:var(--navy); line-height:1; }
+.cm-destaque span { font-size:.74rem; color:var(--gray-500); }
+.cm-destaque em { font-style:normal; font-size:.72rem; color:var(--gray-400); margin-left:auto; }
+.cm-mini { display:grid; grid-template-columns:repeat(4,1fr); margin-top:.6rem; }
+.cm-stat { text-align:center; padding:0 .2rem; border-left:1px solid var(--gray-100); }
+.cm-stat:first-child { border-left:none; }
+.cm-stat b { display:block; font-family:'Bricolage Grotesque',sans-serif; font-size:.95rem; font-weight:800; color:var(--navy); line-height:1.1; }
+.cm-stat span { display:block; font-size:.62rem; color:var(--gray-400); line-height:1.25; margin-top:2px; }
+
+
+@media(max-width:560px){
+  .cm-grid { gap:4px; }
+  .cm-cel { height:26px; font-size:.62rem; }
+}
+.cm-dow { font-size:.55rem; font-weight:800; color:var(--gray-400); text-align:center; padding-bottom:1px; }
+.cm-cel { aspect-ratio:1; display:flex; align-items:center; justify-content:center; border-radius:6px; font-size:.6rem; font-weight:700; color:var(--gray-400); background:#FAF6EE; border:1.2px solid transparent; }
+.cm-cel[role="button"] { cursor:pointer; }
+.cm-cel[role="button"]:hover { filter:brightness(.95); }
+.cm-vazio { background:transparent; }
+.cm-feito { background:#1C6B45; color:#fff; border-color:#1C6B45; }
+.cm-falha { background:#fff; border-color:#DFC9A8; border-style:dashed; color:#B9A88C; }
+.cm-livre { background:#E6E1D6; color:#A89E8E; }
+.cm-futuro { background:#FBF6ED; color:#C3B69F; }
+.cm-fora { background:transparent; color:#DDD5C8; }
+.cm-marco { box-shadow:0 0 0 1.5px #E8B23A inset; }
+.cm-hoje { outline:2px solid #173E2C; outline-offset:1px; }
+.cm-foot { display:flex; align-items:center; justify-content:space-between; gap:.5rem; flex-wrap:wrap; margin-top:.5rem; font-size:.68rem; color:var(--gray-500); }
+.cm-foot strong { color:var(--navy); font-size:.82rem; }
+.cm-up { color:#1C7A4B; font-weight:800; }
+.cm-down { color:#C0563C; font-weight:800; }
+.hab-lbl { font-size:8px; fill:#A89E8E; font-family:inherit; }
+.hab-leg { display:flex; flex-wrap:wrap; gap:.3rem .9rem; margin:.55rem 0 .2rem; font-size:.62rem; color:var(--gray-400); }
+.hab-leg span { display:flex; align-items:center; gap:3px; }
+.hab-leg i { width:9px; height:9px; border-radius:2px; display:inline-block; }
+.rt-cols { display:flex; align-items:flex-end; justify-content:space-between; gap:.35rem; height:92px; }
+.rt-col { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; gap:4px; }
+.rt-pct { font-size:.62rem; font-weight:700; color:var(--gray-500); }
+.rt-bar-wrap { display:flex; align-items:flex-end; height:56px; }
+.rt-bar { width:22px; border-radius:5px 5px 2px 2px; transition:height .6s cubic-bezier(.4,0,.2,1); }
+.rt-dow { font-size:.65rem; font-weight:700; color:var(--gray-400); }
+.rt-insight { margin-top:.55rem; font-size:.73rem; line-height:1.45; color:var(--gray-600); background:#F7FAF8; border:1px solid #E3EFE8; border-radius:var(--radius-sm); padding:.45rem .6rem; }
+@media(max-width:520px){ .rt-bar{ width:16px; } }
 /* ── Popup de segunda-feira (motivação + calendário) ── */
 .ps-overlay { position:fixed; inset:0; background:rgba(23,62,44,.45); backdrop-filter:blur(3px); z-index:1200; display:flex; align-items:center; justify-content:center; padding:1.2rem; animation:psFade .25s ease; }
 @keyframes psFade { from{opacity:0} to{opacity:1} }
