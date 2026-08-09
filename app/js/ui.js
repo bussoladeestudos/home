@@ -228,12 +228,18 @@ function calcMateriasStats(){
   });
   return materias.map(m => {
     const s = byMat[m.nome]||{confs:[],totalTopicos:1};
+    const totalTop = Math.max(1, s.totalTopicos);
     // Se há dados reais, usa-os; senão, mantém os valores demo do EDITAIS
-    if(s.confs.length===0) return {...m, prog:0, conf:0, cor:'gray'};
+    if(s.confs.length===0) return {...m, prog:0, conf:0, cor:'gray',
+      avaliados:0, totalTop, dominio:0, confParcial:false};
     const conf = Math.round(s.confs.reduce((a,b)=>a+b,0)/s.confs.length);
-    const prog = Math.min(100,Math.round((s.confs.length/Math.max(1,s.totalTopicos))*100));
+    const prog = Math.min(100,Math.round((s.confs.length/totalTop)*100));
     const cor  = conf>=70?"green":conf>=50?"yellow":"red";
-    return {...m, prog, conf, cor};
+    // Domínio = confiança PESADA pela cobertura da matéria (ver engine.calcDominio).
+    // Evita o paradoxo "100% de confiança sobre 2 de 8 tópicos".
+    const d = calcDominio(conf, prog);
+    return {...m, prog, conf, cor,
+      avaliados:s.confs.length, totalTop, dominio:d.dominio, confParcial:d.confParcial};
   });
 }
 
@@ -398,12 +404,12 @@ function renderRetaFinal(){
   if(!rf.active){el.style.display="none";return;}
   el.style.display="block";
   const stats=calcMateriasStats();
-  const fracas=stats.filter(m=>m.conf>0&&m.conf<70).sort((a,b)=>a.conf-b.conf).slice(0,3);
+  const fracas=stats.filter(m=>m.prog>0&&m.dominio<70).sort((a,b)=>a.dominio-b.dominio).slice(0,3);
   const dias=rf.diasRestantes;
   const cob=rf.cobertura;
   const urgencia=dias<=7?"🔴 Urgente:":dias<=14?"🟡 Atenção:":"🟢";
   let reforcoHtml=fracas.length
-    ?fracas.map(m=>`<div class="rf-col-item"><strong>${m.nome}</strong> — ${m.conf}% conf.</div>`).join("")
+    ?fracas.map(m=>`<div class="rf-col-item"><strong>${m.nome}</strong> · domínio ${m.dominio}% (conf ${m.conf}% em ${m.avaliados}/${m.totalTop})</div>`).join("")
     :`<div class="rf-col-empty">Cobertura sólida! Foque em simulados.</div>`;
   let simHtml=`<div class="rf-col-item">Faça ${Math.max(1,Math.min(dias,5))} simulados cronometrados</div>`;
   if(dias>=3) simHtml+=`<div class="rf-col-item">Corrija cada erro imediatamente</div>`;
@@ -1479,9 +1485,10 @@ function montarCoachDiagnostico(prog,conf,ritmo,projecao,totalRev){
   const materias=calcMateriasStats();
   const cob=calcCobertura(), det=calcProgressoDetalhado();
   const atras=materias.filter(m=>m.prog>0&&m.prog<cob.pct-10).sort((a,b)=>b.peso-a.peso).slice(0,2)
-    .map(m=>({nome:m.nome,peso:m.peso,progPct:m.prog,confPct:m.conf}));
-  const fracas=materias.filter(m=>m.conf>0&&m.conf<50).sort((a,b)=>a.conf-b.conf).slice(0,2)
-    .map(m=>({nome:m.nome,peso:m.peso,confPct:m.conf}));
+    .map(m=>({nome:m.nome,peso:m.peso,progPct:m.prog,confPct:m.conf,dominioPct:m.dominio}));
+  // Risco = peso alto com pouco domínio (confiança já pesada pela cobertura)
+  const fracas=materias.filter(m=>m.prog>0&&m.dominio<50).sort((a,b)=>(100-a.dominio)*a.peso<(100-b.dominio)*b.peso?1:-1).slice(0,2)
+    .map(m=>({nome:m.nome,peso:m.peso,confPct:m.conf,dominioPct:m.dominio,topicosVistos:m.avaliados,topicosTotal:m.totalTop}));
   return {
     nome:(STATE.nome||"").split(" ")[0]||"Candidato",
     concurso:(EDITAIS[STATE.prefeitura]||{}).nome||"",
@@ -1608,23 +1615,24 @@ function buildCoachHtml(prog, conf, ritmo, projecao, totalRev){
     // ── Parágrafo 2: cobertura e confiança ─────────────────────
     let p2="";
     if(cob.cobertos>0){
-      const confTexto=conf>=80?"excelente domínio do conteúdo estudado":conf>=60?"boa evolução, com margem para crescer":conf>=40?"progresso moderado — os exercícios precisam de mais atenção":"confiança ainda baixa — revise o conteúdo antes de avançar";
-      p2=`Você cobriu <strong>${cob.cobertos} de ${cob.total} tópicos</strong> do edital (${cob.pct}%). Sua confiança média de <strong>${conf}%</strong> indica ${confTexto}.`;
+      const confTexto=conf>=80?"boa segurança no que já viu":conf>=60?"segurança razoável, com margem para crescer":conf>=40?"segurança moderada, os exercícios precisam de mais atenção":"segurança baixa, revise antes de avançar";
+      const domGeral=calcDominio(conf,cob.pct).dominio;
+      p2=`Você cobriu <strong>${cob.cobertos} de ${cob.total} tópicos</strong> do edital (${cob.pct}%). A confiança média de <strong>${conf}%</strong> mostra ${confTexto}, mas ela vale só sobre o conteúdo já estudado. Pesando pela cobertura, seu domínio real do edital hoje é de <strong>${domGeral}%</strong>.`;
     }
     if(p2) html+=`<p style="margin:0 0 .8rem;font-size:.87rem;color:#334155">${p2}</p>`;
 
     // ── Parágrafo 3: diagnóstico de matérias ───────────────────
     let p3="";
     const matAtrasadas=materias.filter(m=>m.prog>0&&m.prog<cob.pct-10).sort((a,b)=>b.peso-a.peso);
-    const matFracas=materias.filter(m=>m.conf>0&&m.conf<50).sort((a,b)=>a.conf-b.conf);
+    const matFracas=materias.filter(m=>m.prog>0&&m.dominio<50).sort((a,b)=>((100-a.dominio)*a.peso<(100-b.dominio)*b.peso?1:-1));
     const matOk=materias.filter(m=>m.prog>=cob.pct-5);
     if(matAtrasadas.length>0){
       const lista=matAtrasadas.slice(0,2).map(m=>`<strong>${m.nome}</strong> (peso ${m.peso}%, ${cob.pct-m.prog}% abaixo da média)`).join(" e ");
       p3+=`As matérias que precisam de atenção são ${lista}. `;
     }
     if(matFracas.length>0){
-      const lista=matFracas.slice(0,2).map(m=>`<strong>${m.nome}</strong> (${m.conf}% confiança)`).join(" e ");
-      p3+=`Confiança baixa em ${lista} — recomendo reforçar com exercícios no Sábado Técnico. `;
+      const lista=matFracas.slice(0,2).map(m=>`<strong>${m.nome}</strong> (domínio ${m.dominio}%, ${m.avaliados} de ${m.totalTop} tópicos)`).join(" e ");
+      p3+=`Domínio baixo do edital em ${lista}. Vale reforçar com exercícios no Sábado Técnico e avançar nos tópicos que faltam. `;
     }
     if(!matAtrasadas.length&&!matFracas.length&&matOk.length>0){
       p3=`Todas as matérias estudadas estão no ritmo. Continue avançando no conteúdo sistematicamente.`;
@@ -1642,7 +1650,7 @@ function buildCoachHtml(prog, conf, ritmo, projecao, totalRev){
       p4=`💡 Recomendo dedicar a sessão de hoje a <strong>${top.nome}</strong> (${top.peso}% do edital). Avance ${Math.min(5,top.peso)}% desta semana para reequilibrar o cronograma.`;
     } else if(matFracas.length>0){
       const top=matFracas[0];
-      p4=`💡 Use o próximo <strong>Sábado Técnico</strong> para reforçar <strong>${top.nome}</strong> com exercícios práticos. Meta: elevar a confiança de ${top.conf}% para 60%+.`;
+      p4=`💡 Use o próximo <strong>Sábado Técnico</strong> para reforçar <strong>${top.nome}</strong> com exercícios práticos. Meta: elevar o domínio de ${top.dominio}% para 60%+.`;
     } else if(diasRestantes!==null&&diasRestantes<30){
       p4=`🏁 Você está na reta final. Com ${diasRestantes} dias, foque em <strong>simulados cronometrados</strong> e revisões dos tópicos de maior peso.`;
     } else if(projecao!==null&&projecao<0){
@@ -2358,14 +2366,15 @@ function renderMapaCalorPage(targetId){
   const expectedProg=calcExpectedPerSubject(); // progresso esperado por matéria
   const topicos=getTopicos();
 
-  // Ordena: sem dados primeiro, depois por atraso × peso
+  // Ordena por RISCO: quanto do edital falta dominar, pesado pela prova.
+  // (100 - domínio) x peso coloca no topo a matéria cara e mal dominada.
   const ordenadas=[...materias].sort((a,b)=>{
     if(a.prog===0&&b.prog>0) return 1;
     if(b.prog===0&&a.prog>0) return -1;
-    const gapA=a.prog-overallProg, gapB=b.prog-overallProg;
-    const prioA=(gapA<-10?2:gapA<0?1:0)*b.peso;
-    const prioB=(gapB<-10?2:gapB<0?1:0)*a.peso;
-    return prioB-prioA;
+    const riscoA=(100-a.dominio)*a.peso;
+    const riscoB=(100-b.dominio)*b.peso;
+    if(riscoB!==riscoA) return riscoB-riscoA;
+    return b.peso-a.peso;
   });
 
   let html=`
@@ -2378,7 +2387,7 @@ function renderMapaCalorPage(targetId){
     <div class="mapa-header">
       <div class="mapa-header-cell">Matéria</div>
       <div class="mapa-header-cell center">Progresso vs Cronograma</div>
-      <div class="mapa-header-cell right">Confiança</div>
+      <div class="mapa-header-cell right" title="Confiança pesada pela cobertura: quanto desta matéria você já domina de fato">Domínio</div>
     </div>`;
 
   const _LIM_MAT=6;
@@ -2393,12 +2402,19 @@ function renderMapaCalorPage(targetId){
     else{              barClass="bar-behind";  stClass="st-behind";  stLabel=`${gap}% abaixo do esperado`; }
 
     const totalTop=(topicos[m.nome]||[]).length;
-    // Confiança
-    let cbClass, confLabel, confPct;
-    if(!m.conf){ cbClass="cb-nodata"; confLabel="Sem dados"; confPct="—"; }
-    else if(m.conf>=70){ cbClass="cb-green";  confLabel="Alta";  confPct=m.conf+"%"; }
-    else if(m.conf>=50){ cbClass="cb-yellow"; confLabel="Média"; confPct=m.conf+"%"; }
-    else{                cbClass="cb-red";    confLabel="Baixa"; confPct=m.conf+"%"; }
+    // Domínio do edital: a cor segue o domínio, nunca a confiança isolada.
+    // Assim o verde só aparece quando o aluno viu a matéria E foi bem nela.
+    let cbClass, confLabel, confPct, cbBase;
+    if(!m.conf){
+      cbClass="cb-nodata"; confLabel="Sem dados"; confPct="—";
+      cbBase=`0 de ${m.totalTop||totalTop}`;
+    } else {
+      cbClass = m.dominio>=70?"cb-green" : m.dominio>=40?"cb-yellow" : "cb-red";
+      confLabel = m.dominio>=70?"Domínio alto" : m.dominio>=40?"Domínio parcial" : "Domínio baixo";
+      confPct = m.dominio+"%";
+      cbBase = `conf ${m.conf}% · ${m.avaliados} de ${m.totalTop||totalTop}`;
+      if(m.confParcial){ cbClass+=" cb-parcial"; confLabel+=" · confiança medida em poucos tópicos"; }
+    }
 
     return`<div class="mapa-item">
       <div>
@@ -2413,8 +2429,9 @@ function renderMapaCalorPage(targetId){
         <div class="mapa-status ${stClass}">${stLabel}</div>
       </div>
       <div class="mapa-conf-col">
-        <div class="conf-badge ${cbClass}" title="${confLabel}">
+        <div class="conf-badge ${cbClass}" title="${esc(confLabel)}">
           <span class="cb-pct">${confPct}</span>
+          <span class="cb-base">${esc(cbBase)}</span>
         </div>
       </div>
     </div>`;

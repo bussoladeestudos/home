@@ -574,6 +574,23 @@ function calcMesConsistencia(offset,hojeRef){
    porque calcCobertura mora no ui.js). */
 /* Níveis em escala universal (metais), não jargão náutico: qualquer aluno
    entende sem explicação. */
+/* ══ DOMÍNIO DO EDITAL ══════════════════════════════════════════
+   Confiança sozinha mente: a média das notas dos tópicos JÁ vistos
+   pode marcar 100% com o aluno tendo visto 2 de 8 tópicos. Domínio
+   corrige isso pesando a confiança pela cobertura da matéria:
+       dominio = confianca x cobertura / 100
+   Uma matéria com 100% de confiança sobre 40% do conteúdo domina 40%
+   do edital, que é a verdade que interessa na véspera da prova.
+   confParcial marca a amostra pequena demais para colorir de verde. */
+const DOMINIO_MIN_AMOSTRA=50; // % de cobertura da matéria p/ confiança "firme"
+function calcDominio(confPct,coberturaPct){
+  const c=Math.max(0,Math.min(100,Number(confPct)||0));
+  const k=Math.max(0,Math.min(100,Number(coberturaPct)||0));
+  const dominio=Math.round(c*k/100);
+  return {dominio,confParcial:k>0&&k<DOMINIO_MIN_AMOSTRA,
+    faixa:dominio>=70?"alta":dominio>=40?"media":dominio>0?"baixa":"nula"};
+}
+
 const PATENTES=[
   {nome:"Iniciante",xp:0},
   {nome:"Bronze",xp:300},
@@ -670,5 +687,6 @@ if(typeof module!=="undefined"&&module.exports){
   module.exports={fmt,parseDate,isDiaLivre,isDiaEstudo,getCicloPos,getNumRevisao,
     getMaterias,getTopicos,getTopicoDiaByKey,getTopicosDiaBase,getTopicosDoDia,
     getExtrasDoDia,getPrevNonFreeDay,isSimuladoDay,calcRevisoes,calcExpectedPerSubject,getTopicosFracos,buildAgendaSemanaICS,isProvaDay,isRevisaoGeralDay,isRetaFinalDay,
-    _densityFor,aggregateEstrelas,calcStreaks,calcHeatmapConsistencia,calcRitmoSemanal,calcMarcos,MARCOS_SEQUENCIA,calcRumo,calcMesConsistencia,calcMedalhas,PATENTES};
+    _densityFor,aggregateEstrelas,calcStreaks,calcHeatmapConsistencia,calcRitmoSemanal,calcMarcos,MARCOS_SEQUENCIA,calcRumo,calcMesConsistencia,calcMedalhas,PATENTES,
+    calcDominio,DOMINIO_MIN_AMOSTRA};
 }
