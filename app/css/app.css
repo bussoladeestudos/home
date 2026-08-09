@@ -602,7 +602,7 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
 .cm-nav[disabled] { opacity:.3; cursor:default; }
 .cm-dow { font-size:.55rem; font-weight:700; color:#C9BCA6; text-align:center; padding-bottom:2px; }
 .cm-grid { display:grid; grid-template-columns:repeat(7,1fr); gap:4px; }
-.cm-cel { position:relative; height:30px; display:flex; align-items:center; justify-content:center; border-radius:6px; font-size:.68rem; font-weight:600; color:#CFC3AE; background:transparent; }
+.cm-cel { position:relative; height:28px; display:flex; align-items:center; justify-content:center; border-radius:6px; font-size:.68rem; font-weight:600; color:#CFC3AE; background:transparent; }
 .cm-cel[role="button"] { cursor:pointer; }
 .cm-cel[role="button"]:hover { background:#F3EDE2; }
 .cm-vazio { background:transparent; }
@@ -614,6 +614,7 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
 .cm-marco::after { content:""; position:absolute; bottom:2px; left:50%; transform:translateX(-50%); width:3.5px; height:3.5px; border-radius:50%; background:#E8B23A; }
 .cm-feito.cm-marco::after { background:#F5D08A; }
 .cm-hoje { box-shadow:0 0 0 1.5px #173E2C; }
+.cm-fora { background:transparent; color:#E4DCCE; }
 /* Legenda mínima: o verde fala sozinho */
 .cm-leg-dot { width:9px; height:9px; border-radius:50%; background:#E8B23A; display:inline-block; }
 .cm-leg-hoje { width:9px; height:9px; border-radius:2px; background:transparent; box-shadow:0 0 0 1.5px #173E2C; display:inline-block; }
@@ -622,36 +623,42 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
 /* Calendário em largura total; os números vêm abaixo, nunca na lateral */
 .cm-layout { display:block; }
 .cm-cal { width:100%; }
-.cm-lado { display:block; margin-top:.7rem; padding-top:.6rem; border-top:1px solid var(--gray-100); }
-.cm-destaque { display:flex; align-items:baseline; gap:.4rem; flex-wrap:wrap; }
-.cm-destaque b { font-family:'Bricolage Grotesque',sans-serif; font-size:1.35rem; font-weight:800; color:var(--navy); line-height:1; }
-.cm-destaque span { font-size:.74rem; color:var(--gray-500); }
-.cm-destaque em { font-style:normal; font-size:.72rem; color:var(--gray-400); margin-left:auto; }
-.cm-mini { display:grid; grid-template-columns:repeat(4,1fr); margin-top:.6rem; }
-.cm-stat { text-align:center; padding:0 .2rem; border-left:1px solid var(--gray-100); }
+/* Legenda COLADA na grade: quem acabou de ver a cor decifra ali mesmo,
+   sem precisar guardar a dúvida até o rodapé do card. */
+.cm-leg { display:flex; flex-wrap:wrap; align-items:center; gap:.25rem .8rem; margin-top:.5rem; font-size:.6rem; color:var(--gray-400); line-height:1.4; }
+.cm-leg span { display:inline-flex; align-items:center; gap:4px; white-space:nowrap; }
+.cm-leg i { width:10px; height:10px; border-radius:3px; flex-shrink:0; display:inline-block; }
+.cm-sw-feito  { background:#1C6B45; }
+.cm-sw-falha  { background:#FAF6EE; }
+.cm-sw-livre  { background:transparent; box-shadow:inset 0 0 0 1px #E2D8C7; }
+.cm-sw-marco  { background:#E8B23A; border-radius:50% !important; width:7px !important; height:7px !important; margin:0 1.5px; }
+.cm-sw-hoje   { background:transparent; box-shadow:0 0 0 1.5px #173E2C; }
+.cm-lado { display:block; margin-top:.5rem; padding-top:.45rem; border-top:1px solid var(--gray-100); }
+/* Linha de resumo: número em destaque, comparação entre parênteses na mesma frase */
+.cm-destaque { display:flex; align-items:baseline; gap:.35rem; flex-wrap:wrap; font-size:.74rem; color:var(--gray-500); }
+.cm-destaque b { font-family:'Bricolage Grotesque',sans-serif; font-size:1.15rem; font-weight:800; color:var(--navy); line-height:1; }
+.cm-destaque em { font-style:normal; font-size:.7rem; color:var(--gray-400); }
+/* 4 métricas: valor com unidade grudada, rótulo dizendo a unidade por extenso */
+.cm-mini { display:grid; grid-template-columns:repeat(4,1fr); gap:.15rem; margin-top:.45rem; }
+.cm-stat { text-align:center; padding:0 .15rem; border-left:1px solid var(--gray-100); }
 .cm-stat:first-child { border-left:none; }
-.cm-stat b { display:block; font-family:'Bricolage Grotesque',sans-serif; font-size:.95rem; font-weight:800; color:var(--navy); line-height:1.1; }
-.cm-stat span { display:block; font-size:.62rem; color:var(--gray-400); line-height:1.25; margin-top:2px; }
+.cm-stat b { display:block; font-family:'Bricolage Grotesque',sans-serif; font-size:1rem; font-weight:800; color:var(--navy); line-height:1.1; }
+.cm-stat b i { font-style:normal; font-size:.6rem; font-weight:700; color:var(--gray-400); margin-left:2px; }
+.cm-stat span { display:block; font-size:.6rem; color:var(--gray-400); line-height:1.2; margin-top:2px; }
+@media(max-width:560px){
+  .cm-mini { grid-template-columns:repeat(2,1fr); row-gap:.55rem; }
+  .cm-stat:nth-child(3) { border-left:none; }
+  .cm-leg { gap:.2rem .6rem; }
+}
 
 
 @media(max-width:560px){
   .cm-grid { gap:4px; }
   .cm-cel { height:26px; font-size:.62rem; }
 }
-.cm-dow { font-size:.55rem; font-weight:800; color:var(--gray-400); text-align:center; padding-bottom:1px; }
-.cm-cel { aspect-ratio:1; display:flex; align-items:center; justify-content:center; border-radius:6px; font-size:.6rem; font-weight:700; color:var(--gray-400); background:#FAF6EE; border:1.2px solid transparent; }
-.cm-cel[role="button"] { cursor:pointer; }
-.cm-cel[role="button"]:hover { filter:brightness(.95); }
-.cm-vazio { background:transparent; }
-.cm-feito { background:#1C6B45; color:#fff; border-color:#1C6B45; }
-.cm-falha { background:#fff; border-color:#DFC9A8; border-style:dashed; color:#B9A88C; }
-.cm-livre { background:#E6E1D6; color:#A89E8E; }
-.cm-futuro { background:#FBF6ED; color:#C3B69F; }
-.cm-fora { background:transparent; color:#DDD5C8; }
-.cm-marco { box-shadow:0 0 0 1.5px #E8B23A inset; }
-.cm-hoje { outline:2px solid #173E2C; outline-offset:1px; }
-.cm-foot { display:flex; align-items:center; justify-content:space-between; gap:.5rem; flex-wrap:wrap; margin-top:.5rem; font-size:.68rem; color:var(--gray-500); }
-.cm-foot strong { color:var(--navy); font-size:.82rem; }
+/* .cm-up/.cm-down sobreviveram do bloco antigo (usados no resumo do mês).
+   O resto daquele bloco foi apagado: vinha depois no arquivo e sobrescrevia
+   o calendário atual, ressuscitando o tracejado do desenho descartado. */
 .cm-up { color:#1C7A4B; font-weight:800; }
 .cm-down { color:#C0563C; font-weight:800; }
 .hab-lbl { font-size:8px; fill:#A89E8E; font-family:inherit; }
