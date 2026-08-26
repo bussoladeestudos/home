@@ -417,3 +417,127 @@ test("calcRumo: todo nível devolve tag e ícone, e a frase não repete o badge"
   assert.strictEqual(cal.tag,"Calibrando");
   assert.strictEqual(cal.angulo,null);
 });
+
+/* ── Aulas dos cursinhos (catálogo + vínculos) ───────────────────
+   Uma aula cobre vários tópicos e um tópico pode ter várias aulas,
+   porque o recorte do curso não bate com o do edital. */
+const FIX_CURSOS={
+  provedores:[
+    {id:"lucasSilva",nome:"Prof. Lucas Silva",site:"https://ead.exemplo.com",editais:["cfpPlanejar"]},
+    {id:"edgarAbreu",nome:"Edgar Abreu",site:"",editais:["cfpPlanejar"]},
+    {id:"soOutro",nome:"Só Outro",site:"",editais:["outroEdital"]}
+  ],
+  aulas:{cfpPlanejar:{
+    lucasSilva:{
+      catalogo:[
+        {n:1,t:"Introdução",u:""},                              // sem URL
+        {n:2,t:"O Processo de Planejamento",u:"https://ead.exemplo.com/aula/2"},
+        {n:3,t:"Código de Ética",u:"http://inseguro.com/aula/3"}, // http: descartada
+        {n:4,t:"Remuneração",u:"https://ead.exemplo.com/aula/4"}
+      ],
+      topicos:{
+        "Planejamento Financeiro e Ética":{
+          "Princípios e processo do planejamento financeiro":[2],
+          "Etapas do atendimento ao cliente":[2],
+          "Modelos de remuneração do planejador":[2,4],
+          "Código de ética da PLANEJAR":[3],
+          "Normativos e regulação da profissão":[1]
+        }
+      }
+    },
+    edgarAbreu:{catalogo:[],topicos:{}}
+  }}
+};
+function engineComCursos(){
+  global.CURSOS=FIX_CURSOS;
+  return freshEngine({},FIX_EDITAIS);
+}
+const MAT="Planejamento Financeiro e Ética";
+test("getAulas: a MESMA aula atende vários tópicos do edital",()=>{
+  const E=engineComCursos();
+  const a=E.getAulas("cfpPlanejar","lucasSilva",MAT,"Princípios e processo do planejamento financeiro");
+  const b=E.getAulas("cfpPlanejar","lucasSilva",MAT,"Etapas do atendimento ao cliente");
+  assert.strictEqual(a.length,1);
+  assert.strictEqual(a[0].u,"https://ead.exemplo.com/aula/2");
+  assert.strictEqual(a[0].t,"O Processo de Planejamento");
+  assert.strictEqual(b[0].u,a[0].u,"os dois tópicos apontam para a mesma aula");
+});
+test("getAulas: um tópico pode listar VÁRIAS aulas, na ordem do curso",()=>{
+  const E=engineComCursos();
+  const l=E.getAulas("cfpPlanejar","lucasSilva",MAT,"Modelos de remuneração do planejador");
+  assert.deepStrictEqual(l.map(x=>x.n),[2,4]);
+});
+test("getAulas: aula sem URL ou com URL não-https some da lista",()=>{
+  const E=engineComCursos();
+  assert.deepStrictEqual(E.getAulas("cfpPlanejar","lucasSilva",MAT,"Código de ética da PLANEJAR"),[],"http descartado");
+  assert.deepStrictEqual(E.getAulas("cfpPlanejar","lucasSilva",MAT,"Normativos e regulação da profissão"),[],"aula sem URL");
+});
+test("getAulas: comparação tolera acento, caixa e espaço extra",()=>{
+  const E=engineComCursos();
+  const l=E.getAulas("cfpPlanejar","lucasSilva","planejamento financeiro e etica","  PRINCÍPIOS  E PROCESSO DO PLANEJAMENTO FINANCEIRO. ");
+  assert.strictEqual(l.length,1);
+  assert.strictEqual(l[0].u,"https://ead.exemplo.com/aula/2");
+});
+test("getAulas: sem cursinho, cursinho errado ou fora do edital devolve vazio",()=>{
+  const E=engineComCursos();
+  const T="Princípios e processo do planejamento financeiro";
+  assert.deepStrictEqual(E.getAulas("cfpPlanejar","",MAT,T),[]);
+  assert.deepStrictEqual(E.getAulas("cfpPlanejar","edgarAbreu",MAT,T),[]);
+  assert.deepStrictEqual(E.getAulas("outroEdital","lucasSilva",MAT,T),[]);
+  assert.deepStrictEqual(E.getAulas("cfpPlanejar","lucasSilva","Gestão Financeira","Orçamento pessoal e familiar"),[]);
+});
+test("getAulaLink: atalho para a primeira aula do tópico",()=>{
+  const E=engineComCursos();
+  assert.strictEqual(E.getAulaLink("cfpPlanejar","lucasSilva",MAT,"Modelos de remuneração do planejador"),"https://ead.exemplo.com/aula/2");
+  assert.strictEqual(E.getAulaLink("cfpPlanejar","lucasSilva",MAT,"Normativos e regulação da profissão"),"");
+});
+test("getProvedores: lista só os cursinhos do edital em questão",()=>{
+  const E=engineComCursos();
+  assert.deepStrictEqual(E.getProvedores("cfpPlanejar").map(p=>p.id),["lucasSilva","edgarAbreu"]);
+  assert.strictEqual(E.getProvedor("lucasSilva").nome,"Prof. Lucas Silva");
+});
+test("contarTopicosComAula: conta TÓPICOS que abrem aula, não aulas",()=>{
+  const E=engineComCursos();
+  // 3 tópicos resolvem (aulas 2 e 4); os outros 2 apontam para aula sem URL válida
+  assert.strictEqual(E.contarTopicosComAula("cfpPlanejar","lucasSilva"),3);
+  assert.strictEqual(E.contarTopicosComAula("cfpPlanejar","edgarAbreu"),0);
+});
+
+/* ── Conteúdo de estudo por tópico ──────────────────────────────────
+   Mesmo contrato das aulas: vínculo por matéria + tópico, tolerante a
+   acento e caixa, e falha em silêncio quando não há texto. */
+const FIX_CONTEUDO={
+  demo:{"Mat A":{
+    "A1":{id:"demo-01",v:1,at:"2026-08-25",frase:"Resumo do A1.",
+          prova:"<ul><li>x</li></ul>",corpo:"<p>corpo</p>",
+          pegadinhas:"<ul><li>y</li></ul>",cartao:"<ul><li>z</li></ul>"}
+  }}
+};
+function engineComConteudo(){
+  global.CONTEUDO=FIX_CONTEUDO;
+  return freshEngine(baseState(),FIX_EDITAIS);
+}
+test("getConteudo: acha o tópico e devolve as seções",()=>{
+  const E=engineComConteudo();
+  const c=E.getConteudo("demo","Mat A","A1");
+  assert.strictEqual(c.id,"demo-01");
+  assert.strictEqual(c.frase,"Resumo do A1.");
+  assert.ok(c.corpo.includes("<p>"));
+});
+test("getConteudo: comparação tolera acento, caixa e espaço extra",()=>{
+  const E=engineComConteudo();
+  assert.ok(E.getConteudo("demo","  mat a ","a1"));
+});
+test("getConteudo: tópico sem texto devolve null, sem quebrar",()=>{
+  const E=engineComConteudo();
+  assert.strictEqual(E.getConteudo("demo","Mat A","A2"),null);
+  assert.strictEqual(E.getConteudo("demo","Mat B","B1"),null);
+  assert.strictEqual(E.getConteudo("outroEdital","Mat A","A1"),null);
+  assert.strictEqual(E.getConteudo("demo","Mat A",""),null);
+  assert.strictEqual(E.temConteudo("demo","Mat A","A2"),false);
+});
+test("contarTopicosComConteudo: conta só o que tem texto publicado",()=>{
+  const E=engineComConteudo();
+  assert.strictEqual(E.contarTopicosComConteudo("demo",FIX_EDITAIS),1);
+  assert.strictEqual(E.contarTopicosComConteudo("outroEdital",FIX_EDITAIS),0);
+});
