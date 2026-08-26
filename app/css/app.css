@@ -929,6 +929,20 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
 .rev-pair-grid { display:flex; flex-wrap:wrap; gap:6px; margin-top:.4rem; }
 .rev-pair-btn { border:1.5px solid var(--gray-200); background:var(--gray-50); border-radius:var(--radius-sm); padding:5px 10px; font-size:.73rem; font-weight:600; color:var(--gray-500); cursor:pointer; transition:all .15s; }
 .rev-pair-btn.selected { border-color:var(--navy); background:var(--navy); color:#fff; }
+/* ── AULAS DO CURSINHO ─────────────────────────────────────────
+   Atalho discreto: a ação principal do card continua sendo avaliar a
+   confiança. O botão traz o TÍTULO da aula, então pode ser longo e
+   pode haver mais de um por tópico — daí a coluna, não a linha. */
+.aula-bloco { display:flex; flex-direction:column; align-items:flex-start; gap:4px; margin-top:.55rem; }
+.aula-fonte { font-size:.62rem; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:#9DB3A6; }
+.aula-link { display:inline-block; max-width:100%; padding:5px 11px; border-radius:10px;
+  text-decoration:none; font-size:.74rem; font-weight:700; line-height:1.3; color:#175A3A;
+  background:#EAF4EE; border:1px solid #CBE3D5; transition:all .15s; }
+.aula-link:hover, .aula-link:focus-visible { background:#1C6B45; border-color:#1C6B45; color:#fff; outline:none; }
+.cursinho-nota { margin-top:.4rem; font-size:.72rem; line-height:1.45; color:var(--gray-500); }
+.multi-topico-row .aula-bloco { margin-top:.4rem; }
+/* Na tela Hoje o bloco vive dentro do subtítulo da missão */
+.hoje-sub .aula-bloco { margin-top:.6rem; }
 .restart-section { margin-top:1.25rem; border-top:1px solid var(--gray-200); padding-top:1rem; }
 .restart-title { font-size:.78rem; font-weight:700; color:var(--gray-500); margin-bottom:.6rem; text-transform:uppercase; letter-spacing:.05em; }
 .btn-restart-soft { width:100%; padding:9px; border:1.5px solid var(--yellow-viv); background:var(--yellow-pale); border-radius:var(--radius-md); font-size:.8rem; font-weight:700; color:#92400E; cursor:pointer; margin-bottom:.5rem; transition:all .15s; }
@@ -1339,4 +1353,54 @@ body.aguardando-auth > *:not(#loginScreen) { visibility:hidden !important; point
 @media(min-width:1025px){
   .mapa-header,.mapa-item{ grid-template-columns:minmax(200px,280px) 1fr 142px; }
   .mapa-materia{ white-space:normal; line-height:1.3; }
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   CONTEÚDO DE ESTUDO DO TÓPICO (26/08)
+   Página de leitura aberta pelo card do dia. Coluna estreita de
+   propósito: linha longa cansa e o aluno lê isto no celular.
+   ══════════════════════════════════════════════════════════════════ */
+.cont-acao{margin-top:.6rem}
+.cont-btn{display:inline-flex;align-items:center;gap:.4rem;background:#fff;
+  border:1.5px solid #C8E6D5;color:#173E2C;font-family:inherit;font-size:.82rem;font-weight:700;
+  padding:.45rem .85rem;border-radius:10px;cursor:pointer;transition:background .15s,border-color .15s}
+.cont-btn:hover{background:#F0F7F3;border-color:#2FB374}
+
+#page-conteudo{max-width:760px;margin:0 auto}
+.cont-topo{display:flex;align-items:center;gap:.75rem;margin-bottom:1rem;flex-wrap:wrap}
+.cont-voltar{background:none;border:1.5px solid #e5e7eb;border-radius:10px;
+  padding:.35rem .75rem;font-family:inherit;font-size:.8rem;font-weight:700;color:#173E2C;cursor:pointer}
+.cont-voltar:hover{background:#F0F7F3;border-color:#2FB374}
+.cont-mat{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#6b7a72}
+.cont-titulo{font-size:1.5rem;line-height:1.25;color:#173E2C;margin:0 0 .5rem}
+.cont-frase{font-size:1.02rem;line-height:1.55;color:#3d4a43;margin:0 0 1.5rem;
+  padding-left:.9rem;border-left:3px solid #2FB374}
+
+.cont-sec{margin-bottom:1.6rem}
+.cont-sec h2{font-size:.74rem;font-weight:800;text-transform:uppercase;letter-spacing:.09em;
+  color:#2FB374;margin:0 0 .6rem;padding-bottom:.3rem;border-bottom:1px solid #e6e0d4}
+.cont-sec h3{font-size:1.05rem;color:#173E2C;margin:1.3rem 0 .45rem}
+.cont-sec h4{font-size:.94rem;color:#173E2C;margin:1rem 0 .35rem}
+.cont-sec p{font-size:.95rem;line-height:1.7;color:#2f3a34;margin:.55rem 0}
+.cont-sec ul,.cont-sec ol{margin:.55rem 0;padding-left:1.25rem}
+.cont-sec li{font-size:.95rem;line-height:1.65;color:#2f3a34;margin:.3rem 0}
+.cont-sec code{background:#f0ece2;padding:.05em .35em;border-radius:4px;font-size:.88em}
+.cont-sec blockquote{margin:.8rem 0;padding:.7rem .9rem;background:#F0F7F3;
+  border:1px solid #C8E6D5;border-radius:10px}
+.cont-sec blockquote p{margin:0}
+.cont-sec table{width:100%;border-collapse:collapse;margin:.8rem 0;font-size:.88rem}
+.cont-sec th{background:#173E2C;color:#fff;text-align:left;padding:.5rem .6rem;font-weight:600}
+.cont-sec td{padding:.5rem .6rem;border-bottom:1px solid #e6e0d4;vertical-align:top}
+
+/* Pegadinhas e cartão têm papel diferente do corpo, então ganham fundo */
+.cont-peg{background:#FBF6EA;border:1px solid #F2E2AE;border-radius:14px;padding:1rem 1.1rem}
+.cont-peg h2{color:#8a6d1f;border-bottom-color:#F2E2AE}
+.cont-cartao{background:#F0F7F3;border:1px solid #C8E6D5;border-radius:14px;padding:1rem 1.1rem}
+.cont-cartao h2{color:#173E2C;border-bottom-color:#C8E6D5}
+.cont-vazio{text-align:center;padding:3rem 1rem;color:#6b7a72;font-size:.95rem}
+
+@media(max-width:768px){
+  .cont-titulo{font-size:1.25rem}
+  .cont-sec p,.cont-sec li{font-size:.92rem}
+  .cont-peg,.cont-cartao{padding:.85rem .9rem}
 }
