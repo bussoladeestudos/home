@@ -6,18 +6,23 @@
    ════════════════════════════════════════════════════════════════ */
 
 const STATE_STORAGE_KEY="cronos_v4";
-const STATE_SCHEMA_VERSION=2;
+const STATE_SCHEMA_VERSION=3;
 
-/* Catálogo de concursos — carregado de editais.js (window.EDITAIS_DATA) */
+/* Catálogo de certificações — carregado de editais.js (window.EDITAIS_DATA) */
 let EDITAIS=(typeof window!=="undefined"&&window.EDITAIS_DATA)||{};
+/* Catálogo de aulas dos cursinhos — carregado de cursos.js */
+let CURSOS=(typeof window!=="undefined"&&window.CURSOS_DATA)||{};
+/* Conteúdo de estudo por tópico — gerado em app/conteudo/conteudo-<cert>.js */
+let CONTEUDO=(typeof window!=="undefined"&&window.CONTEUDO_DATA)||{};
 
 let STATE = {
-  concurso:"", prefeitura:"campinas", cargo:"", nome:"",
+  concurso:"", prefeitura:"", cargo:"", nome:"",
   inicio:null, prova:null, horasDia:3,
   semanaOffset:0, mesOffset:0, cronView:"semana", pagina:"dashboard",
   dias:{},
   diasLivres:[],  // dias da semana que o usuário NÃO estuda (0=Dom..6=Sáb)
   notasSemana:{}, // anotações livres por semana (chave = data da segunda-feira)
+  cursinho:"",    // cursinho contratado pelo aluno (id em cursos.js) — libera o link das aulas
 };
 
 /* ── MIGRAÇÃO DE SCHEMA ──
@@ -32,7 +37,23 @@ function migrateState(raw){
     s.notasSemana=(s.notasSemana&&typeof s.notasSemana==="object")?s.notasSemana:{};
     s.extrasPorDia=(s.extrasPorDia&&typeof s.extrasPorDia==="object")?s.extrasPorDia:{};
     s.horasDia=parseInt(s.horasDia)||3;
+    s.cursinho=typeof s.cursinho==="string"?s.cursinho:"";
     s.schemaVersion=2;
+  }
+  if(v<3){
+    /* 25/08/2026: o produto virou só de certificações e os 10 editais de
+       concurso saíram do editais.js. Sem isto, quem tinha um deles salvo
+       continuaria com STATE.prefeitura apontando para uma chave morta —
+       e engine.getMaterias cai no PRIMEIRO edital da lista, então o aluno
+       veria o conteúdo do CFP sob o nome do concurso antigo, em silêncio.
+       Melhor devolver ao setup do que exibir o edital errado. O catálogo
+       só existe no navegador; em Node (testes) EDITAIS vem vazio e a
+       migração não roda, senão zeraria qualquer estado de teste. */
+    if(Object.keys(EDITAIS||{}).length && s.prefeitura && !EDITAIS[s.prefeitura]){
+      s.prefeitura=""; s.concurso=""; s.cargo="";
+      s.inicio=null; s.prova=null; s.dias={};
+    }
+    s.schemaVersion=3;
   }
   return s;
 }

@@ -587,6 +587,149 @@ function calcMesConsistencia(offset,hojeRef){
    porque calcCobertura mora no ui.js). */
 /* Níveis em escala universal (metais), não jargão náutico: qualquer aluno
    entende sem explicação. */
+/* ══ AULAS DOS CURSINHOS ════════════════════════════════════════
+   Liga os TÓPICOS do edital às aulas do cursinho que o aluno assina.
+   Dados em cursos.js (window.CURSOS_DATA), curados pelo produto.
+
+   Modelo CATÁLOGO + VÍNCULOS: a aula é cadastrada uma vez (número,
+   título, URL) e os tópicos apontam para o número dela. Existe porque
+   o recorte do curso não bate com o do edital: uma aula do Lucas
+   Silva cobre três tópicos de uma vez, e um tópico pesado pode exigir
+   duas aulas. Guardar a URL solta em cada tópico duplicaria a mesma
+   aula e tornaria a correção de um link uma caçada.
+
+   A comparação de nomes é tolerante porque serão digitados à mão:
+   ignora acento, caixa, espaço repetido e pontuação. */
+function _normTexto(t){
+  return String(t||"")
+    .normalize("NFD").replace(/[\u0300-\u036f]/g,"")   // tira acentos
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g," ")                        // pontuação vira espaço
+    .trim();
+}
+function _cursosData(){
+  if(typeof CURSOS!=="undefined"&&CURSOS) return CURSOS;
+  if(typeof window!=="undefined"&&window.CURSOS_DATA) return window.CURSOS_DATA;
+  return {};
+}
+/* Só https passa. Bloqueia javascript:, data: e afins mesmo que
+   alguém cole isso no arquivo de dados por engano. */
+function _urlSegura(u){
+  const s=String(u||"").trim();
+  return /^https:\/\/[^\s"'<>]+$/i.test(s)?s:"";
+}
+/* Cursinhos oferecidos para um edital (alimenta o seletor). */
+function getProvedores(editalId){
+  const d=_cursosData();
+  return (d.provedores||[]).filter(function(p){
+    return !editalId||!p.editais||p.editais.indexOf(editalId)>=0;
+  });
+}
+function getProvedor(id){
+  return getProvedores(null).find(function(p){return p.id===id;})||null;
+}
+function _cursoDe(editalId,cursinhoId){
+  if(!editalId||!cursinhoId) return null;
+  const c=((_cursosData().aulas||{})[editalId]||{})[cursinhoId];
+  return c&&typeof c==="object"?c:null;
+}
+/* Chave tolerante -> objeto original, para achar matéria e tópico
+   mesmo com diferença de acento ou espaçamento. */
+function _acharChave(obj,alvo){
+  if(!obj) return null;
+  const n=_normTexto(alvo);
+  return Object.keys(obj).find(function(k){return _normTexto(k)===n;})||null;
+}
+/* Aulas de um tópico: [{n,t,u}] com URL válida, na ordem do curso.
+   Sem vínculo ou sem URL cadastrada, devolve lista vazia (falha em
+   silêncio: melhor sem botão do que com botão para o lugar errado). */
+/* ── CONTEÚDO DE ESTUDO POR TÓPICO ─────────────────────────────────
+   Texto que o aluno lê ao abrir o tópico do dia. Vem de
+   app/conteudo/conteudo-<cert>.js (window.CONTEUDO_DATA), GERADO por
+   outputs/conteudo_para_js.py a partir do Markdown em _conteudo/.
+   Nunca editar o .js à mão.
+
+   O vínculo é o par matéria + tópico do editais.js, comparado com a
+   mesma tolerância das aulas (_normTexto): acento, caixa, pontuação e
+   espaço repetido não contam. Se o texto de um tópico mudar no edital,
+   o conteúdo some da tela em silêncio, de propósito, e o conversor
+   acusa o órfão na próxima rodada. Melhor sem texto do que com o texto
+   de outro tópico.
+
+   As seções já chegam como HTML, montado no build a partir de um
+   subconjunto fechado de Markdown e validado contra lista branca de
+   tags. Por isso NÃO passam por esc() na renderização: são dado de
+   build, curado pelo dono, na mesma categoria de editais.js. O que
+   nunca pode acontecer é conteúdo de aluno entrar por aqui. */
+function _conteudoData(){
+  if(typeof CONTEUDO!=="undefined"&&CONTEUDO) return CONTEUDO;
+  if(typeof window!=="undefined"&&window.CONTEUDO_DATA) return window.CONTEUDO_DATA;
+  return {};
+}
+function getConteudo(editalId,materia,topico){
+  if(!editalId||!materia||!topico) return null;
+  const cert=_conteudoData()[editalId];
+  if(!cert) return null;
+  const chaveMat=_acharChave(cert,materia);
+  if(!chaveMat) return null;
+  const chaveTop=_acharChave(cert[chaveMat],topico);
+  if(!chaveTop) return null;
+  return cert[chaveMat][chaveTop]||null;
+}
+function temConteudo(editalId,materia,topico){
+  return !!getConteudo(editalId,materia,topico);
+}
+/* Quantos tópicos do edital já têm texto publicado. Alimenta o aviso
+   de cobertura e serve de régua para saber o quanto falta escrever. */
+function contarTopicosComConteudo(editalId,editaisRef){
+  const ed=(editaisRef||(typeof EDITAIS!=="undefined"?EDITAIS:{}))[editalId];
+  if(!ed||!ed.topicos) return 0;
+  let n=0;
+  Object.keys(ed.topicos).forEach(function(mat){
+    (ed.topicos[mat]||[]).forEach(function(top){
+      if(getConteudo(editalId,mat,top)) n++;
+    });
+  });
+  return n;
+}
+
+function getAulas(editalId,cursinhoId,materia,topico){
+  const curso=_cursoDe(editalId,cursinhoId);
+  if(!curso||!materia||!topico) return [];
+  const chaveMat=_acharChave(curso.topicos,materia);
+  if(!chaveMat) return [];
+  const chaveTop=_acharChave(curso.topicos[chaveMat],topico);
+  if(!chaveTop) return [];
+  const nums=curso.topicos[chaveMat][chaveTop]||[];
+  const porNum={};
+  (curso.catalogo||[]).forEach(function(a){ porNum[a.n]=a; });
+  return nums.map(function(n){
+    const a=porNum[n];
+    if(!a) return null;
+    const u=_urlSegura(a.u);
+    return u?{n:a.n,t:String(a.t||"Aula "+a.n),u:u}:null;
+  }).filter(Boolean);
+}
+/* Atalho para quem só quer a primeira aula do tópico. */
+function getAulaLink(editalId,cursinhoId,materia,topico){
+  const l=getAulas(editalId,cursinhoId,materia,topico);
+  return l.length?l[0].u:"";
+}
+/* Quantos TÓPICOS do edital já abrem alguma aula. É esse número que
+   o aluno vê no seletor, porque é o que muda a vida dele: aula no
+   catálogo sem vínculo não vira botão em lugar nenhum. */
+function contarTopicosComAula(editalId,cursinhoId){
+  const curso=_cursoDe(editalId,cursinhoId);
+  if(!curso) return 0;
+  const porNum={};
+  (curso.catalogo||[]).forEach(function(a){ if(_urlSegura(a.u)) porNum[a.n]=true; });
+  return Object.keys(curso.topicos||{}).reduce(function(n,mat){
+    return n+Object.values(curso.topicos[mat]||{}).filter(function(nums){
+      return (nums||[]).some(function(x){return porNum[x];});
+    }).length;
+  },0);
+}
+
 /* ══ DOMÍNIO DO EDITAL ══════════════════════════════════════════
    Confiança sozinha mente: a média das notas dos tópicos JÁ vistos
    pode marcar 100% com o aluno tendo visto 2 de 8 tópicos. Domínio
@@ -701,5 +844,7 @@ if(typeof module!=="undefined"&&module.exports){
     getMaterias,getTopicos,getTopicoDiaByKey,getTopicosDiaBase,getTopicosDoDia,
     getExtrasDoDia,getPrevNonFreeDay,isSimuladoDay,calcRevisoes,calcExpectedPerSubject,getTopicosFracos,buildAgendaSemanaICS,isProvaDay,isRevisaoGeralDay,isRetaFinalDay,
     _densityFor,aggregateEstrelas,calcStreaks,calcHeatmapConsistencia,calcRitmoSemanal,calcMarcos,MARCOS_SEQUENCIA,calcRumo,RUMO_TAGS,calcMesConsistencia,calcMedalhas,PATENTES,
-    calcDominio,DOMINIO_MIN_AMOSTRA};
+    calcDominio,DOMINIO_MIN_AMOSTRA,
+    getAulas,getAulaLink,getProvedores,getProvedor,contarTopicosComAula,_normTexto,
+    getConteudo,temConteudo,contarTopicosComConteudo};
 }

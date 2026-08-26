@@ -111,6 +111,9 @@ const ACTIONS={
   fecharRgModal:()=>fecharRgModal(),
   // Fale Conosco (link externo)
   abrirSuporte:()=>abrirSuporte(),
+  // Conteúdo de estudo do tópico
+  abrirConteudo:d=>abrirConteudo(d.mat,d.top),
+  voltarDoConteudo:()=>navTo(_conteudoVoltarPara||"cronograma"),
 };
 
 /* ── Dispatcher (event delegation) ── */
@@ -124,6 +127,14 @@ document.addEventListener("click",e=>{
 document.addEventListener("change",e=>{
   if(!e.target.dataset) return;
   if(e.target.dataset.change==="importarDados") importarDados(e);
+  else if(e.target.dataset.change==="salvarCursinho"){
+    window._bussolaUserActed=true;
+    STATE.cursinho=e.target.value||"";
+    save();
+    renderCursinhoNota();
+    renderCronogramaPage&&renderCronogramaPage();
+    renderHoje&&renderHoje();
+  }
   else if(e.target.dataset.change==="agendaHora"){
     window._bussolaUserActed=true;
     STATE.agendaHora=e.target.value||"19:00";
@@ -166,9 +177,9 @@ document.addEventListener("mouseout",e=>{
 });
 
 /* ════════════════════════════════════════════
-   EDITAIS POR PREFEITURA — base de dados dos concursos
+   EDITAIS — base de dados das certificações (chave por exame)
    ════════════════════════════════════════════
-   Para adicionar um novo concurso, crie uma nova chave no arquivo
+   Para adicionar uma nova certificação, crie uma nova chave no arquivo
    editais.js (fonte única de dados) seguindo o formato:
 
    chaveUnica: {
@@ -353,7 +364,7 @@ function calcStreak(){
 
 function calcRitmo(){
   const prog=calcProgresso();
-  if(!STATE.inicio||!STATE.prova) return{label:"⏳ Configure o concurso",emoji:"⏳",curto:"Configure o concurso"};
+  if(!STATE.inicio||!STATE.prova) return{label:"⏳ Configure a certificação",emoji:"⏳",curto:"Configure a certificação"};
   const hoje=new Date(); hoje.setHours(0,0,0,0);
   const ini=parseDate(STATE.inicio); ini.setHours(0,0,0,0);
   const pro=parseDate(STATE.prova);  pro.setHours(0,0,0,0);
@@ -442,8 +453,8 @@ function renderRetaFinal(){
 /* ── INIT ── */
 window.addEventListener("DOMContentLoaded",async ()=>{
   if(!Object.keys(EDITAIS).length){
-    document.getElementById("tbCargo").textContent="Erro ao carregar concursos";
-    alert("\u26A0\uFE0F N\u00e3o foi poss\u00edvel carregar a lista de concursos (editais.js n\u00e3o encontrado ao lado do index.html). Recarregue a p\u00e1gina.");
+    document.getElementById("tbCargo").textContent="Erro ao carregar certificações";
+    alert("\u26A0\uFE0F N\u00e3o foi poss\u00edvel carregar a lista de certificações (editais.js n\u00e3o encontrado ao lado do index.html). Recarregue a p\u00e1gina.");
     return;
   }
   if(!EDITAIS[_prefSelecionada]) _prefSelecionada=Object.keys(EDITAIS)[0];
@@ -502,7 +513,7 @@ function getGrupos(){
 }
 
 let _grupoSelecionado=null;
-let _prefSelecionada=Object.keys(EDITAIS||{})[0]||"cgAgenteAdm";
+let _prefSelecionada=Object.keys(EDITAIS||{})[0]||"cfpPlanejar";
 
 function renderPrefButtons(){
   const grid=document.getElementById("prefGrid");
@@ -560,6 +571,7 @@ function selecionarGrupo(grupo, userAction){
   atualizarModoProva(isCertGrupo);
   document.getElementById("cargoRow").style.display="block";
   _setupCargoOnChange();
+  renderCursinhoSelect();
   if(userAction&&STATE.inicio) document.getElementById("inputNome").value=STATE.nome||"";
 }
 
@@ -586,6 +598,7 @@ function selecionarPref(key, userAction){
   atualizarModoProva(isCertPref);
   document.getElementById("cargoRow").style.display="block";
   _setupCargoOnChange();
+  renderCursinhoSelect();
   if(userAction&&STATE.inicio) document.getElementById("inputNome").value=STATE.nome||"";
 }
 
@@ -694,6 +707,48 @@ function toggleDow(i){
   renderDowGrid();
 }
 
+/* ── MEU CURSINHO ──────────────────────────────────────────────
+   O aluno informa o curso que já assina e os tópicos passam a
+   exibir o link da aula. A lista sai de cursos.js, filtrada pelo
+   edital ativo: quem estuda para concurso não vê cursinho de CFP.
+
+   CHAVE ÚNICA DO RECURSO (25/08/2026): CURSOS_ATIVO=false apaga a
+   feature inteira — some o seletor de Configurações e some o botão
+   de aula em todo tópico. Mesmo papel que COACH_IA_URL="" faz com o
+   Coach. O código e os 8 testes continuam de pé; só os dados saíram
+   de cursos.js. Religar exige DUAS coisas: trocar para true aqui E
+   repor os dados em cursos.js (ver cabeçalho daquele arquivo). Não
+   religue sem autorização escrita do fornecedor do curso. */
+const CURSOS_ATIVO=false;
+function renderCursinhoSelect(){
+  const row=document.getElementById("rowCursinho");
+  const sel=document.getElementById("selCursinho");
+  if(!row||!sel) return;
+  if(!CURSOS_ATIVO){ row.style.display="none"; sel.innerHTML=""; return; }
+  const edital=_prefSelecionada||STATE.prefeitura||"";
+  const lista=getProvedores(edital);
+  if(!lista.length){ row.style.display="none"; sel.innerHTML=""; return; }
+  row.style.display="";
+  sel.innerHTML=`<option value="">Não tenho cursinho / prefiro não informar</option>`+
+    lista.map(function(p){
+      const n=contarTopicosComAula(edital,p.id);
+      const marca=n>0?` — ${n} tópico${n!==1?"s":""} com aula`:" — em breve";
+      return `<option value="${esc(p.id)}"${STATE.cursinho===p.id?" selected":""}>${esc(p.nome)}${marca}</option>`;
+    }).join("");
+  renderCursinhoNota();
+}
+function renderCursinhoNota(){
+  const el=document.getElementById("cursinhoNota");
+  if(!el) return;
+  const edital=_prefSelecionada||STATE.prefeitura||"";
+  const p=STATE.cursinho?getProvedor(STATE.cursinho):null;
+  if(!p){ el.innerHTML="Informe seu cursinho para abrir a aula direto do tópico do cronograma."; return; }
+  const n=contarTopicosComAula(edital,p.id);
+  el.innerHTML=n>0
+    ? `▶ ${n} tópico${n!==1?"s":""} já abre${n===1?"":"m"} a aula do ${esc(p.nome)} direto do cronograma. O acesso continua sendo pela sua conta no curso.`
+    : `Ainda não há aulas vinculadas ao ${esc(p.nome)} neste edital. Assim que houver, elas aparecem sozinhas nos tópicos.`;
+}
+
 function openSetupModal(){
   // Só restaura dias salvos se o cronograma já foi configurado; caso contrário começa vazio
   _dowSelected=STATE.inicio?[...(STATE.diasLivres||[])]:[]; 
@@ -714,6 +769,7 @@ function openSetupModal(){
   btnSalvar.disabled=false;
   document.getElementById("modalTitle").textContent=hasInicio?"Configurações do Cronograma":"Configure seu Cronograma";
   renderDowGrid();
+  renderCursinhoSelect();
   document.getElementById("setupModal").classList.add("open");
 }
 function fecharModal(){
@@ -836,30 +892,47 @@ function endTour(skipped){
    A análise é escolhida em 3 níveis: primeiro por CHAVE de edital (override,
    útil quando um grupo tem vários exames distintos — ex.: Certificações),
    depois pelo GRUPO do edital ativo, e por fim o fallback.
-   Para adicionar a análise de um novo concurso: suba o PDF na pasta app/ e
+   Para adicionar a análise de uma certificação: suba o PDF na pasta app/ e
    registre uma entrada { url, sub, arquivo } por grupo (ou por chave). */
 const EDITAL_ANALISES={
-  "Campina Grande PB":{ url:"edital-campina.pdf",  sub:"Análise Estratégica — Edital Campina Grande",              arquivo:"Analise_Estrategica_Edital_Campina_Grande.pdf" },
-  "SEDES-DF":         { url:"edital-sedes-df.pdf", sub:"Análise Estratégica — Edital SEDES/DF (Instituto Quadrix)", arquivo:"Analise_Estrategica_Edital_SEDES_DF.pdf" }
+  /* Nível 2 (por GRUPO) está VAZIO desde 25/08/2026: com o produto só de
+     certificações, todas caem no mesmo grupo "Certificações" e cada uma
+     precisa da sua própria análise, resolvida por CHAVE abaixo. O mapa
+     fica de pé para quando existir um grupo com análise compartilhada. */
 };
 const EDITAL_ANALISES_POR_CHAVE={
   "cfpPlanejar":{ url:"edital-cfp.pdf", sub:"Análise Estratégica — Certificação CFP® (Planejar)", arquivo:"Analise_Estrategica_Certificacao_CFP.pdf" }
 };
-const EDITAL_ANALISE_FALLBACK=EDITAL_ANALISES["Campina Grande PB"];
+/* NÃO EXISTE MAIS FALLBACK (25/08/2026). Antes, quem não tinha análise
+   registrada caía na do Campina Grande, o que passou a ser impossível
+   quando os concursos saíram. Agora getEditalAnalise devolve null e a
+   tela avisa que a análise ainda não saiu, em vez de mostrar a análise
+   de outro exame. CA-600 e FBB estão nesse estado até os PDFs chegarem. */
+const EDITAL_ANALISE_FALLBACK=null;
 function getEditalAnalise(){
   const ed=(typeof EDITAIS!=="undefined"&&EDITAIS[STATE.prefeitura])||null;
   return EDITAL_ANALISES_POR_CHAVE[STATE.prefeitura]
       || (ed&&EDITAL_ANALISES[ed.grupo])
       || EDITAL_ANALISE_FALLBACK;
 }
-function getEditalUrl(){ return getEditalAnalise().url; }
+function getEditalUrl(){ const a=getEditalAnalise(); return a?a.url:""; }
 function renderEdital(){
   const a=getEditalAnalise();
   const f=document.getElementById("editalFrame");
-  if(f&&f.getAttribute("src")!==a.url) f.src=a.url;
   const d=document.getElementById("editalDownload");
-  if(d){ d.href=a.url; d.setAttribute("download",a.arquivo); }
   const s=document.getElementById("editalSubtitulo");
+  const box=f?f.parentElement:null;
+  if(!a){                       // certificação ainda sem análise publicada
+    if(f) f.removeAttribute("src");
+    if(box) box.style.display="none";
+    if(d) d.style.display="none";
+    if(s) s.textContent="A análise desta certificação ainda não foi publicada. Assim que sair, ela aparece aqui.";
+    return;
+  }
+  if(box) box.style.display="";
+  if(d) d.style.display="";
+  if(f&&f.getAttribute("src")!==a.url) f.src=a.url;
+  if(d){ d.href=a.url; d.setAttribute("download",a.arquivo); }
   if(s) s.textContent=a.sub;
 }
 
@@ -1024,6 +1097,7 @@ function navTo(pg){
   if(pg==="simulado")   renderSimuladoPage();
   if(pg==="hoje")       renderHoje();
   if(pg==="edital")     renderEdital();
+  if(pg==="conteudo")   renderConteudo();
   if(pg==="coach")      renderCoachPage();
   if(pg==="agenda")     renderAgendaPage();
   // fechar sidebar no mobile
@@ -1150,7 +1224,7 @@ function renderDashboard(){
     ?(cob.cobertos>0
       ?`📚 <span>${cob.cobertos} tópico${cob.cobertos!==1?"s":""} coberto${cob.cobertos!==1?"s":""}</span> &nbsp;•&nbsp; 🎯 <span>${cob.total-cob.cobertos} restantes no edital</span> &nbsp;•&nbsp; 🔄 <span>${totalRev} revisões pendentes</span>`
       :`📌 Estude e avalie tópicos no Cronograma para ver a cobertura do edital.`)
-    :"Configure seu concurso para começar.";
+    :"Configure sua certificação para começar.";
 
   // Mini cards
   document.getElementById("mcHoras").textContent=horas+"h";
@@ -1583,7 +1657,7 @@ function getCoachIAHtml(){
    página "Palavra do Coach" (menu Recursos). */
 function buildCoachHtml(prog, conf, ritmo, projecao, totalRev){
   if(!STATE.inicio){
-    return `<span style="color:#94a3b8">Configure seu concurso para ativar o Coach Bússola.</span>`;
+    return `<span style="color:#94a3b8">Configure sua certificação para ativar o Coach Bússola.</span>`;
   }
 
   const diasRestantes=calcDiasRestantes();
@@ -1819,7 +1893,7 @@ function renderHoje(){
   const est=STATE.dias[hojeKey]||{};
   const dow=new Date().getDay();
   const el=document.getElementById("hojeConteudo");
-  if(!STATE.inicio){ el.innerHTML=`<div class="hoje-empty">Configure seu concurso para ver a missão do dia.</div>`; return; }
+  if(!STATE.inicio){ el.innerHTML=`<div class="hoje-empty">Configure sua certificação para ver a missão do dia.</div>`; return; }
 
   const dias=calcDiasRestantes();
   const pos=getCicloPos(hojeKey);
@@ -1866,6 +1940,8 @@ function renderHoje(){
   } else {
     const td=getTopicoDiaHoje();
     titulo=td.mat; sub=`${td.top} · peso ${td.peso}% no edital`;
+    const _aula=_btnConteudo(td.mat,td.top)+_btnAula(td.mat,td.top);
+    if(_aula) sub+=`<br>${_aula}`;
     const extras=getExtrasDoDia(hojeKey);
     if(extras.length) sub+=`<br>+ recuperação: ${extras.map(e=>`${esc(e.mat)} — ${esc(e.top)}`).join(", ")}`;
     isContent=true;
@@ -3077,6 +3153,74 @@ function getMedalha(perc){
   return{html:""};
 }
 
+/* Aulas do tópico: só aparecem quando o aluno declarou o cursinho E
+   aquele tópico tem vínculo em cursos.js. Mostra o TÍTULO da aula,
+   não um genérico "assistir": o aluno reconhece a aula na hora e sabe
+   se já viu. Uma aula pode cobrir vários tópicos, então o mesmo botão
+   se repete em tópicos diferentes de propósito.
+   Abre em aba nova com rel=noopener (link externo, do curso do aluno). */
+/* ── CONTEÚDO DE ESTUDO DO TÓPICO ──────────────────────────────────
+   O botão só existe quando aquele tópico tem texto publicado
+   (engine.temConteudo). Tópico sem conteúdo não mostra botão morto:
+   o aluno nunca clica em algo que abre uma tela vazia.
+   Ocupa o mesmo lugar do antigo _btnAula, no card de dia único, em
+   cada linha do dia multi-tópico e na tela Hoje. */
+let _conteudoAtual=null;        // {mat, top} do tópico aberto
+let _conteudoVoltarPara=null;   // de onde o aluno veio, para o botão voltar
+
+function _btnConteudo(mat,top){
+  if(!temConteudo(STATE.prefeitura,mat,top)) return "";
+  return `<div class="cont-acao"><button class="cont-btn" type="button" data-action="abrirConteudo" data-mat="${esc(mat)}" data-top="${esc(top)}">📖 Ler o conteúdo</button></div>`;
+}
+
+function abrirConteudo(mat,top){
+  if(!getConteudo(STATE.prefeitura,mat,top)) return;
+  _conteudoAtual={mat,top};
+  _conteudoVoltarPara=STATE.pagina==="conteudo"?_conteudoVoltarPara:STATE.pagina;
+  navTo("conteudo");
+  window.scrollTo(0,0);
+}
+
+/* As seções chegam como HTML já montado pelo conversor, a partir de um
+   subconjunto fechado de Markdown validado contra lista branca de tags.
+   É dado de build, como editais.js, então entra sem esc(). Título de
+   matéria e tópico vêm do editais.js e passam por esc() assim mesmo,
+   porque é barato e mantém a regra visível para quem ler depois. */
+function renderConteudo(){
+  const el=document.getElementById("conteudoBody");
+  if(!el) return;
+  const c=_conteudoAtual&&getConteudo(STATE.prefeitura,_conteudoAtual.mat,_conteudoAtual.top);
+  if(!c){
+    el.innerHTML=`<div class="cont-vazio">Nenhum conteúdo aberto. Volte ao cronograma e toque em "Ler o conteúdo" no tópico do dia.</div>`;
+    return;
+  }
+  const {mat,top}=_conteudoAtual;
+  const bloco=(titulo,html,cls)=>html?`<section class="cont-sec ${cls||""}"><h2>${titulo}</h2>${html}</section>`:"";
+  el.innerHTML=
+    `<div class="cont-topo">
+       <button class="cont-voltar" type="button" data-action="voltarDoConteudo">← Voltar</button>
+       <div class="cont-mat">${esc(mat)}</div>
+     </div>
+     <h1 class="cont-titulo">${esc(top)}</h1>
+     <p class="cont-frase">${esc(c.frase)}</p>`
+    + bloco("O que cai na prova",c.prova,"cont-prova")
+    + bloco("Conteúdo",c.corpo,"cont-corpo")
+    + bloco("Pegadinhas",c.pegadinhas,"cont-peg")
+    + bloco("Cartão de revisão",c.cartao,"cont-cartao");
+}
+
+function _btnAula(mat,top){
+  if(!CURSOS_ATIVO) return "";   // recurso desligado — ver bloco MEU CURSINHO
+  const aulas=getAulas(STATE.prefeitura,STATE.cursinho,mat,top);
+  if(!aulas.length) return "";
+  const p=getProvedor(STATE.cursinho);
+  const nome=p?p.nome:"seu cursinho";
+  const links=aulas.map(function(a){
+    return `<a class="aula-link" href="${esc(a.u)}" target="_blank" rel="noopener noreferrer" title="Abrir no curso do ${esc(nome)}">▶ ${esc(a.t)}</a>`;
+  }).join("");
+  const rotulo=aulas.length>1?`${aulas.length} aulas · ${esc(nome)}`:esc(nome);
+  return `<div class="aula-bloco"><span class="aula-fonte">${rotulo}</span>${links}</div>`;
+}
 function renderDiaNormal(dia,idx,key,est,isHoje,isPast,nomeDia){
   // Dia 1 fixo (regra de todos os cronogramas): Orientações do Coach (sempre em STATE.inicio)
   if(STATE.inicio&&key===STATE.inicio){
@@ -3162,8 +3306,8 @@ function renderDiaNormal(dia,idx,key,est,isHoje,isPast,nomeDia){
     <div class="dia-body" id="body-${key}" style="${bodyStyle}">
       ${medalHtml}
       ${isMulti
-        ?`<div class="multi-topico-header"><span class="multi-topico-tag">📚 ${tops.length} tópicos · Modo intensivo</span></div><div class="multi-topico-list">${tops.map((t,i)=>`<div class="multi-topico-row"><div class="mtr-head"><span class="multi-topico-num">${i+1}</span><span class="multi-topico-mat" title="${esc(t.mat)}">${esc(t.mat)}</span></div><div class="multi-topico-text">${t.top}</div></div>`).join("")}</div>`
-        :`<div class="dia-topico">${mat}</div><div class="dia-subtopico">${top}</div><div class="dia-peso">Peso ${peso}%</div>`}
+        ?`<div class="multi-topico-header"><span class="multi-topico-tag">📚 ${tops.length} tópicos · Modo intensivo</span></div><div class="multi-topico-list">${tops.map((t,i)=>`<div class="multi-topico-row"><div class="mtr-head"><span class="multi-topico-num">${i+1}</span><span class="multi-topico-mat" title="${esc(t.mat)}">${esc(t.mat)}</span></div><div class="multi-topico-text">${t.top}</div>${_btnConteudo(t.mat,t.top)}${_btnAula(t.mat,t.top)}</div>`).join("")}</div>`
+        :`<div class="dia-topico">${mat}</div><div class="dia-subtopico">${top}</div><div class="dia-peso">Peso ${peso}%</div>${_btnConteudo(mat,top)}${_btnAula(mat,top)}`}
       ${getExtrasDoDia(key).length?`<div class="dia-extras">${getExtrasDoDia(key).map(e=>`<div class="dia-extra-item">➕ <strong>${esc(e.mat)}</strong>: ${esc(e.top)}</div>`).join("")}<div class="dia-extra-tag">⚖️ Recuperação de conteúdo</div></div>`:""}
       <div class="check-group">
         <label class="check-item" data-action="toggleCheck" data-key="${key}" data-campo="lido"><div class="check-box ${lidoCls}" id="cb-${key}-lido">✓</div><span class="check-label">Conteúdo Lido</span></label>
