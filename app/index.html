@@ -255,13 +255,13 @@ function fazerLogout() {
       <div class="modal-title" id="modalTitle" style="margin-bottom:0;">Configure seu Cronograma</div>
       <button id="btnFecharModal" data-action="fecharModal" style="display:none;align-items:center;justify-content:center;width:32px;height:32px;border:none;background:#f1f5f9;border-radius:50%;cursor:pointer;font-size:1.1rem;color:#64748b;flex-shrink:0;" title="Fechar sem salvar">✕</button>
     </div>
-    <div class="modal-desc">Escolha seu concurso e informe seus dados. A Bússola distribui o conteúdo automaticamente por peso de questões.</div>
+    <div class="modal-desc">Escolha sua certificação e informe seus dados. A Bússola distribui o conteúdo automaticamente por peso de questões.</div>
     <div class="form-row">
       <label class="form-label">Seu nome</label>
       <input class="form-input" id="inputNome" type="text" placeholder="Ex: João Ribeiro">
     </div>
     <div class="form-row">
-      <label class="form-label">Concurso / Certificação</label>
+      <label class="form-label">Certificação</label>
       <div class="concurso-picker">
         <button type="button" class="concurso-trigger" id="concursoTrigger" data-action="toggleConcursoDropdown" aria-haspopup="listbox" aria-expanded="false">
           <span class="concurso-trigger-text concurso-trigger-placeholder" id="concursoTriggerText">Selecione ▾</span>
@@ -293,6 +293,11 @@ function fazerLogout() {
     <div class="form-row">
       <label class="form-label">Dias de descanso <span>(marque até 4 dias que NÃO vai estudar)</span></label>
       <div class="dow-grid" id="dowGrid"></div>
+    </div>
+    <div class="form-row" id="rowCursinho" style="display:none">
+      <label class="form-label" for="selCursinho">Meu cursinho <span>(opcional — libera o link das aulas nos tópicos)</span></label>
+      <select class="form-input" id="selCursinho" data-change="salvarCursinho"></select>
+      <div class="cursinho-nota" id="cursinhoNota"></div>
     </div>
     <button class="btn-start" id="btnIniciarBússola" data-action="iniciarBussola">⚡ Iniciar Meu Cronograma</button>
     <div id="restartSection" class="restart-section" style="display:none">
@@ -365,10 +370,10 @@ function fazerLogout() {
 <header class="topbar">
   <div class="topbar-hamburger" id="hamburgerBtn" data-action="toggleSidebar" role="button" tabindex="0" aria-label="Abrir menu">☰</div>
   <div class="topbar-left">
-    <div class="topbar-concurso" data-action="openSetupModal" role="button" tabindex="0" aria-label="Configurações do concurso">
+    <div class="topbar-concurso" data-action="openSetupModal" role="button" tabindex="0" aria-label="Configurações da certificação">
       <div>
         <div class="topbar-concurso-name" id="tbNome">Bússola de Estudos</div>
-        <div class="topbar-concurso-city" id="tbCargo">Configure seu concurso</div>
+        <div class="topbar-concurso-city" id="tbCargo">Configure sua certificação</div>
       </div>
       <span class="chevron-down">▼</span>
     </div>
@@ -422,7 +427,7 @@ function fazerLogout() {
     <div class="sidebar-dias-prova">
       <div class="dias-label">Dias para a prova</div>
       <div class="dias-count" id="diasCount">—</div>
-      <div class="dias-sub" id="diasSub">Configure o concurso</div>
+      <div class="dias-sub" id="diasSub">Configure a certificação</div>
     </div>
   </div>
 </aside>
@@ -464,7 +469,7 @@ function fazerLogout() {
         <span class="painel-collapsed-label">Painel Estratégico</span>
         <div class="painel-collapsed-stats">
           <span class="pcs-sep">|</span>
-          <span class="pcs-item" id="pcsRitmo">⏳ Configure seu concurso</span>
+          <span class="pcs-item" id="pcsRitmo">⏳ Configure sua certificação</span>
           <span class="pcs-sep">|</span>
           <span class="pcs-item" id="pcsProg">📊 0% concluído</span>
           <span class="pcs-sep">|</span>
@@ -474,7 +479,7 @@ function fazerLogout() {
       <div class="painel-expanded" id="painelContent">
         <div class="coach-block" id="coachBlock">
           <div class="coach-header"><span class="coach-badge" id="coachBadge">✦ Coach Bússola</span></div>
-          <div class="coach-text" id="coachText">Configure seu concurso para ativar o Coach.</div>
+          <div class="coach-text" id="coachText">Configure sua certificação para ativar o Coach.</div>
           <span class="coach-highlight" id="coachHighlight" style="display:none"></span>
         </div>
         <div class="jornada-section">
@@ -483,7 +488,7 @@ function fazerLogout() {
             <span class="jornada-meta-txt" id="jornadaMeta">—</span>
           </div>
           <div class="jornada-bar-wrap"><div class="jornada-bar-fill" id="jornadaFill" style="width:0%"></div></div>
-          <div class="jornada-meta-line" id="jornadaInfo">Configure seu concurso para começar.</div>
+          <div class="jornada-meta-line" id="jornadaInfo">Configure sua certificação para começar.</div>
         </div>
         <div class="mini-cards">
           <div class="mini-card"><div class="mini-card-icon mc-blue">⏱</div><div><div class="mc-value" id="mcHoras">0h</div><div class="mc-label">Horas estudadas</div></div><div class="mc-delta delta-up" id="mcHorasDelta" style="display:none"></div></div>
@@ -593,12 +598,17 @@ function fazerLogout() {
   <!-- PAGE: ANÁLISE DO EDITAL -->
   <div class="page" id="page-edital">
     <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;margin-bottom:1rem;">
-      <div><div class="page-title">🔍 Análise do Edital &amp; Banca</div><div class="page-sub" id="editalSubtitulo" style="margin-bottom:0">Análise Estratégica — Edital Campina Grande</div></div>
-      <a class="view-btn" id="editalDownload" download="Analise_Estrategica_Edital_Campina_Grande.pdf" href="javascript:void(0)">⬇️ Baixar PDF</a>
+      <div><div class="page-title">🔍 Análise do Edital &amp; Banca</div><div class="page-sub" id="editalSubtitulo" style="margin-bottom:0">Análise Estratégica da certificação</div></div>
+      <a class="view-btn" id="editalDownload" download="Analise_Estrategica.pdf" href="javascript:void(0)">⬇️ Baixar PDF</a>
     </div>
     <div style="background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-lg);overflow:hidden;height:calc(100vh - 200px);min-height:480px">
       <iframe id="editalFrame" style="width:100%;height:100%;border:none;display:block" title="Análise Estratégica do Edital"></iframe>
     </div>
+  </div>
+
+  <!-- PAGE: CONTEÚDO DO TÓPICO (aberto pelo card do dia; sem item de menu) -->
+  <div class="page" id="page-conteudo">
+    <div id="conteudoBody"></div>
   </div>
 
   <!-- PAGE: REVISÕES -->
@@ -726,8 +736,8 @@ function fazerLogout() {
   </div>
 
 </main>
-<!-- Base de concursos: fonte única de dados (funciona em file:// e servidor) -->
-<script src="editais.js"></script>
+<!-- Base de certificações: fonte única de dados (funciona em file:// e servidor) -->
+<script src="editais.js"></script> <script src="cursos.js"></script> <script src="conteudo/conteudo-cpa.js"></script>
 <script src="js/state.js"></script>
 <script src="js/engine.js"></script>
 <script src="js/ui.js"></script>

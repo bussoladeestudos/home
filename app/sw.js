@@ -7,13 +7,15 @@
    Só intercepta GET da MESMA ORIGEM (Firebase/Google passam direto).
    Ao mudar a versão abaixo, o SW novo assume e limpa os caches antigos.
    ════════════════════════════════════════════════════════════════ */
-const CACHE = "bussola-v1";
+const CACHE = "bussola-v4";   // v4 (26/08): entrou conteudo/conteudo-cpa.js no SHELL
 const SHELL = [
   "./",
   "index.html",
   "manifest.webmanifest",
   "css/app.css",
   "editais.js",
+  "cursos.js",
+  "conteudo/conteudo-cpa.js",
   "js/state.js",
   "js/engine.js",
   "js/ui.js",
