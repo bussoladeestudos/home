@@ -1,59 +1,14 @@
 /* ════════════════════════════════════════════
-   DADOS DA HOME — FONTE ÚNICA (concursos + certificações).
+   DADOS DA HOME — FONTE ÚNICA (certificações).
    Para adicionar/editar, altere APENAS este arquivo.
    Carregado via <script src> — funciona em file:// e no servidor.
    ════════════════════════════════════════════ */
-window.CONCURSOS_DATA = [
-  {
-    "id": "campina-grande-2026",
-    "municipio": "Campina Grande",
-    "estado": "PB",
-    "orgao": "Prefeitura Municipal",
-    "banca": "IDECAN",
-    "dataProva": "2026-08-30",
-    "edital": "Edital 01/2026",
-    "ativo": true,
-    "cargos": [
-      "Agente Administrativo",
-      "Professor Educação Infantil",
-      "Professor Anos Iniciais",
-      "Professor de Língua Portuguesa",
-      "Professor de Matemática",
-      "Supervisor Educacional"
-    ],
-    "descricao": "Concurso público com 525 vagas para cargos de nível médio e superior.",
-    "hotmartLink": "https://pay.hotmart.com/N106305634J"
-  },
-  {
-    "id": "sedes-df-2026",
-    "municipio": "Brasília",
-    "estado": "DF",
-    "orgao": "Secretaria de Desenvolvimento Social (SEDES/DF)",
-    "banca": "Instituto Quadrix",
-    "dataProva": "2026-09-06",
-    "edital": "Edital 01/2026 (Ret. 02/2026)",
-    "ativo": true,
-    "cargos": [
-      "Agente Social (TDAS)",
-      "Cuidador Social (TDAS)",
-      "Técnico Administrativo (TDAS)",
-      "Administração (EDAS)",
-      "Ciências Contábeis (EDAS)",
-      "Comunicação Social (EDAS)",
-      "Direito e Legislação (EDAS)",
-      "Economia (EDAS)",
-      "Educador Social (EDAS)",
-      "Estatística (EDAS)",
-      "Nutrição (EDAS)",
-      "Pedagogia (EDAS)",
-      "Psicologia (EDAS)",
-      "Serviço Social (EDAS)",
-      "Sociologia (EDAS)"
-    ],
-    "descricao": "Concurso com 2.596 vagas imediatas + cadastro de reserva para cargos de nível médio (TDAS) e superior (EDAS) nas secretarias de Desenvolvimento Social, da Mulher e de Justiça e Cidadania do DF.",
-    "hotmartLink": "https://pay.hotmart.com/N106305634J"
-  }
-];
+/* Concursos: o produto passou a ser SÓ de certificações em 25/08/2026
+   (decisão do dono). A lista fica VAZIA, e não removida, porque o
+   index.html lê window.CONCURSOS_DATA em três pontos (dropdown do
+   menu, seção da home e vitrine) e todos já tratam lista vazia. Se um
+   dia voltar concurso, basta repovoar aqui. */
+window.CONCURSOS_DATA = [];
 
 window.CERTIFICACOES_DATA = [
   {
@@ -436,6 +391,145 @@ window.CERTIFICACOES_DATA = [
           "LGPD: conceitos, princípios e bases legais",
           "Titular, controlador e operador de dados",
           "Direitos do titular e obrigações do correspondente"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cpa",
+    "nome": "CPA — Certificado Profissional Anbima",
+    "organizacao": "ANBIMA",
+    "tipo": "certificacao",
+    "area": "Mercado Financeiro",
+    "nivel": "Iniciante",
+    "descricao": "A CPA é o requisito de entrada no mercado financeiro. Direcionada a quem está começando a carreira, dá a base sobre produtos financeiros para atuar em atividades comerciais, no contato inicial com clientes e na prestação de informações sobre produtos e serviços. Depois dela, o caminho segue para as certificações de distribuição C-Pro R e C-Pro I. Programa em vigor desde 01/01/2026.",
+    "modulos": [
+      {
+        "numero": 1,
+        "nome": "Estrutura e Dinâmica do Sistema Financeiro Nacional",
+        "descricao": "Órgãos normativos e de supervisão, operadores do sistema, política econômica, matemática financeira aplicada ao mercado e a infraestrutura que liquida e registra as operações.",
+        "topicos": [
+          "Órgãos normativos: CMN, CNSP e CNPC",
+          "Supervisão: Banco Central, CVM, Susep e Previc",
+          "Operadores do sistema: bancos, cooperativas e instituições de pagamento",
+          "Demais operadores: corretoras, distribuidoras, fintechs e seguradoras",
+          "Autorreguladores, FGC e Sistema Brasileiro de Pagamentos",
+          "Fluxo circular da renda e subdivisões do mercado financeiro",
+          "Política fiscal, dívida pública e Lei de Responsabilidade Fiscal",
+          "Política monetária: instrumentos e canais de transmissão",
+          "Copom, regime de metas de inflação e taxa Selic",
+          "Política cambial, regimes de câmbio e taxa PTAX",
+          "Indicadores econômicos: PIB, IPCA, IGP-M e desemprego",
+          "Risco de liquidez, de crédito e de mercado",
+          "Taxa de juros nominal e real, indexadores e fórmula de Fisher",
+          "Capitalização simples versus capitalização composta",
+          "Fluxo de caixa: valor presente, valor futuro e VPL",
+          "TIR, custo de oportunidade, taxa livre de risco e duration",
+          "Sistemas de amortização SAC e price, payback e desconto bancário",
+          "Infraestruturas do mercado financeiro: SPB, SPI e Selic",
+          "Clearings, contrapartes centrais e risco de contraparte",
+          "Classificação de investidores, autorregulação Anbima e BSM"
+        ]
+      },
+      {
+        "numero": 2,
+        "nome": "Produtos do Mercado Financeiro",
+        "descricao": "O módulo de maior peso: renda fixa, renda variável, COE, fundos de investimento, previdência complementar, produtos de crédito, serviços bancários e seguros.",
+        "topicos": [
+          "Títulos públicos federais: LFT, LTN e NTN-B",
+          "Tesouro Direto: plataforma, títulos e custos",
+          "CDB, RDB e RDC",
+          "LCI, LCA e LCD",
+          "Debêntures, debêntures de infraestrutura e conversíveis",
+          "CRI e CRA",
+          "Rating de crédito",
+          "Poupança: rendimento, data de aniversário e garantias",
+          "TR e TLP",
+          "Tributação das aplicações de renda fixa",
+          "IOF nas aplicações financeiras",
+          "Renda variável: definição, mercado primário e secundário",
+          "Sociedades anônimas: S/A aberta, fechada e empresa listada",
+          "Classes de ações: ordinárias, preferenciais, units, BDRs e bônus de subscrição",
+          "IPO, OPA e follow on",
+          "Eventos corporativos: dividendos, JCP e assembleias (AGO e AGE)",
+          "Eventos corporativos: grupamento, desdobramento, bonificação e subscrição",
+          "Índices de mercado: Ibovespa, IBrX 100 e IBrX 50",
+          "Governança corporativa: segmentos de listagem, tag along, drag along e free float",
+          "Tributação da renda variável: alíquotas, isenções e compensação de perdas",
+          "COE: estrutura, capital protegido e tributação",
+          "Fundos de investimento: conceito, condomínio e registro na CVM",
+          "Resolução CVM 175: classes, subclasses e segregação patrimonial",
+          "Características, estratégias, carteiras e riscos dos fundos",
+          "Tributação dos fundos de investimento",
+          "Fundos imobiliários (FIIs)",
+          "PGBL e VGBL: quando usar cada um",
+          "Regimes de tributação progressivo e regressivo na previdência",
+          "Conceitos técnicos da previdência complementar",
+          "Princípios para disponibilização de crédito e garantias",
+          "Cartão de crédito, crédito rotativo e cheque especial",
+          "Crédito consignado e crédito pessoal",
+          "Crédito Direto ao Consumidor (CDC)",
+          "Crédito imobiliário",
+          "Capital de giro e consórcio",
+          "Conta corrente",
+          "Conta internacional",
+          "Compra e venda de moeda estrangeira",
+          "Seguros de vida",
+          "Seguros patrimoniais"
+        ]
+      },
+      {
+        "numero": 3,
+        "nome": "Relacionamento com o Cliente",
+        "descricao": "Finanças pessoais e orçamento, orientação financeira, perfil da pessoa investidora e suitability, mais as regras de conduta, prevenção à lavagem de dinheiro e LGPD.",
+        "topicos": [
+          "Faixa etária, exposição ao risco e produtos adequados ao perfil",
+          "Ciclo de vida: acumulação, crescimento, preservação e distribuição",
+          "Educação financeira e capacidade de poupança",
+          "Orçamento e fluxo de caixa pessoal ou familiar",
+          "Gestão de dívidas: escolha da melhor dívida e garantias",
+          "Empréstimo, financiamento e modalidades de crédito ao consumidor",
+          "Financiamento imobiliário, de veículos e crédito estudantil",
+          "Microcrédito, crédito rural e linhas para reforma e energia sustentável",
+          "Reserva de emergência: montante e ativos de alta liquidez",
+          "Balanço patrimonial pessoal: indicadores e patrimônio líquido",
+          "Etapas do planejamento financeiro pessoal e metas",
+          "Planejamento para aposentadoria e fundo educacional",
+          "IRPF: o que declarar, classificação de rendimentos e modelos",
+          "Tipos de investimento, tolerância a risco e horizonte",
+          "Gestão financeira: emergências e uso do crédito",
+          "Gestão de investimentos",
+          "Gestão de risco e seguros",
+          "Perfis da pessoa investidora",
+          "Adequação de produtos financeiros (suitability)",
+          "Avaliação de risco e retorno",
+          "Diversificação de carteira",
+          "Pessoa investidora profissional e qualificada",
+          "Código de conduta ética Anbima: os nove princípios",
+          "Suitability e Código de Distribuição da Anbima",
+          "Ética profissional no atendimento ao cliente",
+          "Riscos associados à atividade profissional",
+          "Prevenção à lavagem de dinheiro: conceitos e obrigações",
+          "Combate ao financiamento do terrorismo e comunicação ao Coaf",
+          "Lei Geral de Proteção de Dados (LGPD)",
+          "Crimes e ilícitos contra o mercado de capitais"
+        ]
+      },
+      {
+        "numero": 4,
+        "nome": "Inovação e Desenvolvimento de Mercado",
+        "descricao": "ESG e investimentos sustentáveis, finanças descentralizadas, open finance, inteligência artificial e o ecossistema de fintechs e meios de pagamento.",
+        "topicos": [
+          "Conceitos de ESG: ambiental, social e governança",
+          "Aspectos ambientais e sociais no mercado financeiro",
+          "Governança corporativa e ESG",
+          "ESG e finanças: impactos na indústria de investimentos",
+          "Produtos e estratégias de investimento ESG",
+          "Fundos de investimento sustentável (IS) e fundos que integram ESG",
+          "Finanças descentralizadas (DeFi), smart contracts e tokenização",
+          "Open finance, open investment e open insurance",
+          "Inteligência artificial no atendimento e no mercado financeiro",
+          "Fintechs, sandbox regulatório e meios de pagamento"
         ]
       }
     ]
