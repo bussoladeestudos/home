@@ -747,6 +747,173 @@ escreva direto, sem marcação:
   - **DOC e TEC foram extintos em 15 de janeiro de 2024** (Febraban). Restam TED e Pix.
   - **Portabilidade de salário:** gratuita, no mesmo dia, para conta de **mesma
     titularidade** (mesmo CPF) em qualquer instituição.
+- **SEGUROS — MUDANÇA DE MARCO LEGAL.** A **Lei 15.040/2024** (marco legal dos seguros)
+  **revogou os arts. 757 a 802 do Código Civil** e está **em vigor desde 10 de dezembro de
+  2025**. **Nunca fundamente contrato de seguro no Código Civil.** Pontos da lei:
+  - **Art. 1º:** a seguradora garante **interesse legítimo** do segurado ou beneficiário
+    contra riscos predeterminados. **Art. 5º:** a **eficácia** do contrato **depende da
+    existência de interesse legítimo**.
+  - **Art. 89:** garantia e indenização **não podem superar o valor do interesse**.
+    **Art. 90:** a indenização **não pode exceder o valor da garantia**, ainda que o
+    interesse seja superior. São **dois limites** que operam juntos.
+  - **Art. 91:** no **sinistro parcial NÃO há rateio por infrasseguro**, salvo pactuação
+    expressa. Inverte o entendimento tradicional — não escreva que o sub-seguro sempre
+    reduz proporcionalmente.
+  - **Art. 94:** nos seguros de dano a seguradora **sub-roga-se** nos direitos do segurado.
+    **Art. 95:** **não** cabe sub-rogação quanto à **culpa não grave** de **cônjuge,
+    parentes até segundo grau ou empregados** do segurado.
+- **NUMERAÇÃO DOS TÓPICOS.** Use sempre o número da lista do edital neste prompt. Em
+  Produtos do Mercado Financeiro: **37 Conta internacional**, **38 Compra e venda de moeda
+  estrangeira**, **39 Seguros de vida**, **40 Seguros patrimoniais**. O `id` do front
+  matter deve bater com esse número (`cpa-prod-40` para Seguros patrimoniais).
+- **Seguros sobre a vida e a integridade física (Lei 15.040/2024, arts. 112 a 122):**
+  - **Art. 112:** capital **livremente estipulado**; o proponente pode contratar **mais de
+    um seguro sobre o mesmo interesse**, com a mesma ou diversas seguradoras. As coberturas
+    **se acumulam**.
+  - **Art. 113:** a indicação do beneficiário é **livre**.
+  - **Art. 114 — CUIDADO, erro comum:** "Salvo renúncia do segurado, é lícita a
+    substituição do beneficiário ... **por ato entre vivos ou por declaração de última
+    vontade**". **O testamento VALE.** O efeito da falta de aviso é outro: "a seguradora
+    não cientificada da substituição será exonerada pagando ao antigo beneficiário".
+    **Não escreva que testamento não serve para trocar beneficiário.**
+  - **Art. 115:** sem indicação, ou não prevalecendo a indicação, paga-se **metade ao
+    cônjuge, se houver, e o restante aos demais herdeiros**; alcança também quem comprove
+    dependência econômica.
+  - **Art. 116:** o capital devido por morte **não é considerado herança para nenhum
+    efeito**. **Art. 122:** esses capitais são **impenhoráveis** e **NÃO implicam
+    sub-rogação** — contraste direto com o seguro de dano (arts. 94 e 95).
+  - **Art. 117:** vedados negócios que impliquem renúncia ou redução do crédito ao capital
+    segurado, salvo empréstimo técnico ou resgate.
+  - **Art. 118:** admite-se **carência** para morte e invalidez por doença, limitada a
+    **metade da vigência contratual**; ocorrendo o sinistro na carência, a seguradora
+    devolve os **prêmios pagos ou a reserva matemática**.
+- **IOF SOBRE CÂMBIO — mudou em 2025 e o cenário antigo NÃO vale mais.** O cronograma do
+  Decreto 10.997/2022, que reduziria o IOF do câmbio até **zerar em 2028**, foi superado
+  pelos decretos de 2025. **Nunca cite esse cronograma.** Situação atual:
+  - **3,5%:** cartão de crédito e débito internacional, saques no exterior, carregamento
+    de cartão pré-pago, cheques de viagem e compra de moeda em espécie.
+  - **3,5%:** transferência ao exterior para disponibilidade do próprio residente (conta
+    de **mesma titularidade**) **sem** finalidade de investimento.
+  - **1,10%:** transferência ao exterior **com finalidade de investimento**
+    (Decreto 6.306/2007, art. 15-B, inciso **XXI-A**, incluído pelo Decreto 12.467/2025).
+  - **Consequência que derruba a tese antiga:** carregar conta internacional só para gastar
+    em viagem **não gera mais economia de IOF** frente ao cartão — ambos a 3,5%. A vantagem
+    tributária sobrevive apenas na remessa **para investir**.
+  - **Instabilidade:** os decretos de 2025 foram parcialmente **sustados** pelo Congresso
+    (Decreto Legislativo 176/2025), o **STF restabeleceu parte** a partir de **17/07/2025**
+    sem retroatividade, e há **ADC 96** em curso. **Sempre marque `[CONFERIR]` em alíquota
+    de IOF sobre câmbio.**
+- **CBE (Declaração de Capitais Brasileiros no Exterior, ao Banco Central):** **anual**
+  para ativos acima de **US$ 1 milhão** na data-base de **31 de dezembro**; **trimestral**
+  acima de **US$ 100 milhões** (datas-base 31/03, 30/06 e 30/09). Multa de **R$ 2.500,00 a
+  R$ 250.000,00**. Não confunda com o IRPF, em que o residente declara o **patrimônio
+  mundial**.
+- **Suitability (Resolução CVM 30/2021 — é esta a norma, não a revogada ICVM 539):**
+  - **É vedado RECOMENDAR** produtos, serviços ou operações **sem verificar a adequação**
+    ao perfil.
+  - **Três dimensões a analisar:** **objetivos** de investimento (com horizonte de prazo),
+    **situação financeira** e **conhecimento** do cliente.
+  - **Atualização em intervalos não superiores a 24 meses**, tanto do perfil do cliente
+    quanto da classificação dos produtos.
+  - **O cliente PODE operar fora do perfil por ordem própria.** A vedação é sobre
+    **recomendar**. Havendo ordem do cliente, a instituição deve **alertá-lo da
+    inadequação** e obter **declaração expressa de ciência**. **Não escreva que é
+    "estritamente proibido" o cliente investir fora do perfil.** Mas o alerta **não pode
+    ser usado como pretexto** para operação precedida de recomendação inadequada.
+  - **Dispensa do dever de verificar a adequação:** **investidor qualificado — EXCETO
+    pessoa natural**; **pessoa jurídica de direito público**; cliente com **carteira
+    administrada** por administrador autorizado pela CVM. A ressalva da pessoa natural
+    qualificada é pegadinha clássica.
+- **ATENÇÃO AO CABEÇALHO DAS SEÇÕES.** O título é exatamente **"## Em uma frase"**. Já
+  veio "## Em una frase" (espanhol), o que quebra a validação do conversor. As cinco
+  seções obrigatórias, nesta ordem: **Em uma frase / O que cai na prova / Conteúdo /
+  Pegadinhas / Cartão de revisão**.
+- **NÃO USE LaTeX.** Fórmulas em `$$...$$` ou `\text{}` aparecem como texto cru na tela
+  do aluno: o app renderiza Markdown simples, sem MathJax. Escreva a fórmula em palavras
+  ("some as receitas e subtraia os gastos essenciais, os supérfluos e as parcelas de
+  dívidas") ou em linha, com sinais comuns.
+- **Educação financeira e endividamento — âncoras legais que costumam faltar:**
+  - **Decreto 10.393/2020:** instituiu a **Estratégia Nacional de Educação Financeira
+    (ENEF)** e o **Fórum Brasileiro de Educação Financeira (FBEF)**.
+  - **Lei 14.181/2021 (Lei do Superendividamento), que alterou o CDC:**
+    **superendividamento** é "a impossibilidade manifesta de o consumidor pessoa natural,
+    de boa-fé, pagar a totalidade de suas dívidas de consumo, exigíveis e vincendas, sem
+    comprometer seu **mínimo existencial**" (art. 54-A, § 1º).
+    **Art. 54-C, IV:** é vedado **assediar ou pressionar** o consumidor para contratar
+    produto, serviço ou crédito, "principalmente se se tratar de consumidor idoso,
+    analfabeto, doente ou em estado de vulnerabilidade agravada".
+    **Art. 54-C, III:** vedado ocultar ou dificultar a compreensão dos **ônus e riscos**.
+    **Art. 104-A:** na repactuação judicial, o plano de pagamento tem prazo máximo de
+    **5 anos**, preservado o mínimo existencial.
+- **Seguro de vida — estrutura do produto (fonte: Susep):**
+  - **Cobertura básica:** morte por causas **naturais e acidentais**, com indenização em
+    **pagamento único ou renda**. **Coberturas adicionais:** invalidez permanente por
+    acidente ou por doença, diagnóstico de **doença grave**, diárias por internação
+    hospitalar, diária por incapacidade temporária e **auxílio-funeral**.
+    **Não use siglas como "IPA", "ADG" ou "rangers"** — o termo correto é **coberturas
+    adicionais** (ou cláusulas adicionais); "rangers" não existe (a palavra inglesa é
+    *riders*, que também não se usa em português).
+  - **Vida x acidentes pessoais:** o **seguro de vida** cobre morte por causas **naturais
+    e acidentais**; o **seguro de acidentes pessoais** só indeniza se ocorrer o **acidente
+    pessoal coberto**, e por isso custa menos.
+  - **Temporário:** prazo determinado; sobrevivendo o segurado, o contrato se encerra
+    **sem devolução dos prêmios**. **Vida inteira:** sem prazo de expiração, prêmio maior,
+    com formação de reservas.
+  - **Seguro de vida não é poupança:** o prêmio custeia a proteção do grupo, não forma
+    reserva individual de rentabilidade.
+- **LEMBRETE RECORRENTE:** a base legal dos seguros é a **Lei 15.040/2024**, não o Código
+  Civil (arts. 757 a 802 **revogados**). Este erro já foi corrigido três vezes.
+- **Orçamento pessoal — dois eixos independentes.** **Fixa x variável** (comportamento do
+  valor) **NÃO é a mesma coisa** que **essencial x supérflua** (natureza da necessidade).
+  Existem as quatro combinações: fixa essencial (aluguel), **fixa supérflua** (assinatura
+  ociosa, academia sem uso), variável essencial (supermercado) e variável supérflua
+  (delivery por impulso). Não escreva "despesas variáveis supérfluas" como se fossem
+  sinônimos. O corte mira o **supérfluo**, e o fixo supérfluo é o mais eficiente porque
+  libera valor **todo mês**.
+- **O que quase todo material esquece no orçamento:**
+  - A base é a **renda LÍQUIDA**, não a bruta.
+  - **Despesas anuais e sazonais** (IPTU, IPVA, licenciamento, seguro do carro, material
+    escolar) exigem **provisionamento mensal**: orçamento **anualizado**, dividindo o total
+    do ano por doze.
+  - **Décimo terceiro, férias, bônus e restituição** são **receitas extraordinárias**, não
+    renda corrente.
+  - A poupança entra como **compromisso prioritário**, não como sobra do fim do mês.
+  - **Orçamento e fluxo de caixa medem FLUXO** (movimento no período); o **balanço
+    patrimonial pessoal mede ESTOQUE** (patrimônio numa data). São tópicos distintos do
+    edital — não antecipe o balanço aqui.
+- **Arrendamento mercantil (leasing) — modalidade que costuma faltar nos materiais.**
+  Regulado e fiscalizado pelo **Banco Central** (Lei 6.099/1974, alterada pela Lei
+  7.132/1983). A **arrendadora compra o bem** conforme especificação do cliente e
+  **permanece proprietária** durante o contrato; o cliente é **arrendatário**, com posse e
+  uso. **Ao final há TRÊS saídas: comprar (opção de compra), renovar ou devolver o bem** —
+  não apenas comprar. O **VRG (Valor Residual Garantido)** é próprio do **leasing
+  financeiro** e serve para liquidar a opção de compra. Prazos mínimos típicos de 24 a 36
+  meses.
+  **Contraste com a alienação fiduciária:** lá o **credor** tem a **propriedade resolúvel**
+  e o cliente a posse direta, e a quitação **consolida automaticamente** a propriedade no
+  cliente — uma saída só.
+- **"Menor CET" não é resposta automática.** O CET é o critério principal de comparação,
+  mas a recomendação também pesa: o **consignado trava margem** e a autorização de desconto
+  **não se cancela por vontade do cliente** enquanto houver saldo devedor; e **dar o imóvel
+  em garantia** barateia a operação **e** converte um atraso em risco de perder a moradia.
+  Não escreva que o profissional "recomenda obrigatoriamente a linha de menor CET".
+- **Conduta na oferta de crédito tem base legal**, não é só ética: **Lei 14.181/2021,
+  art. 54-C** — vedado **assediar ou pressionar** o consumidor (agravado se idoso,
+  analfabeto, doente ou vulnerável) e vedado **ocultar ou dificultar a compreensão dos ônus
+  e riscos**.
+- **Comprometimento de renda de 30% NÃO é regra do Banco Central nem do CMN.** É
+  **política de crédito** de cada instituição, parte da análise de risco, e varia por
+  banco, produto e perfil. **Não escreva "limite regulatório" nem "a regulação impõe".**
+  O único teto de comprometimento com base legal visto no edital é a **margem
+  consignável**.
+- **Fies — a Lei 13.530/2017 mudou o desenho.** Ela **acabou com a carência de 18 meses**
+  que existia após a formatura (o pagamento começa depois da conclusão do curso) e
+  estruturou os contratos a partir de 2018 na modalidade principal com **juro zero**, com
+  amortização longa e parcela vinculada à renda do formado. A participação das instituições
+  de ensino ficou condicionada à adesão a **fundo garantidor**, reduzindo a dependência de
+  fiador. **Não descreva o Fies antigo** ("paga juros simbólicos durante o curso e começa a
+  amortizar meses após a formatura"). **Faixas de renda, valores e prazos mudam a cada
+  edital — sempre `[CONFERIR]`.**
 - Prefira ensinar o mecanismo a decorar a tabela. "A alíquota cai conforme o prazo
   de aplicação" envelhece bem; um número errado, não.
 - **Confira o que cada sigla significa por extenso.** Errar o nome de uma sigla é
