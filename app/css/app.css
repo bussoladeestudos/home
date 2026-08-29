@@ -1388,6 +1388,10 @@ body.aguardando-auth > *:not(#loginScreen) { visibility:hidden !important; point
 .cont-sec blockquote{margin:.8rem 0;padding:.7rem .9rem;background:#F0F7F3;
   border:1px solid #C8E6D5;border-radius:10px}
 .cont-sec blockquote p{margin:0}
+.cont-sec pre{margin:.9rem 0;padding:.8rem 1rem;background:#F0F7F3;border:1px solid #C8E6D5;
+  border-left:4px solid #173E2C;border-radius:10px;overflow-x:auto;white-space:pre-wrap;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:1rem;
+  line-height:1.75;color:#173E2C;font-weight:600;letter-spacing:.01em}
 .cont-sec table{width:100%;border-collapse:collapse;margin:.8rem 0;font-size:.88rem}
 .cont-sec th{background:#173E2C;color:#fff;text-align:left;padding:.5rem .6rem;font-weight:600}
 .cont-sec td{padding:.5rem .6rem;border-bottom:1px solid #e6e0d4;vertical-align:top}
