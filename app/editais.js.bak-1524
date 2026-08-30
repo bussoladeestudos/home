@@ -404,9 +404,8 @@ window.EDITAIS_DATA = {
       "Estrutura e Dinâmica do Sistema Financeiro Nacional": [
         "Órgãos normativos: CMN, CNSP e CNPC",
         "Supervisão: Banco Central, CVM, Susep e Previc",
-        "Operadores: bancos, caixas econômicas e cooperativas de crédito",
-        "Instituições de pagamento, fintechs, corretoras, distribuidoras e B3",
-        "Demais operadores: sociedades de crédito, consórcios, seguradoras e previdência",
+        "Operadores do sistema: bancos, cooperativas e instituições de pagamento",
+        "Demais operadores: corretoras, distribuidoras, fintechs e seguradoras",
         "Autorreguladores, FGC e Sistema Brasileiro de Pagamentos",
         "Fluxo circular da renda e subdivisões do mercado financeiro",
         "Política fiscal, dívida pública e Lei de Responsabilidade Fiscal",
@@ -421,9 +420,8 @@ window.EDITAIS_DATA = {
         "TIR, custo de oportunidade, taxa livre de risco e duration",
         "Sistemas de amortização SAC e price, payback e desconto bancário",
         "Infraestruturas do mercado financeiro: SPB, SPI e Selic",
-        "Clearings, contrapartes centrais, depositários e portabilidade de custódia",
-        "Estabilidade financeira: Comef, Basileia, compulsório e risco sistêmico",
-        "Classificação de investidores, autorregulação Anbima, BSM e Lei de Liberdade Econômica"
+        "Clearings, contrapartes centrais e risco de contraparte",
+        "Classificação de investidores, autorregulação Anbima e BSM"
       ],
       "Produtos do Mercado Financeiro": [
         "Títulos públicos federais: LFT, LTN e NTN-B",
@@ -450,8 +448,6 @@ window.EDITAIS_DATA = {
         "Fundos de investimento: conceito, condomínio e registro na CVM",
         "Resolução CVM 175: classes, subclasses e segregação patrimonial",
         "Características, estratégias, carteiras e riscos dos fundos",
-        "Tipos de fundos: renda fixa, ações, cambiais, multimercados e FI-Infra",
-        "Taxas, encargos, assembleias e direitos do cotista",
         "Tributação dos fundos de investimento",
         "Fundos imobiliários (FIIs)",
         "PGBL e VGBL: quando usar cada um",
@@ -463,8 +459,7 @@ window.EDITAIS_DATA = {
         "Crédito Direto ao Consumidor (CDC)",
         "Crédito imobiliário",
         "Capital de giro e consórcio",
-        "Conta corrente, depósitos, tarifas e atendimento bancário",
-        "PIX: funcionamento, chaves, custos e aplicações",
+        "Conta corrente",
         "Conta internacional",
         "Compra e venda de moeda estrangeira",
         "Seguros de vida",
@@ -496,12 +491,10 @@ window.EDITAIS_DATA = {
         "Código de conduta ética Anbima: os nove princípios",
         "Suitability e Código de Distribuição da Anbima",
         "Ética profissional no atendimento ao cliente",
-        "Técnicas de atendimento: escuta ativa, personalização e expectativas",
         "Riscos associados à atividade profissional",
         "Prevenção à lavagem de dinheiro: conceitos e obrigações",
         "Combate ao financiamento do terrorismo e comunicação ao Coaf",
-        "Conheça seu cliente (KYC), cadastro e abordagem baseada em risco",
-        "LGPD, sigilo bancário e proteção de dados do cliente",
+        "Lei Geral de Proteção de Dados (LGPD)",
         "Crimes e ilícitos contra o mercado de capitais"
       ],
       "Inovação e Desenvolvimento de Mercado": [
@@ -511,8 +504,7 @@ window.EDITAIS_DATA = {
         "ESG e finanças: impactos na indústria de investimentos",
         "Produtos e estratégias de investimento ESG",
         "Fundos de investimento sustentável (IS) e fundos que integram ESG",
-        "Finanças descentralizadas (DeFi), blockchain e smart contracts",
-        "Tokenização, NFT, stablecoins, ETF de cripto e Drex",
+        "Finanças descentralizadas (DeFi), smart contracts e tokenização",
         "Open finance, open investment e open insurance",
         "Inteligência artificial no atendimento e no mercado financeiro",
         "Fintechs, sandbox regulatório e meios de pagamento"
