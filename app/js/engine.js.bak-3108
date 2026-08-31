@@ -87,61 +87,8 @@ function _densityFor(todos){
     }
     totalContent=Math.max(1,totalContent);
   } else { totalContent=Math.max(1,todos.length); }
-  // Base de 30 min por topico (decisao do dono em 31/08/2026, modo intensivo):
-  // 2h/dia = 4 topicos. Sem teto arbitrario — quem define o limite e a hora
-  // disponivel, nao um numero magico.
-  const maxByHoras=Math.max(1,Math.floor((STATE.horasDia||3)/MIN_POR_TOPICO_H));
+  const maxByHoras=Math.max(1,Math.min(3,Math.floor((STATE.horasDia||3)/1.5)));
   return Math.min(maxByHoras,Math.max(1,Math.ceil(todos.length/totalContent)));
-}
-
-/* Horas por topico. Fonte unica: mudou aqui, mudou no agendamento,
-   no esperado do mapa de calor e no diagnostico de cobertura. */
-const MIN_POR_TOPICO_H=0.5;
-
-/* Diagnostico de cobertura do edital.
-   Responde a pergunta que o aluno nao tinha como fazer: "com esta data de prova
-   e estas horas por dia, eu termino o edital?" Devolve tudo o que a UI precisa
-   para avisar, inclusive QUAIS materias ficam de fora.
-   Antes desta funcao o excedente era descartado em silencio. */
-function calcCoberturaEdital(){
-  const materias=getMaterias().slice().sort((a,b)=>b.peso-a.peso);
-  const topicos=getTopicos();
-  const todos=[];
-  materias.forEach(m=>(topicos[m.nome]||[]).forEach(t=>todos.push({mat:m.nome,top:t})));
-  const total=todos.length;
-  if(!total||!STATE.inicio) return {cobre:true,total:0,agendados:0,faltam:0,materias:[]};
-
-  const diasLivres=STATE.diasLivres||[];
-  const ini=parseDate(STATE.inicio); ini.setHours(0,0,0,0);
-  let diasConteudo=0, avail=0;
-  if(STATE.prova){
-    const fim=parseDate(STATE.prova);
-    for(let x=new Date(ini);x<fim;x.setDate(x.getDate()+1)){
-      if(!diasLivres.includes(x.getDay())){ if(avail%7<=4&&fmt(x)!==STATE.inicio) diasConteudo++; avail++; }
-    }
-  }
-  diasConteudo=Math.max(0,diasConteudo);
-
-  const density=_densityFor(todos);
-  const agendados=STATE.prova?Math.min(total,diasConteudo*density):total;
-  const faltam=total-agendados;
-
-  // Quais materias ficam de fora, e quanto de cada uma.
-  // O corte e sempre na CAUDA da lista, que esta ordenada por peso decrescente:
-  // por isso quem some primeiro e a materia de MENOR peso, e ela some inteira.
-  const porMateria={};
-  materias.forEach(m=>porMateria[m.nome]={nome:m.nome,peso:m.peso,total:(topicos[m.nome]||[]).length,agendados:0});
-  for(let i=0;i<agendados;i++) porMateria[todos[i].mat].agendados++;
-  const fora=Object.values(porMateria)
-    .filter(m=>m.agendados<m.total)
-    .map(m=>({nome:m.nome,peso:m.peso,total:m.total,agendados:m.agendados,faltam:m.total-m.agendados}));
-
-  // Horas por dia necessarias para cobrir tudo no prazo atual.
-  const densNecessaria=diasConteudo>0?Math.ceil(total/diasConteudo):0;
-  const horasNecessarias=densNecessaria*MIN_POR_TOPICO_H;
-
-  return {cobre:faltam===0,total,agendados,faltam,diasConteudo,density,
-          densNecessaria,horasNecessarias,horasAtuais:(STATE.horasDia||3),materias:fora};
 }
 
 /* Retorna TODOS os tópicos base do dia (densidade dinâmica):
@@ -893,8 +840,7 @@ function calcMedalhas(coberturaPct){
 
 /* ── Export para Node (testes). No navegador, as funções já são globais. ── */
 if(typeof module!=="undefined"&&module.exports){
-  module.exports={calcCoberturaEdital,MIN_POR_TOPICO_H,
-    fmt,parseDate,isDiaLivre,isDiaEstudo,getCicloPos,getNumRevisao,
+  module.exports={fmt,parseDate,isDiaLivre,isDiaEstudo,getCicloPos,getNumRevisao,
     getMaterias,getTopicos,getTopicoDiaByKey,getTopicosDiaBase,getTopicosDoDia,
     getExtrasDoDia,getPrevNonFreeDay,isSimuladoDay,calcRevisoes,calcExpectedPerSubject,getTopicosFracos,buildAgendaSemanaICS,isProvaDay,isRevisaoGeralDay,isRetaFinalDay,
     _densityFor,aggregateEstrelas,calcStreaks,calcHeatmapConsistencia,calcRitmoSemanal,calcMarcos,MARCOS_SEQUENCIA,calcRumo,RUMO_TAGS,calcMesConsistencia,calcMedalhas,PATENTES,
