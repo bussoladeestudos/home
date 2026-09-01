@@ -407,7 +407,6 @@ function fazerLogout() {
     <a href="javascript:void(0)" class="nav-item" id="nav-cronograma" data-action="navTo" data-page="cronograma"><span class="nav-icon">📅</span><span class="nav-label">Cronograma</span></a>
     <a href="javascript:void(0)" class="nav-item" id="nav-revisoes" data-action="navTo" data-page="revisoes"><span class="nav-icon">🔄</span><span class="nav-label">Revisões</span><span class="nav-badge" id="revBadge" style="display:none">0</span></a>
     <a href="javascript:void(0)" class="nav-item" id="nav-simulado" data-action="navTo" data-page="simulado"><span class="nav-icon">📝</span><span class="nav-label">Simulados</span><span class="nav-badge blue" id="simBadge" style="display:none">0</span></a>
-    <a href="javascript:void(0)" class="nav-item" id="nav-exercicios" data-action="navTo" data-page="exercicios"><span class="nav-icon">✏️</span><span class="nav-label">Exercícios</span></a>
   </nav>
   <nav class="sidebar-nav">
     <a href="javascript:void(0)" class="nav-item" id="nav-materias" data-action="navTo" data-page="materias"><span class="nav-icon">📚</span><span class="nav-label">Conteúdo programático</span></a>
@@ -596,13 +595,6 @@ function fazerLogout() {
     <div id="simuladoConteudo"></div>
   </div>
 
-  <!-- PAGE: EXERCÍCIOS -->
-  <div class="page" id="page-exercicios">
-    <div class="page-title">✏️ Exercícios</div>
-    <div class="page-sub">Escolha a matéria e o tópico, responda e leia o comentário de cada questão.</div>
-    <div id="exercicioConteudo"></div>
-  </div>
-
   <div class="page" id="page-materias">
     <div class="page-title">📚 Matérias do Edital</div>
     <div class="page-sub">Conteúdo programático, peso e número de questões por matéria.</div>
@@ -752,7 +744,6 @@ function fazerLogout() {
 </main>
 <!-- Base de certificações: fonte única de dados (funciona em file:// e servidor) -->
 <script src="editais.js"></script> <script src="cursos.js"></script> <script src="conteudo/conteudo-cpa.js"></script>
-<script src="conteudo/questoes-cpa.js"></script>
 <script src="js/state.js"></script>
 <script src="js/engine.js"></script>
 <script src="js/ui.js"></script>
