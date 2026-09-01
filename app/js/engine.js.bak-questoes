@@ -808,107 +808,6 @@ function getConteudo(editalId,materia,topico){
   if(!chaveTop) return null;
   return cert[chaveMat][chaveTop]||null;
 }
-/* ── BANCO DE QUESTÕES ──────────────────────────────────────────────
-   Gerado em app/conteudo/questoes-<cert>.js (window.QUESTOES_DATA) por
-   outputs/questoes_para_js.py, a partir dos YAML de _conteudo. Arquivo
-   SEPARADO do conteúdo de propósito: o banco completo passa de meio mega
-   e não deve pesar em quem só quer ler o texto do tópico.
-
-   O vínculo é o mesmo do conteúdo e das aulas: matéria + tópico com
-   tolerância de acento, caixa e pontuação (_normTexto). Tópico sem
-   questão devolve lista vazia, nunca null, para quem chama poder somar
-   e filtrar sem checar antes. */
-function _questoesData(){
-  if(typeof QUESTOES!=="undefined"&&QUESTOES) return QUESTOES;
-  if(typeof window!=="undefined"&&window.QUESTOES_DATA) return window.QUESTOES_DATA;
-  return {};
-}
-function getQuestoes(editalId,materia,topico){
-  if(!editalId||!materia||!topico) return [];
-  const cert=_questoesData()[editalId];
-  if(!cert) return [];
-  const cm=_acharChave(cert,materia);
-  if(!cm) return [];
-  const ct=_acharChave(cert[cm],topico);
-  if(!ct) return [];
-  const arr=cert[cm][ct];
-  return Array.isArray(arr)?arr:[];
-}
-function temQuestoes(editalId,materia,topico){
-  return getQuestoes(editalId,materia,topico).length>0;
-}
-/* Quantas questões existem por matéria do edital. Alimenta o contador do
-   menu de Exercícios e serve de régua do quanto falta escrever. */
-function contarQuestoes(editalId,editaisRef){
-  const ed=(editaisRef||(typeof EDITAIS!=="undefined"?EDITAIS:{}))[editalId];
-  const out={total:0,porMateria:{},topicosComQuestao:0};
-  if(!ed||!ed.topicos) return out;
-  Object.keys(ed.topicos).forEach(function(mat){
-    let n=0;
-    (ed.topicos[mat]||[]).forEach(function(top){
-      const q=getQuestoes(editalId,mat,top);
-      if(q.length){ n+=q.length; out.topicosComQuestao++; }
-    });
-    out.porMateria[mat]=n; out.total+=n;
-  });
-  return out;
-}
-
-/* Histórico por questão. A chave é o `id` do YAML, que é permanente e
-   nunca reaproveitado: é isso que permite guardar acerto por questão sem
-   embaralhar resultado quando o banco cresce. */
-function _hist(){
-  if(!STATE.questoes||typeof STATE.questoes!=="object") STATE.questoes={};
-  return STATE.questoes;
-}
-function statusQuestao(id){ return _hist()[id]||null; }
-function registrarResposta(id,opcao,acertou,hojeRef){
-  if(!id) return null;
-  const h=_hist();
-  const r=h[id]||{n:0,ok:0};
-  r.n=(r.n||0)+1;
-  if(acertou) r.ok=(r.ok||0)+1;
-  r.ultimaOpcao=opcao;
-  r.ultimaCerta=!!acertou;
-  r.ultima=hojeRef||fmt(new Date());
-  h[id]=r;
-  return r;
-}
-
-/* Seleção de questões para o menu de Exercícios, para as revisões e para
-   os simulados. Filtro fechado, tudo opcional:
-     materia, topico  ... recorte do Conteúdo programático
-     niveis           ... array com 1, 2 e 3
-     usarEm           ... "simulado" ou "revisao" (o menu não filtra: vê tudo)
-     soErradas        ... só o que o aluno errou da última vez
-     soNaoRespondidas ... só o que ele nunca viu
-     limite           ... corta o resultado
-   Devolve [{mat, top, q}], na ordem do edital. Embaralhar é decisão de
-   quem exibe, não daqui, para o resultado continuar testável. */
-function listarQuestoes(editalId,filtro,editaisRef){
-  const f=filtro||{};
-  const ed=(editaisRef||(typeof EDITAIS!=="undefined"?EDITAIS:{}))[editalId];
-  if(!ed||!ed.topicos) return [];
-  const out=[];
-  const mats=Object.keys(ed.topicos).filter(function(m){
-    return !f.materia||_normTexto(m)===_normTexto(f.materia);
-  });
-  mats.forEach(function(mat){
-    (ed.topicos[mat]||[]).forEach(function(top){
-      if(f.topico&&_normTexto(top)!==_normTexto(f.topico)) return;
-      getQuestoes(editalId,mat,top).forEach(function(q){
-        if(f.niveis&&f.niveis.length&&f.niveis.indexOf(q.nivel)===-1) return;
-        if(f.usarEm&&(q.usar_em||[]).indexOf(f.usarEm)===-1) return;
-        const h=statusQuestao(q.id);
-        if(f.soErradas&&!(h&&h.ultimaCerta===false)) return;
-        if(f.soNaoRespondidas&&h) return;
-        out.push({mat:mat,top:top,q:q});
-      });
-    });
-  });
-  return f.limite>0?out.slice(0,f.limite):out;
-}
-
 /* ── ÍNDICE DE AGENDA POR TÓPICO ───────────────────────────────────
    Responde duas perguntas para CADA tópico do edital: em que dia ele
    cai no cronograma e como o aluno o avaliou. Alimenta o menu
@@ -1127,7 +1026,6 @@ if(typeof module!=="undefined"&&module.exports){
     _densityFor,aggregateEstrelas,calcStreaks,calcHeatmapConsistencia,calcRitmoSemanal,calcMarcos,MARCOS_SEQUENCIA,calcRumo,RUMO_TAGS,calcMesConsistencia,calcMedalhas,PATENTES,
     calcDominio,DOMINIO_MIN_AMOSTRA,
     getAulas,getAulaLink,getProvedores,getProvedor,contarTopicosComAula,_normTexto,
-    getQuestoes,temQuestoes,contarQuestoes,listarQuestoes,statusQuestao,registrarResposta,
     indexarAgendaTopicos,
     getConteudo,temConteudo,contarTopicosComConteudo};
 }

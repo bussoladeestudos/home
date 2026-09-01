@@ -6,7 +6,7 @@
    ════════════════════════════════════════════════════════════════ */
 
 const STATE_STORAGE_KEY="cronos_v4";
-const STATE_SCHEMA_VERSION=4;
+const STATE_SCHEMA_VERSION=3;
 
 /* Catálogo de certificações — carregado de editais.js (window.EDITAIS_DATA) */
 let EDITAIS=(typeof window!=="undefined"&&window.EDITAIS_DATA)||{};
@@ -14,8 +14,6 @@ let EDITAIS=(typeof window!=="undefined"&&window.EDITAIS_DATA)||{};
 let CURSOS=(typeof window!=="undefined"&&window.CURSOS_DATA)||{};
 /* Conteúdo de estudo por tópico — gerado em app/conteudo/conteudo-<cert>.js */
 let CONTEUDO=(typeof window!=="undefined"&&window.CONTEUDO_DATA)||{};
-/* Banco de questões por tópico — gerado em app/conteudo/questoes-<cert>.js */
-let QUESTOES=(typeof window!=="undefined"&&window.QUESTOES_DATA)||{};
 
 let STATE = {
   concurso:"", prefeitura:"", cargo:"", nome:"",
@@ -25,7 +23,6 @@ let STATE = {
   diasLivres:[],  // dias da semana que o usuário NÃO estuda (0=Dom..6=Sáb)
   notasSemana:{}, // anotações livres por semana (chave = data da segunda-feira)
   cursinho:"",    // cursinho contratado pelo aluno (id em cursos.js) — libera o link das aulas
-  questoes:{},    // histórico por questão: { <id>: {n, ok, ultima, ultimaOpcao, ultimaCerta} }
 };
 
 /* ── MIGRAÇÃO DE SCHEMA ──
@@ -57,13 +54,6 @@ function migrateState(raw){
       s.inicio=null; s.prova=null; s.dias={};
     }
     s.schemaVersion=3;
-  }
-  if(v<4){
-    /* 31/08/2026: entrou o banco de questões. O histórico é indexado pelo
-       `id` da questão, que é permanente por regra do formato, então basta
-       garantir o container. Nada a converter de versão anterior. */
-    s.questoes=(s.questoes&&typeof s.questoes==="object")?s.questoes:{};
-    s.schemaVersion=4;
   }
   return s;
 }

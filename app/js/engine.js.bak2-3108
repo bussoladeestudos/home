@@ -80,70 +80,23 @@ function _densityFor(todos){
   const diasLivres=STATE.diasLivres||[];
   const ini=parseDate(STATE.inicio); ini.setHours(0,0,0,0);
   let totalContent=0, avail=0;
-  const _lim=getLimiteConteudo();
-  if(_lim){
-    for(let x=new Date(ini);x<_lim;x.setDate(x.getDate()+1)){
+  if(STATE.prova){
+    const fim=parseDate(STATE.prova);
+    for(let x=new Date(ini);x<fim;x.setDate(x.getDate()+1)){
       if(!diasLivres.includes(x.getDay())){ if(avail%7<=4&&fmt(x)!==STATE.inicio) totalContent++; avail++; }
     }
     totalContent=Math.max(1,totalContent);
   } else { totalContent=Math.max(1,todos.length); }
-  // Base de 45 min por topico (revisto pelo dono em 31/08/2026 apos testar):
-  // 30 min nao cobre ler o conteudo mais revisar e fazer exercicio, e 4 topicos
-  // em 2h ficou denso demais. Com 45 min, 2h/dia = 2 topicos, 3h = 4, 4h = 5.
-  // Sem teto arbitrario — quem limita e a hora disponivel, nao um numero magico.
+  // Base de 30 min por topico (decisao do dono em 31/08/2026, modo intensivo):
+  // 2h/dia = 4 topicos. Sem teto arbitrario — quem define o limite e a hora
+  // disponivel, nao um numero magico.
   const maxByHoras=Math.max(1,Math.floor((STATE.horasDia||3)/MIN_POR_TOPICO_H));
-  /* Densidade = CAPACIDADE da hora, e nao o minimo necessario para caber no
-     prazo (decisao do dono em 31/08/2026). O objetivo e terminar o conteudo o
-     quanto antes e sobrar tempo para revisitar. Antes era
-     Math.min(maxByHoras, necessario), o que espichava o conteudo ate a prova.
-     Consequencia: coberto todo o edital, getTopicosDiaBase da a volta na lista
-     (o `% todos.length`) e comeca uma segunda passagem. */
-  return maxByHoras;
+  return Math.min(maxByHoras,Math.max(1,Math.ceil(todos.length/totalContent)));
 }
 
-/* Horas por topico: 45 min, cobrindo leitura + revisao + exercicio.
-   Fonte unica: mudou aqui, mudou no agendamento, no esperado do mapa de calor
-   e no diagnostico de cobertura. */
-const MIN_POR_TOPICO_H=0.75;
-
-/* Quando o conteudo termina, e ate quando a prova poderia ser antecipada.
-   Com a densidade na capacidade da hora, quem estuda bastante fecha o edital
-   muito antes da Revisao Geral. Isso nao e problema: e uma oportunidade de
-   marcar a prova mais cedo. Esta funcao calcula a data mais cedo possivel,
-   respeitando o encadeamento: ultimo conteudo, Revisao Geral no dia +7, prova
-   no dia +8.
-   Devolve null quando nao ha prova definida ou quando o edital nao cabe. */
-function calcAntecipacao(){
-  if(!STATE.inicio||!STATE.prova) return null;
-  const materias=getMaterias();
-  const topicos=getTopicos();
-  let total=0; materias.forEach(m=>total+=(topicos[m.nome]||[]).length);
-  if(!total) return null;
-
-  const lim=getLimiteConteudo();
-  if(!lim) return null;
-  const density=_densityFor(new Array(total));
-  const diasNecessarios=Math.ceil(total/density);
-
-  // Caminha o calendario UMA vez contando dias de conteudo ate fechar o edital.
-  const diasLivres=STATE.diasLivres||[];
-  const ini=parseDate(STATE.inicio); ini.setHours(0,0,0,0);
-  let n=0, av=0, fim=null;
-  for(let x=new Date(ini);x<lim;x.setDate(x.getDate()+1)){
-    if(diasLivres.includes(x.getDay())) continue;
-    if(av%7<=4&&fmt(x)!==STATE.inicio){ n++; if(n>=diasNecessarios){ fim=fmt(x); break; } }
-    av++;
-  }
-  if(!fim) return null;                      // nao fecha dentro do prazo
-
-  // prova = ultimo dia de conteudo + 8 (Revisao Geral cai em +7)
-  const pm=parseDate(fim); pm.setDate(pm.getDate()+8);
-  const provaMinima=fmt(pm);
-  const diasFolga=Math.round((parseDate(STATE.prova)-pm)/86400000);
-  return {fimConteudo:fim,provaMinima,diasFolga,
-          semanasFolga:Math.floor(diasFolga/7),
-          podeAntecipar:diasFolga>=14};
-}
+/* Horas por topico. Fonte unica: mudou aqui, mudou no agendamento,
+   no esperado do mapa de calor e no diagnostico de cobertura. */
+const MIN_POR_TOPICO_H=0.5;
 
 /* Diagnostico de cobertura do edital.
    Responde a pergunta que o aluno nao tinha como fazer: "com esta data de prova
@@ -160,17 +113,14 @@ function calcCoberturaEdital(){
 
   const diasLivres=STATE.diasLivres||[];
   const ini=parseDate(STATE.inicio); ini.setHours(0,0,0,0);
-  const _lim=getLimiteConteudo();
-  // Conta so ate a Revisao Geral: a semana final e de treino, nao de conteudo.
-  function _contarDias(livres){
-    if(!_lim) return 0;
-    let n=0, av=0;
-    for(let x=new Date(ini);x<_lim;x.setDate(x.getDate()+1)){
-      if(!livres.includes(x.getDay())){ if(av%7<=4&&fmt(x)!==STATE.inicio) n++; av++; }
+  let diasConteudo=0, avail=0;
+  if(STATE.prova){
+    const fim=parseDate(STATE.prova);
+    for(let x=new Date(ini);x<fim;x.setDate(x.getDate()+1)){
+      if(!diasLivres.includes(x.getDay())){ if(avail%7<=4&&fmt(x)!==STATE.inicio) diasConteudo++; avail++; }
     }
-    return n;
   }
-  let diasConteudo=Math.max(0,_contarDias(diasLivres));
+  diasConteudo=Math.max(0,diasConteudo);
 
   const density=_densityFor(todos);
   const agendados=STATE.prova?Math.min(total,diasConteudo*density):total;
@@ -190,22 +140,8 @@ function calcCoberturaEdital(){
   const densNecessaria=diasConteudo>0?Math.ceil(total/diasConteudo):0;
   const horasNecessarias=densNecessaria*MIN_POR_TOPICO_H;
 
-  // ── Sugestoes concretas, para o aviso nao ser so um diagnostico ──
-  // (a) mais horas por dia: numero exato.
-  // (b) menos dias de descanso: quanto se ganharia zerando os dias livres.
-  // (c) mais prazo: cada semana do ciclo 5+1+1 rende 5 dias de conteudo.
-  const diasSemLivres=_contarDias([]);
-  const cabeSemLivres=Math.min(total,diasSemLivres*density);
-  const sugestoes={
-    horas:{necessarias:horasNecessarias,atuais:(STATE.horasDia||3),
-           basta:horasNecessarias>(STATE.horasDia||3)},
-    diasLivres:{atuais:diasLivres.length,ganho:Math.max(0,cabeSemLivres-agendados),
-                resolve:cabeSemLivres>=total},
-    prazo:{semanasAMais:Math.max(1,Math.ceil((faltam/density)/5))}
-  };
   return {cobre:faltam===0,total,agendados,faltam,diasConteudo,density,
-          densNecessaria,horasNecessarias,horasAtuais:(STATE.horasDia||3),
-          limiteConteudo:_lim?fmt(_lim):null,sugestoes,materias:fora};
+          densNecessaria,horasNecessarias,horasAtuais:(STATE.horasDia||3),materias:fora};
 }
 
 /* Retorna TODOS os tópicos base do dia (densidade dinâmica):
@@ -214,9 +150,7 @@ function calcCoberturaEdital(){
    - Garante cobertura 100% mesmo com início tardio              */
 function getTopicosDiaBase(dateKey){
   if(!STATE.inicio||dateKey<STATE.inicio) return [];
-  // Conteudo novo termina na Revisao Geral; dali ate a prova e so treino.
-  const _lim=getLimiteConteudo();
-  if(_lim&&dateKey>=fmt(_lim)) return [];
+  if(STATE.prova&&dateKey>STATE.prova) return [];
   const pos=getCicloPos(dateKey);
   if(pos<0||pos>4) return [];
   // Dia 1 é sempre Orientações do Coach — não recebe tópicos de conteúdo
@@ -381,19 +315,6 @@ function isRevisaoGeralDay(dateKey){
   const prova=parseDate(STATE.prova);
   const rv=new Date(prova); rv.setDate(rv.getDate()-7);
   return fmt(rv)===dateKey && dateKey!==STATE.prova && dateKey>=STATE.inicio;
-}
-
-/* Ultimo dia util para CONTEUDO NOVO.
-   Decisao do dono em 31/08/2026: todo o conteudo tem de terminar ate a
-   Revisao Geral (o simulado completo, 7 dias antes da prova). A semana entre
-   a Revisao Geral e a prova fica so para exercicios e treino.
-   Fonte unica: usada pelo agendamento (getTopicosDiaBase), pela densidade
-   (_densityFor) e pelo diagnostico (calcCoberturaEdital). */
-function getLimiteConteudo(){
-  if(!STATE.prova) return null;
-  const prova=parseDate(STATE.prova);
-  const rv=new Date(prova); rv.setDate(rv.getDate()-7);
-  return rv;
 }
 
 // Dia está na semana final (entre a Revisão Geral e a prova)?
@@ -808,154 +729,6 @@ function getConteudo(editalId,materia,topico){
   if(!chaveTop) return null;
   return cert[chaveMat][chaveTop]||null;
 }
-/* ── BANCO DE QUESTÕES ──────────────────────────────────────────────
-   Gerado em app/conteudo/questoes-<cert>.js (window.QUESTOES_DATA) por
-   outputs/questoes_para_js.py, a partir dos YAML de _conteudo. Arquivo
-   SEPARADO do conteúdo de propósito: o banco completo passa de meio mega
-   e não deve pesar em quem só quer ler o texto do tópico.
-
-   O vínculo é o mesmo do conteúdo e das aulas: matéria + tópico com
-   tolerância de acento, caixa e pontuação (_normTexto). Tópico sem
-   questão devolve lista vazia, nunca null, para quem chama poder somar
-   e filtrar sem checar antes. */
-function _questoesData(){
-  if(typeof QUESTOES!=="undefined"&&QUESTOES) return QUESTOES;
-  if(typeof window!=="undefined"&&window.QUESTOES_DATA) return window.QUESTOES_DATA;
-  return {};
-}
-function getQuestoes(editalId,materia,topico){
-  if(!editalId||!materia||!topico) return [];
-  const cert=_questoesData()[editalId];
-  if(!cert) return [];
-  const cm=_acharChave(cert,materia);
-  if(!cm) return [];
-  const ct=_acharChave(cert[cm],topico);
-  if(!ct) return [];
-  const arr=cert[cm][ct];
-  return Array.isArray(arr)?arr:[];
-}
-function temQuestoes(editalId,materia,topico){
-  return getQuestoes(editalId,materia,topico).length>0;
-}
-/* Quantas questões existem por matéria do edital. Alimenta o contador do
-   menu de Exercícios e serve de régua do quanto falta escrever. */
-function contarQuestoes(editalId,editaisRef){
-  const ed=(editaisRef||(typeof EDITAIS!=="undefined"?EDITAIS:{}))[editalId];
-  const out={total:0,porMateria:{},topicosComQuestao:0};
-  if(!ed||!ed.topicos) return out;
-  Object.keys(ed.topicos).forEach(function(mat){
-    let n=0;
-    (ed.topicos[mat]||[]).forEach(function(top){
-      const q=getQuestoes(editalId,mat,top);
-      if(q.length){ n+=q.length; out.topicosComQuestao++; }
-    });
-    out.porMateria[mat]=n; out.total+=n;
-  });
-  return out;
-}
-
-/* Histórico por questão. A chave é o `id` do YAML, que é permanente e
-   nunca reaproveitado: é isso que permite guardar acerto por questão sem
-   embaralhar resultado quando o banco cresce. */
-function _hist(){
-  if(!STATE.questoes||typeof STATE.questoes!=="object") STATE.questoes={};
-  return STATE.questoes;
-}
-function statusQuestao(id){ return _hist()[id]||null; }
-function registrarResposta(id,opcao,acertou,hojeRef){
-  if(!id) return null;
-  const h=_hist();
-  const r=h[id]||{n:0,ok:0};
-  r.n=(r.n||0)+1;
-  if(acertou) r.ok=(r.ok||0)+1;
-  r.ultimaOpcao=opcao;
-  r.ultimaCerta=!!acertou;
-  r.ultima=hojeRef||fmt(new Date());
-  h[id]=r;
-  return r;
-}
-
-/* Seleção de questões para o menu de Exercícios, para as revisões e para
-   os simulados. Filtro fechado, tudo opcional:
-     materia, topico  ... recorte do Conteúdo programático
-     niveis           ... array com 1, 2 e 3
-     usarEm           ... "simulado" ou "revisao" (o menu não filtra: vê tudo)
-     soErradas        ... só o que o aluno errou da última vez
-     soNaoRespondidas ... só o que ele nunca viu
-     limite           ... corta o resultado
-   Devolve [{mat, top, q}], na ordem do edital. Embaralhar é decisão de
-   quem exibe, não daqui, para o resultado continuar testável. */
-function listarQuestoes(editalId,filtro,editaisRef){
-  const f=filtro||{};
-  const ed=(editaisRef||(typeof EDITAIS!=="undefined"?EDITAIS:{}))[editalId];
-  if(!ed||!ed.topicos) return [];
-  const out=[];
-  const mats=Object.keys(ed.topicos).filter(function(m){
-    return !f.materia||_normTexto(m)===_normTexto(f.materia);
-  });
-  mats.forEach(function(mat){
-    (ed.topicos[mat]||[]).forEach(function(top){
-      if(f.topico&&_normTexto(top)!==_normTexto(f.topico)) return;
-      getQuestoes(editalId,mat,top).forEach(function(q){
-        if(f.niveis&&f.niveis.length&&f.niveis.indexOf(q.nivel)===-1) return;
-        if(f.usarEm&&(q.usar_em||[]).indexOf(f.usarEm)===-1) return;
-        const h=statusQuestao(q.id);
-        if(f.soErradas&&!(h&&h.ultimaCerta===false)) return;
-        if(f.soNaoRespondidas&&h) return;
-        out.push({mat:mat,top:top,q:q});
-      });
-    });
-  });
-  return f.limite>0?out.slice(0,f.limite):out;
-}
-
-/* ── ÍNDICE DE AGENDA POR TÓPICO ───────────────────────────────────
-   Responde duas perguntas para CADA tópico do edital: em que dia ele
-   cai no cronograma e como o aluno o avaliou. Alimenta o menu
-   Conteúdo programático, onde o aluno procura o texto pelo nome em
-   vez de varrer o cronograma dia a dia.
-
-   Percorre os dias reais do plano chamando getTopicosDoDia, em vez de
-   recalcular a posição do tópico na lista. É mais caro, e é de
-   propósito: se a regra de distribuição mudar, este índice acompanha
-   sozinho, sem virar uma segunda verdade sobre o agendamento.
-
-   Vale a PRIMEIRA ocorrência. A lista de tópicos é circular
-   (getTopicosDiaBase usa módulo), então um edital curto pode repetir
-   o mesmo tópico mais adiante; o que interessa ao aluno é quando ele
-   vê aquilo pela primeira vez.
-
-   A confiança segue a mesma convenção do resto do app: dia com mais
-   de um tópico guarda em est.percepcoes[i], dia de tópico único em
-   est.percepcao.
-
-   Chave do mapa: _normTexto(materia) + "|" + _normTexto(topico), a
-   mesma tolerância de acento e caixa usada pelo conteúdo e pelas
-   aulas. Sem plano configurado, devolve mapa vazio. */
-function indexarAgendaTopicos(){
-  const idx={};
-  if(!STATE.inicio) return idx;
-  const ini=parseDate(STATE.inicio); ini.setHours(0,0,0,0);
-  const lim=getLimiteConteudo();
-  const MAX_DIAS=800;   // trava de segurança: plano sem prova não roda para sempre
-  const d=new Date(ini);
-  for(let n=0;n<MAX_DIAS;n++,d.setDate(d.getDate()+1)){
-    if(lim&&d>=lim) break;
-    const key=fmt(d);
-    const tops=getTopicosDoDia(key);
-    if(!tops.length) continue;
-    const est=STATE.dias[key]||{};
-    const multi=tops.length>1;
-    tops.forEach(function(t,i){
-      if(!t||!t.mat||!t.top) return;
-      const k=_normTexto(t.mat)+"|"+_normTexto(t.top);
-      if(idx[k]) return;              // primeira ocorrência manda
-      idx[k]={ key:key, percepcao:(multi?(est.percepcoes||{})[i]:est.percepcao)||null };
-    });
-  }
-  return idx;
-}
-
 function temConteudo(editalId,materia,topico){
   return !!getConteudo(editalId,materia,topico);
 }
@@ -1120,14 +893,12 @@ function calcMedalhas(coberturaPct){
 
 /* ── Export para Node (testes). No navegador, as funções já são globais. ── */
 if(typeof module!=="undefined"&&module.exports){
-  module.exports={calcCoberturaEdital,calcAntecipacao,getLimiteConteudo,MIN_POR_TOPICO_H,
+  module.exports={calcCoberturaEdital,MIN_POR_TOPICO_H,
     fmt,parseDate,isDiaLivre,isDiaEstudo,getCicloPos,getNumRevisao,
     getMaterias,getTopicos,getTopicoDiaByKey,getTopicosDiaBase,getTopicosDoDia,
     getExtrasDoDia,getPrevNonFreeDay,isSimuladoDay,calcRevisoes,calcExpectedPerSubject,getTopicosFracos,buildAgendaSemanaICS,isProvaDay,isRevisaoGeralDay,isRetaFinalDay,
     _densityFor,aggregateEstrelas,calcStreaks,calcHeatmapConsistencia,calcRitmoSemanal,calcMarcos,MARCOS_SEQUENCIA,calcRumo,RUMO_TAGS,calcMesConsistencia,calcMedalhas,PATENTES,
     calcDominio,DOMINIO_MIN_AMOSTRA,
     getAulas,getAulaLink,getProvedores,getProvedor,contarTopicosComAula,_normTexto,
-    getQuestoes,temQuestoes,contarQuestoes,listarQuestoes,statusQuestao,registrarResposta,
-    indexarAgendaTopicos,
     getConteudo,temConteudo,contarTopicosComConteudo};
 }

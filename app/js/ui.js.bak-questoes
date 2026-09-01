@@ -116,16 +116,6 @@ const ACTIONS={
   abrirConteudo:d=>abrirConteudo(d.mat,d.top),
   voltarDoConteudo:()=>navTo(_conteudoVoltarPara||"cronograma"),
   limparBuscaConteudo:()=>limparBuscaConteudo(),
-  // Menu de exercícios
-  exToggleNivel:d=>exToggleNivel(d.nivel),
-  exToggleErradas:()=>exToggleErradas(),
-  exLimparFiltro:()=>exLimparFiltro(),
-  exComecar:()=>exComecar(),
-  exSair:()=>exSair(),
-  exResponder:d=>exResponder(d.id,d.op),
-  exVerComentario:()=>exVerComentario(),
-  exProxima:()=>exProxima(),
-  exRefazerErradas:()=>exRefazerErradas(),
 };
 
 /* ── Dispatcher (event delegation) ── */
@@ -152,8 +142,6 @@ document.addEventListener("change",e=>{
     renderCronogramaPage&&renderCronogramaPage();
     renderHoje&&renderHoje();
   }
-  else if(e.target.dataset.change==="exMateria"){ window._bussolaUserActed=true; exSetMateria(e.target.value); }
-  else if(e.target.dataset.change==="exTopico"){ window._bussolaUserActed=true; exSetTopico(e.target.value); }
   else if(e.target.dataset.change==="agendaHora"){
     window._bussolaUserActed=true;
     STATE.agendaHora=e.target.value||"19:00";
@@ -887,7 +875,6 @@ const TOUR_STEPS=[
   {id:"nav-cronograma", t:"Cronograma",             d:"Seu plano completo da semana, distribuído automaticamente até a data da prova."},
   {id:"nav-revisoes",   t:"Revisões",               d:"As revisões espaçadas aparecem aqui no momento certo de revisar cada matéria."},
   {id:"nav-simulado",   t:"Simulados",              d:"Registre seus simulados e acompanhe a evolução do seu desempenho."},
-  {id:"nav-exercicios", t:"Exercícios",             d:"Questões por matéria e por tópico, com comentário liberado depois que você responde."},
   {id:"nav-materias",   t:"Conteúdo programático",  d:"Todo o conteúdo do edital organizado, com seu progresso em cada tópico."},
   {id:"nav-edital",     t:"Análise do Edital",      d:"A análise estratégica: o que mais cai e como priorizar seus estudos."}
 ];
@@ -1161,7 +1148,6 @@ function navTo(pg){
   }
   if(pg==="dashboard")  { renderMapaCalorPage("mapaGrid"); renderDashboard(); }
   if(pg==="materias")   renderMaterias();
-  if(pg==="exercicios") renderExercicios();
   if(pg==="revisoes")   renderRevisoesPage();
   if(pg==="simulado")   renderSimuladoPage();
   if(pg==="hoje")       renderHoje();
@@ -3410,254 +3396,6 @@ function getMedalha(perc){
    se já viu. Uma aula pode cobrir vários tópicos, então o mesmo botão
    se repete em tópicos diferentes de propósito.
    Abre em aba nova com rel=noopener (link externo, do curso do aluno). */
-
-/* ══════════════════════════════════════════════════════════════════
-   MENU DE EXERCÍCIOS
-   Duas telas na mesma página: o FILTRO, que segue a regra do Conteúdo
-   programático (matéria e depois tópico), e o RUNNER, uma questão por
-   vez. O comentário nunca aparece antes da resposta: ele é o prêmio de
-   ter respondido, e é onde o aluno aprende de verdade.
-   O banco vem de window.QUESTOES_DATA (engine.listarQuestoes) e o
-   histórico por questão fica em STATE.questoes.
-   ══════════════════════════════════════════════════════════════════ */
-let _exFiltro={materia:"",topico:"",niveis:[],soErradas:false};
-let _exSessao=null;   /* {itens, i, respostas:{id:opcao}, verComentario} */
-
-function _exListar(){
-  return listarQuestoes(STATE.prefeitura,{
-    materia:_exFiltro.materia||null,
-    topico:_exFiltro.topico||null,
-    niveis:_exFiltro.niveis,
-    soErradas:_exFiltro.soErradas
-  });
-}
-function _exNivelLabel(n){ return n===1?"Fácil":n===2?"Médio":"Difícil"; }
-
-function renderExercicios(){
-  const el=document.getElementById("exercicioConteudo");
-  if(!el) return;
-  if(_exSessao) return renderExercicioRun();
-
-  if(!STATE.prefeitura){
-    el.innerHTML=`<div class="ex-vazio">Configure sua certificação para ver os exercícios.</div>`;
-    return;
-  }
-  const cont=contarQuestoes(STATE.prefeitura);
-  if(!cont.total){
-    el.innerHTML=`<div class="ex-vazio">
-      <div style="font-size:2rem;margin-bottom:.5rem">✏️</div>
-      <div style="font-weight:700;color:var(--gray-600);margin-bottom:.3rem">O banco de questões ainda não saiu para esta certificação</div>
-      <div style="font-size:.83rem">Assim que as questões forem publicadas, elas aparecem aqui organizadas por matéria e tópico.</div>
-    </div>`;
-    return;
-  }
-
-  const topicos=getTopicos();
-  const materias=getMaterias();
-  /* Só entram na lista matéria e tópico que TÊM questão. Filtro que
-     devolve zero é pior do que filtro que não oferece a opção. */
-  const matsComQ=materias.filter(m=>(cont.porMateria[m.nome]||0)>0);
-  const topsComQ=(_exFiltro.materia?(topicos[_exFiltro.materia]||[]):[])
-                   .filter(t=>temQuestoes(STATE.prefeitura,_exFiltro.materia,t));
-
-  const sel=_exListar();
-  const nErradas=listarQuestoes(STATE.prefeitura,{soErradas:true}).length;
-
-  const optMat=[`<option value="">Todas as matérias</option>`].concat(
-    matsComQ.map(m=>`<option value="${esc(m.nome)}"${_exFiltro.materia===m.nome?" selected":""}>${esc(m.nome)} (${cont.porMateria[m.nome]})</option>`)
-  ).join("");
-  const optTop=[`<option value="">Todos os tópicos da matéria</option>`].concat(
-    topsComQ.map(t=>`<option value="${esc(t)}"${_exFiltro.topico===t?" selected":""}>${esc(t)} (${getQuestoes(STATE.prefeitura,_exFiltro.materia,t).length})</option>`)
-  ).join("");
-  const chipNivel=n=>`<button type="button" class="ex-chip${_exFiltro.niveis.indexOf(n)>-1?" on":""}" data-action="exToggleNivel" data-nivel="${n}">${_exNivelLabel(n)}</button>`;
-
-  el.innerHTML=`
-    <div class="ex-filtro">
-      <div class="ex-linha">
-        <label class="ex-lab">Matéria</label>
-        <select class="form-input" id="exMateria" data-change="exMateria">${optMat}</select>
-      </div>
-      <div class="ex-linha"${_exFiltro.materia?"":' style="opacity:.5"'}>
-        <label class="ex-lab">Tópico</label>
-        <select class="form-input" id="exTopico" data-change="exTopico"${_exFiltro.materia?"":" disabled"}>${optTop}</select>
-      </div>
-      <div class="ex-linha">
-        <label class="ex-lab">Nível</label>
-        <div class="ex-chips">${chipNivel(1)}${chipNivel(2)}${chipNivel(3)}
-          <button type="button" class="ex-chip${_exFiltro.soErradas?" on":""}" data-action="exToggleErradas" title="Só as questões que você errou da última vez">❌ Só as que errei${nErradas?" ("+nErradas+")":""}</button>
-        </div>
-      </div>
-      <div class="ex-rodape">
-        <div class="ex-conta"><strong>${sel.length}</strong> ${sel.length===1?"questão selecionada":"questões selecionadas"}</div>
-        <div style="display:flex;gap:.5rem;flex-wrap:wrap">
-          <button type="button" class="ex-btn-sec" data-action="exLimparFiltro">Limpar filtro</button>
-          <button type="button" class="ex-btn" data-action="exComecar"${sel.length?"":" disabled"}>▶ Começar</button>
-        </div>
-      </div>
-    </div>
-    ${sel.length?"":`<div class="ex-vazio">Nenhuma questão com esse filtro. Solte um dos critérios acima.</div>`}
-    <div class="ex-resumo-titulo">Banco disponível</div>
-    <div class="ex-cards">${materias.map(m=>{
-      const n=cont.porMateria[m.nome]||0;
-      const tops=(topicos[m.nome]||[]);
-      const comQ=tops.filter(t=>temQuestoes(STATE.prefeitura,m.nome,t)).length;
-      return `<div class="ex-card${n?"":" off"}">
-        <div class="ex-card-nome">${esc(m.nome)}</div>
-        <div class="ex-card-n">${n}</div>
-        <div class="ex-card-sub">${n?`questões em ${comQ} de ${tops.length} tópicos`:"ainda sem questões"}</div>
-      </div>`;
-    }).join("")}</div>`;
-}
-
-/* ── Ações do filtro ── */
-function exSetMateria(v){ _exFiltro.materia=v||""; _exFiltro.topico=""; renderExercicios(); }
-function exSetTopico(v){ _exFiltro.topico=v||""; renderExercicios(); }
-function exToggleNivel(n){
-  n=parseInt(n,10);
-  const i=_exFiltro.niveis.indexOf(n);
-  if(i>-1) _exFiltro.niveis.splice(i,1); else _exFiltro.niveis.push(n);
-  renderExercicios();
-}
-function exToggleErradas(){ _exFiltro.soErradas=!_exFiltro.soErradas; renderExercicios(); }
-function exLimparFiltro(){ _exFiltro={materia:"",topico:"",niveis:[],soErradas:false}; renderExercicios(); }
-
-/* Embaralhar é decisão da tela, e não do engine, para o motor continuar
-   testável. Fisher-Yates sobre a lista já filtrada. */
-function _embaralhar(a){
-  const r=a.slice();
-  for(let i=r.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); const t=r[i]; r[i]=r[j]; r[j]=t; }
-  return r;
-}
-function exComecar(){
-  const itens=_exListar();
-  if(!itens.length) return;
-  _exSessao={itens:_embaralhar(itens),i:0,respostas:{},verComentario:false};
-  renderExercicios(); window.scrollTo(0,0);
-}
-function exSair(){ _exSessao=null; renderExercicios(); window.scrollTo(0,0); }
-
-/* ── Runner ── */
-function exResponder(id,opcao){
-  if(!_exSessao||_exSessao.respostas[id]!==undefined) return;   // resposta é única
-  const item=_exSessao.itens[_exSessao.i];
-  if(!item||item.q.id!==id) return;
-  const acertou=(opcao===item.q.gabarito);
-  _exSessao.respostas[id]=opcao;
-  registrarResposta(id,opcao,acertou);
-  _carimbarRegistro&&_carimbarRegistro(fmt(new Date()));
-  save();
-  renderExercicioRun();
-}
-function exVerComentario(){ _exSessao.verComentario=true; renderExercicioRun(); }
-function exProxima(){
-  if(!_exSessao) return;
-  _exSessao.i++; _exSessao.verComentario=false;
-  renderExercicioRun(); window.scrollTo(0,0);
-}
-function exRefazerErradas(){
-  const erradas=_exSessao.itens.filter(it=>{
-    const op=_exSessao.respostas[it.q.id];
-    return op!==undefined&&op!==it.q.gabarito;
-  });
-  if(!erradas.length) return exSair();
-  _exSessao={itens:_embaralhar(erradas),i:0,respostas:{},verComentario:false};
-  renderExercicioRun(); window.scrollTo(0,0);
-}
-
-function renderExercicioRun(){
-  const el=document.getElementById("exercicioConteudo");
-  if(!el||!_exSessao) return;
-  const S=_exSessao;
-
-  if(S.i>=S.itens.length) return renderExercicioFim();
-
-  const item=S.itens[S.i], q=item.q;
-  const dada=S.respostas[q.id];
-  const respondida=dada!==undefined;
-  const acertou=respondida&&dada===q.gabarito;
-  const letras=Object.keys(q.alternativas);
-  const pct=Math.round((S.i/S.itens.length)*100);
-
-  const alts=letras.map(k=>{
-    let cls="ex-alt";
-    if(respondida){
-      if(k===q.gabarito) cls+=" certa";
-      else if(k===dada)  cls+=" errada";
-      else               cls+=" apagada";
-    }
-    const fb=(respondida&&k===dada&&!acertou&&q.feedback&&q.feedback[k])
-      ?`<div class="ex-alt-fb">${q.feedback[k]}</div>`:"";
-    return `<button type="button" class="${cls}" data-action="exResponder" data-id="${esc(q.id)}" data-op="${esc(k)}"${respondida?" disabled":""}>
-      <span class="ex-alt-letra">${k.toUpperCase()}</span>
-      <span class="ex-alt-txt">${q.alternativas[k]}${fb}</span>
-    </button>`;
-  }).join("");
-
-  const veredito=!respondida?"":
-    `<div class="ex-veredito ${acertou?"ok":"nao"}">${acertou?"✅ Você acertou":"❌ Resposta certa: "+q.gabarito.toUpperCase()}</div>`;
-
-  const acoes=!respondida?"":
-    `<div class="ex-acoes">
-       ${S.verComentario?"":`<button type="button" class="ex-btn-sec" data-action="exVerComentario">📖 Ver comentário</button>`}
-       <button type="button" class="ex-btn" data-action="exProxima">${S.i+1<S.itens.length?"Próxima →":"Ver resultado →"}</button>
-     </div>`;
-
-  const comentario=(respondida&&S.verComentario)
-    ?`<div class="ex-coment"><div class="ex-coment-tit">📖 Comentário</div>${q.comentario}</div>`:"";
-
-  el.innerHTML=`
-    <div class="ex-run">
-      <div class="ex-run-topo">
-        <button type="button" class="ex-voltar" data-action="exSair">← Sair</button>
-        <div class="ex-prog"><div class="ex-prog-fill" style="width:${pct}%"></div></div>
-        <div class="ex-passo">${S.i+1} de ${S.itens.length}</div>
-      </div>
-      <div class="ex-migalha">${esc(item.mat)} · ${esc(item.top)} <span class="ex-nivel n${q.nivel}">${_exNivelLabel(q.nivel)}</span></div>
-      <div class="ex-enunciado">${q.enunciado}</div>
-      <div class="ex-alts">${alts}</div>
-      ${veredito}${comentario}${acoes}
-    </div>`;
-}
-
-function renderExercicioFim(){
-  const el=document.getElementById("exercicioConteudo");
-  const S=_exSessao;
-  const total=S.itens.length;
-  let acertos=0;
-  const porTopico={};
-  S.itens.forEach(it=>{
-    const ok=S.respostas[it.q.id]===it.q.gabarito;
-    if(ok) acertos++;
-    const k=it.mat+" · "+it.top;
-    if(!porTopico[k]) porTopico[k]={ok:0,n:0};
-    porTopico[k].n++; if(ok) porTopico[k].ok++;
-  });
-  const pct=total?Math.round((acertos/total)*100):0;
-  /* 70% é a nota de corte da CPA. A régua da tela é a régua da prova. */
-  const cor=pct>=70?"var(--green)":pct>=50?"var(--yellow)":"var(--red)";
-  const recado=pct>=70?"Acima da nota de corte de 70%. Siga assim."
-    :pct>=50?"Ainda abaixo dos 70% que a prova exige. Volte ao conteúdo dos tópicos em vermelho."
-    :"Bem abaixo do corte. Vale reler o conteúdo antes de resolver mais questões.";
-  const erradas=total-acertos;
-
-  el.innerHTML=`
-    <div class="ex-fim">
-      <div class="ex-fim-nota" style="color:${cor}">${pct}%</div>
-      <div class="ex-fim-sub">${acertos} de ${total} ${total===1?"questão":"questões"}</div>
-      <div class="ex-fim-recado">${recado}</div>
-      <div class="ex-fim-lista">${Object.keys(porTopico).map(k=>{
-        const r=porTopico[k];
-        const p=Math.round((r.ok/r.n)*100);
-        const c=p>=70?"cb-green":p>=50?"cb-yellow":"cb-red";
-        return `<div class="ex-fim-item"><span>${esc(k)}</span><span class="ex-fim-badge ${c}">${r.ok}/${r.n}</span></div>`;
-      }).join("")}</div>
-      <div class="ex-acoes" style="justify-content:center">
-        ${erradas?`<button type="button" class="ex-btn-sec" data-action="exRefazerErradas">↻ Refazer as ${erradas} que errei</button>`:""}
-        <button type="button" class="ex-btn" data-action="exSair">Voltar aos exercícios</button>
-      </div>
-    </div>`;
-}
-
 /* ── CONTEÚDO DE ESTUDO DO TÓPICO ──────────────────────────────────
    O botão só existe quando aquele tópico tem texto publicado
    (engine.temConteudo). Tópico sem conteúdo não mostra botão morto:
