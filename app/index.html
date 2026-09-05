@@ -219,8 +219,8 @@ function fazerLogout() {
         <div class="rec-radio"><div class="rec-radio-dot"></div></div>
         <div class="rec-option-icon">⚡</div>
         <div>
-          <div class="rec-option-title">Sábado de recuperação</div>
-          <div class="rec-option-desc">Os tópicos perdidos ficam agendados no próximo Sábado Técnico. Ideal para recuperar tudo de uma vez no fim de semana.</div>
+          <div class="rec-option-title">Mandar para o Retorno Técnico</div>
+          <div class="rec-option-desc">Em um clique, o conteúdo perdido entra na fila de revisão e aparece no próximo Retorno Técnico, onde você avalia e registra o exercício. O dia fica marcado como recuperado no cronograma, sem contar como estudado.</div>
         </div>
       </button>
     </div>
@@ -249,7 +249,7 @@ function fazerLogout() {
   <div class="modal">
     <div class="modal-logo">
       <div class="modal-logo-icon">🧭</div>
-      <div><div class="modal-logo-name">Bússola de Estudos</div><div class="modal-logo-sub">Coach Digital para Prefeituras</div></div>
+      <div><div class="modal-logo-name">Bússola de Estudos</div><div class="modal-logo-sub">Coach Digital para Certificações</div></div>
     </div>
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0;">
       <div class="modal-title" id="modalTitle" style="margin-bottom:0;">Configure seu Cronograma</div>
@@ -279,20 +279,22 @@ function fazerLogout() {
     <div class="form-grid">
       <div class="form-row">
         <label class="form-label">Data de Início</label>
-        <input class="form-input" id="inputInicio" type="date">
+        <input class="form-input" id="inputInicio" type="date" data-change="recalcularPlano">
       </div>
       <div class="form-row">
-        <label class="form-label">Data da Prova <span id="provaLockSpan" style="color:#2FB374;font-size:.7rem;font-weight:700">🔒 fixada pelo edital</span></label>
-        <input class="form-input" id="inputProva" type="date" readonly style="background:#f8fafc;color:#64748b;cursor:default;" title="Data fixada pelo edital">
+        <label class="form-label">Horas por dia <span>(meta)</span></label>
+        <select class="form-input" id="inputHoras" data-change="recalcularPlano"><option value="1">1h</option><option value="1.5">1h30min</option><option value="2">2h</option><option value="2.5">2h30min</option><option value="3">3h</option><option value="3.5">3h30min</option><option value="4">4h</option><option value="4.5">4h30min</option><option value="5">5h</option><option value="5.5">5h30min</option><option value="6">6h</option></select>
       </div>
     </div>
-    <div class="form-row">
-      <label class="form-label">Horas de estudo por dia <span>(meta)</span></label>
-      <select class="form-input" id="inputHoras"><option value="1">1h</option><option value="1.5">1h30min</option><option value="2">2h</option><option value="2.5">2h30min</option><option value="3">3h</option><option value="3.5">3h30min</option><option value="4">4h</option><option value="4.5">4h30min</option><option value="5">5h</option><option value="5.5">5h30min</option><option value="6">6h</option></select>
-    </div>
+    <div class="prazo-hint" id="prazoHint" hidden></div>
     <div class="form-row">
       <label class="form-label">Dias de descanso <span>(marque até 4 dias que NÃO vai estudar)</span></label>
       <div class="dow-grid" id="dowGrid"></div>
+    </div>
+    <div class="form-row">
+      <label class="form-label">Data da Prova <span id="provaLockSpan" style="color:#2FB374;font-size:.7rem;font-weight:700">🔒 fixada pelo edital</span></label>
+      <input class="form-input" id="inputProva" type="date" readonly style="background:#f8fafc;color:#64748b;cursor:default;" title="Data fixada pelo edital" data-change="provaManual">
+      <div class="prova-hint" id="provaHint" hidden></div>
     </div>
     <div class="form-row" id="rowCursinho" style="display:none">
       <label class="form-label" for="selCursinho">Meu cursinho <span>(opcional — libera o link das aulas nos tópicos)</span></label>
