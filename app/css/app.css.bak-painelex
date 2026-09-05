@@ -163,13 +163,13 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
 
 /* MAPA DE CALOR */
 .mapa-label { font-size:.8rem; font-weight:600; color:var(--gray-700); margin-bottom:.5rem; }
-.mapa-grid { display:flex; flex-direction:column; gap:.28rem; }
+.mapa-grid { display:flex; flex-direction:column; gap:.35rem; }
 /* Cabeçalho */
-.mapa-header { display:grid; grid-template-columns:170px minmax(0,1fr) 180px; gap:.75rem; padding:.15rem .9rem .25rem; }
+.mapa-header { display:grid; grid-template-columns:170px 1fr 130px; gap:.75rem; padding:.35rem .9rem; }
 .mapa-header-cell { font-size:.65rem; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--gray-400); }
 .mapa-header-cell.right { text-align:right; }
 /* Linha de dados */
-.mapa-item { display:grid; grid-template-columns:170px minmax(0,1fr) 180px; align-items:center; gap:.75rem; padding:.4rem .9rem; background:var(--white); border:1px solid var(--gray-200); border-radius:var(--radius-md); transition:background .15s,box-shadow .15s; }
+.mapa-item { display:grid; grid-template-columns:170px 1fr 142px; align-items:center; gap:.75rem; padding:.65rem .9rem; background:var(--white); border:1px solid var(--gray-200); border-radius:var(--radius-md); transition:background .15s,box-shadow .15s; }
 .mapa-item:hover { background:var(--gray-50); box-shadow:0 2px 8px rgba(0,0,0,.05); }
 /* Coluna matéria */
 .mapa-materia { font-size:.82rem; font-weight:600; color:var(--gray-800); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
@@ -191,7 +191,7 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
 .mapa-status.st-nodata  { color:var(--gray-400); }
 /* Coluna confiança */
 .mapa-conf-col { display:flex; justify-content:flex-end; }
-.conf-badge { display:flex; flex-direction:column; align-items:center; gap:1px; padding:6px 12px; border-radius:var(--radius-sm); font-size:.7rem; font-weight:700; min-width:140px; text-align:center; cursor:help; }
+.conf-badge { display:flex; flex-direction:column; align-items:center; gap:1px; padding:5px 10px; border-radius:var(--radius-sm); font-size:.7rem; font-weight:700; min-width:96px; text-align:center; cursor:help; }
 /* Base da amostra: sem ela o número de cima vira promessa vazia */
 .conf-badge .cb-base { font-size:.56rem; font-weight:600; opacity:.8; line-height:1.2; white-space:nowrap; letter-spacing:.01em; }
 /* Amostra pequena: tira o peso visual do badge para não virar falso "estou seguro" */
@@ -382,9 +382,7 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
    rotações independentes: .bz-base aponta o rumo (transição suave quando
    a aderência muda) e .bz-osc oscila de leve o tempo todo, como bússola
    de verdade. Sem registros, .bz-girando assume e ela procura o Norte. */
-/* stretch: a bússola e a galeria terminam na mesma linha. A galeria encolheu
-   até quase a altura da bússola; os últimos pixels vêm daqui. */
-.dash-saudacao { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); align-items:stretch; gap:.8rem; margin-bottom:0; }
+.dash-saudacao { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); align-items:start; gap:.9rem; margin-bottom:.75rem; }
 .dash-saudacao > #bussolaRumo { display:flex; justify-content:flex-start; }
 @media(max-width:1024px){ .dash-saudacao { grid-template-columns:1fr; } }
 /* ── Galeria de medalhas (topo do dashboard, ao lado da bússola) ──
@@ -408,7 +406,7 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
   backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
   border:none;
   border-radius:24px;
-  padding:.5rem .9rem .55rem;
+  padding:.72rem .95rem .8rem;
   box-shadow:0 14px 30px -14px rgba(9,32,21,.38), 0 3px 10px -4px rgba(9,32,21,.22);
   overflow:hidden;
 }
@@ -424,19 +422,17 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
 .md-p4 { --md-cor:#7FBBD1; }
 .md-p5 { --md-cor:#6FD6F5; }
 
-.md-head { display:flex; align-items:baseline; justify-content:space-between; gap:.5rem; margin-bottom:.35rem; }
+.md-head { display:flex; align-items:baseline; justify-content:space-between; gap:.5rem; margin-bottom:.55rem; }
 .md-tit { font-family:'Bricolage Grotesque',sans-serif; font-size:.92rem; font-weight:800; color:#FFF; letter-spacing:.01em; }
 .md-conta { font-size:.66rem; font-weight:600; color:rgba(255,255,255,.55); white-space:nowrap; }
 
-/* A coleção ganhou mais largura para as 20 peças caberem em UMA fileira: em
-   duas, a galeria ficava 45px mais alta que o cartão da bússola ao lado. */
-.md-corpo { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.55fr); gap:.85rem; align-items:center; }
+.md-corpo { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.15fr); gap:1rem; align-items:center; }
 
 /* Hero: o nível atual, em tamanho de troféu */
 .md-hero { display:flex; align-items:center; gap:.7rem; min-width:0; }
 .md-selo {
-  width:40px; height:40px; flex-shrink:0; border-radius:50%;
-  display:flex; align-items:center; justify-content:center; font-size:1.3rem;
+  width:46px; height:46px; flex-shrink:0; border-radius:50%;
+  display:flex; align-items:center; justify-content:center; font-size:1.5rem;
   background:radial-gradient(circle at 32% 28%, color-mix(in srgb, var(--md-cor) 85%, #fff) 0%, var(--md-cor) 58%, color-mix(in srgb, var(--md-cor) 62%, #000) 100%);
   box-shadow:0 0 0 4px color-mix(in srgb, var(--md-cor) 18%, transparent), 0 6px 16px -4px color-mix(in srgb, var(--md-cor) 55%, transparent);
 }
@@ -444,10 +440,10 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
 .md-patente { display:block; font-family:'Bricolage Grotesque',sans-serif; font-size:1rem; font-weight:800; color:var(--md-cor); line-height:1.2; }
 .md-barra { height:6px; background:rgba(255,255,255,.13); border-radius:99px; overflow:hidden; margin-top:.4rem; }
 .md-barra-fill { height:100%; border-radius:99px; background:linear-gradient(90deg, color-mix(in srgb, var(--md-cor) 70%, #fff), var(--md-cor)); box-shadow:0 0 10px -1px color-mix(in srgb, var(--md-cor) 70%, transparent); transition:width .9s cubic-bezier(.4,0,.2,1); }
-.md-xp { font-size:.62rem; color:rgba(255,255,255,.55); margin-top:4px; line-height:1.25; }
+.md-xp { font-size:.63rem; color:rgba(255,255,255,.55); margin-top:5px; line-height:1.3; }
 
 /* Coleção: as 20 peças da vitrine */
-.md-lista { display:grid; grid-template-columns:repeat(auto-fit,minmax(25px,1fr)); gap:.32rem; min-width:0; }
+.md-lista { display:grid; grid-template-columns:repeat(auto-fit,minmax(30px,1fr)); gap:.4rem; min-width:0; }
 .md-icone {
   aspect-ratio:1; display:flex; align-items:center; justify-content:center;
   font-size:clamp(.7rem,1.35vw,1rem); border-radius:50%; cursor:help;
@@ -472,7 +468,7 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
 .md-off { background:rgba(255,255,255,.04); border-color:rgba(255,255,255,.09); box-shadow:none; filter:grayscale(100%) opacity(40%); }
 .md-off:hover { filter:grayscale(100%) opacity(65%); }
 
-.md-prox { font-size:.65rem; color:rgba(255,255,255,.6); margin-top:.35rem; line-height:1.3; border-top:1px solid rgba(255,255,255,.09); padding-top:.32rem; }
+.md-prox { font-size:.65rem; color:rgba(255,255,255,.6); margin-top:.55rem; line-height:1.35; border-top:1px solid rgba(255,255,255,.09); padding-top:.45rem; }
 .md-prox strong { color:#FFF; font-weight:700; }
 
 /* Mobile: hero em cima, vitrine embaixo */
@@ -534,7 +530,7 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
   .bz-osc, .bz-girando { animation:none; }
 }
 /* ── Dashboard: card de aderência (compacto — número e barra na mesma linha) ── */
-.hero-card { background:#fff; border:1px solid #EEE5D6; border-radius:18px; padding:11px 16px 10px; height:100%; display:flex; flex-direction:column; }
+.hero-card { background:#fff; border:1px solid #EEE5D6; border-radius:18px; padding:14px 20px 12px; }
 .hero-top { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:8px; }
 .hero-lbl { font-size:.82rem; color:#9A9082; font-weight:600; }
 .hero-badge { font-size:.72rem; font-weight:700; padding:4px 11px; border-radius:99px; white-space:nowrap; }
@@ -554,9 +550,10 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
   .hero-legend { font-size:.67rem; }
   .hero-foot { gap:6px; }
 }
-/* A grade de 2 colunas (.dash-cols / .dash-main / .dash-side) saiu em
-   05/09/2026, quando o dashboard virou quatro painéis empilhados. As regras
-   foram removidas junto para não sobrar CSS morto guiando quem vier depois. */
+/* ── Dashboard: grade de 2 colunas (matérias | hábito) ── */
+.dash-cols { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); gap:1rem; align-items:start; margin-bottom:1.5rem; }
+.dash-main { display:flex; flex-direction:column; gap:1rem; min-width:0; }
+.dash-side { display:block; min-width:0; }
 .dash-chip { display:inline-flex; align-items:center; gap:5px; font-size:.74rem; font-weight:700; border-radius:99px; padding:5px 12px; cursor:pointer; border:1px solid transparent; transition:filter .15s; }
 .dash-chip:hover { filter:brightness(.97); }
 .dc-alerta { background:#EDE7F7; border-color:#DBD0F0; color:#5B43A0; }
@@ -564,18 +561,22 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
 .dc-neutro { background:#FBF1D7; border-color:#F2E2AE; color:#8A6212; }
 .mapa-vermais { width:100%; margin-top:.6rem; background:transparent; border:1.5px dashed var(--gray-200); color:var(--gray-500); border-radius:10px; padding:8px; font-size:.76rem; font-weight:700; cursor:pointer; font-family:inherit; transition:background .15s; }
 .mapa-vermais:hover { background:var(--gray-50); }
+@media(max-width:1024px){
+  /* 1 coluna: display:contents dissolve a .dash-main para reordenar os 3 cards */
+  .dash-cols { display:flex; flex-direction:column; gap:1rem; }
+  .dash-main { display:contents; }
+  #dashHero { order:1; }
+  .dash-side { order:2; }        /* hábito antes da lista longa de matérias */
+  .card-evolucao { order:3; }
+}
 /* ── Dashboard: hábito (consistência + ritmo semanal) ── */
-.hab-card { background:var(--gray-50); border:1px solid var(--gray-100); border-radius:var(--radius-md); padding:.65rem .95rem .7rem; height:100%; }
+.hab-stack { display:flex; flex-direction:column; gap:.8rem; }
+.hab-card { background:var(--white); border:1px solid var(--gray-200); border-radius:var(--radius-lg); padding:.8rem 1.05rem .85rem; }
 .hab-head { display:flex; align-items:baseline; justify-content:space-between; gap:.6rem; flex-wrap:wrap; margin-bottom:.55rem; }
 .hab-tit { font-family:'Bricolage Grotesque',sans-serif; font-size:.95rem; font-weight:800; color:var(--navy); }
 .hab-sub { font-size:.7rem; color:var(--gray-400); }
 /* Gamificação do card Consistência */
 .gm-bloco { background:linear-gradient(135deg,#FBF6ED,#F7F1E4); border:1px solid #EFE4D2; border-radius:14px; padding:.7rem .8rem .75rem; margin-bottom:0; }
-/* O cartão de Desafios estica para acompanhar a altura do calendário ao lado.
-   Sem isto sobra uma faixa vazia entre o bloco e a borda do cartão; assim o
-   bloco cresce junto e o conteúdo fica centrado nele. */
-.hab-card.gam { display:flex; flex-direction:column; }
-.hab-card.gam .gm-bloco { flex:1; display:flex; flex-direction:column; justify-content:center; gap:.5rem; }
 .gm-pop { animation:gmPop .5s cubic-bezier(.34,1.56,.64,1); }
 @keyframes gmPop { 0%{transform:scale(1)} 45%{transform:scale(1.04)} 100%{transform:scale(1)} }
 .gm-topo { display:flex; align-items:center; gap:.55rem; margin-bottom:.5rem; }
@@ -1012,7 +1013,7 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
   :root{--sidebar-w:200px}
   /* Planner em telas médias: 2 células por linha */
   .semana-grid { grid-template-columns:repeat(2,1fr); }
-  .mapa-item{grid-template-columns:120px minmax(0,1fr) 150px} .mapa-header{grid-template-columns:120px minmax(0,1fr) 150px}
+  .mapa-item{grid-template-columns:120px 1fr 120px} .mapa-header{grid-template-columns:120px 1fr 120px}
 }
 @media (max-width:768px) {
   :root{--sidebar-w:0px}
@@ -1391,15 +1392,8 @@ body.aguardando-auth > *:not(#loginScreen) { visibility:hidden !important; point
 
 /* ── Evolução por Matéria: nomes sem truncar no desktop ── */
 @media(min-width:1025px){
-  .mapa-header,.mapa-item{ grid-template-columns:minmax(200px,280px) minmax(0,1fr) 240px; }
+  .mapa-header,.mapa-item{ grid-template-columns:minmax(200px,280px) 1fr 142px; }
   .mapa-materia{ white-space:normal; line-height:1.3; }
-  /* A barra deixa de esticar até o fim da tela. O comprimento dela não carrega
-     informação além do percentual que já está escrito ao lado, e o espaço
-     rende mais na coluna de Domínio, que é a leitura difícil das duas. */
-  .mapa-bar-wrap{ max-width:520px; }
-  .conf-badge{ min-width:180px; padding:7px 12px; }
-  .conf-badge .cb-pct{ font-size:1.05rem; }
-  .conf-badge .cb-base{ font-size:.63rem; }
 }
 
 /* ══════════════════════════════════════════════════════════════════
@@ -1615,101 +1609,3 @@ body.aguardando-auth > *:not(#loginScreen) { visibility:hidden !important; point
 .sab-rec-cab { display:flex; align-items:center; justify-content:space-between; gap:.5rem; margin-bottom:.4rem; }
 .sab-rec-limpar { border:none; background:none; padding:0 2px; font-family:inherit; font-size:.68rem; font-weight:700; color:var(--gray-400); cursor:pointer; text-decoration:underline; flex-shrink:0; }
 .sab-rec-limpar:hover { color:var(--red); }
-
-/* ══ PAINÉIS DO DASHBOARD ══════════════════════════════════════════
-   O dashboard passou a ser lido de cima para baixo em quatro blocos:
-   a bússola e os troféus, os exercícios, o conteúdo e a consistência. */
-/* Densidade do dashboard (05/09/2026): o dono via só a bússola e os exercícios
-   na primeira tela. O corte veio do respiro interno, não do tamanho da letra:
-   padding, gaps e altura de gráfico. Entre os painéis entrou um respiro
-   explícito, porque eles se encostavam e só as bordas arredondadas separavam. */
-.painel-sec { background:var(--white); border:1px solid var(--gray-200); border-radius:var(--radius-lg); padding:.8rem 1.15rem .85rem; }
-#page-dashboard > div + div { margin-top:.5rem; }
-.painel-sec-head { display:flex; align-items:baseline; gap:.7rem; flex-wrap:wrap; margin-bottom:.6rem; }
-.painel-sec-tit { font-family:'Bricolage Grotesque',sans-serif; font-size:1.02rem; font-weight:700; color:var(--navy); }
-.painel-sec-sub { font-size:.78rem; color:var(--gray-400); }
-
-/* ── Painel de Exercícios ── */
-/* Perto de metade para cada lado: o anel é a leitura principal do painel e
-   estava espremido numa coluna estreita. */
-.pex-grid { display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1fr); gap:.7rem; align-items:stretch; }
-.pex-card { background:var(--gray-50); border:1px solid var(--gray-100); border-radius:var(--radius-md); padding:.7rem .95rem .75rem; display:flex; flex-direction:column; gap:.55rem; }
-.pex-card-head { display:flex; flex-direction:column; gap:1px; }
-.pex-card-tit { font-size:.86rem; font-weight:700; color:var(--gray-700); }
-.pex-card-sub { font-size:.72rem; color:var(--gray-400); }
-
-.pex-anel-wrap { display:flex; align-items:center; justify-content:center; gap:1rem; flex:1; flex-wrap:wrap; }
-.pex-anel { width:124px; height:124px; flex-shrink:0; }
-.pex-anel-num { font-family:'Bricolage Grotesque',sans-serif; font-size:26px; font-weight:800; fill:var(--green); }
-.pex-anel-num.medio { fill:var(--yellow); }
-.pex-anel-num.ruim  { fill:var(--red); }
-.pex-anel-lbl { font-size:9.5px; font-weight:600; fill:var(--gray-400); letter-spacing:.03em; }
-.pex-leg { display:flex; flex-direction:column; gap:1px; min-width:66px; text-align:right; }
-.pex-leg.dir { text-align:left; }
-.pex-leg-top { display:flex; align-items:center; gap:.35rem; justify-content:flex-end; }
-.pex-leg.dir .pex-leg-top { justify-content:flex-start; }
-.pex-dot { width:9px; height:9px; border-radius:50%; flex-shrink:0; }
-.pex-dot.verde { background:var(--green-viv); }
-.pex-dot.vermelho { background:var(--red-viv); }
-.pex-leg-pct { font-family:'Bricolage Grotesque',sans-serif; font-size:1.02rem; font-weight:800; color:var(--green); line-height:1.1; }
-.pex-leg-pct.erro { color:var(--red); }
-.pex-leg-t { font-size:.76rem; font-weight:600; color:var(--gray-600); }
-.pex-leg-q { font-size:.7rem; color:var(--gray-400); }
-
-.pex-chips { display:flex; gap:.35rem; flex-wrap:wrap; }
-.pex-chip { border:1.5px solid var(--gray-200); background:var(--white); color:var(--gray-500); border-radius:var(--radius-sm); padding:4px 11px; font-family:inherit; font-size:.75rem; font-weight:600; cursor:pointer; transition:all .15s; }
-.pex-chip:hover { border-color:var(--green-viv); color:var(--green); }
-.pex-chip.on { background:var(--navy); border-color:var(--navy); color:var(--white); }
-
-/* altura DEFINIDA e colunas esticadas: sem isso o trilho não tem altura
-   resolvida e a barra em % não desenha nada. */
-.pex-barras { display:flex; align-items:stretch; gap:.5rem; height:128px; overflow-x:auto; padding-bottom:2px; }
-.pex-barras.compacto { gap:.18rem; }
-.pex-col { flex:1; min-width:26px; height:100%; display:flex; flex-direction:column; align-items:center; gap:4px; }
-/* 30 dias: as colunas encolhem para caber sem barra cortada na direita, e o
-   número some de cima de cada barra. Trinta rótulos empilhados viram ruído; o
-   valor exato continua no tooltip de cada barra. */
-.pex-barras.compacto .pex-col { min-width:0; }
-.pex-barras.compacto .pex-col-barra { max-width:9px; border-radius:3px 3px 1px 1px; }
-.pex-barras.compacto .pex-col-n { display:none; }
-.pex-barras.compacto .pex-col-dia { font-size:.6rem; }
-.pex-col-n { font-size:.68rem; font-weight:700; color:var(--gray-400); height:12px; }
-.pex-col-trilho { width:100%; flex:1; min-height:0; display:flex; align-items:flex-end; border-bottom:1px solid var(--gray-200); }
-.pex-col-barra { width:100%; max-width:20px; margin:0 auto; background:var(--green-viv); border-radius:5px 5px 2px 2px; transition:height .3s ease; }
-.pex-col-barra.hoje { background:var(--green); }
-.pex-col-dia { font-size:.66rem; color:var(--gray-400); white-space:nowrap; }
-.pex-col-dow { font-size:.62rem; color:var(--gray-300); }
-.pex-rodape { display:flex; align-items:center; justify-content:space-between; gap:.7rem; flex-wrap:wrap; border-top:1px solid var(--gray-100); padding-top:.5rem; font-size:.74rem; color:var(--gray-500); }
-.pex-media strong { font-size:.95rem; color:var(--gray-700); }
-.pex-var { font-weight:700; }
-.pex-var.sobe { color:var(--green); }
-.pex-var.desce { color:var(--red); }
-.pex-var.neutro { color:var(--gray-400); font-weight:400; }
-
-.pex-vazio { text-align:center; padding:1.6rem 1rem; }
-.pex-vazio-ic { font-size:1.8rem; margin-bottom:.4rem; }
-.pex-vazio-tit { font-weight:700; color:var(--gray-600); margin-bottom:.25rem; font-size:.9rem; }
-.pex-vazio-txt { font-size:.8rem; color:var(--gray-400); max-width:430px; margin:0 auto 1rem; line-height:1.55; }
-.pex-vazio-btn { background:var(--navy); color:var(--white); border:none; border-radius:var(--radius-md); padding:9px 18px; font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:.83rem; cursor:pointer; }
-
-/* ── Painel de Consistência: aderência e ritmo em cima, mês e desafios embaixo ── */
-/* align-items:stretch (o padrão da grade) para os dois cartões de cada linha
-   terminarem na mesma altura. Os filhos diretos são os contêineres do render
-   (#dashHero, #habRitmo, #habMes, #habDesafios), então o cartão de dentro
-   também precisa de height:100% para acompanhar a esticada. */
-.pc-grid { display:grid; grid-template-columns:1fr 1fr; gap:.7rem; align-items:stretch; }
-.pc-grid > div { min-width:0; display:flex; }
-.pc-grid > div > * { flex:1; min-width:0; }
-
-@media (max-width:900px){
-  .pex-grid, .pc-grid { grid-template-columns:1fr; }
-  .pex-anel-wrap { justify-content:center; }
-}
-@media (max-width:480px){
-  .painel-sec { padding:1rem .9rem; }
-  .pex-anel { width:126px; height:126px; }
-  .pex-barras { height:160px; }
-  .pex-leg, .pex-leg.dir { min-width:0; text-align:center; }
-  .pex-leg-top, .pex-leg.dir .pex-leg-top { justify-content:center; }
-  .pex-col-dow { display:none; }
-}
