@@ -6,7 +6,7 @@
    ════════════════════════════════════════════════════════════════ */
 
 const STATE_STORAGE_KEY="cronos_v4";
-const STATE_SCHEMA_VERSION=6;
+const STATE_SCHEMA_VERSION=5;
 
 /* Catálogo de certificações — carregado de editais.js (window.EDITAIS_DATA) */
 let EDITAIS=(typeof window!=="undefined"&&window.EDITAIS_DATA)||{};
@@ -75,38 +75,6 @@ function migrateState(raw){
     if(s.sabadoRecuperacaoData!==undefined&&s.recuperacaoData===undefined) s.recuperacaoData=s.sabadoRecuperacaoData;
     delete s.sabadoRecuperacao; delete s.sabadoRecuperacaoData;
     s.schemaVersion=5;
-  }
-  if(v<6){
-    /* 05/09/2026: a fila de recuperação nunca era esvaziada. NADA no sistema
-       removia um item dela: nem dar a nota no Retorno Técnico, nem o
-       "Reiniciar cronograma completo". Quem usou a opção antiga de mandar os
-       dias perdidos para o Retorno Técnico ficou com dezenas de tópicos presos
-       num único dia do calendário, para sempre, mesmo depois de reiniciar.
-       Esta migração limpa o que já não faz sentido:
-         - cronograma sem nenhum dia registrado: não há o que recuperar;
-         - item cujo dia de origem já recebeu nota: já foi recuperado;
-         - item em formato de texto solto, das versões anteriores ao vínculo
-           com o dia de origem: sem `key` não há onde gravar nota, é peso morto. */
-    const dias=s.dias||{};
-    if(Array.isArray(s.recuperacao)&&s.recuperacao.length){
-      if(!Object.keys(dias).length){
-        s.recuperacao=[];
-      } else {
-        s.recuperacao=s.recuperacao.filter(function(it){
-          if(!it||typeof it!=="object"||!it.key) return false;
-          const d=dias[it.key];
-          if(!d) return true;
-          /* Nota do tópico quando o dia tem vários, e a nota agregada do dia
-             como rede de segurança: o agregado só existe quando TODOS os
-             tópicos daquele dia já foram avaliados. */
-          const porTopico=(it.topIdx!==null&&it.topIdx!==undefined&&it.topIdx!=="")
-            ? (d.percepcoes||{})[it.topIdx] : null;
-          return !(porTopico||d.percepcao);
-        });
-      }
-    }
-    if(!s.recuperacao||!s.recuperacao.length) delete s.recuperacaoData;
-    s.schemaVersion=6;
   }
   return s;
 }

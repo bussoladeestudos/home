@@ -974,9 +974,20 @@ function listarQuestoes(editalId,filtro,editaisRef){
   const mats=Object.keys(ed.topicos).filter(function(m){
     return !f.materia||_normTexto(m)===_normTexto(f.materia);
   });
+  /* f.topicos aceita as duas formas: texto do topico, ou par {mat,top}.
+     O par existe porque duas materias podem ter topico de mesmo nome
+     (Tributacao, por exemplo) e a tela deixa marcar topicos de materias
+     diferentes na mesma sessao. f.topico (singular) continua valendo. */
+  const _tops=(f.topicos&&f.topicos.length)?f.topicos.map(function(t){
+    return (typeof t==="string")?{mat:null,top:_normTexto(t)}
+                                :{mat:t.mat?_normTexto(t.mat):null,top:_normTexto(t.top)};
+  }):null;
   mats.forEach(function(mat){
     (ed.topicos[mat]||[]).forEach(function(top){
       if(f.topico&&_normTexto(top)!==_normTexto(f.topico)) return;
+      if(_tops&&!_tops.some(function(t){
+        return t.top===_normTexto(top)&&(!t.mat||t.mat===_normTexto(mat));
+      })) return;
       getQuestoes(editalId,mat,top).forEach(function(q){
         if(f.niveis&&f.niveis.length&&f.niveis.indexOf(q.nivel)===-1) return;
         if(f.usarEm&&(q.usar_em||[]).indexOf(f.usarEm)===-1) return;

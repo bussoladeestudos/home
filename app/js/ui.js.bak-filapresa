@@ -55,7 +55,6 @@ const ACTIONS={
   selecionarGrupo:d=>selecionarGrupo(d.grupo,true),
   toggleDow:d=>toggleDow(+d.i),
   usarPrazoSugerido:()=>usarPrazoSugerido(),
-  limparFilaRecuperacao:()=>limparFilaRecuperacao(),
   iniciarBussola:()=>iniciarBússola(),
   marcarTreinoFeito:d=>marcarTreinoFeito(d.key),
   ajustarCronograma:()=>ajustarCronograma(),
@@ -804,23 +803,8 @@ function cancelarReinicio(){
   document.getElementById("reinicioWarning").style.display="none";
 }
 function reiniciarCompleto(){
-  /* Reiniciar tem de apagar TUDO que está preso ao cronograma antigo, e não só
-     STATE.dias. Era o bug: a fila de recuperação sobrevivia ao reinício e
-     continuava desenhando a lista inteira no mesmo Retorno Técnico, para
-     sempre, porque nada no sistema jamais esvaziava essa fila.
-     O que NÃO se apaga aqui, de propósito: as anotações da semana e o
-     histórico de exercícios (STATE.questoes). São do aluno e não são
-     cronograma; quem quiser apagar exercício apaga em outro lugar. */
   _confirmReinicio=false;
   STATE.dias={};
-  STATE.extrasPorDia={};
-  STATE.recuperacao=[];
-  delete STATE.recuperacaoData;
-  delete STATE.redistribuindo; delete STATE.diasRedistribuir;
-  /* Com o cronograma zerado e a data de início no passado, todos os dias
-     anteriores viram "sem registro" na hora. Segurar o aviso pelo resto do dia
-     evita o modal de dias perdidos abrir em cima do clique de reiniciar. */
-  STATE.recoveryShownDate=fmt(new Date());
   STATE.semanaOffset=0; STATE.mesOffset=0;
   save(); renderTudo(); navTo("hoje");
   document.getElementById("setupModal").classList.remove("open");
@@ -4209,30 +4193,6 @@ function sabStarHTML(key,n,source,ti,sabKey){
     return`<button class="sab-star ${lit}" data-n="${s}" aria-label="${s} de 5 estrelas" data-action="setSabStar" data-hover="sabstar" data-key="${key}" data-n="${s}" data-cur="${n}" data-source="${source}"${tiAttr}>★</button>`;
   }).join("");
 }
-/* Tira da fila de recuperação o item que acabou de ser avaliado. Sem isto a
-   fila só crescia: nada, em lugar nenhum, jamais removia um item dela. */
-/* Saída de emergência. Se a lista ficar presa por qualquer motivo, o aluno
-   limpa daqui em vez de ficar olhando para ela todo Retorno Técnico. Não
-   perde conteúdo: os dias de origem continuam marcados e o motor segue
-   puxando esses tópicos pelas revisões de 7 e 30 dias. */
-function limparFilaRecuperacao(){
-  STATE.recuperacao=[];
-  delete STATE.recuperacaoData;
-  save(); renderTudo();
-  showToast("Lista de recuperação limpa.");
-}
-
-function _tirarDaFilaRecuperacao(key,ti){
-  if(!Array.isArray(STATE.recuperacao)||!STATE.recuperacao.length) return;
-  const temTi=(ti!=null&&ti!=="");
-  STATE.recuperacao=STATE.recuperacao.filter(it=>{
-    if(!it||typeof it!=="object"||it.key!==key) return true;
-    if(!temTi) return false;                       // dia de tópico único: sai tudo daquele dia
-    return String(it.topIdx)!==String(ti);
-  });
-  if(!STATE.recuperacao.length) delete STATE.recuperacaoData;
-}
-
 function setSabStar(key,n,source,ti,sabKey){
   /* Reavaliar no Retorno Técnico marca o PRÓPRIO dia do RT como cumprido —
      as notas vão para os dias dos tópicos, então sem isso o Retorno Técnico ficava
@@ -4247,7 +4207,6 @@ function setSabStar(key,n,source,ti,sabKey){
     STATE.dias[key].estrelas=n; STATE.dias[key].percepcao=starToNivel(n);
   }
   _carimbarRegistro(key);
-  _tirarDaFilaRecuperacao(key,ti);
   save();
   renderTudo();
   if(source==="rev"){ renderRevisoesPage(); }
@@ -4279,10 +4238,7 @@ function renderDiaRetornoTecnico(dia,key,est,isHoje,isPast,fraquezas){
 
   let itens="";
   if(temRecuperacao){
-    itens=`<div class="sab-rec-cab">
-      <span style="font-size:.72rem;font-weight:700;color:var(--red)">🔴 Recuperação de dias perdidos:</span>
-      <button type="button" class="sab-rec-limpar" data-action="limparFilaRecuperacao" title="Tira estes tópicos da lista. O conteúdo continua voltando pelas revisões.">Limpar</button>
-    </div>`;
+    itens=`<div style="font-size:.72rem;font-weight:700;color:var(--red);margin-bottom:.4rem">🔴 Recuperação de dias perdidos:</div>`;
     STATE.recuperacao.forEach(f=>{
       // Compatibilidade: versoes antigas gravavam string "Materia: Topico".
       const obj=(typeof f==="string")?{mat:"",top:f,key:null,topIdx:null}:f;
