@@ -1603,9 +1603,3 @@ body.aguardando-auth > *:not(#loginScreen) { visibility:hidden !important; point
 .ex-fim-bar { flex-basis:100%; height:5px; border-radius:99px; background:var(--gray-200); overflow:hidden; }
 .ex-fim-bar i { display:block; height:100%; border-radius:99px; }
 .ex-fim-frac { font-size:.73rem; color:var(--gray-400); flex-shrink:0; }
-
-/* Cabeçalho da lista de recuperação no Retorno Técnico, com a saída de
-   emergência para o aluno esvaziar a fila. */
-.sab-rec-cab { display:flex; align-items:center; justify-content:space-between; gap:.5rem; margin-bottom:.4rem; }
-.sab-rec-limpar { border:none; background:none; padding:0 2px; font-family:inherit; font-size:.68rem; font-weight:700; color:var(--gray-400); cursor:pointer; text-decoration:underline; flex-shrink:0; }
-.sab-rec-limpar:hover { color:var(--red); }
