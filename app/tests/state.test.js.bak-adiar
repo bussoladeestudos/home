@@ -1,0 +1,125 @@
+/* Testes do state da Bússola — rodar com:  node --test tests/state.test.js */
+const test=require("node:test");
+const assert=require("node:assert");
+const {migrateState,STATE_SCHEMA_VERSION}=require("../js/state.js");
+
+test("migrateState: dados v1 (sem versão) ganham containers e versão",()=>{
+  const antigo={nome:"Adriano",inicio:"2026-01-05",dias:{"2026-01-06":{percepcao:"alta"}}};
+  const m=migrateState(antigo);
+  assert.equal(m.schemaVersion,STATE_SCHEMA_VERSION);
+  assert.deepEqual(m.diasLivres,[]);
+  assert.deepEqual(m.notasSemana,{});
+  assert.deepEqual(m.extrasPorDia,{});
+  assert.equal(m.dias["2026-01-06"].percepcao,"alta"); // dados preservados
+  assert.equal(m.nome,"Adriano");
+});
+
+test("migrateState: corrige tipos corrompidos sem perder o resto",()=>{
+  const quebrado={dias:null,diasLivres:"0,6",notasSemana:7,horasDia:"quatro",prova:"2026-08-30"};
+  const m=migrateState(quebrado);
+  assert.deepEqual(m.dias,{});
+  assert.deepEqual(m.diasLivres,[]);
+  assert.deepEqual(m.notasSemana,{});
+  assert.equal(m.horasDia,3);           // fallback seguro
+  assert.equal(m.prova,"2026-08-30");   // campo válido intacto
+});
+
+test("migrateState: idempotente em dados já migrados (v2)",()=>{
+  const v2=migrateState({dias:{"2026-01-06":{percepcao:"media"}},diasLivres:[0,6],horasDia:4});
+  const de_novo=migrateState(v2);
+  assert.deepEqual(de_novo,v2);
+});
+
+/* ── v3: editais de concurso removidos em 25/08/2026 ──────────────
+   A migração só age no navegador, onde EDITAIS vem do editais.js.
+   freshState simula isso: injeta window.EDITAIS_DATA e recarrega o
+   módulo, porque o catálogo é lido uma única vez, na carga. */
+const path=require("path");
+function freshState(editais){
+  global.window={EDITAIS_DATA:editais};
+  delete require.cache[require.resolve(path.join(__dirname,"..","js","state.js"))];
+  const m=require(path.join(__dirname,"..","js","state.js"));
+  delete global.window;
+  return m;
+}
+const SO_CERTS={cfpPlanejar:{nome:"CFP"},ca600Abecip:{nome:"CA-600"}};
+
+test("migrateState v3: edital de concurso que sumiu devolve o aluno ao setup",()=>{
+  const S=freshState(SO_CERTS);
+  const antigo={schemaVersion:2,prefeitura:"cgAgenteAdm",concurso:"Campina Grande — Agente",
+    cargo:"Agente",inicio:"2026-07-01",prova:"2026-08-30",dias:{"2026-07-02":{percepcao:"alta"}},nome:"Adriano"};
+  const m=S.migrateState(antigo);
+  assert.equal(m.prefeitura,"");
+  assert.equal(m.concurso,"");
+  assert.equal(m.inicio,null);
+  assert.equal(m.prova,null);
+  assert.deepEqual(m.dias,{});
+  assert.equal(m.nome,"Adriano");        // o que não depende do edital fica
+  assert.equal(m.schemaVersion,S.STATE_SCHEMA_VERSION);   // migra até a versão corrente
+});
+
+test("migrateState v3: aluno de certificação não é tocado",()=>{
+  const S=freshState(SO_CERTS);
+  const aluno={schemaVersion:2,prefeitura:"cfpPlanejar",inicio:"2026-07-01",
+    dias:{"2026-07-02":{percepcao:"alta"}}};
+  const m=S.migrateState(aluno);
+  assert.equal(m.prefeitura,"cfpPlanejar");
+  assert.equal(m.inicio,"2026-07-01");
+  assert.equal(m.dias["2026-07-02"].percepcao,"alta");
+});
+
+test("migrateState v3: sem catálogo carregado (Node), não zera nada",()=>{
+  const antigo={schemaVersion:2,prefeitura:"cgAgenteAdm",inicio:"2026-07-01"};
+  const m=migrateState(antigo);           // módulo do topo, sem window
+  assert.equal(m.prefeitura,"cgAgenteAdm");
+  assert.equal(m.inicio,"2026-07-01");
+});
+
+/* ── Schema 4: banco de questões (31/08/2026) ── */
+test("migrateState v4: estado antigo ganha o container de questões",()=>{
+  const S=freshState(SO_CERTS);
+  const m=S.migrateState({schemaVersion:3,prefeitura:"cfpPlanejar",inicio:"2026-07-01"});
+  assert.deepEqual(m.questoes,{});
+  assert.equal(m.schemaVersion,S.STATE_SCHEMA_VERSION);
+});
+
+test("migrateState v4: histórico de questões já existente é preservado",()=>{
+  const S=freshState(SO_CERTS);
+  const hist={"cpa-prod-01-q1":{n:2,ok:1,ultimaCerta:false}};
+  const m=S.migrateState({schemaVersion:3,prefeitura:"cfpPlanejar",questoes:hist});
+  assert.deepEqual(m.questoes,hist);
+});
+
+test("migrateState v4: questoes corrompido vira objeto vazio, sem quebrar",()=>{
+  const S=freshState(SO_CERTS);
+  assert.deepEqual(S.migrateState({schemaVersion:3,questoes:"lixo"}).questoes,{});
+  assert.deepEqual(S.migrateState({schemaVersion:3,questoes:null}).questoes,{});
+});
+
+/* ── Schema 5: o dia de recuperação é o Retorno Técnico, não o sábado (05/09/2026) ── */
+test("migrateState v5: recuperação pendente sobrevive ao rename das chaves",()=>{
+  const S=freshState(SO_CERTS);
+  const itens=[{mat:"Mat A",top:"A1",key:"2026-07-02",topIdx:0}];
+  const m=S.migrateState({schemaVersion:4,prefeitura:"cfpPlanejar",
+    sabadoRecuperacao:itens, sabadoRecuperacaoData:"2026-07-11"});
+  assert.deepEqual(m.recuperacao,itens);
+  assert.equal(m.recuperacaoData,"2026-07-11");
+  assert.equal(m.sabadoRecuperacao,undefined);      // a chave antiga some
+  assert.equal(m.sabadoRecuperacaoData,undefined);
+  assert.equal(m.schemaVersion,5);
+});
+
+test("migrateState v5: quem já está no nome novo não é sobrescrito",()=>{
+  const S=freshState(SO_CERTS);
+  const m=S.migrateState({schemaVersion:4,recuperacao:["novo"],recuperacaoData:"2026-08-01",
+    sabadoRecuperacao:["velho"],sabadoRecuperacaoData:"2026-07-01"});
+  assert.deepEqual(m.recuperacao,["novo"]);
+  assert.equal(m.recuperacaoData,"2026-08-01");
+});
+
+test("migrateState v5: estado sem recuperação nenhuma não ganha chave à toa",()=>{
+  const S=freshState(SO_CERTS);
+  const m=S.migrateState({schemaVersion:4,prefeitura:"cfpPlanejar"});
+  assert.equal(m.recuperacao,undefined);
+  assert.equal(m.schemaVersion,5);
+});
