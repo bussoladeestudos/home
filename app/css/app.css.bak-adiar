@@ -922,10 +922,6 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
 .recovery-missed-bar { background:var(--red-pale); border:1px solid var(--red-mid); border-radius:var(--radius-sm); padding:.6rem 1rem; font-size:.82rem; color:var(--red); font-weight:600; margin-bottom:1.25rem; display:flex; align-items:center; gap:.5rem; }
 .recovery-options { display:flex; flex-direction:column; gap:.65rem; margin-bottom:1.25rem; }
 .rec-option { border:2px solid var(--gray-200); border-radius:var(--radius-md); padding:1rem 1.1rem; cursor:pointer; transition:all .18s; background:var(--white); text-align:left; width:100%; display:flex; align-items:flex-start; gap:.9rem; }
-/* display:flex ganha do [hidden] do navegador: sem o !important a opcao
-   escondida continua na tela. Mesmo tropeco ja aconteceu na busca do
-   Conteudo programatico. */
-.rec-option[hidden] { display:none !important; }
 .rec-option:hover { border-color:var(--blue); background:var(--blue-pale); }
 .rec-option.selected { border-color:var(--blue); background:var(--blue-pale); box-shadow:0 0 0 3px rgba(59,130,246,.12); }
 .rec-option-icon { font-size:1.5rem; line-height:1; flex-shrink:0; margin-top:1px; }
