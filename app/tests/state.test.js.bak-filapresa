@@ -100,23 +100,20 @@ test("migrateState v4: questoes corrompido vira objeto vazio, sem quebrar",()=>{
 test("migrateState v5: recuperação pendente sobrevive ao rename das chaves",()=>{
   const S=freshState(SO_CERTS);
   const itens=[{mat:"Mat A",top:"A1",key:"2026-07-02",topIdx:0}];
-  // o dia de origem existe e ainda não tem nota, então a v6 preserva o item
-  const m=S.migrateState({schemaVersion:4,prefeitura:"cfpPlanejar",dias:{"2026-07-02":{}},
+  const m=S.migrateState({schemaVersion:4,prefeitura:"cfpPlanejar",
     sabadoRecuperacao:itens, sabadoRecuperacaoData:"2026-07-11"});
   assert.deepEqual(m.recuperacao,itens);
   assert.equal(m.recuperacaoData,"2026-07-11");
   assert.equal(m.sabadoRecuperacao,undefined);      // a chave antiga some
   assert.equal(m.sabadoRecuperacaoData,undefined);
-  assert.equal(m.schemaVersion,S.STATE_SCHEMA_VERSION);
+  assert.equal(m.schemaVersion,5);
 });
 
 test("migrateState v5: quem já está no nome novo não é sobrescrito",()=>{
   const S=freshState(SO_CERTS);
-  const novo=[{mat:"Mat A",top:"A1",key:"2026-08-03",topIdx:0}];
-  const m=S.migrateState({schemaVersion:4,dias:{"2026-08-03":{}},
-    recuperacao:novo,recuperacaoData:"2026-08-01",
-    sabadoRecuperacao:[{mat:"X",top:"Y",key:"2026-07-01",topIdx:0}],sabadoRecuperacaoData:"2026-07-01"});
-  assert.deepEqual(m.recuperacao,novo);
+  const m=S.migrateState({schemaVersion:4,recuperacao:["novo"],recuperacaoData:"2026-08-01",
+    sabadoRecuperacao:["velho"],sabadoRecuperacaoData:"2026-07-01"});
+  assert.deepEqual(m.recuperacao,["novo"]);
   assert.equal(m.recuperacaoData,"2026-08-01");
 });
 
@@ -124,69 +121,5 @@ test("migrateState v5: estado sem recuperação nenhuma não ganha chave à toa"
   const S=freshState(SO_CERTS);
   const m=S.migrateState({schemaVersion:4,prefeitura:"cfpPlanejar"});
   assert.equal(m.recuperacao,undefined);
-  assert.equal(m.schemaVersion,S.STATE_SCHEMA_VERSION);
-});
-
-/* v6: a fila de recuperação nunca era esvaziada por ninguém. Estes testes
-   cobrem a limpeza de tudo que já não faz sentido carregar. */
-
-test("migrateState v6: cronograma sem nenhum dia registrado zera a fila",()=>{
-  const S=freshState(SO_CERTS);
-  const m=S.migrateState({schemaVersion:5,dias:{},
-    recuperacao:[{mat:"A",top:"B",key:"2026-07-02",topIdx:0}],recuperacaoData:"2026-07-11"});
-  assert.deepEqual(m.recuperacao,[]);
-  assert.equal(m.recuperacaoData,undefined);   // sem fila, a data some junto
-  assert.equal(m.schemaVersion,6);
-});
-
-test("migrateState v6: item cujo dia já foi avaliado sai da fila",()=>{
-  const S=freshState(SO_CERTS);
-  const m=S.migrateState({schemaVersion:5,
-    dias:{"2026-07-02":{percepcao:"alta"},"2026-07-03":{}},
-    recuperacao:[{mat:"A",top:"B",key:"2026-07-02"},{mat:"A",top:"C",key:"2026-07-03"}],
-    recuperacaoData:"2026-07-11"});
-  assert.equal(m.recuperacao.length,1);
-  assert.equal(m.recuperacao[0].key,"2026-07-03");
-  assert.equal(m.recuperacaoData,"2026-07-11");  // ainda sobrou item, a data fica
-});
-
-test("migrateState v6: em dia de vários tópicos, olha a nota do tópico certo",()=>{
-  const S=freshState(SO_CERTS);
-  const m=S.migrateState({schemaVersion:5,
-    dias:{"2026-07-02":{percepcoes:{0:"media"}}},
-    recuperacao:[{mat:"A",top:"B",key:"2026-07-02",topIdx:0},
-                 {mat:"A",top:"C",key:"2026-07-02",topIdx:1}],
-    recuperacaoData:"2026-07-11"});
-  assert.equal(m.recuperacao.length,1);
-  assert.equal(m.recuperacao[0].topIdx,1);
-});
-
-test("migrateState v6: item de texto solto, sem vínculo com o dia, é descartado",()=>{
-  const S=freshState(SO_CERTS);
-  const m=S.migrateState({schemaVersion:5,dias:{"2026-07-02":{}},
-    recuperacao:["Matéria: Tópico",{mat:"A",top:"B",key:"2026-07-02"}],
-    recuperacaoData:"2026-07-11"});
-  assert.equal(m.recuperacao.length,1);
-  assert.equal(m.recuperacao[0].key,"2026-07-02");
-});
-
-test("migrateState v6: nota agregada do dia também tira o item da fila",()=>{
-  const S=freshState(SO_CERTS);
-  // o agregado do dia só existe quando todos os tópicos dele foram avaliados,
-  // então nenhum item daquele dia continua pendente
-  const m=S.migrateState({schemaVersion:5,dias:{"2026-07-02":{percepcao:"media"}},
-    recuperacao:[{mat:"A",top:"B",key:"2026-07-02",topIdx:0},
-                 {mat:"A",top:"C",key:"2026-07-02",topIdx:1}],
-    recuperacaoData:"2026-07-11"});
-  assert.deepEqual(m.recuperacao,[]);
-  assert.equal(m.recuperacaoData,undefined);
-});
-
-test("migrateState v6: fila que continua válida não é tocada",()=>{
-  const S=freshState(SO_CERTS);
-  const fila=[{mat:"A",top:"B",key:"2026-07-02",topIdx:0}];
-  const m=S.migrateState({schemaVersion:5,dias:{"2026-07-02":{transferido:true}},
-    recuperacao:fila,recuperacaoData:"2026-07-11"});
-  assert.deepEqual(m.recuperacao,fila);
-  assert.equal(m.recuperacaoData,"2026-07-11");
+  assert.equal(m.schemaVersion,5);
 });

@@ -662,6 +662,33 @@ test("listarQuestoes: filtra por tópico, por nível e por uso",()=>{
   assert.strictEqual(r.mat,"Mat A"); assert.strictEqual(r.top,"A2");
 });
 
+test("listarQuestoes: aceita vários tópicos de uma vez",()=>{
+  const E=engineComQuestoes();
+  assert.strictEqual(E.listarQuestoes("demo",{topicos:["A1"]},FIX_EDITAIS).length,2);
+  assert.strictEqual(E.listarQuestoes("demo",{topicos:["A1","A2"]},FIX_EDITAIS).length,3);
+  assert.strictEqual(E.listarQuestoes("demo",{topicos:["A2"]},FIX_EDITAIS).length,1);
+  // lista vazia não filtra nada: é o estado "todos os tópicos"
+  assert.strictEqual(E.listarQuestoes("demo",{topicos:[]},FIX_EDITAIS).length,3);
+  // tópico inexistente não derruba, só devolve zero
+  assert.strictEqual(E.listarQuestoes("demo",{topicos:["A9"]},FIX_EDITAIS).length,0);
+});
+
+test("listarQuestoes: vários tópicos aceitam o par matéria + tópico",()=>{
+  const E=engineComQuestoes();
+  assert.strictEqual(E.listarQuestoes("demo",{topicos:[{mat:"Mat A",top:"A1"}]},FIX_EDITAIS).length,2);
+  // par com a matéria errada não casa, mesmo com o nome do tópico certo
+  assert.strictEqual(E.listarQuestoes("demo",{topicos:[{mat:"Mat B",top:"A1"}]},FIX_EDITAIS).length,0);
+  // tolerante a acento e caixa, como o resto do engine
+  assert.strictEqual(E.listarQuestoes("demo",{topicos:[{mat:" mat a ",top:"a1"}]},FIX_EDITAIS).length,2);
+});
+
+test("listarQuestoes: vários tópicos combinam com os outros filtros",()=>{
+  const E=engineComQuestoes();
+  assert.strictEqual(E.listarQuestoes("demo",{topicos:["A1","A2"],niveis:[1]},FIX_EDITAIS).length,1);
+  assert.strictEqual(E.listarQuestoes("demo",{topicos:["A1","A2"],usarEm:"simulado"},FIX_EDITAIS).length,2);
+  assert.strictEqual(E.listarQuestoes("demo",{topicos:["A1"],materia:"Mat B"},FIX_EDITAIS).length,0);
+});
+
 test("registrarResposta: acumula tentativas e acertos por id",()=>{
   const st=baseState(); const E=engineComQuestoes(st);
   E.registrarResposta("d-a1-q1","c",false,"2026-02-01");
