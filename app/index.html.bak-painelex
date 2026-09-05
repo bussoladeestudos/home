@@ -458,34 +458,19 @@ function fazerLogout() {
       <div id="bussolaRumo"></div>
       <div id="dashMedalhas"></div>
     </div>
-    <!-- O dashboard é lido de cima para baixo, em blocos, e a ordem é a
-         pergunta que o aluno faz: estou no rumo (acima), quanto eu acerto,
-         quanto do edital eu cobri, e com que constância eu apareço. -->
-
-    <!-- 2. EXERCÍCIOS: alimentado pelo menu Exercícios, a cada resposta. -->
-    <div id="painelExercicios"></div>
-
-    <!-- 3. CONTEÚDO -->
-    <div class="painel-sec">
-      <div class="painel-sec-head">
-        <span class="painel-sec-tit">📚 Painel de Conteúdo</span>
-        <span class="painel-sec-sub">evolução por matéria, contra o cronograma</span>
-      </div>
-      <div class="mapa-grid" id="mapaGrid"></div>
-    </div>
-
-    <!-- 4. CONSISTÊNCIA: aderência e ritmo em cima, mês e desafios embaixo. -->
-    <div class="painel-sec">
-      <div class="painel-sec-head">
-        <span class="painel-sec-tit">🔥 Painel de Consistência</span>
-        <span class="painel-sec-sub">com que regularidade você aparece</span>
-      </div>
-      <div class="pc-grid">
+    <!-- Dashboard em 2 colunas. Esquerda: Aderência + Evolução por Matéria.
+         Direita: Ritmo + Consistência (sobem para o topo da tela, ao lado da
+         Aderência). No mobile vira 1 coluna: Aderência -> hábito -> matérias
+         (a .dash-main usa display:contents para permitir essa reordenação). -->
+    <div class="dash-cols">
+      <div class="dash-main">
         <div id="dashHero"></div>
-        <div id="habRitmo"></div>
-        <div id="habMes"></div>
-        <div id="habDesafios"></div>
+        <div class="card-evolucao" style="background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:1.25rem 1.4rem;">
+          <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:1.02rem;font-weight:700;color:var(--navy);margin-bottom:.9rem;">📚 Evolução por Matéria</div>
+          <div class="mapa-grid" id="mapaGrid"></div>
+        </div>
       </div>
+      <div class="dash-side" id="dashHabito"></div>
     </div>
     <div class="painel-wrapper">
       <div class="painel-collapsed" data-action="togglePainel">
