@@ -80,7 +80,7 @@ test("migrateState v4: estado antigo ganha o container de questões",()=>{
   const S=freshState(SO_CERTS);
   const m=S.migrateState({schemaVersion:3,prefeitura:"cfpPlanejar",inicio:"2026-07-01"});
   assert.deepEqual(m.questoes,{});
-  assert.equal(m.schemaVersion,4);
+  assert.equal(m.schemaVersion,S.STATE_SCHEMA_VERSION);
 });
 
 test("migrateState v4: histórico de questões já existente é preservado",()=>{
@@ -94,4 +94,32 @@ test("migrateState v4: questoes corrompido vira objeto vazio, sem quebrar",()=>{
   const S=freshState(SO_CERTS);
   assert.deepEqual(S.migrateState({schemaVersion:3,questoes:"lixo"}).questoes,{});
   assert.deepEqual(S.migrateState({schemaVersion:3,questoes:null}).questoes,{});
+});
+
+/* ── Schema 5: o dia de recuperação é o Retorno Técnico, não o sábado (05/09/2026) ── */
+test("migrateState v5: recuperação pendente sobrevive ao rename das chaves",()=>{
+  const S=freshState(SO_CERTS);
+  const itens=[{mat:"Mat A",top:"A1",key:"2026-07-02",topIdx:0}];
+  const m=S.migrateState({schemaVersion:4,prefeitura:"cfpPlanejar",
+    sabadoRecuperacao:itens, sabadoRecuperacaoData:"2026-07-11"});
+  assert.deepEqual(m.recuperacao,itens);
+  assert.equal(m.recuperacaoData,"2026-07-11");
+  assert.equal(m.sabadoRecuperacao,undefined);      // a chave antiga some
+  assert.equal(m.sabadoRecuperacaoData,undefined);
+  assert.equal(m.schemaVersion,5);
+});
+
+test("migrateState v5: quem já está no nome novo não é sobrescrito",()=>{
+  const S=freshState(SO_CERTS);
+  const m=S.migrateState({schemaVersion:4,recuperacao:["novo"],recuperacaoData:"2026-08-01",
+    sabadoRecuperacao:["velho"],sabadoRecuperacaoData:"2026-07-01"});
+  assert.deepEqual(m.recuperacao,["novo"]);
+  assert.equal(m.recuperacaoData,"2026-08-01");
+});
+
+test("migrateState v5: estado sem recuperação nenhuma não ganha chave à toa",()=>{
+  const S=freshState(SO_CERTS);
+  const m=S.migrateState({schemaVersion:4,prefeitura:"cfpPlanejar"});
+  assert.equal(m.recuperacao,undefined);
+  assert.equal(m.schemaVersion,5);
 });
