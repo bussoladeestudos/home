@@ -201,18 +201,10 @@ function fazerLogout() {
     <div class="recovery-options">
       <button class="rec-option" id="recOpt-redistribuir" data-action="selectRecovery" data-opt="redistribuir">
         <div class="rec-radio"><div class="rec-radio-dot"></div></div>
-        <div class="rec-option-icon">⚡</div>
+        <div class="rec-option-icon">⚖️</div>
         <div>
-          <div class="rec-option-title" id="recTit-redistribuir">Intensificar os próximos dias</div>
-          <div class="rec-option-desc" id="recDesc-redistribuir">Os tópicos perdidos entram nos próximos dias, um por dia, e a data da prova continua a mesma.</div>
-        </div>
-      </button>
-      <button class="rec-option" id="recOpt-adiar" data-action="selectRecovery" data-opt="adiar">
-        <div class="rec-radio"><div class="rec-radio-dot"></div></div>
-        <div class="rec-option-icon">📅</div>
-        <div>
-          <div class="rec-option-title" id="recTit-adiar">Adiar a data da prova</div>
-          <div class="rec-option-desc" id="recDesc-adiar">A Bússola recalcula a data e redistribui o conteúdo perdido, sem apertar o seu ritmo.</div>
+          <div class="rec-option-title">Redistribuir automaticamente</div>
+          <div class="rec-option-desc">Os tópicos perdidos são diluídos nos próximos dias úteis. O ritmo aumenta levemente até você se equilibrar com o cronograma.</div>
         </div>
       </button>
       <button class="rec-option" id="recOpt-pular" data-action="selectRecovery" data-opt="pular">
@@ -220,7 +212,15 @@ function fazerLogout() {
         <div class="rec-option-icon">➡️</div>
         <div>
           <div class="rec-option-title">Pular e seguir em frente</div>
-          <div class="rec-option-desc" id="recDesc-pular">Os dias são marcados como "pulados" sem punir seu streak. Você continua de hoje sem olhar para trás.</div>
+          <div class="rec-option-desc">Os dias são marcados como "pulados" sem punir seu streak. Você continua de hoje sem olhar para trás.</div>
+        </div>
+      </button>
+      <button class="rec-option" id="recOpt-sabado" data-action="selectRecovery" data-opt="sabado">
+        <div class="rec-radio"><div class="rec-radio-dot"></div></div>
+        <div class="rec-option-icon">⚡</div>
+        <div>
+          <div class="rec-option-title">Mandar para o Retorno Técnico</div>
+          <div class="rec-option-desc">Em um clique, o conteúdo perdido entra na fila de revisão e aparece no próximo Retorno Técnico, onde você avalia e registra o exercício. O dia fica marcado como recuperado no cronograma, sem contar como estudado.</div>
         </div>
       </button>
     </div>
@@ -249,7 +249,7 @@ function fazerLogout() {
   <div class="modal">
     <div class="modal-logo">
       <div class="modal-logo-icon">🧭</div>
-      <div><div class="modal-logo-name">Bússola de Estudos</div><div class="modal-logo-sub">Coach Digital para Certificações</div></div>
+      <div><div class="modal-logo-name">Bússola de Estudos</div><div class="modal-logo-sub">Coach Digital para Prefeituras</div></div>
     </div>
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0;">
       <div class="modal-title" id="modalTitle" style="margin-bottom:0;">Configure seu Cronograma</div>
@@ -279,22 +279,20 @@ function fazerLogout() {
     <div class="form-grid">
       <div class="form-row">
         <label class="form-label">Data de Início</label>
-        <input class="form-input" id="inputInicio" type="date" data-change="recalcularPlano">
+        <input class="form-input" id="inputInicio" type="date">
       </div>
       <div class="form-row">
-        <label class="form-label">Horas por dia <span>(meta)</span></label>
-        <select class="form-input" id="inputHoras" data-change="recalcularPlano"><option value="1">1h</option><option value="1.5">1h30min</option><option value="2">2h</option><option value="2.5">2h30min</option><option value="3">3h</option><option value="3.5">3h30min</option><option value="4">4h</option><option value="4.5">4h30min</option><option value="5">5h</option><option value="5.5">5h30min</option><option value="6">6h</option></select>
+        <label class="form-label">Data da Prova <span id="provaLockSpan" style="color:#2FB374;font-size:.7rem;font-weight:700">🔒 fixada pelo edital</span></label>
+        <input class="form-input" id="inputProva" type="date" readonly style="background:#f8fafc;color:#64748b;cursor:default;" title="Data fixada pelo edital">
       </div>
     </div>
-    <div class="prazo-hint" id="prazoHint" hidden></div>
+    <div class="form-row">
+      <label class="form-label">Horas de estudo por dia <span>(meta)</span></label>
+      <select class="form-input" id="inputHoras"><option value="1">1h</option><option value="1.5">1h30min</option><option value="2">2h</option><option value="2.5">2h30min</option><option value="3">3h</option><option value="3.5">3h30min</option><option value="4">4h</option><option value="4.5">4h30min</option><option value="5">5h</option><option value="5.5">5h30min</option><option value="6">6h</option></select>
+    </div>
     <div class="form-row">
       <label class="form-label">Dias de descanso <span>(marque até 4 dias que NÃO vai estudar)</span></label>
       <div class="dow-grid" id="dowGrid"></div>
-    </div>
-    <div class="form-row">
-      <label class="form-label">Data da Prova <span id="provaLockSpan" style="color:#2FB374;font-size:.7rem;font-weight:700">🔒 fixada pelo edital</span></label>
-      <input class="form-input" id="inputProva" type="date" readonly style="background:#f8fafc;color:#64748b;cursor:default;" title="Data fixada pelo edital" data-change="provaManual">
-      <div class="prova-hint" id="provaHint" hidden></div>
     </div>
     <div class="form-row" id="rowCursinho" style="display:none">
       <label class="form-label" for="selCursinho">Meu cursinho <span>(opcional — libera o link das aulas nos tópicos)</span></label>

@@ -201,18 +201,10 @@ function fazerLogout() {
     <div class="recovery-options">
       <button class="rec-option" id="recOpt-redistribuir" data-action="selectRecovery" data-opt="redistribuir">
         <div class="rec-radio"><div class="rec-radio-dot"></div></div>
-        <div class="rec-option-icon">⚡</div>
+        <div class="rec-option-icon">⚖️</div>
         <div>
-          <div class="rec-option-title" id="recTit-redistribuir">Intensificar os próximos dias</div>
-          <div class="rec-option-desc" id="recDesc-redistribuir">Os tópicos perdidos entram nos próximos dias, um por dia, e a data da prova continua a mesma.</div>
-        </div>
-      </button>
-      <button class="rec-option" id="recOpt-adiar" data-action="selectRecovery" data-opt="adiar">
-        <div class="rec-radio"><div class="rec-radio-dot"></div></div>
-        <div class="rec-option-icon">📅</div>
-        <div>
-          <div class="rec-option-title" id="recTit-adiar">Adiar a data da prova</div>
-          <div class="rec-option-desc" id="recDesc-adiar">A Bússola recalcula a data e redistribui o conteúdo perdido, sem apertar o seu ritmo.</div>
+          <div class="rec-option-title">Redistribuir automaticamente</div>
+          <div class="rec-option-desc">Os tópicos perdidos são diluídos nos próximos dias úteis. O ritmo aumenta levemente até você se equilibrar com o cronograma.</div>
         </div>
       </button>
       <button class="rec-option" id="recOpt-pular" data-action="selectRecovery" data-opt="pular">
@@ -220,7 +212,15 @@ function fazerLogout() {
         <div class="rec-option-icon">➡️</div>
         <div>
           <div class="rec-option-title">Pular e seguir em frente</div>
-          <div class="rec-option-desc" id="recDesc-pular">Os dias são marcados como "pulados" sem punir seu streak. Você continua de hoje sem olhar para trás.</div>
+          <div class="rec-option-desc">Os dias são marcados como "pulados" sem punir seu streak. Você continua de hoje sem olhar para trás.</div>
+        </div>
+      </button>
+      <button class="rec-option" id="recOpt-sabado" data-action="selectRecovery" data-opt="sabado">
+        <div class="rec-radio"><div class="rec-radio-dot"></div></div>
+        <div class="rec-option-icon">⚡</div>
+        <div>
+          <div class="rec-option-title">Mandar para o Retorno Técnico</div>
+          <div class="rec-option-desc">Em um clique, o conteúdo perdido entra na fila de revisão e aparece no próximo Retorno Técnico, onde você avalia e registra o exercício. O dia fica marcado como recuperado no cronograma, sem contar como estudado.</div>
         </div>
       </button>
     </div>
