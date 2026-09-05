@@ -279,22 +279,17 @@ function calcRevisoes(hojeRef){
   const hoje=hojeRef?parseDate(hojeRef):new Date(); hoje.setHours(0,0,0,0);
   const rev7=[], rev30=[];
   Object.entries(STATE.dias).forEach(([k,v])=>{
-    /* Dia RECUPERADO entra na fila de revisão mesmo sem nota. É o dia que o aluno
-       não estudou e mandou para a revisão em vez de pular. Ele não tem percepcao
-       de propósito: sem nota inventada, o conteúdo não conta como coberto no
-       edital nem contamina o domínio por matéria. O que ele precisa é voltar,
-       e é só isso que esta linha garante. */
-    if(!v.percepcao&&!v.recuperado) return;
+    if(!v.percepcao) return;
     const d=parseDate(k); d.setHours(0,0,0,0);
     const diff=Math.round((hoje-d)/86400000);
     const td=getTopicoDiaByKey(k)||{mat:null,top:null};
     const {mat,top}=td;
     if(!mat) return;
     if(diff>=6 && !v.rev7feito){
-      rev7.push({mat,top,key:k,conf:v.percepcao||"",recuperado:!!v.recuperado,diffReal:diff,atrasada:diff>8});
+      rev7.push({mat,top,key:k,conf:v.percepcao,diffReal:diff,atrasada:diff>8});
     }
     if(diff>=29 && !v.rev30feito){
-      rev30.push({mat,top,key:k,conf:v.percepcao||"",recuperado:!!v.recuperado,diffReal:diff,atrasada:diff>31});
+      rev30.push({mat,top,key:k,conf:v.percepcao,diffReal:diff,atrasada:diff>31});
     }
   });
   return {rev7,rev30};

@@ -672,7 +672,7 @@ function reprocessarFaltantes(){
   const novosDias={};
   Object.entries(STATE.dias).forEach(([k,v])=>{
     if(v&&v.percepcao) novosDias[k]={percepcao:v.percepcao,estrelas:v.estrelas};
-    else if(v&&(v.skipped||v.transferido||v.recuperado)) novosDias[k]={skipped:v.skipped,transferido:v.transferido,recuperado:v.recuperado};
+    else if(v&&(v.skipped||v.transferido)) novosDias[k]={skipped:v.skipped,transferido:v.transferido};
   });
   STATE.dias=novosDias;
   STATE.semanaOffset=0;
@@ -1905,7 +1905,7 @@ function buildCoachHtml(prog, conf, ritmo, projecao, totalRev){
     }
     if(matFracas.length>0){
       const lista=matFracas.slice(0,2).map(m=>`<strong>${m.nome}</strong> (domínio ${m.dominio}%, ${m.avaliados} de ${m.totalTop} tópicos)`).join(" e ");
-      p3+=`Domínio baixo do edital em ${lista}. Vale reforçar com exercícios no dia de Retorno Técnico e avançar nos tópicos que faltam. `;
+      p3+=`Domínio baixo do edital em ${lista}. Vale reforçar com exercícios no Sábado Técnico e avançar nos tópicos que faltam. `;
     }
     if(!matAtrasadas.length&&!matFracas.length&&matOk.length>0){
       p3=`Todas as matérias estudadas estão no ritmo. Continue avançando no conteúdo sistematicamente.`;
@@ -1923,7 +1923,7 @@ function buildCoachHtml(prog, conf, ritmo, projecao, totalRev){
       p4=`💡 Recomendo dedicar a sessão de hoje a <strong>${top.nome}</strong> (${top.peso}% do edital). Avance ${Math.min(5,top.peso)}% desta semana para reequilibrar o cronograma.`;
     } else if(matFracas.length>0){
       const top=matFracas[0];
-      p4=`💡 Use o próximo <strong>Retorno Técnico</strong> para reforçar <strong>${top.nome}</strong> com exercícios práticos. Meta: elevar o domínio de ${top.dominio}% para 60%+.`;
+      p4=`💡 Use o próximo <strong>Sábado Técnico</strong> para reforçar <strong>${top.nome}</strong> com exercícios práticos. Meta: elevar o domínio de ${top.dominio}% para 60%+.`;
     } else if(diasRestantes!==null&&diasRestantes<30){
       p4=`🏁 Você está na reta final. Com ${diasRestantes} dias, foque em <strong>simulados cronometrados</strong> e revisões dos tópicos de maior peso.`;
     } else if(projecao!==null&&projecao<0){
@@ -2871,7 +2871,7 @@ function isSemanaCompleta(seg){
     if(ciclo===-1) continue;
     const est=STATE.dias[key]||{};
     if(ciclo>=0&&ciclo<=4){
-      if(!est.percepcao&&!est.skipped&&!est.transferido&&!est.recuperado) return false;
+      if(!est.percepcao&&!est.skipped&&!est.transferido) return false;
     } else if(ciclo===5){
       // RT: pendências = itens estudados sem confiança alta
       const pendentes=fracos.filter(f=>STATE.dias[f.key]?.percepcao&&STATE.dias[f.key].percepcao!=="alta");
@@ -2915,7 +2915,6 @@ function renderBarraSemanal(seg){
       if(perc==="alta"){dotClass="done-high";dotContent="🏆";donesCount++;}
       else if(perc==="media"){dotClass="done-mid";dotContent="📚";donesCount++;}
       else if(perc==="baixa"){dotClass="done-low";dotContent="⚠️";donesCount++;}
-      else if(est.recuperado){dotClass="special";dotContent="🔁";}
       else if(est.transferido){dotClass="special";dotContent="📦";}
       else if(cicloSpb===5){dotClass="special";dotContent="⚡";}
       else if(cicloSpb===6){dotClass="special";dotContent="📝";}
@@ -3326,7 +3325,7 @@ function renderSemana(){
       else if(STATE.inicio&&key===STATE.inicio){ html+=renderDiaNormal(dia,i,key,est,isHoje,isPast,nomes[i]); }
       else if(_ciclo===-1) html+=renderDiaLivre(dia,key,isHoje);
       else if(_ciclo===6) html+=renderDiaDomingo(dia,key,est,isHoje,isPast,fraquezas);
-      else if(_ciclo===5) html+=renderDiaRetornoTecnico(dia,key,est,isHoje,isPast,fraquezas);
+      else if(_ciclo===5) html+=renderDiaSabado(dia,key,est,isHoje,isPast,fraquezas);
       else html+=renderDiaNormal(dia,i,key,est,isHoje,isPast,nomes[i]);
     }
   }
@@ -3349,7 +3348,7 @@ function getTopicoDia(idx){
    STATE.extrasPorDia = { "YYYY-MM-DD": [{mat,top,peso}] }
    Tópicos de dias perdidos são diluídos (máx. 1 extra por dia) nos
    próximos dias de conteúdo. O que não couber até a prova vai para
-   o próximo dia de Retorno Técnico. */
+   o próximo Sábado Técnico. */
 
 function redistribuirTopicos(missedKeys){
   const topicos=[];
@@ -3373,9 +3372,9 @@ function redistribuirTopicos(missedKeys){
   if(topicos.length){
     // Objeto, e nao string: preserva mat/top/key/topIdx para o sabado poder
     // renderizar estrelas e gravar a avaliacao no dia de origem.
-    STATE.recuperacao=[...(STATE.recuperacao||[]),
+    STATE.sabadoRecuperacao=[...(STATE.sabadoRecuperacao||[]),
       ...topicos.map(t=>({mat:t.mat,top:t.top,key:t.key,topIdx:t.topIdx}))];
-    STATE.recuperacaoData=fmt(getProximoRetornoTecnico());
+    STATE.sabadoRecuperacaoData=fmt(getProximoSabado());
   }
   return agendados;
 }
@@ -3789,26 +3788,6 @@ function renderDiaNormal(dia,idx,key,est,isHoje,isPast,nomeDia){
       <div style="padding:18px 16px;text-align:center;color:#cbd5e1;font-size:.82rem;">—</div>
     </div>`;
   }
-  /* Dia recuperado: o conteúdo NÃO recebeu nota. O dia só foi marcado para que
-     o motor mande o tópico para a fila de revisão e ele reapareça no Retorno
-     Técnico, onde o aluno dá a nota de verdade. Cor própria para o aluno
-     reconhecer de longe que aquele dia não foi estudado, foi recuperado. */
-  if(est.recuperado){
-    const topsR=getTopicosDiaBase(key);
-    const listaR=topsR.length
-      ?topsR.map(t=>`<div class="dia-topico" style="color:#8A5A2B;margin-bottom:2px">${esc(t.mat)}: ${esc(t.top)}</div>`).join("")
-      :`<div class="dia-topico" style="color:var(--gray-400)">Sem tópico neste dia.</div>`;
-    return`<div class="dia-card dia-recuperado" id="card-${key}">
-      <div class="dia-header">
-        <div class="dia-header-left"><div class="dia-label">${nomeDia}</div><div class="dia-date">${dia.toLocaleDateString("pt-BR",{day:"2-digit",month:"2-digit"})}</div></div>
-        <span class="dia-badge badge-recuperado">🔁 Recuperado</span>
-      </div>
-      <div class="dia-body">
-        ${listaR}
-        <div class="rec-nota">Não estudado neste dia. O conteúdo entrou na fila de revisão e aparece no próximo Retorno Técnico, onde você avalia e registra o exercício.</div>
-      </div>
-    </div>`;
-  }
   // Dia com conteúdo transferido pela recuperação: exibe riscado, sem interação
   if(est.transferido&&!est.percepcao){
     const topsT=getTopicosDiaBase(key);
@@ -3899,10 +3878,6 @@ function toggleSabMais(key){
   if(btn) btn.textContent=aberto?`▾ Ver todos os ${btn.dataset.n} tópicos`:"▴ Mostrar menos";
   setTimeout(()=>repaintAllStars(),0);
 }
-/* Prefixo "sab" nos ids de DOM e nas classes de CSS é herança do nome antigo
-   deste dia, que era chamado de Sábado Técnico. O dia é o RETORNO TÉCNICO, a
-   posição 5 do ciclo, e não cai necessariamente no sábado. Os identificadores
-   ficaram para não arrastar o CSS junto; o que o aluno lê já foi corrigido. */
 function _sabId(key,ti){ return "sab-stars-"+key+(ti!=null&&ti!==""?"-"+ti:""); }
 function sabStarHTML(key,n,source,ti,sabKey){
   const nivel=starToNivel(n);
@@ -3914,7 +3889,7 @@ function sabStarHTML(key,n,source,ti,sabKey){
 }
 function setSabStar(key,n,source,ti,sabKey){
   /* Reavaliar no Retorno Técnico marca o PRÓPRIO dia do RT como cumprido —
-     as notas vão para os dias dos tópicos, então sem isso o Retorno Técnico ficava
+     as notas vão para os dias dos tópicos, então sem isso o sábado ficava
      eternamente "sem registro" no calendário de consistência. */
   if(sabKey){
     if(!STATE.dias[sabKey]) STATE.dias[sabKey]={};
@@ -3944,12 +3919,12 @@ function unhoverSabStar(key,currentN,source,ti){
   container.querySelectorAll(".sab-star").forEach(btn=>{ const bn=parseInt(btn.dataset.n); btn.className="sab-star "+(bn<=n&&nivel?(nivel==="alta"?"lit-high":nivel==="media"?"lit-mid":"lit-low"):""); });
 }
 
-function renderDiaRetornoTecnico(dia,key,est,isHoje,isPast,fraquezas){
+function renderDiaSabado(dia,key,est,isHoje,isPast,fraquezas){
   const bc=isHoje?"badge-today":"badge-special";
   const bl=isHoje?"📍 Hoje":"⚡ Técnico";
   const cs=isHoje?"state-today":"";
   const sabKey=fmt(dia);
-  const temRecuperacao=STATE.recuperacaoData===sabKey&&STATE.recuperacao?.length>0;
+  const temRecuperacao=STATE.sabadoRecuperacaoData===sabKey&&STATE.sabadoRecuperacao?.length>0;
 
   // Determina itens a exibir — agora fraquezas são objetos {key,mat,top,perc,text}
   const todosItens=Array.isArray(fraquezas)&&fraquezas.length&&typeof fraquezas[0]==="object" ? fraquezas : [];
@@ -3958,7 +3933,7 @@ function renderDiaRetornoTecnico(dia,key,est,isHoje,isPast,fraquezas){
   let itens="";
   if(temRecuperacao){
     itens=`<div style="font-size:.72rem;font-weight:700;color:var(--red);margin-bottom:.4rem">🔴 Recuperação de dias perdidos:</div>`;
-    STATE.recuperacao.forEach(f=>{
+    STATE.sabadoRecuperacao.forEach(f=>{
       // Compatibilidade: versoes antigas gravavam string "Materia: Topico".
       const obj=(typeof f==="string")?{mat:"",top:f,key:null,topIdx:null}:f;
       const rotulo=obj.mat?`${obj.mat}: ${obj.top}`:obj.top;
@@ -3976,7 +3951,7 @@ function renderDiaRetornoTecnico(dia,key,est,isHoje,isPast,fraquezas){
         itens+=`<div class="sab-item-row">
           <div style="display:flex;align-items:center;gap:6px">
             <div class="sabado-dot" style="background:var(--red-viv);flex-shrink:0"></div>
-            <span style="font-size:.72rem;font-weight:600;color:var(--gray-700);flex:1;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden" title="${esc(rotulo)}">${esc(rotulo)}</span>
+            <span style="font-size:.72rem;font-weight:600;color:var(--gray-700);flex:1;line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${esc(rotulo)}">${esc(rotulo)}</span>
           </div>
           <div style="display:flex;align-items:center;gap:6px;padding-left:13px">
             <div class="sab-stars" id="${_sabId(obj.key,isTop?obj.topIdx:null)}">${stHtml}</div>
@@ -4016,7 +3991,7 @@ function renderDiaRetornoTecnico(dia,key,est,isHoje,isPast,fraquezas){
         _sabRows.push(`<div class="sab-item-row">
           <div style="display:flex;align-items:center;gap:6px">
             <div class="sabado-dot" style="flex-shrink:0;${dotStyle}"></div>
-            <span style="font-size:.72rem;font-weight:600;color:var(--gray-700);flex:1;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden" title="${esc(f.text)}">${esc(f.text)}</span>
+            <span style="font-size:.72rem;font-weight:600;color:var(--gray-700);flex:1;line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${esc(f.text)}">${esc(f.text)}</span>
           </div>
           <div style="display:flex;align-items:center;gap:6px;padding-left:13px">
             <div class="sab-stars" id="${_sabId(f.key,isTop?f.topIdx:null)}">${stHtml}</div>
@@ -4330,8 +4305,8 @@ let _recoveryOption = null;
 let _missedDays = [];
 
 /* Próximo dia de Retorno Técnico (posição 5 do ciclo 5+1+1) a partir de hoje.
-   Fallback: próximo sábado do calendário, só se nenhum RT existir no horizonte. */
-function getProximoRetornoTecnico(){
+   Fallback: próximo sábado do calendário, se nenhum RT existir no horizonte. */
+function getProximoSabado(){
   const d=new Date(); d.setHours(0,0,0,0);
   for(let i=0;i<120;i++){
     if(getCicloPos(fmt(d))===5) return d;
@@ -4352,7 +4327,7 @@ function getMissedDays(hojeRef){
     if(isDiaLivre(dow)) continue;
     const k=fmt(d);
     const est=STATE.dias[k]||{};
-    if(!est.percepcao&&!est.skipped&&!est.transferido&&!est.recuperado) missed.push(k);
+    if(!est.percepcao&&!est.skipped&&!est.transferido) missed.push(k);
   }
   return missed;
 }
@@ -4365,7 +4340,7 @@ function checkRecovery(){
   _missedDays=missed;
   _recoveryOption=null;
   document.getElementById("recoveryMissedBar").innerHTML=
-    `⚠️ <strong>${missed.length} dia${missed.length>1?"s":""} ${missed.length>1?"úteis":"útil"} sem registro</strong> (${fmtDateRange(missed)})`;
+    `⚠️ <strong>${missed.length} dia${missed.length>1?"s":""} útil${missed.length>1?"":"is"} sem registro</strong> (${fmtDateRange(missed)})`;
   // Reset visual das opções
   ["redistribuir","pular","sabado"].forEach(o=>{
     document.getElementById("recOpt-"+o).classList.remove("selected");
@@ -4403,31 +4378,13 @@ function applyRecovery(){
   } else if(_recoveryOption==="pular"){
     _missedDays.forEach(k=>{ if(!STATE.dias[k]) STATE.dias[k]={}; STATE.dias[k].skipped=true; });
   } else if(_recoveryOption==="sabado"){
-    /* MANDAR PARA O RETORNO TÉCNICO, em um clique.
-       O dia recebe a marca `recuperado` e NÃO recebe nota. É a diferença que
-       importa: o motor passa a puxar aquele conteúdo para as revisões de 7 e 30
-       dias (engine.calcRevisoes trata `recuperado` como elegível), mas nada é
-       contado como estudado. A cobertura do edital e o domínio por matéria leem
-       `percepcao`, que aqui não existe, então nenhum número mente.
-       Os tópicos também vão para o card do Retorno Técnico com o vínculo de
-       origem, e é lá que o aluno dá a nota de verdade quando estudar. */
-    const itens=[];
-    _missedDays.forEach(k=>{
-      const tops=getTopicosDiaBase(k);
-      if(!tops.length) return;
-      if(!STATE.dias[k]) STATE.dias[k]={};
-      STATE.dias[k].recuperado=true;
-      tops.forEach((t,ti)=>{
-        if(t) itens.push({mat:t.mat,top:t.top,key:k,topIdx:tops.length>1?ti:null});
-      });
-    });
-    if(itens.length){
-      /* Objeto com `key` e `topIdx`, e não texto solto. Era isto que faltava: sem
-         o vínculo, o card do Retorno Técnico caía no ramo de compatibilidade e
-         desenhava o item sem estrela e sem onde registrar o exercício. */
-      STATE.recuperacao=[...(STATE.recuperacao||[]),...itens];
-      STATE.recuperacaoData=fmt(getProximoRetornoTecnico());
+    const tops=[];
+    _missedDays.forEach(k=>{getTopicosDiaBase(k).forEach(t=>{ if(t) tops.push(t); });});
+    if(tops.length){
+      STATE.sabadoRecuperacao=[...(STATE.sabadoRecuperacao||[]),...tops.map(t=>`${t.mat}: ${t.top}`)];
+      STATE.sabadoRecuperacaoData=fmt(getProximoSabado());
     }
+    _missedDays.forEach(k=>{ if(!STATE.dias[k]) STATE.dias[k]={}; STATE.dias[k].transferido=true; });
   }
   STATE.recoveryShownDate=fmt(new Date());
   save();

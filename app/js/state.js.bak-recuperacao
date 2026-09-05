@@ -6,7 +6,7 @@
    ════════════════════════════════════════════════════════════════ */
 
 const STATE_STORAGE_KEY="cronos_v4";
-const STATE_SCHEMA_VERSION=5;
+const STATE_SCHEMA_VERSION=4;
 
 /* Catálogo de certificações — carregado de editais.js (window.EDITAIS_DATA) */
 let EDITAIS=(typeof window!=="undefined"&&window.EDITAIS_DATA)||{};
@@ -64,17 +64,6 @@ function migrateState(raw){
        garantir o container. Nada a converter de versão anterior. */
     s.questoes=(s.questoes&&typeof s.questoes==="object")?s.questoes:{};
     s.schemaVersion=4;
-  }
-  if(v<5){
-    /* 05/09/2026: o dia de recuperação nunca foi o sábado do calendário. Ele é o
-       RETORNO TÉCNICO, a posição 5 do ciclo 5+1+1, que cai em qualquer dia da
-       semana conforme a data de início e os dias de descanso do aluno. O nome
-       antigo mentia e confundia o dono do produto. As chaves foram renomeadas e
-       o valor de quem já tinha recuperação pendente é preservado. */
-    if(s.sabadoRecuperacao!==undefined&&s.recuperacao===undefined) s.recuperacao=s.sabadoRecuperacao;
-    if(s.sabadoRecuperacaoData!==undefined&&s.recuperacaoData===undefined) s.recuperacaoData=s.sabadoRecuperacaoData;
-    delete s.sabadoRecuperacao; delete s.sabadoRecuperacaoData;
-    s.schemaVersion=5;
   }
   return s;
 }
