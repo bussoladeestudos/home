@@ -6,7 +6,7 @@
    ════════════════════════════════════════════════════════════════ */
 
 const STATE_STORAGE_KEY="cronos_v4";
-const STATE_SCHEMA_VERSION=7;
+const STATE_SCHEMA_VERSION=6;
 
 /* Catálogo de certificações — carregado de editais.js (window.EDITAIS_DATA) */
 let EDITAIS=(typeof window!=="undefined"&&window.EDITAIS_DATA)||{};
@@ -26,7 +26,6 @@ let STATE = {
   notasSemana:{}, // anotações livres por semana (chave = data da segunda-feira)
   cursinho:"",    // cursinho contratado pelo aluno (id em cursos.js) — libera o link das aulas
   questoes:{},    // histórico por questão: { <id>: {n, ok, ultima, ultimaOpcao, ultimaCerta} }
-  exDias:{},      // respostas por dia: { "AAAA-MM-DD": {n, ok} } — base do Painel de Exercícios
 };
 
 /* ── MIGRAÇÃO DE SCHEMA ──
@@ -64,7 +63,6 @@ function migrateState(raw){
        `id` da questão, que é permanente por regra do formato, então basta
        garantir o container. Nada a converter de versão anterior. */
     s.questoes=(s.questoes&&typeof s.questoes==="object")?s.questoes:{};
-    s.exDias=(s.exDias&&typeof s.exDias==="object")?s.exDias:{};
     s.schemaVersion=4;
   }
   if(v<5){
@@ -109,31 +107,6 @@ function migrateState(raw){
     }
     if(!s.recuperacao||!s.recuperacao.length) delete s.recuperacaoData;
     s.schemaVersion=6;
-  }
-  if(v<7){
-    /* 05/09/2026: o Painel de Exercícios precisa de quantas questões o aluno
-       respondeu em CADA dia, e o histórico por questão só guarda a última data
-       de cada uma. Nasce STATE.exDias, alimentado por registrarResposta.
-
-       Para quem já respondeu antes desta versão, semeamos o acumulado a partir
-       do que existe. O total fica EXATO (a soma de exDias bate com a soma do
-       histórico); só a distribuição por dia é aproximada, porque todas as
-       tentativas de uma questão entram na data da última. É a melhor
-       reconstrução possível com o dado que foi guardado, e o painel prefere um
-       total certo com dias aproximados a um painel vazio. */
-    if(!s.exDias||typeof s.exDias!=="object"){
-      const acc={};
-      const h=(s.questoes&&typeof s.questoes==="object")?s.questoes:{};
-      Object.keys(h).forEach(function(id){
-        const r=h[id]||{};
-        if(!r.ultima||!r.n) return;
-        const d=acc[r.ultima]||{n:0,ok:0};
-        d.n+=r.n; d.ok+=(r.ok||0);
-        acc[r.ultima]=d;
-      });
-      s.exDias=acc;
-    }
-    s.schemaVersion=7;
   }
   return s;
 }

@@ -943,16 +943,6 @@ function _hist(){
   return STATE.questoes;
 }
 function statusQuestao(id){ return _hist()[id]||null; }
-
-/* Acumulado por DIA das respostas de exercicio: { "AAAA-MM-DD": {n, ok} }.
-   O historico por questao (STATE.questoes) guarda so a ULTIMA data de cada uma,
-   entao ele nao responde "quantas questoes por dia" nem "quanto acertei nos
-   ultimos 7 dias". Esta e a base do Painel de Exercicios do dashboard.
-   E um agregado minusculo: uma linha por dia, e nao uma por resposta. */
-function _exDias(){
-  if(!STATE.exDias||typeof STATE.exDias!=="object") STATE.exDias={};
-  return STATE.exDias;
-}
 function registrarResposta(id,opcao,acertou,hojeRef){
   if(!id) return null;
   const h=_hist();
@@ -961,80 +951,9 @@ function registrarResposta(id,opcao,acertou,hojeRef){
   if(acertou) r.ok=(r.ok||0)+1;
   r.ultimaOpcao=opcao;
   r.ultimaCerta=!!acertou;
-  const dia=hojeRef||fmt(new Date());
-  r.ultima=dia;
+  r.ultima=hojeRef||fmt(new Date());
   h[id]=r;
-  const d=_exDias();
-  const acc=d[dia]||{n:0,ok:0};
-  acc.n=(acc.n||0)+1;
-  if(acertou) acc.ok=(acc.ok||0)+1;
-  d[dia]=acc;
   return r;
-}
-
-/* PAINEL DE EXERCICIOS do dashboard. Compila STATE.exDias, que e alimentado
-   pelo menu Exercicios a cada resposta.
-
-   periodo: "hoje" | "7" | "30" | "sempre".
-   O anel de desempenho e os contadores respeitam o periodo. A media diaria e a
-   variacao sao SEMPRE de 7 dias contra os 7 anteriores, porque comparar uma
-   janela movel com ela mesma nao diz nada; o rotulo na tela diz "(7 dias)".
-   A serie de barras acompanha o periodo: 8 dias nos recortes curtos, 30 nos
-   longos, para a barra nao virar risco de cabelo.
-
-   Devolve sempre um objeto, mesmo sem nenhuma resposta: a tela decide se mostra
-   o vazio, o engine nao devolve null para o caso normal de aluno novo. */
-function calcExercicios(periodo,hojeRef){
-  const dias=(STATE.exDias&&typeof STATE.exDias==="object")?STATE.exDias:{};
-  const hoje=hojeRef?parseDate(hojeRef):new Date();
-  hoje.setHours(0,0,0,0);
-  const p=periodo||"sempre";
-
-  function janela(n){                       // as n datas ate hoje, inclusive
-    const out=[];
-    for(let i=n-1;i>=0;i--){
-      const d=new Date(hoje); d.setDate(d.getDate()-i);
-      out.push(fmt(d));
-    }
-    return out;
-  }
-  function soma(chaves){
-    let n=0, ok=0;
-    chaves.forEach(function(k){ const r=dias[k]; if(r){ n+=(r.n||0); ok+=(r.ok||0); } });
-    return {n:n,ok:ok};
-  }
-
-  const chavesPeriodo = p==="hoje" ? [fmt(hoje)]
-                      : p==="7"    ? janela(7)
-                      : p==="30"   ? janela(30)
-                      : Object.keys(dias).sort();
-  const tot=soma(chavesPeriodo);
-  const erros=tot.n-tot.ok;
-  const pct=tot.n?Math.round((tot.ok/tot.n)*100):0;
-
-  const nBarras=(p==="30"||p==="sempre")?30:8;
-  const serie=janela(nBarras).map(function(k){
-    const r=dias[k]||{n:0,ok:0};
-    const d=parseDate(k);
-    return {key:k,n:r.n||0,ok:r.ok||0,
-            rotulo:d.toLocaleDateString("pt-BR",{day:"2-digit",month:"2-digit"}),
-            dow:["Dom","Seg","Ter","Qua","Qui","Sex","Sáb"][d.getDay()],
-            hoje:k===fmt(hoje)};
-  });
-
-  const s7=soma(janela(7));
-  const ant=[];
-  for(let i=13;i>=7;i--){ const d=new Date(hoje); d.setDate(d.getDate()-i); ant.push(fmt(d)); }
-  const s14=soma(ant);
-  const mediaDiaria=Math.round(s7.n/7);
-  const variacao=s14.n?Math.round(((s7.n-s14.n)/s14.n)*100):null;
-
-  let totalGeral=0;
-  Object.keys(dias).forEach(function(k){ totalGeral+=(dias[k].n||0); });
-
-  return {periodo:p,total:tot.n,acertos:tot.ok,erros:erros,pct:pct,
-          serie:serie,mediaDiaria:mediaDiaria,variacao:variacao,
-          totalGeral:totalGeral,temDados:totalGeral>0};
 }
 
 /* Seleção de questões para o menu de Exercícios, para as revisões e para
@@ -1300,7 +1219,7 @@ if(typeof module!=="undefined"&&module.exports){
     _densityFor,aggregateEstrelas,calcStreaks,calcHeatmapConsistencia,calcRitmoSemanal,calcMarcos,MARCOS_SEQUENCIA,calcRumo,RUMO_TAGS,calcMesConsistencia,calcMedalhas,PATENTES,
     calcDominio,DOMINIO_MIN_AMOSTRA,
     getAulas,getAulaLink,getProvedores,getProvedor,contarTopicosComAula,_normTexto,
-    getQuestoes,temQuestoes,contarQuestoes,listarQuestoes,statusQuestao,registrarResposta,calcExercicios,
+    getQuestoes,temQuestoes,contarQuestoes,listarQuestoes,statusQuestao,registrarResposta,
     indexarAgendaTopicos,
     getConteudo,temConteudo,contarTopicosComConteudo};
 }

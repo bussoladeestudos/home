@@ -55,7 +55,6 @@ const ACTIONS={
   selecionarGrupo:d=>selecionarGrupo(d.grupo,true),
   toggleDow:d=>toggleDow(+d.i),
   usarPrazoSugerido:()=>usarPrazoSugerido(),
-  exSetPeriodo:d=>exSetPeriodo(d.p),
   limparFilaRecuperacao:()=>limparFilaRecuperacao(),
   iniciarBussola:()=>iniciarBússola(),
   marcarTreinoFeito:d=>marcarTreinoFeito(d.key),
@@ -1464,7 +1463,6 @@ function renderDashboard(){
   // Coach
   renderCoach(prog, conf, ritmo, projecao, totalRev);
   renderHabito();
-  renderPainelExercicios();
   renderBussola(prog);
   renderMedalhas();
   setTimeout(checarPopupSegunda,600);
@@ -1495,7 +1493,7 @@ function _blocoGamificacao(r){
   const linha=!r.sequencia
     ? "Comece hoje: um dia registrado já inicia sua sequência."
     : batendo
-      ? `🏆 <strong>Seu melhor momento!</strong> ${r.sequencia} dia${r.sequencia!==1?"s":""} seguidos, nunca chegou tão longe.`
+      ? `🏆 <strong>Seu melhor momento!</strong> ${r.sequencia} dia${r.sequencia!==1?"s":""} seguidos — nunca chegou tão longe.`
       : `Faltam <strong>${alvo-r.sequencia+1} dia${alvo-r.sequencia+1!==1?"s":""}</strong> para bater seu recorde de ${alvo}.`;
   const medalhas=mk.lista.map(function(m){
     const ok=mk.conquistados.indexOf(m)>=0;
@@ -1753,164 +1751,33 @@ function renderMedalhas(){
     ${prox}
   </div>`;
 }
-/* ── PAINEL DE EXERCÍCIOS ──────────────────────────────────────────
-   Compila o que o menu Exercícios registra. Duas leituras lado a lado:
-   QUANTO O ALUNO ACERTA (o anel, com o percentual no centro) e QUANTO ELE
-   TREINA (as barras por dia). Uma sem a outra engana: 90% de acerto em cinco
-   questões não é domínio, e 200 questões por dia com 40% de acerto é esforço
-   no lugar errado.
-
-   O anel é um medidor de uma medida só, e não um gráfico de pizza: o número
-   grande no meio é a informação, o anel é a régua. Por isso são dois arcos e
-   não seis fatias.
-
-   Verde e vermelho aqui não são cores de série, são estado: certo e errado. É
-   a mesma escala das estrelas, do mapa de calor e da cobertura, então o aluno
-   já sabe lê-la sem legenda nova. */
-let _exPeriodo="7";
-
-function exSetPeriodo(p){ _exPeriodo=p||"7"; renderPainelExercicios(); }
-
-function _anelDesempenho(pct,total){
-  /* O arco é SEMPRE verde e a trilha SEMPRE vermelha, porque arco e trilha são
-     acertos e erros, e não a nota. Quem julga é o número no meio, que troca de
-     cor pela faixa (70% é o corte da CPA). Pintar o arco de vermelho num aluno
-     de 40% deixaria a legenda "verde = acertos" mentindo em cima do desenho. */
-  const R=52, C=2*Math.PI*R;
-  const acerto=total?(pct/100)*C:0;
-  const faixa=pct>=70?"bom":pct>=50?"medio":"ruim";
-  return `<svg class="pex-anel" viewBox="0 0 130 130" role="img"
-      aria-label="${total?pct+"% de acertos em "+total+" questões":"sem questões respondidas"}">
-    <circle cx="65" cy="65" r="${R}" fill="none" stroke="${total?"var(--red-viv)":"var(--gray-200)"}" stroke-width="15"/>
-    ${total?`<circle cx="65" cy="65" r="${R}" fill="none" stroke="var(--green-viv)" stroke-width="15"
-      stroke-dasharray="${acerto.toFixed(1)} ${(C-acerto).toFixed(1)}"
-      transform="rotate(-90 65 65)"/>`:""}
-    <text x="65" y="62" class="pex-anel-num ${faixa}" text-anchor="middle">${total?pct+"%":"—"}</text>
-    <text x="65" y="79" class="pex-anel-lbl" text-anchor="middle">de acertos</text>
-  </svg>`;
-}
-
-function _barrasPorDia(serie){
-  /* Marca fina: a barra tem largura máxima e fica centrada na coluna, em vez de
-     esticar até encostar na vizinha. Bloco grosso e saturado lê alto e cansa;
-     a informação aqui é a ALTURA, e não a área pintada. */
-  const max=Math.max(1,...serie.map(d=>d.n));
-  const compacto=serie.length>12;
-  return `<div class="pex-barras${compacto?" compacto":""}" role="img"
-      aria-label="Questões respondidas por dia nos últimos ${serie.length} dias">
-    ${serie.map(d=>{
-      const h=Math.round((d.n/max)*100);
-      const t=`${d.n} ${d.n===1?"questão":"questões"} em ${d.rotulo}${d.n?` · ${Math.round((d.ok/d.n)*100)}% de acerto`:""}`;
-      return `<div class="pex-col" title="${esc(t)}">
-        <div class="pex-col-n">${d.n||""}</div>
-        <div class="pex-col-trilho"><div class="pex-col-barra${d.hoje?" hoje":""}" style="height:${d.n?Math.max(h,2):0}%"></div></div>
-        <div class="pex-col-dia">${compacto?d.rotulo.slice(0,2):d.rotulo}</div>
-        ${compacto?"":`<div class="pex-col-dow">${d.hoje?"Hoje":d.dow}</div>`}
-      </div>`;
-    }).join("")}
-  </div>`;
-}
-
-function renderPainelExercicios(){
-  const el=document.getElementById("painelExercicios");
-  if(!el) return;
-  if(!STATE.prefeitura){ el.innerHTML=""; return; }
-  let r=null; try{ r=calcExercicios(_exPeriodo); }catch(e){}
-  if(!r) { el.innerHTML=""; return; }
-
-  if(!r.temDados){
-    el.innerHTML=`<div class="painel-sec">
-      <div class="painel-sec-head">
-        <span class="painel-sec-tit">🎯 Painel de Exercícios</span>
-        <span class="painel-sec-sub">acompanhe seu desempenho e a evolução ao longo do tempo</span>
-      </div>
-      <div class="pex-vazio">
-        <div class="pex-vazio-ic">✏️</div>
-        <div class="pex-vazio-tit">Você ainda não respondeu nenhuma questão</div>
-        <div class="pex-vazio-txt">Resolva exercícios e este painel passa a mostrar seu percentual de acertos, o ritmo diário e a evolução por semana.</div>
-        <button type="button" class="pex-vazio-btn" data-action="navTo" data-page="exercicios">Ir para os Exercícios →</button>
-      </div>
-    </div>`;
-    return;
-  }
-
-  const chip=(v,t)=>`<button type="button" class="pex-chip${_exPeriodo===v?" on":""}" data-action="exSetPeriodo" data-p="${v}">${t}</button>`;
-  const varTxt=r.variacao===null
-    ? `<span class="pex-var neutro">sem semana anterior para comparar</span>`
-    : `<span class="pex-var ${r.variacao>=0?"sobe":"desce"}">${r.variacao>=0?"↑":"↓"} ${Math.abs(r.variacao)}% em relação à semana anterior</span>`;
-  const rotuloPeriodo={hoje:"hoje",7:"nos últimos 7 dias",30:"nos últimos 30 dias",sempre:"desde o início"}[_exPeriodo];
-
-  el.innerHTML=`<div class="painel-sec">
-    <div class="painel-sec-head">
-      <span class="painel-sec-tit">🎯 Painel de Exercícios</span>
-      <span class="painel-sec-sub">acompanhe seu desempenho e a evolução ao longo do tempo</span>
-    </div>
-    <div class="pex-grid">
-      <div class="pex-card">
-        <div class="pex-card-head">
-          <span class="pex-card-tit">Desempenho geral</span>
-          <span class="pex-card-sub">percentual de acertos ${rotuloPeriodo}</span>
-        </div>
-        <div class="pex-anel-wrap">
-          <div class="pex-leg">
-            <div class="pex-leg-top"><span class="pex-dot verde"></span><span class="pex-leg-pct">${r.pct}%</span></div>
-            <div class="pex-leg-t">Acertos</div>
-            <div class="pex-leg-q">${r.acertos} ${r.acertos===1?"questão":"questões"}</div>
-          </div>
-          ${_anelDesempenho(r.pct,r.total)}
-          <div class="pex-leg dir">
-            <div class="pex-leg-top"><span class="pex-dot vermelho"></span><span class="pex-leg-pct erro">${100-r.pct}%</span></div>
-            <div class="pex-leg-t">Erros</div>
-            <div class="pex-leg-q">${r.erros} ${r.erros===1?"questão":"questões"}</div>
-          </div>
-        </div>
-        <div class="pex-chips">${chip("hoje","Hoje")}${chip("7","7 dias")}${chip("30","30 dias")}${chip("sempre","Sempre")}</div>
-      </div>
-      <div class="pex-card">
-        <div class="pex-card-head">
-          <span class="pex-card-tit">Questões respondidas por dia</span>
-          <span class="pex-card-sub">últimos ${r.serie.length} dias</span>
-        </div>
-        ${_barrasPorDia(r.serie)}
-        <div class="pex-rodape">
-          <span class="pex-media"><strong>${r.mediaDiaria}</strong> ${r.mediaDiaria===1?"questão":"questões"} por dia, média dos últimos 7 dias</span>
-          ${varTxt}
-        </div>
-      </div>
-    </div>
-  </div>`;
-}
-
 function renderHabito(){
-  /* Os três cards do hábito vivem em contêineres separados desde 05/09/2026:
-     "Quando você estuda" fica ao lado da Aderência, e Consistência e Desafios
-     descem para a segunda linha do Painel de Consistência. */
-  const elR=document.getElementById("habRitmo");
-  const elM=document.getElementById("habMes");
-  const elD=document.getElementById("habDesafios");
-  if(!elR||!elM||!elD) return;
-  if(!STATE.inicio){ elR.innerHTML=elM.innerHTML=elD.innerHTML=""; return; }
+  const el=document.getElementById("dashHabito");
+  if(!el) return;
+  if(!STATE.inicio){ el.innerHTML=""; return; }
   const semanas=window.innerWidth<=480?8:12;
   const hm=calcHeatmapConsistencia(semanas);
   const mc=calcMesConsistencia(_habMesOffset);
   const rt=calcRitmoSemanal();
   const r=hm.resumo;
-  elR.innerHTML=`<div class="hab-card">
+  el.innerHTML=`<div class="hab-stack">
+    <div class="hab-card">
       <div class="hab-head"><span class="hab-tit">📊 Quando você estuda</span><span class="hab-sub">distribuição dos seus registros</span></div>
       ${_htmlRitmo(rt)}
       <div class="rt-insight">${_insightRitmo(rt)}</div>
-    </div>`;
-  elM.innerHTML=`<div class="hab-card">
+    </div>
+    <div class="hab-card">
       <div class="hab-head"><span class="hab-tit">🔥 Consistência</span><span class="hab-sub">seu ritmo no mês</span></div>
       <div class="cm-layout">
         <div class="cm-cal">${_htmlMes(mc)}</div>
         <div class="cm-lado">${_htmlMesResumo(mc,r)}</div>
       </div>
-    </div>`;
-  elD.innerHTML=`<div class="hab-card gam">
+    </div>
+    <div class="hab-card">
       <div class="hab-head"><span class="hab-tit">🏅 Desafios</span><span class="hab-sub">sequência e marcas</span></div>
       ${_blocoGamificacao(r)}
-    </div>`;
+    </div>
+  </div>`;
   _celebrarMarco(r.sequencia);
 }
 function renderCoach(prog, conf, ritmo, projecao, totalRev){
