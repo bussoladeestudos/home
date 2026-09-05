@@ -136,7 +136,7 @@ test("migrateState v6: cronograma sem nenhum dia registrado zera a fila",()=>{
     recuperacao:[{mat:"A",top:"B",key:"2026-07-02",topIdx:0}],recuperacaoData:"2026-07-11"});
   assert.deepEqual(m.recuperacao,[]);
   assert.equal(m.recuperacaoData,undefined);   // sem fila, a data some junto
-  assert.equal(m.schemaVersion,S.STATE_SCHEMA_VERSION);
+  assert.equal(m.schemaVersion,6);
 });
 
 test("migrateState v6: item cujo dia já foi avaliado sai da fila",()=>{
@@ -189,44 +189,4 @@ test("migrateState v6: fila que continua válida não é tocada",()=>{
     recuperacao:fila,recuperacaoData:"2026-07-11"});
   assert.deepEqual(m.recuperacao,fila);
   assert.equal(m.recuperacaoData,"2026-07-11");
-});
-
-/* v7: o Painel de Exercícios precisa de quantas questões por DIA, e o
-   histórico por questão só guarda a última data de cada uma. */
-
-test("migrateState v7: semeia exDias a partir do histórico por questão",()=>{
-  const S=freshState(SO_CERTS);
-  const m=S.migrateState({schemaVersion:6,questoes:{
-    "q1":{n:3,ok:2,ultima:"2026-02-10"},
-    "q2":{n:1,ok:1,ultima:"2026-02-10"},
-    "q3":{n:2,ok:0,ultima:"2026-02-11"}}});
-  // o TOTAL fica exato; só a distribuição por dia é aproximada
-  assert.deepEqual(m.exDias["2026-02-10"],{n:4,ok:3});
-  assert.deepEqual(m.exDias["2026-02-11"],{n:2,ok:0});
-  const tot=Object.values(m.exDias).reduce((a,d)=>a+d.n,0);
-  assert.equal(tot,6);
-  assert.equal(m.schemaVersion,7);
-});
-
-test("migrateState v7: questão sem data ou sem tentativa não entra",()=>{
-  const S=freshState(SO_CERTS);
-  const m=S.migrateState({schemaVersion:6,questoes:{
-    "q1":{n:0,ok:0},                       // nunca respondida
-    "q2":{n:2,ok:1},                       // sem ultima
-    "q3":{n:1,ok:1,ultima:"2026-02-10"}}});
-  assert.deepEqual(Object.keys(m.exDias),["2026-02-10"]);
-});
-
-test("migrateState v7: quem já tem exDias não é semeado por cima",()=>{
-  const S=freshState(SO_CERTS);
-  const meu={"2026-02-01":{n:9,ok:9}};
-  const m=S.migrateState({schemaVersion:6,exDias:meu,
-    questoes:{"q1":{n:3,ok:2,ultima:"2026-02-10"}}});
-  assert.deepEqual(m.exDias,meu);
-});
-
-test("migrateState v7: aluno sem histórico nenhum ganha exDias vazio",()=>{
-  const S=freshState(SO_CERTS);
-  const m=S.migrateState({schemaVersion:6});
-  assert.deepEqual(m.exDias,{});
 });
