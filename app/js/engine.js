@@ -145,6 +145,41 @@ function calcAntecipacao(){
           podeAntecipar:diasFolga>=14};
 }
 
+/* Prazo do conteudo a partir do PLANO, sem depender da data da prova.
+   E o que permite a Bussola SUGERIR a data do exame em vez de pedir que o
+   aluno adivinhe. A conta e a mesma de calcAntecipacao, so que sem teto:
+   density = capacidade da hora; dias de conteudo = total / density; caminha
+   o calendario respeitando os dias de descanso e o ciclo 5+1+1 (posicoes 0 a 4
+   sao conteudo); o primeiro dia nao conta, e Orientacoes do Coach.
+   provaSugerida = ultimo dia de conteudo + 8, porque a Revisao Geral cai em +7.
+   Devolve null sem inicio, sem edital ou com a semana toda de descanso. */
+function calcPrazoConteudo(){
+  if(!STATE.inicio) return null;
+  const materias=getMaterias();
+  const topicos=getTopicos();
+  let total=0; materias.forEach(m=>total+=(topicos[m.nome]||[]).length);
+  if(!total) return null;
+  const diasLivres=STATE.diasLivres||[];
+  if(diasLivres.length>=7) return null;
+  const density=Math.max(1,Math.floor((STATE.horasDia||3)/MIN_POR_TOPICO_H));
+  const diasNecessarios=Math.ceil(total/density);
+  const ini=parseDate(STATE.inicio); ini.setHours(0,0,0,0);
+  let n=0, av=0, fim=null;
+  const x=new Date(ini);
+  for(let guard=0;guard<3650;guard++){
+    if(!diasLivres.includes(x.getDay())){
+      if(av%7<=4&&fmt(x)!==STATE.inicio){ n++; if(n>=diasNecessarios){ fim=fmt(x); break; } }
+      av++;
+    }
+    x.setDate(x.getDate()+1);
+  }
+  if(!fim) return null;
+  const pv=parseDate(fim); pv.setDate(pv.getDate()+8);
+  return {total,density,diasConteudo:diasNecessarios,
+          fimConteudo:fim,provaSugerida:fmt(pv),
+          diasCorridos:Math.round((pv-ini)/86400000)};
+}
+
 /* Diagnostico de cobertura do edital.
    Responde a pergunta que o aluno nao tinha como fazer: "com esta data de prova
    e estas horas por dia, eu termino o edital?" Devolve tudo o que a UI precisa
@@ -1125,7 +1160,7 @@ function calcMedalhas(coberturaPct){
 
 /* ── Export para Node (testes). No navegador, as funções já são globais. ── */
 if(typeof module!=="undefined"&&module.exports){
-  module.exports={calcCoberturaEdital,calcAntecipacao,getLimiteConteudo,MIN_POR_TOPICO_H,
+  module.exports={calcCoberturaEdital,calcAntecipacao,calcPrazoConteudo,getLimiteConteudo,MIN_POR_TOPICO_H,
     fmt,parseDate,isDiaLivre,isDiaEstudo,getCicloPos,getNumRevisao,
     getMaterias,getTopicos,getTopicoDiaByKey,getTopicosDiaBase,getTopicosDoDia,
     getExtrasDoDia,getPrevNonFreeDay,isSimuladoDay,calcRevisoes,calcExpectedPerSubject,getTopicosFracos,buildAgendaSemanaICS,isProvaDay,isRevisaoGeralDay,isRetaFinalDay,

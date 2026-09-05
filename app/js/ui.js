@@ -54,6 +54,7 @@ const ACTIONS={
   toggleConcursoDropdown:()=>toggleConcursoDropdown(),
   selecionarGrupo:d=>selecionarGrupo(d.grupo,true),
   toggleDow:d=>toggleDow(+d.i),
+  usarPrazoSugerido:()=>usarPrazoSugerido(),
   iniciarBussola:()=>iniciarBússola(),
   marcarTreinoFeito:d=>marcarTreinoFeito(d.key),
   ajustarCronograma:()=>ajustarCronograma(),
@@ -154,6 +155,8 @@ document.addEventListener("change",e=>{
   }
   else if(e.target.dataset.change==="exMateria"){ window._bussolaUserActed=true; exSetMateria(e.target.value); }
   else if(e.target.dataset.change==="exTopico"){ window._bussolaUserActed=true; exSetTopico(e.target.value); }
+  else if(e.target.dataset.change==="recalcularPlano"){ recalcularPlano(); }
+  else if(e.target.dataset.change==="provaManual"){ provaManual(); }
   else if(e.target.dataset.change==="agendaHora"){
     window._bussolaUserActed=true;
     STATE.agendaHora=e.target.value||"19:00";
@@ -551,7 +554,7 @@ function _setupCargoOnChange(){
     const ed=EDITAIS[_prefSelecionada];
     const isCert=!ed||!ed.dataProva;
     if(ed&&ed.dataProva) document.getElementById("inputProva").value=ed.dataProva;
-    else document.getElementById("inputProva").value="";
+    else { document.getElementById("inputProva").value=""; _provaAuto=true; }
     atualizarModoProva(isCert);
   };
 }
@@ -570,7 +573,105 @@ function atualizarModoProva(isCert){
     provaEl.title="Data fixada pelo edital";
     if(lockSpan){lockSpan.textContent="🔒 fixada pelo edital";lockSpan.style.color="#2FB374";}
   }
+  atualizarPrazoSetup();
 }
+
+/* ── PRAZO ESTIMADO E DATA DA PROVA SUGERIDA ────────────────────
+   Antes o aluno tinha de adivinhar a data do exame antes de saber quanto
+   tempo o conteudo leva. Agora ele informa inicio e horas por dia, ve o
+   prazo na hora e a Bussola preenche a data. Continua podendo trocar:
+   quem ja agendou o exame digita a data e o campo para de ser sugerido. */
+let _provaAuto=true;
+
+function _fmtPrazo(dias){
+  if(dias<14) return dias+" dias";
+  if(dias<70) return Math.round(dias/7)+" semanas";
+  const m=Math.round(dias/30);
+  return m+(m===1?" mes":" meses");
+}
+function _dataBR(iso){
+  if(!iso) return "";
+  try{ return parseDate(iso).toLocaleDateString("pt-BR"); }catch(e){ return iso; }
+}
+
+/* Le os CAMPOS do formulario, e nao o STATE: aqui o aluno ainda esta
+   decidindo, e nada foi salvo. Mede com um STATE temporario e desfaz. */
+function calcPrazoDoFormulario(){
+  const inicioEl=document.getElementById("inputInicio");
+  const horasEl=document.getElementById("inputHoras");
+  const cargoEl=document.getElementById("inputCargo");
+  if(!inicioEl||!horasEl) return null;
+  const inicio=inicioEl.value;
+  if(!inicio) return null;
+  const editKey=(cargoEl&&cargoEl.value)||_prefSelecionada;
+  if(!editKey||!EDITAIS[editKey]) return null;
+  const _prev={inicio:STATE.inicio,horasDia:STATE.horasDia,
+               diasLivres:STATE.diasLivres,prefeitura:STATE.prefeitura};
+  STATE.inicio=inicio;
+  STATE.horasDia=parseFloat(horasEl.value)||3;
+  STATE.diasLivres=[..._dowSelected].sort((a,b)=>a-b);
+  STATE.prefeitura=editKey;
+  let r=null; try{ r=calcPrazoConteudo(); }catch(e){}
+  Object.assign(STATE,_prev);
+  return r;
+}
+
+function atualizarPrazoSetup(){
+  const hintEl=document.getElementById("prazoHint");
+  const provaEl=document.getElementById("inputProva");
+  const provaHint=document.getElementById("provaHint");
+  const lockSpan=document.getElementById("provaLockSpan");
+  if(!hintEl||!provaEl||!provaHint) return;
+  const cargoEl=document.getElementById("inputCargo");
+  const ed=EDITAIS[(cargoEl&&cargoEl.value)||_prefSelecionada];
+  // Concurso com data fixada pelo edital: nao ha o que sugerir.
+  if(ed&&ed.dataProva){ hintEl.hidden=true; provaHint.hidden=true; return; }
+  const r=calcPrazoDoFormulario();
+  if(!r){ hintEl.hidden=true; provaHint.hidden=true; return; }
+
+  const longo=r.diasCorridos>120;   // acima de ~4 meses vale sugerir mais horas
+  hintEl.className="prazo-hint"+(longo?" alerta":"");
+  hintEl.innerHTML=`<span class="ph-ic">${longo?"⏳":"⚡"}</span><span>`
+    +`<strong>${r.density} tópico${r.density>1?"s":""} por dia.</strong> `
+    +`Você fecha os ${r.total} tópicos do edital em cerca de `
+    +`<strong>${_fmtPrazo(r.diasCorridos)}</strong> e fica pronto para o exame em `
+    +`<strong>${_dataBR(r.provaSugerida)}</strong>.`
+    +(longo?" Aumentar as horas por dia encurta bastante esse prazo.":"")
+    +`</span>`;
+  hintEl.hidden=false;
+
+  if(_provaAuto){
+    provaEl.value=r.provaSugerida;
+    if(lockSpan){ lockSpan.textContent="🧭 sugerida pela Bússola"; lockSpan.style.color="#2FB374"; }
+    provaHint.innerHTML="Já tem data marcada para o exame? Troque aqui e a Bússola reajusta o ritmo.";
+    provaHint.hidden=false;
+    return;
+  }
+
+  if(lockSpan){ lockSpan.textContent="📅 você definiu"; lockSpan.style.color="#2563EB"; }
+  const escolhida=provaEl.value;
+  const btn=`<button type="button" class="btn-prazo" data-action="usarPrazoSugerido">usar ${_dataBR(r.provaSugerida)}</button>`;
+  if(escolhida&&escolhida<r.provaSugerida){
+    const faltam=Math.round((parseDate(r.provaSugerida)-parseDate(escolhida))/86400000);
+    provaHint.innerHTML=`⚠️ Nesse prazo o conteúdo não fecha inteiro: faltam <b>${faltam} dia${faltam>1?"s":""}</b>. `
+      +`A Bússola sugere <b>${_dataBR(r.provaSugerida)}</b>. ${btn}`;
+  } else if(escolhida&&escolhida>r.provaSugerida){
+    const folga=Math.round((parseDate(escolhida)-parseDate(r.provaSugerida))/86400000);
+    provaHint.innerHTML=`O conteúdo fecha bem antes: sobram <b>${folga} dia${folga>1?"s":""}</b> para revisar e treinar. ${btn}`;
+  } else {
+    provaHint.innerHTML=`A Bússola sugere <b>${_dataBR(r.provaSugerida)}</b>. ${btn}`;
+  }
+  provaHint.hidden=false;
+}
+
+/* Mudou inicio ou horas: recalcula. Nao mexe no _provaAuto. */
+function recalcularPlano(){ atualizarPrazoSetup(); }
+
+/* O aluno digitou a propria data: a Bussola para de sobrescrever. */
+function provaManual(){ _provaAuto=false; atualizarPrazoSetup(); }
+
+/* Volta para a data calculada pela Bussola. */
+function usarPrazoSugerido(){ _provaAuto=true; atualizarPrazoSetup(); }
 
 function selecionarGrupo(grupo, userAction){
   _grupoSelecionado=grupo;
@@ -726,6 +827,7 @@ function toggleDow(i){
   if(idx>=0) _dowSelected.splice(idx,1);
   else{ if(_dowSelected.length>=4){ alert("Máximo de 4 dias de descanso. O plano precisa de pelo menos 3 dias de estudo por semana."); return; } _dowSelected.push(i); }
   renderDowGrid();
+  atualizarPrazoSetup();   // dia de descanso muda o prazo e a data sugerida
 }
 
 /* ── MEU CURSINHO ──────────────────────────────────────────────
@@ -771,6 +873,10 @@ function renderCursinhoNota(){
 }
 
 function openSetupModal(){
+  // Sem data salva = primeira configuracao, a Bussola sugere. Com data salva =
+  // decisao do aluno, e ela so muda se ele pedir. Precisa vir ANTES de popular
+  // o formulario: selecionarPref chama atualizarModoProva, que ja recalcula.
+  _provaAuto=!STATE.prova;
   // Só restaura dias salvos se o cronograma já foi configurado; caso contrário começa vazio
   _dowSelected=STATE.inicio?[...(STATE.diasLivres||[])]:[]; 
   const _hojeIso=(new Date()).toISOString().split('T')[0];
@@ -791,6 +897,7 @@ function openSetupModal(){
   document.getElementById("modalTitle").textContent=hasInicio?"Configurações do Cronograma":"Configure seu Cronograma";
   renderDowGrid();
   renderCursinhoSelect();
+  atualizarPrazoSetup();
   document.getElementById("setupModal").classList.add("open");
 }
 function fecharModal(){
