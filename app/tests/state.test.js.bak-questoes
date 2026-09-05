@@ -55,7 +55,7 @@ test("migrateState v3: edital de concurso que sumiu devolve o aluno ao setup",()
   assert.equal(m.prova,null);
   assert.deepEqual(m.dias,{});
   assert.equal(m.nome,"Adriano");        // o que não depende do edital fica
-  assert.equal(m.schemaVersion,S.STATE_SCHEMA_VERSION);   // migra até a versão corrente
+  assert.equal(m.schemaVersion,3);
 });
 
 test("migrateState v3: aluno de certificação não é tocado",()=>{
@@ -73,25 +73,4 @@ test("migrateState v3: sem catálogo carregado (Node), não zera nada",()=>{
   const m=migrateState(antigo);           // módulo do topo, sem window
   assert.equal(m.prefeitura,"cgAgenteAdm");
   assert.equal(m.inicio,"2026-07-01");
-});
-
-/* ── Schema 4: banco de questões (31/08/2026) ── */
-test("migrateState v4: estado antigo ganha o container de questões",()=>{
-  const S=freshState(SO_CERTS);
-  const m=S.migrateState({schemaVersion:3,prefeitura:"cfpPlanejar",inicio:"2026-07-01"});
-  assert.deepEqual(m.questoes,{});
-  assert.equal(m.schemaVersion,4);
-});
-
-test("migrateState v4: histórico de questões já existente é preservado",()=>{
-  const S=freshState(SO_CERTS);
-  const hist={"cpa-prod-01-q1":{n:2,ok:1,ultimaCerta:false}};
-  const m=S.migrateState({schemaVersion:3,prefeitura:"cfpPlanejar",questoes:hist});
-  assert.deepEqual(m.questoes,hist);
-});
-
-test("migrateState v4: questoes corrompido vira objeto vazio, sem quebrar",()=>{
-  const S=freshState(SO_CERTS);
-  assert.deepEqual(S.migrateState({schemaVersion:3,questoes:"lixo"}).questoes,{});
-  assert.deepEqual(S.migrateState({schemaVersion:3,questoes:null}).questoes,{});
 });
