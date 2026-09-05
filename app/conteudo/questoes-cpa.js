@@ -1,5 +1,5 @@
 /* GERADO por outputs/questoes_para_js.py. NAO editar a mao.
-   Fonte: _conteudo/cpa/questoes/**.yaml  ·  215 questoes em 43 topicos
+   Fonte: _conteudo/cpa/questoes/**.yaml  ·  295 questoes em 59 topicos
    Para mudar uma questao, edite o YAML e rode o script de novo. */
 window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
  "cpaAnbima": {
@@ -4989,6 +4989,1864 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "b": "A lei protege expressamente parentes até o segundo grau, cônjuges e empregados contra a sub-rogação, desde que não tenha havido culpa grave.",
       "c": "O segurado recebe a indenização rapidamente da seguradora, e é a própria seguradora que assume o lugar dele para reaver o valor do terceiro causador.",
       "d": "A sub-rogação é uma característica marcante e exclusiva dos seguros de danos/patrimoniais, sendo expressamente vedada nos seguros de pessoas."
+     }
+    }
+   ]
+  },
+  "Relacionamento com o Cliente": {
+   "Orçamento e fluxo de caixa pessoal ou familiar": [
+    {
+     "id": "cpa-rel-04-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. O orçamento planeja prospectivamente as receitas e despesas esperadas, enquanto o fluxo de caixa registra a execução real do dinheiro que efetivamente entra e sai, sendo o confronto entre ambos o que revela os desvios de planejamento.</p><p>As alternativas A, B e C erram ao inverter os conceitos de passado e futuro, igualar as ferramentas a obrigações fiscais ou confundir fluxo de caixa com o balanço patrimonial de estoque.</p>",
+     "enunciado": "<p>O planejamento financeiro pessoal envolve a utilização complementar do orçamento e do fluxo de caixa. Sob o ponto de vista da temporalidade e da função de cada uma dessas duas ferramentas, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "O fluxo de caixa mede o estoque estático do patrimônio em uma data, enquanto o orçamento avalia o valor de mercado de bens imóveis.",
+      "b": "O orçamento lista os registros históricos do passado, ao passo que o fluxo de caixa é utilizado exclusivamente para prever a inflação do próximo ano.",
+      "c": "Ambas as ferramentas possuem a mesma função e destinam-se exclusivamente ao cálculo da alíquota do Imposto de Renda Pessoa Física.",
+      "d": "O orçamento é uma ferramenta prospectiva que planeja receitas e despesas futuras, enquanto o fluxo de caixa é o registro da execução real das entradas e saídas."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "A medição de estoque estático do patrimônio é função do balanço patrimonial pessoal, e não do fluxo de caixa.",
+      "b": "O orçamento é prospectivo (futuro) e o fluxo de caixa registra a execução real (passado e presente).",
+      "c": "Orçamento e fluxo de caixa não possuem a mesma função e não servem para calcular imposto de renda."
+     }
+    },
+    {
+     "id": "cpa-rel-04-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. Os eixos são independentes e se cruzam: fixa e variável refere-se à previsibilidade do valor e independência do consumo, enquanto essencial e supérflua mede o grau de necessidade para a subsistência.</p><p>As alternativas B, C e D falham ao considerar impossível a existência de fixas supérfluas, inverter os conceitos de fixas e variáveis ou sugerir cortes em despesas vitais essenciais.</p>",
+     "enunciado": "<p>Ao estruturar o orçamento doméstico de uma família, o profissional de atendimento deve analisar o comportamento das despesas e sua natureza. Ao comparar os eixos de classificação das contas, constata-se que:</p>",
+     "alternativas": {
+      "a": "O eixo de despesas fixas e variáveis mede a previsibilidade ao longo do tempo, enquanto o eixo de essenciais e supérfluas mede a relevância para a subsistência.",
+      "b": "Toda despesa fixa é obrigatoriamente uma despesa essencial, sendo impossível existir uma despesa fixa que seja supérflua.",
+      "c": "As despesas variáveis representam compromissos contratuais imutáveis, como parcelas de financiamento imobiliário e aluguéis.",
+      "d": "O corte orçamentário para geração de caixa deve focar prioritariamente nas despesas fixas essenciais de saúde e moradia."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Fixa e supérflua podem se combinar, como no caso de uma assinatura mensal ociosa ou academia não frequentada.",
+      "c": "Aluguéis e financiamentos possuem valores previsíveis e constantes, caracterizando-se como despesas fixas, e não variáveis.",
+      "d": "O corte orçamentário deve priorizar despesas supérfluas, e não essenciais de subsistência como saúde e moradia."
+     }
+    },
+    {
+     "id": "cpa-rel-04-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. A base do orçamento deve ser sempre a renda líquida (que efetivamente entra na conta) e o orçamento deve ser anualizado, fracionando em doze partes mensais o provisionamento de despesas sazonais como IPVA, IPTU e seguros.</p><p>As alternativas A, B e D erram ao usar a renda bruta, depender de receitas extraordinárias para despesas correntes ou incentivar o uso do cheque especial por falta de provisão.</p>",
+     "enunciado": "<p>Uma família deseja montar seu orçamento anualizado e precisa definir a base correta de renda, bem como o tratamento adequado para receitas e despesas não mensais. Para evitar distorções no planejamento e prevenir o endividamento, a recomendação correta é:</p>",
+     "alternativas": {
+      "a": "Considerar apenas as receitas extraordinárias como bônus e férias para arcar com as despesas fixas mensais de moradia.",
+      "b": "Utilizar a renda bruta sem descontos operacionais, e lançar o décimo terceiro salário como receita mensal recorrente.",
+      "c": "Utilizar a renda líquida como base, e provisionar mensalmente 1/12 de despesas anuais como IPTU e IPVA.",
+      "d": "Ignorar despesas sazonais no orçamento, contratando o cheque especial no mês em que as contas anuais vencerem."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "Despesas fixas mensais de moradia devem ser custeadas pela renda líquida mensal recorrente, não por entradas extraordinárias.",
+      "b": "Orçar pela renda bruta infla artificialmente o superávit, e o décimo terceiro não é receita mensal corrente.",
+      "d": "Ignorar gastos sazonais e recorrer ao cheque especial gera endividamento por juros elevados, violando a educação financeira."
+     }
+    },
+    {
+     "id": "cpa-rel-04-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. A boa prática do planejamento orçamentário consiste em tratar a parcela destinada aos investimentos e reservas como uma despesa prioritária e fixa, poupando assim que a renda entra, em vez de esperar uma sobra ao final do mês.</p><p>As alternativas A, B e C erram ao depender de sobras residuais improváveis, incentivar a contratação de rotativo caro ou confundir limites de crédito com renda pessoal.</p>",
+     "enunciado": "<p>Um cliente procurou o banco para entender por que, mesmo recebendo um salário elevado, encerra todos os meses sem saldo disponível para investir. Ao analisar o fluxo de caixa pessoal do correntista, o gerente deve orientar que o superávit recorrente para a formação de reservas seja alcançado por meio da seguinte prática:</p>",
+     "alternativas": {
+      "a": "Elevar os limites de cheque especial para simular um aumento de renda corrente permanente.",
+      "b": "Gastar livremente ao longo do mês e aplicar apenas a quantia eventual que porventura sobrar no último dia.",
+      "c": "Contratar linhas de crédito rotativo de cartão para cobrir a compra de artigos de luxo no início do período.",
+      "d": "Tratar a poupança como um compromisso prioritário e fixo no orçamento, transferindo o valor no início do mês antes dos gastos discricionários."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "Limites de cheque especial são empréstimos bancários e não representam aumento de renda líquida real.",
+      "b": "Deixar para poupar o que sobra no fim do mês raramente resulta em acúmulo de capital consistente.",
+      "c": "O uso de crédito rotativo para consumo gera endividamento caro e destrói a capacidade de poupança."
+     }
+    },
+    {
+     "id": "cpa-rel-04-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a C. Orçamento e fluxo de caixa registram variações dinâmicas e movimentações de recursos ao longo de um período de tempo (fluxo), enquanto o balanço patrimonial pessoal consolida os bens, direitos e dívidas em um momento estático específico (estoque).</p><p>As alternativas A, B e D cometem erros conceituais graves ao confundir medição de movimentação temporal (fluxo) com avaliação estática de patrimônio líquido (estoque).</p>",
+     "enunciado": "<p>Ao realizar a análise consolidada da situação financeira de um correntista, um profissional de atendimento precisa diferenciar os instrumentos que avaliam o movimento de recursos em um período daqueles que medem a posição estática do patrimônio em uma data específica. Assinale a alternativa que relaciona corretamente os conceitos de fluxo e estoque:</p>",
+     "alternativas": {
+      "a": "O fluxo de caixa mede exclusivamente o estoque de ativos ilíquidos, substituindo integralmente a necessidade do balanço patrimonial.",
+      "b": "O balanço patrimonial pessoal e o orçamento medem o fluxo mensal de receitas, enquanto o fluxo de caixa mede o estoque de imóveis.",
+      "c": "Orçamento e fluxo de caixa medem fluxo (movimentação no período), enquanto o balanço patrimonial pessoal mede estoque (bens, direitos e deveres em uma data).",
+      "d": "O orçamento mede a posição de estoque em 31 de dezembro, e o balanço patrimonial mede apenas despesas diárias com alimentação."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "O fluxo de caixa avalia movimentações financeiras no tempo, sem substituir a demonstração de bens e dívidas do balanço.",
+      "b": "O balanço patrimonial mede posição estática (estoque), e não o fluxo de receitas mensais.",
+      "d": "O orçamento avalia projeções de fluxos de receitas e saídas no tempo, e não estoques pontuais de fim de ano."
+     }
+    }
+   ],
+   "Gestão de dívidas: escolha da melhor dívida e garantias": [
+    {
+     "id": "cpa-rel-05-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. O Custo Efetivo Total (CET) consolida em um único percentual anual ou mensal todos os encargos, impostos, tarifas e seguros incidentes na operação de crédito, permitindo a comparação real entre propostas.</p><p>As alternativas B, C e D citam índices de inflação, metodologias de avaliação de investimentos ou sistemas de amortização de dívidas que não reúnem os encargos operacionais.</p>",
+     "enunciado": "<p>Ao comparar diferentes propostas de crédito oferecidas no mercado financeiro para reorganizar as finanças de um cliente, o indicador obrigatório que consolida a taxa de juros, o IOF, as tarifas e os seguros em um único percentual é o:</p>",
+     "alternativas": {
+      "a": "Custo Efetivo Total (CET).",
+      "b": "Índice Nacional de Preços ao Consumidor Amplo (IPCA).",
+      "c": "Valor Presente Líquido (VPL).",
+      "d": "Sistema de Amortização Constante (SAC)."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "O IPCA mede a inflação oficial do país e não o custo de empréstimos.",
+      "c": "O VPL é um método de análise de viabilidade de projetos de investimentos, não um consolidador de encargo bancário.",
+      "d": "O SAC é um sistema de amortização de parcelas, e não a métrica de custo total de uma operação de crédito."
+     }
+    },
+    {
+     "id": "cpa-rel-05-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. A matemática financeira e a gestão de dívidas determinam que a prioridade de quitação deve seguir a velocidade de corrosão do patrimônio, direcionando todo o caixa excedente para a dívida de maior CET (como rotativo ou cheque especial).</p><p>As alternativas A, C e D falham ao escolher pelo menor saldo nominal, amortizar linhas baratas com garantia imobiliária ou ignorar os encargos cobrados nas linhas mais emergenciais.</p>",
+     "enunciado": "<p>Um cliente possui três dívidas ativas de prazos e saldos distintos no mercado financeiro. Ao receber recursos extraordinários para amortizar antecipadamente parte do passivo, a regra prioritária para ordenar a quitação das dívidas é:</p>",
+     "alternativas": {
+      "a": "Quitar primeiramente a dívida com o menor saldo devedor absoluto para eliminar o número de carnês.",
+      "b": "Priorizar a quitação da dívida que apresentar o maior Custo Efetivo Total (CET), independentemente do valor do saldo nominal.",
+      "c": "Priorizar o financiamento imobiliário de taxas subsidiadas e menor custo por ter o maior prazo total.",
+      "d": "Amortizar em partes rigorosamente iguais todas as linhas contratadas, independentemente dos juros cobrados."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "Quitar pelo menor saldo nominal em vez do maior CET mantém ativas as linhas mais caras que corroem o patrimônio.",
+      "c": "Financiamentos imobiliários possuem juros baixos por terem garantia real, não devendo ser priorizados em relação a linhas mais caras como o cheque especial.",
+      "d": "Dividir igualmente ignora a velocidade de corrosão das dívidas mais caras e atrasa a recuperação financeira do cliente."
+     }
+    },
+    {
+     "id": "cpa-rel-05-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. A consolidação unifica dívidas pulverizadas contratando uma nova linha de CET mais baixo para quitação das antigas (sem perdão de principal), enquanto a portabilidade transfere a dívida para outro banco respeitando obrigatoriamente as travas de saldo e prazo remanescente do contrato original.</p><p>As alternativas A, C e D erram ao afirmar que há perdão do valor principal, confundir portabilidade com refinanciamento com troco ou exigir garantias públicas.</p>",
+     "enunciado": "<p>Ao avaliar a reestruturação de dívidas de um cliente, um gerente de atendimento compara as características da consolidação de dívidas e da portabilidade de crédito. A respeito da diferença regulatória e operacional entre essas modalidades, observa-se que:</p>",
+     "alternativas": {
+      "a": "A consolidação perdoa integralmente o saldo devedor principal do cliente, enquanto a portabilidade libera trocos obrigatoriamente.",
+      "b": "A consolidação contrata uma nova linha com CET menor para quitar várias dívidas caras sem perdão do principal, enquanto a portabilidade transfere a mesma operação com valor e prazo restritos ao saldo e tempo remanescentes.",
+      "c": "A portabilidade permite alongar o prazo e liberar recurso adicional ao cliente, mantendo o nome de portabilidade sem virar refinanciamento.",
+      "d": "Ambas as operações exigem a alienação fiduciária compulsória de bens imóveis da União como garantia soberana."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "A consolidação não envolve perdão de principal, mas sim a troca de passivos por uma nova linha mais barata.",
+      "c": "Conceder troco em dinheiro ou alongar o prazo descaracteriza a portabilidade e transforma a operação em refinanciamento.",
+      "d": "Nenhuma das modalidades exige alienação de bens imóveis públicos como condição de existência."
+     }
+    },
+    {
+     "id": "cpa-rel-05-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. Em termos práticos, deve-se utilizar o saldo para eliminar a dívida cara do rotativo (cujo custo supera em muito o ganho da aplicação), mas sem zerar totalmente a reserva de emergência, garantindo que imprevistos futuros não façam o cliente recorrer de novo ao crédito rotativo.</p><p>As alternativas A, B e C falham ao zerar totalmente o colchão de liquidez, sugerir especulações de alto risco com dívidas ativas ou travar liquidez em previdência de longo prazo.</p>",
+     "enunciado": "<p>Um cliente possui R$ 15 mil aplicados na caderneta de poupança (reserva de emergência) e acumula um saldo devedor de R$ 10 mil no rotativo do cartão de crédito a um CET de 14% ao mês. Ele procura o banco pretendendo zerar integralmente sua reserva para quitar a dívida. A orientação de atendimento correta e tecnicamente adequada é:</p>",
+     "alternativas": {
+      "a": "Contratar um plano de previdência PGBL ilíquido de longo prazo usando todo o dinheiro da poupança antes de pagar o cartão.",
+      "b": "Zerar integralmente a aplicação e manter o saldo zerado sem qualquer colchão de liquidez para imprevistos.",
+      "c": "Orientar o cliente a manter a dívida no rotativo e aplicar mais recursos em ações de empresas em recuperação judicial.",
+      "d": "Utilizar a parcela do valor aplicado para estancar a dívida cara do rotativo, preservando o restante para não zerar a reserva de emergência."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "Travar recursos em produtos ilíquidos de longo prazo com dívidas caras ativas no rotativo contraria a gestão de passivos.",
+      "b": "Zerar a reserva de emergência é um erro, pois qualquer despesa inesperada futura devolverá o cliente ao uso do rotativo.",
+      "c": "Manter o rotativo a 14% ao mês enquanto especula em ações agrava o endividamento e compromete a subsistência."
+     }
+    },
+    {
+     "id": "cpa-rel-05-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a A. A alienação fiduciária reduz a taxa de juros porque dá segurança ao credor via execução extrajudicial, mas exige do cliente a consciência de que a inadimplência nessa linha pode acarretar a perda do bem oferecido em garantia.</p><p>As alternativas B, C e D erram ao ignorar a celeridade do rito extrajudicial, igualar as taxas ao cheque especial ou tirar do devedor a posse direta para habitação do imóvel.</p>",
+     "enunciado": "<p>Um cliente endividado possui dívidas em linhas de crédito pessoal sem garantia e estuda oferecer um imóvel quitado de sua propriedade em alienação fiduciária para obter uma linha com CET reduzido. Ao analisar os impactos do uso da garantia real de alienação fiduciária em relação ao custo e ao risco patrimonial, verifica-se que:</p>",
+     "alternativas": {
+      "a": "A garantia real reduz substancialmente o risco do banco e derruba a taxa do empréstimo, porém converte um passivo sem consequência patrimonial direta em uma dívida que pode custar a perda do imóvel no rito extrajudicial.",
+      "b": "A garantia de alienação fiduciária do imóvel elimina completamente o risco de perda do bem por exigir processo judicial que dura obrigatoriamente mais de 30 anos.",
+      "c": "A alienação fiduciária de imóveis mantém as taxas de juros idênticas às do cheque especial por determinação do Banco Central.",
+      "d": "Ao oferecer o imóvel em garantia, o cliente transfere a propriedade definitiva para o banco, perdendo a posse direta imediatamente no ato da assinatura."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A alienação fiduciária utiliza o rito extrajudicial em cartório, sendo mais rápida na execução em caso de inadimplência do que a antiga hipoteca.",
+      "c": "Garantias reais derrubam o risco de crédito do banco, resultando em taxas muito inferiores às do cheque especial.",
+      "d": "O cliente mantém a posse direta do bem e mora no imóvel, recebendo o banco a propriedade resolúvel que se extingue com a quitação."
+     }
+    }
+   ],
+   "Empréstimo, financiamento e modalidades de crédito ao consumidor": [
+    {
+     "id": "cpa-rel-06-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. No financiamento, o recurso possui destinação vinculada e não passa pela conta do cliente, sendo pago diretamente ao vendedor ou prestador do serviço, o que gera a vinculação direta ao bem.</p><p>As alternativas A, C e D erram ao descrever a livre utilização típica do empréstimo, inventar isenções de IOF inexistentes ou exigir avais governamentais.</p>",
+     "enunciado": "<p>No atendimento bancário, compreender as diferenças estruturais entre um empréstimo de uso livre e um financiamento de destinação vinculada é essencial para orientar o consumidor. A característica que distingue o financiamento em relação ao empréstimo pessoal comum consiste em:</p>",
+     "alternativas": {
+      "a": "Depositar o valor integral liberado na conta corrente do cliente para que ele utilize livremente como preferir.",
+      "b": "Ter o recurso repassado diretamente pela instituição financeira ao vendedor do bem ou serviço, nascendo o crédito colado ao objeto financiado.",
+      "c": "Isentar a operação da cobrança de Imposto sobre Operações Financeiras (IOF) por determinação do Banco Central.",
+      "d": "Exigir obrigatoriamente a apresentação de garantias prestadas por entidades governamentais de aval."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "Depositar o dinheiro na conta do cliente para uso livre caracteriza o empréstimo pessoal, e não o financiamento.",
+      "c": "O financiamento ao consumidor não é isento de IOF, e não existe determinação do Banco Central nesse sentido; incidem as alíquotas regulamentares do imposto.",
+      "d": "O financiamento utiliza predominantemente garantias reais como a alienação fiduciária, sem exigência de aval governamental."
+     }
+    },
+    {
+     "id": "cpa-rel-06-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. No arrendamento mercantil a instituição é a proprietária do bem e o cliente o arrendatário, abrindo-se ao final do contrato três opções: exercer a opção de compra, renovar o arrendamento ou devolver o bem.</p><p>As alternativas A, C e D erram ao dar a propriedade inicial ao cliente, restringir as opções finais do leasing ou inventar regras de carência de corretagem.</p>",
+     "enunciado": "<p>O arrendamento mercantil (leasing) é uma estrutura de crédito regulada pelo Banco Central com regras próprias de propriedade e encerramento. Ao comparar a alienação fiduciária com o leasing financeiro, constata-se que no leasing:</p>",
+     "alternativas": {
+      "a": "O cliente torna-se proprietário definitivo na assinatura do contrato, sendo-lhe vedada a devolução do bem ao final do prazo.",
+      "b": "A arrendadora permanece como proprietária do bem durante o contrato, e ao final o cliente pode optar por comprar, renovar o contrato ou devolver o bem.",
+      "c": "A única alternativa ao término do contrato é a consolidação automática da propriedade plena pelo cliente, sem a opção de devolução.",
+      "d": "O Valor Residual Garantido (VRG) é uma tarifa de encerramento cobrada apenas do arrendatário que devolve o bem ao final do contrato."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "No leasing o cliente é arrendatário com posse e uso, enquanto a arrendadora é a proprietária do bem.",
+      "c": "A consolidação única automática é característica da alienação fiduciária com quitação; no leasing existem três opções ao final.",
+      "d": "O VRG é o valor mínimo assegurado à arrendadora no leasing financeiro, usado para liquidar a opção de compra, e não uma tarifa de devolução do bem."
+     }
+    },
+    {
+     "id": "cpa-rel-06-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. As linhas emergenciais como cheque especial servem a cobrir pequenos descasamentos de caixa de pouquíssimos dias, sendo o CDC parcelado a modalidade correta para bens duráveis devido às taxas mais baixas e parcelas previsíveis.</p><p>As alternativas A, B e C incentivam o uso incorreto de linhas emergenciais caras para longo prazo ou criam exigências descabidas de garantias imobiliárias para móveis.</p>",
+     "enunciado": "<p>Um cliente planeja financiar um eletrodoméstico de uso imediato e busca orientação na agência. Ele avalia utilizar o limite do cheque especial ou contratar um Crédito Direto ao Consumidor (CDC) parcelado. Considerando a adequação do prazo e o custo da modalidade, o gerente deve orientar que:</p>",
+     "alternativas": {
+      "a": "O CDC é inadequado para a compra de bens duráveis por exigir a alienação fiduciária de imóveis quitados do consumidor.",
+      "b": "O cheque especial é a linha mais recomendada para compras parceladas de bens duráveis devido à isenção de tarifas operacionais por prazos longos.",
+      "c": "O cliente deve utilizar o rotativo do cartão de crédito por dois anos para manter a margem do consignado livre para investimentos.",
+      "d": "O cheque especial destina-se a pequenos descasamentos de caixa de poucos dias, devendo o bem durável ser financiado via CDC com prazo e taxa adequados."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "O CDC de varejo financia bens móveis sem exigir alienação fiduciária de imóveis.",
+      "b": "O cheque especial possui juros elevados e não deve ser usado para financiamento parcelado de bens duráveis.",
+      "c": "Usar o rotativo por longos prazos gera superendividamento acelerado devido ao altíssimo Custo Efetivo Total."
+     }
+    },
+    {
+     "id": "cpa-rel-06-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. O consignado lidera a hierarquia de custos pelo menor CET gerado pelo desconto em folha, mas o profissional deve alertar que a operação compromete a margem consignável e não pode ser cancelada unilateralmente enquanto houver débito.</p><p>As alternativas A, C e D erram ao afirmar que linhas sem garantia são mais baratas, sugerir o cheque especial para prazos longos ou desconsiderar a relevância do CET.</p>",
+     "enunciado": "<p>Uma cliente com salário estável pretende contratar um empréstimo de uso livre para cobrir despesas de saúde e avalia opções com seu gerente. Ao estruturar a recomendação adequada observando a hierarquia de custos e os impactos da operação, a orientação correta deve considerar que:</p>",
+     "alternativas": {
+      "a": "O crédito pessoal sem garantia deve ser a primeira opção por ter taxas inferiores a qualquer linha garantida.",
+      "b": "A contratação do crédito consignado oferece um CET menor devido ao desconto em folha, mas trava a margem e não se cancela unilateralmente com o saldo devedor ativo.",
+      "c": "A cliente deve parcelar o valor em 60 vezes no cheque especial para garantir parcelas menores no orçamento mensal.",
+      "d": "A comparação pelo CET é dispensável quando o banco divulga a taxa de juros nominal mensal, que já reflete o custo integral da operação."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "Linhas sem garantia possuem risco de crédito maior e taxas superiores às linhas garantidas ou consignadas.",
+      "c": "Cheque especial não é linha de parcelamento longo em 60 vezes, apresentando o custo mais elevado do mercado.",
+      "d": "A taxa nominal não inclui IOF, tarifas e seguros; é justamente por isso que a comparação se faz pelo CET, que reúne todos esses encargos em um único percentual."
+     }
+    },
+    {
+     "id": "cpa-rel-06-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a A. O prazo do financiamento/empréstimo deve casar com a vida útil do bem ou serviço financiado para não comprometer o fluxo futuro de caixa, sendo terminantemente proibido assediar ou pressionar o consumidor para a tomada de crédito.</p><p>As alternativas B, C e D defendem descompassos graves entre prazos de dívida e consumo, além de violar diretamente as vedações legais da Lei do Superendividamento.</p>",
+     "enunciado": "<p>Um consumidor solicita um empréstimo para custear um pacote de viagem de férias de dez dias de duração e consulta as opções de prazos. Ao mesmo tempo, um profissional analisa as regras morais e regulatórias de proteção ao consumidor na oferta de crédito (Lei 14.181/2021). Assinale a alternativa correta sobre o casamento de prazos e os deveres de conduta na concessão do crédito:</p>",
+     "alternativas": {
+      "a": "O prazo da dívida deve casar com a vida útil do bem ou serviço (evitando parcelamentos longos como 60 meses para viagens curtas), sendo vedado assediar ou pressionar o consumidor para contratar crédito.",
+      "b": "O parcelamento em 60 meses é a conduta mais recomendada para custear serviços de consumo imediato, pois minimiza o impacto do valor nominal da parcela.",
+      "c": "A instituição de crédito está autorizada a ocultar a taxa de juros nominal do contrato caso o cliente assine um termo declarando ser vulnerável.",
+      "d": "O gerente pode insistir continuamente na contratação de linhas adicionais caso o cliente seja analfabeto ou idoso, sem restrição regulatória."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Parcelar serviços de consumo imediato em prazos longos compromete a poupança futura por anos sem deixar ativo correspondente.",
+      "c": "É expressamente vedado ocultar ou dificultar a compreensão dos ônus e riscos da contratação de crédito.",
+      "d": "A Lei do Superendividamento proíbe expressamente assediar ou pressionar consumidores, agravando a vedação quando idosos, analfabetos ou vulneráveis."
+     }
+    }
+   ],
+   "Financiamento imobiliário, de veículos e crédito estudantil": [
+    {
+     "id": "cpa-rel-07-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. O parâmetro de comprometimento da renda familiar em cerca de 30% para financiamento imobiliário é fixado por política de crédito interna de cada instituição bancária, e não por norma regulatória do Banco Central ou do CMN.</p><p>As alternativas A, B e C erram ao tratar a política comercial como norma compulsória do BCB, confundir com margem consignável ou negar a existência de análise de risco de crédito pelos bancos.</p>",
+     "enunciado": "<p>Durante o atendimento a um cliente que busca financiamento imobiliário, surge uma dúvida sobre o percentual máximo de comprometimento da renda familiar mensal aceito para aprovação do crédito. A respeito desse limite praticado no mercado financeiro, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "A legislação proíbe as instituições financeiras de estabelecerem qualquer limite de comprometimento de renda para o crédito imobiliário.",
+      "b": "O teto de 30% da renda é fixado compulsoriamente por resolução do Banco Central para todas as operações do mercado imobiliário.",
+      "c": "O limite máximo de comprometimento de renda para imóveis é regido estritamente pelas regras da margem consignável do INSS.",
+      "d": "O parâmetro de cerca de 30% da renda é uma política de crédito de cada instituição financeira, não constituindo uma norma rígida do Banco Central ou do CMN."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "Os bancos possuem autonomia para estipular políticas de crédito de análise de risco e limitar a parcela à capacidade do cliente.",
+      "b": "O Banco Central e o CMN não fixam percentual regulatório de comprometimento de renda para financiamento imobiliário.",
+      "c": "A margem consignável aplica-se exclusivamente a descontos em folha de empréstimos consignados, não ao crédito imobiliário em geral."
+     }
+    },
+    {
+     "id": "cpa-rel-07-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. O veículo é um bem de consumo durável que deprecia e gera despesas correntes, ao passo que o crédito estudantil constitui investimento em capital humano contraído na fase de acumulação para ampliar o potencial de geração de renda.</p><p>As alternativas A, B e D erram ao qualificar veículos como investimentos rentáveis, citar a carência de 18 meses revogada na reforma do Fies ou permitir o uso descabido do FGTS em veículos.</p>",
+     "enunciado": "<p>Ao comparar os impactos financeiros de um financiamento de veículos e de um financiamento para crédito estudantil (Fies), um gerente orienta um cliente jovem em início de carreira. Sobre as diferenças conceituais dessas duas linhas, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "O crédito estudantil conta com carência obrigatória de 18 meses após a formatura em todos os contratos novos regidos pela reforma de 2017.",
+      "b": "O financiamento de veículo gera rendimento real atrelado à inflação, enquanto o crédito estudantil exige a alienação fiduciária do diploma.",
+      "c": "O veículo é um bem de consumo que sofre depreciação ao longo do tempo, enquanto o crédito estudantil é um investimento em capital humano focado na elevação de renda futura.",
+      "d": "O financiamento de veículos permite o uso do saldo do FGTS do trabalhador sem vinculação ao Sistema Financeiro da Habitação."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "A Lei 13.530/2017 eliminou a carência de 18 meses após a formatura para os novos contratos do Fies.",
+      "b": "Veículos depreciam em vez de render com a inflação, e diplomas acadêmicos não são bens passíveis de alienação fiduciária.",
+      "d": "A utilização do saldo do FGTS é restrita às operações imobiliárias enquadradas no Sistema Financeiro da Habitação (SFH)."
+     }
+    },
+    {
+     "id": "cpa-rel-07-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. A orientação técnica em financiamento de veículos é priorizar maior entrada e prazos mais curtos, evitando que a depreciação contínua do bem faça o saldo devedor da dívida superar o próprio valor de venda do veículo.</p><p>As alternativas A, C e D falham ao ignorar a depreciação acelerada dos carros, sugerir uso ilegal do FGTS para veículos ou inventar regras absurdas sobre consórcios sem taxas.</p>",
+     "enunciado": "<p>Um cliente pretende adquirir um veículo de R$ 80 mil e avalia duas propostas de financiamento. A proposta 1 prevê financiamento integral sem entrada em 60 meses, enquanto a proposta 2 exige entrada de R$ 30 mil e prazo de 24 meses. Sob a ótica do planejamento financeiro e do risco de descasamento por depreciação, a orientação adequada é:</p>",
+     "alternativas": {
+      "a": "Escolher o prazo de 60 meses sem entrada (proposta 1) para reduzir o valor nominal da parcela, visto que veículos valorizam no mercado usado.",
+      "b": "Dar a maior entrada possível e encurtar o prazo (proposta 2), evitando que a depreciação do bem faça o saldo devedor superar o valor de mercado do veículo.",
+      "c": "Financiar em 60 meses sem entrada e utilizar o saldo do FGTS do comprador para amortizar as parcelas futuras.",
+      "d": "Escolher a proposta 1 e compensar a depreciação contratando seguro do veículo, o que garantiria a cobertura do saldo devedor em qualquer cenário de venda."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "Veículos depreciam no mercado usado, fazendo com que prazos longos acumulem juros e deixem o saldo devedor maior que o bem.",
+      "c": "O saldo do FGTS não pode ser utilizado para amortizar financiamento de veículos.",
+      "d": "O seguro cobre sinistro, e não a diferença entre saldo devedor e valor de mercado numa venda voluntária; o que protege o cliente é maior entrada e prazo mais curto."
+     }
+    },
+    {
+     "id": "cpa-rel-07-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. Como o imóvel é um ativo altamente ilíquido que não pode ser convertido em caixa rapidamente em emergências, o profissional deve orientar a manutenção da reserva de emergência em liquidez imediata, dando uma entrada moderada.</p><p>As alternativas B, C e D erram ao defender o esvaziamento total do colchão de liquidez da família, promover resgates incompatíveis ou inventar cauções obrigatórias no Bacen.</p>",
+     "enunciado": "<p>Um casal possui R$ 100 mil aplicados na caderneta de poupança como sua única reserva de emergência e pretende adquirir um imóvel residencial de moradia enquadrado no Sistema Financeiro da Habitação (SFH). Eles procuram o gerente dispostos a dar a totalidade dos R$ 100 mil como entrada. A conduta de atendimento correta para essa situação é:</p>",
+     "alternativas": {
+      "a": "Orientar a utilização de uma entrada menor e a preservação da reserva de emergência, visto que o imóvel possui altíssima iliquidez e não resolve imprevistos imediatos.",
+      "b": "Orientar o casal a utilizar 100% da poupança na entrada, pois a entrada maior elimina a incidência de juros sobre o saldo financiado.",
+      "c": "Recomendar a utilização de todo o dinheiro da reserva de emergência e o resgate compulsório de fundos de ações fechados para resgate no mesmo dia.",
+      "d": "Exigir que a reserva de emergência seja depositada em conta caução do Banco Central como condição para liberação da alienação fiduciária."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Entrada maior reduz o saldo financiado e o total de juros, mas não os elimina; e zerar a reserva expõe a família ao rotativo no primeiro imprevisto, porque o imóvel é ilíquido.",
+      "c": "Além de esvaziar a reserva, a alternativa supõe resgate imediato em fundos fechados, que por definição não admitem resgate de cotas antes do encerramento do prazo.",
+      "d": "O Banco Central não exige depósito de caução da reserva de emergência do cliente para liberar financiamentos imobiliários."
+     }
+    },
+    {
+     "id": "cpa-rel-07-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a B. Com a reforma promovida pela Lei 13.530/2017, a carência de 18 meses após a formatura acabou, a amortização inicia-se após a conclusão do curso, a modalidade principal passou a ter juro zero e a exigência de fiador foi mitigada pelo fundo garantidor.</p><p>As alternativas A, C e D erram ao invocar regras e prazos de carência revogados, exigir garantias imobiliárias descabidas ou negar a atualização periódica por editais.</p>",
+     "enunciado": "<p>Um estudante do ensino superior planeja contratar o financiamento estudantil através do Fies regulado pela Lei 13.530/2017 para custear sua graduação. Ao analisar as regras vigentes do programa no tocante ao período pós-formatura, à taxa de juros na modalidade principal e às garantias, verifica-se que:</p>",
+     "alternativas": {
+      "a": "O estudante dispõe de 18 meses de carência sem cobranças após a formatura, e a parcela pós-carência é fixa, sem qualquer vinculação à renda do formado.",
+      "b": "A carência de 18 meses após a formatura foi eliminada, a modalidade principal possui juro zero, e a dependência do fiador tradicional foi reduzida com a adesão ao fundo garantidor.",
+      "c": "O pagamento das parcelas de amortização inicia-se apenas quando o formado atingir 10 anos de graduação, sendo exigida a alienação fiduciária de bem imóvel próprio.",
+      "d": "Os parâmetros de prazos e taxas do Fies são imutáveis por lei constitucional, sendo proibida a alteração por editais das instituições de ensino."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "A carência de 18 meses foi extinta pela reforma da Lei 13.530/2017 e a modalidade principal opera com juro zero.",
+      "c": "A cobrança tem início imediatamente após a conclusão do curso (sem a antiga carência) e a garantia baseia-se em fundo garantidor, não em imóveis.",
+      "d": "Os parâmetros práticos como faixas de renda e condições são regulados e ajustados frequentemente a cada edital do programa."
+     }
+    }
+   ],
+   "Microcrédito, crédito rural e linhas para reforma e energia sustentável": [
+    {
+     "id": "cpa-rel-08-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. No microcrédito produtivo orientado, a taxa efetiva de juros é limitada a 4% ao mês, a taxa de abertura de crédito tem teto de 3% (vedada qualquer outra tarifa) e a soma dos saldos devedores na mesma instituição não pode ultrapassar R$ 21 mil.</p><p>As alternativas B, C e D erram ao afirmar que os juros são livres, proibir a taxa de abertura legal permitida ou exigir garantias reais incompatíveis com o produto.</p>",
+     "enunciado": "<p>O microcrédito produtivo orientado é uma modalidade destinada a pequenos empreendedores com regras específicas estabelecidas pelo Conselho Monetário Nacional (CMN). Quanto aos limites operacionais de taxas e tetos aplicáveis a essa modalidade, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "A taxa de juros efetiva máxima é de 4% ao mês, a taxa de abertura de crédito é de no máximo 3% do valor concedido e o saldo devedor do tomador na mesma instituição não pode exceder R$ 21 mil.",
+      "b": "As taxas de juros são livremente pactuadas sem teto regulatório, e o saldo devedor na mesma instituição pode atingir até R$ 100 mil.",
+      "c": "A taxa de abertura de crédito é totalmente proibida, mas a instituição pode cobrar tarifas mensais de manutenção de cadastro.",
+      "d": "A concessão exige obrigatoriamente a apresentação de garantias reais imobiliárias registradas em cartório."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "O CMN fixa teto de juros efetivos de até 4% ao mês e limita o saldo devedor na mesma instituição a R$ 21 mil.",
+      "c": "A taxa de abertura de crédito é permitida até o limite de 3%, sendo vedada expressamente qualquer outra taxa ou despesa.",
+      "d": "O microcrédito atende público sem garantias reais, sendo comum a utilização do aval solidário."
+     }
+    },
+    {
+     "id": "cpa-rel-08-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. O Manual de Crédito Rural define estritamente quatro finalidades operacionais: custeio (despesas do ciclo produtivo), investimento (bens de vida útil longa), comercialização (estocagem e venda da safra) e industrialização (beneficiamento da produção).</p><p>As alternativas A, B e C erram ao incluir previdência, imobiliário urbano, capital de giro livre ou estruturas securitárias que não compõem as finalidades rurais oficiais.</p>",
+     "enunciado": "<p>O crédito rural é uma linha de financiamento direcionada regulada pelo Manual de Crédito Rural do Banco Central. As quatro finalidades oficiais previstas pela regulamentação para o crédito rural correspondem a:</p>",
+     "alternativas": {
+      "a": "Arrendamento mercantil, exportação industrial, investimento e securitização.",
+      "b": "Custeio, investimento, previdência privada e capital de giro livre.",
+      "c": "Aquisição de imóvel urbano, reforma residencial, custeio e poupança.",
+      "d": "Custeio, investimento, comercialização e industrialização."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "Arrendamento mercantil e securitização constituem operações financeiras específicas, e não finalidades do crédito rural.",
+      "b": "Previdência privada e capital de giro de livre destinação não são finalidades do crédito rural.",
+      "c": "Imóveis urbanos e reformas residenciais pertencem ao crédito imobiliário, e não às finalidades rurais."
+     }
+    },
+    {
+     "id": "cpa-rel-08-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. A Lei 15.364/2026 permitiu a destinação complementar a microfinanças (necessidades essenciais como saúde, moradia de baixo valor e mobilidade) limitada a até 20% do limite do somatório dos saldos devedores das operações de microcrédito produtivo orientado do tomador.</p><p>As alternativas A, B e D falham ao afirmar a extinção do crédito produtivo, permitir consumos supérfluos sem limites ou inventar regras de depósitos a prazo em bancos de investimento.</p>",
+     "enunciado": "<p>Com a promulgação da Lei 15.364 em 2026, foi criada a categoria de microfinanças no âmbito das operações de microcrédito. Ao comparar o núcleo produtivo tradicional do microcrédito com a nova categoria de microfinanças, verifica-se que:</p>",
+     "alternativas": {
+      "a": "As microfinanças permitem a liberação ilimitada de recursos sem teto para a compra de veículos de luxo e viagens de lazer.",
+      "b": "A nova categoria substituiu integralmente o microcrédito produtivo, proibindo a concessão de recursos para atividades comerciais de microempreendedores.",
+      "c": "As microfinanças admitem o atendimento de necessidades essenciais (como moradia de baixo valor, saúde e mobilidade) até 20% do limite do somatório dos saldos devedores das operações de microcrédito produtivo orientado do tomador.",
+      "d": "A modalidade de microfinanças exige o repasse compulsório de 100% dos depósitos a prazo captados pelos bancos de investimento."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "As microfinanças são restritas a finalidades essenciais de cidadania (saúde, moradia, mobilidade) e limitadas ao teto de 20%.",
+      "b": "O núcleo do microcrédito continua focado na atividade produtiva, servindo as microfinanças apenas como um complemento com teto.",
+      "d": "O direcionamento obrigatório atinge os depósitos à vista (2%) em bancos comerciais, múltiplos e Caixa, não cobrando 100% dos depósitos a prazo."
+     }
+    },
+    {
+     "id": "cpa-rel-08-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. A aquisição de máquinas de vida útil longa é crédito de investimento e, para contratos a partir de 1º de março de 2026 em propriedades com área superior a 300 hectares, a fiscalização por sensoriamento remoto tornou-se obrigatória por norma.</p><p>As alternativas A, B e C erram na classificação da finalidade (confundindo investimento com custeio, crédito livre ou comercialização) ou negam a fiscalização e controle de notas.</p>",
+     "enunciado": "<p>Um produtor rural procura a agência para contratar financiamento destinado à aquisição de um trator agrícola e de colheitadeiras para sua fazenda de 350 hectares. Ele pergunta ao gerente sobre a classificação dessa operação e as exigências regulatórias de fiscalização. A orientação correta é:</p>",
+     "alternativas": {
+      "a": "A aquisição de máquinas agrícolas é classificada como crédito de comercialização, sendo proibida a verificação das notas fiscais das colheitadeiras.",
+      "b": "Trata-se de crédito rural de custeio, sendo obrigatória a visita presencial do gerente de contas à fazenda antes de cada liberação de parcela.",
+      "c": "A operação enquadra-se como empréstimo pessoal de livre destinação, dispensando qualquer comprovação de compra ou fiscalização documental.",
+      "d": "Trata-se de crédito rural de investimento, sendo a fiscalização por sensoriamento remoto obrigatória para empreendimentos contratados a partir de março de 2026 com área superior a 300 hectares."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "A compra de colheitadeiras constitui investimento (não comercialização) e a fiscalização exige a apresentação das notas fiscais em até 60 dias.",
+      "b": "Máquinas de vida útil longa enquadram-se como investimento (não custeio), e o monitoramento pode utilizar métodos remotos sem obrigatoriedade de visita presencial geral.",
+      "c": "Tratores e máquinas rurais financiam-se via crédito rural direcionado de investimento, exigindo orçamento e fiscalização das notas fiscais."
+     }
+    },
+    {
+     "id": "cpa-rel-08-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a C. Na linha de reforma, o repasse vinculado ao lojista impede o desvio de finalidade; no financiamento de energia solar, a garantia usual é a alienação fiduciária dos painéis, que confere ao banco a propriedade resolúvel e ao cliente a posse direta para uso.</p><p>As alternativas A, B e D erram ao permitir depósitos livres no crédito de reforma, exigir perda definitiva da moradia, encaminhar para rotativo de cartão ou retirar do cliente a posse direta dos painéis solares.</p>",
+     "enunciado": "<p>Um cliente busca financiamento bancário para reforma residencial (material de construção) e para instalação de painéis de energia solar fotovoltaica em seu imóvel. Ao analisar a operacionalização dessas duas linhas de crédito direcionadas quanto à liberação de recursos e às garantias, a conduta técnica correta exige que:</p>",
+     "alternativas": {
+      "a": "Ambas as operações sejam concedidas sem qualquer exigência de garantia ou vinculação, através do uso do rotativo do cartão de crédito corporativo.",
+      "b": "O valor do financiamento de material de construção seja depositado livremente na conta corrente do cliente, e a energia solar exija a transferência definitiva e irrevogável do imóvel ao banco.",
+      "c": "A linha de reforma utilize o repasse vinculado com pagamento direto ao lojista conveniado, e a linha de energia solar utilize a alienação fiduciária dos equipamentos com propriedade resolúvel para o credor.",
+      "d": "O banco retenha a posse direta dos painéis solares na agência até a quitação da última parcela do contrato."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "Linhas especiais direcionadas possuem regras de comprovação e repasse vinculado, não sendo operadas via rotativo de cartão.",
+      "b": "O crédito de reforma utiliza repasse vinculado para evitar desvio de finalidade, e a alienação fiduciária confere propriedade resolúvel, mantendo a posse com o cliente.",
+      "d": "Na alienação fiduciária de equipamentos, a posse direta e o uso dos painéis fotovoltaicos ficam com o cliente no imóvel."
+     }
+    }
+   ],
+   "Reserva de emergência: montante e ativos de alta liquidez": [
+    {
+     "id": "cpa-rel-09-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. A reserva de emergência serve como um escudo financeiro para cobrir imprevistos cotidianos, e seu tamanho deve ser mensurado a partir do custo de vida mensal (despesas essenciais) multiplicado pela quantidade de meses recomendada de acordo com a estabilidade da renda do cliente.</p><p>As alternativas A, B e D erram ao usar a renda bruta no cálculo, indicar ativos voláteis como ações ou recomendar produtos ilíquidos como previdência fechada.</p>",
+     "enunciado": "<p>A reserva de emergência constitui a etapa inicial do planejamento financeiro pessoal de qualquer investidor. Sob o ponto de vista da mensuração do montante e da sua função precípua, a reserva serve para:</p>",
+     "alternativas": {
+      "a": "Garantir a compra de ações no mercado fracionário durante momentos de alta volatilidade da bolsa de valores.",
+      "b": "Maximizar a rentabilidade da carteira no longo prazo, sendo calculada multiplicando-se o salário bruto pelo número de dependentes.",
+      "c": "Absorver imprevistos financeiros, devendo seu valor ser dimensionado com base no custo de vida mensal da família e na estabilidade da sua renda.",
+      "d": "Acumular recursos em previdência fechada para obtenção do benefício fiscal máximo no Imposto de Renda."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "Compra de ações envolve risco de mercado e oscilação, o que contraria a função protetiva da reserva de emergência.",
+      "b": "A reserva baseia-se no custo de vida mensal e não na renda bruta multiplicada por dependentes.",
+      "d": "Previdência fechada possui travas de iliquidez, sendo inadequada para a função de socorro financeiro imediato."
+     }
+    },
+    {
+     "id": "cpa-rel-09-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. A régua do tamanho da reserva acompanha a volatilidade e previsibilidade da renda: servidores públicos com estabilidade exigem de 3 a 6 meses do custo de vida, enquanto autônomos e empresários necessitam de 9 a 12 meses devido à maior oscilação em suas receitas.</p><p>As alternativas A, B e C erram ao atribuir seguro-desemprego a autônomos, engessar o montante em 24 meses de salário bruto ou isentar servidores estáveis da necessidade de reserva.</p>",
+     "enunciado": "<p>Ao comparar os perfis de um servidor público estatutário com estabilidade e o de um profissional autônomo sem renda fixa mensal, o profissional de atendimento deve dimensionar a reserva de emergência de ambos considerando que:</p>",
+     "alternativas": {
+      "a": "O servidor público está isento de manter reserva de emergência por não possuir risco de flutuação de despesas de saúde ou familiares.",
+      "b": "O autônomo necessita de uma reserva menor do que o servidor público por possuir a garantia automática do seguro-desemprego.",
+      "c": "Ambos devem manter exatamente o mesmo valor fixo equivalente a 24 meses de salários brutos em contas de depósito a prazo fechadas.",
+      "d": "Quanto maior a instabilidade da renda, maior deve ser a reserva (sendo 3 a 6 meses para o servidor estável e 9 a 12 meses para o autônomo)."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "Todo investidor está sujeito a despesas imprevistas (doenças, acidentes, reformas), precisando de reserva independentemente de seu vínculo profissional.",
+      "b": "O autônomo não tem acesso ao seguro-desemprego nem ao FGTS, exigindo uma reserva substancialmente maior do que o servidor estável.",
+      "c": "A quantidade de meses varia de acordo com a previsibilidade da renda e não se usa o salário bruto em depósitos ilíquidos."
+     }
+    },
+    {
+     "id": "cpa-rel-09-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. O Fundo Garantidor de Créditos (FGC) reduz o risco de crédito em aplicações como CDBs até o limite de R$ 250 mil por CPF em cada conglomerado financeiro, com o teto global de R$ 1 milhão renovável a cada quatro anos.</p><p>As alternativas A, C e D incorrem em erros ao prever coberturas ilimitadas, vincular os limites a contratos individuais ou errar os valores regulamentares do FGC.</p>",
+     "enunciado": "<p>Um investidor aplica sua reserva de emergência em um CDB de liquidez diária emitido por um banco de médio porte. A respeito da proteção e da limitação da garantia prestada pelo Fundo Garantidor de Créditos (FGC) a essa aplicação, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "O FGC cobre integralmente e sem limite de valor qualquer aplicação em CDB utilizada para fins de reserva de emergência.",
+      "b": "O FGC garante até R$ 250 mil por CPF em cada conglomerado financeiro, limitado ao teto global de R$ 1 milhão a cada quatro anos.",
+      "c": "A garantia do FGC para CDBs de liquidez diária é de R$ 250 mil por contrato de aplicação, sem limite de teto quadrienal.",
+      "d": "A cobertura do FGC limita-se a R$ 100 mil por CPF, sendo zerada caso o investidor realize o resgate antes de 365 dias."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "A cobertura do FGC não é ilimitada; submete-se ao teto de R$ 250 mil por conglomerado e R$ 1 milhão quadrienal.",
+      "c": "O teto de R$ 250 mil aplica-se por CPF e por conglomerado financeiro (não por contrato) e respeita o teto global de R$ 1 milhão a cada quatro anos.",
+      "d": "O valor correto da garantia individual por conglomerado é R$ 250 mil e não há perda por resgate em prazo inferior a um ano."
+     }
+    },
+    {
+     "id": "cpa-rel-09-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. A LCI possui carência mínima regulamentar de seis meses (Resolução CMN 5.215/2025 para papéis sem índice de preços), durante a qual o emissor é vedado de efetuar o resgate ou recomprar o título, o que torna o ativo totalmente incompatível com a necessidade de liquidez imediata da reserva.</p><p>As alternativas A, B e D erram ao afirmar que a carência é de um dia, usar prazos defasados de 12 meses com resgates por taxa ou tentar contornar normas legais de títulos com seguros de vida.</p>",
+     "enunciado": "<p>Um cliente ingressa na agência e deseja aplicar R$ 50 mil referentes à sua reserva de emergência em uma Letra de Crédito Imobiliário (LCI), atraído pela isenção de Imposto de Renda Pessoa Física. Considerando a regulamentação do CMN sobre prazos de carência sem atualização por índice de preços e a finalidade da reserva de emergência, a orientação correta do gerente deve ser:</p>",
+     "alternativas": {
+      "a": "Informar que a LCI possui prazo de carência de 12 meses fixos, mas que a instituição pode realizar o resgate antecipado diário mediante cobrança de taxa administrativa.",
+      "b": "Recomendar a LCI de forma irrestrita, pois o prazo mínimo de carência exigido pelo CMN para títulos imobiliários é de apenas 1 dia útil.",
+      "c": "Contraindicar a LCI para a reserva de emergência, pois o título possui prazo mínimo de vencimento de seis meses no qual a instituição não pode resgatar nem recomprar o papel.",
+      "d": "Autorizar a aplicação na LCI desde que o cliente contrate um seguro de vida com cobertura de resgate imediato no mesmo dia."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "Desde maio de 2025 o prazo da LCI comum é de seis meses (e não 12 meses), e a instituição emissora é expressamente proibida de recomprar ou resgatar antes do prazo legal.",
+      "b": "A LCI exige prazo mínimo de carência de seis meses (quando sem índice de preços), inviabilizando o resgate diário imediato que a reserva exige.",
+      "d": "A contratação de seguro de vida não altera as travas normativas de carência impostas pelo CMN para emissão de LCI."
+     }
+    },
+    {
+     "id": "cpa-rel-09-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a D. O Tesouro Selic e os fundos DI possuem baixíssima oscilação nominal e alta liquidez; a poupança exige atenção ao aniversário mensal para não perder o rendimento do mês, e a renda variável (ações) é terminantemente vedada para reservas pelo risco de oscilação e perdas no curto prazo.</p><p>As alternativas A, B e C erram ao atribuir rendimentos diários inexistentes à poupança, isentar fundos DI de come-cotas e IOF ou classificar ações como garantidas pelo Tesouro.</p>",
+     "enunciado": "<p>Um investidor precisa alocar sua reserva de emergência e analisa a dinâmica operacional, os tributos incidentes e os riscos de quatro aplicações: Tesouro Selic, caderneta de poupança, fundo de renda fixa DI e ações de empresas de grande porte. Com base nas características técnicas dessas aplicações, assinale a alternativa correta:</p>",
+     "alternativas": {
+      "a": "As ações de empresas de grande porte são recomendadas para a reserva por apresentarem alta liquidez em bolsa e garantia integral do Tesouro Nacional.",
+      "b": "A caderneta de poupança é o único veículo totalmente imune a perdas de rendimento intramês, pagando juros pro rata die em qualquer data de resgate.",
+      "c": "Os fundos DI são isentos de retenção semestral de imposto de renda (come-cotas) e isentos de IOF em resgates inferiores a 30 dias.",
+      "d": "O Tesouro Selic e os fundos DI atendem ao requisito de baixíssima volatilidade nominal, enquanto a poupança perde rentabilidade do mês se resgatada antes da data de aniversário e as ações são vedadas devido ao risco de mercado."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "Ações sofrem risco de mercado, com oscilação de preços, e não contam com garantia do Tesouro Nacional, o que as veta para a reserva de emergência.",
+      "b": "A poupança só credita rendimento na data de aniversário mensal; resgates em dias intermediários perdem o rendimento de todo o período.",
+      "c": "Fundos DI sofrem a incidência do come-cotas semestral (maio e novembro) e do IOF regressivo em resgates com menos de 30 dias."
+     }
+    }
+   ],
+   "Balanço patrimonial pessoal: indicadores e patrimônio líquido": [
+    {
+     "id": "cpa-rel-10-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. O balanço patrimonial fotografa a posição estática de riqueza (estoque) em uma data específica, onde os ativos devem ser atualizados e mensurados pelo seu valor de mercado corrente.</p><p>As alternativas B, C e D erram ao incluir movimentações de receitas e despesas (que pertencem ao fluxo), congelar valores históricos de compra ou excluir os ativos de uso da família.</p>",
+     "enunciado": "<p>O balanço patrimonial pessoal é uma ferramenta fundamental de análise financeira que difere do orçamento doméstico em sua natureza e temporalidade. Sobre a montagem do balanço patrimonial pessoal e a avaliação de seus componentes, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "O balanço mede o estoque acumulado de bens, direitos e obrigações em uma data específica, avaliando os ativos pelo seu valor de mercado.",
+      "b": "O balanço registra o fluxo de receitas e despesas mensais, devendo incluir o salário líquido e o valor da fatura de supermercado do mês.",
+      "c": "Os ativos do balanço devem ser mantidos obrigatoriamente pelo preço histórico de compra da escritura original sem atualização.",
+      "d": "O balanço patrimonial considera apenas bens de alta liquidez imediata, excluindo imóveis residenciais e veículos de uso familiar."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Salários e despesas de consumo semanal pertencem ao fluxo de caixa, não ao balanço de estoque estático.",
+      "c": "Os ativos no balanço patrimonial devem ser atualizados pelo valor de mercado na data da demonstração.",
+      "d": "Bens imobilizados como moradia e veículos entram normalmente no balanço na categoria de ativos de uso."
+     }
+    },
+    {
+     "id": "cpa-rel-10-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. A moradia familiar é um ativo de uso porque serve de habitação e não gera fluxo de renda, e as dívidas ativas devem ser lançadas no passivo pelo seu saldo devedor total remanescente.</p><p>As alternativas A, B e D erram ao classificar a residência própria como investimento, ignorar o PGBL do balanço ou colocar apenas parcelas mensais no passivo de estoque.</p>",
+     "enunciado": "<p>Na estrutura do balanço patrimonial pessoal, os ativos são divididos entre liquidez, uso e investimento, enquanto os passivos registram os compromissos financeiros. Ao comparar a classificação da moradia própria e o registro de dívidas no balanço, observa-se que:</p>",
+     "alternativas": {
+      "a": "A moradia própria e os saldos de PGBL são desconsiderados do balanço por não apresentarem cotação diária na bolsa de valores.",
+      "b": "A moradia própria é um ativo de investimento por gerar renda de aluguel direta, e o financiamento entra apenas pela parcela do mês seguinte.",
+      "c": "A moradia própria é classificada como ativo de uso, e o financiamento imobiliário deve ser lançado no passivo pelo saldo devedor total.",
+      "d": "O veículo da família entra no ativo de liquidez por possuir alienação fiduciária, e o financiamento de veículos entra no fluxo de caixa."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "PGBL e imóveis compõem os ativos do cliente (investimento e uso, respectivamente), independentemente de negociação em bolsa.",
+      "b": "A casa própria onde se mora não gera renda e constitui ativo de uso, enquanto o passivo registra o saldo devedor total, não a parcela.",
+      "d": "O veículo de uso é ativo de uso (baixa liquidez e depreciação) e o saldo devedor do seu financiamento integra o passivo no balanço."
+     }
+    },
+    {
+     "id": "cpa-rel-10-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. O Patrimônio Líquido é dado pela diferença entre Ativo Total e Passivo Total: R$ 600.000 - R$ 200.000 = R$ 400.000. O Índice de Endividamento (indicador de estoque do balanço) é a divisão do Passivo Total pelo Ativo Total: R$ 200.000 / R$ 600.000 = 0,3333, ou seja, 33,3%.</p><p>As alternativas B, C e D apresentam erros de cálculo aritmético na subtração do patrimônio líquido ou na razão de endividamento do balanço.</p>",
+     "enunciado": "<p>Um investidor possui R$ 600 mil em ativos totais (sendo R$ 100 mil em liquidez e R$ 500 mil em imóvel de uso) e R$ 200 mil em passivos totais. Ele poupa R$ 3 mil mensais de uma renda líquida de R$ 10 mil e paga R$ 2 mil em parcelas de financiamento. Ao calcular o Patrimônio Líquido e o Índice de Endividamento desse cliente, obtêm-se, respectivamente:</p>",
+     "alternativas": {
+      "a": "Patrimônio Líquido de R$ 400 mil e Índice de Endividamento de 33,3%.",
+      "b": "Patrimônio Líquido de R$ 800 mil e Índice de Endividamento de 50,0%.",
+      "c": "Patrimônio Líquido de R$ 300 mil e Índice de Endividamento de 20,0%.",
+      "d": "Patrimônio Líquido negativo em R$ 100 mil e Índice de Endividamento de 30,0%."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "O Patrimônio Líquido é calculado subtraindo-se o passivo do ativo (R$ 600 mil - R$ 200 mil = R$ 400 mil), e não somando-os.",
+      "c": "O cálculo correto do endividamento de estoque é passivo total por ativo total (R$ 200 mil / R$ 600 mil = 33,3%).",
+      "d": "O patrimônio líquido é positivo em R$ 400 mil, inexistindo insolvência técnica nesse cenário."
+     }
+    },
+    {
+     "id": "cpa-rel-10-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. Quando os passivos superam a soma dos ativos, o Patrimônio Líquido resulta negativo, o que configura insolvência técnica e restringe a concessão de novos financiamentos de longo prazo devido ao alto risco de inadimplência.</p><p>As alternativas A, B e D erram ao sugerir que insolvência facilita crédito, ignorar a relevância do balanço patrimonial ou transformar passivos caros em ativos isentos.</p>",
+     "enunciado": "<p>Um profissional de atendimento analisa a situação de um cliente que acumula dívidas no cartão de crédito rotativo e no cheque especial que superam o valor total de seus bens e investimentos. Ao interpretar esse resultado no balanço patrimonial pessoal e suas consequências para o crédito, o gerente deve constatar que:</p>",
+     "alternativas": {
+      "a": "A situação é neutra para a análise bancária, pois o balanço patrimonial avalia apenas o salário bruto mensal declarado no holerite.",
+      "b": "O Patrimônio Líquido negativo aumenta o indicador de liquidez e facilita a concessão automática de empréstimos sem garantia.",
+      "c": "O cliente possui Patrimônio Líquido negativo, caracterizando situação de insolvência técnica que reduz drasticamente o acesso a novas linhas de crédito de longo prazo.",
+      "d": "As dívidas que superam os ativos transformam-se automaticamente em ativos de investimento com isenção de imposto de renda."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "O balanço avalia a estrutura de estoque (bens e dívidas) e reflete a insolvência técnica, não se limitando ao salário.",
+      "b": "Patrimônio líquido negativo evidencia insolvência e aumenta o risco de crédito do cliente, dificultando novas linhas.",
+      "d": "Dívidas não viram ativos de investimento; tratam-se de passivos exigíveis que corroem o patrimônio líquido."
+     }
+    },
+    {
+     "id": "cpa-rel-10-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a A. O índice de endividamento e o índice de liquidez são métricas de estoque extraídas do balanço patrimonial; por outro lado, o comprometimento de renda (parcelas/renda) e o índice de poupança (poupado/renda) são métricas dinâmicas extraídas do fluxo de caixa.</p><p>As alternativas B, C e D erram ao misturar a origem das métricas de fluxo e estoque ou ao descartar a utilidade da análise combinada de ambas as ferramentas.</p>",
+     "enunciado": "<p>Durante uma sessão de planejamento financeiro, um gerente precisa diferenciar os indicadores originados da demonstração de estoque (balanço patrimonial) daqueles derivados da demonstração de fluxo (fluxo de caixa). Assinale a alternativa que relaciona corretamente as métricas à sua respectiva fonte de dados:</p>",
+     "alternativas": {
+      "a": "Índice de endividamento (passivo total/ativo total) e índice de liquidez vêm do balanço; comprometimento de renda e índice de poupança vêm do fluxo de caixa.",
+      "b": "Comprometimento de renda e índice de endividamento vêm ambos exclusivamente da DRE e do balanço imobiliário de mercado.",
+      "c": "O índice de poupança é um indicador estático de balanço patrimonial, e o índice de liquidez mede as vendas anuais do comércio.",
+      "d": "Todos os quatro indicadores são mensurados estritamente pelo balanço patrimonial, sendo o fluxo de caixa descartado na análise bancária."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Comprometimento de renda é um indicador de fluxo (parcelas/renda), e não da DRE ou do balanço isolado.",
+      "c": "O índice de poupança (valor poupado no período/renda líquida) mede movimento e vem do fluxo de caixa, não do balanço estático.",
+      "d": "A análise financeira combina indicadores de estoque (balanço) e de fluxo (fluxo de caixa), não descartando o fluxo."
+     }
+    }
+   ],
+   "Etapas do planejamento financeiro pessoal e metas": [
+    {
+     "id": "cpa-rel-11-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. A primeira etapa do processo consiste no levantamento dos objetivos financeiros do cliente, fase dedicada exclusivamente a compreender suas necessidades, prioridades e horizonte, na qual é vedado fazer qualquer recomendação de produtos.</p><p>As alternativas B, C e D erram ao antecipar a execução de investimentos, indicar a etapa final de monitoramento ou utilizar escopos de contratação fora da norma cobrada.</p>",
+     "enunciado": "<p>O planejamento financeiro pessoal é estruturado em um processo composto por cinco etapas sequenciais. A primeira etapa desse processo e a sua respectiva fronteira de atuação correspondem a:</p>",
+     "alternativas": {
+      "a": "Levantamento dos objetivos financeiros da clientela, etapa na qual não se deve realizar qualquer recomendação de produtos.",
+      "b": "Implementação imediata do plano de investimentos, executando a compra de produtos de alta rentabilidade.",
+      "c": "Monitoramento e revisão anual do portfólio, com realocação compulsória de ativos no mesmo dia.",
+      "d": "Definição do relacionamento com o cliente, com explicação dos serviços prestados, da remuneração e das responsabilidades de cada parte."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A execução e compra de ativos pertencem à quarta etapa (implementação), e não à primeira.",
+      "c": "O monitoramento é a quinta e última etapa do processo de planejamento.",
+      "d": "Definir o relacionamento é a primeira etapa do modelo de seis etapas do planejador financeiro certificado, e não do recorte de cinco etapas desta certificação, que começa pelos objetivos do cliente."
+     }
+    },
+    {
+     "id": "cpa-rel-11-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. O momento de vida refere-se a aspectos objetivos e circunstanciais (como idade, dependentes, renda, estágio da carreira e patrimônio), enquanto o perfil de risco envolve a disposição psicológica do indivíduo em tolerar flutuações e assumir perdas no curto prazo.</p><p>As alternativas A, B e D erram ao tratar os termos como sinônimos, associá-los a métricas operacionais de produtos ou considerar o momento de vida imutável.</p>",
+     "enunciado": "<p>Ao estruturar o planejamento financeiro de um investidor, o profissional de atendimento precisa diferenciar os conceitos de \"momento de vida\" e \"perfil de risco\". Ao comparar os dois conceitos, verifica-se que:</p>",
+     "alternativas": {
+      "a": "O momento de vida avalia apenas a volatilidade histórica dos fundos, enquanto o perfil de risco mede a alíquota de Imposto de Renda.",
+      "b": "Ambos os conceitos são rigorosamente idênticos, sendo determinados de forma exclusiva pela idade cronológica do investidor.",
+      "c": "O momento de vida é objetivo e circunstancial (fase profissional, dependentes e patrimônio), enquanto o perfil de risco possui um componente psicológico de tolerância a perdas.",
+      "d": "O perfil de risco é definido exclusivamente pelo volume de dívidas, e o momento de vida é imutável ao longo do tempo."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "Volatilidade de fundos e tributação de IRPF não definem os conceitos de momento de vida nem de perfil de risco do cliente.",
+      "b": "Momento de vida e perfil de risco são conceitos distintos e não dependem unicamente da idade do cliente.",
+      "d": "O perfil de risco envolve fatores psicológicos e de conhecimento, enquanto o momento de vida evolui ao longo do tempo."
+     }
+    },
+    {
+     "id": "cpa-rel-11-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. Para ser considerada bem estruturada e operacionalizável no planejamento financeiro, uma meta precisa apresentar três elementos essenciais: valor definido, prazo para realização e prioridade, além de ser realista frente à capacidade de poupança do cliente.</p><p>As alternativas A, B e D falham ao associar a meta a características de produtos, sugerir alocações inadequadas ou aceitar enunciados abstratos sem métricas quantitativas.</p>",
+     "enunciado": "<p>Um cliente declara ao seu gerente de contas que tem como objetivo financeiro \"ter uma vida financeira tranquila no futuro\". Sob a ótica das técnicas de planejamento financeiro, para que esse desejo se transforme em uma meta bem estruturada, é necessário que ele apresente:</p>",
+     "alternativas": {
+      "a": "Alocação compulsória de 100% dos recursos em fundos de renda variável de tecnologia sem prazo.",
+      "b": "Garantia integral do Fundo Garantidor de Créditos e isenção total do Imposto de Renda Pessoa Física.",
+      "c": "Valor definido, prazo determinado e prioridade estabelecida, sendo compatível com a sua capacidade de poupança.",
+      "d": "Apenas um desejo abstrato, sendo desnecessária a mensuração monetária ou a fixação de prazos."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "Alocar 100% em ações de tecnologia violaria o suitability e não constitui a estruturação de uma meta.",
+      "b": "Garantia do FGC e isenção tributária são atributos de produtos de investimento específicos, não elementos de uma meta bem estruturada.",
+      "d": "Desejos vagos sem valor ou prazo não constituem metas financeiras aplicáveis."
+     }
+    },
+    {
+     "id": "cpa-rel-11-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. O desenvolvimento do plano e a sua implementação são etapas distintas: após a apresentação e aprovação das estratégias (etapa 3), o plano entra em execução prática através das movimentações e reorganizações financeiras (etapa 4).</p><p>As alternativas A, C e D erram ao encerrar o planejamento sem monitoramento, engessar o processo exigindo reiniciar do zero a cada ordem ou adulterar o perfil de risco do cliente.</p>",
+     "enunciado": "<p>Um gerente de investimentos concluiu o levantamento de dados e a avaliação da situação financeira de uma cliente. Ele elaborou um plano de ação completo com a recomendação de alocação de ativos e ajustes no orçamento. Ao apresentar a proposta à cliente, ela aprova verbalmente as estratégias. Considerando a fronteira entre as etapas do planejamento financeiro, a conduta correta do profissional para passar para a etapa de implementação é:</p>",
+     "alternativas": {
+      "a": "Dispensar o acompanhamento futuro, visto que a aprovação do plano encerra definitivamente o processo de planejamento.",
+      "b": "Executar as movimentações e reestruturações do portfólio, marcando a transição do desenvolvimento para a implementação do plano.",
+      "c": "Refazer o questionário de objetivos desde a primeira etapa a cada nova ordem de compra solicitada pela cliente.",
+      "d": "Alterar unilateralmente o perfil da cliente para arrojado para acelerar o cumprimento do plano de ação."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "O planejamento não termina na aprovação ou execução; exige a quinta etapa de monitoramento e revisão contínua.",
+      "c": "Não há necessidade de reiniciar o processo completo do zero a cada ordem pontual dentro de um plano aprovado.",
+      "d": "Alterar arbitrariamente o perfil do cliente para arrojado sem fundamentação viola frontalmente a regulação de suitability."
+     }
+    },
+    {
+     "id": "cpa-rel-11-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a A. A etapa de monitoramento e revisão é dinâmica e, embora exija uma periodicidade mínima anual, deve ser acionada imediatamente diante de eventos relevantes de vida, como nascimento de dependentes, alterações expressivas de renda ou mudanças no cenário econômico.</p><p>As alternativas B, C e D erram ao adiar a revisão por cinco anos, sugerir resgates para produtos inadequados de capitalização ou ignorar a nova realidade orçamentária da família.</p>",
+     "enunciado": "<p>Um investidor implementou seu plano de ação há seis meses e atinge as metas parciais estabelecidas. Contudo, no mês corrente, ele sofreu uma redução imprevista de 40% em sua renda mensal e sua esposa deu à luz o primeiro filho do casal. Diante desses eventos e considerando as regras que regem a quinta etapa (monitoramento e revisão) do planejamento financeiro pessoal, a conduta técnica adequada é:</p>",
+     "alternativas": {
+      "a": "Iniciar a revisão do plano de ação imediatamente, visto que alterações relevantes na renda ou no contexto familiar disparam a necessidade de reavaliação dos objetivos e estratégias.",
+      "b": "Manter a carteira e o orçamento inalterados até completar obrigatoriamente cinco anos da implementação original.",
+      "c": "Cancelar o plano de forma definitiva e orientar o cliente a resgatar 100% dos seus investimentos para aplicar em títulos de capitalização.",
+      "d": "Ignorar a mudança de renda e exigir que o cliente mantenha o mesmo valor de aporte mensal sob pena de multa administrativa."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A revisão deve ocorrer no mínimo uma vez por ano ou imediatamente após eventos de vida relevantes (como alteração de renda ou nascimento de filhos).",
+      "c": "Cancelar o planejamento para aportar em capitalização agrava a situação do cliente e fere as boas práticas de planejamento.",
+      "d": "O planejamento deve se adaptar à capacidade real de poupança do cliente, inexistindo qualquer multa por redução de aportes."
+     }
+    }
+   ],
+   "Planejamento para aposentadoria e fundo educacional": [
+    {
+     "id": "cpa-rel-12-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. O PGBL destina-se a quem entrega a declaração no modelo completo e contribui para o regime geral ou próprio de previdência, permitindo deduzir até 12% da renda bruta tributável, cobrando imposto sobre o valor total no resgate; já o VGBL não abate na declaração e tributa exclusivamente os rendimentos decorrentes da aplicação.</p><p>As alternativas A, C e D erram ao dar benefício fiscal ao VGBL no modelo simplificado, inventar incidência de come-cotas em previdência ou recomendar o PGBL para isentos.</p>",
+     "enunciado": "<p>O planejamento de previdência privada complementar envolve a escolha adequada do plano (PGBL ou VGBL) conforme o perfil tributário do investidor. A respeito das regras de dedução fiscal e da incidência de Imposto de Renda no PGBL e no VGBL, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "O VGBL permite deduzir até 12% da renda bruta anual tributável na declaração simplificada, e o imposto no resgate incide sobre o valor total do plano.",
+      "b": "O PGBL permite deduzir até 12% da renda bruta anual tributável na declaração completa, e o imposto incide sobre o valor total no resgate; o VGBL não deduz e tributa apenas os rendimentos.",
+      "c": "Ambas as modalidades sofrem tributação semestral antecipada via come-cotas nos meses de maio e novembro, idêntica aos fundos de renda fixa tradicionais.",
+      "d": "O PGBL é indicado prioritariamente para investidores isentos de Imposto de Renda Pessoa Física ou que utilizam a declaração simplificada."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "O VGBL não permite dedução de aportes e tributa apenas os rendimentos no resgate, sendo o PGBL que permite a dedução de até 12% no modelo completo.",
+      "c": "Planos de previdência complementar (PGBL e VGBL) não sofrem a incidência do come-cotas semestral em maio e novembro.",
+      "d": "O PGBL é contraindicado para isentos ou optantes do modelo simplificado, pois estes pagariam imposto sobre o total sem aproveitar o benefício fiscal."
+     }
+    },
+    {
+     "id": "cpa-rel-12-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. Enquanto a aposentadoria aceita flexibilizações de cronograma (adiar a data ou ajustar o valor da renda), o fundo educacional tem data fixa (a matrícula do filho na faculdade aos 18 anos), o que torna indispensável desriscar a carteira anos antes para proteger o capital.</p><p>As alternativas A, B e D erram ao travar a liquidez da aposentadoria na juventude, incentivar renda variável de alto risco às vésperas da faculdade ou negar a necessidade de desriscagem da carteira.</p>",
+     "enunciado": "<p>Ao comparar os objetivos de planejamento financeiro para a aposentadoria e para a formação de um fundo educacional para os filhos, constata-se que a diferença estrutural entre as duas metas reside no fato de que:</p>",
+     "alternativas": {
+      "a": "O fundo educacional não admite acumulação na renda fixa, devendo ser integralmente constituído por ações de alta volatilidade até o mês de ingresso na faculdade.",
+      "b": "A aposentadoria exige 100% de alocação em ativos de liquidez diária desde a juventude, enquanto o fundo educacional opera obrigatoriamente com fundos fechados ilíquidos.",
+      "c": "A aposentadoria possui flexibilidade no ajuste de prazos, enquanto o fundo educacional possui data rígida no calendário que exige a redução do risco da carteira no ciclo final.",
+      "d": "Ambas as metas possuem a mesma tolerância ao risco e não exigem readequação da carteira à medida que a data do usufruto se aproxima."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "Manter renda variável de alto risco na véspera do ingresso na faculdade expõe o fundo educacional a oscilações graves no ano do evento fixo.",
+      "b": "A fase inicial da aposentadoria comporta risco para buscar ganho real e não exige 100% de liquidez diária; o fundo educacional tampouco opera com fundos fechados ilíquidos, já que precisa de liquidez crescente na reta final.",
+      "d": "A proximidade do resgate impõe a desriscagem da carteira em ambos os casos, e o fundo educacional possui uma data de execução bem mais rígida que a aposentadoria."
+     }
+    },
+    {
+     "id": "cpa-rel-12-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. No resgate sob tabela regressiva aplica-se o PEPS (onde cada aporte conta seu próprio tempo) e, conforme fixado pelo STF no Tema 1.214, não incide o imposto estadual ITCMD sobre o repasse dos saldos de PGBL ou VGBL aos beneficiários na morte do titular.</p><p>As alternativas B, C e D erram ao achar que o aniversário de 10 anos do plano limpa o prazo de aportes recentes, ignorar a opção de regime no primeiro resgate via Lei 14.803/2024 ou zerar prazos na portabilidade.</p>",
+     "enunciado": "<p>Um participante de plano de previdência sob o regime de tributação regressiva acumulou aportes ao longo de 12 anos e decide efetuar o resgate parcial do saldo. Considerando a legislação aplicável à contagem do prazo no resgate e as atualizações trazidas pela Lei 14.803/2024 e pela jurisprudência sobre sucessão, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "A apuração da alíquota no resgate utiliza o método PEPS (Primeiro que Entra, Primeiro que Sai) por aporte, e no falecimento do titular o repasse aos beneficiários não sofre incidência de ITCMD.",
+      "b": "Atingidos dez anos do plano, todos os aportes posteriores recebem automaticamente a alíquota mínima de 10% no resgate imediato.",
+      "c": "A opção pelo regime tributário regressivo deve ser feita compulsoriamente no ato da adesão ao plano, sem possibilidade de definição posterior no primeiro resgate.",
+      "d": "A transferência do plano via portabilidade zera a contagem do tempo acumulado dos aportes e tributa o saldo em 35%."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "No resgate pela tabela regressiva a contagem de prazo é feita por aporte pelo rito do PEPS; aportes recentes pagam alíquotas maiores (ex: 35% até 2 anos).",
+      "c": "A Lei 14.803/2024 permitiu a opção pelo regime tributário (regressivo ou progressivo) até o momento da obtenção do benefício ou requisição do primeiro resgate.",
+      "d": "A portabilidade preserva o tempo acumulado dos aportes no plano de origem e não gera tributação do saldo."
+     }
+    },
+    {
+     "id": "cpa-rel-12-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. Como o cliente contribui para o INSS, declara no modelo completo e aporta até 12% da renda bruta, o PGBL é o plano ideal. Além disso, como o horizonte é longo (25 anos), o regime regressivo permitirá que os rendimentos e aportes atinjam a alíquota mínima de 10% na fonte.</p><p>As alternativas A, B e C erram ao associar a dedução ao VGBL, atribuir retenção de 15% de antecipação à tabela regressiva ou sugerir o modelo simplificado com PGBL.</p>",
+     "enunciado": "<p>Um cliente de 35 anos entrega a Declaração de Ajuste Anual do IRPF pelo modelo completo e possui renda tributável de R$ 150 mil por ano. Ele contribui para o INSS e deseja alocar R$ 18 mil anuais (12% da sua renda) em previdência complementar visando a aposentadoria em 25 anos. O produto mais adequado e a orientação correta quanto ao regime tributário para esse perfil são:</p>",
+     "alternativas": {
+      "a": "Sugerir a aplicação em PGBL no modelo simplificado para evitar a tributação do valor total resgatado no futuro.",
+      "b": "Recomendar o VGBL no regime progressivo, por ser o único plano que permite abatimento do Imposto de Renda para optantes do modelo completo.",
+      "c": "Indicar a contratação de PGBL no regime regressivo, alertando que os resgates pagarão 15% fixos na fonte como tributação definitiva sem direito a alíquotas menores.",
+      "d": "Indicar o PGBL no regime regressivo, aproveitando o abatimento fiscal integral de 12% e visando a alíquota mínima de 10% pelo longo prazo de acumulação."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "O PGBL exige o modelo completo para usufruir da dedução; usá-lo com o modelo simplificado tributaria o saldo total sem dar o abatimento do imposto.",
+      "b": "O VGBL não confere benefício de abatimento fiscal na declaração do Imposto de Renda.",
+      "c": "A retenção de 15% na fonte refere-se à antecipação do regime progressivo, e não à tabela regressiva que reduz até o piso de 10%."
+     }
+    },
+    {
+     "id": "cpa-rel-12-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a A. O Tesouro Educa+ foi projetado para custear a faculdade pagando 60 parcelas mensais durante o período do curso (5 anos), enquanto o Tesouro Renda+ foi criado para a aposentadoria pagando 240 parcelas mensais (20 anos de renda), ambos corrigidos pelo IPCA com juro real.</p><p>As alternativas B, C e D erram ao inverter os títulos e suas respectivas finalidades, utilizar o Tesouro Selic para pagamentos de parcelas de aposentadoria ou afirmar que os resgates ocorrem em parcela única corrigida pelo IGP-M.</p>",
+     "enunciado": "<p>Um casal planeja constituir uma reserva para arcar com as despesas da faculdade do filho recém-nascido (fundo educacional) e também reforçar a própria aposentadoria em 30 anos. O gerente estuda o uso de títulos públicos do Tesouro Direto desenhados especificamente para esses dois objetivos. A combinação correta de títulos e a dinâmica de pagamento de suas fases de usufruto correspondem a:</p>",
+     "alternativas": {
+      "a": "Tesouro Educa+ para o fundo educacional (paga 60 parcelas mensais durante 5 anos) e Tesouro Renda+ para a aposentadoria (paga 240 parcelas mensais durante 20 anos).",
+      "b": "Tesouro Renda+ para o fundo educacional (com pagamento em parcela única) e Tesouro Educa+ para a aposentadoria (com pagamentos vitalícios perpétuos).",
+      "c": "Tesouro Selic para a aposentadoria, com pagamento de 240 parcelas mensais sem correção pela inflação, e Tesouro Prefixado com juros semestrais para a faculdade, com os cupons isentos de imposto de renda.",
+      "d": "Tesouro Educa+ e Renda+ para ambos os objetivos, visto que ambos pagam o valor acumulado em parcela única exclusivamente corrigida pelo IGP-M na data do vencimento."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "As funções estão invertidas; o Educa+ atende à faculdade em 5 anos (60 parcelas) e o Renda+ à aposentadoria em 20 anos (240 parcelas).",
+      "c": "O Tesouro Selic é título pós-fixado de caixa, que devolve principal e juros no resgate e não paga 240 parcelas mensais corrigidas pela inflação como o Renda+; e nenhum título do Tesouro Direto paga cupom isento de imposto de renda.",
+      "d": "Os títulos Renda+ e Educa+ acumulam pelo IPCA mais juros reais e pagam renda mensal amortizada (240 e 60 meses, respectivamente), não parcela única pelo IGP-M."
+     }
+    }
+   ],
+   "IRPF: o que declarar, classificação de rendimentos e modelos": [
+    {
+     "id": "cpa-rel-13-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. Rendimentos de CDB e Tesouro Direto são tributados definitivamente na fonte e encerram a tributação ali, enquanto aplicações como LCI, LCA, LCD e poupança são classificadas como rendimentos isentos para a pessoa física.</p><p>As alternativas B, C e D erram ao inverter a isenção de LCI/LCA com a tributação do CDB, incluir títulos de renda fixa na tabela progressiva ou tributar a poupança pela tabela regressiva.</p>",
+     "enunciado": "<p>O Imposto de Renda Pessoa Física (IRPF) organiza as receitas do contribuinte nas fichas de rendimentos tributáveis, isentos e de tributação exclusiva na fonte. A respeito da correta classificação dos rendimentos de aplicações financeiras para a pessoa física, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "Rendimentos de CDBs e Tesouro Direto sofrem tributação exclusiva na fonte, enquanto rendimentos de LCI, LCA e poupança são isentos de Imposto de Renda.",
+      "b": "Rendimentos de LCI e LCA sofrem tributação exclusiva na fonte de 15%, enquanto CDBs e RDBs são totalmente isentos de Imposto de Renda.",
+      "c": "Todos os rendimentos de renda fixa privada são classificados na ficha de rendimentos tributáveis sujeitos ao ajuste anual na declaração.",
+      "d": "O rendimento da caderneta de poupança é tributado exclusivamente na fonte pela tabela regressiva de renda fixa."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "LCI e LCA para pessoa física são isentas de Imposto de Renda, enquanto CDB e RDB sofrem tributação na fonte.",
+      "c": "Títulos como CDBs e Tesouro Direto sofrem tributação definitiva na fonte e não vão para a tabela progressiva anual.",
+      "d": "A caderneta de poupança para a pessoa física é isenta e não tributada pela tabela regressiva."
+     }
+    },
+    {
+     "id": "cpa-rel-13-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. O modelo simplificado utiliza o desconto padrão de 20% sobre os rendimentos tributáveis (com teto legal), inviabilizando o abatimento de PGBL; por isso, o cliente que declara pelo simplificado deve utilizar o VGBL, que tributa apenas os rendimentos no resgate.</p><p>As alternativas A, C e D erram ao dar abatimento ao VGBL, inverter a regra do modelo completo ou estender a dedução do PGBL ao modelo simplificado.</p>",
+     "enunciado": "<p>Na declaração do IRPF, o contribuinte pode optar pelo modelo simplificado ou pelo modelo completo. Ao comparar a estrutura das deduções e a adequação aos planos de previdência complementar (PGBL e VGBL), verifica-se que:</p>",
+     "alternativas": {
+      "a": "O modelo simplificado permite a dedução de até 12% da renda bruta anual tributável para aportes realizados em VGBL.",
+      "b": "O modelo simplificado aplica o desconto padrão de 20% e impede a dedução de PGBL, sendo o VGBL o produto indicado para quem utiliza essa opção.",
+      "c": "O modelo completo obriga a utilização do desconto padrão de 20% e veda a apresentação de comprovantes de despesas médicas e de instrução.",
+      "d": "Ambas as opções de declaração permitem o abatimento de até 12% da renda bruta anual tributável aportada em PGBL."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "O VGBL não gera dedução no Imposto de Renda em nenhum dos modelos de declaração.",
+      "c": "O modelo completo utiliza as despesas dedutíveis reais (médicas, educação, dependentes) em vez do desconto padrão de 20%.",
+      "d": "A dedução de até 12% da renda com PGBL é um benefício exclusivo de quem utiliza o modelo completo da declaração."
+     }
+    },
+    {
+     "id": "cpa-rel-13-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. Vendas de ações no mercado à vista de até R$ 20.000,00 no mês conferem isenção sobre o ganho líquido (ficha de rendimentos isentos). Já o ganho na alienação de cotas de FII não possui isenção mensal e paga 20% de imposto definitivo na fonte/DARF (ficha de tributação exclusiva/definitiva).</p><p>As alternativas A, C e D erram ao estender a isenção de R$ 20 mil aos FIIs, tributar as ações isentas ou aplicar retenções incorretas de 10%.</p>",
+     "enunciado": "<p>Um investidor obteve no mesmo mês ganhos líquidos com a venda de ações no mercado à vista no valor total de alienações de R$ 18.000,00 e vendeu cotas de um Fundo de Investimento Imobiliário (FII) apurando ganho de capital. Sobre a classificação tributária desses dois ganhos na declaração do IRPF, constata-se que:</p>",
+     "alternativas": {
+      "a": "Ambos os ganhos são isentos de Imposto de Renda por estarem englobados no limite de alienações de até R$ 20.000,00 no mês.",
+      "b": "O ganho na venda das ações é isento por conta das vendas no mês ficarem abaixo de R$ 20.000,00, enquanto o ganho em cotas de FII paga 20% e vai para tributação exclusiva/definitiva.",
+      "c": "O ganho em ações é tributado compulsoriamente em 15%, e o ganho em cotas de FII é isento para vendas até R$ 35.000,00 no mês.",
+      "d": "Ambas as operações sofrem retenção de 10% na fonte a título de antecipação e vão para a ficha de rendimentos tributáveis."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "A isenção para vendas de até R$ 20 mil no mês aplica-se a ações no mercado à vista, não existindo esse benefício para ganhos com cotas de FII.",
+      "c": "Vendas de ações até R$ 20 mil no mês são isentas, e ganhos em FII pagam 20% sem limite de isenção mensal.",
+      "d": "Alienação de ações dentro do limite de R$ 20 mil é isenta e alienação de FII sofre alíquota de 20% definitiva, sem retenção antecipada de 10%."
+     }
+    },
+    {
+     "id": "cpa-rel-13-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. Em 2026, o JCP sofre retenção de 17,5% na fonte sob o regime de tributação exclusiva/definitiva. Já os dividendos pagos por uma mesma empresa a uma pessoa física que ultrapassarem R$ 50.000,00 no mesmo mês sofrem retenção de 10% na fonte, cuja natureza é de antecipação (deduzida no ajuste anual e IRPFM) e não de tributação exclusiva.</p><p>As alternativas B, C e D erram ao considerar ambos isentos, errar as alíquotas ou a natureza do imposto e misturar JCP com a tabela progressiva.</p>",
+     "enunciado": "<p>Um cliente procurou a agência bancária em 2026 para entender como deve declarar os proventos recebidos de companhias abertas. Ele recebeu R$ 10.000,00 em Juros sobre Capital Próprio (JCP) e R$ 60.000,00 em dividendos pagos no mesmo mês por uma única empresa. O gerente deve orientar o cliente informando que:</p>",
+     "alternativas": {
+      "a": "O JCP sofre retenção de 17,5% na fonte sob tributação exclusiva, e os dividendos acima de R$ 50 mil por empresa no mês sofrem retenção de 10% a título de antecipação.",
+      "b": "Ambos os recebimentos são totalmente isentos de Imposto de Renda e entram sem qualquer retenção na ficha de rendimentos não tributáveis.",
+      "c": "Os dividendos recebidos sofrem tributação exclusiva e definitiva na fonte de 20%, e o JCP é isento até R$ 20.000,00 no mês.",
+      "d": "O JCP e os dividendos são somados para a aplicação da tabela progressiva mensal do IRPF com restituição integral."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "O JCP sofre retenção de 17,5% em 2026 e dividendos acima de R$ 50 mil no mês por empresa têm retenção de 10% de antecipação.",
+      "c": "A retenção sobre dividendos acima do teto é de 10% e funciona como antecipação (não exclusiva), e o JCP não tem isenção até R$ 20 mil.",
+      "d": "O JCP é tributado exclusivamente na fonte, a 17,5%, e não entra na tabela progressiva; e a retenção de 10% sobre os dividendos é antecipação considerada no ajuste anual, não uma incidência da tabela progressiva mensal com restituição integral."
+     }
+    },
+    {
+     "id": "cpa-rel-13-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a C. No resgate de PGBL sob a tabela progressiva, a instituição financeira efetua a retenção de 15% na fonte como antecipação. O valor total do resgate (acumulado de aportes mais rendimentos) é lançado na ficha de rendimentos tributáveis da declaração anual, recalculando-se o imposto devido de acordo com a tabela progressiva e as demais rendas do contribuinte.</p><p>As alternativas A, B e D falham ao classificar os 15% como definitivos, limitar o imposto do PGBL apenas aos rendimentos ou aplicar a alíquota de 35% da tabela regressiva.</p>",
+     "enunciado": "<p>Um participante de plano de previdência PGBL no regime de tributação progressiva efetuou um resgate parcial no valor de R$ 100.000,00 durante o ano-calendário. Ao analisar o tratamento tributário dessa operação na fonte e na Declaração de Ajuste Anual do IRPF, verifica-se que:</p>",
+     "alternativas": {
+      "a": "O imposto incide exclusivamente sobre os rendimentos da aplicação, sendo o valor do principal resgatado isento de tributação no ajuste anual.",
+      "b": "A alíquota de 15% retida na fonte é definitiva e exclusiva, dispensando o lançamento do valor na declaração de ajuste anual.",
+      "c": "A instituição financeira retém 15% de imposto de renda na fonte a título de antecipação, devendo o valor total resgatado ser lançado como rendimento tributável no ajuste anual.",
+      "d": "Por estar no regime progressivo, o resgate do PGBL sofre retenção imediata de 35% na fonte, gerando crédito automático no modelo simplificado."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "No PGBL o imposto incide sobre o valor total do resgate (principal + rendimentos) e não apenas sobre o ganho.",
+      "b": "A retenção de 15% no resgate progressivo é mera antecipação do imposto e não tributação definitiva.",
+      "d": "A alíquota de 35% na fonte é inicial da tabela regressiva, e não do regime progressivo que retém 15%."
+     }
+    }
+   ],
+   "Tipos de investimento, tolerância a risco e horizonte": [
+    {
+     "id": "cpa-rel-14-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. O trade-off entre liquidez, rentabilidade e segurança é absoluto: não existe ativo no mercado capaz de entregar os patamares máximos das três variáveis de forma simultânea.</p><p>As alternativas B, C e D erram ao tentar inventar produtos milagrosos que descumprem a regra do trade-off no mercado de capitais.</p>",
+     "enunciado": "<p>Na análise de produtos de investimento, o profissional de atendimento precisa lidar com a relação entre liquidez, rentabilidade e segurança. A respeito desse trade-off fundamental do mercado financeiro, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "Nenhuma aplicação consegue maximizar liquidez, rentabilidade e segurança ao mesmo tempo, exigindo a renúncia de ao menos uma dessas dimensões.",
+      "b": "A caderneta de poupança maximiza simultaneamente rentabilidade elevada, liquidez imediata e segurança total do Tesouro Nacional.",
+      "c": "Os títulos de renda variável garantem liquidez diária e rentabilidade contratada sem qualquer risco de perda do capital investido.",
+      "d": "O investidor pode obter alta rentabilidade e segurança máxima sem abrir mão da liquidez por meio da compra de debêntures incentivadas."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A caderneta de poupança possui liquidez e segurança (FGC), mas oferece rentabilidade limitada.",
+      "c": "Renda variável não possui rentabilidade contratada e envolve risco de oscilação e perda de capital.",
+      "d": "Debêntures incentivadas possuem risco de crédito privado e menor liquidez, não maximizando as três dimensões juntas."
+     }
+    },
+    {
+     "id": "cpa-rel-14-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. A capacidade de risco avalia a situação financeira real e objetiva do cliente (renda, patrimônio, horizonte, reservas), ao passo que a tolerância a risco aborda a predisposição emocional de suportar oscilações e perdas temporárias sem sobressaltos.</p><p>As alternativas A, B e D erram ao inverter os conceitos, tratá-los como idênticos por idade ou restringir suas aplicações a certos ativos.</p>",
+     "enunciado": "<p>Durante o processo de verificação da adequação de investimentos (suitability), o profissional de atendimento deve avaliar de forma distinta a \"capacidade de risco\" e a \"tolerância a risco\" do cliente. Ao comparar esses dois conceitos, verifica-se que:</p>",
+     "alternativas": {
+      "a": "Ambos os conceitos são sinônimos perfeitos e dependem unicamente da idade cronológica do investidor.",
+      "b": "A capacidade de risco avalia a estabilidade emocional do cliente, e a tolerância a risco calcula o saldo estático da sua conta corrente.",
+      "c": "A capacidade de risco é uma dimensão financeira objetiva, enquanto a tolerância a risco é uma dimensão emocional e psicológica do cliente.",
+      "d": "A capacidade de risco aplica-se apenas a investimentos em bolsa, enquanto a tolerância aplica-se exclusivamente a títulos públicos."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "Capacidade e tolerância são dimensões distintas e não dependem exclusivamente da idade do investidor.",
+      "b": "A alternativa inverte as duas dimensões: a estabilidade emocional diante da oscilação é a tolerância, e a condição financeira objetiva, com renda, patrimônio, endividamento e prazo até precisar do dinheiro, é a capacidade, que não se resume ao saldo em conta corrente.",
+      "d": "Ambas as dimensões devem ser avaliadas para qualquer tipo de investimento e produto do mercado financeiro."
+     }
+    },
+    {
+     "id": "cpa-rel-14-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. Para objetivos de curtíssimo prazo (três meses), a prioridade é a liquidez e a previsibilidade (Tesouro Selic ou CDB com liquidez diária). LCI e LCA não servem para essa meta por possuírem prazo mínimo de vencimento de seis meses (sem atualização por índice de preços), durante o qual o emissor não pode resgatar o papel.</p><p>As alternativas A, B e C ignoram as travas normativas da LCI, indicam renda variável volátil para prazos curtos ou indicam debêntures ilíquidas.</p>",
+     "enunciado": "<p>Um cliente de perfil conservador precisa alocar um valor recebido para quitar a reforma de sua casa que ocorrerá daqui a três meses. O gerente analisa as opções de aplicação considerando a preservação do capital e as travas operacionais de prazos mínimos. A indicação mais adequada para esse objetivo é:</p>",
+     "alternativas": {
+      "a": "Debênture de longo prazo, sem liquidez diária, emitida por empresa privada de grande porte.",
+      "b": "Letra de Crédito Imobiliário (LCI) com carência de seis meses, contratando o resgate antecipado mediante desconto administrativo.",
+      "c": "Fundo de Investimento em Ações (FIA) arrojado, pois o prazo de três meses é suficiente para mitigar o risco de mercado do setor.",
+      "d": "CDB de liquidez diária ou Tesouro Selic, visto que LCI e LCA possuem prazo mínimo de vencimento de seis meses que impede o resgate na data necessária."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "Uma debênture de longo prazo, sem liquidez diária, não permite ao cliente dispor do dinheiro na data da reforma, daqui a três meses.",
+      "b": "A instituição emissora de LCI é proibida por norma de resgatar ou recomprar o título antes do prazo mínimo regulamentar de seis meses.",
+      "c": "Fundos de ações possuem alta volatilidade e risco de mercado incompatíveis com prazos curtos de três meses."
+     }
+    },
+    {
+     "id": "cpa-rel-14-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. Na recomendação de investimentos, quando há divergência entre a condição financeira objetiva (capacidade) e a disposição emocional (tolerância), deve prevalecer a menor das medidas para preservar o investidor de desconforto incompatível com seu perfil.</p><p>As alternativas A, B e C desrespeitam a tolerância psicológica do cliente, indicam fraude cadastral ou inventam restrições regulatórias por idade.</p>",
+     "enunciado": "<p>Um investidor de 28 anos, com alta estabilidade financeira, patrimônio consolidado e reserva de emergência constituída, declarou no questionário de suitability elevado conhecimento de mercado. No entanto, demonstrou baixa tolerância emocional a oscilações de curto prazo em seu patrimônio. Ao elaborar a recomendação de investimentos, o profissional deve pautar-se pela seguinte regra técnica:</p>",
+     "alternativas": {
+      "a": "Classificar o cliente como arrojado, uma vez que o elevado conhecimento de mercado declarado no questionário prevalece sobre as demais dimensões da análise de perfil.",
+      "b": "Ignorar a baixa tolerância emocional do cliente e alocar 100% da carteira em ações, pois a sua capacidade financeira e idade prevalecem.",
+      "c": "Alterar unilateralmente a declaração de perfil do cliente para arrojado no sistema do banco e alocar recursos em derivativos.",
+      "d": "Respeitar a menor medida entre a capacidade e a tolerância, recomendando uma carteira conservadora ajustada ao seu perfil psicológico."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "O conhecimento de mercado é uma das dimensões da análise, e não um critério que se sobreponha à capacidade e à tolerância; o enquadramento respeita a menor das medidas.",
+      "b": "Forçar renda variável em cliente com baixa tolerância emocional viola o dever de adequação de produtos (suitability).",
+      "c": "Adulterar dados no questionário de perfil do cliente é uma falta grave que viola expressamente as normas regulatórias da CVM e Anbima."
+     }
+    },
+    {
+     "id": "cpa-rel-14-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a C. A adequação de investimentos é um equilíbrio que deve ser satisfeito em dois sentidos: o excesso de risco é inadequado, mas o excesso de conservadorismo em um cliente arrojado com horizonte de 20 anos também configura inadequação (insuficiência de risco) em relação aos seus objetivos.</p><p>As alternativas A, B e D erram ao considerar a pós-fixação como única recomendação para 20 anos, achar que a adequação só barra excesso de risco ou proibir arrojados de possuírem renda fixa.</p>",
+     "enunciado": "<p>Um cliente possui perfil arrojado, reserva de emergência de 12 meses montada no Tesouro Selic e objetivo de acumulação patrimonial para a aposentadoria em 20 anos. O gerente de contas alocou 100% do patrimônio investido desse cliente em um CDB pós-fixado com rentabilidade de 100% do CDI. Sob a perspectiva das normas e boas práticas de adequação (suitability), essa recomendação é considerada:</p>",
+     "alternativas": {
+      "a": "Adequada, pois a regra de suitability aplica-se exclusivamente para barrar o excesso de risco, sendo insuscetível de violação pelo excesso de segurança.",
+      "b": "Perfeita, pois alocar a totalidade dos recursos em renda fixa pós-fixada é a única recomendação legal autorizada para horizontes longos.",
+      "c": "Inadequada, pois o excesso de conservadorismo em relação ao perfil do cliente e ao longo horizonte de investimento configura insuficiência de risco.",
+      "d": "Inadequada, porque o cliente com perfil arrojado é proibido de manter qualquer valor aplicado em produtos de renda fixa pós-fixada."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "O dever de adequação é violado em ambas as direções, tanto pelo excesso de risco quanto pela insuficiência de risco (excesso de conservadorismo).",
+      "b": "Horizontes longos de 20 anos para perfil arrojado comportam e exigem alocação em ativos com expectativa de retorno real superior.",
+      "d": "Investidores arrojados podem manter renda fixa (como em suas reservas de emergência), não havendo proibição legal de posse do ativo."
+     }
+    }
+   ],
+   "Gestão financeira: emergências e uso do crédito": [
+    {
+     "id": "cpa-rel-15-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. O cheque especial para pessoas naturais tem juros limitados a 8% ao mês, e a regulamentação do rotativo do cartão de crédito impôs o teto em que a soma de juros e encargos cobrados não pode ultrapassar o valor original do principal (100% de teto de juros).</p><p>As alternativas A, B e C erram ao permitir a rotagem indefinida no cartão, citar a tarifa inconstitucional de limite não utilizado ou classificar linhas emergenciais como baratas para longo prazo.</p>",
+     "enunciado": "<p>Diante de uma necessidade imprevista de caixa que supera os recursos próprios disponíveis, a utilização do crédito bancário deve seguir uma hierarquia de custos e riscos para preservar o patrimônio do cliente. A respeito das regras aplicáveis às modalidades emergenciais de crédito, como o cheque especial e o rotativo do cartão, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "O cheque especial e o rotativo do cartão representam modalidades prioritárias e de baixo custo para financiamentos habitacionais de longo prazo.",
+      "b": "O saldo devedor do rotativo do cartão de crédito pode ser mantido indefinidamente nessa modalidade sem a obrigatoriedade de oferta de parcelamento.",
+      "c": "As instituições financeiras são autorizadas a cobrar a tarifa de disponibilização de 0,25% sobre o limite de cheque especial não utilizado acima de R$ 500,00.",
+      "d": "Os juros remuneratórios do cheque especial para pessoas naturais são limitados a 8% ao mês, e os juros totais do rotativo do cartão de crédito não podem ultrapassar 100% do valor original da dívida."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "Cheque especial e rotativo são as linhas mais caras do mercado e servem exclusivamente a cobrir descasamentos pontuais de pouquíssimos dias.",
+      "b": "O saldo do rotativo só pode permanecer nessa modalidade até o vencimento da fatura seguinte, quando a instituição é obrigada a oferecer parcelamento.",
+      "c": "O Supremo Tribunal Federal declarou inconstitucional a cobrança de tarifa sobre o limite de cheque especial não utilizado."
+     }
+    },
+    {
+     "id": "cpa-rel-15-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. O IOF para pessoa física no crédito é composto pela alíquota adicional fixa de 0,38% mais a alíquota diária de 0,0082%, sendo que a cobrança da parcela diária é limitada ao teto de 365 dias do contrato.</p><p>As alternativas A, C e D erram ao ignorar a trava de 365 dias do IOF, isentar o crédito pessoal de tributação ou limitar o CET apenas à taxa de juros nominal.</p>",
+     "enunciado": "<p>Para comparar propostas de crédito entre instituições financeiras, o cliente deve utilizar o Custo Efetivo Total (CET), que reúne os encargos da operação, incluindo o Imposto sobre Operações Financeiras (IOF). Ao comparar a incidência do IOF no crédito para pessoa física com o das operações comerciais, verifica-se que:</p>",
+     "alternativas": {
+      "a": "A alíquota diária do IOF incide continuamente por todo o prazo do contrato, cobrando juros diários por até 60 meses sem trava temporal.",
+      "b": "O IOF de crédito para pessoa física é composto por uma alíquota adicional fixa de 0,38% mais uma alíquota diária de 0,0082%, cuja contagem diária trava em 365 dias.",
+      "c": "O IOF é isento em operações de crédito pessoal sem garantia e cobrado exclusivamente na contratação de habitação.",
+      "d": "O Custo Efetivo Total (CET) é calculado levando em conta apenas a taxa de juros nominal do contrato, descartando impostos e tarifas operacionais."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "A cobrança do IOF diário possui a trava regulatória máxima de 365 dias, não incidindo por prazos superiores como 60 meses.",
+      "c": "O IOF incide normalmente sobre as operações de crédito pessoal para pessoas físicas.",
+      "d": "O CET soma obrigatoriamente a taxa de juros, os tributos (IOF), as tarifas e os seguros embutidos em um único indicador percentual."
+     }
+    },
+    {
+     "id": "cpa-rel-15-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. O crédito consignado afeta diretamente o salário dentro da margem legal de 40% (35% empréstimo / 5% cartão), ao passo que a alienação de veículos derruba o CET pelo colateral, mas expõe o cliente ao risco de perda do automóvel em caso de inadimplência.</p><p>As alternativas A, B e D erram ao afirmar que a via judicial de veículos foi extinta, ignorar o limite da margem consignável ou igualar os riscos patrimoniais dos colaterais.</p>",
+     "enunciado": "<p>Um cliente celetista com margem consignável disponível e um automóvel próprio quitado precisa de crédito de urgência para cobrir uma despesa médica familiar imprevista. Ele analisa com seu gerente de contas a escolha entre o crédito consignado e o empréstimo com garantia real do veículo (alienação fiduciária). A respeito dos riscos patrimoniais e regulatórios envolvidos, a orientação adequada é:</p>",
+     "alternativas": {
+      "a": "O consignado para trabalhador celetista não possui limite de margem consignável, permitindo o comprometimento de até 100% do salário bruto.",
+      "b": "A alienação fiduciária de veículo extinguiu totalmente o rito de busca e apreensão judicial, sendo a retomada obrigatoriamente extrajudicial em todos os casos desde 2023.",
+      "c": "O consignado utiliza o desconto direto em folha (limitado à margem de 40%, sendo 35% para empréstimo), enquanto a alienação fiduciária reduz a taxa mas insere o risco de perda do veículo por busca e apreensão.",
+      "d": "Ambas as operações de crédito apresentam o mesmo risco de perda direta de bens imóveis da família, independentemente do objeto dado em garantia."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "O crédito consignado do celetista é limitado à margem consignável legal de 40% da renda, sendo 35% destinados a empréstimos e 5% a cartão.",
+      "b": "No financiamento com alienação fiduciária de veículos, as vias judicial (Decreto-Lei 911/1969) e extrajudicial (Lei 14.711/2023) coexistem à escolha do credor.",
+      "d": "O consignado afeta o contracheque e a garantia de veículo atinge o bem móvel; nenhuma das duas gera a execução imediata de imóveis residenciais da família."
+     }
+    },
+    {
+     "id": "cpa-rel-15-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. A Lei 14.181/2021 proíbe assediar ou pressionar o consumidor para contratação de crédito (com agravamento para idosos e vulneráveis) e exige que a contratação preserve o mínimo existencial da família, devendo o gerente apresentar linhas mais adequadas e de menor CET.</p><p>As alternativas A, C e D incentivam a pressão ilegal de vendas, a omissão de custos obrigatórios ou a proibição descabida de crédito a idosos.</p>",
+     "enunciado": "<p>Um cliente idoso ingressa na agência bancária em situação de estresse financeiro buscando crédito urgente para cobrir despesas de saúde. Ele solicita a contratação do limite total pré-aprovado do seu cheque especial a juros elevados. À luz dos deveres de conduta na oferta de crédito e da Lei do Superendividamento (Lei 14.181/2021), o profissional deve pautar sua recomendação considerando que:</p>",
+     "alternativas": {
+      "a": "O gerente deve pressionar o cliente a utilizar o cheque especial por ser a linha de maior rentabilidade para a meta mensal do banco.",
+      "b": "É vedado assediar ou pressionar o consumidor idoso ou vulnerável para contratar crédito, devendo indicar uma linha de menor CET e verificar se a parcela preserva o mínimo existencial.",
+      "c": "O banco está autorizado a omitir o Custo Efetivo Total (CET) caso o cliente declare urgência médica na contratação.",
+      "d": "A Lei do Superendividamento proíbe a concessão de qualquer linha de crédito para pessoas físicas com idade superior a 60 anos."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "Assediar ou pressionar o consumidor para contratar crédito (especialmente vulneráveis) é expressamente proibido por lei.",
+      "c": "É terminantemente vedado ocultar ou dificultar a compreensão do Custo Efetivo Total e dos riscos da operação.",
+      "d": "A lei não proíbe a concessão de crédito a idosos, mas impõe maior proteção contra assédio e garante a preservação do mínimo existencial."
+     }
+    },
+    {
+     "id": "cpa-rel-15-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a C. A hierarquia técnica de socorro financeiro estabelece que o uso deve iniciar pelos recursos próprios da reserva (custo zero), seguir para antecipação de recebíveis certos (como a restituição do IRPF), avançar para o consignado, a linha com garantia mais barata entre as disponíveis a ele, e deixar o rotativo do cartão estritamente como última opção.</p><p>As alternativas A, B e D erram ao priorizar a linha mais cara do rotativo, preterir o uso de recursos próprios de custo zero ou proibir a antecipação de recebíveis do IRPF.</p>",
+     "enunciado": "<p>Analise o caso de um cliente que sofreu um descasamento de caixa e avalia a ordem de acionamento das fontes de recursos para cobrir o déficit. Ele possui reservas no Tesouro Selic, restituição do Imposto de Renda a receber no próximo mês, margem consignável livre no contracheque e limite no rotativo do cartão de crédito. Considerando a hierarquia do socorro financeiro (da fonte mais barata e sustentável para a mais cara), a sequência de utilização correta é:</p>",
+     "alternativas": {
+      "a": "Crédito consignado em primeiro lugar para preservar o saldo do rotativo como limite emergencial permanente.",
+      "b": "Rotativo do cartão de crédito, crédito consignado, antecipação do IRPF e, por último, o resgate do Tesouro Selic.",
+      "c": "Recursos próprios da reserva (Tesouro Selic), antecipação da restituição do IRPF, crédito consignado e, por último, o rotativo do cartão de crédito.",
+      "d": "Resgate do Tesouro Selic e uso imediato do rotativo do cartão, sendo proibida a antecipação de recebíveis certos no Brasil."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "A reserva própria (custo zero) deve anteceder a contratação de qualquer dívida no consignado.",
+      "b": "O rotativo do cartão de crédito é a linha mais cara do mercado e deve ser deixado por último, e não acionado em primeiro lugar.",
+      "d": "A antecipação de recebíveis certos (como IRPF e 13º) é plenamente regulada no Brasil e possui custo menor que o rotativo do cartão."
+     }
+    }
+   ],
+   "Gestão de investimentos": [
+    {
+     "id": "cpa-rel-16-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. A alocação estratégica define a percentagem-alvo por classe de ativos alinhada ao perfil do cliente e prazo dos seus objetivos; a alocação tática realiza pequenos desvios temporários ao redor dessas metas para explorar oportunidades do mercado.</p><p>As alternativas B, C e D erram ao inverter as definições de longo e curto prazo, considerar os termos idênticos ou atribuir prazos diários para a alocação estratégica.</p>",
+     "enunciado": "<p>A gestão de investimentos utiliza estratégias de alocação para manter a aderência da carteira aos objetivos de longo prazo e ao perfil do cliente. A respeito da diferença entre alocação estratégica e alocação tática, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "A alocação estratégica é a estrutura de longo prazo por classes de ativos, enquanto a alocação tática consiste em desvios temporários para aproveitar cenários sem descaracterizar a carteira.",
+      "b": "A alocação tática define os alvos permanentes da carteira e a alocação estratégica zera mensalmente todas as posições para fugir da tributação de Imposto de Renda.",
+      "c": "Ambas possuem o mesmo conceito e visam acompanhar cegamente os índices de inflação do setor imobiliário.",
+      "d": "A alocação estratégica altera-se diariamente conforme os jornais da manhã e a tática vigora inalterada por 30 anos."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A alocação estratégica estabelece a espinha dorsal de longo prazo, enquanto a tática faz ajustes temporários (sem zerar carteiras para fugir de IR).",
+      "c": "Alocação tática e estratégica são conceitos distintos no processo de gestão de investimentos.",
+      "d": "A alocação estratégica é estável e muda por motivos de vida do cliente, enquanto a tática aborda ajustes de mais curto prazo."
+     }
+    },
+    {
+     "id": "cpa-rel-16-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. O rebalanceamento destina-se ao controle do risco da carteira, pois a valorização desproporcional de uma classe de ativos (como ações) eleva a exposição ao risco sem que o cliente tenha decidido alterar seu perfil; rebalancear vende o topo e compra a base para retornar ao alvo estratégico.</p><p>As alternativas A, B e C erram ao atribuir objetivo de busca por lucro diário via giro, inventar isenções de taxas operacionais ou forçar concentração extrema em ações.</p>",
+     "enunciado": "<p>O rebalanceamento de carteiras é uma técnica de gestão utilizada para readequar a composição do portfólio do cliente ao longo do tempo. O objetivo primário da realização do rebalanceamento periódico e a sua regra de execução são:</p>",
+     "alternativas": {
+      "a": "Garantir que 100% dos recursos fiquem alocados em ações de empresas de pequena capitalização no auge do ciclo de alta.",
+      "b": "Maximizar o lucro diário da carteira mediante giro constante dos ativos de renda fixa a cada 5 dias operacionais.",
+      "c": "Isentar o investidor do pagamento de qualquer taxa de administração ou custódia cobrada pelas corretoras.",
+      "d": "Controlar e gerenciar o risco da carteira, vendendo parcela do que subiu e comprando o que ficou para trás para retornar ao alvo original."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "Concentrar 100% em ações de pequena capitalização viola a diversificação e desvirtua o objetivo do rebalanceamento.",
+      "b": "O objetivo central do rebalanceamento é o controle e a gestão de risco (aderência ao perfil), e não a maximização do lucro rápido via giro.",
+      "c": "O rebalanceamento opera na gestão de ativos e não isenta taxas de administração ou custódia de terceiros."
+     }
+    },
+    {
+     "id": "cpa-rel-16-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. A forma mais eficiente de rebalancear a carteira sem gerar custo tributário imediato (pagamento de IR sobre o ganho de capital dos ativos que subiram) é direcionar o fluxo de novos aportes para as classes que estão abaixo do percentual-alvo.</p><p>As alternativas A, B e C desrespeitam a eficiência tributária, compram derivativos sem objetivo de hedge, ou erram a tabela regressiva do IR (que diminui e não aumenta com o tempo).</p>",
+     "enunciado": "<p>Ao avaliar a gestão de portfólio de um cliente, um gerente estuda estratégias de rebalanceamento e o impacto tributário do giro de ativos. Para rebalancear a carteira do investidor mitigando a realização de imposto de renda decorrente de resgates, a prática técnica mais recomendada é:</p>",
+     "alternativas": {
+      "a": "Exigir o resgate total dos ativos com mais de dois anos para travar a alíquota em 22,5% do Imposto de Renda.",
+      "b": "Vender integralmente a classe de renda fixa a cada 15 dias para comprar opções de compra no mercado futuro.",
+      "c": "Resgatar todas as aplicações no primeiro ano e reinvestir o saldo na poupança sem apuração de rentabilidade.",
+      "d": "Direcionar os novos aportes de recursos para a classe de ativos que ficou abaixo do percentual-alvo estratégico."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "Resgatar com mais de dois anos não trava a taxa em 22,5%; pelo contrário, a alíquota da tabela regressiva cai conforme o tempo passa.",
+      "b": "Girar a carteira a cada 15 dias comprando opções eleva o custo tributário (alíquota máxima de IR mais IOF) e o risco da carteira.",
+      "c": "Resgatar aplicações consolidadas para pôr na poupança sem necessidade agrava impostos e reduz a expectativa de ganho real."
+     }
+    },
+    {
+     "id": "cpa-rel-16-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. O benchmark de avaliação precisa ser estritamente compatível com a classe e o nível de risco da alocação do cliente. Comparar uma carteira conservadora ancorada no CDI com o Ibovespa é um erro conceitual de avaliação de desempenho.</p><p>As alternativas A, C e D concordam erroneamente com a comparação incabível, inventam metas legais irreais para fundos DI ou associam o Ibovespa como índice obrigatório do CDB.</p>",
+     "enunciado": "<p>Um cliente que possui uma carteira predominantemente conservadora, composta por títulos pós-fixados e fundos DI com meta de acompanhar o CDI, critica seu gerente porque seu rendimento anual ficou abaixo do retorno do Ibovespa em um ano de forte alta da bolsa de valores. À luz das boas práticas de avaliação de desempenho de investimentos, o gerente deve esclarecer que:</p>",
+     "alternativas": {
+      "a": "O cliente está correto, devendo o gestor do fundo DI ser substituído imediatamente por não atingir o desempenho do Ibovespa.",
+      "b": "O benchmark utilizado para avaliar uma carteira deve refletir o risco assumido na alocação estratégica, sendo inadequado comparar pós-fixados com o Ibovespa.",
+      "c": "Todos os produtos de renda fixa e fundos DI possuem a obrigação legal de superarem o Ibovespa em ao menos 5% ao ano.",
+      "d": "O Ibovespa é o indicador de referência compulsório determinado pela CVM para medir a rentabilidade de cadernetas de poupança e CDBs."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "Fundos DI buscam acompanhar o CDI e possuem risco muito inferior ao Ibovespa, sendo absurdo exigir rentabilidade de ações de um fundo pós-fixado.",
+      "c": "Renda fixa pós-fixada acompanha a taxa básica de juros e não tem compromisso ou obrigação regulatória de superar o índice de ações.",
+      "d": "O Ibovespa é um índice do mercado de ações e não o benchmark compulsório de aplicações de renda fixa bancária como CDBs ou poupança."
+     }
+    },
+    {
+     "id": "cpa-rel-16-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a A. O giro de carteira com resgates recorrentes abaixo de 180 dias penaliza o investidor com a alíquota mais alta da tabela regressiva do IR (22,5%) e, para prazos menores que 30 dias, aciona o IOF regressivo sobre os rendimentos, destruindo o ganho da aplicação através do fricção tributária e de custos operacionais.</p><p>As alternativas B, C e D erram ao promover isenções inexistentes no giro rápido, trocar a taxa do IR para 10% em 15 dias ou cobrar o IOF de 30 dias sobre operações de ações de renda variável.</p>",
+     "enunciado": "<p>Um investidor costuma realizar constantes trocas de ativos na sua carteira de renda fixa e de fundos de investimento (giro excessivo), buscando migrar quinzenalmente para o ativo de maior retorno recente. Ao analisar os custos operacionais e fiscais recorrentes gerados por essa prática, verifica-se que o giro excessivo corrói o patrimônio do cliente porque:</p>",
+     "alternativas": {
+      "a": "Trava a alíquota de Imposto de Renda na faixa máxima de 22,5% pelo resgate precoce, aciona a cobrança de IOF regressivo em resgates inferiores a 30 dias e acumula custos operacionais.",
+      "b": "Isenta o investidor de qualquer retenção de Imposto de Renda na fonte e elimina totalmente as taxas de corretagem da bolsa.",
+      "c": "Aplica a alíquota mínima de 10% de Imposto de Renda a todos os resgates com menos de 15 dias de aplicação.",
+      "d": "Incide IOF regressivo de 30 dias sobre todas as operações de renda variável e sobre resgates em fundos de ações de curto prazo."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Girar a carteira em prazos curtos não isenta o IR e nem elimina os custos operacionais de corretagem e tarifas.",
+      "c": "A alíquota inicial da tabela regressiva do IR para resgates em até 180 dias é de 22,5%, e ela só cai conforme o prazo de aplicação aumenta; não existe faixa de 10% para resgates de 15 dias.",
+      "d": "O IOF regressivo de 30 dias incide sobre renda fixa e fundos tradicionais, mas não alcança operações diretas de renda variável nem fundos de ações."
+     }
+    }
+   ],
+   "Gestão de risco e seguros": [
+    {
+     "id": "cpa-rel-17-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. A regra de ouro da gestão de risco determina a transferência para a seguradora de riscos com baixa frequência e alta severidade (devastadores) e a retenção de eventos frequentes e de baixo impacto. A franquia atua exatamente como a parcela de retenção assumida pelo segurado.</p><p>As alternativas A, B e D erram ao tratar a franquia como mero desconto, indicar seguros para riscos pequenos do cotidiano ou confundir a transferência financeira com a eliminação física do risco.</p>",
+     "enunciado": "<p>A gestão de risco analisa e trata as ameaças que podem afetar o planejamento financeiro da família por meio de quatro estratégias fundamentais (evitar, reduzir, reter e transferir). A respeito dos critérios técnicos para a escolha da resposta ao risco e da função da franquia nos seguros, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "Deve-se obrigatoriamente contratar seguro para qualquer evento de alta frequência e valor insignificante para zerar as perdas do orçamento.",
+      "b": "A franquia é um desconto comercial concedido pela seguradora para baratear a apólice sem qualquer retenção financeira por parte do cliente.",
+      "c": "A recomendação técnica é transferir os riscos de eventos raros e devastadores e reter os frequentes e baratos, sendo a franquia um instrumento de retenção de risco pelo segurado.",
+      "d": "Transferir o risco é a única estratégia capaz de eliminar completamente a ocorrência do sinistro e impedir a causa do evento."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "Riscos frequentes e de pequeno valor financeiro devem ser retidos (pela reserva de emergência), e não transferidos a seguros.",
+      "b": "A franquia é um instrumento de retenção de risco onde o cliente assume a parcela inicial e menor do prejuízo, barateando o prêmio.",
+      "d": "Transferir o risco apenas repassa o prejuízo financeiro a um terceiro (seguradora); a única forma de eliminar o risco é evitá-lo."
+     }
+    },
+    {
+     "id": "cpa-rel-17-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. No seguro de dano (patrimonial) vigora a recomposição do bem até o limite real e o direito de sub-rogação da seguradora contra o causador do dano. No seguro de pessoas (vida), a vida não tem valor tabelado: o capital é livre, as apólices acumulam-se e não cabe sub-rogação.</p><p>As alternativas A, C e D erram ao proibir o acúmulo de apólices de vida, permitir lucro no seguro patrimonial ou atribuir sub-rogação ao seguro de pessoas.</p>",
+     "enunciado": "<p>Os contratos de seguro são estruturados sob os ramos de seguro de dano (patrimonial) e seguro de pessoas (vida). Ao comparar as regras aplicáveis a cada uma dessas modalidades sob a Lei 15.040/2024, verifica-se que:</p>",
+     "alternativas": {
+      "a": "O seguro de pessoas veda o acúmulo de mais de uma apólice sobre o mesmo interesse, limitando a indenização total ao valor de mercado da pessoa.",
+      "b": "No seguro de dano vigora o princípio indenitário e a sub-rogação, enquanto no seguro de pessoas o capital é livremente estipulado, as apólices se acumulam e não há sub-rogação.",
+      "c": "O seguro de dano permite que a indenização paga pela seguradora supere o valor real do bem para gerar lucro ao segurado.",
+      "d": "Em caso de morte no seguro de pessoas, a seguradora se sub-roga nos direitos dos beneficiários para cobrar o valor do causador do sinistro."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "No seguro de pessoas o capital é livre, o cliente pode contratar quantas apólices quiser e todas as coberturas se acumulam no pagamento.",
+      "c": "O seguro de dano segue o princípio indenitário, sendo vedado receber indenização que supere o valor real do bem ou o teto contratado.",
+      "d": "Não existe direito de sub-rogação no seguro de pessoas; a seguradora paga o capital e não pode processar o causador da morte."
+     }
+    },
+    {
+     "id": "cpa-rel-17-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. Sob o regramento da Lei 15.040/2024, quando ocorre infrasseguro (bem segurado por valor menor que o real) e o sinistro é parcial, não há cobrança ou abatimento por rateio proporcional, devendo a seguradora indenizar integralmente o prejuízo apurado (R$ 200.000,00), até o limite da garantia.</p><p>As alternativas A, B e C erram ao aplicar a regra revogada do rateio automático, pagar o teto da apólice em prejuízo menor ou anular o contrato.</p>",
+     "enunciado": "<p>Um cliente possui um imóvel residencial avaliado no mercado por R$ 1.000.000,00 e contratou uma apólice de seguro de dano no valor de garantia de R$ 600.000,00. Ocorreu um sinistro parcial por alagamento que causou um prejuízo comprovado de R$ 200.000,00 no imóvel. Considerando as regras da Lei 15.040/2024 para casos de infrasseguro sem cláusula expressa de rateio, o valor a ser indenizado pela seguradora é:</p>",
+     "alternativas": {
+      "a": "R$ 0,00, visto que a contratação por valor inferior ao valor real do bem anula a eficácia do contrato por ausência de interesse legítimo.",
+      "b": "R$ 120.000,00, devido à aplicação obrigatória e automática do rateio proporcional de 60% sobre o valor do prejuízo.",
+      "c": "R$ 600.000,00, pois a seguradora é obrigada a pagar a totalidade da garantia contratada independentemente do tamanho do dano.",
+      "d": "R$ 200.000,00, visto que no sinistro parcial não há rateio proporcional por infrasseguro, salvo se o contrato pactuar isso expressamente."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "A contratação de infrasseguro é plenamente válida, estando mantido o interesse legítimo do proprietário.",
+      "b": "O novo marco legal dos seguros (Lei 15.040/2024) extinguiu o rateio proporcional automático em sinistros parciais de bens infrassegurados.",
+      "c": "A indenização do seguro de dano atende ao princípio indenitário, cobrindo o prejuízo real (R$ 200 mil) e não o limite máximo da apólice."
+     }
+    },
+    {
+     "id": "cpa-rel-17-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. O capital estipulado em seguro de vida não é considerado herança para nenhum efeito legal, não integrando o inventário nem respondendo por dívidas do de cujus, além de ser isento de ITCMD por não constituir transmissão causa mortis.</p><p>As alternativas A, B e D erram ao submeter o seguro a dívidas do falecido, permitir a penhora por credores ou incluir o benefício no inventário da herança.</p>",
+     "enunciado": "<p>Um investidor faleceu mantendo uma apólice de seguro de vida individual no valor de R$ 2.000.000,00, na qual havia indicado formalmente seus dois filhos como beneficiários. O inventário do falecido traz dívidas judiciais e execuções fiscais que superam a soma dos seus demais bens móveis e imóveis. A respeito do repasse do capital segurado aos beneficiários e da incidência de impostos, a orientação correta é:</p>",
+     "alternativas": {
+      "a": "Os credores podem penhorar o capital do seguro de vida diretamente na seguradora antes do repasse aos beneficiários.",
+      "b": "O valor do seguro deve ser retido pelo juiz do inventário para quitar as dívidas fiscais e submetido à cobrança do ITCMD pelo estado.",
+      "c": "O capital do seguro de vida é impenhorável, não responde por dívidas do falecido e não sofre incidência do ITCMD, por não ser considerado herança.",
+      "d": "A indenização do seguro de vida integra o inventário e a partilha da herança, para compensar o cônjuge meeiro."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "Por disposição expressa da lei, o capital do seguro de pessoas é impenhorável e pertence diretamente aos beneficiários.",
+      "b": "O capital pago por morte em seguro de vida não é herança, não responde por obrigações/dívidas do falecido e não paga ITCMD.",
+      "d": "O seguro de vida não entra em inventário, não integra a herança e não se sujeita à partilha ou credores."
+     }
+    },
+    {
+     "id": "cpa-rel-17-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a D. A Lei 15.040/2024 admite carência para morte/invalidez por doença de até a metade da vigência do contrato (12 meses em 24 meses). Ocorrendo o sinistro na carência, a seguradora devolve os prêmios pagos ou a reserva matemática. A alteração de beneficiário por testamento é válida, mas se a seguradora não foi notificada antes do pagamento, ela fica exonerada pagando ao beneficiário indicado na apólice (cabendo ao novo beneficiário cobrar do antigo).</p><p>As alternativas A, B e C erram ao proibir a carência legal, invalidar a troca de beneficiário via testamento ou direcionar valores a credores do inventário.</p>",
+     "enunciado": "<p>Analise o caso de um segurado que contratou um seguro de vida com prazo de vigência de dois anos. O contrato prevê uma cláusula de carência de 12 meses para eventos de morte decorrentes de enfermidades pré-existentes ou doenças. Durante o sexto mês de vigência, o segurado falece em decorrência de complicações de uma doença cardiovascular grave. Adicionalmente, constata-se que ele havia redigido um testamento três meses antes alterando o beneficiário do seguro sem ter notificado a seguradora. De acordo com a Lei 15.040/2024, o desfecho dessa operação é:</p>",
+     "alternativas": {
+      "a": "A seguradora responderá por perdas e danos por ter recebido os prêmios e deverá quitar o valor diretamente aos credores do inventário.",
+      "b": "A seguradora é obrigada a pagar integralmente o capital segurado, visto que a Lei 15.040/2024 proíbe cláusula de carência em seguros de vida.",
+      "c": "O testamento perde validade jurídica para alteração de beneficiários de seguros de vida, sendo o pagamento revertido compulsoriamente à União.",
+      "d": "A seguradora não pagará o capital segurado devido ao sinistro dentro da carência legal, mas devolverá os prêmios pagos ao beneficiário antigo, ficando exonerada caso não soubesse do testamento."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "O contrato dentro da carência exige a devolução dos prêmios ou reserva, não havendo pagamento de perdas e danos nem envio a credores do inventário.",
+      "b": "A carência para morte e invalidez decorrente de doença é legalmente permitida (limitada à metade da vigência, ou seja, 12 meses em 2 anos).",
+      "c": "A alteração de beneficiário por testamento (declaração de última vontade) é válida; porém, sem aviso prévio, a seguradora se exonera pagando a quem constava na apólice."
+     }
+    }
+   ],
+   "Perfis da pessoa investidora": [
+    {
+     "id": "cpa-rel-18-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. A norma de adequação (suitability) determina expressamente que o perfil do cliente seja construído com base em três dimensões obrigatórias: objetivos de investimento, situação financeira e conhecimento sobre os produtos.</p><p>As alternativas A, B e C erram ao considerar as demais dimensões opcionais, fundamentar a adequação em uma única dimensão ou restringir o processo apenas à renda mensal.</p>",
+     "enunciado": "<p>A Análise do Perfil do Investidor (API) é um processo obrigatório para a verificação da adequação de produtos de investimento ao cliente. A respeito das dimensões normativas que compõem o levantamento do perfil do investidor, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "O perfil do investidor é determinado exclusivamente pela renda mensal declarada no holerite do trabalhador.",
+      "b": "A avaliação da situação financeira é a única dimensão exigida por norma, sendo opcional a apuração sobre objetivos e conhecimentos.",
+      "c": "A verificação de conhecimento técnico do investidor é a única variável utilizada para autorizar aplicações em renda variável.",
+      "d": "A análise de perfil exige a avaliação de três dimensões obrigatórias: objetivos de investimento, situação financeira e conhecimento do cliente."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "A renda mensal é apenas um componente da situação financeira, não definindo o perfil de forma isolada.",
+      "b": "A regulação exige obrigatoriamente a análise conjunta das três dimensões, e não apenas da situação financeira.",
+      "c": "A recomendação de produtos exige o cruzamento das três dimensões (objetivos, situação financeira e conhecimento), e não do conhecimento isolado."
+     }
+    },
+    {
+     "id": "cpa-rel-18-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. Na apuração do conhecimento do cliente, a avaliação da formação acadêmica e da experiência profissional é voltada para a pessoa física, constituindo exceção expressa quanto à sua aplicação para clientes pessoa jurídica.</p><p>As alternativas A, C e D erram ao inventar exigências acadêmicas para sócios de empresas, dispensar a verificação de histórico de operações da pessoa física ou igualar integralmente o questionário nos dois casos.</p>",
+     "enunciado": "<p>Ao comparar os procedimentos de apuração da dimensão \"conhecimento\" para clientes pessoa física e clientes pessoa jurídica na Análise do Perfil do Investidor, verifica-se que:</p>",
+     "alternativas": {
+      "a": "A pessoa jurídica é obrigada a apresentar os diplomas universitários de todos os seus sócios para atestar conhecimento de mercado.",
+      "b": "A análise de formação acadêmica e experiência profissional compõe o conhecimento da pessoa física, mas não se aplica ao cliente pessoa jurídica.",
+      "c": "O cliente pessoa física está totalmente dispensado da verificação sobre os tipos de produtos com os quais já operou no passado.",
+      "d": "Ambas as categorias de clientes possuem exatamente o mesmo roteiro de perguntas sobre formação acadêmica e histórico escolar."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "Exigir diplomas universitários de sócios de pessoas jurídicas não é um requisito e contraria a exceção normativa.",
+      "c": "A pessoa física tem avaliados tanto os tipos de produtos com que possui familiaridade quanto a natureza, o volume e a frequência das operações que já realizou no mercado.",
+      "d": "A verificação de formação acadêmica e experiência profissional é uma exceção que não se aplica às pessoas jurídicas."
+     }
+    },
+    {
+     "id": "cpa-rel-18-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. O perfil moderado busca ganho real acima do IPCA e aceita oscilação controlada, porque entende que o preço do dinheiro varia no caminho: mantém a base de segurança em liquidez diária e avança para produtos com marcação a mercado, como títulos indexados à inflação, multimercados com volatilidade limitada, debêntures de bons emissores e uma exposição pequena a renda variável.</p><p>As alternativas B, C e D erram ao atribuir ao moderado a carteira típica do arrojado, a do conservador, ou ao inventar percentuais de alocação supostamente fixados em norma.</p>",
+     "enunciado": "<p>Uma cliente foi enquadrada no perfil moderado após a análise do perfil do investidor e pergunta ao gerente como fica, na prática, a composição da sua carteira e o que ela deve esperar como resultado. Considerando o comportamento e a carteira típica desse perfil, a orientação correta é:</p>",
+     "alternativas": {
+      "a": "Manter a base de segurança em liquidez diária e avançar para produtos com marcação a mercado, como títulos indexados à inflação, multimercados com volatilidade limitada, debêntures de bons emissores e uma exposição pequena a renda variável, buscando ganho real acima do IPCA.",
+      "b": "Destinar parcelas expressivas do patrimônio a ações, fundos cambiais e estruturas com capital em risco, aceitando perdas nominais severas no percurso.",
+      "c": "Concentrar a carteira em pós-fixados e abrir mão de retorno em troca de previsibilidade, para nunca ver o saldo cair de um mês para o outro.",
+      "d": "Dividir o patrimônio em exatamente 50% de renda fixa e 50% de renda variável, percentual fixado pela Resolução CVM 30 para o perfil moderado."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Parcelas expressivas em ações, fundos cambiais e estruturas com capital em risco, com aceitação de perdas nominais severas, descrevem a carteira do perfil arrojado, e não a do moderado.",
+      "c": "Abrir mão de retorno em troca de previsibilidade e recusar ver o saldo cair descreve o perfil conservador; o moderado aceita oscilação controlada em busca de ganho real.",
+      "d": "A norma não fixa percentuais de alocação por perfil; ela obriga a instituição a estabelecer previamente categorias de perfil de risco e a enquadrar o cliente nelas."
+     }
+    },
+    {
+     "id": "cpa-rel-18-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. Mesmo o investidor enquadrado no perfil arrojado necessita de uma parcela da sua carteira destinada à reserva de emergência em produtos de alta liquidez e baixo risco, visto que a reserva não deve ser exposta à volatilidade de mercado.</p><p>As alternativas A, C e D erram ao exigir 100% de renda variável para o perfil arrojado, assumir que a classificação elimina riscos ou prometer garantia de rentabilidade.</p>",
+     "enunciado": "<p>Um cliente de 32 anos foi enquadrado como investidor arrojado por apresentar elevado conhecimento de mercado, patrimônio consolidado e alta tolerância a riscos de mercado. Ele solicita a alocação de 100% dos seus recursos em ações de alta volatilidade. Sob a ótica das boas práticas de gestão de carteiras e montagem do perfil, o gerente de investimentos deve orientar que:</p>",
+     "alternativas": {
+      "a": "O investidor arrojado é obrigado por norma regulatória a manter a totalidade dos seus bens em renda variável sem qualquer reserva em renda fixa.",
+      "b": "Todo perfil de investidor, inclusive o arrojado, necessita de uma parcela alocada em ativos de alta liquidez e baixa oscilação para a reserva de emergência.",
+      "c": "A alocação integral em ações de alta volatilidade é livre de riscos para clientes que possuem a classificação de perfil arrojado.",
+      "d": "A classificação como arrojado garante a rentabilidade positiva da carteira de ações no prazo de até 12 meses."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "Não existe norma que obrigue o investidor arrojado a manter 100% em renda variável; a reserva de emergência continua sendo necessária.",
+      "c": "O enquadramento em perfil arrojado não elimina o risco de mercado inerente às ações.",
+      "d": "O perfil de risco apenas mede a adequação e a capacidade de suportar oscilações, sem garantir retorno ou rentabilidade futura."
+     }
+    },
+    {
+     "id": "cpa-rel-18-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a A. A Resolução CVM 30 não fixa a lista conservador, moderado e arrojado: ela obriga a instituição a estabelecer previamente categorias de perfil e a enquadrar o cliente nelas. O piso de três perfis vem da autorregulação, do Código de Distribuição da Anbima, e os nomes são convenção de mercado, razão pela qual há instituições com quatro ou cinco faixas. Ademais, para recomendar, a instituição precisa confrontar a classificação do cliente com a classificação prévia das categorias de produtos.</p><p>As alternativas B, C e D erram ao atribuir a taxonomia de três perfis à CVM, dispensar a classificação prévia dos produtos ou considerar o perfil do cliente como imutável.</p>",
+     "enunciado": "<p>Uma instituição financeira organizou sua estrutura de atendimento definindo três perfis para seus clientes (conservador, moderado e arrojado). Ao analisar os fundamentos normativos do suitability quanto às nomenclaturas de perfis e ao processo de recomendação de produtos, verifica-se que:</p>",
+     "alternativas": {
+      "a": "O piso de três perfis vem da autorregulação da Anbima e os nomes conservador, moderado e arrojado são convenção de mercado; além disso, a recomendação exige o confronto entre a classificação do cliente e a classificação prévia das categorias de produtos.",
+      "b": "A Resolução CVM 30 fixa compulsoriamente os nomes conservador, moderado e arrojado como a única taxonomia legal permitida no Brasil.",
+      "c": "A recomendação de investimentos nasce exclusivamente do preenchimento do questionário do cliente, sendo desnecessária a classificação prévia das categorias de produtos.",
+      "d": "O enquadramento no perfil é permanente e imutável ao longo do tempo, proibindo a reclassificação do cliente por mudanças de vida ou idade."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A regulação da CVM exige que a instituição estabeleça categorias de perfis, mas a divisão e nomenclatura em três níveis é convenção da autorregulação da Anbima.",
+      "c": "A recomendação exige duas classificações paralelas: a do cliente e a dos produtos de investimento oferecidos pela instituição.",
+      "d": "O perfil do investidor é dinâmico e deve ser atualizado periodicamente ou sempre que ocorrerem mudanças relevantes em suas condições de vida."
+     }
+    }
+   ],
+   "Adequação de produtos financeiros (suitability)": [
+    {
+     "id": "cpa-rel-19-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. A Resolução CVM 30 veda a recomendação de produtos, serviços ou operações em três situações taxativas: quando o produto for inadequado ao perfil, quando as informações do perfil não tiverem sido obtidas ou quando o perfil estiver desatualizado.</p><p>As alternativas A, C e D erram ao proibir a execução de ordens de iniciativa do cliente, considerar o alerta um abuso ou proibir a indicação de renda fixa para perfil conservador.</p>",
+     "enunciado": "<p>A Resolução CVM 30 estabelece as regras e proibições relativas ao dever de verificação da adequação dos produtos financeiros ao perfil do cliente (suitability). De acordo com a referida norma, é expressamente vedado ao profissional ou à instituição:</p>",
+     "alternativas": {
+      "a": "Executar ordens emitidas por iniciativa própria do cliente quando o produto for incompatível com o seu perfil cadastrado.",
+      "b": "Recomendar produtos ou serviços ao cliente quando as informações do seu perfil estiverem desatualizadas ou não tiverem sido obtidas.",
+      "c": "Exigir a assinatura de termo de alerta de divergência para operações iniciadas pelo cliente sem recomendação.",
+      "d": "Recomendar produtos de renda fixa pós-fixada com liquidez diária a investidores do perfil conservador."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "A vedação normativa recai sobre a recomendação, sendo permitida a execução de ordens por iniciativa do cliente mediante alerta e declaração expressa.",
+      "c": "Exigir o alerta e a declaração de ciência é um dever e procedimento obrigatório na execução de ordens inadequadas por iniciativa do cliente.",
+      "d": "Recomendar renda fixa pós-fixada com liquidez diária para perfil conservador é conduta totalmente adequada e permitida."
+     }
+    },
+    {
+     "id": "cpa-rel-19-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. O perfil do investidor obedece às normas de prevenção à lavagem de dinheiro com intervalo máximo de atualização de cinco anos, ao passo que a nova análise e classificação das categorias de valores mobiliários da instituição deve ocorrer em intervalo não superior a 24 meses.</p><p>As alternativas A, B e C erram ao igualar os prazos em 12 meses, inverter os relógios regulatórios ou negar a existência de prazos na norma.</p>",
+     "enunciado": "<p>O processo de verificação de adequação (suitability) envolve prazos regulatórios distintos para a atualização dos dados do cliente e para a reavaliação das categorias de produtos financeiros ofertados pela instituição. Ao comparar esses dois prazos normativos, constata-se que:</p>",
+     "alternativas": {
+      "a": "Não existem prazos regulatórios máximos fixados pela Resolução CVM 30 para a atualização de dados cadastrais ou de produtos.",
+      "b": "Ambas as atualizações (perfil do cliente e categorias de produtos) devem ocorrer compulsoriamente a cada 12 meses sob pena de multa diária.",
+      "c": "O perfil do cliente deve ser reavaliado a cada 24 meses, enquanto a classificação dos produtos deve ser mantida inalterada por até cinco anos.",
+      "d": "O perfil do cliente deve ser mantido atualizado em intervalo máximo de cinco anos, enquanto as categorias de valores mobiliários devem ser reavaliadas em até 24 meses."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "A norma estabelece expressamente os prazos máximos regulatórios de cinco anos para perfil do cliente e 24 meses para produtos.",
+      "b": "A regulação fixa prazos distintos (cinco anos para o perfil e 24 meses para os produtos), não existindo a obrigatoriedade de 12 meses para ambos.",
+      "c": "Os prazos estão invertidos; o teto de cinco anos aplica-se ao perfil do cliente e os 24 meses aplicam-se às categorias de produtos."
+     }
+    },
+    {
+     "id": "cpa-rel-19-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. Para verificar a adequação aos objetivos, a norma manda analisar no mínimo o período em que o cliente deseja manter o investimento, as preferências declaradas quanto à assunção de riscos e as finalidades do investimento. Além das três dimensões, ela impõe um dever que quase todo material esquece: considerar os custos diretos e indiretos associados ao produto e abster-se de recomendar aqueles que, isoladamente ou em conjunto, impliquem custos excessivos e inadequados ao perfil do cliente.</p><p>As alternativas A, C e D erram ao encurtar a lista mínima dos objetivos, reduzir a situação financeira às receitas regulares ou limitar o dever de custos apenas aos custos diretos.</p>",
+     "enunciado": "<p>A Resolução CVM 30 não se contenta com as três dimensões genéricas do perfil: ela lista o conteúdo mínimo a ser analisado em cada uma e impõe ainda um dever relativo ao preço do produto. A respeito desse conteúdo mínimo e desse dever, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "Nos objetivos basta verificar o período em que o cliente deseja manter o investimento, e o custo do produto não integra a análise de adequação, por ser matéria estritamente comercial.",
+      "b": "Nos objetivos analisam-se, no mínimo, o período em que o cliente deseja manter o investimento, as preferências declaradas quanto à assunção de riscos e as finalidades do investimento; e a instituição deve considerar os custos diretos e indiretos, abstendo-se de recomendar produtos cujos custos sejam excessivos e inadequados ao perfil.",
+      "c": "A situação financeira é apurada exclusivamente pelo valor das receitas regulares declaradas, ficando dispensadas a verificação do valor e dos ativos que compõem o patrimônio e a da necessidade futura de recursos.",
+      "d": "O dever de considerar custos alcança apenas os custos diretos, sendo irrelevantes os custos indiretos sempre que o produto for compatível com o risco tolerado pelo cliente."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "A lista mínima dos objetivos inclui também as preferências declaradas quanto à assunção de riscos e as finalidades do investimento, e a norma manda considerar os custos, vedando recomendar o que for excessivamente caro para aquele perfil.",
+      "c": "A situação financeira exige, no mínimo, o valor das receitas regulares declaradas, o valor e os ativos que compõem o patrimônio e a necessidade futura de recursos declarada.",
+      "d": "O dever alcança os custos diretos e indiretos, isolada ou conjuntamente considerados; produto adequado ao risco, mas caro demais para aquele cliente, é recomendação vedada."
+     }
+    },
+    {
+     "id": "cpa-rel-19-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. Quando a ordem parte de iniciativa do próprio cliente e o produto é inadequado, a instituição pode efetivar a operação desde que, antes de realizá-la, alerte o cliente sobre a inadequação apontando suas causas específicas e obtenha dele declaração expressa de ciência.</p><p>As alternativas A, B e D erram ao mascarar recomendação com termos genéricos, recusar a operação por iniciativa do cliente ou alterar fraudulentamente o cadastro no sistema.</p>",
+     "enunciado": "<p>Um cliente ingressa na corretora e solicita a aplicação de seus recursos em um fundo de renda variável de altíssimo risco e baixa liquidez. O sistema indica que o produto é incompatível com o perfil conservador do investidor. Constatada a divergência e sabendo que a ordem partiu exclusivamente do cliente sem recomendação, a conduta correta da instituição deve ser:</p>",
+     "alternativas": {
+      "a": "Cancelar compulsoriamente a conta do cliente, vista a proibição legal absoluta de execução de ordens divergentes do perfil cadastrado.",
+      "b": "Recomendar verbalmente o produto e colher posteriormente um termo de isenção de responsabilidade genérico sem indicar as causas.",
+      "c": "Alertar o cliente indicando as causas específicas da divergência e obter dele declaração expressa de ciência da inadequação antes da operação.",
+      "d": "Alterar automaticamente o cadastro do cliente para o perfil arrojado no sistema sem notificá-lo para autorizar a operação."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "A norma permite a realização da operação iniciada pelo cliente, desde que cumprido o rito de alerta de causas e declaração expressa.",
+      "b": "É proibido recomendar produto inadequado e colher termos genéricos sem apontar as causas específicas da divergência.",
+      "d": "Adulterar o perfil cadastral do cliente no sistema sem sua manifestação válida constitui grave infração regulatória."
+     }
+    },
+    {
+     "id": "cpa-rel-19-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a D. As dispensas de suitability aplicam-se a investidores qualificados (com exceção das pessoas naturais qualificadas por volume de recursos ou exames/certificações técnicas), pessoas jurídicas de direito público, clientes com carteira administrada discricionariamente e clientes com perfil já definido por consultor CVM.</p><p>As alternativas A, B e C erram ao conceder dispensa a pessoas naturais qualificadas por R$ 1 milhão ou exames técnicos, ou ao aceitar termos de renúncia geral inválidos perante a CVM.</p>",
+     "enunciado": "<p>Um profissional de atendimento analisa as hipóteses em que o dever de verificação de adequação ao perfil do cliente (suitability) é dispensado pela Resolução CVM 30. Ao analisar as situações de diferentes clientes, o gerente conclui corretamente que a dispensa do procedimento de suitability aplica-se a:</p>",
+     "alternativas": {
+      "a": "Todo e qualquer cliente que assine um termo prévio de renúncia voluntária às regras de suitability no ato de abertura de conta.",
+      "b": "Pessoa natural que possui mais de R$ 1.000.000,00 aplicados e assinou termo de qualificação como investidor qualificado por montante de recursos.",
+      "c": "Pessoa natural aprovada em exame de qualificação técnica da CVM e cadastrada como investidora qualificada por conhecimento.",
+      "d": "Pessoa jurídica de direito público e investidor com carteira administrada discricionariamente por administrador autorizado pela CVM."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "Não existe previsão de renúncia geral ou voluntária ao suitability mediante assinatura de termos genéricos na abertura de conta.",
+      "b": "A dispensa de suitability para investidores qualificados não alcança pessoas naturais qualificadas por volume de investimento (acima de R$ 1 milhão).",
+      "c": "A dispensa para investidores qualificados também não alcança pessoas naturais qualificadas por exames de certificação ou qualificação técnica."
      }
     }
    ]
