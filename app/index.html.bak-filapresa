@@ -307,7 +307,7 @@ function fazerLogout() {
       <button class="btn-restart-soft" data-action="reprocessarFaltantes">↩ Reprocessar matérias faltantes</button>
       <button class="btn-restart-hard" data-action="confirmarReinicio">🗑️ Reiniciar cronograma completo</button>
       <div id="reinicioWarning" style="display:none;color:#b91c1c;font-size:0.85rem;margin-top:8px;padding:8px;background:#fef2f2;border-radius:6px;">
-        ⚠️ Isso apaga as <strong>estrelas, os dias marcados e a fila de recuperação</strong>. Suas anotações da semana e o histórico de exercícios continuam. Tem certeza?
+        ⚠️ Isso apagará <strong>todo o histórico</strong>. Tem certeza?
         <div style="margin-top:8px;display:flex;gap:8px;">
           <button id="btnConfirmReinicio" class="btn-restart-hard" style="display:none" data-action="reiniciarCompleto">Sim, reiniciar tudo</button>
           <button id="btnCancelReinicio" class="btn-restart-soft" style="display:none" data-action="cancelarReinicio">Cancelar</button>
