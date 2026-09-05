@@ -1,5 +1,5 @@
 /* GERADO por outputs/questoes_para_js.py. NAO editar a mao.
-   Fonte: _conteudo/cpa/questoes/**.yaml  ·  155 questoes em 31 topicos
+   Fonte: _conteudo/cpa/questoes/**.yaml  ·  215 questoes em 43 topicos
    Para mudar uma questao, edite o YAML e rode o script de novo. */
 window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
  "cpaAnbima": {
@@ -3597,6 +3597,1398 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "Existe intervalo mínimo, e ele é de 60 dias. Em 5 de abril ainda não passou.",
       "c": "Portabilidade nunca vira resgate. Não há retenção de imposto no trânsito.",
       "d": "O tempo de acumulação viaja junto com o saldo. A portabilidade preserva a contagem."
+     }
+    }
+   ],
+   "Princípios para disponibilização de crédito e garantias": [
+    {
+     "id": "cpa-prod-32-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. O caráter mede a intenção de pagar, avaliando o histórico e o comportamento financeiro passado do tomador dentro dos cinco C's do crédito.</p><p>As alternativas B, C e D erram ao definir conceitos de garantias, patrimônio ou cenários externos que compõem os demais pilares da análise.</p>",
+     "enunciado": "<p>Na análise de crédito realizada pelas instituições financeiras para avaliar o risco de um tomador, o pilar que analisa o comportamento, o histórico e a intenção prévia do cliente em honrar seus compromissos financeiros é denominado:</p>",
+     "alternativas": {
+      "a": "Caráter.",
+      "b": "Colateral.",
+      "c": "Capital.",
+      "d": "Condições."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Colateral refere-se estritamente às garantias reais ou pessoais oferecidas para respaldar a operação.",
+      "c": "Capital avalia o patrimônio líquido e a estrutura financeira do devedor.",
+      "d": "Condições medem o cenário macroeconômico externo, como inflação, juros e setor de atuação."
+     }
+    },
+    {
+     "id": "cpa-prod-32-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. O aval é a garantia pessoal restrita a títulos de crédito, onde o avalista responde de forma solidária e autônoma perante o credor.</p><p>As alternativas B, C e D misturam conceitos de garantias contratuais de fiança ou modalidades de garantias reais sobre bens.</p>",
+     "enunciado": "<p>No âmbito das garantias pessoais (fidejussórias), o instrumento jurídico que se aplica de forma exclusiva a títulos de crédito, como cheques, notas promissórias e duplicatas, caracterizando-se pela solidariedade e pela autonomia da obrigação, é o:</p>",
+     "alternativas": {
+      "a": "Aval.",
+      "b": "Fiança.",
+      "c": "Penhor mercantil.",
+      "d": "Alienação fiduciária resolúvel."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A fiança é a garantia pessoal aplicada a contratos em geral, possuindo caráter acessório.",
+      "c": "O penhor mercantil é uma garantia real de bens móveis, e não uma garantia pessoal.",
+      "d": "A alienação fiduciária constitui uma garantia real de transferência de propriedade, e não um aval de títulos."
+     }
+    },
+    {
+     "id": "cpa-prod-32-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. A alienação fiduciária transfere a propriedade resolúvel do bem ao credor e deixa a posse direta com o devedor, sendo a garantia preferida dos bancos por causa do rito extrajudicial de execução.</p><p>As alternativas A, C e D incorrem em erros ao confundir a transferência de propriedade da alienação fiduciária com a hipoteca, fianças ou penhores.</p>",
+     "enunciado": "<p>Um cliente obteve um financiamento imobiliário junto a um banco e utilizou o próprio imóvel adquirido como garantia da dívida. Sob o ponto de vista da modalidade de garantia real utilizada no crédito imobiliário moderno, que transfere a propriedade resolúvel ao credor enquanto o devedor mantém a posse direta, tem-se a:</p>",
+     "alternativas": {
+      "a": "Hipoteca convencional com averbação em cartório de registro de imóveis.",
+      "b": "Alienação fiduciária de bem imóvel.",
+      "c": "Fiança solidária subsidiária com benefício de ordem.",
+      "d": "Penhor industrial de bens de raiz."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "Na hipoteca, o devedor mantém tanto a propriedade quanto a posse do imóvel, diferentemente da alienação fiduciária.",
+      "c": "A fiança é uma garantia pessoal, e não uma garantia real vinculada a um imóvel.",
+      "d": "O penhor recai sobre bens móveis, não se aplicando a imóveis financiados."
+     }
+    },
+    {
+     "id": "cpa-prod-32-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. Embora o penhor exija em regra a transferência da posse ao credor, a lei prevê expressamente exceções no penhor rural, industrial, mercantil e de veículos, onde o bem permanece com o devedor.</p><p>As alternativas A, C e D cometem erros ao generalizar a posse física pelo banco, confundir penhor com imóveis ou impedir a produção agrícola.</p>",
+     "enunciado": "<p>Um produtor rural contratou uma linha de crédito agrícola e empenhou sua safra futura e seus maquinários como garantia da operação. Sobre as regras de constituição e posse aplicáveis a essa modalidade de garantia real (penhor), a norma estabelece que:</p>",
+     "alternativas": {
+      "a": "A posse dos bens empenhados deve ser transferida fisicamente de forma obrigatória para o cofre do banco credor no ato da contratação.",
+      "b": "No penhor rural, industrial, mercantil e de veículos, os bens empenhados permanecem em poder do devedor, que assume a responsabilidade de guardá-los e conservá-los.",
+      "c": "O penhor recai exclusivamente sobre bens imóveis urbanos registrados em cartório.",
+      "d": "O credor assume a posse direta imediata de todas as safras e máquinas, interditando o uso produtivo pelo agricultor."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "A transferência física da posse é a regra geral do penhor comum, mas há exceções expressas para o penhor rural, industrial e de veículos.",
+      "c": "O penhor é uma garantia real restrita a bens móveis, e não a imóveis.",
+      "d": "Interditar o uso produtivo anularia a capacidade de geração de receita do produtor rural, contrariando a finalidade da exceção legal."
+     }
+    },
+    {
+     "id": "cpa-prod-32-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a A. A fiança nasce com benefício de ordem, ou seja, o fiador responde de forma subsidiária e pode exigir que o credor execute antes os bens do devedor. Esse benefício, porém, é renunciável, e a cláusula de principal pagador com renúncia expressa é praxe nos contratos bancários. Com ela, o banco cobra o fiador de imediato.</p><p>As alternativas B, C e D erram ao tornar o benefício de ordem irrenunciável, ao dar à fiança a solidariedade que é do aval, ou ao classificar a fiança como garantia real.</p>",
+     "enunciado": "<p>Um banco concedeu um empréstimo a uma empresa e exigiu um fiador pessoa física. No contrato, o fiador assinou cláusula declarando-se principal pagador e devedor solidário, com renúncia expressa ao benefício de ordem. Vencidas as parcelas sem pagamento, o banco quer cobrar o fiador de imediato, sem antes executar bens da empresa devedora. Sobre essa cobrança, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "O banco pode cobrar o fiador de imediato, porque a renúncia expressa ao benefício de ordem afasta a responsabilidade subsidiária que a fiança tem por regra.",
+      "b": "O banco precisa executar antes todos os bens da empresa, porque o benefício de ordem é irrenunciável e protege o fiador em qualquer contrato.",
+      "c": "A cobrança imediata é possível porque a fiança é solidária por natureza, tornando a cláusula de renúncia um detalhe sem efeito prático.",
+      "d": "O banco precisa executar antes um bem do próprio fiador dado em garantia, porque a fiança é uma garantia real sobre o patrimônio dele."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "O benefício de ordem é renunciável. A própria norma admite a renúncia expressa, a assunção da condição de principal pagador e a insolvência do devedor como situações que afastam a subsidiariedade.",
+      "c": "A fiança não é solidária por natureza, e é aí que mora a pegadinha: por regra ela é subsidiária, e só vira solidária pela cláusula. Quem é solidário e autônomo por natureza é o aval.",
+      "d": "A fiança é garantia pessoal (fidejussória), e não real. Ela alcança o patrimônio geral do fiador, sem bem específico vinculado."
+     }
+    }
+   ],
+   "Cartão de crédito, crédito rotativo e cheque especial": [
+    {
+     "id": "cpa-prod-33-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. Os juros remuneratórios aplicados sobre o valor utilizado do cheque especial possuem trava regulatória limitada a 8% ao mês para pessoas naturais e microempresas.</p><p>As alternativas B, C e D incorrem em erros ao citar tarifas consideradas inconstitucionais pelo STF, cobranças antecipadas ou a exigência de garantias reais inexistentes.</p>",
+     "enunciado": "<p>O cheque especial consiste em um limite de crédito emergencial atrelado diretamente à conta corrente do cliente, sendo caracterizado por incidir juros proporcionais aos dias em que a conta permaneceu no vermelho. Para essa modalidade destinada a pessoas naturais e microempresas, a regulamentação em vigor estabelece que:</p>",
+     "alternativas": {
+      "a": "As taxas de juros remuneratórios cobradas sobre o valor utilizado estão limitadas a 8% ao mês.",
+      "b": "Há cobrança de uma tarifa fixa de disponibilização de 0,25% sobre os limites não utilizados.",
+      "c": "Os juros são cobrados de forma antecipada e integral, independentemente do número de dias de utilização.",
+      "d": "O banco exige a entrega de um bem imóvel em alienação fiduciária para liberar o limite na conta."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A tarifa de disponibilização foi declarada inconstitucional pelo STF e não existe mais.",
+      "c": "A cobrança dos juros é estritamente proporcional aos dias exatos em que a conta ficou no negativo, e não antecipada.",
+      "d": "O cheque especial é uma linha sem garantia real, não exigindo alienação fiduciária de imóveis."
+     }
+    },
+    {
+     "id": "cpa-prod-33-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. O crédito rotativo é a modalidade acionada de forma automática quando o cliente paga qualquer valor entre o mínimo e o total da fatura, rolando o saldo devedor remanescente para o mês seguinte a juros compostos elevados.</p><p>As alternativas B, C e D indicam linhas de crédito corporativas ou de consumo específicas que não correspondem ao rotativo do cartão.</p>",
+     "enunciado": "<p>Ao utilizar o cartão de crédito, o cliente pode optar pelo pagamento integral ou parcial da fatura mensal. Quando o pagamento efetuado fica abaixo do valor total e acima do mínimo exigido, ativa-se automaticamente o mecanismo de financiamento conhecido como:</p>",
+     "alternativas": {
+      "a": "Crédito rotativo.",
+      "b": "Linha de capital de giro com carência de doze meses.",
+      "c": "Desconto de recebíveis de duplicatas mercantis.",
+      "d": "Antecipação de restituição do Imposto de Renda."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Capital de giro é uma linha empresarial com finalidades e estruturas distintas do cartão de crédito de varejo.",
+      "c": "O desconto de duplicatas atende ao mercado corporativo de recebíveis, sem relação com faturas de cartões de pessoas físicas.",
+      "d": "A antecipação de IRPF é um empréstimo bancário específico desvinculado do saldo rotativo da fatura do cartão."
+     }
+    },
+    {
+     "id": "cpa-prod-33-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. O saldo devedor do rotativo só pode ser financiado até o vencimento da fatura subsequente, momento em que o banco é obrigado a oferecer uma linha de parcelamento em condições mais vantajosas.</p><p>As alternativas B, C e D contrariam a norma vigente ao permitirem rolagens prolongadas ou prazos dissociados do vencimento da fatura seguinte.</p>",
+     "enunciado": "<p>Com o objetivo de evitar o efeito bola de neve das dívidas prolongadas no cartão de crédito, a regulamentação estabeleceu limites temporais rígidos para a permanência no crédito rotativo. O prazo máximo em que um saldo devedor pode permanecer financiado no rotativo antes de sofrer intervenção obrigatória é de:</p>",
+     "alternativas": {
+      "a": "Até o vencimento da fatura subsequente.",
+      "b": "Até o limite de 12 meses consecutivos, renováveis mediante nova análise cadastral.",
+      "c": "Até o prazo fixo de 30 dias corridos, independentemente da data de emissão das faturas.",
+      "d": "Por tempo indeterminado, desde que o cliente pague o valor mínimo estipulado em todos os ciclos."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "O prazo não se estende por 12 meses no rotativo; a norma restringe severamente essa rolagem.",
+      "c": "O marco temporal regulatório está atrelado ao ciclo de vencimento das faturas, e não a um prazo fixo genérico de 30 dias.",
+      "d": "O pagamento contínuo do mínimo por tempo indeterminado no rotativo foi vedado pelas regras para coibir o endividamento excessivo."
+     }
+    },
+    {
+     "id": "cpa-prod-33-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. A regra determina que os juros e encargos do crédito rotativo e do parcelamento da fatura não podem superar o valor original da dívida, fazendo com que o débito total estacione no máximo no dobro do principal.</p><p>As alternativas B, C e D criam tetos nominais arbitrários, zerações de juros ou regras falsas sobre a exclusão do IOF.</p>",
+     "enunciado": "<p>Desde janeiro de 2024, entrou em vigor uma importante trava matemática para proteger os consumidores endividados no cartão de crédito. Sobre o limite imposto aos juros e encargos acumulados no crédito rotativo e no parcelamento da fatura, estipula-se que:</p>",
+     "alternativas": {
+      "a": "Os juros e encargos cobrados não podem ultrapassar o valor original da dívida principal.",
+      "b": "A dívida total acumulada fica limitada a um teto fixo de R$ 1.000,00 por CPF, independentemente do gasto.",
+      "c": "Os bancos estão proibidos de cobrar qualquer taxa de juros após o trigésimo dia de atraso.",
+      "d": "O IOF diário é incorporado ao teto dos encargos e não pode ser cobrado separadamente."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A norma não estipula um teto nominal fixo de R$ 1.000,00 para todas as dívidas do país, mas sim uma proporção matemática atrelada ao principal.",
+      "c": "A regra não zera os juros após 30 dias, mas limita o acúmulo total de encargos ao valor original.",
+      "d": "O IOF fica expressamente fora do cálculo desse limite de encargos, mantendo sua incidência própria."
+     }
+    },
+    {
+     "id": "cpa-prod-33-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a A. O IOF nas linhas sem liberação única de recursos (como cheque especial e rotativo) é composto por uma alíquota diária (0,0082% ao dia para pessoa física) somada ao adicional fixo de 0,38%, tendo como base o somatório mensal dos acréscimos diários dos saldos devedores.</p><p>As alternativas B, C e D incorrem em erros graves ao inventar taxas fixas únicas, alegar isenções inexistentes ou exagerar na alíquota diária.</p>",
+     "enunciado": "<p>Analise o caso de um cliente pessoa física que utilizou o limite do cheque especial e manteve saldo devedor na conta por um determinado período, incidindo sobre a operação as alíquotas do Imposto sobre Operações Financeiras (IOF). Sobre a incidência e o cálculo do IOF em operações de crédito sem valor liberado de uma só vez (como cheque especial e rotativo), é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "Incide uma alíquota diária sobre o saldo devedor somada a uma alíquota adicional fixa de 0,38%, calculada sobre o somatório mensal dos acréscimos diários dos saldos devedores.",
+      "b": "O IOF é cobrado uma única vez no primeiro dia de utilização, com alíquota fixa de 3%, sem incidência de taxas diárias.",
+      "c": "As operações de cheque especial são totalmente isentas de IOF por constituírem serviços essenciais de conta corrente.",
+      "d": "A alíquota diária do IOF para pessoa física no cheque especial é de 1% ao dia, sem qualquer limitação de teto anual."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "O IOF não consiste em uma taxa única de 3% no primeiro dia, pois incide de forma diária sobre o saldo devedor acumulado.",
+      "c": "O cheque especial não é isento de IOF, sendo tributado por alíquotas federais específicas de crédito.",
+      "d": "A alíquota diária padrão para pessoa física no crédito é de 0,0082% ao dia, e não de 1% ao dia."
+     }
+    }
+   ],
+   "Crédito consignado e crédito pessoal": [
+    {
+     "id": "cpa-prod-34-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. O crédito consignado possui as menores taxas entre as linhas sem garantia real porque a parcela é descontada diretamente na folha de pagamento ou no benefício, fazendo com que o banco receba na origem e reduza drasticamente o risco de inadimplência.</p><p>As alternativas A, C e D erram ao inventar alienações fiduciárias de salários, coberturas do FGC inexistentes ou subsídios fiscais governamentais.</p>",
+     "enunciado": "<p>Entre as linhas de crédito sem garantia real disponíveis para pessoas físicas, o crédito consignado destaca-se por apresentar taxas de juros substancialmente inferiores às do crédito pessoal comum. O principal fator que justifica essa diferença de risco e custo é:</p>",
+     "alternativas": {
+      "a": "A exigência de alienação fiduciária sobre o salário mensal recebido pelo tomador.",
+      "b": "O desconto da parcela diretamente na folha de pagamento ou benefício, garantindo o recebimento na origem antes de o cliente dispor dos recursos.",
+      "c": "A cobertura integral e obrigatória do Fundo Garantidor de Créditos (FGC) para inadimplências de empréstimos consignados.",
+      "d": "A subvenção fiscal direta concedida pelo Tesouro Nacional para zerar os custos administrativos dos bancos."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "Não existe alienação fiduciária sobre salários; o consignado fundamenta-se na autorização de desconto em folha.",
+      "c": "Linhas de empréstimo consignado não possuem cobertura do FGC.",
+      "d": "O Tesouro Nacional não subsidia o consignado de forma a zerar os custos operacionais dos bancos."
+     }
+    },
+    {
+     "id": "cpa-prod-34-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. O Código de Defesa do Consumidor assegura o direito à liquidação antecipada com a redução proporcional dos juros e encargos, sendo vedada a cobrança de qualquer tarifa por essa liquidação antecipada para pessoas físicas, microempresas e empresas de pequeno porte.</p><p>As alternativas B, C e D distorcem a norma ao exigir tarifas proibidas, negar o abatimento de juros ou restringir o direito de quitação.</p>",
+     "enunciado": "<p>Um cliente contratou uma linha de crédito pessoal e, após pagar algumas parcelas, recebeu recursos extras e decidiu realizar a quitação antecipada total do saldo devedor. De acordo com as normas de proteção ao consumidor e do sistema financeiro, os encargos incidentes devem observar a seguinte regra:</p>",
+     "alternativas": {
+      "a": "O banco deve conceder redução proporcional dos juros e demais acréscimos relativos ao período que deixou de existir.",
+      "b": "O cliente deve pagar obrigatoriamente a taxa de tarifa por liquidação antecipada fixada em contrato para compensar a perda do banco.",
+      "c": "Os juros totais contratados são mantidos integralmente e cobrados sem qualquer abatimento proporcional de prazo.",
+      "d": "A liquidação antecipada é proibida para empréstimos pessoais, sendo permitida apenas em financiamentos imobiliários."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A cobrança de tarifa por liquidação antecipada é expressamente vedada para pessoas físicas, microempresas e EPPs.",
+      "c": "O consumidor tem o direito legal à redução proporcional dos juros correspondentes ao período vincendo.",
+      "d": "A liquidação antecipada é um direito garantido pelo CDC para qualquer contrato de crédito e financiamento."
+     }
+    },
+    {
+     "id": "cpa-prod-34-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. A portabilidade exige que o valor e o prazo da operação na instituição proponente fiquem estritamente limitados ao saldo devedor e ao prazo remanescente da dívida original, vedando trocos ou prazos maiores (que configurariam refinanciamento).</p><p>As alternativas B, C e D desrespeitam as travas de valor/prazo da portabilidade ou descrevem repasses diretos incorretos ao cliente.</p>",
+     "enunciado": "<p>Um tomador possui um empréstimo consignado ativo em uma instituição financeira e deseja realizar a portabilidade dessa dívida para outro banco que oferece uma taxa de juros menor. Para que a portabilidade ocorra de forma regular perante a regulamentação, as condições da nova operação na instituição proponente devem respeitar o seguinte limite:</p>",
+     "alternativas": {
+      "a": "O valor e o prazo da nova operação não podem ser superiores ao saldo devedor e ao prazo remanescente da operação original.",
+      "b": "O cliente pode aproveitar para solicitar um valor extra de \"troco\" em dinheiro vivo e estender o prazo original em até 12 meses.",
+      "c": "A nova instituição pode duplicar o prazo remanescente, desde que mantenha a mesma modalidade de crédito.",
+      "d": "A portabilidade exige a liberação de recursos em conta corrente para que o próprio cliente pague a dívida antiga."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Conceder troco ou alongar o prazo além do saldo remanescente descaracteriza a portabilidade, tornando a operação um refinanciamento.",
+      "c": "Estender o prazo da operação original viola a trava central da portabilidade, que restringe o prazo ao remanescente.",
+      "d": "Na portabilidade, a instituição proponente quita a dívida diretamente junto à credora original, sem transitar dinheiro extra na conta do cliente."
+     }
+    },
+    {
+     "id": "cpa-prod-34-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. O Custo Efetivo Total (CET) consolida em um único percentual anual a taxa de juros, o IOF, os seguros e as tarifas da operação, sendo a métrica correta para comparar propostas de crédito.</p><p>As alternativas B, C e D citam índices de inflação, de construção civil ou referenciais monetários que não avaliam o custo global do empréstimo.</p>",
+     "enunciado": "<p>Para orientar adequadamente um cliente que compara propostas de empréstimo com taxas nominais idênticas mas custos de tarifas e impostos diferentes, o gerente deve utilizar o indicador padronizado que consolida todos os encargos da operação. Esse indicador corresponde ao:</p>",
+     "alternativas": {
+      "a": "Custo Efetivo Total (CET).",
+      "b": "Índice Nacional de Preços ao Consumidor Amplo (IPCA).",
+      "c": "Custo Unitário Básico da Construção Civil (CUB).",
+      "d": "Taxa Referencial (TR) acumulada do semestre."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "O IPCA mede a inflação oficial do país, e não o custo de uma operação de crédito bancário.",
+      "c": "O CUB é um indicador de custos voltado ao setor da construção civil e incorporações imobiliárias.",
+      "d": "A TR é um indexador de remuneração de cadernetas de poupança e alguns contratos antigos, e não um consolidador de tarifas de empréstimo."
+     }
+    },
+    {
+     "id": "cpa-prod-34-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a C, pois trata-se da única alternativa incorreta (atendendo ao comando da questão). A norma admite expressamente a portabilidade para modalidade de crédito diversa da original, havendo inclusive exceções em que a restrição de prazo não se aplica a essa mudança.</p><p>As alternativas A, B e D descrevem fatos plenamente exatos: o bloqueio por margem consignável, os subtetos do trabalhador celetista, e a isenção de tarifa de quitação antecipada para MPEs.</p>",
+     "enunciado": "<p>Analise as características regulatórias aplicáveis aos limites de endividamento e às operações de crédito consignado e portabilidade e assinale a alternativa incorreta:</p>",
+     "alternativas": {
+      "a": "A margem consignável estabelece um teto de comprometimento da remuneração ou do benefício, bloqueando novas averbações caso o limite seja atingido.",
+      "b": "No caso de trabalhadores celetistas regidos pela legislação específica, a margem global é de 40%, dividida em subtetos de 35% para empréstimos e 5% para cartão de crédito consignado.",
+      "c": "A portabilidade de crédito é vedada para modalidades de crédito diversas, permitindo a transferência estrita exclusivamente para o mesmo produto idêntico de origem.",
+      "d": "A vedação de cobrança de tarifa por liquidação antecipada aplica-se não apenas a pessoas físicas, mas também a microempresas e empresas de pequeno porte."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "O bloqueio de novas averbações pelo sistema do órgão pagador ao atingir a margem consignável é correto.",
+      "b": "Os limites de 40% globais para celetistas (35% empréstimos e 5% cartão) estão corretos e respaldados pela norma.",
+      "d": "A proibição de tarifa por liquidação antecipada estendida a micro e pequenas empresas é verídica."
+     }
+    }
+   ],
+   "Crédito Direto ao Consumidor (CDC)": [
+    {
+     "id": "cpa-prod-35-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. O CDC possui destinação específica, pois o banco aprova o crédito e repassa o valor diretamente ao lojista ou fornecedor, sem que o dinheiro passe pela conta corrente do consumidor.</p><p>As alternativas A, C e D erram ao copiar a mecânica do empréstimo pessoal livre, exigir garantias em ouro ou confundir o financiamento com títulos públicos.</p>",
+     "enunciado": "<p>O Crédito Direto ao Consumidor (CDC) difere de um empréstimo pessoal comum por apresentar uma característica estrutural fundamental em sua liberação financeira. Essa peculiaridade consiste em:</p>",
+     "alternativas": {
+      "a": "Depositar o valor integral do empréstimo diretamente na conta corrente do tomador para livre utilização.",
+      "b": "Exigir destinação específica, repassando o valor financiado diretamente ao lojista ou fornecedor do bem ou serviço.",
+      "c": "Exigir obrigatoriamente a entrega de ouro físico na agência bancária como garantia soberana.",
+      "d": "Funcionar como um título público federal negociado exclusivamente no mercado secundário da B3."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "O depósito do dinheiro livre na conta do cliente caracteriza o crédito pessoal, e não o CDC.",
+      "c": "O CDC não exige depósito de ouro físico para a sua contratação.",
+      "d": "O CDC é uma linha de financiamento ao consumo, e não um título público negociado em bolsa."
+     }
+    },
+    {
+     "id": "cpa-prod-35-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. Na alienação fiduciária de veículos, o banco passa a deter a propriedade resolúvel (que se extingue com a quitação) e o cliente fica com a posse direta para circular com o automóvel, constando o gravame no documento.</p><p>As alternativas B, C e D distorcem a titularidade do bem, ignoram o registro de gravame ou atribuem falsas propriedades ao Estado.</p>",
+     "enunciado": "<p>No financiamento de veículos por meio do CDC com garantia real de alienação fiduciária, ocorre uma divisão específica de posições jurídicas sobre o bem adquirido entre a instituição financeira e o cliente. Essa relação estabelece que:</p>",
+     "alternativas": {
+      "a": "O banco detém a propriedade resolúvel do veículo e o cliente fica com a posse direta, constando a restrição de gravame no documento.",
+      "b": "O cliente detém a propriedade definitiva e o banco assume unicamente a posse direta do automóvel.",
+      "c": "A propriedade do veículo pertence ao governo federal até a quitação da última parcela do contrato.",
+      "d": "O bem permanece sem qualquer restrição cartorária ou de trânsito, sem indicação de gravame."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Inverter a propriedade e a posse está incorreto, pois o cliente tem a posse direta e o banco detém a propriedade resolúvel.",
+      "c": "O governo federal não se torna proprietário do veículo financiado por bancos particulares.",
+      "d": "O documento do veículo exibe obrigatoriamente a restrição de gravame vinculada ao financiamento."
+     }
+    },
+    {
+     "id": "cpa-prod-35-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. Como o CDC de varejo não possui bens físicos em garantia real (como uma televisão ou uma viagem), o risco de crédito é maior, o que eleva as taxas de juros cobradas em relação ao financiamento de automóveis.</p><p>As alternativas B, C e D erram ao impor taxas em dólar, cumulações ilegais de tarifas cadastrais ou indexações pós-fixadas ao IGP-M.</p>",
+     "enunciado": "<p>Um cliente celebrou um contrato de CDC prefixado para a aquisição de bens de consumo no varejo, sem a constituição de garantia real sobre os itens comprados. Sobre as condições de risco e os encargos aplicáveis a essa operação, verifica-se que:</p>",
+     "alternativas": {
+      "a": "O CDC de varejo sem garantia real apresenta taxas de juros consideravelmente superiores às do financiamento de veículos, devido à ausência de bens apreensíveis em caso de inadimplência.",
+      "b": "O contrato obrigatoriamente vincula o CET a uma taxa flutuante atrelada exclusivamente ao dólar comercial.",
+      "c": "A Tarifa de Cadastro pode ser cobrada cumulativamente a cada renovação mensal de extratos solicitada pelo cliente.",
+      "d": "Os juros são pós-fixados e calculados com base na variação diária da inflação medida pelo IGP-M."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Os contratos de CDC costumam ser prefixados, sem vínculo forçado à flutuação do dólar comercial.",
+      "c": "A Tarifa de Cadastro ocorre apenas no início do relacionamento e não pode ser cobrada de forma cumulativa por renovações.",
+      "d": "O CDC adota predominantemente taxas prefixadas, e não taxas flutuantes atreladas ao IGP-M."
+     }
+    },
+    {
+     "id": "cpa-prod-35-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. A Tarifa de Cadastro remunera a pesquisa inicial de crédito e não pode ser cobrada cumulativamente, ao passo que o IOF diário possui uma trava regulatória que limita sua incidência a um teto máximo de 365 dias, mesmo em contratos mais longos.</p><p>As alternativas B, C e D inventam cobranças semestralmente renováveis, supostas isenções de IOF ou proibições inexistentes da tarifa cadastral.</p>",
+     "enunciado": "<p>Sobre a cobrança da Tarifa de Cadastro e a incidência do Imposto sobre Operações Financeiras (IOF) em contratos de CDC, a regulamentação vigente determina que:</p>",
+     "alternativas": {
+      "a": "A Tarifa de Cadastro remunera a pesquisa em serviços de crédito no início do relacionamento e não pode ser cobrada cumulativamente, havendo no IOF diário uma trava limite calculada em 365 dias.",
+      "b": "A Tarifa de Cadastro pode ser cobrada a cada semestre de vigência do contrato, e o IOF diário incide sem limite de prazo por toda a duração de um financiamento de cinco anos.",
+      "c": "O IOF é isento em qualquer modalidade de CDC, sendo substituído por uma taxa fixa de administração cobrada pelo Banco Central.",
+      "d": "A Tarifa de Cadastro é ilegal e proibida pelo Código de Defesa do Consumidor em todas as operações de crédito do país."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A Tarifa de Cadastro não é renovável semestralmente e o IOF diário possui a trava limite de 365 dias.",
+      "c": "O CDC sofre incidência de IOF (adicional fixo e diário), não existindo isenção ou substituição por taxas do Banco Central.",
+      "d": "A Tarifa de Cadastro é lícita quando cobrada no início do relacionamento, não sendo proibida pelo CDC."
+     }
+    },
+    {
+     "id": "cpa-prod-35-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a A. Em caso de inadimplência no CDC de veículos, o credor pode escolher entre a via judicial clássica de busca e apreensão ou a via extrajudicial (via cartório com 20 dias para pagamento), criada pelo Marco Legal das Garantias.</p><p>As alternativas B, C e D cometem erros graves ao citar instâncias trabalhistas incorretas, aguardar prazos absurdos ou eliminar as notificações legais obrigatórias.</p>",
+     "enunciado": "<p>Analise o caso de um consumidor que financiou um veículo por meio de um CDC com alienação fiduciária e, após pagar metade das prestações, entrou em atraso com as parcelas subsequentes. Avalie as vias de execução e retomada do bem disponíveis para a instituição financeira à luz da legislação e assinale a correta:</p>",
+     "alternativas": {
+      "a": "O banco pode adotar a tradicional via judicial de busca e apreensão ou optar pela via extrajudicial instituída pelo Marco Legal das Garantias, que exige notificação por cartório com prazo de 20 dias para pagamento.",
+      "b": "A única via legal permitida no Brasil para reaver o veículo é o processo de execução hipotecária na justiça comum trabalhista.",
+      "c": "O banco está obrigado a aguardar o término integral do prazo original do contrato de financiamento para só então acionar os órgãos de trânsito via mandado de segurança.",
+      "d": "A retomada do veículo ocorre de forma sumária e privada no mesmo dia do atraso, sem qualquer notificação extrajudicial ou prazos de purga da mora."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "O financiamento de veículos não utiliza execução hipotecária trabalhista, mas sim busca e apreensão ou a via extrajudicial de bens móveis.",
+      "c": "O banco não precisa aguardar o fim do contrato para cobrar o devedor inadimplente em atraso.",
+      "d": "O rito extrajudicial exige notificação formal por cartório com prazo de 20 dias para pagamento, não ocorrendo de forma sumária e privada sem aviso."
+     }
+    }
+   ],
+   "Crédito imobiliário": [
+    {
+     "id": "cpa-prod-36-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. O SFH possui limites rígidos, fixando o teto de avaliação do imóvel em R$ 2,25 milhões e o custo efetivo máximo de juros ao mutuário em 12% ao ano.</p><p>As alternativas A, C e D incorrem em erros ao citar limites antigos de R$ 1,5 milhão ou confundir as regras reguladas do SFH com a liberdade do SFI.</p>",
+     "enunciado": "<p>O Sistema Financeiro da Habitação (SFH) foi estruturado para incentivar a aquisição da casa própria por meio de condições reguladas e atrativas. Entre os limites impostos pelo SFH, o teto atual para o valor de avaliação do imóvel financiado e a taxa máxima de juros anual ao mutuário correspondem, respectivamente, a:</p>",
+     "alternativas": {
+      "a": "R$ 1,5 milhão e 6% ao ano.",
+      "b": "R$ 2,25 milhões e 12% ao ano.",
+      "c": "R$ 5 milhões e taxa livre sem teto fixado.",
+      "d": "R$ 10 milhões e 15% ao ano."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "O limite de R$ 1,5 milhão e os juros de 6% estão desatualizados e não refletem as regras vigentes do SFH.",
+      "c": "Limites de valores livres e ausência de tetos caracterizam o SFI, e não o SFH.",
+      "d": "O SFH possui tetos estritos de valor e de juros, não chegando a esses patamares elevados."
+     }
+    },
+    {
+     "id": "cpa-prod-36-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. O uso do FGTS para pagamento de entrada, amortização ou redução de parcelas é restrito às operações vinculadas e enquadradas estritamente no Sistema Financeiro da Habitação (SFH).</p><p>As alternativas A, C e D erram ao permitir o FGTS no SFI ou em aplicações alheias à habitação popular e regulada.</p>",
+     "enunciado": "<p>Um investidor deseja utilizar os recursos de sua conta vinculada do FGTS para amortizar o saldo devedor de um financiamento imobiliário. De acordo com as normas que regem o crédito imobiliário, o uso do FGTS é permitido exclusivamente em operações enquadradas no:</p>",
+     "alternativas": {
+      "a": "Sistema de Financiamento Imobiliário (SFI).",
+      "b": "Sistema Financeiro da Habitação (SFH).",
+      "c": "Mercado de crédito livre corporativo de curto prazo.",
+      "d": "Fundo de Investimento em Participações (FIP)."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "O uso do FGTS é expressamente vedado nas operações do SFI.",
+      "c": "Créditos corporativos de curto prazo não dão acesso ao saque ou uso do FGTS habitacional.",
+      "d": "FIPs são fundos de participação em empresas, sem qualquer vínculo com a utilização do FGTS para habitação."
+     }
+    },
+    {
+     "id": "cpa-prod-36-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. O SFI destaca-se pela livre negociação de taxas e valores de imóveis sem uso de FGTS, enquanto o SFH submete-se a tetos de avaliação e juros, permitindo o uso do FGTS para moradia própria.</p><p>As alternativas B, C e D invertem os papéis dos sistemas, inventam limites de juros rígidos ou garantem uso indevido de FGTS.</p>",
+     "enunciado": "<p>Ao comparar as características operacionais entre o Sistema Financeiro da Habitação (SFH) e o Sistema de Financiamento Imobiliário (SFI), constata-se que:</p>",
+     "alternativas": {
+      "a": "O SFI opera sem teto de valor de imóvel e sem limite regulatório de juros, sendo vedado o uso do FGTS, ao passo que o SFH impõe tetos e permite o FGTS.",
+      "b": "O SFI é restrito exclusivamente a imóveis residenciais populares de até R$ 200 mil, enquanto o SFH financia galpões industriais.",
+      "c": "Ambos os sistemas exigem obrigatoriamente a utilização de taxas de juros prefixadas limitadas a 8% ao ano.",
+      "d": "O uso do FGTS é obrigatório e compulsório em todas as operações contratadas no SFI."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Os papéis foram invertidos, pois o SFI financia grandes imóveis comerciais ou de alto padrão, e o SFH atende à habitação residencial.",
+      "c": "O SFI possui taxas e condições livres, não se submetendo a limites fixos de 8% ao ano.",
+      "d": "O FGTS é vedado no SFI, sendo exclusivo do SFH."
+     }
+    },
+    {
+     "id": "cpa-prod-36-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. Na execução extrajudicial da alienação fiduciária de imóveis, o devedor é intimado pelo oficial do registro de imóveis e dispõe de um prazo de 15 dias para purgar a mora, regularizando as parcelas atrasadas.</p><p>As alternativas B, C e D confundem o prazo de purga da mora com prazos de leilão, renegociações anuais ou prazos exíguos inexistentes.</p>",
+     "enunciado": "<p>Um mutuário de um financiamento imobiliário garantido por alienação fiduciária entrou em inadimplência com suas obrigações mensais. O banco acionou o rito de execução extrajudicial em cartório, notificando o devedor. O prazo regulamentar concedido para que o mutuário possa purgar a mora (pagar os valores em atraso) é de:</p>",
+     "alternativas": {
+      "a": "15 dias contados da intimação pelo oficial do registro de imóveis.",
+      "b": "60 dias corridos para o primeiro leilão público.",
+      "c": "12 meses renováveis por mais um ano.",
+      "d": "48 horas úteis para quitação integral do saldo devedor total."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Os 60 dias representam o limite de prazo para a realização do leilão público após consolidada a propriedade, e não o prazo para purgar a mora.",
+      "c": "Prazos de 12 meses aplicam-se a reestruturações contratuais longas, e não à purga da mora cartorária.",
+      "d": "Não existe prazo exíguo de 48 horas para quitação total obrigatória sem direito à purga regular."
+     }
+    },
+    {
+     "id": "cpa-prod-36-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a A. Persistindo a inadimplência após o prazo de purga da mora, averba-se a consolidação da propriedade em nome do credor, que obrigatoriamente deve realizar o leilão público do imóvel em até 60 dias contados do registro.</p><p>As alternativas B, C e D incorrem em erros graves ao permitir a apropriação direta sem leilão, envolver o Banco Central ou exigir processos judiciais na justiça comum.</p>",
+     "enunciado": "<p>Analise os procedimentos de execução extrajudicial previstos para a alienação fiduciária de imóveis e assinale a alternativa correta sobre as etapas subsequentes caso o devedor não pague o débito no prazo legal de purga da mora:</p>",
+     "alternativas": {
+      "a": "A propriedade do imóvel é consolidada em nome do credor fiduciário no registro de imóveis, ficando este obrigado a levar o bem a leilão público em até 60 dias contados da consolidação.",
+      "b": "O banco fica automaticamente autorizado a transferir o imóvel para seu patrimônio definitivo e utilizá-lo como sede própria, sem precisar realizar leilões.",
+      "c": "O imóvel é confiscado sumariamente pelo Banco Central para recomposição do compulsório bancário.",
+      "d": "O credor é obrigado a ajuizar uma ação de execução forçada na justiça comum para que um juiz determine a desocupação forçada em até 48 horas."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "O banco não pode ficar com o imóvel em seu patrimônio definitivo sem submetê-lo ao leilão público obrigatório.",
+      "c": "O Banco Central não confisca imóveis particulares para recomposição de compulsórios.",
+      "d": "O rito da alienação fiduciária é extrajudicial em cartório, dispensando ações de execução forçada na justiça comum para essa fase."
+     }
+    }
+   ],
+   "Capital de giro e consórcio": [
+    {
+     "id": "cpa-prod-37-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. O capital de giro é um empréstimo de curto e médio prazo criado para cobrir o descompasso de caixa das empresas, permitindo honrar compromissos operacionais como salários, fornecedores e impostos.</p><p>As alternativas B, C e D confundem a linha com crédito de investimento imobiliário, com consórcios coletivos ou com aplicações financeiras.</p>",
+     "enunciado": "<p>O capital de giro é uma linha de crédito voltada ao atendimento de necessidades operacionais das empresas. Sob o ponto de vista da finalidade e do prazo dessa modalidade, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "Destina-se a cobrir o descompasso de curto e médio prazo no fluxo de caixa entre contas a pagar e a receber.",
+      "b": "Financia exclusivamente a construção de novas sedes empresariais e a aquisição de equipamentos industriais de longuíssimo prazo.",
+      "c": "Aplica-se unicamente ao autofinanciamento coletivo fiscalizado pela CVM por meio de sorteios mensais.",
+      "d": "Funciona como uma aplicação financeira de renda fixa isenta de Imposto de Renda para pessoas jurídicas."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Financiar construções e sedes corporativas caracteriza o crédito de investimento de longo prazo, e não o capital de giro.",
+      "c": "O autofinanciamento coletivo por sorteios descreve o consórcio, e não um empréstimo de capital de giro.",
+      "d": "O capital de giro é um empréstimo tomado pela empresa, e não um título de aplicação financeira de renda fixa."
+     }
+    },
+    {
+     "id": "cpa-prod-37-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. A normatização, a supervisão, a fiscalização e a autorização de funcionamento das administradoras de consórcios competem exclusivamente ao Banco Central do Brasil.</p><p>As alternativas B, C e D atribuem incorretamente a fiscalização a órgãos de mercado de capitais, garantidores ou seguros privados.</p>",
+     "enunciado": "<p>O órgão federal dotado de competência legal para normatizar, autorizar o funcionamento, supervisionar e fiscalizar o sistema de consórcios no Brasil é o:</p>",
+     "alternativas": {
+      "a": "Banco Central do Brasil (BCB).",
+      "b": "Comissão de Valores Mobiliários (CVM).",
+      "c": "Fundo Garantidor de Créditos (FGC).",
+      "d": "Superintendência de Seguros Privados (Susep)."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A CVM regula o mercado de capitais, ações e fundos de investimento, não administrando o sistema de consórcios.",
+      "c": "O FGC é uma entidade privada que garante depósitos bancários, sem atribuição de fiscalização de consórcios.",
+      "d": "A Susep fiscaliza seguros, previdência complementar aberta e capitalização, e não consórcios."
+     }
+    },
+    {
+     "id": "cpa-prod-37-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. A legislação estipula que as únicas duas formas legalmente admitidas de contemplação em um grupo de consórcio são o sorteio e o lance.</p><p>As alternativas B, C e D inventam critérios arbitrários, cobranças de juros vedadas ou escolhas subjetivas alheias à lei.</p>",
+     "enunciado": "<p>Um cliente participa de um grupo de consórcio imobiliário e questiona seu gerente sobre as formas legalmente permitidas para alcançar a contemplação da carta de crédito nas assembleias mensais. A resposta correta é de que a contemplação ocorre exclusivamente por:</p>",
+     "alternativas": {
+      "a": "Sorteio ou lance.",
+      "b": "Análise de crédito prévia ou tempo de relacionamento bancário.",
+      "c": "Pagamento antecipado de juros remuneratórios à administradora.",
+      "d": "Decisão arbitrária da assembleia de acionistas da instituição financeira."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Análise de crédito e tempo de banco não dão direito à contemplação no consórcio.",
+      "c": "O consórcio não cobra juros remuneratórios, sendo vedada essa forma de liberação do crédito.",
+      "d": "A assembleia de consorciados não possui poder de escolher arbitrariamente quem será contemplado fora das regras."
+     }
+    },
+    {
+     "id": "cpa-prod-37-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. Quando a carta de crédito é reajustada, a prestação de todos os participantes do grupo sobe na mesma proporção, abrangendo inclusive os consorciados que já foram contemplados, garantindo recursos para as próximas entregas.</p><p>As alternativas B, C e D isentam indevidamente os contemplados, transferem o encargo para o fundo de reserva ou decretam liquidações falsas.</p>",
+     "enunciado": "<p>Durante a vigência de um grupo de consórcio, a carta de crédito sofre reajustes periódicos para preservar o seu poder de compra (por exemplo, pelo INCC nos imóveis). Quando ocorre esse reajuste no valor da carta de crédito, a consequência prática para os participantes é a de que:</p>",
+     "alternativas": {
+      "a": "A parcela mensal de todos os participantes sofre reajuste na mesma proporção, inclusive a dos já contemplados.",
+      "b": "Apenas os consorciados que ainda não foram contemplados pagam o reajuste, ficando os contemplados isentos.",
+      "c": "A administradora absorve todo o impacto financeiro com recursos do fundo de reserva, mantendo as parcelas inalteradas.",
+      "d": "O grupo é imediatamente liquidado e extinto pelo Banco Central."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Os contemplados não ficam isentos, pois o reajuste atinge a parcela de todos para manter o caixa do grupo equilibrado.",
+      "c": "O fundo de reserva serve para cobrir inadimplências, e não para absorver reajustes gerais de cartas de crédito.",
+      "d": "O reajuste da carta não provoca a liquidação antecipada compulsória do grupo."
+     }
+    },
+    {
+     "id": "cpa-prod-37-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a A. O consorciado excluído tem direito à restituição da importância paga ao fundo comum, concorrendo às assembleias mensais do grupo juntamente com os ativos, porém apenas para efeito de devolução por sorteio.</p><p>As alternativas B, C e D erram ao prever restituições imediatas e integrais (incluindo taxas administrativas), confiscos absolutos de valores ou correções por taxas estranhas ao grupo.</p>",
+     "enunciado": "<p>Analise o tratamento normativo aplicável aos consorciados excluídos (desistentes ou inadimplentes) em um grupo de consórcio e assinale a alternativa correta sobre a forma de restituição dos valores pagos:</p>",
+     "alternativas": {
+      "a": "O consorciado excluído continua concorrendo às assembleias mensais do grupo, exclusivamente para efeito de restituição dos valores pagos ao fundo comum por meio de sorteio.",
+      "b": "O valor total pago, incluindo a taxa de administração e o fundo de reserva, é devolvido em parcela única no mês imediatamente seguinte à desistência.",
+      "c": "O consorciado perde direito a qualquer restituição caso desista antes de completar 50% do prazo total do grupo.",
+      "d": "Os valores são restituídos de forma imediata e integral com correção pela taxa Selic capitalizada diariamente."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A devolução não é imediata no mês seguinte e não abrange a taxa de administração já retida.",
+      "c": "O desistente possui direito à restituição, não perdendo integralmente os valores pagos ao fundo comum.",
+      "d": "A restituição não ocorre de forma imediata nem é corrigida pela taxa Selic diária da forma descrita."
+     }
+    }
+   ],
+   "Conta corrente, depósitos, tarifas e atendimento bancário": [
+    {
+     "id": "cpa-prod-38-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. Como a conta corrente caracteriza-se como um depósito à vista com liquidez imediata, o saldo mantido pelo correntista não gera nenhum tipo de rendimento financeiro.</p><p>As alternativas B, C e D erram ao atribuir remunerações de juros, de poupança ou da taxa Selic a saldos de contas correntes.</p>",
+     "enunciado": "<p>A conta corrente é classificada tecnicamente como um depósito à vista de livre movimentação. Sobre a remuneração aplicável ao saldo mantido em uma conta corrente comum de pessoa física, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "O saldo parado em conta corrente não gera rendimento financeiro ao correntista.",
+      "b": "O saldo rende de forma automática o equivalente à taxa Selic acumulada do período.",
+      "c": "Os recursos depositados rendem mensalmente a mesma taxa fixa da caderneta de poupança mais a TR.",
+      "d": "O banco paga juros diários ao correntista sobre o saldo médio mantido na conta."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A conta corrente comum não rende o equivalente à taxa Selic.",
+      "c": "O rendimento da poupança aplica-se exclusivamente às contas de poupança, e não aos depósitos à vista em conta corrente.",
+      "d": "Contas correntes comuns não remuneram o correntista com juros diários sobre o saldo mantido."
+     }
+    },
+    {
+     "id": "cpa-prod-38-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. O pacote de serviços essenciais gratuito inclui por mês, entre outros itens, quatro saques, dois extratos, duas transferências entre contas da própria instituição e dez folhas de cheque.</p><p>As alternativas B, C e D extrapolam os limites normativos ao prometer saques ilimitados, isenções de juros ou talões ilimitados.</p>",
+     "enunciado": "<p>O pacote de serviços essenciais é uma garantia regulatória que oferece um piso de transações gratuitas mensais para correntistas pessoas físicas. Entre os itens incluídos nesse pacote sem cobrança de tarifas, encontram-se:</p>",
+     "alternativas": {
+      "a": "Quatro saques, dois extratos com a movimentação dos últimos trinta dias e duas transferências entre contas da própria instituição.",
+      "b": "Dez saques mensais ilimitados em qualquer banco e cinco transferências via TED para terceiros.",
+      "c": "Isenção integral de juros no cheque especial até o limite de R$ 500,00.",
+      "d": "Fornecimento gratuito de talonários ilimitados de cheques por mês."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "O pacote essencial não inclui saques ilimitados em qualquer banco nem cinco TEDs gratuitas para terceiros.",
+      "c": "Juros de cheque especial não fazem parte do pacote de serviços essenciais de extratos e saques.",
+      "d": "O pacote essencial prevê especificamente dez folhas de cheque por mês, e não talonários ilimitados."
+     }
+    },
+    {
+     "id": "cpa-prod-38-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. O correntista pode pedir o encerramento da conta pelo mesmo canal utilizado na abertura, dispondo a instituição do prazo de até trinta dias corridos para adotar as providências de rescisão.</p><p>As alternativas B, C e D incorrem em erros ao exigir idas presenciais obrigatórias, condicionar a saída à quitação de dívidas ou estipular prazos inexequíveis de 24 horas.</p>",
+     "enunciado": "<p>Um correntista decidiu encerrar sua conta corrente aberta inicialmente por meio do aplicativo digital da instituição. Sobre o procedimento e os prazos exigidos para o encerramento da conta, a regulamentação estabelece que:</p>",
+     "alternativas": {
+      "a": "O cliente pode solicitar o encerramento pelo mesmo canal usado na abertura (pelo aplicativo), e a instituição tem o prazo limite de até trinta dias corridos para concluir a rescisão.",
+      "b": "O encerramento obriga o comparecimento presencial exclusivo na agência de origem onde a conta foi aberta fisicamente anos antes.",
+      "c": "O banco pode recusar o encerramento da conta caso exista qualquer saldo devedor ou pendência de empréstimo em aberto.",
+      "d": "O prazo máximo concedido para o banco finalizar o processo de encerramento é de exatas 24 horas úteis."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A norma garante o direito de encerrar a conta pelo mesmo canal da abertura, dispensando a obrigação de ir à agência física.",
+      "c": "O encerramento não fica condicionado à quitação prévia de dívidas, que continuam sendo cobradas por outros meios.",
+      "d": "O prazo regulamentar fixado para a conclusão do encerramento é de trinta dias corridos, e não 24 horas."
+     }
+    },
+    {
+     "id": "cpa-prod-38-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. A conta salário serve exclusivamente para receber pagamentos do empregador, não cobra tarifa de manutenção e permite realizar a portabilidade gratuita dos valores para outra conta de mesma titularidade.</p><p>As alternativas B, C e D violam as normas ao permitir depósitos de terceiros, cobrar tarifas de portabilidade ou direcionar recursos para contas alheias.</p>",
+     "enunciado": "<p>Em relação às regras de funcionamento e movimentação da conta salário e ao mecanismo de portabilidade associado a ela, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "A conta salário possui finalidade exclusiva para depósitos do empregador, sendo vedada a cobrança de tarifa de manutenção e permitida a portabilidade gratuita e integral para conta de mesma titularidade em outro banco.",
+      "b": "O trabalhador pode receber livremente depósitos em dinheiro feitos por terceiros e transferir os recursos para contas de qualquer titularidade.",
+      "c": "A instituição financeira detém o direito de cobrar uma tarifa mensal de manutenção caso o trabalhador solicite a portabilidade do salário.",
+      "d": "A portabilidade de salário obriga o cliente a transferir os recursos integralmente para uma conta de terceiros indicada pelo empregador."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A conta salário não aceita depósitos de terceiros ou em espécie, recebendo exclusivamente do empregador.",
+      "c": "A portabilidade de salário é totalmente gratuita, sendo vedada a cobrança de tarifas de manutenção na conta salário.",
+      "d": "A portabilidade exige obrigatoriamente que a conta de destino seja de mesma titularidade do trabalhador, e nunca de terceiros."
+     }
+    },
+    {
+     "id": "cpa-prod-38-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a A. A inclusão no Cadastro de Emitentes de Cheques sem Fundos (CCF) exige a ocorrência dos motivos 12, 13 ou 14, de modo que o motivo 11 (falta de fundos na primeira apresentação) sozinho não aciona o registro no cadastro restritivo.</p><p>As alternativas B, C e D erram ao incluir clientes precipitadamente no CCF por causa do motivo 11 isolado, isentar contas encerradas ou alegar a extinção incorreta dos cheques.</p>",
+     "enunciado": "<p>Um cliente emitiu um cheque que acabou sendo devolvido pelo banco por insuficiência de provisão de fundos (falta de saldo). Analise as consequências normativas aplicáveis aos códigos de devolução de cheques e assinale a alternativa correta sobre a inclusão no Cadastro de Emitentes de Cheques sem Fundos (CCF):</p>",
+     "alternativas": {
+      "a": "A inclusão do emitente no CCF decorre dos motivos 12 (cheque sem fundos na segunda apresentação), 13 (conta encerrada) e 14 (prática espúria), não ocorrendo isoladamente pelo motivo 11 na primeira apresentação.",
+      "b": "O emitente é inscrito no CCF de forma automática logo na primeira apresentação do cheque devolvido pelo motivo 11.",
+      "c": "O motivo 13 referente a conta encerrada não gera nenhum tipo de restrição cadastral no sistema financeiro ou inclusão no CCF.",
+      "d": "A emissão de cheques sem fundos foi totalmente substituída pelo Pix, extinguindo o CCF e o motivo 11 do sistema bancário brasileiro."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A devolução isolada pelo motivo 11 na primeira apresentação não gera a inscrição no CCF.",
+      "c": "A devolução pelo motivo 13 (conta encerrada) é justamente uma das ocorrências que provocam a inclusão do emitente no CCF.",
+      "d": "Os cheques e suas normas de devolução continuam vigentes, e o CCF não foi extinto."
+     }
+    }
+   ],
+   "PIX: funcionamento, chaves, custos e aplicações": [
+    {
+     "id": "cpa-prod-39-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. O Pix é um meio de pagamento instantâneo criado, desenvolvido e gerido pelo Banco Central, liquidando transações em segundos, 24 horas por dia, todos os dias da semana.</p><p>As alternativas B, C e D erram ao atribuir a criação a bancos comerciais ou à Febraban, restringir o funcionamento a dias úteis ou relacioná-lo à B3.</p>",
+     "enunciado": "<p>O Pix é um meio de pagamento instantâneo amplamente utilizado no Brasil. Sobre a origem, a gestão e o funcionamento operacional dessa ferramenta, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "Foi criado, desenvolvido e é gerido integralmente pelo Banco Central do Brasil, operando 24 horas por dia, todos os dias da semana.",
+      "b": "Trata-se de um arranjo privado exclusivo gerido de forma consorciada pelos grandes bancos comerciais privados da Febraban.",
+      "c": "Funciona exclusivamente em dias úteis e durante o horário tradicional de expediente bancário das agências físicas.",
+      "d": "É um produto financeiro de titularidade da B3, sendo negociado por meio de lotes de liquidação diferida."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "O Pix não é um arranjo privado dos bancos comerciais, mas sim criado e gerido pelo Banco Central.",
+      "c": "O Pix opera em tempo real, 24 horas por dia e 7 dias por semana, inclusive fins de semana e feriados.",
+      "d": "A B3 não é a criadora nem a gestora do Pix, que roda sobre infraestrutura ligada ao Banco Central."
+     }
+    },
+    {
+     "id": "cpa-prod-39-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. As chaves Pix ficam armazenadas no DICT (Diretório de Identificadores de Contas Transacionais), que constitui uma base centralizada e gerida pelo Banco Central.</p><p>As alternativas B, C e D erram ao descentralizar as bases nos bancos, atribuir a gestão a comitês de internet ou envolver o FGC.</p>",
+     "enunciado": "<p>As chaves Pix funcionam como apelidos que facilitam a identificação das informações das contas dos clientes. O armazenamento centralizado e a vinculação dessas chaves às respectivas contas e instituições financeiras ficam sob a responsabilidade do:</p>",
+     "alternativas": {
+      "a": "DICT (Diretório de Identificadores de Contas Transacionais), base centralizada e gerida pelo Banco Central.",
+      "b": "Banco emissor da chave, que mantém um diretório próprio e isolado sem comunicação com as demais instituições.",
+      "c": "Comitê Gestor da Internet no Brasil (CGI.br), responsável pelos registros de domínios e chaves digitais.",
+      "d": "Fundo Garantidor de Créditos (FGC), que audita diariamente todas as senhas de segurança dos correntistas."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "As chaves não ficam isoladas em diretórios próprios de cada banco, mas sim em uma base centralizada.",
+      "c": "O CGI.br não gerencia as chaves transacionais do sistema de pagamentos instantâneos do Banco Central.",
+      "d": "O FGC protege depósitos bancários contra quebras de instituições, não gerenciando o diretório de chaves do Pix."
+     }
+    },
+    {
+     "id": "cpa-prod-39-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. Para a pessoa física, o Pix é gratuito em transferências e pagamentos de compras, exceto se a conta for utilizada com finalidade comercial para recebimento de vendas ou serviços, hipótese em que a cobrança é permitida.</p><p>As alternativas B, C e D cometem erros ao estender gratuidade ao MEI, proibir tarifas de jurídicas ou cobrar taxas fixas de pessoas físicas.</p>",
+     "enunciado": "<p>Em relação às regras de custos e tarifas aplicáveis às transações via Pix para diferentes perfis de clientes, a regulamentação vigente estabelece que:</p>",
+     "alternativas": {
+      "a": "Para a pessoa física, o Pix é gratuito em transferências e compras, mas a cobrança é permitida caso a conta seja usada com finalidade comercial.",
+      "b": "O Microempreendedor Individual (MEI) desfruta da mesma gratuidade total garantida à pessoa física em qualquer volume de vendas.",
+      "c": "É terminantemente proibido aos bancos cobrar qualquer tarifa de pessoas jurídicas pelo recebimento de valores via Pix.",
+      "d": "A pessoa física paga uma taxa fixa obrigatória estipulada pelo Banco Central a cada envio de Pix superior a R$ 100,00."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "O MEI é classificado como pessoa jurídica e está sujeito à cobrança de tarifas, não tendo a gratuidade de pessoa física.",
+      "c": "Para pessoas jurídicas, a cobrança de tarifas é plenamente permitida, tanto no envio quanto no recebimento.",
+      "d": "O Pix para pessoa física em uso não comercial é totalmente gratuito, independentemente do valor transacionado."
+     }
+    },
+    {
+     "id": "cpa-prod-39-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. O Pix Agendado depende da iniciativa do pagador para programar uma transferência futura, ao passo que o Pix Automático viabiliza cobranças recorrentes onde o cliente autoriza uma única vez e o recebedor puxa o valor a cada vencimento.</p><p>As alternativas B, C e D distorcem os conceitos ao impor restrições falsas, exigir reautenticações mensais ou limitar os meios de pagamento.</p>",
+     "enunciado": "<p>Na oferta de modalidades e aplicações do Pix, existem diferenças práticas fundamentais entre o Pix Agendado e o Pix Automático. A principal distinção entre esses dois serviços consiste no fato de que:</p>",
+     "alternativas": {
+      "a": "No Pix Agendado a iniciativa e a programação partem do pagador para uma data futura, enquanto no Pix Automático o cliente autoriza uma única vez e o recebedor puxa o valor da cobrança recorrente a cada vencimento.",
+      "b": "O Pix Agendado é exclusivo para transações entre empresas (B2B), ao passo que o Pix Automático é proibido para contas de consumo como água e luz.",
+      "c": "O Pix Automático exige nova autenticação e autorização manual do cliente a cada mês, diferentemente do Agendado que é perpétuo.",
+      "d": "O Pix Agendado é operado de forma física por meio de correspondentes bancários, enquanto o Automático ocorre apenas via cartões de crédito."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Ambas as modalidades atendem a diferentes finalidades de pagamento, sem restrições exclusivas B2B ou proibições a contas de consumo no Automático.",
+      "c": "O Pix Automático dispensa novas autenticações a cada cobrança, pois se baseia em uma autorização única prévia dada pelo pagador.",
+      "d": "Nenhuma das modalidades depende de cartões de crédito ou de atendimento físico em correspondentes bancários."
+     }
+    },
+    {
+     "id": "cpa-prod-39-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a A. O MED destina-se estritamente a situações de fundada suspeita de fraude e falha operacional, sendo expressamente vedado o seu uso para resolver desacordos comerciais, defeitos ou arrependimentos de compras.</p><p>As alternativas B, C e D cometem erros graves ao transformar o MED em seguro de consumo, limitar o rastreio do MED 2.0 ou encurtar prazos de análise.</p>",
+     "enunciado": "<p>Analise o funcionamento e as limitações operacionais do Mecanismo Especial de Devolução (MED) aplicável às transações via Pix, inclusive após a implementação do MED 2.0 (Resolução BCB 493/2025), e assinale a alternativa correta:</p>",
+     "alternativas": {
+      "a": "O MED pode ser acionado exclusivamente em casos de fundada suspeita de fraude ou falha operacional nos sistemas, não cobrando desacordos comerciais ou arrependimentos de compra.",
+      "b": "O cliente insatisfeito com a cor de um produto ou com um atraso na entrega pode utilizar o MED para reaver o dinheiro de forma imediata junto ao banco recebedor.",
+      "c": "O MED 2.0 restringe o bloqueio de recursos unicamente à primeira conta recebedora, ficando proibido o rastreio do dinheiro em contas subsequentes.",
+      "d": "O prazo regulamentar concedido para que a instituição financeira analise uma notificação de infração no MED é de no máximo 24 horas corridas."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Desacordos comerciais, atrasos e defeitos não acionam o MED, pois tratam-se de questões de consumo e não de fraudes sistêmicas.",
+      "c": "O MED 2.0 expandiu o rastreio do dinheiro para além da primeira conta recebedora, mapeando toda a cadeia de contas.",
+      "d": "O prazo regulamentar para a instituição analisar a notificação de infração no MED é de até 7 dias, e não 24 horas."
+     }
+    }
+   ],
+   "Conta internacional": [
+    {
+     "id": "cpa-prod-40-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. Os saldos mantidos em contas internacionais domiciliadas no exterior não contam com a cobertura do FGC, visto que a proteção do fundo brasileiro restringe-se ao território nacional.</p><p>As alternativas B, C e D incorrem em erros ao estender o FGC para fora do país, inventar fundos soberanos de resgate ou atribuir o risco ao Tesouro Nacional.</p>",
+     "enunciado": "<p>Em relação à cobertura de garantias para recursos depositados em contas internacionais mantidas por residentes do Brasil em instituições financeiras domiciliadas no exterior, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "Não existe cobertura do Fundo Garantidor de Créditos (FGC), pois a proteção brasileira cessa quando os recursos cruzam a fronteira nacional.",
+      "b": "O FGC garante integralmente os depósitos em contas internacionais em moeda estrangeira até o limite de R$ 1 milhão por CPF.",
+      "c": "Os recursos possuem cobertura automática do Banco Central do Brasil por meio de um fundo soberano de resgate cambial.",
+      "d": "O Tesouro Nacional assume o risco de crédito internacional de todas as contas abertas via aplicativos de fintechs."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "O FGC protege apenas depósitos no sistema financeiro nacional, não cobrindo saldos no exterior.",
+      "c": "O Banco Central não possui fundo soberano de resgate para garantir contas particulares de residentes no exterior.",
+      "d": "O Tesouro Nacional não assume o risco de crédito de contas mantidas em jurisdições estrangeiras."
+     }
+    },
+    {
+     "id": "cpa-prod-40-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. A transferência de recursos ao exterior para disponibilidade do próprio residente (sem finalidade de investimento) sofre a incidência da alíquota de IOF de 3,5%.</p><p>As alternativas B, C e D erram ao aplicar a alíquota reduzida de investimentos, reter percentuais antigos ou assumir isenções inexistentes.</p>",
+     "enunciado": "<p>Ao realizar uma transferência de recursos de uma conta local no Brasil para uma conta de mesma titularidade no exterior sem finalidade específica de investimento, a alíquota atual do Imposto sobre Operações Financeiras (IOF) incidente sobre a operação de câmbio corresponde a:</p>",
+     "alternativas": {
+      "a": "3,5%.",
+      "b": "1,10%.",
+      "c": "6,38%.",
+      "d": "Isenção total de 0%."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A alíquota de 1,10% aplica-se especificamente às remessas ao exterior com finalidade de investimento.",
+      "c": "A alíquota de 6,38% pertencia a regras anteriores superadas pelas normativas mais recentes.",
+      "d": "As operações de câmbio para transferência de disponibilidade própria não são totalmente isentas, pagando 3,5%."
+     }
+    },
+    {
+     "id": "cpa-prod-40-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. A CBE anual é exigida obrigatoriamente de todo residente no país que possua ativos no exterior em montante superior a US$ 1 milhão na data-base de 31 de dezembro.</p><p>As alternativas B, C e D confundem os limites normativos da declaração anual com os patamares da CBE trimestral ou criam valores arbitrários.</p>",
+     "enunciado": "<p>Um cliente brasileiro possui investimentos e saldos expressivos mantidos em contas no exterior e precisa cumprir suas obrigações regulares perante o Banco Central do Brasil. A Declaração de Capitais Brasileiros no Exterior (CBE) anual torna-se obrigatória para o titular que possua, na data-base de 31 de dezembro, ativos no exterior superiores a:</p>",
+     "alternativas": {
+      "a": "US$ 1 milhão.",
+      "b": "US$ 100 mil.",
+      "c": "US$ 10 milhões.",
+      "d": "US$ 500 mil."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "US$ 100 mil não é gatilho de nenhuma CBE: a anual começa em US$ 1 milhão e a trimestral em US$ 100 milhões.",
+      "c": "O patamar de US$ 10 milhões não constitui o marco regulatório oficial da CBE anual.",
+      "d": "O valor de US$ 500 mil está incorreto e não define o gatilho da declaração do Banco Central."
+     }
+    },
+    {
+     "id": "cpa-prod-40-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. A conta internacional serve como instrumento de diversificação de risco soberano e proteção cambial (hedge), preservando o poder de compra do patrimônio frente a quedas da moeda local.</p><p>As alternativas B, C e D erram ao prometer rentabilidades irreais, isenções fiscais falsas ou a extinção de spreads cambiais.</p>",
+     "enunciado": "<p>Um investidor avalia as vantagens de utilizar uma conta internacional para diversificar seu patrimônio. Entre os objetivos que justificam a abertura e manutenção de recursos em moeda forte fora do país, destaca-se:</p>",
+     "alternativas": {
+      "a": "A diversificação de risco soberano e a proteção cambial (hedge) contra a desvalorização da moeda doméstica.",
+      "b": "A garantia de rentabilidade pré-fixada de 20% ao ano assegurada pelo Tesouro dos Estados Unidos para clientes brasileiros.",
+      "c": "A isenção total e automática de qualquer declaração de imposto de renda no Brasil sobre os ganhos obtidos.",
+      "d": "A eliminação completa do spread cambial cobrado pelas instituições financeiras em transferências internacionais."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "O Tesouro dos Estados Unidos não assegura rentabilidades prefixadas elevadas de 20% ao ano para investidores estrangeiros.",
+      "c": "O residente fiscal no Brasil continua obrigado a declarar o patrimônio mundial e os ganhos no IRPF anual.",
+      "d": "As contas internacionais e transferências continuam sujeitas à cobrança de spread cambial pelas instituições."
+     }
+    },
+    {
+     "id": "cpa-prod-40-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a A. A remessa ao exterior com finalidade de investimento possui tributação favorecida de IOF de 1,10%, enquanto as transferências para disponibilidade própria sem fins de investimento e os gastos com cartões pagam 3,5%.</p><p>As alternativas B, C e D incorrem em erros ao zerarem o IOF de cartões, confundirem obrigações da Receita com o Banco Central ou alterarem a residência fiscal de forma incorreta.</p>",
+     "enunciado": "<p>Analise o caso de um residente fiscal no Brasil que realizou diversas operações de remessa de recursos e gastos internacionais utilizando contas globais e cartões. Com base nas normas tributárias e regulatórias brasileiras sobre câmbio, IOF e obrigações acessórias, assinale a alternativa correta:</p>",
+     "alternativas": {
+      "a": "As remessas destinadas especificamente a investimentos no exterior contam com alíquota reduzida de IOF de 1,10%, diferentemente das transferências simples de disponibilidade que pagam 3,5%.",
+      "b": "Os gastos efetuados com cartões de débito ou crédito internacional em viagens estão totalmente isentos de IOF desde a unificação das alíquotas em 2025.",
+      "c": "A entrega da Declaração de Capitais Brasileiros no Exterior (CBE) substitui integralmente a exigência de declaração de bens no imposto de renda da Receita Federal.",
+      "d": "O cliente perde a condição de residente fiscal no Brasil no momento exato em que abre uma conta bancária domiciliada no exterior."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Os gastos com cartões internacionais e saques no exterior pagam a alíquota de IOF de 3,5%, não estando isentos.",
+      "c": "A CBE perante o Banco Central e a declaração de IRPF perante a Receita Federal são obrigações independentes e complementares, sem substituição mútua.",
+      "d": "A simples abertura de conta no exterior não descaracteriza a residência fiscal no Brasil, que segue regras próprias da Receita Federal."
+     }
+    }
+   ],
+   "Compra e venda de moeda estrangeira": [
+    {
+     "id": "cpa-prod-41-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. Desde a unificação normativa, existe um único Mercado de Câmbio regulado e fiscalizado pelo Banco Central, onde \"comercial\" e \"turismo\" representam apenas denominações de cotações praticadas para diferentes volumes e naturezas de operação.</p><p>As alternativas B, C e D erram ao afirmar a existência de dois mercados separados, inventar subsídios governamentais ou proibir instituições autorizadas de operar.</p>",
+     "enunciado": "<p>Em relação à estrutura regulatória do mercado de câmbio brasileiro e às suas nomenclaturas tradicionais, assinale a alternativa correta:</p>",
+     "alternativas": {
+      "a": "Existe um único Mercado de Câmbio unificado, sendo \"comercial\" e \"turismo\" apenas denominações de cotações para diferentes finalidades.",
+      "b": "O mercado é formalmente dividido em dois subsistemas completamente separados: o Mercado de Taxas Livres e o Mercado de Taxas Flutuantes.",
+      "c": "As operações de turismo possuem obrigatoriamente taxas subsidiadas e controladas diretamente pelo Tesouro Nacional.",
+      "d": "O Banco Central opera de forma isolada, sendo proibido o funcionamento de bancos e corretoras no mercado cambial."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A separação formal entre taxas livres e flutuantes foi extinta, unificando o mercado em um único ambiente regulado.",
+      "c": "O dólar turismo não é subsidiado pelo Tesouro Nacional, carregando custos adicionais de logística e papel-moeda.",
+      "d": "Os bancos e corretoras devidamente autorizados pelo Banco Central podem operar no mercado de câmbio."
+     }
+    },
+    {
+     "id": "cpa-prod-41-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. A PTAX é uma taxa de referência calculada pelo Banco Central a partir de consultas diárias, servindo para contratos e balanços, mas não é a taxa que o cliente paga diretamente no balcão da instituição.</p><p>As alternativas B, C e D erram ao impor a PTAX como preço de balcão obrigatório, transferir a apuração para aéreas ou envolver a CVM.</p>",
+     "enunciado": "<p>A PTAX é uma taxa de câmbio de referência amplamente divulgada pelo Banco Central do Brasil. Sobre a aplicação dessa taxa no atendimento ao cliente de varejo, verifica-se que:</p>",
+     "alternativas": {
+      "a": "A PTAX serve como taxa de referência estatística e de contratos futuros, não sendo obrigatoriamente a taxa exata que o cliente paga no balcão da instituição.",
+      "b": "A PTAX é a taxa definitiva e obrigatória cobrada em todas as vendas de moeda em espécie realizadas aos viajantes.",
+      "c": "A PTAX é fixada exclusivamente pelos conselhos de turismo das grandes companhias aéreas internacionais.",
+      "d": "A PTAX zera o spread cambial de todas as corretoras do país por determinação da CVM."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "O cliente no balcão paga a cotação praticada pela instituição, que difere da PTAX de referência.",
+      "c": "A PTAX é apurada e divulgada pelo Banco Central, e não por conselhos de companhias aéreas.",
+      "d": "A PTAX não zera o spread e a CVM não é o órgão fiscalizador do mercado de câmbio."
+     }
+    },
+    {
+     "id": "cpa-prod-41-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. O Valor Efetivo Total (VET) expressa em reais por unidade de moeda estrangeira o custo real da operação, somando taxa de câmbio, tributos e tarifas, devendo ser informado previamente em liquidações prontas de até US$ 100 mil.</p><p>As alternativas B, C e D citam índices de construção civil, inflação ou rendimentos de poupança que não medem os custos cambiais.</p>",
+     "enunciado": "<p>Para garantir transparência ao consumidor que adquire moeda estrangeira ou realiza transferências internacionais de até US$ 100 mil, as instituições financeiras devem informar obrigatoriamente um indicador consolidado antes do fechamento da operação. Esse indicador é o:</p>",
+     "alternativas": {
+      "a": "Valor Efetivo Total (VET), que engloba a taxa de câmbio, os tributos incidentes e as tarifas cobradas.",
+      "b": "Custo Unitário Básico da Construção (CUB), aplicável exclusivamente a financiamentos de imóveis.",
+      "c": "Índice Nacional de Preços ao Consumidor Amplo (IPCA) acumulado dos últimos doze meses.",
+      "d": "Rendimento Líquido Nominal da caderneta de poupança (TR mais 0,5% ao mês)."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "O CUB refere-se ao setor de construção civil, sem relação com transações de câmbio.",
+      "c": "O IPCA mede a inflação oficial do país, não constituindo o indicador de custos de câmbio.",
+      "d": "A caderneta de poupança mede remuneração de aplicações financeiras, e não custos de moedas estrangeiras."
+     }
+    },
+    {
+     "id": "cpa-prod-41-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. O novo marco cambial autoriza a transação eventual e não profissional de moeda estrangeira em espécie entre pessoas físicas até o limite de US$ 500 por operação.</p><p>As alternativas B, C e D distorcem a norma ao eliminar declarações de viagem obrigatórias, criar contas livres generalizadas ou permitir câmbio profissional sem autorização.</p>",
+     "enunciado": "<p>Sob a vigência do novo marco cambial (Lei 14.286/2021), foram estabelecidas novas regras para a realização de transações em espécie entre pessoas físicas e para o porte de valores em viagens internacionais. Assinale a alternativa que descreve corretamente uma dessas regras:</p>",
+     "alternativas": {
+      "a": "É permitida a compra e venda de moeda estrangeira em espécie entre pessoas físicas, de forma eventual e não profissional, até o limite de US$ 500 por operação.",
+      "b": "O viajante pode portar qualquer montante em espécie ao sair do país, sem limite máximo e sem obrigatoriedade de declaração à Receita Federal.",
+      "c": "Qualquer cidadão comum pode abrir livremente contas correntes denominadas integralmente em moeda estrangeira em bancos comerciais brasileiros.",
+      "d": "A negociação de câmbio entre pessoas físicas pode ser realizada de forma profissional e contínua sem necessidade de autorização do Banco Central."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Acima de US$ 10.000,00 (ou equivalente), a declaração à Receita Federal no porte de valores em viagem é obrigatória.",
+      "c": "A lei não criou o direito geral de contas correntes em moeda estrangeira para pessoas físicas no Brasil, delegando ao Banco Central a regulamentação.",
+      "d": "Negociações profissionais exigem instituições autorizadas, sendo permitidas entre pessoas físicas apenas operações eventuais e não profissionais."
+     }
+    },
+    {
+     "id": "cpa-prod-41-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a A. O novo marco cambial estabeleceu que o viajante pode portar em espécie, na entrada ou na saída do país, o limite de US$ 10.000,00 (ou equivalente) sem precisar declarar à Receita Federal, valor superior exigindo declaração formal.</p><p>As alternativas B, C e D incorrem em erros ao legitimar cambistas irregulares, eliminar limites de porte ou manter valores em reais desatualizados.</p>",
+     "enunciado": "<p>Analise o caso de um cliente que planeja uma viagem internacional e pretende comprar moeda estrangeira em espécie e carregar um cartão de débito internacional, avaliando também as obrigações aduaneiras e os limites de valores em espécie. Assinale a alternativa correta:</p>",
+     "alternativas": {
+      "a": "O limite de valores que o viajante pode portar em espécie ao entrar ou sair do país sem declaração obrigatória à Receita Federal é de US$ 10.000,00 ou o equivalente em outra moeda.",
+      "b": "A compra de moeda em espécie pode ser realizada livremente com qualquer comerciante informal de rua, desde que a operação respeite o teto de US$ 100.000,00.",
+      "c": "O porte de dinheiro em espécie em viagens internacionais está isento de qualquer limite, exigindo apenas aviso prévio à administratora do aeroporto.",
+      "d": "A legislação atual obriga o viajante a declarar à Receita Federal qualquer quantia superior a R$ 10.000,00, mantendo o limite antigo inalterado."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Comprar de comerciantes informais sem autorização do Banco Central é irregular e ilegal, independentemente do teto.",
+      "c": "Existe limite quantitativo fixado em US$ 10.000,00 para porte sem declaração, não bastando aviso a aeroportos.",
+      "d": "O limite foi atualizado pelo novo marco cambial para US$ 10.000,00, e não em reais no valor antigo de R$ 10.000,00."
+     }
+    }
+   ],
+   "Seguros de vida": [
+    {
+     "id": "cpa-prod-42-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. O seguro de vida apresenta uma abrangência maior ao indenizar a morte por causas naturais e acidentais, ao passo que o seguro de acidentes pessoais restringe-se aos sinistros decorrentes de acidentes cobertos.</p><p>As alternativas B, C e D invertem as coberturas, confundem o seguro com aplicações de renda fixa ou avaliam incorretamente os custos.</p>",
+     "enunciado": "<p>O seguro de vida é um produto financeiro voltado à transferência de riscos de morte e invalidez para uma seguradora. Sobre as diferenças conceituais entre o seguro de vida e o seguro de acidentes pessoais, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "O seguro de vida possui cobertura mais ampla, indenizando a morte por causas naturais e acidentais, enquanto o seguro de acidentes pessoais cobre apenas o evento acidental coberto.",
+      "b": "O seguro de acidentes pessoais cobre morte natural de forma integral, enquanto o seguro de vida restringe-se exclusivamente a desastres automobilísticos.",
+      "c": "Ambas as modalidades exigem obrigatoriamente a formação de uma reserva individual de poupança com resgates diários atrelados à taxa Selic.",
+      "d": "O seguro de acidentes pessoais possui custo superior ao seguro de vida por causa da sua ampla cobertura de doenças graves."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "O seguro de acidentes pessoais não cobre morte natural, e o seguro de vida não se restringe a desastres.",
+      "c": "O seguro de vida é um contrato de transferência de risco, e não uma aplicação de poupança individual.",
+      "d": "Por cobrir mais eventos, o seguro de vida costuma ter custo mais elevado do que o de acidentes pessoais."
+     }
+    },
+    {
+     "id": "cpa-prod-42-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. O prêmio é o valor periódico pago pelo cliente para manter o contrato de seguro e custear a proteção coletiva do grupo frente aos riscos assumidos.</p><p>As alternativas B, C e D confundem o prêmio com o valor da indenização, provisões técnicas ou taxas de previdência.</p>",
+     "enunciado": "<p>No âmbito dos seguros de pessoas regidos pelo marco legal vigente, o valor periódico que o proponente paga à seguradora para custear a garantia coletiva de proteção é denominado:</p>",
+     "alternativas": {
+      "a": "Prêmio.",
+      "b": "Capital segurado.",
+      "c": "Fundo de reserva atuarial.",
+      "d": "Taxa de carregamento de entrada."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "O capital segurado é o valor da indenização contratada que será paga se o risco se concretizar.",
+      "c": "O fundo de reserva atuarial é uma provisão técnica da seguradora, e não o pagamento periódico feito pelo cliente.",
+      "d": "A taxa de carregamento refere-se a custos administrativos típicos de planos de previdência complementar."
+     }
+    },
+    {
+     "id": "cpa-prod-42-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. Nos seguros sobre a vida, o proponente pode contratar múltiplos seguros e as apólices se acumulam integralmente, pois não há reparação de prejuízo material passível de rateio.</p><p>As alternativas B, C e D erram ao sugerir divisões proporcionais, cancelamentos de contratos ou conversões em capitalização.</p>",
+     "enunciado": "<p>Um investidor contratou três apólices distintas de seguro de vida em seguradoras diferentes para proteger sua família. Ocorrendo o sinistro de morte coberto, a liquidação dessas apólices perante as empresas seguradoras obedecerá à seguinte regra:</p>",
+     "alternativas": {
+      "a": "As apólices se acumulam e cada seguradora paga o capital segurado integral contratado, sem rateio.",
+      "b": "O valor total é rateado proporcionalmente entre as três seguradoras para evitar o enriquecimento sem causa.",
+      "c": "Apenas a primeira apólice contratada em ordem cronológica realiza o pagamento, cancelando as demais automaticamente.",
+      "d": "As apólices são convertidas em títulos de capitalização e devolvidas de forma parcelada aos herdeiros."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "O rateio não se aplica a seguros de pessoas, pois as apólices contratadas sobre a vida se acumulam livremente.",
+      "c": "Nenhuma apólice é cancelada, pois é permitido contratar mais de um seguro sobre o mesmo interesse.",
+      "d": "O capital segurado não é convertido em títulos de capitalização, sendo pago conforme o contrato."
+     }
+    },
+    {
+     "id": "cpa-prod-42-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. O capital devido por morte em seguro de vida não constitui herança, não passa pelo inventário, é impenhorável e não se submete às dívidas do segurado, servindo de instrumento de planejamento sucessório.</p><p>As alternativas B, C e D incorrem em erros ao atrair inventários, aplicar sub-rogações de seguros de danos ou limitar beneficiários a herdeiros necessários.</p>",
+     "enunciado": "<p>Sobre o tratamento sucessório, a proteção patrimonial e os efeitos jurídicos do capital segurado pago em decorrência da morte do titular de um seguro de vida, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "O capital pago aos beneficiários não é considerado herança para nenhum efeito, sendo impenhorável e não respondendo pelas dívidas do segurado.",
+      "b": "O valor da indenização entra obrigatoriamente no inventário judicial e serve para quitar as dívidas trabalhistas e cíveis deixadas pelo falecido.",
+      "c": "A seguradora assume o direito de cobrar o causador da morte do segurado por meio da sub-rogação idêntica aos seguros de danos.",
+      "d": "A indicação de beneficiários é restrita aos herdeiros necessários previstos na ordem sucessória legítima do Código Civil."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "O capital por morte não entra no inventário e não responde pelas dívidas deixadas pelo segurado.",
+      "c": "Os capitais por morte ou perda da integridade física não implicam sub-rogação contra o causador.",
+      "d": "A indicação do beneficiário é totalmente livre, sem vinculação obrigatória à ordem sucessória ou a herdeiros necessários."
+     }
+    },
+    {
+     "id": "cpa-prod-42-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a A. A regulação limita a carência a no máximo metade da vigência contratual, e o seguro temporário caracteriza-se por extinguir-se ao final do prazo sem devolução de prêmios se o segurado sobreviver.</p><p>As alternativas B, C e D cometem erros graves ao restituir prêmios em seguros temporários, estourar o teto legal de carência ou envolver o INSS na partilha.</p>",
+     "enunciado": "<p>Analise o caso de um cliente que contratou um seguro de vida temporário com prazo de vigência de dez anos e cobertura por morte e invalidez decorrente de doença, prevendo cláusula de carência. Com base nas normas regulatórias aplicáveis a esse tipo de contrato, assinale a alternativa correta:</p>",
+     "alternativas": {
+      "a": "A carência estipulada para os eventos de doença não pode ultrapassar a metade da vigência contratual, e o seguro temporário encerra-se ao fim do prazo sem devolução de prêmios se o segurado sobreviver.",
+      "b": "O cliente que sobreviver ao término dos dez anos do seguro temporário tem direito ao resgate integral e corrigido de todos os prêmios que pagou ao longo do período.",
+      "c": "A seguradora pode fixar livremente um prazo de carência de oito anos para um contrato de dez anos de vigência.",
+      "d": "Caso ocorra o falecimento por morte natural após o prazo de carência, a indenização será rateada compulsoriamente com o INSS."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "O seguro temporário protege por prazo determinado e encerra-se sem devolução de prêmios caso o segurado sobreviva.",
+      "c": "A carência não pode ultrapassar a metade da vigência contratual, tornando um prazo de oito anos em dez ilegal.",
+      "d": "O capital segurado é pago integralmente aos beneficiários indicados ou herdeiros, sem qualquer rateio com o INSS."
+     }
+    }
+   ],
+   "Seguros patrimoniais": [
+    {
+     "id": "cpa-prod-43-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. A eficácia do contrato de seguro depende estritamente da existência de interesse legítimo, impedindo que apólices sejam contratadas sobre bens de terceiros sem vínculo econômico ou jurídico, o que transformaria a proteção em aposta.</p><p>As alternativas B, C e D incorrem em erros ao vincular seguros a títulos públicos, eliminar prêmios ou exigir autorizações individuais da CVM.</p>",
+     "enunciado": "<p>Para que um contrato de seguro patrimonial produza efeitos jurídicos válidos e não seja caracterizado como uma aposta, a legislação determina como condição essencial de sua eficácia a existência de:</p>",
+     "alternativas": {
+      "a": "Interesse legítimo por parte do segurado ou beneficiário em relação ao bem ou risco segurado.",
+      "b": "Obrigação de vinculação unicamente a títulos públicos federais negociados no Tesouro Direto.",
+      "c": "Garantia de cobertura vitalícia sem incidência de prêmios periódicos.",
+      "d": "Autorização expressa da Comissão de Valores Mobiliários (CVM) para cada apólice individual."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Títulos públicos do Tesouro Direto não possuem relação direta com a exigência de validade de contratos de seguros patrimoniais.",
+      "c": "Os seguros patrimoniais exigem o pagamento periódico de prêmios e possuem vigência determinada, e não caráter vitalício sem custo.",
+      "d": "A fiscalização e regulação dos seguros de danos competem aos órgãos do setor de seguros, e não à CVM de forma individualizada por apólice."
+     }
+    },
+    {
+     "id": "cpa-prod-43-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. A franquia consubstancia a participação obrigatória do segurado nos prejuízos até determinado limite, barateando o prêmio ao dispensar a seguradora de administrar sinistros de pequeno valor.</p><p>As alternativas B, C e D confundem o conceito com taxas de previdência, garantias bancárias ou margens de crédito.</p>",
+     "enunciado": "<p>No âmbito dos seguros de danos e patrimoniais, o mecanismo contratual que representa a participação obrigatória do segurado nos prejuízos decorrentes de um sinistro, servindo como filtro de pequenos riscos e fator de barateamento do prêmio, é denominado:</p>",
+     "alternativas": {
+      "a": "Franquia.",
+      "b": "Taxa de carregamento de saída.",
+      "c": "Fundo Garantidor de Créditos (FGC).",
+      "d": "Margem consignável de risco."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A taxa de carregamento refere-se a custos administrativos típicos de produtos de previdência complementar e capitalização.",
+      "c": "O FGC é uma entidade de proteção a depósitos e títulos bancários, sem relação com a participação em sinistros de seguros.",
+      "d": "Margem consignável é o teto de comprometimento de renda em operações de crédito consignado, e não um conceito de seguros."
+     }
+    },
+    {
+     "id": "cpa-prod-43-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. Como o dano foi de R$ 100 mil e a franquia obrigatória é de R$ 10 mil, a seguradora arca com o excedente que ultrapassa a franquia, resultando em uma indenização líquida de R$ 90 mil.</p><p>As alternativas B, C e D erram ao desconsiderar a dedução da franquia, pagar a apólice inteira em sinistro parcial ou repassar apenas o valor da franquia.</p>",
+     "enunciado": "<p>Um empresário contratou um seguro patrimonial para proteger seu galpão industrial, fixando um valor de garantia na apólice de R$ 500 mil. O imóvel veio a sofrer um sinistro parcial cujo custo total de recuperação foi de R$ 100 mil, sendo que a apólice previa uma franquia dedutível de R$ 10 mil. O valor efetivo da indenização paga pela seguradora será de:</p>",
+     "alternativas": {
+      "a": "R$ 90 mil.",
+      "b": "R$ 100 mil sem qualquer dedução.",
+      "c": "R$ 500 mil pelo valor integral da apólice.",
+      "d": "R$ 10 mil correspondentes estritamente à franquia."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Pagar R$ 100 mil ignoraria a franquia obrigatória que deve ser deduzida do prejuízo indenizável.",
+      "c": "O sinistro foi parcial (R$ 100 mil), não havendo cabimento para indenizar o valor integral da garantia da apólice.",
+      "d": "A franquia é a parte que fica a cargo do segurado, e não o valor que a seguradora lhe repassa como indenização."
+     }
+    },
+    {
+     "id": "cpa-prod-43-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. O princípio indenizatório impõe dois tetos fundamentais: a indenização não excede a garantia contratada e nem os valores de garantia e indenização podem superar o valor real do interesse segurado.</p><p>As alternativas B, C e D violam o princípio indenizatório ao permitir enriquecimentos, ignorar danos reais ou extrapolar o teto da apólice.</p>",
+     "enunciado": "<p>Em relação ao princípio indenizatório e aos limites de valor aplicáveis aos seguros patrimoniais e de danos regidos pelo marco legal vigente, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "A indenização não pode exceder o valor da garantia contratada, assim como os valores da garantia e da indenização não podem superar o valor do interesse segurado.",
+      "b": "O segurado pode receber o dobro do valor de mercado do bem caso contrate apólices em seguradoras diferentes de forma cumulativa.",
+      "c": "A indenização é sempre calculada com base no lucro cessante futuro estimado, independentemente do dano material efetivo.",
+      "d": "O valor da apólice é irrelevante, obrigando a seguradora a pagar qualquer prejuízo alegado pelo cliente após o sinistro."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "O seguro de dano repara e não enriquece, sendo vedada a acumulação para lucrar acima do valor do prejuízo ou do interesse.",
+      "c": "Danos patrimoniais materiais baseiam-se no prejuízo real do bem, e não em estimativas abstratas de lucros futuros sem cobertura específica.",
+      "d": "A indenização possui o teto limitador do valor da garantia contratada na apólice."
+     }
+    },
+    {
+     "id": "cpa-prod-43-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a A. Nos seguros de dano, a seguradora sub-roga-se nos direitos para cobrar o causador do prejuízo, mas a legislação estabelece uma exceção protetiva importante ao vedar a cobrança por culpa não grave contra cônjuges, parentes até o segundo grau e empregados do segurado.</p><p>As alternativas B, C e D incorrem em erros ao ignorar as proteções familiares de parentesco, atrasar a indenização ao segurado ou confundir seguros de danos com seguros de pessoas.</p>",
+     "enunciado": "<p>Analise o caso em que um segurado sofreu prejuízos materiais em seu apartamento causados por um defeito em equipamento instalado por uma empresa prestadora de terceiros contratada pelo condomínio. A seguradora pagou rapidamente a indenização ao segurado. Sobre o instituto da sub-rogação e suas limitações legais nos seguros de danos, assinale a alternativa correta:</p>",
+     "alternativas": {
+      "a": "A seguradora sub-roga-se nos direitos do segurado para cobrar o causador do dano, porém a lei veda expressamente a sub-rogação quanto à culpa não grave do cônjuge, de parentes até o segundo grau ou de empregados do segurado.",
+      "b": "A seguradora adquire o direito de cobrar judicialmente qualquer parente do segurado, independentemente do grau de parentesco ou da existência de culpa grave.",
+      "c": "O segurado fica proibido de receber a indenização da seguradora, tendo que aguardar obrigatoriamente o processo contra o terceiro causador na justiça comum.",
+      "d": "A sub-rogação é um mecanismo restrito exclusivamente aos seguros de pessoas e previdência privada, não existindo nos seguros patrimoniais de danos."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A lei protege expressamente parentes até o segundo grau, cônjuges e empregados contra a sub-rogação, desde que não tenha havido culpa grave.",
+      "c": "O segurado recebe a indenização rapidamente da seguradora, e é a própria seguradora que assume o lugar dele para reaver o valor do terceiro causador.",
+      "d": "A sub-rogação é uma característica marcante e exclusiva dos seguros de danos/patrimoniais, sendo expressamente vedada nos seguros de pessoas."
      }
     }
    ]
