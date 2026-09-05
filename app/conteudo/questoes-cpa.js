@@ -1,8 +1,242 @@
 /* GERADO por outputs/questoes_para_js.py. NAO editar a mao.
-   Fonte: _conteudo/cpa/questoes/**.yaml  ·  295 questoes em 59 topicos
+   Fonte: _conteudo/cpa/questoes/**.yaml  ·  370 questoes em 74 topicos
    Para mudar uma questao, edite o YAML e rode o script de novo. */
 window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
  "cpaAnbima": {
+  "Estrutura e Dinâmica do Sistema Financeiro Nacional": {
+   "Órgãos normativos: CMN, CNSP e CNPC": [
+    {
+     "id": "cpa-sfn-01-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. CMN, CNSP e CNPC são os três conselhos do nível normativo. Eles criam regras, fixam diretrizes e definem metas, sem executar operações ou fiscalizar.</p><p>As alternativas B, C e D misturam órgãos supervisores com um ou mais conselhos normativos. Banco Central, CVM, Susep e Previc ficam no nível supervisor.</p><p>Regra de bolso: conselho normatiza, autarquia supervisiona, instituição opera.</p>",
+     "enunciado": "<p>Durante um treinamento sobre a estrutura do Sistema Financeiro Nacional, um gerente explica que alguns órgãos ficam no nível normativo. Qual alternativa apresenta apenas órgãos desse nível?</p>",
+     "alternativas": {
+      "a": "Conselho Monetário Nacional, CNSP e CNPC.",
+      "b": "Banco Central do Brasil, CVM e Susep.",
+      "c": "Banco Central do Brasil, CNPC e Previc.",
+      "d": "Comissão de Valores Mobiliários, Susep e Previc."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Banco Central, CVM e Susep pertencem ao nível supervisor, não ao normativo.",
+      "c": "Banco Central e Previc são supervisores, enquanto apenas o CNPC é normativo.",
+      "d": "CVM, Susep e Previc são autarquias do nível supervisor."
+     }
+    },
+    {
+     "id": "cpa-sfn-01-q2",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. O CMN tem três membros: Ministro da Fazenda, que o preside, Ministro do Planejamento e Orçamento e Presidente do Banco Central.</p><p>A A erra tanto o número de membros quanto a presidência. A C troca o presidente do CMN pelo presidente do CNPC. A D confunde o CMN com o CNSP.</p><p>Regra de bolso: CMN tem três membros e é presidido pela Fazenda.</p>",
+     "enunciado": "<p>Um candidato está revisando a composição do Conselho Monetário Nacional e encontra quatro descrições. Qual delas está de acordo com o texto estudado?</p>",
+     "alternativas": {
+      "a": "É formado por quatro membros e presidido pelo Presidente do Banco Central.",
+      "b": "É formado por três membros e presidido pelo Ministro da Fazenda.",
+      "c": "É formado por três membros e presidido pelo Ministro da Previdência Social.",
+      "d": "É formado por três membros e presidido pelo Superintendente da Susep."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "O CMN tem três membros, e sua presidência é do Ministro da Fazenda.",
+      "c": "O Ministro da Previdência Social preside o CNPC, não o CMN.",
+      "d": "O Superintendente da Susep preside o CNSP apenas na ausência do Ministro da Fazenda."
+     }
+    },
+    {
+     "id": "cpa-sfn-01-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. O CMN define a meta de inflação que o Banco Central persegue, além de disciplinar e regular diversos aspectos do sistema.</p><p>As alternativas A, B e D atribuem ao CMN funções executivas de supervisão. O conselho pode regular a constituição, o funcionamento e a fiscalização das instituições, mas não executa a fiscalização nem aplica a punição.</p><p>Regra de bolso: o CMN escreve a regra; o Banco Central é quem autoriza, fiscaliza e pune dentro de sua área.</p>",
+     "enunciado": "<p>Em uma discussão sobre as competências do CMN, um participante afirma que o conselho executa diretamente determinadas atividades. Qual situação está corretamente descrita como competência normativa do CMN?</p>",
+     "alternativas": {
+      "a": "Autorizar diretamente o funcionamento de um banco.",
+      "b": "Fiscalizar as operações de uma instituição financeira.",
+      "c": "Definir a meta de inflação que o Banco Central persegue.",
+      "d": "Aplicar penalidade a uma instituição financeira infratora."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "A autorização para funcionamento de instituições financeiras cabe ao Banco Central.",
+      "b": "A fiscalização é atividade do supervisor, enquanto o CMN regula como ela deve ocorrer.",
+      "d": "A aplicação de penalidade cabe ao supervisor, não ao CMN."
+     }
+    },
+    {
+     "id": "cpa-sfn-01-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. A previdência complementar aberta, como PGBL e VGBL, é normatizada pelo CNSP e fiscalizada pela Susep. A previdência fechada, dos fundos de pensão, é normatizada pelo CNPC e fiscalizada pela Previc.</p><p>A A troca completamente os pares. A B coloca os dois segmentos sob o mesmo conjunto de órgãos. A C acerta a normatização, mas troca os supervisores.</p><p>Regra de bolso: aberta é CNSP e Susep; fechada é CNPC e Previc.</p>",
+     "enunciado": "<p>Uma cliente pergunta quem cuida da previdência complementar aberta e quem cuida da previdência complementar fechada. O gerente deve explicar corretamente que:</p>",
+     "alternativas": {
+      "a": "A aberta é normatizada pelo CNPC e fiscalizada pela Previc; a fechada pelo CNSP e Susep.",
+      "b": "A aberta e a fechada são normatizadas pelo CNSP e fiscalizadas pela Susep.",
+      "c": "A aberta é normatizada pelo CNSP e fiscalizada pela Previc; a fechada pelo CNPC e Susep.",
+      "d": "A aberta é normatizada pelo CNSP e fiscalizada pela Susep; a fechada pelo CNPC e Previc."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "A alternativa inverte os pares: CNPC e Previc cuidam da fechada, não da aberta.",
+      "b": "A previdência fechada pertence ao CNPC e à Previc, não ao CNSP e à Susep.",
+      "c": "A fiscalização da previdência aberta é da Susep, enquanto a Previc supervisiona a fechada."
+     }
+    },
+    {
+     "id": "cpa-sfn-01-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a C. A Lei Complementar 179/2021 revogou dispositivos que atribuíam ao CMN a autorização das emissões de papel-moeda, a determinação do recolhimento compulsório e a regulamentação das operações de redesconto. Hoje esses três assuntos são do Banco Central.</p><p>A A reproduz a competência histórica como se ainda estivesse vigente. A B desloca os assuntos para o CNSP, que atua em outro território. A D reconhece apenas parte da mudança e deixa duas competências indevidamente no CMN.</p><p>Regra de bolso: ao estudar o CMN, não carregue da legislação antiga emissão de papel-moeda, compulsório e redesconto.</p>",
+     "enunciado": "<p>Um material antigo usado por um candidato afirma que o CMN ainda autoriza as emissões de papel-moeda, determina o recolhimento compulsório e regulamenta as operações de redesconto. Ao revisar o conteúdo, qual orientação está de acordo com o texto estudado?</p>",
+     "alternativas": {
+      "a": "As três competências continuam no CMN, pois fazem parte de suas atribuições históricas.",
+      "b": "As três competências foram transferidas para o CNSP, que passou a executá-las.",
+      "c": "Esses três assuntos saíram das mãos do CMN em 2021 e hoje são do Banco Central.",
+      "d": "Apenas o redesconto saiu do CMN; emissão de moeda e compulsório permanecem no conselho."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "A alternativa mantém competências que foram revogadas para o CMN pela LC 179/2021.",
+      "b": "O CNSP trata de seguros, capitalização, resseguro e previdência aberta, não desses assuntos.",
+      "d": "A mudança alcançou os três assuntos citados, não apenas o redesconto."
+     }
+    }
+   ],
+   "Supervisão: Banco Central, CVM, Susep e Previc": [
+    {
+     "id": "cpa-sfn-02-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. Banco Central, CVM, Susep e Previc são as quatro entidades supervisoras. Elas autorizam, fiscalizam, exigem informações, instauram processos administrativos e aplicam penalidades. A B e a C misturam ou apresentam órgãos normativos. A D inclui bancos e cooperativas, que estão no nível operador.</p><p>Regra de bolso: conselho fixa e disciplina; autarquia autoriza, fiscaliza e pune.</p>",
+     "enunciado": "<p>Em uma apresentação sobre o Sistema Financeiro Nacional, um instrutor explica que os supervisores são autarquias que colocam em prática as regras dos conselhos. Qual conjunto reúne apenas supervisores?</p>",
+     "alternativas": {
+      "a": "Banco Central, CVM, Susep e Previc.",
+      "b": "CMN, CNSP, Banco Central e CVM.",
+      "c": "CMN, CNSP e CNPC, os conselhos do sistema.",
+      "d": "Bancos, cooperativas, Susep e Previc."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "CMN e CNSP são conselhos normativos, enquanto Banco Central e CVM são supervisores.",
+      "c": "CMN, CNSP e CNPC pertencem ao nível normativo.",
+      "d": "Bancos e cooperativas são operadores, não supervisores."
+     }
+    },
+    {
+     "id": "cpa-sfn-02-q2",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. O CMN fixa a meta de inflação e o Copom define a meta da taxa Selic. A mesa do Banco Central atua no mercado aberto para manter a Selic efetiva próxima da meta.</p><p>A A confunde quem fixa a meta com quem a persegue. A C atribui ao Copom uma competência que não é dele e coloca a CVM em uma função que não exerce.</p><p>A D desloca as duas competências para órgãos que não são seus responsáveis.</p><p>Regra de bolso: meta de inflação é do CMN; meta da Selic é do Copom.</p>",
+     "enunciado": "<p>Um cliente quer entender quem define a meta de inflação e quem define a meta da taxa Selic. Qual explicação está correta?</p>",
+     "alternativas": {
+      "a": "O Banco Central define as duas metas e o CMN apenas acompanha os resultados.",
+      "b": "O CMN fixa a meta de inflação, enquanto o Copom define a meta da Selic.",
+      "c": "O Copom fixa a meta de inflação, enquanto a CVM define a meta da Selic.",
+      "d": "A Susep fixa a meta de inflação, enquanto o Banco Central define a meta da Selic."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "O Banco Central persegue a meta de inflação, mas quem a fixa é o CMN.",
+      "c": "O Copom define a meta da Selic, não a meta de inflação, e a CVM não define essa meta.",
+      "d": "A Susep não fixa a meta de inflação, e a meta da Selic é definida pelo Copom."
+     }
+    },
+    {
+     "id": "cpa-sfn-02-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. A lei descrita no material exclui do regime de valores mobiliários os títulos da dívida pública e os títulos de responsabilidade de instituição financeira, com exceção das debêntures. Por isso o CDB fica fora do regime da CVM.</p><p>A A inverte a regra. A B restringe indevidamente a lista de valores mobiliários. A D reduz o campo de atuação da CVM, que também supervisiona fundos, bolsa, distribuidores e auditores independentes.</p><p>Regra de bolso: CDB e títulos públicos ficam fora da CVM; a fronteira deve ser analisada pelo tipo de título.</p>",
+     "enunciado": "<p>Um investidor pergunta por que um CDB não é tratado como valor mobiliário pela CVM. Considerando a fronteira apresentada no material, qual resposta está correta?</p>",
+     "alternativas": {
+      "a": "Porque todo título emitido por instituição financeira é necessariamente um valor mobiliário.",
+      "b": "Porque apenas as ações e as debêntures podem ser consideradas valores mobiliários pela lei.",
+      "c": "Porque título de responsabilidade de instituição financeira fica fora, salvo a debênture.",
+      "d": "Porque a CVM supervisiona apenas produtos oferecidos por companhias abertas."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "O texto estabelece justamente que títulos de responsabilidade de instituição financeira ficam fora, salvo debêntures.",
+      "b": "A lista também inclui, entre outros, cotas de fundos, notas comerciais e derivativos.",
+      "d": "A CVM também supervisiona fundos de investimento, bolsa, distribuidores e auditores independentes."
+     }
+    },
+    {
+     "id": "cpa-sfn-02-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. Desde a Lei Complementar 179/2021, que lhe deu autonomia, o Banco Central tem por objetivo fundamental assegurar a estabilidade de preços. Sem prejuízo desse, cabe a ele zelar pela estabilidade e pela eficiência do sistema financeiro, suavizar as flutuações do nível de atividade econômica e fomentar o pleno emprego.</p><p>As alternativas A, B e C erram ao negar que a lei fixe o objetivo, ao inverter o efeito do mandato fixo sobre o calendário do Banco Central ou ao promover o pleno emprego a objetivo fundamental.</p><p>Regra de bolso: estabilidade de preços é o objetivo fundamental; os outros três vêm depois, sem prejuízo dele.</p>",
+     "enunciado": "<p>Um cliente pergunta ao gerente por que o Banco Central às vezes mantém os juros altos mesmo com a economia desacelerando. Considerando o objetivo fundamental fixado pela Lei Complementar 179/2021 e o que a autonomia mudou, a explicação correta é:</p>",
+     "alternativas": {
+      "a": "O Banco Central não tem objetivo fixado em lei, e cada diretoria define a sua própria prioridade a cada mandato.",
+      "b": "A autonomia de 2021 alinhou o mandato dos dirigentes ao calendário do governo, para coordenar a política econômica.",
+      "c": "O objetivo fundamental passou a ser fomentar o pleno emprego, e a estabilidade de preços virou objetivo secundário.",
+      "d": "O objetivo fundamental é assegurar a estabilidade de preços, e os demais objetivos vêm sem prejuízo desse."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "A Lei Complementar 179/2021 fixou expressamente o objetivo fundamental do Banco Central, que não fica ao critério de cada diretoria.",
+      "b": "A mesma lei deu mandato fixo aos dirigentes, o que descolou o calendário do Banco Central do calendário do governo, e não o contrário.",
+      "c": "Fomentar o pleno emprego é um dos objetivos que vêm sem prejuízo do fundamental, que é assegurar a estabilidade de preços."
+     }
+    },
+    {
+     "id": "cpa-sfn-02-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a A. O registro do fundo na CVM é concedido automaticamente com o envio dos documentos pelo sistema eletrônico. Ele atesta conformidade documental, mas não representa avaliação da estratégia, garantia de qualidade ou promessa de rentabilidade.</p><p>A B transforma o registro automático em uma análise de mérito que o texto não prevê. A C erra ao tratar o registro como facultativo. A D confunde supervisão regulatória com garantia dos resultados do investimento.</p><p>Regra de bolso: registro na CVM não é selo de qualidade nem garantia de retorno.</p>",
+     "enunciado": "<p>Um investidor lê que um fundo de investimento foi registrado na CVM e conclui que o órgão analisou a estratégia do fundo e garantiu a qualidade do investimento. Considerando o funcionamento do registro apresentado no material, qual orientação está correta?</p>",
+     "alternativas": {
+      "a": "O registro é automático e atesta conformidade documental, não qualidade ou rentabilidade.",
+      "b": "O registro depende de uma análise prévia da estratégia e confirma a rentabilidade esperada.",
+      "c": "O registro é facultativo, pois a CVM supervisiona o fundo somente depois de iniciado.",
+      "d": "O registro significa que a CVM assumiu a responsabilidade pelos resultados do fundo."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "O registro é automático pelo envio eletrônico dos documentos e não representa avaliação da estratégia ou rentabilidade.",
+      "c": "O funcionamento do fundo depende de registro prévio, embora sua concessão seja automática.",
+      "d": "O registro não transforma a CVM em garantidora dos resultados do investimento."
+     }
+    }
+   ]
+  },
   "Produtos do Mercado Financeiro": {
    "Títulos públicos federais: LFT, LTN e NTN-B": [
     {
@@ -5009,7 +5243,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "O fluxo de caixa mede o estoque estático do patrimônio em uma data, enquanto o orçamento avalia o valor de mercado de bens imóveis.",
       "b": "O orçamento lista os registros históricos do passado, ao passo que o fluxo de caixa é utilizado exclusivamente para prever a inflação do próximo ano.",
       "c": "Ambas as ferramentas possuem a mesma função e destinam-se exclusivamente ao cálculo da alíquota do Imposto de Renda Pessoa Física.",
-      "d": "O orçamento é uma ferramenta prospectiva que planeja receitas e despesas futuras, enquanto o fluxo de caixa é o registro da execução real das entradas e saídas."
+      "d": "O orçamento planeja de forma prospectiva as receitas e despesas futuras, e o fluxo de caixa registra a execução real das entradas e saídas."
      },
      "gabarito": "d",
      "feedback": {
@@ -5029,10 +5263,10 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A resposta é a A. Os eixos são independentes e se cruzam: fixa e variável refere-se à previsibilidade do valor e independência do consumo, enquanto essencial e supérflua mede o grau de necessidade para a subsistência.</p><p>As alternativas B, C e D falham ao considerar impossível a existência de fixas supérfluas, inverter os conceitos de fixas e variáveis ou sugerir cortes em despesas vitais essenciais.</p>",
      "enunciado": "<p>Ao estruturar o orçamento doméstico de uma família, o profissional de atendimento deve analisar o comportamento das despesas e sua natureza. Ao comparar os eixos de classificação das contas, constata-se que:</p>",
      "alternativas": {
-      "a": "O eixo de despesas fixas e variáveis mede a previsibilidade ao longo do tempo, enquanto o eixo de essenciais e supérfluas mede a relevância para a subsistência.",
-      "b": "Toda despesa fixa é obrigatoriamente uma despesa essencial, sendo impossível existir uma despesa fixa que seja supérflua.",
-      "c": "As despesas variáveis representam compromissos contratuais imutáveis, como parcelas de financiamento imobiliário e aluguéis.",
-      "d": "O corte orçamentário para geração de caixa deve focar prioritariamente nas despesas fixas essenciais de saúde e moradia."
+      "a": "O eixo fixas e variáveis mede a previsibilidade do valor, e o eixo essenciais e supérfluas mede a necessidade para a subsistência.",
+      "b": "Toda despesa fixa é obrigatoriamente uma despesa essencial, de modo que não existe despesa fixa que possa ser classificada como supérflua.",
+      "c": "As despesas variáveis representam compromissos contratuais de valor constante, como as parcelas de financiamento imobiliário e os aluguéis.",
+      "d": "O corte orçamentário para geração de caixa deve concentrar-se prioritariamente nas despesas fixas essenciais, como as de saúde e moradia."
      },
      "gabarito": "a",
      "feedback": {
@@ -5075,10 +5309,10 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A resposta é a D. A boa prática do planejamento orçamentário consiste em tratar a parcela destinada aos investimentos e reservas como uma despesa prioritária e fixa, poupando assim que a renda entra, em vez de esperar uma sobra ao final do mês.</p><p>As alternativas A, B e C erram ao depender de sobras residuais improváveis, incentivar a contratação de rotativo caro ou confundir limites de crédito com renda pessoal.</p>",
      "enunciado": "<p>Um cliente procurou o banco para entender por que, mesmo recebendo um salário elevado, encerra todos os meses sem saldo disponível para investir. Ao analisar o fluxo de caixa pessoal do correntista, o gerente deve orientar que o superávit recorrente para a formação de reservas seja alcançado por meio da seguinte prática:</p>",
      "alternativas": {
-      "a": "Elevar os limites de cheque especial para simular um aumento de renda corrente permanente.",
-      "b": "Gastar livremente ao longo do mês e aplicar apenas a quantia eventual que porventura sobrar no último dia.",
-      "c": "Contratar linhas de crédito rotativo de cartão para cobrir a compra de artigos de luxo no início do período.",
-      "d": "Tratar a poupança como um compromisso prioritário e fixo no orçamento, transferindo o valor no início do mês antes dos gastos discricionários."
+      "a": "Elevar os limites de cheque especial e de cartão para simular um aumento permanente da renda corrente disponível.",
+      "b": "Gastar livremente ao longo do mês e aplicar somente a quantia eventual que porventura sobrar no último dia do período.",
+      "c": "Contratar linhas de crédito rotativo de cartão para antecipar a compra de artigos de luxo no início do período.",
+      "d": "Tratar a poupança como compromisso prioritário e fixo no orçamento, transferindo o valor no início do mês."
      },
      "gabarito": "d",
      "feedback": {
@@ -5099,7 +5333,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "O fluxo de caixa mede exclusivamente o estoque de ativos ilíquidos, substituindo integralmente a necessidade do balanço patrimonial.",
       "b": "O balanço patrimonial pessoal e o orçamento medem o fluxo mensal de receitas, enquanto o fluxo de caixa mede o estoque de imóveis.",
-      "c": "Orçamento e fluxo de caixa medem fluxo (movimentação no período), enquanto o balanço patrimonial pessoal mede estoque (bens, direitos e deveres em uma data).",
+      "c": "Orçamento e fluxo de caixa medem fluxo, isto é, movimentação no período, enquanto o balanço patrimonial pessoal mede estoque.",
       "d": "O orçamento mede a posição de estoque em 31 de dezembro, e o balanço patrimonial mede apenas despesas diárias com alimentação."
      },
      "gabarito": "c",
@@ -5119,18 +5353,18 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "simulado",
       "revisao"
      ],
-     "comentario": "<p>A resposta é a A. O Custo Efetivo Total (CET) consolida em um único percentual anual ou mensal todos os encargos, impostos, tarifas e seguros incidentes na operação de crédito, permitindo a comparação real entre propostas.</p><p>As alternativas B, C e D citam índices de inflação, metodologias de avaliação de investimentos ou sistemas de amortização de dívidas que não reúnem os encargos operacionais.</p>",
+     "comentario": "<p>A resposta é a A. O Custo Efetivo Total (CET) consolida em um único percentual anual ou mensal todos os encargos, impostos, tarifas e seguros incidentes na operação de crédito, permitindo a comparação real entre propostas.</p><p>As alternativas B, C e D citam um índice de inflação, a taxa nominal isolada ou um sistema de amortização, que não reúnem os encargos operacionais da operação.</p>",
      "enunciado": "<p>Ao comparar diferentes propostas de crédito oferecidas no mercado financeiro para reorganizar as finanças de um cliente, o indicador obrigatório que consolida a taxa de juros, o IOF, as tarifas e os seguros em um único percentual é o:</p>",
      "alternativas": {
-      "a": "Custo Efetivo Total (CET).",
-      "b": "Índice Nacional de Preços ao Consumidor Amplo (IPCA).",
-      "c": "Valor Presente Líquido (VPL).",
+      "a": "Custo Efetivo Total da operação (CET).",
+      "b": "Índice de Preços ao Consumidor Amplo (IPCA).",
+      "c": "Taxa de juros nominal mensal da proposta.",
       "d": "Sistema de Amortização Constante (SAC)."
      },
      "gabarito": "a",
      "feedback": {
       "b": "O IPCA mede a inflação oficial do país e não o custo de empréstimos.",
-      "c": "O VPL é um método de análise de viabilidade de projetos de investimentos, não um consolidador de encargo bancário.",
+      "c": "A taxa nominal não inclui IOF, tarifas e seguros, e por isso não permite comparar o custo real de duas propostas.",
       "d": "O SAC é um sistema de amortização de parcelas, e não a métrica de custo total de uma operação de crédito."
      }
     },
@@ -5146,7 +5380,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Um cliente possui três dívidas ativas de prazos e saldos distintos no mercado financeiro. Ao receber recursos extraordinários para amortizar antecipadamente parte do passivo, a regra prioritária para ordenar a quitação das dívidas é:</p>",
      "alternativas": {
       "a": "Quitar primeiramente a dívida com o menor saldo devedor absoluto para eliminar o número de carnês.",
-      "b": "Priorizar a quitação da dívida que apresentar o maior Custo Efetivo Total (CET), independentemente do valor do saldo nominal.",
+      "b": "Priorizar a quitação da dívida de maior Custo Efetivo Total (CET), qualquer que seja o seu saldo nominal.",
       "c": "Priorizar o financiamento imobiliário de taxas subsidiadas e menor custo por ter o maior prazo total.",
       "d": "Amortizar em partes rigorosamente iguais todas as linhas contratadas, independentemente dos juros cobrados."
      },
@@ -5169,7 +5403,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Ao avaliar a reestruturação de dívidas de um cliente, um gerente de atendimento compara as características da consolidação de dívidas e da portabilidade de crédito. A respeito da diferença regulatória e operacional entre essas modalidades, observa-se que:</p>",
      "alternativas": {
       "a": "A consolidação perdoa integralmente o saldo devedor principal do cliente, enquanto a portabilidade libera trocos obrigatoriamente.",
-      "b": "A consolidação contrata uma nova linha com CET menor para quitar várias dívidas caras sem perdão do principal, enquanto a portabilidade transfere a mesma operação com valor e prazo restritos ao saldo e tempo remanescentes.",
+      "b": "A consolidação troca várias dívidas caras por uma nova linha de CET menor, e a portabilidade transfere a mesma operação para outro banco.",
       "c": "A portabilidade permite alongar o prazo e liberar recurso adicional ao cliente, mantendo o nome de portabilidade sem virar refinanciamento.",
       "d": "Ambas as operações exigem a alienação fiduciária compulsória de bens imóveis da União como garantia soberana."
      },
@@ -5194,7 +5428,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "Contratar um plano de previdência PGBL ilíquido de longo prazo usando todo o dinheiro da poupança antes de pagar o cartão.",
       "b": "Zerar integralmente a aplicação e manter o saldo zerado sem qualquer colchão de liquidez para imprevistos.",
       "c": "Orientar o cliente a manter a dívida no rotativo e aplicar mais recursos em ações de empresas em recuperação judicial.",
-      "d": "Utilizar a parcela do valor aplicado para estancar a dívida cara do rotativo, preservando o restante para não zerar a reserva de emergência."
+      "d": "Utilizar parte do valor aplicado para quitar a dívida do rotativo, preservando o restante como reserva de emergência."
      },
      "gabarito": "d",
      "feedback": {
@@ -5213,7 +5447,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A resposta é a A. A alienação fiduciária reduz a taxa de juros porque dá segurança ao credor via execução extrajudicial, mas exige do cliente a consciência de que a inadimplência nessa linha pode acarretar a perda do bem oferecido em garantia.</p><p>As alternativas B, C e D erram ao ignorar a celeridade do rito extrajudicial, igualar as taxas ao cheque especial ou tirar do devedor a posse direta para habitação do imóvel.</p>",
      "enunciado": "<p>Um cliente endividado possui dívidas em linhas de crédito pessoal sem garantia e estuda oferecer um imóvel quitado de sua propriedade em alienação fiduciária para obter uma linha com CET reduzido. Ao analisar os impactos do uso da garantia real de alienação fiduciária em relação ao custo e ao risco patrimonial, verifica-se que:</p>",
      "alternativas": {
-      "a": "A garantia real reduz substancialmente o risco do banco e derruba a taxa do empréstimo, porém converte um passivo sem consequência patrimonial direta em uma dívida que pode custar a perda do imóvel no rito extrajudicial.",
+      "a": "A garantia real derruba a taxa do empréstimo, mas converte um passivo sem consequência patrimonial direta em dívida que pode custar o imóvel.",
       "b": "A garantia de alienação fiduciária do imóvel elimina completamente o risco de perda do bem por exigir processo judicial que dura obrigatoriamente mais de 30 anos.",
       "c": "A alienação fiduciária de imóveis mantém as taxas de juros idênticas às do cheque especial por determinação do Banco Central.",
       "d": "Ao oferecer o imóvel em garantia, o cliente transfere a propriedade definitiva para o banco, perdendo a posse direta imediatamente no ato da assinatura."
@@ -5239,9 +5473,9 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>No atendimento bancário, compreender as diferenças estruturais entre um empréstimo de uso livre e um financiamento de destinação vinculada é essencial para orientar o consumidor. A característica que distingue o financiamento em relação ao empréstimo pessoal comum consiste em:</p>",
      "alternativas": {
       "a": "Depositar o valor integral liberado na conta corrente do cliente para que ele utilize livremente como preferir.",
-      "b": "Ter o recurso repassado diretamente pela instituição financeira ao vendedor do bem ou serviço, nascendo o crédito colado ao objeto financiado.",
+      "b": "Ter o recurso repassado pela instituição financeira diretamente ao vendedor do bem ou serviço, e não ao cliente.",
       "c": "Isentar a operação da cobrança de Imposto sobre Operações Financeiras (IOF) por determinação do Banco Central.",
-      "d": "Exigir obrigatoriamente a apresentação de garantias prestadas por entidades governamentais de aval."
+      "d": "Exigir obrigatoriamente a apresentação de garantias prestadas por entidades governamentais de aval ao consumidor."
      },
      "gabarito": "b",
      "feedback": {
@@ -5262,7 +5496,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>O arrendamento mercantil (leasing) é uma estrutura de crédito regulada pelo Banco Central com regras próprias de propriedade e encerramento. Ao comparar a alienação fiduciária com o leasing financeiro, constata-se que no leasing:</p>",
      "alternativas": {
       "a": "O cliente torna-se proprietário definitivo na assinatura do contrato, sendo-lhe vedada a devolução do bem ao final do prazo.",
-      "b": "A arrendadora permanece como proprietária do bem durante o contrato, e ao final o cliente pode optar por comprar, renovar o contrato ou devolver o bem.",
+      "b": "A arrendadora permanece proprietária do bem, e ao final o cliente pode comprar, renovar o contrato ou devolver.",
       "c": "A única alternativa ao término do contrato é a consolidação automática da propriedade plena pelo cliente, sem a opção de devolução.",
       "d": "O Valor Residual Garantido (VRG) é uma tarifa de encerramento cobrada apenas do arrendatário que devolve o bem ao final do contrato."
      },
@@ -5287,7 +5521,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "O CDC é inadequado para a compra de bens duráveis por exigir a alienação fiduciária de imóveis quitados do consumidor.",
       "b": "O cheque especial é a linha mais recomendada para compras parceladas de bens duráveis devido à isenção de tarifas operacionais por prazos longos.",
       "c": "O cliente deve utilizar o rotativo do cartão de crédito por dois anos para manter a margem do consignado livre para investimentos.",
-      "d": "O cheque especial destina-se a pequenos descasamentos de caixa de poucos dias, devendo o bem durável ser financiado via CDC com prazo e taxa adequados."
+      "d": "O cheque especial destina-se a descasamentos de caixa de poucos dias, e o bem durável deve ser financiado via CDC."
      },
      "gabarito": "d",
      "feedback": {
@@ -5307,9 +5541,9 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A resposta é a B. O consignado lidera a hierarquia de custos pelo menor CET gerado pelo desconto em folha, mas o profissional deve alertar que a operação compromete a margem consignável e não pode ser cancelada unilateralmente enquanto houver débito.</p><p>As alternativas A, C e D erram ao afirmar que linhas sem garantia são mais baratas, sugerir o cheque especial para prazos longos ou desconsiderar a relevância do CET.</p>",
      "enunciado": "<p>Uma cliente com salário estável pretende contratar um empréstimo de uso livre para cobrir despesas de saúde e avalia opções com seu gerente. Ao estruturar a recomendação adequada observando a hierarquia de custos e os impactos da operação, a orientação correta deve considerar que:</p>",
      "alternativas": {
-      "a": "O crédito pessoal sem garantia deve ser a primeira opção por ter taxas inferiores a qualquer linha garantida.",
-      "b": "A contratação do crédito consignado oferece um CET menor devido ao desconto em folha, mas trava a margem e não se cancela unilateralmente com o saldo devedor ativo.",
-      "c": "A cliente deve parcelar o valor em 60 vezes no cheque especial para garantir parcelas menores no orçamento mensal.",
+      "a": "O crédito pessoal sem garantia deve ser a primeira opção por apresentar taxas inferiores às de qualquer linha garantida.",
+      "b": "O crédito consignado tem CET menor pelo desconto em folha, mas trava a margem e não se cancela unilateralmente.",
+      "c": "A cliente deve parcelar o valor em 60 vezes no cheque especial, para garantir parcelas menores dentro do orçamento mensal.",
       "d": "A comparação pelo CET é dispensável quando o banco divulga a taxa de juros nominal mensal, que já reflete o custo integral da operação."
      },
      "gabarito": "b",
@@ -5329,7 +5563,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A resposta é a A. O prazo do financiamento/empréstimo deve casar com a vida útil do bem ou serviço financiado para não comprometer o fluxo futuro de caixa, sendo terminantemente proibido assediar ou pressionar o consumidor para a tomada de crédito.</p><p>As alternativas B, C e D defendem descompassos graves entre prazos de dívida e consumo, além de violar diretamente as vedações legais da Lei do Superendividamento.</p>",
      "enunciado": "<p>Um consumidor solicita um empréstimo para custear um pacote de viagem de férias de dez dias de duração e consulta as opções de prazos. Ao mesmo tempo, um profissional analisa as regras morais e regulatórias de proteção ao consumidor na oferta de crédito (Lei 14.181/2021). Assinale a alternativa correta sobre o casamento de prazos e os deveres de conduta na concessão do crédito:</p>",
      "alternativas": {
-      "a": "O prazo da dívida deve casar com a vida útil do bem ou serviço (evitando parcelamentos longos como 60 meses para viagens curtas), sendo vedado assediar ou pressionar o consumidor para contratar crédito.",
+      "a": "O prazo da dívida deve casar com a vida útil do bem ou serviço, e é vedado assediar ou pressionar o consumidor a contratar crédito.",
       "b": "O parcelamento em 60 meses é a conduta mais recomendada para custear serviços de consumo imediato, pois minimiza o impacto do valor nominal da parcela.",
       "c": "A instituição de crédito está autorizada a ocultar a taxa de juros nominal do contrato caso o cliente assine um termo declarando ser vulnerável.",
       "d": "O gerente pode insistir continuamente na contratação de linhas adicionais caso o cliente seja analfabeto ou idoso, sem restrição regulatória."
@@ -5357,7 +5591,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "A legislação proíbe as instituições financeiras de estabelecerem qualquer limite de comprometimento de renda para o crédito imobiliário.",
       "b": "O teto de 30% da renda é fixado compulsoriamente por resolução do Banco Central para todas as operações do mercado imobiliário.",
       "c": "O limite máximo de comprometimento de renda para imóveis é regido estritamente pelas regras da margem consignável do INSS.",
-      "d": "O parâmetro de cerca de 30% da renda é uma política de crédito de cada instituição financeira, não constituindo uma norma rígida do Banco Central ou do CMN."
+      "d": "O parâmetro de cerca de 30% da renda é política de crédito de cada instituição, e não norma do Banco Central ou do CMN."
      },
      "gabarito": "d",
      "feedback": {
@@ -5379,8 +5613,8 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "O crédito estudantil conta com carência obrigatória de 18 meses após a formatura em todos os contratos novos regidos pela reforma de 2017.",
       "b": "O financiamento de veículo gera rendimento real atrelado à inflação, enquanto o crédito estudantil exige a alienação fiduciária do diploma.",
-      "c": "O veículo é um bem de consumo que sofre depreciação ao longo do tempo, enquanto o crédito estudantil é um investimento em capital humano focado na elevação de renda futura.",
-      "d": "O financiamento de veículos permite o uso do saldo do FGTS do trabalhador sem vinculação ao Sistema Financeiro da Habitação."
+      "c": "O veículo é bem de consumo que deprecia com o tempo, enquanto o crédito estudantil é investimento em capital humano.",
+      "d": "O financiamento de veículos permite o uso do saldo do FGTS do trabalhador, sem qualquer vinculação ao Sistema Financeiro da Habitação."
      },
      "gabarito": "c",
      "feedback": {
@@ -5401,8 +5635,8 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Um cliente pretende adquirir um veículo de R$ 80 mil e avalia duas propostas de financiamento. A proposta 1 prevê financiamento integral sem entrada em 60 meses, enquanto a proposta 2 exige entrada de R$ 30 mil e prazo de 24 meses. Sob a ótica do planejamento financeiro e do risco de descasamento por depreciação, a orientação adequada é:</p>",
      "alternativas": {
       "a": "Escolher o prazo de 60 meses sem entrada (proposta 1) para reduzir o valor nominal da parcela, visto que veículos valorizam no mercado usado.",
-      "b": "Dar a maior entrada possível e encurtar o prazo (proposta 2), evitando que a depreciação do bem faça o saldo devedor superar o valor de mercado do veículo.",
-      "c": "Financiar em 60 meses sem entrada e utilizar o saldo do FGTS do comprador para amortizar as parcelas futuras.",
+      "b": "Dar a maior entrada possível e encurtar o prazo, como na proposta 2, evitando que a depreciação do bem supere o saldo devedor.",
+      "c": "Financiar em 60 meses sem entrada e utilizar o saldo do FGTS do comprador para amortizar as parcelas futuras do contrato.",
       "d": "Escolher a proposta 1 e compensar a depreciação contratando seguro do veículo, o que garantiria a cobertura do saldo devedor em qualquer cenário de venda."
      },
      "gabarito": "b",
@@ -5423,7 +5657,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A resposta é a A. Como o imóvel é um ativo altamente ilíquido que não pode ser convertido em caixa rapidamente em emergências, o profissional deve orientar a manutenção da reserva de emergência em liquidez imediata, dando uma entrada moderada.</p><p>As alternativas B, C e D erram ao defender o esvaziamento total do colchão de liquidez da família, promover resgates incompatíveis ou inventar cauções obrigatórias no Bacen.</p>",
      "enunciado": "<p>Um casal possui R$ 100 mil aplicados na caderneta de poupança como sua única reserva de emergência e pretende adquirir um imóvel residencial de moradia enquadrado no Sistema Financeiro da Habitação (SFH). Eles procuram o gerente dispostos a dar a totalidade dos R$ 100 mil como entrada. A conduta de atendimento correta para essa situação é:</p>",
      "alternativas": {
-      "a": "Orientar a utilização de uma entrada menor e a preservação da reserva de emergência, visto que o imóvel possui altíssima iliquidez e não resolve imprevistos imediatos.",
+      "a": "Orientar uma entrada menor e a preservação da reserva de emergência, porque o imóvel é um ativo de altíssima iliquidez.",
       "b": "Orientar o casal a utilizar 100% da poupança na entrada, pois a entrada maior elimina a incidência de juros sobre o saldo financiado.",
       "c": "Recomendar a utilização de todo o dinheiro da reserva de emergência e o resgate compulsório de fundos de ações fechados para resgate no mesmo dia.",
       "d": "Exigir que a reserva de emergência seja depositada em conta caução do Banco Central como condição para liberação da alienação fiduciária."
@@ -5446,7 +5680,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Um estudante do ensino superior planeja contratar o financiamento estudantil através do Fies regulado pela Lei 13.530/2017 para custear sua graduação. Ao analisar as regras vigentes do programa no tocante ao período pós-formatura, à taxa de juros na modalidade principal e às garantias, verifica-se que:</p>",
      "alternativas": {
       "a": "O estudante dispõe de 18 meses de carência sem cobranças após a formatura, e a parcela pós-carência é fixa, sem qualquer vinculação à renda do formado.",
-      "b": "A carência de 18 meses após a formatura foi eliminada, a modalidade principal possui juro zero, e a dependência do fiador tradicional foi reduzida com a adesão ao fundo garantidor.",
+      "b": "A carência de 18 meses após a formatura foi eliminada, a modalidade principal tem juro zero e o fundo garantidor reduziu a exigência de fiador.",
       "c": "O pagamento das parcelas de amortização inicia-se apenas quando o formado atingir 10 anos de graduação, sendo exigida a alienação fiduciária de bem imóvel próprio.",
       "d": "Os parâmetros de prazos e taxas do Fies são imutáveis por lei constitucional, sendo proibida a alteração por editais das instituições de ensino."
      },
@@ -5470,16 +5704,16 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A resposta é a A. No microcrédito produtivo orientado, a taxa efetiva de juros é limitada a 4% ao mês, a taxa de abertura de crédito tem teto de 3% (vedada qualquer outra tarifa) e a soma dos saldos devedores na mesma instituição não pode ultrapassar R$ 21 mil.</p><p>As alternativas B, C e D erram ao afirmar que os juros são livres, proibir a taxa de abertura legal permitida ou exigir garantias reais incompatíveis com o produto.</p>",
      "enunciado": "<p>O microcrédito produtivo orientado é uma modalidade destinada a pequenos empreendedores com regras específicas estabelecidas pelo Conselho Monetário Nacional (CMN). Quanto aos limites operacionais de taxas e tetos aplicáveis a essa modalidade, é correto afirmar que:</p>",
      "alternativas": {
-      "a": "A taxa de juros efetiva máxima é de 4% ao mês, a taxa de abertura de crédito é de no máximo 3% do valor concedido e o saldo devedor do tomador na mesma instituição não pode exceder R$ 21 mil.",
+      "a": "Os juros efetivos limitam-se a 4% ao mês, a taxa de abertura a 3% e o saldo devedor na mesma instituição a R$ 21 mil.",
       "b": "As taxas de juros são livremente pactuadas sem teto regulatório, e o saldo devedor na mesma instituição pode atingir até R$ 100 mil.",
-      "c": "A taxa de abertura de crédito é totalmente proibida, mas a instituição pode cobrar tarifas mensais de manutenção de cadastro.",
-      "d": "A concessão exige obrigatoriamente a apresentação de garantias reais imobiliárias registradas em cartório."
+      "c": "A taxa de abertura de crédito é proibida, mas a instituição pode cobrar tarifa mensal de manutenção do cadastro do tomador.",
+      "d": "A concessão exige garantia real imobiliária registrada em cartório, e os juros são limitados a 2% ao mês."
      },
      "gabarito": "a",
      "feedback": {
       "b": "O CMN fixa teto de juros efetivos de até 4% ao mês e limita o saldo devedor na mesma instituição a R$ 21 mil.",
       "c": "A taxa de abertura de crédito é permitida até o limite de 3%, sendo vedada expressamente qualquer outra taxa ou despesa.",
-      "d": "O microcrédito atende público sem garantias reais, sendo comum a utilização do aval solidário."
+      "d": "O microcrédito atende público sem garantias reais, com aval solidário, e o teto de juros é de 4% ao mês, e não de 2%."
      }
     },
     {
@@ -5496,7 +5730,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "Arrendamento mercantil, exportação industrial, investimento e securitização.",
       "b": "Custeio, investimento, previdência privada e capital de giro livre.",
       "c": "Aquisição de imóvel urbano, reforma residencial, custeio e poupança.",
-      "d": "Custeio, investimento, comercialização e industrialização."
+      "d": "Custeio, investimento, comercialização e industrialização da produção."
      },
      "gabarito": "d",
      "feedback": {
@@ -5516,9 +5750,9 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A resposta é a C. A Lei 15.364/2026 permitiu a destinação complementar a microfinanças (necessidades essenciais como saúde, moradia de baixo valor e mobilidade) limitada a até 20% do limite do somatório dos saldos devedores das operações de microcrédito produtivo orientado do tomador.</p><p>As alternativas A, B e D falham ao afirmar a extinção do crédito produtivo, permitir consumos supérfluos sem limites ou inventar regras de depósitos a prazo em bancos de investimento.</p>",
      "enunciado": "<p>Com a promulgação da Lei 15.364 em 2026, foi criada a categoria de microfinanças no âmbito das operações de microcrédito. Ao comparar o núcleo produtivo tradicional do microcrédito com a nova categoria de microfinanças, verifica-se que:</p>",
      "alternativas": {
-      "a": "As microfinanças permitem a liberação ilimitada de recursos sem teto para a compra de veículos de luxo e viagens de lazer.",
+      "a": "As microfinanças permitem a liberação de recursos sem teto para consumo, inclusive compra de veículos de luxo e viagens de lazer.",
       "b": "A nova categoria substituiu integralmente o microcrédito produtivo, proibindo a concessão de recursos para atividades comerciais de microempreendedores.",
-      "c": "As microfinanças admitem o atendimento de necessidades essenciais (como moradia de baixo valor, saúde e mobilidade) até 20% do limite do somatório dos saldos devedores das operações de microcrédito produtivo orientado do tomador.",
+      "c": "As microfinanças atendem necessidades essenciais, como moradia de baixo valor, saúde e mobilidade, até 20% do limite do tomador.",
       "d": "A modalidade de microfinanças exige o repasse compulsório de 100% dos depósitos a prazo captados pelos bancos de investimento."
      },
      "gabarito": "c",
@@ -5542,7 +5776,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "A aquisição de máquinas agrícolas é classificada como crédito de comercialização, sendo proibida a verificação das notas fiscais das colheitadeiras.",
       "b": "Trata-se de crédito rural de custeio, sendo obrigatória a visita presencial do gerente de contas à fazenda antes de cada liberação de parcela.",
       "c": "A operação enquadra-se como empréstimo pessoal de livre destinação, dispensando qualquer comprovação de compra ou fiscalização documental.",
-      "d": "Trata-se de crédito rural de investimento, sendo a fiscalização por sensoriamento remoto obrigatória para empreendimentos contratados a partir de março de 2026 com área superior a 300 hectares."
+      "d": "É crédito rural de investimento, com fiscalização por sensoriamento remoto obrigatória acima de 300 hectares desde março de 2026."
      },
      "gabarito": "d",
      "feedback": {
@@ -5563,8 +5797,8 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "Ambas as operações sejam concedidas sem qualquer exigência de garantia ou vinculação, através do uso do rotativo do cartão de crédito corporativo.",
       "b": "O valor do financiamento de material de construção seja depositado livremente na conta corrente do cliente, e a energia solar exija a transferência definitiva e irrevogável do imóvel ao banco.",
-      "c": "A linha de reforma utilize o repasse vinculado com pagamento direto ao lojista conveniado, e a linha de energia solar utilize a alienação fiduciária dos equipamentos com propriedade resolúvel para o credor.",
-      "d": "O banco retenha a posse direta dos painéis solares na agência até a quitação da última parcela do contrato."
+      "c": "A linha de reforma use repasse vinculado com pagamento direto ao lojista, e a de energia solar a alienação fiduciária dos equipamentos.",
+      "d": "O banco retenha a posse direta dos painéis solares em depósito próprio até a quitação da última parcela do contrato."
      },
      "gabarito": "c",
      "feedback": {
@@ -5586,10 +5820,10 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A resposta é a C. A reserva de emergência serve como um escudo financeiro para cobrir imprevistos cotidianos, e seu tamanho deve ser mensurado a partir do custo de vida mensal (despesas essenciais) multiplicado pela quantidade de meses recomendada de acordo com a estabilidade da renda do cliente.</p><p>As alternativas A, B e D erram ao usar a renda bruta no cálculo, indicar ativos voláteis como ações ou recomendar produtos ilíquidos como previdência fechada.</p>",
      "enunciado": "<p>A reserva de emergência constitui a etapa inicial do planejamento financeiro pessoal de qualquer investidor. Sob o ponto de vista da mensuração do montante e da sua função precípua, a reserva serve para:</p>",
      "alternativas": {
-      "a": "Garantir a compra de ações no mercado fracionário durante momentos de alta volatilidade da bolsa de valores.",
+      "a": "Garantir a compra de ações no mercado fracionário durante os momentos de alta volatilidade da bolsa de valores.",
       "b": "Maximizar a rentabilidade da carteira no longo prazo, sendo calculada multiplicando-se o salário bruto pelo número de dependentes.",
-      "c": "Absorver imprevistos financeiros, devendo seu valor ser dimensionado com base no custo de vida mensal da família e na estabilidade da sua renda.",
-      "d": "Acumular recursos em previdência fechada para obtenção do benefício fiscal máximo no Imposto de Renda."
+      "c": "Absorver imprevistos, sendo dimensionada pelo custo de vida mensal da família e pela estabilidade da renda.",
+      "d": "Acumular recursos em previdência fechada, de modo a obter o benefício fiscal máximo no Imposto de Renda."
      },
      "gabarito": "c",
      "feedback": {
@@ -5609,10 +5843,10 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A resposta é a D. A régua do tamanho da reserva acompanha a volatilidade e previsibilidade da renda: servidores públicos com estabilidade exigem de 3 a 6 meses do custo de vida, enquanto autônomos e empresários necessitam de 9 a 12 meses devido à maior oscilação em suas receitas.</p><p>As alternativas A, B e C erram ao atribuir seguro-desemprego a autônomos, engessar o montante em 24 meses de salário bruto ou isentar servidores estáveis da necessidade de reserva.</p>",
      "enunciado": "<p>Ao comparar os perfis de um servidor público estatutário com estabilidade e o de um profissional autônomo sem renda fixa mensal, o profissional de atendimento deve dimensionar a reserva de emergência de ambos considerando que:</p>",
      "alternativas": {
-      "a": "O servidor público está isento de manter reserva de emergência por não possuir risco de flutuação de despesas de saúde ou familiares.",
-      "b": "O autônomo necessita de uma reserva menor do que o servidor público por possuir a garantia automática do seguro-desemprego.",
+      "a": "O servidor público está isento de manter reserva de emergência, por não ter risco de flutuação de despesas de saúde ou familiares.",
+      "b": "O autônomo precisa de uma reserva menor do que a do servidor público, por contar com a garantia automática do seguro-desemprego.",
       "c": "Ambos devem manter exatamente o mesmo valor fixo equivalente a 24 meses de salários brutos em contas de depósito a prazo fechadas.",
-      "d": "Quanto maior a instabilidade da renda, maior deve ser a reserva (sendo 3 a 6 meses para o servidor estável e 9 a 12 meses para o autônomo)."
+      "d": "Quanto maior a instabilidade da renda, maior a reserva, indo de 3 a 6 meses no servidor estável a 9 a 12 no autônomo."
      },
      "gabarito": "d",
      "feedback": {
@@ -5632,7 +5866,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A resposta é a B. O Fundo Garantidor de Créditos (FGC) reduz o risco de crédito em aplicações como CDBs até o limite de R$ 250 mil por CPF em cada conglomerado financeiro, com o teto global de R$ 1 milhão renovável a cada quatro anos.</p><p>As alternativas A, C e D incorrem em erros ao prever coberturas ilimitadas, vincular os limites a contratos individuais ou errar os valores regulamentares do FGC.</p>",
      "enunciado": "<p>Um investidor aplica sua reserva de emergência em um CDB de liquidez diária emitido por um banco de médio porte. A respeito da proteção e da limitação da garantia prestada pelo Fundo Garantidor de Créditos (FGC) a essa aplicação, é correto afirmar que:</p>",
      "alternativas": {
-      "a": "O FGC cobre integralmente e sem limite de valor qualquer aplicação em CDB utilizada para fins de reserva de emergência.",
+      "a": "O FGC cobre integralmente e sem limite de valor qualquer aplicação em CDB que seja utilizada para fins de reserva de emergência.",
       "b": "O FGC garante até R$ 250 mil por CPF em cada conglomerado financeiro, limitado ao teto global de R$ 1 milhão a cada quatro anos.",
       "c": "A garantia do FGC para CDBs de liquidez diária é de R$ 250 mil por contrato de aplicação, sem limite de teto quadrienal.",
       "d": "A cobertura do FGC limita-se a R$ 100 mil por CPF, sendo zerada caso o investidor realize o resgate antes de 365 dias."
@@ -5657,7 +5891,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "Informar que a LCI possui prazo de carência de 12 meses fixos, mas que a instituição pode realizar o resgate antecipado diário mediante cobrança de taxa administrativa.",
       "b": "Recomendar a LCI de forma irrestrita, pois o prazo mínimo de carência exigido pelo CMN para títulos imobiliários é de apenas 1 dia útil.",
-      "c": "Contraindicar a LCI para a reserva de emergência, pois o título possui prazo mínimo de vencimento de seis meses no qual a instituição não pode resgatar nem recomprar o papel.",
+      "c": "Contraindicar a LCI para a reserva de emergência, porque o título tem prazo mínimo de vencimento de seis meses fixado pelo CMN.",
       "d": "Autorizar a aplicação na LCI desde que o cliente contrate um seguro de vida com cobertura de resgate imediato no mesmo dia."
      },
      "gabarito": "c",
@@ -5680,7 +5914,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "As ações de empresas de grande porte são recomendadas para a reserva por apresentarem alta liquidez em bolsa e garantia integral do Tesouro Nacional.",
       "b": "A caderneta de poupança é o único veículo totalmente imune a perdas de rendimento intramês, pagando juros pro rata die em qualquer data de resgate.",
       "c": "Os fundos DI são isentos de retenção semestral de imposto de renda (come-cotas) e isentos de IOF em resgates inferiores a 30 dias.",
-      "d": "O Tesouro Selic e os fundos DI atendem ao requisito de baixíssima volatilidade nominal, enquanto a poupança perde rentabilidade do mês se resgatada antes da data de aniversário e as ações são vedadas devido ao risco de mercado."
+      "d": "O Tesouro Selic e os fundos DI têm baixíssima volatilidade nominal, a poupança perde o rendimento do mês fora do aniversário e as ações são vedadas."
      },
      "gabarito": "d",
      "feedback": {
@@ -5773,7 +6007,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "A situação é neutra para a análise bancária, pois o balanço patrimonial avalia apenas o salário bruto mensal declarado no holerite.",
       "b": "O Patrimônio Líquido negativo aumenta o indicador de liquidez e facilita a concessão automática de empréstimos sem garantia.",
-      "c": "O cliente possui Patrimônio Líquido negativo, caracterizando situação de insolvência técnica que reduz drasticamente o acesso a novas linhas de crédito de longo prazo.",
+      "c": "O cliente tem Patrimônio Líquido negativo, o que caracteriza insolvência técnica e reduz o acesso a novas linhas de crédito.",
       "d": "As dívidas que superam os ativos transformam-se automaticamente em ativos de investimento com isenção de imposto de renda."
      },
      "gabarito": "c",
@@ -5793,14 +6027,14 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A resposta é a A. O índice de endividamento e o índice de liquidez são métricas de estoque extraídas do balanço patrimonial; por outro lado, o comprometimento de renda (parcelas/renda) e o índice de poupança (poupado/renda) são métricas dinâmicas extraídas do fluxo de caixa.</p><p>As alternativas B, C e D erram ao misturar a origem das métricas de fluxo e estoque ou ao descartar a utilidade da análise combinada de ambas as ferramentas.</p>",
      "enunciado": "<p>Durante uma sessão de planejamento financeiro, um gerente precisa diferenciar os indicadores originados da demonstração de estoque (balanço patrimonial) daqueles derivados da demonstração de fluxo (fluxo de caixa). Assinale a alternativa que relaciona corretamente as métricas à sua respectiva fonte de dados:</p>",
      "alternativas": {
-      "a": "Índice de endividamento (passivo total/ativo total) e índice de liquidez vêm do balanço; comprometimento de renda e índice de poupança vêm do fluxo de caixa.",
-      "b": "Comprometimento de renda e índice de endividamento vêm ambos exclusivamente da DRE e do balanço imobiliário de mercado.",
-      "c": "O índice de poupança é um indicador estático de balanço patrimonial, e o índice de liquidez mede as vendas anuais do comércio.",
+      "a": "Endividamento e liquidez vêm do balanço; comprometimento de renda e índice de poupança vêm do fluxo de caixa.",
+      "b": "Comprometimento de renda e índice de endividamento vêm ambos do balanço, por medirem estoques de dívida em uma data.",
+      "c": "O índice de poupança é indicador estático do balanço, e o de liquidez confronta a parcela mensal com a renda líquida.",
       "d": "Todos os quatro indicadores são mensurados estritamente pelo balanço patrimonial, sendo o fluxo de caixa descartado na análise bancária."
      },
      "gabarito": "a",
      "feedback": {
-      "b": "Comprometimento de renda é um indicador de fluxo (parcelas/renda), e não da DRE ou do balanço isolado.",
+      "b": "Comprometimento de renda é indicador de fluxo, a razão entre parcelas e renda líquida, e não um estoque do balanço.",
       "c": "O índice de poupança (valor poupado no período/renda líquida) mede movimento e vem do fluxo de caixa, não do balanço estático.",
       "d": "A análise financeira combina indicadores de estoque (balanço) e de fluxo (fluxo de caixa), não descartando o fluxo."
      }
@@ -5819,8 +6053,8 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>O planejamento financeiro pessoal é estruturado em um processo composto por cinco etapas sequenciais. A primeira etapa desse processo e a sua respectiva fronteira de atuação correspondem a:</p>",
      "alternativas": {
       "a": "Levantamento dos objetivos financeiros da clientela, etapa na qual não se deve realizar qualquer recomendação de produtos.",
-      "b": "Implementação imediata do plano de investimentos, executando a compra de produtos de alta rentabilidade.",
-      "c": "Monitoramento e revisão anual do portfólio, com realocação compulsória de ativos no mesmo dia.",
+      "b": "Implementação imediata do plano de investimentos, com a execução da compra dos produtos de maior rentabilidade.",
+      "c": "Monitoramento e revisão anual do portfólio, com realocação compulsória dos ativos no mesmo dia da conversa.",
       "d": "Definição do relacionamento com o cliente, com explicação dos serviços prestados, da remuneração e das responsabilidades de cada parte."
      },
      "gabarito": "a",
@@ -5843,8 +6077,8 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "O momento de vida avalia apenas a volatilidade histórica dos fundos, enquanto o perfil de risco mede a alíquota de Imposto de Renda.",
       "b": "Ambos os conceitos são rigorosamente idênticos, sendo determinados de forma exclusiva pela idade cronológica do investidor.",
-      "c": "O momento de vida é objetivo e circunstancial (fase profissional, dependentes e patrimônio), enquanto o perfil de risco possui um componente psicológico de tolerância a perdas.",
-      "d": "O perfil de risco é definido exclusivamente pelo volume de dívidas, e o momento de vida é imutável ao longo do tempo."
+      "c": "O momento de vida é objetivo e circunstancial, enquanto o perfil de risco tem um componente psicológico de tolerância a perdas.",
+      "d": "O perfil de risco é definido exclusivamente pelo volume de dívidas do cliente, e o momento de vida é imutável ao longo do tempo."
      },
      "gabarito": "c",
      "feedback": {
@@ -5864,10 +6098,10 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A resposta é a C. Para ser considerada bem estruturada e operacionalizável no planejamento financeiro, uma meta precisa apresentar três elementos essenciais: valor definido, prazo para realização e prioridade, além de ser realista frente à capacidade de poupança do cliente.</p><p>As alternativas A, B e D falham ao associar a meta a características de produtos, sugerir alocações inadequadas ou aceitar enunciados abstratos sem métricas quantitativas.</p>",
      "enunciado": "<p>Um cliente declara ao seu gerente de contas que tem como objetivo financeiro \"ter uma vida financeira tranquila no futuro\". Sob a ótica das técnicas de planejamento financeiro, para que esse desejo se transforme em uma meta bem estruturada, é necessário que ele apresente:</p>",
      "alternativas": {
-      "a": "Alocação compulsória de 100% dos recursos em fundos de renda variável de tecnologia sem prazo.",
-      "b": "Garantia integral do Fundo Garantidor de Créditos e isenção total do Imposto de Renda Pessoa Física.",
-      "c": "Valor definido, prazo determinado e prioridade estabelecida, sendo compatível com a sua capacidade de poupança.",
-      "d": "Apenas um desejo abstrato, sendo desnecessária a mensuração monetária ou a fixação de prazos."
+      "a": "Alocação compulsória de 100% dos recursos em fundos de renda variável de tecnologia, sem prazo definido.",
+      "b": "Garantia integral do Fundo Garantidor de Créditos e isenção total de Imposto de Renda para a pessoa física.",
+      "c": "Valor definido, prazo determinado e prioridade estabelecida, compatível com a capacidade de poupança.",
+      "d": "Apenas um desejo abstrato, sendo desnecessária a mensuração monetária ou a fixação de prazos para alcançá-lo."
      },
      "gabarito": "c",
      "feedback": {
@@ -5888,9 +6122,9 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Um gerente de investimentos concluiu o levantamento de dados e a avaliação da situação financeira de uma cliente. Ele elaborou um plano de ação completo com a recomendação de alocação de ativos e ajustes no orçamento. Ao apresentar a proposta à cliente, ela aprova verbalmente as estratégias. Considerando a fronteira entre as etapas do planejamento financeiro, a conduta correta do profissional para passar para a etapa de implementação é:</p>",
      "alternativas": {
       "a": "Dispensar o acompanhamento futuro, visto que a aprovação do plano encerra definitivamente o processo de planejamento.",
-      "b": "Executar as movimentações e reestruturações do portfólio, marcando a transição do desenvolvimento para a implementação do plano.",
+      "b": "Executar as movimentações do portfólio, o que marca a transição do desenvolvimento para a implementação.",
       "c": "Refazer o questionário de objetivos desde a primeira etapa a cada nova ordem de compra solicitada pela cliente.",
-      "d": "Alterar unilateralmente o perfil da cliente para arrojado para acelerar o cumprimento do plano de ação."
+      "d": "Alterar unilateralmente o perfil da cliente para arrojado, de modo a acelerar o cumprimento do plano de ação."
      },
      "gabarito": "b",
      "feedback": {
@@ -5909,8 +6143,8 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A resposta é a A. A etapa de monitoramento e revisão é dinâmica e, embora exija uma periodicidade mínima anual, deve ser acionada imediatamente diante de eventos relevantes de vida, como nascimento de dependentes, alterações expressivas de renda ou mudanças no cenário econômico.</p><p>As alternativas B, C e D erram ao adiar a revisão por cinco anos, sugerir resgates para produtos inadequados de capitalização ou ignorar a nova realidade orçamentária da família.</p>",
      "enunciado": "<p>Um investidor implementou seu plano de ação há seis meses e atinge as metas parciais estabelecidas. Contudo, no mês corrente, ele sofreu uma redução imprevista de 40% em sua renda mensal e sua esposa deu à luz o primeiro filho do casal. Diante desses eventos e considerando as regras que regem a quinta etapa (monitoramento e revisão) do planejamento financeiro pessoal, a conduta técnica adequada é:</p>",
      "alternativas": {
-      "a": "Iniciar a revisão do plano de ação imediatamente, visto que alterações relevantes na renda ou no contexto familiar disparam a necessidade de reavaliação dos objetivos e estratégias.",
-      "b": "Manter a carteira e o orçamento inalterados até completar obrigatoriamente cinco anos da implementação original.",
+      "a": "Iniciar a revisão do plano imediatamente, porque mudanças relevantes de renda ou de contexto familiar disparam a reavaliação.",
+      "b": "Manter a carteira e o orçamento inalterados até completar obrigatoriamente cinco anos da implementação original do plano.",
       "c": "Cancelar o plano de forma definitiva e orientar o cliente a resgatar 100% dos seus investimentos para aplicar em títulos de capitalização.",
       "d": "Ignorar a mudança de renda e exigir que o cliente mantenha o mesmo valor de aporte mensal sob pena de multa administrativa."
      },
@@ -5935,9 +6169,9 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>O planejamento de previdência privada complementar envolve a escolha adequada do plano (PGBL ou VGBL) conforme o perfil tributário do investidor. A respeito das regras de dedução fiscal e da incidência de Imposto de Renda no PGBL e no VGBL, é correto afirmar que:</p>",
      "alternativas": {
       "a": "O VGBL permite deduzir até 12% da renda bruta anual tributável na declaração simplificada, e o imposto no resgate incide sobre o valor total do plano.",
-      "b": "O PGBL permite deduzir até 12% da renda bruta anual tributável na declaração completa, e o imposto incide sobre o valor total no resgate; o VGBL não deduz e tributa apenas os rendimentos.",
+      "b": "O PGBL deduz até 12% da renda bruta anual tributável na declaração completa, e o imposto no resgate incide sobre o valor total.",
       "c": "Ambas as modalidades sofrem tributação semestral antecipada via come-cotas nos meses de maio e novembro, idêntica aos fundos de renda fixa tradicionais.",
-      "d": "O PGBL é indicado prioritariamente para investidores isentos de Imposto de Renda Pessoa Física ou que utilizam a declaração simplificada."
+      "d": "O PGBL é indicado prioritariamente para investidores isentos de Imposto de Renda ou que usam a declaração simplificada."
      },
      "gabarito": "b",
      "feedback": {
@@ -5959,8 +6193,8 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "O fundo educacional não admite acumulação na renda fixa, devendo ser integralmente constituído por ações de alta volatilidade até o mês de ingresso na faculdade.",
       "b": "A aposentadoria exige 100% de alocação em ativos de liquidez diária desde a juventude, enquanto o fundo educacional opera obrigatoriamente com fundos fechados ilíquidos.",
-      "c": "A aposentadoria possui flexibilidade no ajuste de prazos, enquanto o fundo educacional possui data rígida no calendário que exige a redução do risco da carteira no ciclo final.",
-      "d": "Ambas as metas possuem a mesma tolerância ao risco e não exigem readequação da carteira à medida que a data do usufruto se aproxima."
+      "c": "A aposentadoria admite ajuste de prazos, enquanto o fundo educacional tem data rígida e exige reduzir o risco no ciclo final.",
+      "d": "Ambas as metas têm a mesma tolerância ao risco e não exigem readequação da carteira conforme a data do usufruto se aproxima."
      },
      "gabarito": "c",
      "feedback": {
@@ -5980,10 +6214,10 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A resposta é a A. No resgate sob tabela regressiva aplica-se o PEPS (onde cada aporte conta seu próprio tempo) e, conforme fixado pelo STF no Tema 1.214, não incide o imposto estadual ITCMD sobre o repasse dos saldos de PGBL ou VGBL aos beneficiários na morte do titular.</p><p>As alternativas B, C e D erram ao achar que o aniversário de 10 anos do plano limpa o prazo de aportes recentes, ignorar a opção de regime no primeiro resgate via Lei 14.803/2024 ou zerar prazos na portabilidade.</p>",
      "enunciado": "<p>Um participante de plano de previdência sob o regime de tributação regressiva acumulou aportes ao longo de 12 anos e decide efetuar o resgate parcial do saldo. Considerando a legislação aplicável à contagem do prazo no resgate e as atualizações trazidas pela Lei 14.803/2024 e pela jurisprudência sobre sucessão, é correto afirmar que:</p>",
      "alternativas": {
-      "a": "A apuração da alíquota no resgate utiliza o método PEPS (Primeiro que Entra, Primeiro que Sai) por aporte, e no falecimento do titular o repasse aos beneficiários não sofre incidência de ITCMD.",
+      "a": "A alíquota do resgate segue o método PEPS por aporte, e no falecimento do titular o repasse aos beneficiários não paga ITCMD.",
       "b": "Atingidos dez anos do plano, todos os aportes posteriores recebem automaticamente a alíquota mínima de 10% no resgate imediato.",
       "c": "A opção pelo regime tributário regressivo deve ser feita compulsoriamente no ato da adesão ao plano, sem possibilidade de definição posterior no primeiro resgate.",
-      "d": "A transferência do plano via portabilidade zera a contagem do tempo acumulado dos aportes e tributa o saldo em 35%."
+      "d": "A transferência do plano por portabilidade zera a contagem do tempo acumulado dos aportes e tributa todo o saldo em 35%."
      },
      "gabarito": "a",
      "feedback": {
@@ -6006,7 +6240,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "Sugerir a aplicação em PGBL no modelo simplificado para evitar a tributação do valor total resgatado no futuro.",
       "b": "Recomendar o VGBL no regime progressivo, por ser o único plano que permite abatimento do Imposto de Renda para optantes do modelo completo.",
       "c": "Indicar a contratação de PGBL no regime regressivo, alertando que os resgates pagarão 15% fixos na fonte como tributação definitiva sem direito a alíquotas menores.",
-      "d": "Indicar o PGBL no regime regressivo, aproveitando o abatimento fiscal integral de 12% e visando a alíquota mínima de 10% pelo longo prazo de acumulação."
+      "d": "Indicar o PGBL no regime regressivo, com o abatimento de 12% e a alíquota mínima de 10% ao fim do prazo de acumulação."
      },
      "gabarito": "d",
      "feedback": {
@@ -6025,9 +6259,9 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A resposta é a A. O Tesouro Educa+ foi projetado para custear a faculdade pagando 60 parcelas mensais durante o período do curso (5 anos), enquanto o Tesouro Renda+ foi criado para a aposentadoria pagando 240 parcelas mensais (20 anos de renda), ambos corrigidos pelo IPCA com juro real.</p><p>As alternativas B, C e D erram ao inverter os títulos e suas respectivas finalidades, utilizar o Tesouro Selic para pagamentos de parcelas de aposentadoria ou afirmar que os resgates ocorrem em parcela única corrigida pelo IGP-M.</p>",
      "enunciado": "<p>Um casal planeja constituir uma reserva para arcar com as despesas da faculdade do filho recém-nascido (fundo educacional) e também reforçar a própria aposentadoria em 30 anos. O gerente estuda o uso de títulos públicos do Tesouro Direto desenhados especificamente para esses dois objetivos. A combinação correta de títulos e a dinâmica de pagamento de suas fases de usufruto correspondem a:</p>",
      "alternativas": {
-      "a": "Tesouro Educa+ para o fundo educacional (paga 60 parcelas mensais durante 5 anos) e Tesouro Renda+ para a aposentadoria (paga 240 parcelas mensais durante 20 anos).",
+      "a": "Tesouro Educa+ para o fundo educacional, com 60 parcelas mensais, e Tesouro Renda+ para a aposentadoria, com 240 parcelas.",
       "b": "Tesouro Renda+ para o fundo educacional (com pagamento em parcela única) e Tesouro Educa+ para a aposentadoria (com pagamentos vitalícios perpétuos).",
-      "c": "Tesouro Selic para a aposentadoria, com pagamento de 240 parcelas mensais sem correção pela inflação, e Tesouro Prefixado com juros semestrais para a faculdade, com os cupons isentos de imposto de renda.",
+      "c": "Tesouro Selic para a aposentadoria, com 240 parcelas mensais sem correção, e Tesouro Prefixado com cupons isentos para a faculdade.",
       "d": "Tesouro Educa+ e Renda+ para ambos os objetivos, visto que ambos pagam o valor acumulado em parcela única exclusivamente corrigida pelo IGP-M na data do vencimento."
      },
      "gabarito": "a",
@@ -6050,10 +6284,10 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A resposta é a A. Rendimentos de CDB e Tesouro Direto são tributados definitivamente na fonte e encerram a tributação ali, enquanto aplicações como LCI, LCA, LCD e poupança são classificadas como rendimentos isentos para a pessoa física.</p><p>As alternativas B, C e D erram ao inverter a isenção de LCI/LCA com a tributação do CDB, incluir títulos de renda fixa na tabela progressiva ou tributar a poupança pela tabela regressiva.</p>",
      "enunciado": "<p>O Imposto de Renda Pessoa Física (IRPF) organiza as receitas do contribuinte nas fichas de rendimentos tributáveis, isentos e de tributação exclusiva na fonte. A respeito da correta classificação dos rendimentos de aplicações financeiras para a pessoa física, é correto afirmar que:</p>",
      "alternativas": {
-      "a": "Rendimentos de CDBs e Tesouro Direto sofrem tributação exclusiva na fonte, enquanto rendimentos de LCI, LCA e poupança são isentos de Imposto de Renda.",
+      "a": "CDBs e Tesouro Direto são tributados exclusivamente na fonte, e LCI, LCA e poupança são isentos de Imposto de Renda.",
       "b": "Rendimentos de LCI e LCA sofrem tributação exclusiva na fonte de 15%, enquanto CDBs e RDBs são totalmente isentos de Imposto de Renda.",
       "c": "Todos os rendimentos de renda fixa privada são classificados na ficha de rendimentos tributáveis sujeitos ao ajuste anual na declaração.",
-      "d": "O rendimento da caderneta de poupança é tributado exclusivamente na fonte pela tabela regressiva de renda fixa."
+      "d": "O rendimento da caderneta de poupança é tributado exclusivamente na fonte, pela tabela regressiva da renda fixa."
      },
      "gabarito": "a",
      "feedback": {
@@ -6074,7 +6308,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Na declaração do IRPF, o contribuinte pode optar pelo modelo simplificado ou pelo modelo completo. Ao comparar a estrutura das deduções e a adequação aos planos de previdência complementar (PGBL e VGBL), verifica-se que:</p>",
      "alternativas": {
       "a": "O modelo simplificado permite a dedução de até 12% da renda bruta anual tributável para aportes realizados em VGBL.",
-      "b": "O modelo simplificado aplica o desconto padrão de 20% e impede a dedução de PGBL, sendo o VGBL o produto indicado para quem utiliza essa opção.",
+      "b": "O modelo simplificado aplica o desconto padrão de 20% e impede a dedução de PGBL, o que torna o VGBL o produto indicado.",
       "c": "O modelo completo obriga a utilização do desconto padrão de 20% e veda a apresentação de comprovantes de despesas médicas e de instrução.",
       "d": "Ambas as opções de declaração permitem o abatimento de até 12% da renda bruta anual tributável aportada em PGBL."
      },
@@ -6097,7 +6331,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Um investidor obteve no mesmo mês ganhos líquidos com a venda de ações no mercado à vista no valor total de alienações de R$ 18.000,00 e vendeu cotas de um Fundo de Investimento Imobiliário (FII) apurando ganho de capital. Sobre a classificação tributária desses dois ganhos na declaração do IRPF, constata-se que:</p>",
      "alternativas": {
       "a": "Ambos os ganhos são isentos de Imposto de Renda por estarem englobados no limite de alienações de até R$ 20.000,00 no mês.",
-      "b": "O ganho na venda das ações é isento por conta das vendas no mês ficarem abaixo de R$ 20.000,00, enquanto o ganho em cotas de FII paga 20% e vai para tributação exclusiva/definitiva.",
+      "b": "O ganho nas ações é isento porque as vendas do mês ficaram abaixo de R$ 20.000,00, e o ganho em cotas de FII paga 20%.",
       "c": "O ganho em ações é tributado compulsoriamente em 15%, e o ganho em cotas de FII é isento para vendas até R$ 35.000,00 no mês.",
       "d": "Ambas as operações sofrem retenção de 10% na fonte a título de antecipação e vão para a ficha de rendimentos tributáveis."
      },
@@ -6119,10 +6353,10 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A resposta é a A. Em 2026, o JCP sofre retenção de 17,5% na fonte sob o regime de tributação exclusiva/definitiva. Já os dividendos pagos por uma mesma empresa a uma pessoa física que ultrapassarem R$ 50.000,00 no mesmo mês sofrem retenção de 10% na fonte, cuja natureza é de antecipação (deduzida no ajuste anual e IRPFM) e não de tributação exclusiva.</p><p>As alternativas B, C e D erram ao considerar ambos isentos, errar as alíquotas ou a natureza do imposto e misturar JCP com a tabela progressiva.</p>",
      "enunciado": "<p>Um cliente procurou a agência bancária em 2026 para entender como deve declarar os proventos recebidos de companhias abertas. Ele recebeu R$ 10.000,00 em Juros sobre Capital Próprio (JCP) e R$ 60.000,00 em dividendos pagos no mesmo mês por uma única empresa. O gerente deve orientar o cliente informando que:</p>",
      "alternativas": {
-      "a": "O JCP sofre retenção de 17,5% na fonte sob tributação exclusiva, e os dividendos acima de R$ 50 mil por empresa no mês sofrem retenção de 10% a título de antecipação.",
+      "a": "O JCP tem retenção exclusiva de 17,5% na fonte, e os dividendos acima de R$ 50 mil no mês por empresa retêm 10% de antecipação.",
       "b": "Ambos os recebimentos são totalmente isentos de Imposto de Renda e entram sem qualquer retenção na ficha de rendimentos não tributáveis.",
       "c": "Os dividendos recebidos sofrem tributação exclusiva e definitiva na fonte de 20%, e o JCP é isento até R$ 20.000,00 no mês.",
-      "d": "O JCP e os dividendos são somados para a aplicação da tabela progressiva mensal do IRPF com restituição integral."
+      "d": "O JCP e os dividendos são somados para a aplicação da tabela progressiva mensal do IRPF, com restituição integral do retido."
      },
      "gabarito": "a",
      "feedback": {
@@ -6143,7 +6377,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "O imposto incide exclusivamente sobre os rendimentos da aplicação, sendo o valor do principal resgatado isento de tributação no ajuste anual.",
       "b": "A alíquota de 15% retida na fonte é definitiva e exclusiva, dispensando o lançamento do valor na declaração de ajuste anual.",
-      "c": "A instituição financeira retém 15% de imposto de renda na fonte a título de antecipação, devendo o valor total resgatado ser lançado como rendimento tributável no ajuste anual.",
+      "c": "A instituição retém 15% na fonte a título de antecipação, e o valor total resgatado vai para o ajuste anual como tributável.",
       "d": "Por estar no regime progressivo, o resgate do PGBL sofre retenção imediata de 35% na fonte, gerando crédito automático no modelo simplificado."
      },
      "gabarito": "c",
@@ -6166,7 +6400,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A resposta é a A. O trade-off entre liquidez, rentabilidade e segurança é absoluto: não existe ativo no mercado capaz de entregar os patamares máximos das três variáveis de forma simultânea.</p><p>As alternativas B, C e D erram ao tentar inventar produtos milagrosos que descumprem a regra do trade-off no mercado de capitais.</p>",
      "enunciado": "<p>Na análise de produtos de investimento, o profissional de atendimento precisa lidar com a relação entre liquidez, rentabilidade e segurança. A respeito desse trade-off fundamental do mercado financeiro, é correto afirmar que:</p>",
      "alternativas": {
-      "a": "Nenhuma aplicação consegue maximizar liquidez, rentabilidade e segurança ao mesmo tempo, exigindo a renúncia de ao menos uma dessas dimensões.",
+      "a": "Nenhuma aplicação maximiza liquidez, rentabilidade e segurança ao mesmo tempo, exigindo renúncia a ao menos uma delas.",
       "b": "A caderneta de poupança maximiza simultaneamente rentabilidade elevada, liquidez imediata e segurança total do Tesouro Nacional.",
       "c": "Os títulos de renda variável garantem liquidez diária e rentabilidade contratada sem qualquer risco de perda do capital investido.",
       "d": "O investidor pode obter alta rentabilidade e segurança máxima sem abrir mão da liquidez por meio da compra de debêntures incentivadas."
@@ -6189,9 +6423,9 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A resposta é a C. A capacidade de risco avalia a situação financeira real e objetiva do cliente (renda, patrimônio, horizonte, reservas), ao passo que a tolerância a risco aborda a predisposição emocional de suportar oscilações e perdas temporárias sem sobressaltos.</p><p>As alternativas A, B e D erram ao inverter os conceitos, tratá-los como idênticos por idade ou restringir suas aplicações a certos ativos.</p>",
      "enunciado": "<p>Durante o processo de verificação da adequação de investimentos (suitability), o profissional de atendimento deve avaliar de forma distinta a \"capacidade de risco\" e a \"tolerância a risco\" do cliente. Ao comparar esses dois conceitos, verifica-se que:</p>",
      "alternativas": {
-      "a": "Ambos os conceitos são sinônimos perfeitos e dependem unicamente da idade cronológica do investidor.",
+      "a": "Ambos os conceitos são sinônimos perfeitos e dependem unicamente da idade cronológica declarada pelo investidor.",
       "b": "A capacidade de risco avalia a estabilidade emocional do cliente, e a tolerância a risco calcula o saldo estático da sua conta corrente.",
-      "c": "A capacidade de risco é uma dimensão financeira objetiva, enquanto a tolerância a risco é uma dimensão emocional e psicológica do cliente.",
+      "c": "A capacidade de risco é uma dimensão financeira objetiva, e a tolerância a risco é uma dimensão emocional do cliente.",
       "d": "A capacidade de risco aplica-se apenas a investimentos em bolsa, enquanto a tolerância aplica-se exclusivamente a títulos públicos."
      },
      "gabarito": "c",
@@ -6212,10 +6446,10 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A resposta é a D. Para objetivos de curtíssimo prazo (três meses), a prioridade é a liquidez e a previsibilidade (Tesouro Selic ou CDB com liquidez diária). LCI e LCA não servem para essa meta por possuírem prazo mínimo de vencimento de seis meses (sem atualização por índice de preços), durante o qual o emissor não pode resgatar o papel.</p><p>As alternativas A, B e C ignoram as travas normativas da LCI, indicam renda variável volátil para prazos curtos ou indicam debêntures ilíquidas.</p>",
      "enunciado": "<p>Um cliente de perfil conservador precisa alocar um valor recebido para quitar a reforma de sua casa que ocorrerá daqui a três meses. O gerente analisa as opções de aplicação considerando a preservação do capital e as travas operacionais de prazos mínimos. A indicação mais adequada para esse objetivo é:</p>",
      "alternativas": {
-      "a": "Debênture de longo prazo, sem liquidez diária, emitida por empresa privada de grande porte.",
+      "a": "Debênture de longo prazo, sem liquidez diária, emitida por empresa privada de grande porte e bom rating.",
       "b": "Letra de Crédito Imobiliário (LCI) com carência de seis meses, contratando o resgate antecipado mediante desconto administrativo.",
       "c": "Fundo de Investimento em Ações (FIA) arrojado, pois o prazo de três meses é suficiente para mitigar o risco de mercado do setor.",
-      "d": "CDB de liquidez diária ou Tesouro Selic, visto que LCI e LCA possuem prazo mínimo de vencimento de seis meses que impede o resgate na data necessária."
+      "d": "CDB de liquidez diária ou Tesouro Selic, já que LCI e LCA têm prazo mínimo de seis meses e não permitem o resgate."
      },
      "gabarito": "d",
      "feedback": {
@@ -6235,7 +6469,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A resposta é a D. Na recomendação de investimentos, quando há divergência entre a condição financeira objetiva (capacidade) e a disposição emocional (tolerância), deve prevalecer a menor das medidas para preservar o investidor de desconforto incompatível com seu perfil.</p><p>As alternativas A, B e C desrespeitam a tolerância psicológica do cliente, indicam fraude cadastral ou inventam restrições regulatórias por idade.</p>",
      "enunciado": "<p>Um investidor de 28 anos, com alta estabilidade financeira, patrimônio consolidado e reserva de emergência constituída, declarou no questionário de suitability elevado conhecimento de mercado. No entanto, demonstrou baixa tolerância emocional a oscilações de curto prazo em seu patrimônio. Ao elaborar a recomendação de investimentos, o profissional deve pautar-se pela seguinte regra técnica:</p>",
      "alternativas": {
-      "a": "Classificar o cliente como arrojado, uma vez que o elevado conhecimento de mercado declarado no questionário prevalece sobre as demais dimensões da análise de perfil.",
+      "a": "Classificar o cliente como arrojado, porque o elevado conhecimento de mercado declarado prevalece sobre as demais dimensões.",
       "b": "Ignorar a baixa tolerância emocional do cliente e alocar 100% da carteira em ações, pois a sua capacidade financeira e idade prevalecem.",
       "c": "Alterar unilateralmente a declaração de perfil do cliente para arrojado no sistema do banco e alocar recursos em derivativos.",
       "d": "Respeitar a menor medida entre a capacidade e a tolerância, recomendando uma carteira conservadora ajustada ao seu perfil psicológico."
@@ -6285,7 +6519,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "O cheque especial e o rotativo do cartão representam modalidades prioritárias e de baixo custo para financiamentos habitacionais de longo prazo.",
       "b": "O saldo devedor do rotativo do cartão de crédito pode ser mantido indefinidamente nessa modalidade sem a obrigatoriedade de oferta de parcelamento.",
       "c": "As instituições financeiras são autorizadas a cobrar a tarifa de disponibilização de 0,25% sobre o limite de cheque especial não utilizado acima de R$ 500,00.",
-      "d": "Os juros remuneratórios do cheque especial para pessoas naturais são limitados a 8% ao mês, e os juros totais do rotativo do cartão de crédito não podem ultrapassar 100% do valor original da dívida."
+      "d": "Os juros do cheque especial para pessoa natural são limitados a 8% ao mês, e os do rotativo não podem passar de 100% da dívida."
      },
      "gabarito": "d",
      "feedback": {
@@ -6306,8 +6540,8 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Para comparar propostas de crédito entre instituições financeiras, o cliente deve utilizar o Custo Efetivo Total (CET), que reúne os encargos da operação, incluindo o Imposto sobre Operações Financeiras (IOF). Ao comparar a incidência do IOF no crédito para pessoa física com o das operações comerciais, verifica-se que:</p>",
      "alternativas": {
       "a": "A alíquota diária do IOF incide continuamente por todo o prazo do contrato, cobrando juros diários por até 60 meses sem trava temporal.",
-      "b": "O IOF de crédito para pessoa física é composto por uma alíquota adicional fixa de 0,38% mais uma alíquota diária de 0,0082%, cuja contagem diária trava em 365 dias.",
-      "c": "O IOF é isento em operações de crédito pessoal sem garantia e cobrado exclusivamente na contratação de habitação.",
+      "b": "O IOF de crédito da pessoa física soma 0,38% fixos e 0,0082% ao dia, com a contagem diária travada em 365 dias.",
+      "c": "O IOF é isento nas operações de crédito pessoal sem garantia e cobrado apenas na contratação de crédito habitacional.",
       "d": "O Custo Efetivo Total (CET) é calculado levando em conta apenas a taxa de juros nominal do contrato, descartando impostos e tarifas operacionais."
      },
      "gabarito": "b",
@@ -6330,7 +6564,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "O consignado para trabalhador celetista não possui limite de margem consignável, permitindo o comprometimento de até 100% do salário bruto.",
       "b": "A alienação fiduciária de veículo extinguiu totalmente o rito de busca e apreensão judicial, sendo a retomada obrigatoriamente extrajudicial em todos os casos desde 2023.",
-      "c": "O consignado utiliza o desconto direto em folha (limitado à margem de 40%, sendo 35% para empréstimo), enquanto a alienação fiduciária reduz a taxa mas insere o risco de perda do veículo por busca e apreensão.",
+      "c": "O consignado desconta em folha dentro da margem de 40%, sendo 35% para empréstimo, e a alienação fiduciária arrisca o veículo.",
       "d": "Ambas as operações de crédito apresentam o mesmo risco de perda direta de bens imóveis da família, independentemente do objeto dado em garantia."
      },
      "gabarito": "c",
@@ -6352,8 +6586,8 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Um cliente idoso ingressa na agência bancária em situação de estresse financeiro buscando crédito urgente para cobrir despesas de saúde. Ele solicita a contratação do limite total pré-aprovado do seu cheque especial a juros elevados. À luz dos deveres de conduta na oferta de crédito e da Lei do Superendividamento (Lei 14.181/2021), o profissional deve pautar sua recomendação considerando que:</p>",
      "alternativas": {
       "a": "O gerente deve pressionar o cliente a utilizar o cheque especial por ser a linha de maior rentabilidade para a meta mensal do banco.",
-      "b": "É vedado assediar ou pressionar o consumidor idoso ou vulnerável para contratar crédito, devendo indicar uma linha de menor CET e verificar se a parcela preserva o mínimo existencial.",
-      "c": "O banco está autorizado a omitir o Custo Efetivo Total (CET) caso o cliente declare urgência médica na contratação.",
+      "b": "É vedado assediar o consumidor idoso ou vulnerável, e a parcela contratada precisa preservar o mínimo existencial da família.",
+      "c": "O banco está autorizado a omitir o Custo Efetivo Total (CET) sempre que o cliente declarar urgência médica na contratação.",
       "d": "A Lei do Superendividamento proíbe a concessão de qualquer linha de crédito para pessoas físicas com idade superior a 60 anos."
      },
      "gabarito": "b",
@@ -6375,7 +6609,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "Crédito consignado em primeiro lugar para preservar o saldo do rotativo como limite emergencial permanente.",
       "b": "Rotativo do cartão de crédito, crédito consignado, antecipação do IRPF e, por último, o resgate do Tesouro Selic.",
-      "c": "Recursos próprios da reserva (Tesouro Selic), antecipação da restituição do IRPF, crédito consignado e, por último, o rotativo do cartão de crédito.",
+      "c": "Recursos próprios da reserva, antecipação da restituição do IRPF, crédito consignado e, por último, o rotativo do cartão.",
       "d": "Resgate do Tesouro Selic e uso imediato do rotativo do cartão, sendo proibida a antecipação de recebíveis certos no Brasil."
      },
      "gabarito": "c",
@@ -6398,10 +6632,10 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A resposta é a A. A alocação estratégica define a percentagem-alvo por classe de ativos alinhada ao perfil do cliente e prazo dos seus objetivos; a alocação tática realiza pequenos desvios temporários ao redor dessas metas para explorar oportunidades do mercado.</p><p>As alternativas B, C e D erram ao inverter as definições de longo e curto prazo, considerar os termos idênticos ou atribuir prazos diários para a alocação estratégica.</p>",
      "enunciado": "<p>A gestão de investimentos utiliza estratégias de alocação para manter a aderência da carteira aos objetivos de longo prazo e ao perfil do cliente. A respeito da diferença entre alocação estratégica e alocação tática, é correto afirmar que:</p>",
      "alternativas": {
-      "a": "A alocação estratégica é a estrutura de longo prazo por classes de ativos, enquanto a alocação tática consiste em desvios temporários para aproveitar cenários sem descaracterizar a carteira.",
+      "a": "A alocação estratégica é a estrutura de longo prazo por classes de ativos, e a tática faz desvios temporários de cenário.",
       "b": "A alocação tática define os alvos permanentes da carteira e a alocação estratégica zera mensalmente todas as posições para fugir da tributação de Imposto de Renda.",
-      "c": "Ambas possuem o mesmo conceito e visam acompanhar cegamente os índices de inflação do setor imobiliário.",
-      "d": "A alocação estratégica altera-se diariamente conforme os jornais da manhã e a tática vigora inalterada por 30 anos."
+      "c": "Ambas designam o mesmo procedimento e consistem em replicar mensalmente a composição do índice de referência escolhido.",
+      "d": "A alocação estratégica muda diariamente conforme as notícias do mercado, e a tática vigora inalterada por trinta anos."
      },
      "gabarito": "a",
      "feedback": {
@@ -6424,7 +6658,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "Garantir que 100% dos recursos fiquem alocados em ações de empresas de pequena capitalização no auge do ciclo de alta.",
       "b": "Maximizar o lucro diário da carteira mediante giro constante dos ativos de renda fixa a cada 5 dias operacionais.",
       "c": "Isentar o investidor do pagamento de qualquer taxa de administração ou custódia cobrada pelas corretoras.",
-      "d": "Controlar e gerenciar o risco da carteira, vendendo parcela do que subiu e comprando o que ficou para trás para retornar ao alvo original."
+      "d": "Controlar o risco da carteira, vendendo parte do que subiu e comprando o que ficou para trás até voltar ao alvo."
      },
      "gabarito": "d",
      "feedback": {
@@ -6444,7 +6678,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A resposta é a D. A forma mais eficiente de rebalancear a carteira sem gerar custo tributário imediato (pagamento de IR sobre o ganho de capital dos ativos que subiram) é direcionar o fluxo de novos aportes para as classes que estão abaixo do percentual-alvo.</p><p>As alternativas A, B e C desrespeitam a eficiência tributária, compram derivativos sem objetivo de hedge, ou erram a tabela regressiva do IR (que diminui e não aumenta com o tempo).</p>",
      "enunciado": "<p>Ao avaliar a gestão de portfólio de um cliente, um gerente estuda estratégias de rebalanceamento e o impacto tributário do giro de ativos. Para rebalancear a carteira do investidor mitigando a realização de imposto de renda decorrente de resgates, a prática técnica mais recomendada é:</p>",
      "alternativas": {
-      "a": "Exigir o resgate total dos ativos com mais de dois anos para travar a alíquota em 22,5% do Imposto de Renda.",
+      "a": "Exigir o resgate total dos ativos com mais de dois anos, de modo a travar a alíquota em 22,5% do Imposto de Renda.",
       "b": "Vender integralmente a classe de renda fixa a cada 15 dias para comprar opções de compra no mercado futuro.",
       "c": "Resgatar todas as aplicações no primeiro ano e reinvestir o saldo na poupança sem apuração de rentabilidade.",
       "d": "Direcionar os novos aportes de recursos para a classe de ativos que ficou abaixo do percentual-alvo estratégico."
@@ -6468,7 +6702,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Um cliente que possui uma carteira predominantemente conservadora, composta por títulos pós-fixados e fundos DI com meta de acompanhar o CDI, critica seu gerente porque seu rendimento anual ficou abaixo do retorno do Ibovespa em um ano de forte alta da bolsa de valores. À luz das boas práticas de avaliação de desempenho de investimentos, o gerente deve esclarecer que:</p>",
      "alternativas": {
       "a": "O cliente está correto, devendo o gestor do fundo DI ser substituído imediatamente por não atingir o desempenho do Ibovespa.",
-      "b": "O benchmark utilizado para avaliar uma carteira deve refletir o risco assumido na alocação estratégica, sendo inadequado comparar pós-fixados com o Ibovespa.",
+      "b": "O benchmark deve refletir o risco assumido na alocação estratégica, e comparar um pós-fixado com o Ibovespa é inadequado.",
       "c": "Todos os produtos de renda fixa e fundos DI possuem a obrigação legal de superarem o Ibovespa em ao menos 5% ao ano.",
       "d": "O Ibovespa é o indicador de referência compulsório determinado pela CVM para medir a rentabilidade de cadernetas de poupança e CDBs."
      },
@@ -6489,9 +6723,9 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A resposta é a A. O giro de carteira com resgates recorrentes abaixo de 180 dias penaliza o investidor com a alíquota mais alta da tabela regressiva do IR (22,5%) e, para prazos menores que 30 dias, aciona o IOF regressivo sobre os rendimentos, destruindo o ganho da aplicação através do fricção tributária e de custos operacionais.</p><p>As alternativas B, C e D erram ao promover isenções inexistentes no giro rápido, trocar a taxa do IR para 10% em 15 dias ou cobrar o IOF de 30 dias sobre operações de ações de renda variável.</p>",
      "enunciado": "<p>Um investidor costuma realizar constantes trocas de ativos na sua carteira de renda fixa e de fundos de investimento (giro excessivo), buscando migrar quinzenalmente para o ativo de maior retorno recente. Ao analisar os custos operacionais e fiscais recorrentes gerados por essa prática, verifica-se que o giro excessivo corrói o patrimônio do cliente porque:</p>",
      "alternativas": {
-      "a": "Trava a alíquota de Imposto de Renda na faixa máxima de 22,5% pelo resgate precoce, aciona a cobrança de IOF regressivo em resgates inferiores a 30 dias e acumula custos operacionais.",
+      "a": "Trava o Imposto de Renda na faixa de 22,5%, aciona o IOF regressivo abaixo de 30 dias e acumula custos operacionais.",
       "b": "Isenta o investidor de qualquer retenção de Imposto de Renda na fonte e elimina totalmente as taxas de corretagem da bolsa.",
-      "c": "Aplica a alíquota mínima de 10% de Imposto de Renda a todos os resgates com menos de 15 dias de aplicação.",
+      "c": "Aplica a alíquota mínima de 10% de Imposto de Renda a todos os resgates feitos com menos de 15 dias de aplicação.",
       "d": "Incide IOF regressivo de 30 dias sobre todas as operações de renda variável e sobre resgates em fundos de ações de curto prazo."
      },
      "gabarito": "a",
@@ -6516,8 +6750,8 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "Deve-se obrigatoriamente contratar seguro para qualquer evento de alta frequência e valor insignificante para zerar as perdas do orçamento.",
       "b": "A franquia é um desconto comercial concedido pela seguradora para baratear a apólice sem qualquer retenção financeira por parte do cliente.",
-      "c": "A recomendação técnica é transferir os riscos de eventos raros e devastadores e reter os frequentes e baratos, sendo a franquia um instrumento de retenção de risco pelo segurado.",
-      "d": "Transferir o risco é a única estratégia capaz de eliminar completamente a ocorrência do sinistro e impedir a causa do evento."
+      "c": "Transfere-se o risco de evento raro e devastador e retém-se o frequente e barato, sendo a franquia uma forma de retenção.",
+      "d": "Transferir o risco é a única estratégia capaz de eliminar a ocorrência do sinistro e de impedir a causa do evento danoso."
      },
      "gabarito": "c",
      "feedback": {
@@ -6538,8 +6772,8 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Os contratos de seguro são estruturados sob os ramos de seguro de dano (patrimonial) e seguro de pessoas (vida). Ao comparar as regras aplicáveis a cada uma dessas modalidades sob a Lei 15.040/2024, verifica-se que:</p>",
      "alternativas": {
       "a": "O seguro de pessoas veda o acúmulo de mais de uma apólice sobre o mesmo interesse, limitando a indenização total ao valor de mercado da pessoa.",
-      "b": "No seguro de dano vigora o princípio indenitário e a sub-rogação, enquanto no seguro de pessoas o capital é livremente estipulado, as apólices se acumulam e não há sub-rogação.",
-      "c": "O seguro de dano permite que a indenização paga pela seguradora supere o valor real do bem para gerar lucro ao segurado.",
+      "b": "No seguro de dano vigoram o princípio indenitário e a sub-rogação; no de pessoas o capital é livre e não há sub-rogação.",
+      "c": "O seguro de dano permite que a indenização paga pela seguradora supere o valor real do bem, gerando lucro ao segurado.",
       "d": "Em caso de morte no seguro de pessoas, a seguradora se sub-roga nos direitos dos beneficiários para cobrar o valor do causador do sinistro."
      },
      "gabarito": "b",
@@ -6585,8 +6819,8 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "Os credores podem penhorar o capital do seguro de vida diretamente na seguradora antes do repasse aos beneficiários.",
       "b": "O valor do seguro deve ser retido pelo juiz do inventário para quitar as dívidas fiscais e submetido à cobrança do ITCMD pelo estado.",
-      "c": "O capital do seguro de vida é impenhorável, não responde por dívidas do falecido e não sofre incidência do ITCMD, por não ser considerado herança.",
-      "d": "A indenização do seguro de vida integra o inventário e a partilha da herança, para compensar o cônjuge meeiro."
+      "c": "O capital do seguro de vida é impenhorável, não responde por dívidas do falecido e não sofre incidência do ITCMD.",
+      "d": "A indenização do seguro de vida integra o inventário e a partilha da herança, para compensar o cônjuge meeiro do falecido."
      },
      "gabarito": "c",
      "feedback": {
@@ -6608,7 +6842,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "A seguradora responderá por perdas e danos por ter recebido os prêmios e deverá quitar o valor diretamente aos credores do inventário.",
       "b": "A seguradora é obrigada a pagar integralmente o capital segurado, visto que a Lei 15.040/2024 proíbe cláusula de carência em seguros de vida.",
       "c": "O testamento perde validade jurídica para alteração de beneficiários de seguros de vida, sendo o pagamento revertido compulsoriamente à União.",
-      "d": "A seguradora não pagará o capital segurado devido ao sinistro dentro da carência legal, mas devolverá os prêmios pagos ao beneficiário antigo, ficando exonerada caso não soubesse do testamento."
+      "d": "A seguradora não pagará o capital por ser sinistro dentro da carência, mas devolverá os prêmios ao beneficiário da apólice."
      },
      "gabarito": "d",
      "feedback": {
@@ -6633,7 +6867,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "O perfil do investidor é determinado exclusivamente pela renda mensal declarada no holerite do trabalhador.",
       "b": "A avaliação da situação financeira é a única dimensão exigida por norma, sendo opcional a apuração sobre objetivos e conhecimentos.",
       "c": "A verificação de conhecimento técnico do investidor é a única variável utilizada para autorizar aplicações em renda variável.",
-      "d": "A análise de perfil exige a avaliação de três dimensões obrigatórias: objetivos de investimento, situação financeira e conhecimento do cliente."
+      "d": "A análise de perfil exige três dimensões obrigatórias, que são objetivos, situação financeira e conhecimento."
      },
      "gabarito": "d",
      "feedback": {
@@ -6654,7 +6888,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Ao comparar os procedimentos de apuração da dimensão \"conhecimento\" para clientes pessoa física e clientes pessoa jurídica na Análise do Perfil do Investidor, verifica-se que:</p>",
      "alternativas": {
       "a": "A pessoa jurídica é obrigada a apresentar os diplomas universitários de todos os seus sócios para atestar conhecimento de mercado.",
-      "b": "A análise de formação acadêmica e experiência profissional compõe o conhecimento da pessoa física, mas não se aplica ao cliente pessoa jurídica.",
+      "b": "Formação acadêmica e experiência profissional compõem o conhecimento da pessoa física, mas não se aplicam à pessoa jurídica.",
       "c": "O cliente pessoa física está totalmente dispensado da verificação sobre os tipos de produtos com os quais já operou no passado.",
       "d": "Ambas as categorias de clientes possuem exatamente o mesmo roteiro de perguntas sobre formação acadêmica e histórico escolar."
      },
@@ -6676,7 +6910,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A resposta é a A. O perfil moderado busca ganho real acima do IPCA e aceita oscilação controlada, porque entende que o preço do dinheiro varia no caminho: mantém a base de segurança em liquidez diária e avança para produtos com marcação a mercado, como títulos indexados à inflação, multimercados com volatilidade limitada, debêntures de bons emissores e uma exposição pequena a renda variável.</p><p>As alternativas B, C e D erram ao atribuir ao moderado a carteira típica do arrojado, a do conservador, ou ao inventar percentuais de alocação supostamente fixados em norma.</p>",
      "enunciado": "<p>Uma cliente foi enquadrada no perfil moderado após a análise do perfil do investidor e pergunta ao gerente como fica, na prática, a composição da sua carteira e o que ela deve esperar como resultado. Considerando o comportamento e a carteira típica desse perfil, a orientação correta é:</p>",
      "alternativas": {
-      "a": "Manter a base de segurança em liquidez diária e avançar para produtos com marcação a mercado, como títulos indexados à inflação, multimercados com volatilidade limitada, debêntures de bons emissores e uma exposição pequena a renda variável, buscando ganho real acima do IPCA.",
+      "a": "Manter a base de segurança em liquidez diária e avançar para produtos com marcação a mercado, buscando ganho real acima do IPCA.",
       "b": "Destinar parcelas expressivas do patrimônio a ações, fundos cambiais e estruturas com capital em risco, aceitando perdas nominais severas no percurso.",
       "c": "Concentrar a carteira em pós-fixados e abrir mão de retorno em troca de previsibilidade, para nunca ver o saldo cair de um mês para o outro.",
       "d": "Dividir o patrimônio em exatamente 50% de renda fixa e 50% de renda variável, percentual fixado pela Resolução CVM 30 para o perfil moderado."
@@ -6700,9 +6934,9 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Um cliente de 32 anos foi enquadrado como investidor arrojado por apresentar elevado conhecimento de mercado, patrimônio consolidado e alta tolerância a riscos de mercado. Ele solicita a alocação de 100% dos seus recursos em ações de alta volatilidade. Sob a ótica das boas práticas de gestão de carteiras e montagem do perfil, o gerente de investimentos deve orientar que:</p>",
      "alternativas": {
       "a": "O investidor arrojado é obrigado por norma regulatória a manter a totalidade dos seus bens em renda variável sem qualquer reserva em renda fixa.",
-      "b": "Todo perfil de investidor, inclusive o arrojado, necessita de uma parcela alocada em ativos de alta liquidez e baixa oscilação para a reserva de emergência.",
+      "b": "Todo perfil, inclusive o arrojado, precisa de uma parcela em ativos de alta liquidez e baixa oscilação para a reserva.",
       "c": "A alocação integral em ações de alta volatilidade é livre de riscos para clientes que possuem a classificação de perfil arrojado.",
-      "d": "A classificação como arrojado garante a rentabilidade positiva da carteira de ações no prazo de até 12 meses."
+      "d": "A classificação como arrojado garante a rentabilidade positiva da carteira de ações no prazo de até doze meses."
      },
      "gabarito": "b",
      "feedback": {
@@ -6721,7 +6955,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A resposta é a A. A Resolução CVM 30 não fixa a lista conservador, moderado e arrojado: ela obriga a instituição a estabelecer previamente categorias de perfil e a enquadrar o cliente nelas. O piso de três perfis vem da autorregulação, do Código de Distribuição da Anbima, e os nomes são convenção de mercado, razão pela qual há instituições com quatro ou cinco faixas. Ademais, para recomendar, a instituição precisa confrontar a classificação do cliente com a classificação prévia das categorias de produtos.</p><p>As alternativas B, C e D erram ao atribuir a taxonomia de três perfis à CVM, dispensar a classificação prévia dos produtos ou considerar o perfil do cliente como imutável.</p>",
      "enunciado": "<p>Uma instituição financeira organizou sua estrutura de atendimento definindo três perfis para seus clientes (conservador, moderado e arrojado). Ao analisar os fundamentos normativos do suitability quanto às nomenclaturas de perfis e ao processo de recomendação de produtos, verifica-se que:</p>",
      "alternativas": {
-      "a": "O piso de três perfis vem da autorregulação da Anbima e os nomes conservador, moderado e arrojado são convenção de mercado; além disso, a recomendação exige o confronto entre a classificação do cliente e a classificação prévia das categorias de produtos.",
+      "a": "O piso de três perfis vem da autorregulação da Anbima, e recomendar exige confrontar a classificação do cliente com a dos produtos.",
       "b": "A Resolução CVM 30 fixa compulsoriamente os nomes conservador, moderado e arrojado como a única taxonomia legal permitida no Brasil.",
       "c": "A recomendação de investimentos nasce exclusivamente do preenchimento do questionário do cliente, sendo desnecessária a classificação prévia das categorias de produtos.",
       "d": "O enquadramento no perfil é permanente e imutável ao longo do tempo, proibindo a reclassificação do cliente por mudanças de vida ou idade."
@@ -6747,9 +6981,9 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>A Resolução CVM 30 estabelece as regras e proibições relativas ao dever de verificação da adequação dos produtos financeiros ao perfil do cliente (suitability). De acordo com a referida norma, é expressamente vedado ao profissional ou à instituição:</p>",
      "alternativas": {
       "a": "Executar ordens emitidas por iniciativa própria do cliente quando o produto for incompatível com o seu perfil cadastrado.",
-      "b": "Recomendar produtos ou serviços ao cliente quando as informações do seu perfil estiverem desatualizadas ou não tiverem sido obtidas.",
+      "b": "Recomendar produtos ao cliente quando as informações do seu perfil estiverem desatualizadas ou não tiverem sido obtidas.",
       "c": "Exigir a assinatura de termo de alerta de divergência para operações iniciadas pelo cliente sem recomendação.",
-      "d": "Recomendar produtos de renda fixa pós-fixada com liquidez diária a investidores do perfil conservador."
+      "d": "Recomendar produtos de renda fixa pós-fixada com liquidez diária a investidores enquadrados no perfil conservador."
      },
      "gabarito": "b",
      "feedback": {
@@ -6772,7 +7006,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "Não existem prazos regulatórios máximos fixados pela Resolução CVM 30 para a atualização de dados cadastrais ou de produtos.",
       "b": "Ambas as atualizações (perfil do cliente e categorias de produtos) devem ocorrer compulsoriamente a cada 12 meses sob pena de multa diária.",
       "c": "O perfil do cliente deve ser reavaliado a cada 24 meses, enquanto a classificação dos produtos deve ser mantida inalterada por até cinco anos.",
-      "d": "O perfil do cliente deve ser mantido atualizado em intervalo máximo de cinco anos, enquanto as categorias de valores mobiliários devem ser reavaliadas em até 24 meses."
+      "d": "O perfil do cliente é atualizado no intervalo máximo de cinco anos, e as categorias de valores mobiliários em até 24 meses."
      },
      "gabarito": "d",
      "feedback": {
@@ -6792,10 +7026,10 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A resposta é a B. Para verificar a adequação aos objetivos, a norma manda analisar no mínimo o período em que o cliente deseja manter o investimento, as preferências declaradas quanto à assunção de riscos e as finalidades do investimento. Além das três dimensões, ela impõe um dever que quase todo material esquece: considerar os custos diretos e indiretos associados ao produto e abster-se de recomendar aqueles que, isoladamente ou em conjunto, impliquem custos excessivos e inadequados ao perfil do cliente.</p><p>As alternativas A, C e D erram ao encurtar a lista mínima dos objetivos, reduzir a situação financeira às receitas regulares ou limitar o dever de custos apenas aos custos diretos.</p>",
      "enunciado": "<p>A Resolução CVM 30 não se contenta com as três dimensões genéricas do perfil: ela lista o conteúdo mínimo a ser analisado em cada uma e impõe ainda um dever relativo ao preço do produto. A respeito desse conteúdo mínimo e desse dever, é correto afirmar que:</p>",
      "alternativas": {
-      "a": "Nos objetivos basta verificar o período em que o cliente deseja manter o investimento, e o custo do produto não integra a análise de adequação, por ser matéria estritamente comercial.",
-      "b": "Nos objetivos analisam-se, no mínimo, o período em que o cliente deseja manter o investimento, as preferências declaradas quanto à assunção de riscos e as finalidades do investimento; e a instituição deve considerar os custos diretos e indiretos, abstendo-se de recomendar produtos cujos custos sejam excessivos e inadequados ao perfil.",
-      "c": "A situação financeira é apurada exclusivamente pelo valor das receitas regulares declaradas, ficando dispensadas a verificação do valor e dos ativos que compõem o patrimônio e a da necessidade futura de recursos.",
-      "d": "O dever de considerar custos alcança apenas os custos diretos, sendo irrelevantes os custos indiretos sempre que o produto for compatível com o risco tolerado pelo cliente."
+      "a": "Nos objetivos basta verificar o período do investimento, e o custo do produto não integra a análise, por ser matéria comercial.",
+      "b": "Analisam-se o período, as preferências quanto a riscos e as finalidades, e os custos do produto também entram na análise.",
+      "c": "A situação financeira é apurada só pelas receitas regulares declaradas, dispensados o patrimônio e a necessidade futura de recursos.",
+      "d": "O dever de considerar custos alcança só os diretos, sendo irrelevantes os indiretos quando o produto couber no risco tolerado."
      },
      "gabarito": "b",
      "feedback": {
@@ -6817,7 +7051,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "Cancelar compulsoriamente a conta do cliente, vista a proibição legal absoluta de execução de ordens divergentes do perfil cadastrado.",
       "b": "Recomendar verbalmente o produto e colher posteriormente um termo de isenção de responsabilidade genérico sem indicar as causas.",
-      "c": "Alertar o cliente indicando as causas específicas da divergência e obter dele declaração expressa de ciência da inadequação antes da operação.",
+      "c": "Alertar o cliente indicando as causas específicas da divergência e obter declaração expressa de ciência da inadequação.",
       "d": "Alterar automaticamente o cadastro do cliente para o perfil arrojado no sistema sem notificá-lo para autorizar a operação."
      },
      "gabarito": "c",
@@ -6847,6 +7081,1514 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "Não existe previsão de renúncia geral ou voluntária ao suitability mediante assinatura de termos genéricos na abertura de conta.",
       "b": "A dispensa de suitability para investidores qualificados não alcança pessoas naturais qualificadas por volume de investimento (acima de R$ 1 milhão).",
       "c": "A dispensa para investidores qualificados também não alcança pessoas naturais qualificadas por exames de certificação ou qualificação técnica."
+     }
+    }
+   ],
+   "Avaliação de risco e retorno": [
+    {
+     "id": "cpa-rel-20-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. No mercado financeiro, risco é a possibilidade de o resultado ser diferente do projetado (para mais ou para menos), e a relação clássica indica que maior risco gera maior retorno esperado (expectativa), e jamais retorno garantido.</p><p>As alternativas A, B e C erram ao afirmar que risco garante maior retorno, desvincular a volatilidade da variação de preços ou achar que o risco elimina a incerteza.</p>",
+     "enunciado": "<p>No mercado financeiro, a análise dos investimentos envolve a compreensão dos conceitos de risco, retorno e volatilidade. A respeito da definição técnica de risco e da sua relação com o retorno esperado, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "Assumir maior risco em uma aplicação financeira elimina a incerteza do resultado e assegura rentabilidade nominal fixa ao investidor.",
+      "b": "Risco refere-se unicamente à perda total do capital investido, garantindo que aplicações mais arriscadas sempre rendam mais que a renda fixa no longo prazo.",
+      "c": "A volatilidade mede o grau de garantia do FGC concedido a um título e não possui relação com a dispersão dos rendimentos.",
+      "d": "Risco é a possibilidade de o resultado ser diferente do esperado, sendo que o maior risco eleva a expectativa de retorno, mas nunca garante o retorno."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "O risco está justamente associado à incerteza dos resultados, sendo impossível assegurar rentabilidade fixa em ativos de alto risco.",
+      "b": "Maior risco eleva apenas o retorno esperado (expectativa), não garantindo retorno maior e nem se restringindo à perda total.",
+      "c": "Volatilidade mede o tamanho da oscilação dos resultados em torno da média (dispersão), sem relação com o FGC."
+     }
+    },
+    {
+     "id": "cpa-rel-20-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. O risco diversificável (não sistemático) reflete os problemas específicos de uma empresa ou setor e é reduzido acrescentando ativos variados na carteira; já o risco não diversificável (sistemático) atinge o mercado como um todo (como grandes crises econômicas) e não é eliminado pela diversificação.</p><p>As alternativas A, B e D erram ao trocar as definições de risco sistemático e não sistemático ou alegar que a diversificação apaga o risco de mercado inteiro.</p>",
+     "enunciado": "<p>Ao montar uma carteira de investimentos, o gestor analisa a exposição do portfólio ao risco diversificável (não sistemático) e ao risco não diversificável (sistemático). Ao comparar as duas categorias de risco, verifica-se que:</p>",
+     "alternativas": {
+      "a": "O risco não sistemático afeta indistintamente todos os ativos da economia nacional em momentos de recessão ou crises de juros.",
+      "b": "O risco sistemático é exclusivo de uma única companhia e pode ser totalmente eliminado adicionando-se mais ações da mesma empresa na carteira.",
+      "c": "O risco diversificável é específico de uma empresa ou setor e cai com a diversificação, e o sistemático atinge todo o mercado e não sai da carteira.",
+      "d": "A diversificação de ativos em um mesmo mercado é capaz de eliminar por completo tanto o risco diversificável quanto o risco sistemático da carteira."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "O risco que afeta todo o mercado em recessões é o risco sistemático (não diversificável), e não o não sistemático.",
+      "b": "O risco sistemático atinge todo o mercado e não pode ser eliminado adicionando mais ações da mesma empresa.",
+      "d": "A diversificação reduz o risco diversificável (não sistemático), mas não é capaz de eliminar o risco sistemático do mercado."
+     }
+    },
+    {
+     "id": "cpa-rel-20-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. O retorno nominal foi o número bruto (10%); o retorno real desconta a inflação do IPCA (10% - 6% = ganho real aproximado de 4%); e o retorno relativo compara com o benchmark (10% da aplicação contra 12% do CDI), revelando desempenho relativo abaixo do índice de referência.</p><p>As alternativas A, B e D apresentam erros conceituais no cálculo do retorno real com a inflação ou no julgamento do retorno relativo em relação ao benchmark.</p>",
+     "enunciado": "<p>Um investidor obteve em um título privado de renda fixa o rendimento nominal de 10% no período de um ano. No mesmo período, a inflação medida pelo IPCA foi de 6% e o benchmark de referência da categoria (CDI) registrou variação de 12%. Ao avaliar os conceitos de retorno nominal, real e relativo desse investimento, conclui-se que o cliente obteve:</p>",
+     "alternativas": {
+      "a": "Retorno real negativo, visto que o IPCA de 6% deve ser subtraído diretamente do CDI de 12% para anular o ganho nominal do título.",
+      "b": "Retorno nominal negativo, retorno real positivo de 16% e retorno relativo positivo em relação ao CDI.",
+      "c": "Retorno nominal positivo de 10%, retorno real positivo de aproximadamente 4% e retorno relativo negativo em relação ao benchmark.",
+      "d": "Retorno relativo positivo em relação ao CDI, por ter superado a taxa de inflação do período em mais de 4 pontos percentuais."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "O retorno real é a diferença do ganho nominal (10%) contra a inflação (6%), resultando em ganho real positivo de cerca de 4%.",
+      "b": "O retorno nominal foi positivo (10%), o real ficou próximo de 4% (10% menos os 6% do IPCA) e o relativo foi negativo, 10% do título contra 12% do CDI.",
+      "d": "O retorno relativo mede o desempenho contra o benchmark (10% do título contra 12% do CDI), resultando em desempenho relativo inferior/negativo."
+     }
+    },
+    {
+     "id": "cpa-rel-20-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. A debênture pouco negociada sofre com o risco de liquidez (dificuldade de vender sem perda); o Tesouro IPCA+ de prazo longo expõe o investidor ao risco de mercado (oscilação de preço na marcação a mercado antes do vencimento); e o CDB de banco pequeno expõe o investidor ao risco de crédito da instituição emissora.</p><p>As alternativas B, C e D erram ao atribuir alto risco de crédito aos títulos públicos federais, igualar os riscos de emissores distintos ou negar o risco de mercado dos títulos públicos longos.</p>",
+     "enunciado": "<p>Um cliente procurou a agência analisando três produtos de investimento com diferentes estruturas de risco: uma debênture de empresa sólida sem liquidez no mercado secundário, um Tesouro IPCA+ com vencimento em 30 anos e um CDB de banco de pequeno porte sem garantia adicional. O gerente deve relacionar corretamente os principais riscos predominantes em cada ativo informando que:</p>",
+     "alternativas": {
+      "a": "A debênture tem risco de liquidez, o Tesouro IPCA+ longo tem risco de mercado na venda antecipada e o CDB do banco pequeno tem risco de crédito.",
+      "b": "O Tesouro IPCA+ de 30 anos possui risco de crédito soberano elevado, enquanto a debênture privada possui garantia de risco de mercado nulo.",
+      "c": "Os três ativos possuem exatamente a mesma exposição ao risco de crédito, por serem todos classificados como aplicações de renda fixa privada.",
+      "d": "O CDB de banco pequeno é isento de risco de crédito por conta do risco soberano, e o Tesouro IPCA+ é imune ao risco de mercado até o vencimento."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "O Tesouro Direto possui o menor risco de crédito da economia (risco soberano), e o papel de 30 anos sofre forte risco de mercado (marcação a mercado).",
+      "c": "O risco de crédito é bem diferente entre títulos públicos federais (soberano), bancos pequenos (CDB) e empresas privadas (debêntures).",
+      "d": "CDBs de bancos médios/pequenos possuem risco de crédito do emissor, e o Tesouro IPCA+ oscila diariamente com as taxas de juros (risco de mercado)."
+     }
+    },
+    {
+     "id": "cpa-rel-20-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a D. O risco relevante não é apenas o risco do gráfico do produto, mas sim a ameaça ao objetivo do dinheiro. Em um horizonte de curtíssimo prazo (seis meses para pagamento da casa), a volatilidade do fundo de ações é um risco inaceitável que pode destruir o capital necessário na data da compra, sendo exigido um produto de renda fixa pós-fixada de alta liquidez (como Tesouro Selic ou CDB de liquidez diária).</p><p>As alternativas A, B e C erram ao ignorar a restrição de prazo da meta do cliente, sugerir debêntures ilíquidas para uso em 6 meses ou indicar derivativos de alto risco como garantia de ganho.</p>",
+     "enunciado": "<p>Durante uma reunião de alocação de recursos, um cliente com perfil arrojado deseja aplicar um montante para a compra da casa própria que ocorrerá obrigatoriamente daqui a seis meses. Ele argumenta que, por ter perfil arrojado e por a volatilidade ser apenas dispersão estatística, o valor deve ser aplicado integralmente em um fundo de ações de alta volatilidade para capturar a maior expectativa de retorno. À luz da avaliação do risco adequado ao objetivo do dinheiro, a orientação correta do profissional deve ser:</p>",
+     "alternativas": {
+      "a": "Orientar a aplicação do dinheiro em opções de venda na bolsa, de modo a garantir retorno real positivo obrigatoriamente no prazo de seis meses.",
+      "b": "Concordar com a alocação no fundo de ações, visto que o perfil arrojado do cliente autoriza o uso de renda variável volátil para qualquer objetivo, independentemente do prazo.",
+      "c": "Recomendar a aplicação do valor em debêntures participativas de longo prazo sem liquidez diária para travar a rentabilidade e eliminar o risco de mercado.",
+      "d": "Contraindicar o fundo de ações para este objetivo, porque o horizonte de seis meses exige preservação de capital e liquidez, e não tolera volatilidade."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "Operações com opções de venda envolvem derivativos de altíssimo risco e não garantem retorno real obrigatoriamente.",
+      "b": "O produto deve ser adequado tanto ao perfil quanto ao horizonte do objetivo; prazos curtos (6 meses) exigem liquidez e estabilidade, impedindo ações para esse fim.",
+      "c": "Debêntures sem liquidez não atendem à necessidade do recurso em 6 meses para pagar o imóvel."
+     }
+    }
+   ],
+   "Diversificação de carteira": [
+    {
+     "id": "cpa-rel-21-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. A grande virtude técnica da diversificação é a capacidade de reduzir o risco específico/não sistemático de uma carteira através do uso de ativos não correlacionados, sem necessariamente exigir uma redução no retorno esperado do portfólio.</p><p>As alternativas A, B e C erram ao impor perda obrigatória de retorno esperado, alegar eliminação do risco sistemático de mercado ou promover a extinção de todos os riscos.</p>",
+     "enunciado": "<p>A diversificação de carteira é considerada a estratégia central no gerenciamento do risco de portfólios de investimento. A respeito da propriedade fundamental da diversificação e dos riscos por ela alcançados, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "Adicionar mais ativos em uma carteira garante a eliminação integral de todos os riscos de mercado e de crédito do país.",
+      "b": "A diversificação exige compulsoriamente a redução do retorno esperado da carteira para promover qualquer redução de risco.",
+      "c": "A estratégia de diversificação é capaz de eliminar por completo o risco sistemático do mercado financeiro.",
+      "d": "A diversificação permite reduzir o risco não sistemático do portfólio sem obrigatoriamente reduzir o seu retorno esperado."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "Nenhum nível de diversificação é capaz de eliminar o risco sistemático que atinge a economia de forma generalizada.",
+      "b": "A diversificação tem a propriedade de reduzir o risco sem exigir a redução proporcional do retorno esperado.",
+      "c": "A diversificação atua sobre o risco não sistemático (específico de empresas/setores), deixando o risco sistemático intacto."
+     }
+    },
+    {
+     "id": "cpa-rel-21-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. A diversificação aparente ocorre quando o cliente adquire múltiplos produtos (como cinco fundos DI do mesmo banco) acreditando estar protegido, mas permanece com 100% do capital exposto ao mesmo emissor e fator de risco, apenas acumulando taxas.</p><p>As alternativas A, B e D erram ao afirmar que dez bancos zera o risco sistemático, igualar a eficácia da proteção ou definir o conceito por fundos cambiais.</p>",
+     "enunciado": "<p>No processo de montagem de carteiras, o profissional deve alertar o investidor sobre o fenômeno da \"diversificação aparente\". Ao comparar uma carteira genuinamente diversificada com uma que apresenta apenas diversificação aparente, verifica-se que:</p>",
+     "alternativas": {
+      "a": "Ambas as estratégias produzem rigorosamente a mesma proteção financeira nos momentos de crise sistêmica da economia do país.",
+      "b": "A diversificação aparente ocorre quando o investidor aloca os recursos em dez bancos diferentes, o que reduz o risco sistemático a zero.",
+      "c": "A diversificação aparente multiplica produtos do mesmo emissor e fator de risco, e a genuína distribui ativos com correlações distintas.",
+      "d": "A diversificação aparente exige a alocação de 100% dos recursos em fundos multimercados internacionais com proteção cambial."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "A diversificação aparente apenas acumula contratos mantendo a mesma exposição de risco, falhando na proteção efetiva do patrimônio.",
+      "b": "Alocar em dez bancos reduz risco de crédito (não sistemático), mas não elimina o risco sistemático do país.",
+      "d": "A definição de diversificação aparente relaciona-se à ilusão de pulverizar produtos idênticos, não se limitando a multimercados internacionais."
+     }
+    },
+    {
+     "id": "cpa-rel-21-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. O Fundo Garantidor de Créditos (FGC) cobre até R$ 250 mil por CPF em cada conglomerado financeiro. Para que o total de R$ 400 mil fique integralmente coberto em bancos de médio porte, o cliente deve diversificar o valor entre pelo menos dois conglomerados distintos (ex: R$ 200 mil em cada um).</p><p>As alternativas A, B e D erram ao atribuir R$ 1 milhão por instituição, tentar multiplicar a garantia do mesmo banco por ter várias contas ou prever garantia ilimitada.</p>",
+     "enunciado": "<p>Um investidor possui R$ 400.000,00 disponíveis para aplicar em Certificados de Depósito Bancário (CDB) de médio porte e deseja utilizar a garantia do Fundo Garantidor de Créditos (FGC) como métrica prática de diversificação por emissor. Sabendo das regras do FGC e buscando manter a totalidade do saldo coberto pela garantia, a orientação correta é:</p>",
+     "alternativas": {
+      "a": "Manter o montante em quatro contas do mesmo banco, recebendo cobertura de até R$ 250.000,00 por conta aberta no mesmo conglomerado.",
+      "b": "Aplicar os R$ 400.000,00 em um único banco de médio porte, pois o teto do FGC é de R$ 1.000.000,00 por instituição financeira.",
+      "c": "Dividir os R$ 400.000,00 em dois conglomerados financeiros distintos, aplicando até R$ 250.000,00 por grupo.",
+      "d": "Concentrar a aplicação em um único CDB de R$ 400.000,00, visto que a cobertura do FGC para títulos privados de renda fixa é ilimitada."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "Abrir múltiplas contas no mesmo conglomerado não multiplica o limite de R$ 250 mil, que se aplica por grupo financeiro.",
+      "b": "O limite da garantia ordinária do FGC por CPF/CNPJ em cada conglomerado financeiro é de R$ 250 mil (o valor de R$ 1 milhão é o teto quadrienal).",
+      "d": "O FGC não possui cobertura ilimitada; deixaria R$ 150 mil descobertos se mantido em um único conglomerado."
+     }
+    },
+    {
+     "id": "cpa-rel-21-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. Adicionar ativos do mesmo setor em excesso configura pulverização (não diversificação efetiva): os papéis caem juntos diante de crises setoriais (alta correlação) e a pulverização apenas infla custos operacionais e dificulta o acompanhamento sem trazer ganho de proteção.</p><p>As alternativas A, C e D erram ao defender a concentração setorial, alegar eliminação do risco sistemático por quantidade ou inventar garantia do governo para ações de companhias aéreas.</p>",
+     "enunciado": "<p>Um cliente ingressou na corretora apresentando uma carteira composta por 80 ações distintas de empresas de capital aberto do mesmo setor de aviação civil. Ele alega que atingiu o nível máximo de diversificação e proteção por possuir dezenas de ativos no portfólio. O gerente de contas deve alertar o cliente sobre os efeitos de sua decisão informando que:</p>",
+     "alternativas": {
+      "a": "A conduta está perfeita, visto que quanto maior a quantidade de ações do mesmo setor, menor é o impacto de oscilações no preço dos combustíveis.",
+      "b": "Trata-se de pulverização ineficiente, porque concentrar no mesmo setor não protege contra choque setorial e ainda eleva os custos da carteira.",
+      "c": "Ter 80 ações elimina totalmente o risco sistemático do mercado acionário brasileiro e zera os custos operacionais do informe de rendimentos.",
+      "d": "A alocação no setor de aviação confere garantia do Governo Federal, por se tratar de um setor de utilidade pública considerado essencial."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "Ações do mesmo setor possuem alta correlação positiva; um evento no setor (como alta do combustível) atinge todas simultaneamente.",
+      "c": "A pulverização com 80 ações não elimina o risco sistemático de mercado e encarece o acompanhamento e informe tributário.",
+      "d": "O setor de aviação não confere qualquer garantia do Tesouro Nacional para ações negociadas na bolsa."
+     }
+    },
+    {
+     "id": "cpa-rel-21-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a C. A assimetria estatística que gera o benefício da diversificação é que o retorno esperado de uma carteira é exatamente a média ponderada dos retornos esperados dos seus ativos, porém o risco da carteira resulta em um valor inferior à média ponderada dos riscos individuais quando a correlação é menor que 1.</p><p>As alternativas A, B e D erram ao considerar o risco como média ponderada simples, somar riscos diretamente ou achar que a diversificação altera a média de cálculo dos retornos esperados.</p>",
+     "enunciado": "<p>Um analista estuda o comportamento do retorno esperado e do risco (volatilidade) na formação de uma carteira composta por dois ativos com correlação imperfeita entre si. A respeito da propriedade estatística que viabiliza o ganho de eficiência pela diversificação, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "O risco da carteira é calculado somando-se as volatilidades dos ativos, enquanto o retorno esperado permanece congelado na taxa livre de risco.",
+      "b": "Tanto o retorno esperado quanto o risco da carteira são dados rigorosamente pela média aritmética simples dos ativos, anulando o benefício da diversificação.",
+      "c": "O retorno esperado é a média ponderada dos retornos dos ativos, mas o risco da carteira fica abaixo da média ponderada dos riscos.",
+      "d": "A diversificação altera a matemática dos retornos, fazendo com que o retorno da carteira supere a soma dos retornos individuais de todos os ativos."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "A volatilidade do portfólio não é a soma direta dos riscos individuais dos ativos que o compõem.",
+      "b": "O risco da carteira não é a média dos riscos individuais, simples ou ponderada; com correlação imperfeita, a volatilidade final fica abaixo da média ponderada.",
+      "d": "O retorno esperado da carteira obedece à média ponderada dos retornos dos ativos individuais, não superando a soma direta."
+     }
+    }
+   ],
+   "Pessoa investidora profissional e qualificada": [
+    {
+     "id": "cpa-rel-22-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. A norma define que todo investidor profissional é, por definição, também um investidor qualificado. Por outro lado, a recíproca não é verdadeira: um cliente com R$ 2 milhões aplicados e termo assinado é investidor qualificado, mas não atinge o patamar de profissional (que exige R$ 10 milhões).</p><p>As alternativas A, C e D erram ao inverter a hierarquia do conjunto, julgar os grupos como mutuamente exclusivos ou atribuir maior permissão operacional ao qualificado.</p>",
+     "enunciado": "<p>A Resolução CVM 30 estabelece as categorias de investidor qualificado e investidor profissional para fins de acesso a produtos e regimes regulatórios no mercado financeiro. A respeito da relação conceitual existente entre esses dois grupos, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "Todo investidor qualificado é automaticamente considerado um investidor profissional, sendo as duas nomenclaturas rigorosamente equivalentes na norma.",
+      "b": "Todo investidor profissional é automaticamente considerado um investidor qualificado, mas nem todo investidor qualificado é considerado profissional.",
+      "c": "As categorias de investidores qualificados e profissionais são mutuamente exclusivas, sendo proibida a sobreposição de enquadramentos.",
+      "d": "O investidor qualificado possui maior nível de permissões operacionais do que o investidor profissional no mercado de valores mobiliários."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "A relação é de contido e continente; os profissionais são um subgrupo (mais restrito) dos qualificados, e não o inverso.",
+      "c": "Não são mutuamente exclusivas; o investidor profissional faz parte do conjunto dos investidores qualificados por definição legal.",
+      "d": "O investidor profissional possui o maior nível de flexibilidade e menor nível de restrição regulatória, estando no degrau mais alto."
+     }
+    },
+    {
+     "id": "cpa-rel-22-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. Ter o saldo de R$ 1 milhão (qualificado) ou R$ 10 milhões (profissional) investidos é requisito necessário, mas não suficiente: a norma exige expressamente que a pessoa natural ateste por escrito a sua condição em termo próprio.</p><p>As alternativas A, B e D erram ao exigir comprovação de faturamento empresarial, cobrar diplomas ou exames contábeis específicos, ou inventar registros cartoriais perante o BCB.</p>",
+     "enunciado": "<p>Para que uma pessoa natural seja enquadrada na categoria de investidor profissional ou qualificado com base exclusivamente no seu volume de investimentos financeiros, além de possuir o valor exigido em investimentos, a norma requer o cumprimento da seguinte formalidade:</p>",
+     "alternativas": {
+      "a": "Ser aprovado em exame de suficiência contábil ou possuir diploma de nível superior na área de ciências atuariais ou economia.",
+      "b": "Apresentar a comprovação de faturamento bruto corporativo anual superior a R$ 50 milhões emitido pela Receita Federal.",
+      "c": "Assinar termo próprio atestando por escrito a sua condição de investidor qualificado ou profissional.",
+      "d": "Obter autorização prévia por certidão emitida em cartório de títulos e documentos mediante parecer prévio do Banco Central."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "Diplomas universitários ou exames contábeis não substituem nem são exigidos no enquadramento exclusivo por volume financeiro.",
+      "b": "O faturamento bruto corporativo não é o critério de volume de investimentos exigido de pessoas naturais pela Resolução CVM 30.",
+      "d": "Não há qualquer exigência de registro em cartório nem de certidão emitida pelo Banco Central para formalizar o enquadramento."
+     }
+    },
+    {
+     "id": "cpa-rel-22-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. Pessoas naturais aprovadas em exames de qualificação técnica ou com certificações exigidas para o registro de assessor, administrador de carteira, analista ou consultor são investidoras qualificadas quanto aos seus próprios recursos; quem já está registrado na CVM nessas funções é investidor profissional, também quanto aos recursos próprios. Por sua vez, Regimes Próprios de Previdência Social (RPPS) só são considerados qualificados ou profissionais se forem reconhecidos como tais pela regulamentação específica do órgão federal competente; sem isso, são tratados como clientes comuns.</p><p>As alternativas A, C e D erram ao atribuir enquadramento profissional automático por volume ao RPPS municipal ou negar a qualificação dos recursos próprios de quem foi aprovado no exame técnico.</p>",
+     "enunciado": "<p>Um gerente de contas analisa a situação de dois clientes de sua agência para fins de classificação perante a CVM: 1. Uma pessoa natural aprovada em exame de qualificação técnica exigido pela CVM como requisito para o registro de analista de valores mobiliários, sem registro ativo na autarquia, que possui R$ 400.000,00 e quer aplicar recursos próprios. 2. O Regime Próprio de Previdência Social (RPPS) de um município que administra R$ 15.000.000,00 e não possui reconhecimento de órgão federal competente.</p><p>À luz das regras do suitability e de enquadramento, os dois clientes devem ser classificados, respectivamente, como:</p>",
+     "alternativas": {
+      "a": "Investidor profissional automático, por exercer atividade no mercado, e investidor profissional automático, pelo volume aplicado do RPPS.",
+      "b": "Investidor qualificado quanto aos recursos próprios e cliente comum, por falta de reconhecimento da previdência municipal.",
+      "c": "Cliente comum (pois ter registro profissional não qualifica para recursos próprios) e investidor qualificado sem ressalvas.",
+      "d": "Investidor profissional sem limite de uso e investidor qualificado por natureza, dada a condição de entidade municipal pública."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "A aprovação em exame de qualificação técnica enquadra a pessoa natural como qualificada, e só quanto aos recursos próprios; o RPPS não é profissional por volume.",
+      "c": "A pessoa natural aprovada no exame de qualificação técnica é enquadrada como qualificada para a aplicação de seus próprios recursos, por norma expressa.",
+      "d": "O RPPS municipal sem o devido reconhecimento pela regulamentação do órgão federal competente é tratado como cliente comum."
+     }
+    },
+    {
+     "id": "cpa-rel-22-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. Apenas entidades institucionais (como bancos, seguradoras e fundos) são profissionais por natureza. Para pessoas naturais ou jurídicas comerciais, o montante financeiro superior a R$ 10 milhões exige, obrigatoriamente, a assinatura do termo de declaração atestando sua condição por escrito para que o enquadramento seja válido.</p><p>As alternativas A, B e C erram ao defender a reclassificação automática por saldo no sistema, proibir o enquadramento de pessoas naturais como profissionais ou condicionar a regra à classe de ativo aplicada.</p>",
+     "enunciado": "<p>Um empresário possui R$ 12.000.000,00 mantidos em uma aplicação bancária de renda fixa de liquidez diária. Ele é abordado por seu gerente, que pretende classificá-lo formalmente como investidor profissional no sistema do banco e liberar o acesso direto a fundos restritos sem a coleta de assinatura de documentos adicionais. A respeito da adequação do procedimento adotado pelo gerente, a conduta está:</p>",
+     "alternativas": {
+      "a": "Correta, desde que os recursos estejam aplicados exclusivamente em ações negociadas na bolsa de valores e em fundos cambiais.",
+      "b": "Correta, pois o valor de R$ 12 milhões ultrapassa a régua de R$ 10 milhões e gera a reclassificação automática de enquadramento direto pelo sistema.",
+      "c": "Incorreta, porque pessoas naturais são proibidas por lei de atingirem a categoria de investidor profissional, restrita às instituições financeiras.",
+      "d": "Incorreta, pois recursos acima de R$ 10 milhões exigem que o cliente ateste a sua condição por escrito, em termo próprio."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "O tipo de ativo onde os recursos estão aplicados não elimina a necessidade da assinatura do termo formal de declaração.",
+      "b": "A reclassificação não é automática por sistema; a assinatura e formalização do termo de declaração é requisito indispensável.",
+      "c": "Pessoas naturais podem ser enquadradas como investidoras profissionais se tiverem acima de R$ 10 milhões e assinarem o termo."
+     }
+    },
+    {
+     "id": "cpa-rel-22-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a A. A Resolução CVM 30 exige que o enquadramento por conhecimento técnico alcance apenas pessoas aprovadas em exames de qualificação técnica ou certificações exigidas como requisito para o registro de assessor de investimento, administrador de carteiras, analista ou consultor de valores mobiliários. As certificações de distribuição (como CPA-10 ou CPA-20) não geram, por si sós, a qualificação do investidor para a aplicação de seus recursos pessoais.</p><p>As alternativas B, C e D erram ao afirmar que qualquer certificação do mercado concede o título, condicionar o aceite a saldos em poupança ou elevar a aprovada ao patamar de investidora profissional.</p>",
+     "enunciado": "<p>Uma participante de um processo seletivo tirou nota máxima na prova da certificação CPA-10 e solicita ao seu banco que, com base nessa certificação, ela seja enquadrada imediatamente como investidora qualificada para aplicar seus recursos pessoais em um fundo restrito. Diante dos ditames da Resolução CVM 30 a respeito dos requisitos para enquadramento por conhecimento técnico, o banco deve informar que:</p>",
+     "alternativas": {
+      "a": "O pedido é improcedente, pois certificações de distribuição de produtos não concedem a qualificação técnica exigida pela norma.",
+      "b": "O pedido é procedente, pois qualquer certificação do mercado financeiro concede automaticamente o título de investidora qualificada.",
+      "c": "O pedido só seria concedido se a cliente combinasse a aprovação na CPA-10 com um saldo mínimo aplicado de R$ 100.000,00 em caderneta de poupança.",
+      "d": "A aprovação em exames de certificação converte a pessoa natural diretamente em investidora profissional, ignorando a categoria de qualificada."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Nem toda certificação qualifica; a norma limita a qualificação por conhecimento aos exames exigidos para o registro profissional de assessor, administrador de carteira, analista ou consultor CVM.",
+      "c": "A CPA-10 não integra o rol de exames aprovados para registro de consultores, analistas, administradores ou assessores, sendo irrelevante o saldo na poupança.",
+      "d": "A aprovação em exame de qualificação técnica aprovado pela CVM alcança, no máximo, o degrau de investidor qualificado quanto aos recursos próprios, e nunca o de profissional."
+     }
+    }
+   ],
+   "Código de conduta ética Anbima: os nove princípios": [
+    {
+     "id": "cpa-rel-23-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. O Código de Conduta Ética da Anbima dirige-se às pessoas físicas (candidatos a exames e profissionais certificados). Por ser um código de autorregulação, ele eleva os padrões do mercado e convive pacificamente com a regulação estatal do BCB, CVM e CMN, sem jamais substituí-la.</p><p>As alternativas A, C e D erram ao direcionar o código a pessoas jurídicas associadas, afirmar que a autorregulação revoga normas estatais ou restringir a aplicação a diretores estatutários.</p>",
+     "enunciado": "<p>O Código de Conduta Ética da Anbima reúne princípios e regras voltados ao aprimoramento contínuo do padrão ético do mercado financeiro e de capitais. A respeito do público-alvo abrangido por este código e da sua relação com as normas estatais, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "Destina-se exclusivamente às instituições financeiras associadas e aderentes, dispensando o cumprimento de normas da CVM e do Banco Central.",
+      "b": "Aplica-se às pessoas candidatas e aos profissionais certificados pela Anbima, e é autorregulação que convive com as normas estatais.",
+      "c": "Substitui compulsoriamente a regulação do Conselho Monetário Nacional (CMN) para todos os profissionais atuantes na distribuição de títulos.",
+      "d": "Aplica-se unicamente a profissionais aprovados que atuem no cargo de diretor estatutário responsável pelo cumprimento de suitability."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "O código se dirige a pessoas (candidatos e certificados), e a autorregulação não substitui nem dispensa as normas dos órgãos reguladores estatais.",
+      "c": "Nenhum código de autorregulação da Anbima tem poder para substituir ou revogar regulamentações do CMN, CVM ou Banco Central.",
+      "d": "O código alcança todas as pessoas candidatas aos exames e os profissionais certificados, e não apenas diretores estatutários."
+     }
+    },
+    {
+     "id": "cpa-rel-23-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. O princípio da \"Honestidade e equidade\" demanda que os clientes em condições equivalentes recebam tratamento equivalente (sem favorecimentos injustificados). Já \"Responsabilidade e vigilância\" exige prudência, zelo e atenção nos atos profissionais para evitar erros, descuidos e negligência.</p><p>As alternativas B, C e D erram ao inventar proibições à renda variável, igualar a definição dos princípios ou autorizar favorecimento por comissão.</p>",
+     "enunciado": "<p>Durante o atendimento a um cliente de investimentos, o profissional com certificação Anbima deve pautar suas decisões nos nove princípios éticos do código. Ao comparar as exigências contidas nos princípios de \"Honestidade e equidade\" e \"Responsabilidade e vigilância\", verifica-se que:</p>",
+     "alternativas": {
+      "a": "Honestidade e equidade exige tratamento equivalente a clientes equivalentes, e responsabilidade e vigilância exige prudência e zelo.",
+      "b": "Responsabilidade e vigilância proíbe a oferta de renda variável, e honestidade e equidade obriga a conceder descontos a todos os correntistas.",
+      "c": "Ambos os princípios possuem a mesma definição conceitual e voltam-se exclusivamente à obrigação de guardar sigilo dos dados cadastrais do cliente.",
+      "d": "Honestidade e equidade autoriza conceder privilégios operacionais e tarifários ao cliente que gera o maior volume de comissões para a agência."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "O princípio de responsabilidade e vigilância exige prudência contra negligência, não proibindo a renda variável; equidade não exige descontos comerciais.",
+      "c": "Os dois princípios possuem definições e objetivos distintos, não se resumindo à obrigação de sigilo.",
+      "d": "O princípio da equidade exige justamente o inverso: tratar clientes em situações equivalentes de forma equivalente, vedando favorecimentos por retorno comercial."
+     }
+    },
+    {
+     "id": "cpa-rel-23-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. O princípio do \"Sigilo de informações confidenciais\" determina a manutenção do segredo sobre dados de clientes/investidores e estende-se expressamente às informações fornecidas pela Anbima, incluindo a vedação absoluta de divulgar ou compartilhar o conteúdo dos exames de certificação.</p><p>As alternativas A, B e C erram ao considerar o exame de domínio público, julgar o sigilo limitado ao horário de trabalho ou retirar a confidencialidade de dados de clientes atendidos.</p>",
+     "enunciado": "<p>Um gerente de investimentos atendeu um cliente investidor, efetivou a aplicação financeira solicitada e, ao sair do trabalho, comentou em um restaurante com amigos os detalhes do valor e do produto aplicado por esse cliente. Adicionalmente, esse mesmo profissional postou em suas redes sociais fotos e textos detalhando as perguntas específicas contidas em sua recente prova do exame de certificação. À luz do princípio do \"Sigilo de informações confidenciais\", o profissional:</p>",
+     "alternativas": {
+      "a": "Violou o código exclusivamente quanto ao exame da Anbima, uma vez que dados financeiros de clientes já atendidos perdem o caráter confidencial.",
+      "b": "Violou o código apenas quanto ao cliente, visto que o conteúdo do exame de certificação da Anbima é de domínio público irrestrito.",
+      "c": "Não cometeu qualquer infração ética, pois o dever de sigilo cessa quando o profissional está fora do horário de expediente bancário.",
+      "d": "Violou o código nas duas condutas, pois o sigilo abrange os dados do cliente e as informações da Anbima, inclusive o conteúdo dos exames."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "Informações bancárias e patrimoniais de clientes atendidos mantêm caráter confidencial permanente.",
+      "b": "O princípio do sigilo alcança expressamente as informações fornecidas pela Anbima, incluindo o conteúdo dos exames de certificação.",
+      "c": "O dever de sigilo profissional e ético permanece válido integralmente fora do expediente e do ambiente da agência bancária."
+     }
+    },
+    {
+     "id": "cpa-rel-23-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. O princípio da \"Atualização técnica\" impõe ao profissional o dever de aprimorar continuamente sua competência e seus conhecimentos sobre instrumentos, instituições e normas do mercado. Transmitir informações ultrapassadas por falta de acompanhamento regulatório descumpre diretamente esse princípio.</p><p>As alternativas B, C e D erram ao apontar princípios que tratam de conflito de interesses, postura reputacional ampla ou guarda de dados confidenciais.</p>",
+     "enunciado": "<p>Um profissional certificado que atua na distribuição de investimentos tomou conhecimento de uma alteração promovida pelo Conselho Monetário Nacional nas regras de resgate de um título privado de renda fixa. No entanto, ele optou por não buscar esclarecimentos e continuou transmitindo aos clientes as regras antigas que conhecia há anos. Essa conduta caracteriza descumprimento direto do seguinte princípio do Código de Conduta Ética da Anbima:</p>",
+     "alternativas": {
+      "a": "Atualização técnica do profissional.",
+      "b": "Independência e imparcialidade.",
+      "c": "Comportamento ético no atendimento.",
+      "d": "Sigilo de informações confidenciais."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Independência e imparcialidade trata do gerenciamento de conflitos de interesses e atuação isenta, não da desatualização de normas.",
+      "c": "Embora afete a conduta geral, a exigência de acompanhar a evolução de normas e produtos é tipificada no princípio específico de atualização técnica.",
+      "d": "Sigilo de informações confidenciais cuida da guarda de dados confidenciais, sem relação com a reciclagem de conhecimentos."
+     }
+    },
+    {
+     "id": "cpa-rel-23-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a B. No caso 1, a candidata descumpriu a regra geral de conduta explícita que proíbe o candidato de se apresentar como certificado antes de obter formalmente a certificação. No caso 2, o profissional descumpriu o princípio da \"Independência e imparcialidade\", que exige atuação isenta, transparente e livre de influências decorrentes de conflitos de interesses (como direcionar produtos a parentes em detrimento do cliente).</p><p>As alternativas A, C e D erram ao enquadrar a conduta do candidato como quebra de sigilo, ignorar o princípio da independência e imparcialidade ou remeter a regras exclusivas de regulação bancária estatal.</p>",
+     "enunciado": "<p>Analise os casos abaixo relativos à aplicação das regras gerais de conduta e princípios éticos previstos no Código de Conduta Ética da Anbima: 1. Uma candidata inscrita no exame de certificação inseriu no seu perfil de rede profissional a sigla da certificação antes da divulgação do resultado oficial do exame. 2. Um profissional certificado indicou ativamente a aplicação em um fundo de investimento administrado por um parente próximo, ocultando do cliente a existência do conflito de interesses e rejeitando opções com custos menores.</p><p>De acordo com o código, as infrações cometidas nos casos 1 e 2 violam, respectivamente:</p>",
+     "alternativas": {
+      "a": "O princípio do sigilo de informações confidenciais e o da atualização técnica.",
+      "b": "As regras gerais de conduta da candidata e o princípio da independência.",
+      "c": "O princípio do cumprimento das obrigações e as regras estatais da CVM.",
+      "d": "As normas estatais do Banco Central e o princípio da preservação da liquidez."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "Apresentar-se como certificado antes da aprovação não é violação de sigilo, e indicar fundos de parentes ocultando conflitos fere a independência.",
+      "c": "Apresentar-se como certificado antes da hora viola a regra específica dos candidatos, e omitir conflitos fere a independência e imparcialidade.",
+      "d": "As condutas citadas referem-se diretamente a dispositivos da autorregulação da Anbima, e não a normas operacionais do Banco Central."
+     }
+    }
+   ],
+   "Suitability e Código de Distribuição da Anbima": [
+    {
+     "id": "cpa-rel-24-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. O Código de Distribuição da Anbima acrescenta exigências como a obrigatoriedade de política escrita de suitability, a classificação dos clientes em no mínimo três perfis e o dever de aferição periódica com comunicação ao cliente sempre que verificado o desenquadramento da carteira.</p><p>As alternativas A, B e D erram ao afirmar que a autorregulação revoga normas estatais, limitar a dois o número de perfis ou dispensar a política escrita de suitability.</p>",
+     "enunciado": "<p>O Código de Distribuição da Anbima estabelece diretrizes de autorregulação que elevam as exigências em relação à norma estatal de suitability. A respeito das regras exigidas pelo referido Código para o processo de classificação e monitoramento de clientes, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "O Código estabelece a obrigatoriedade de classificar os clientes em no máximo dois perfis de investimento, conservador e arrojado.",
+      "b": "As regras de suitability do Código substituem integralmente as resoluções da CVM, isentando as instituições do cumprimento das normas estatais.",
+      "c": "A instituição deve classificar os clientes em no mínimo três perfis e avisá-los quando a carteira ficar desenquadrada.",
+      "d": "A instituição participante fica dispensada de elaborar política escrita de suitability desde que obtenha autorização expressa do Banco Central."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "O Código exige a classificação dos clientes em no mínimo três perfis de investimento.",
+      "b": "A autorregulação convive com a regulação estatal e nunca a substitui ou revoga.",
+      "d": "A política escrita de suitability detalhando critérios e controles internos é requisito obrigatório do Código."
+     }
+    },
+    {
+     "id": "cpa-rel-24-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. Sob o Código de Distribuição da Anbima, o cliente que se recusa a responder ao questionário passa a ser considerado cliente sem perfil identificado, ficando sob a mesma regra de vedação de recomendação aplicável ao perfil inadequado ou desatualizado.</p><p>As alternativas B, C e D erram ao prever cancelamento de conta, permitir recomendação sem perfil ou enquadrar o recusante como arrojado.</p>",
+     "enunciado": "<p>Durante o atendimento em uma agência bancária, um investidor se recusa categoricamente a preencher o formulário de Análise do Perfil do Investidor (API). Ao comparar esse enquadramento com as demais situações de vedação do Código de Distribuição da Anbima, verifica-se que:</p>",
+     "alternativas": {
+      "a": "O cliente é enquadrado como sem perfil identificado, recebendo o mesmo tratamento de quem possui perfil inadequado ou desatualizado.",
+      "b": "A recusa do cliente gera o cancelamento imediato de sua conta corrente e a proibição definitiva de realizar qualquer transação bancária.",
+      "c": "A instituição fica autorizada a recomendar livremente produtos de alto risco e volatilidade por ausência de restrição no cadastro.",
+      "d": "O cliente é classificado automaticamente como investidor arrojado no sistema por ter exercido o direito de não responder ao questionário."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A recusa não encerra contas bancárias, mas o cliente passa a ser tratado como sem perfil identificado, fica vedada a recomendação e a ordem só parte dele.",
+      "c": "É terminantemente proibido recomendar produtos sem a verificação do perfil ou quando o cliente estiver sem perfil identificado.",
+      "d": "A recusa não gera perfil arrojado automático; enquadra o investidor como cliente sem perfil identificado."
+     }
+    },
+    {
+     "id": "cpa-rel-24-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. A veiculação do Selo Anbima tem por finalidade exclusiva demonstrar que a instituição é aderente e assumiu o compromisso de atender às disposições do Código, não implicando qualquer responsabilidade da Anbima quanto à qualidade da prestação de serviços ou garantia de retorno.</p><p>As alternativas A, B e C erram ao atribuir responsabilidade financeira à Anbima, alegar isenção de risco ou tratar o selo como chancela da CVM.</p>",
+     "enunciado": "<p>Uma instituição financeira veicula o Selo Anbima em todos os seus materiais publicitários e lâminas de fundos de investimento. À luz das normas sobre publicidade e uso do Selo previstas no Código de Distribuição da Anbima, o significado correto dessa veiculação é:</p>",
+     "alternativas": {
+      "a": "Certifica que o produto foi recomendado e auditado previamente pelos diretores de regulação da Comissão de Valores Mobiliários.",
+      "b": "Atesta a qualidade técnica do produto e garante que a Anbima responde solidariamente pelos prejuízos ocorridos no fundo.",
+      "c": "Confere isenção total de risco de crédito para os títulos mantidos na carteira do produto financeiro divulgado.",
+      "d": "Demonstra apenas o compromisso da instituição de atender ao Código, sem significar garantia de rentabilidade ou aval da Anbima."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "O Selo demonstra o compromisso com o Código da Anbima e não constitui auditoria ou recomendação prévia da CVM.",
+      "b": "A Anbima expressamente não se responsabiliza pelas informações divulgadas nem pela qualidade da prestação de serviços da instituição.",
+      "c": "O Selo Anbima é um compromisso de autorregulação e não confere isenção de risco aos ativos do fundo."
+     }
+    },
+    {
+     "id": "cpa-rel-24-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. Na execução de ordens inadequadas por iniciativa do cliente, o Código exige alerta com apontamento das causas e declaração expressa de ciência, a qual deve ser exclusiva para cada categoria de ativo e mantida atualizada no intervalo máximo de cinco anos.</p><p>As alternativas A, C e D erram ao aceitar declaração genérica e vitalícia, dispensar a indicação das causas da divergência ou fixar o prazo de validade em 30 dias.</p>",
+     "enunciado": "<p>Um cliente ingressa em uma plataforma de investimentos e solicita a contratação de uma aplicação em renda variável por sua própria iniciativa. O sistema detecta que o produto é incompatível com o seu perfil conservador. De acordo com as normas de suitability e o Código de Distribuição da Anbima, a instituição pode efetivar a operação desde que obtenha declaração de ciência do cliente observando que:</p>",
+     "alternativas": {
+      "a": "A declaração deve ser genérica para todos os produtos do banco e possui validade vitalícia sem necessidade de renovação.",
+      "b": "A declaração deve ser exclusiva para aquela categoria de ativo e possui prazo máximo de atualização de cinco anos.",
+      "c": "O termo assinado isenta a instituição da obrigação de alertar o cliente sobre as causas específicas da divergência do perfil.",
+      "d": "A declaração perde a validade no prazo improrrogável de 30 dias após a primeira aplicação financeira."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "A declaração de ciência deve ser exclusiva para a categoria de ativo em questão e exige atualização periódica em até cinco anos.",
+      "c": "O alerta prévio indicando as causas específicas da divergência é obrigatório e acompanha a declaração expressa.",
+      "d": "O prazo regulatório máximo de atualização da declaração exclusiva por categoria de ativo é de cinco anos."
+     }
+    },
+    {
+     "id": "cpa-rel-24-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a B. O Código de Distribuição da Anbima veda categoricamente a alteração de períodos de análise para omitir janelas desfavoráveis (privilegiando recortes convenientes de curto prazo) e proíbe promessas de rentabilidade, garantias de resultados futuros ou afirmações de isenção de risco.</p><p>As alternativas A, C e D erram ao autorizar recortes parciais da rentabilidade histórica, aceitar a expressão \"risco zero\" para ações ou liberar a infração em materiais técnicos.</p>",
+     "enunciado": "<p>A área de marketing de uma instituição financeira elaborou o material publicitário de um novo fundo de investimento em ações e pretende divulgá-lo aos clientes. O material apresenta um gráfico destacando a rentabilidade do fundo na janela dos últimos três meses (período de forte alta da bolsa) e omite a rentabilidade acumulada nos últimos 12 e 24 meses (período de perda). Além disso, traz o slogan \"fundo de ações com rentabilidade garantida e risco zero\". Diante do regramento sobre publicidade do Código de Distribuição da Anbima, a divulgação desse material é:</p>",
+     "alternativas": {
+      "a": "Adequada, visto que o Código autoriza a escolha livre das janelas históricas de maior rentabilidade para incentivar o cliente.",
+      "b": "Inadequada, pois é vedado escolher janelas favoráveis de rentabilidade e prometer retorno ou isenção de risco.",
+      "c": "Inadequada apenas quanto à palavra \"garantida\", sendo plenamente permitido anunciar risco zero para fundos de ações acoplados ao Selo Anbima.",
+      "d": "Adequada, desde que o material seja classificado como técnico e veiculado exclusivamente em canais digitais sem acesso pelo público geral."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "É expressamente proibido alterar os períodos históricos de análise para descartar janelas desfavoráveis e selecionar curtos prazos.",
+      "c": "É vedado atribuir isenção de risco ou risco zero a produtos que possuem volatilidade e oscilação de mercado.",
+      "d": "As vedações contra promessas de rentabilidade, isenção de risco e seleção tendenciosa de janelas aplicam-se a todos os materiais."
+     }
+    }
+   ],
+   "Ética profissional no atendimento ao cliente": [
+    {
+     "id": "cpa-rel-25-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. A conduta ética exige que a necessidade, o perfil e os objetivos de investimento do cliente sejam soberanos e prevaleçam sobre metas de vendas ou campanhas de remuneração variável, devendo a administração do conflito dar-se com transparência e abstenção quando necessário.</p><p>As alternativas B, C e D erram ao dar prioridade às metas de vendas, achar que termos de adesão eliminam conflitos estruturais ou priorizar a remuneração do distribuidor.</p>",
+     "enunciado": "<p>No atendimento ao cliente, o profissional certificado frequentemente se depara com situações que exigem a correta identificação e administração do conflito de interesses. A respeito da conduta ética esperada diante do conflito entre metas comerciais e a necessidade do cliente, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "O objetivo e a necessidade do cliente prevalecem sobre metas comerciais, com transparência quanto à remuneração da distribuição.",
+      "b": "A meta de vendas da agência possui prioridade legal, sendo autorizada a oferta de produtos inadequados nos últimos três dias do mês.",
+      "c": "A assinatura de termos de adesão padronizados elimina automaticamente qualquer conflito de interesses e dispensa a prestação de informações.",
+      "d": "O profissional deve indicar o produto de maior taxa de carregamento, para garantir a sustentabilidade financeira da instituição."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A necessidade do cliente é sempre soberana e metas comerciais jamais justificam a indicação de produtos inadequados.",
+      "c": "A assinatura de termos de adesão não elimina o conflito de interesses nem exime a instituição de agir com transparência.",
+      "d": "A escolha de produtos com foco na remuneração do distribuidor em prejuízo do cliente constitui violação ética e de adequação."
+     }
+    },
+    {
+     "id": "cpa-rel-25-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. A venda casada condiciona o fornecimento de um produto à aquisição de outro, retirando do consumidor a liberdade de contratá-lo isoladamente, e é vedada pelo Código de Defesa do Consumidor. Já a oferta de pacote concede benefício comercial pela contratação conjunta, preservando a liberdade de o cliente levar o produto principal separadamente, pela taxa de balcão.</p><p>As alternativas A, C e D erram ao tentar respaldar a venda casada com descontos, proibir pacotes legítimos ou confundir os dois conceitos.</p>",
+     "enunciado": "<p>Durante a negociação de produtos e serviços bancários, o profissional de atendimento deve distinguir a prática ilícita da \"venda casada\" de uma \"oferta de pacote comercial\". Ao comparar as duas situações, verifica-se que:</p>",
+     "alternativas": {
+      "a": "A venda casada é permitida por lei desde que o banco conceda um desconto mínimo de 10% na taxa de juros do contrato de crédito.",
+      "b": "A venda casada condiciona a liberação de um produto à compra de outro, e o pacote permite a contratação avulsa pela taxa de balcão.",
+      "c": "A oferta de pacote comercial é proibida pelo Código de Defesa do Consumidor, sendo obrigatória a venda isolada de todos os produtos.",
+      "d": "Ambas são denominações idênticas para a exigência de contratação compulsória de seguro residencial na liberação do financiamento."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "A venda casada é expressamente vedada pelo Código de Defesa do Consumidor, sendo ilícita mesmo se acompanhada de descontos.",
+      "c": "A oferta de pacote comercial é totalmente legítima, desde que o consumidor mantenha a liberdade de contratar o produto isoladamente.",
+      "d": "Condicionar a liberação do financiamento à contratação obrigatória do seguro da casa é o exemplo clássico de venda casada ilícita."
+     }
+    },
+    {
+     "id": "cpa-rel-25-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. Quem distribui produtos domina a mecânica financeira e o cliente comum não, e essa diferença é a matéria-prima da má-fé. Por isso a assinatura de um termo apresentado como simples formalidade não corrige a omissão de risco: o dever é traduzir, explicando como e por que o dinheiro pode ser perdido, em linguagem que aquele cliente consiga entender.</p><p>As alternativas A, C e D erram ao tratar a assinatura como transferência de risco, reduzir o dever de informar à entrega de documentos ou negar a assimetria de informação entre a instituição e o cliente.</p>",
+     "enunciado": "<p>Um cliente de varejo, sem experiência em produtos de risco, assina o termo de ciência de risco de um fundo multimercado alavancado depois de ouvir do funcionário da agência que aquilo era \"uma formalidade padrão para abrir a conta\". Meses depois, diante de uma perda relevante, ele reclama alegando que nunca soube que poderia perder parte do capital, e a instituição se defende dizendo que ele assinou o termo. A respeito da assimetria de informação entre a instituição e o cliente, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "A assinatura do termo de ciência transfere integralmente o risco ao cliente e afasta qualquer dever posterior de esclarecimento da instituição.",
+      "b": "A assinatura do termo não corrige a omissão, pois o dever de quem distribui é traduzir a informação em linguagem que aquele cliente entenda.",
+      "c": "O dever de informar cumpre-se com a entrega do regulamento e da lâmina, cabendo ao cliente buscar sozinho o significado dos termos técnicos.",
+      "d": "A assimetria de informação é irrelevante no atendimento, porque quem assina um termo de risco é presumido capaz de avaliar produtos alavancados."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "A assinatura não substitui o dever de tornar a informação compreensível, e colher o documento não transfere ao cliente o risco de uma explicação que nunca foi dada.",
+      "c": "Entregar documentos não é informar. O dever é traduzir o conteúdo em linguagem acessível àquele cliente, e não repassar a ele o esforço de decifrar o jargão.",
+      "d": "A assimetria de informação é o ponto de partida do dever de conduta: quem distribui domina a mecânica financeira que o cliente comum não domina."
+     }
+    },
+    {
+     "id": "cpa-rel-25-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. Na distribuição de produtos de investimento, o profissional analisa, esclarece, traduz as informações e recomenda. A decisão de investimento e a ordem de execução pertencem sempre ao cliente. Decidir e movimentar ativos discricionariamente pelo investidor exige registro de administrador de carteira perante a CVM e contrato específico.</p><p>As alternativas B, C e D erram ao considerar normal gerir dinheiro alheio no balcão, incentivar a ocultação de custos ou terceirizar a decisão por formulário de caixa eletrônico.</p>",
+     "enunciado": "<p>Um cliente idoso comparece à agência bancária e é atendido por seu gerente de relacionamento para consultar a posição de suas aplicações de renda fixa. Demonstrando extrema confiança no funcionário, o cliente afirma que prefere não ouvir detalhes explicativos e solicita que o gerente \"decida e faça todas as trocas e alocações de ativos que julgar melhores\" em sua conta corrente. Diante dos limites do atendimento e da ética profissional, o gerente deve orientar que:</p>",
+     "alternativas": {
+      "a": "A decisão e a emissão das ordens cabem sempre ao cliente, porque decidir por ele exige contrato de carteira administrada.",
+      "b": "A conduta de decidir pelo cliente é a regra geral do atendimento bancário para investidores que declaram baixa instrução financeira.",
+      "c": "O gerente deve assinar os termos e efetuar as operações em nome do cliente, mantendo o segredo sobre os custos e taxas do fundo.",
+      "d": "A transferência do poder de decisão ao gerente é permitida mediante o preenchimento de uma declaração simples no caixa eletrônico."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "O papel do profissional de atendimento é recomendar e esclarecer; a decisão e emissão das ordens cabem exclusivamente ao cliente.",
+      "c": "Assinar pelo cliente ou ocultar custos contraria frontalmente a ética, o dever de lealdade e a regulação do mercado.",
+      "d": "Gerir e decidir pelo cliente sem autorização da CVM e sem contrato de administração de carteira é atividade não autorizada e ilegal."
+     }
+    },
+    {
+     "id": "cpa-rel-25-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a D. A conduta 1 viola o dever de sigilo confidencial, que é permanente e veda o trânsito de dados de clientes mesmo internamente na instituição com colegas alheios à operação. A conduta 2 caracteriza assédio comercial sobre cliente vulnerável e omissão deliberada de riscos, condutas vedadas pela Lei do Superendividamento e pelo dever de conduta ética no atendimento.</p><p>As alternativas A, B e C erram ao normalizar o vazamento interno de dados patrimoniais, negar o assédio comercial ou errar a classificação dos ilícitos.</p>",
+     "enunciado": "<p>Analise o comportamento de dois profissionais certificados atuantes em uma instituição financeira: 1. Um funcionário tomou conhecimento, durante o atendimento a um empresário local, da iminente decretação de falência da sua empresa e comentou o fato na copa da agência com colegas que não atendem a conta. 2. Uma gerente de relacionamento apresentou um produto financeiro de alto risco a uma cliente aposentada vulnerável, omitindo os riscos de perdas e pressionando pela assinatura rápida do contrato sob o pretexto de \"garantir a vaga na aplicação\".</p><p>À luz das normas de conduta, ética e legislação sobre vulnerabilidade, as condutas 1 e 2 representam, respectivamente:</p>",
+     "alternativas": {
+      "a": "Descumprimento das regras de prevenção à lavagem de dinheiro e violação exclusiva das regras de publicidade do Selo Anbima.",
+      "b": "Uso legítimo da comunicação interna de riscos e procedimento normal de persuasão comercial para cumprimento do suitability.",
+      "c": "Prática de front running corporativo e exercício regular do direito de prestar informação publicitária transparente.",
+      "d": "Quebra do dever de sigilo, que alcança o ambiente interno, e assédio comercial sobre consumidor vulnerável."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "A conversa na copa viola o dever de sigilo, e não as regras de lavagem de dinheiro; a pressão sobre a aposentada é assédio comercial, e não infração de publicidade.",
+      "b": "Dados do cliente não podem ser comentados nem na copa da agência com quem não atende a conta, e pressionar vulneráveis é ilícito por lei.",
+      "c": "Revelar saldo ou falência no corredor não é front running, e assediar idosos com informações ocultas viola a ética e a Lei do Superendividamento."
+     }
+    }
+   ],
+   "Técnicas de atendimento: escuta ativa, personalização e expectativas": [
+    {
+     "id": "cpa-rel-26-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. A escuta ativa exige a utilização de perguntas abertas (que descobrem necessidades) e de paráfrases (repetir com as próprias palavras para confirmar o entendimento), impedindo que o profissional apenas aguarde a vez de falar e ouça superficialmente o cliente.</p><p>As alternativas A, B e D erram ao definir a escuta ativa apenas como silêncio, priorizar perguntas fechadas para descoberta de necessidades ou proibir o uso da paráfrase no atendimento.</p>",
+     "enunciado": "<p>Durante o atendimento a um investidor, o profissional utiliza técnicas de escuta ativa para identificar o perfil e os objetivos financeiros do cliente. A respeito da aplicação correta da escuta ativa e de suas ferramentas, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "O uso de perguntas fechadas é a ferramenta central da escuta ativa para descobrir necessidades não declaradas pelo cliente.",
+      "b": "A escuta ativa consiste no silêncio absoluto do profissional, que deve evitar fazer perguntas para não induzir o cliente.",
+      "c": "A escuta ativa exige perguntas abertas e paráfrases para validar o entendimento, e não apenas aguardar a vez de falar.",
+      "d": "A paráfrase é uma técnica proibida no atendimento bancário por repetir as palavras do cliente de forma idêntica e robotizada."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "Pergunta fechada serve para confirmar dados, e não para descobrir necessidades não declaradas pelo cliente.",
+      "b": "Escuta ativa não é apenas silêncio educado; exige esforço deliberado de compreensão com validações e perguntas abertas.",
+      "d": "A paráfrase é uma técnica recomendada para validar com as próprias palavras o entendimento correto da mensagem do cliente."
+     }
+    },
+    {
+     "id": "cpa-rel-26-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. A personalização altera a forma de comunicação (canal, tom, uso de jargões ou nível de detalhe técnico conforme o público), mas tem limite claro: a simpatia ou adaptação de linguagem jamais flexibiliza o dever de adequação ao perfil do investidor.</p><p>As alternativas B, C e D erram ao autorizar investimentos fora do perfil por concordância verbal, dispensar suitability no varejo ou confundir personalização com alteração de regulamentos.</p>",
+     "enunciado": "<p>Ao prestar atendimento no balcão de investimentos, o gerente deve compreender a diferença entre a \"personalização do atendimento\" e o \"dever de adequação do produto (suitability)\". Ao comparar os dois conceitos, verifica-se que:</p>",
+     "alternativas": {
+      "a": "A personalização ajusta a linguagem, o canal e o tom da comunicação ao cliente, mas não autoriza a flexibilização das regras de adequação ao perfil.",
+      "b": "A personalização permite flexibilizar o perfil do cliente quando houver simpatia e concordância verbal expressa no momento da aplicação.",
+      "c": "O dever de adequação aplica-se apenas a investidores profissionais, sendo dispensado no atendimento do público de varejo por conta da personalização.",
+      "d": "Personalizar o atendimento exige obrigatoriamente a alteração da taxa de administração e do regulamento do produto financeiro ofertado."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Empatia e concordância verbal não flexibilizam o dever de adequação nem autorizam recomendações fora do perfil cadastrado.",
+      "c": "O dever de adequação (suitability) aplica-se integralmente ao público de varejo, não sendo dispensado pela personalização.",
+      "d": "Personalização diz respeito à forma de comunicação (linguagem, canal, ritmo) e não altera regulamento ou produto financeiro."
+     }
+    },
+    {
+     "id": "cpa-rel-26-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. A rentabilidade divulgada de um fundo de investimento é apresentada líquida da taxa de administração, porém bruta de imposto de renda. O alinhamento desse detalhe antes da aplicação evita que o cliente se sinta lesado no momento do resgate.</p><p>As alternativas A, B e C erram ao inverter ou desconsiderar as deduções de taxa de administração e imposto de renda previstas para a rentabilidade divulgada.</p>",
+     "enunciado": "<p>Ao apresentar os resultados históricos de um fundo de investimento multimercado a um cliente, o profissional de atendimento precisa realizar a correta gestão de expectativas quanto aos custos e impostos incidentes. Segundo as regras de comunicação e apresentação de dados do setor, o profissional deve informar ao cliente que a rentabilidade divulgada do produto é:</p>",
+     "alternativas": {
+      "a": "Bruta de taxa de administração e bruta de imposto de renda.",
+      "b": "Bruta de taxa de administração e líquida de imposto de renda.",
+      "c": "Líquida de taxa de administração e líquida de imposto de renda.",
+      "d": "Líquida de taxa de administração e bruta de imposto de renda."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "A rentabilidade divulgada nos materiais e lâminas já é apresentada líquida da taxa de administração do fundo.",
+      "b": "A rentabilidade divulgada já descontou a taxa de administração, mas ainda não descontou o imposto de renda.",
+      "c": "O imposto de renda não vem descontado na rentabilidade divulgada; o ganho é divulgado bruto de imposto de renda."
+     }
+    },
+    {
+     "id": "cpa-rel-26-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. Quando há divergência entre a necessidade declarada (pedido de aplicação em ações) e a necessidade real (uso do dinheiro em 30 dias para pagar um evento), a necessidade real prevalece para fins de adequação. A volatilidade das ações pode destruir o capital necessário no prazo estipulado.</p><p>As alternativas B, C e D erram ao acatar o pedido sem alertas, confiar apenas em termos sem orientar o risco ou sugerir derivados voláteis para uma meta de curtíssimo prazo.</p>",
+     "enunciado": "<p>Um investidor ingressa na agência e solicita expressamente a aplicação de todos os seus recursos em um fundo de ações com alta volatilidade, alegando que viu uma reportagem e quer \"rendimento alto\". O gerente, ao praticar a escuta ativa e mapear a necessidade real do cliente, descobre que esse dinheiro será utilizado integralmente para pagar o casamento do filho no mês seguinte. Diante da divergência entre o pedido e a necessidade real, a postura ética e correta do gerente deve ser:</p>",
+     "alternativas": {
+      "a": "Esclarecer que a necessidade de liquidez em um mês torna o produto inadequado, prevalecendo a necessidade real sobre o pedido.",
+      "b": "Efetivar a aplicação imediatamente no fundo de ações, visto que o pedido explícito do cliente prevalece sobre sua necessidade de curto prazo.",
+      "c": "Fazer o cliente assinar um termo de isenção de responsabilidade para aplicar no fundo de ações sem explicar os riscos de liquidez no mês seguinte.",
+      "d": "Recomendar a compra de opções de ações, de modo a garantir a liquidez exata no dia do casamento do filho do cliente."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "O pedido declarado não prevalece sobre a necessidade real de uso do recurso no curto prazo diante do dever de adequação.",
+      "c": "O termo de ciência não substitui o dever de orientar o cliente de que o produto é inadequado à sua necessidade real.",
+      "d": "Operações com opções e derivativos adicionam risco de perda e volatilidade incompatíveis com o evento iminente."
+     }
+    },
+    {
+     "id": "cpa-rel-26-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a A. Objeção é informação sobre o que falta esclarecer, e o procedimento é acolher, esclarecer com dado do próprio documento do produto, registrar e encaminhar. Quando a resistência revela aversão a risco ou necessidade de liquidez incompatível com o produto, a recomendação deve ser retirada. Insistir contra uma objeção que indica inadequação é justamente o que a norma proíbe.</p><p>As alternativas B, C e D erram ao tratar a objeção como obstáculo comercial, supor que produto adequado ao perfil nunca gera reclamação ou adiar para o resgate a informação sobre risco, liquidez, prazo e custos.</p>",
+     "enunciado": "<p>Um gerente de investimentos recomenda uma aplicação de renda fixa a um cliente de perfil conservador. Durante a conversa, o cliente apresenta uma objeção contundente: diz ter pavor de ver o valor da aplicação oscilar e exige poder resgatar o dinheiro a qualquer dia, sem perda de capital. O produto recomendado tem prazo de carência e sofre marcação a mercado. A respeito do tratamento correto da objeção e da gestão de expectativas, o profissional deve:</p>",
+     "alternativas": {
+      "a": "Acolher a objeção como informação sobre adequação, esclarecer com dado do documento do produto, registrar o atendimento e retirar a recomendação.",
+      "b": "Usar técnicas de contorno de objeções para conduzir o cliente ao fechamento, já que a objeção é um obstáculo comercial a ser superado com argumentação.",
+      "c": "Manter a recomendação sem alteração, porque o produto está dentro do perfil conservador cadastrado e produto adequado ao perfil não gera reclamação.",
+      "d": "Efetivar a aplicação e deixar o esclarecimento sobre carência e oscilação de preço para o momento do resgate, quando o cliente terá o extrato em mãos."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Objeção não é obstáculo a ser derrubado, é informação. Quando revela aversão a risco ou necessidade de liquidez incompatível, a recomendação deve ser retirada.",
+      "c": "Estar dentro do perfil não basta. Produto adequado também gera reclamação quando a expectativa foi mal construída, e o cliente já sinalizou a incompatibilidade.",
+      "d": "Risco, liquidez, prazo e custos precisam ser ditos antes da aplicação, e não no resgate. Alinhar depois é justamente o que custa a confiança do cliente."
+     }
+    }
+   ],
+   "Riscos associados à atividade profissional": [
+    {
+     "id": "cpa-rel-27-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. Segundo a norma regulatória do CMN, risco operacional é a possibilidade de perdas resultantes de eventos externos ou de falha, deficiência ou inadequação de processos internos, pessoas ou sistemas, sendo que a definição normativa inclui expressamente o risco legal nessa categoria.</p><p>As alternativas A, B e D erram ao descrever riscos do investimento (mercado e crédito) em vez do risco operacional da atividade profissional.</p>",
+     "enunciado": "<p>O gerenciamento de riscos das instituições financeiras abrange categorias distintas de eventos operacionais e regulatórios. De acordo com as definições normativas estabelecidas pelo Conselho Monetário Nacional, o risco operacional é caracterizado como a possibilidade de ocorrência de perdas resultantes de:</p>",
+     "alternativas": {
+      "a": "Mudanças exclusivamente na taxa básica de juros, a Selic, promovidas pelo Comitê de Política Monetária do Banco Central do Brasil.",
+      "b": "Flutuações nos preços de mercado das ações e do câmbio mantidos na carteira própria de investimentos do banco.",
+      "c": "Eventos externos ou falha, deficiência ou inadequação de processos internos, pessoas ou sistemas, incluído o risco legal.",
+      "d": "Incapacidade temporária de um emissor privado de renda fixa honrar os juros da sua debênture na data do vencimento."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "Mudanças na taxa Selic impactam o risco de mercado dos títulos, sem definir o risco operacional.",
+      "b": "Flutuações de preços de ações e câmbio constituem risco de mercado, e não risco operacional da atividade profissional.",
+      "d": "Incapacidade de o emissor honrar seus pagamentos caracteriza risco de crédito, e não risco operacional."
+     }
+    },
+    {
+     "id": "cpa-rel-27-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. O risco de conformidade (compliance) é o risco de sanções, perdas ou danos decorrentes da quebra de regras (leis, regulamentos, códigos de autorregulação e manuais internos). Já o risco de imagem está associado ao desgaste da reputação institucional perante os clientes e o mercado, caracterizando-se por se materializar muito rapidamente e exigir anos para mitigação.</p><p>As alternativas A, C e D erram ao restringir conformidade a processos trabalhistas, confundir com risco de mercado ou alegar que risco de imagem se resolve imediatamente com nota à imprensa.</p>",
+     "enunciado": "<p>Durante o atendimento bancário, as instituições financeiras monitoram a ocorrência do risco de conformidade (compliance) e do risco de imagem. Ao comparar a natureza dessas duas categorias de risco, verifica-se que:</p>",
+     "alternativas": {
+      "a": "O risco de conformidade limita-se a disputas judiciais trabalhistas, enquanto o risco de imagem ocorre unicamente quando há falha de sistemas operacionais no home broker.",
+      "b": "O risco de conformidade decorre do descumprimento de normas legais ou autorregulatórias, e o risco de imagem materializa-se em horas e leva anos para ser revertido.",
+      "c": "Ambas as categorias referem-se estritamente à oscilação das cotações dos fundos de renda variável em momentos de crise econômica nacional.",
+      "d": "O risco de imagem é resolvido de forma imediata no mesmo dia com uma nota informativa à imprensa, neutralizando perdas institucionais."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "O risco de conformidade surge do descumprimento de regras (CVM, BCB, Anbima, manuais), e o de imagem resulta do impacto à reputação do nome do banco.",
+      "c": "Oscilações de cotações em crises referem-se ao risco de mercado da carteira, e não ao risco de conformidade ou imagem da instituição.",
+      "d": "O risco de imagem possui forte assimetria temporal: materializa-se em horas e exige anos para ser revertido, quando é revertido."
+     }
+    },
+    {
+     "id": "cpa-rel-27-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. O erro material de digitação efetuado pelo operador constitui falha de execução de pessoas (evento clássico de risco operacional). Por sua vez, a não observância do procedimento exigido pelas normas do Banco Central para prevenção à lavagem de dinheiro materializa o risco de conformidade (quebra de norma regulatória).</p><p>As alternativas A, B e D erram ao invocar riscos de mercado e de crédito, restringir tudo à esfera penal ou achar que a ausência de dolo anula o risco operacional.</p>",
+     "enunciado": "<p>Um funcionário de uma instituição financeira digitou um zero a mais ao registrar a ordem de resgate de um cliente no sistema e, simultaneamente, deixou de colher o formulário obrigatório exigido pelas normas do Banco Central para prevenção à lavagem de dinheiro. De acordo com a classificação dos riscos da atividade profissional, os dois eventos caracterizam, respectivamente:</p>",
+     "alternativas": {
+      "a": "Crime contra o sistema financeiro nas duas condutas, com responsabilização restrita à esfera penal do funcionário.",
+      "b": "Evento de risco de crédito soberano do emissor e evento de risco de liquidez sistêmica do mercado financeiro nacional.",
+      "c": "Evento de risco operacional, por falha de execução de pessoas, e evento de risco de conformidade, por descumprir norma.",
+      "d": "Exercício regular da atividade profissional e isenção de risco operacional pela ausência de dolo do funcionário envolvido."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "Erro de digitação e omissão de documento exigido pela norma de prevenção geram responsabilização administrativa e disciplinar, e não se resolvem só na esfera penal.",
+      "b": "Erro na digitação da ordem de resgate e omissão de documento de PLD não possuem relação com risco de crédito soberano ou liquidez de mercado.",
+      "d": "A ausência de dolo não elimina o risco operacional, pois a falha de execução por erro humano integra perfeitamente a definição normativa do risco."
+     }
+    },
+    {
+     "id": "cpa-rel-27-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. A responsabilização do profissional de mercado dá-se em três planos independentes e cumulativos: trabalhista/disciplinar (perante o empregador), autorregulatório (perante a Anbima, podendo perder a certificação) e estatal (administrativo perante CVM/BCB, cível e penal no Judiciário). A aplicação de sanção em uma esfera não anula nem impede a atuação das demais.</p><p>As alternativas B, C e D erram ao afirmar que a demissão perdoa faltas administrativas/criminais, isentar da obrigação de indenizar ou garantir a certificação após fraudes.</p>",
+     "enunciado": "<p>Um profissional certificado cometeu uma fraude dolosa ao simular assinaturas em termos de adesão para bater metas comerciais de um fundo restrito e provocou prejuízos financeiros aos clientes afetados. Ele foi demitido por justa causa pela instituição financeira onde trabalhava. A respeito das consequências jurídicas e administrativas da conduta desse profissional, a demissão por justa causa:</p>",
+     "alternativas": {
+      "a": "Não impede a responsabilização perante a autorregulação e perante o Estado, pois as três esferas são independentes e acumuláveis.",
+      "b": "Extingue integralmente qualquer possibilidade de apuração administrativa pela CVM ou de punição pela autorregulação da Anbima.",
+      "c": "Isenta o profissional de reparação cível do dano aos clientes por ter havido a punição trabalhista máxima na empresa.",
+      "d": "Garante a manutenção da validade de sua certificação Anbima por ter sido a infração cometida no exercício do emprego bancário formal."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A demissão trabalhista não afasta as competências sancionatórias da CVM nem os processos instaurados pela Anbima.",
+      "c": "A reparação cível do dano causado aos clientes permanece exigível no Poder Judiciário independentemente da sanção trabalhista.",
+      "d": "Infrações éticas e operacionais graves abrem processo na autorregulação, podendo resultar no cancelamento da certificação profissional."
+     }
+    },
+    {
+     "id": "cpa-rel-27-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a C. A norma de gerenciamento do CMN estabelece que o risco operacional abrange falhas em sistemas e infraestrutura de tecnologia, e inclui expressamente dentro do risco operacional o risco legal (associado a indenizações por danos a terceiros e litígios decorrentes dos serviços prestados).</p><p>As alternativas A, B e D erram ao transferir a causa para risco de mercado, isentar o banco por falha técnica de terceiros ou tratar o risco legal e o risco operacional como categorias mutuamente exclusivas.</p>",
+     "enunciado": "<p>Uma instituição financeira teve o seu sistema de home broker paralisado durante todo o horário de pregão devido a uma falha grave na infraestrutura do fornecedor de tecnologia. Como consequência, centenas de investidores deixaram de executar ordens de stop loss, gerando processos indenizatórios judiciais contra o banco por deficiência em contratos de prestação de serviços. Analisando o enquadramento regulatório dessa situação sob a ótica dos riscos da atividade profissional, constata-se que:</p>",
+     "alternativas": {
+      "a": "A falha de tecnologia descaracteriza o risco operacional e anula o direito de reparação, por ser evento fortuito de terceiros.",
+      "b": "O evento é puramente risco de mercado, pois a perda decorreu do movimento dos preços dos ativos negociados na bolsa de valores.",
+      "c": "A falha de infraestrutura e as indenizações decorrentes são risco operacional, pois o risco legal cabe nessa definição.",
+      "d": "O risco legal e o risco operacional são categorias mutuamente exclusivas, sendo impossível ocorrerem as duas em um mesmo evento."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "Falhas em sistemas, processos ou infraestrutura de tecnologia são eventos expressos de risco operacional e não anulam o dever de reparação.",
+      "b": "A causa do dano foi a falha do sistema e a impossibilidade de operar (risco operacional), e não a simples oscilação de mercado.",
+      "d": "O risco legal não é uma categoria separada, estando expressamente contido dentro da definição normativa de risco operacional."
+     }
+    }
+   ],
+   "Prevenção à lavagem de dinheiro: conceitos e obrigações": [
+    {
+     "id": "cpa-rel-28-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. A colocação é a primeira etapa do processo e se destaca como a fase mais vulnerável para o criminoso, pois é quando o papel-moeda busca ingresso no sistema financeiro. Adicionalmente, a legislação vigente extinguiu o rol restrito de crimes antecedentes, abrangendo qualquer infração penal (inclusive contravenções).</p><p>As alternativas A, B e C erram ao trocar os nomes e características das fases de colocação e integração ou ao insistir na exigência de um rol taxativo e restrito de crimes antecedentes.</p>",
+     "enunciado": "<p>O processo de lavagem de dinheiro envolve um conjunto de mecanismos para dar aparência lícita a recursos decorrentes de infrações penais. A respeito do enquadramento legal e das fases desse processo, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "O crime de lavagem de dinheiro exige obrigatoriamente que os recursos decorram do tráfico internacional de drogas ou de extorsão mediante sequestro.",
+      "b": "A integração é a fase de entrada do papel-moeda no banco, exigindo a comprovação prévia de um crime antecedente presente em rol taxativo.",
+      "c": "A ocultação é a fase mais vulnerável do processo por envolver a aplicação direta dos recursos na compra de imóveis na economia formal.",
+      "d": "A colocação é a fase mais vulnerável para o criminoso, e qualquer infração penal pode figurar como antecedente do crime de lavagem de dinheiro."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "A Lei 12.683/2012 eliminou o rol restrito de crimes antecedentes, permitindo que qualquer infração penal dê origem à lavagem.",
+      "b": "A entrada do papel-moeda no sistema financeiro caracteriza a colocação (e não a integração), e a lei extinguiu o rol taxativo de crimes antecedentes.",
+      "c": "A fase mais vulnerável para o criminoso é a colocação, momento em que o dinheiro físico precisa entrar no sistema comercial ou financeiro."
+     }
+    },
+    {
+     "id": "cpa-rel-28-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. Desde 2020, o Coaf vincula-se administrativamente ao Banco Central do Brasil, mantendo autonomia técnica e operacional. Sua função exclusiva é atuar como unidade de inteligência financeira, não possuindo poder de polícia, competência de investigação criminal ou atribuição para processar e julgar infratores.</p><p>As alternativas A, B e D erram ao atribuir poder de polícia ao Coaf, situá-lo no Ministério da Fazenda ou considerá-lo autoridade de indiciamento e julgamento penal.</p>",
+     "enunciado": "<p>O Conselho de Controle de Atividades Financeiras (Coaf) atua como órgão central no sistema de prevenção à lavagem de dinheiro no Brasil. Ao analisar as competências e a vinculação institucional do Coaf, constata-se que o órgão:</p>",
+     "alternativas": {
+      "a": "Atua como tribunal administrativo de julgamento criminal, aplicando penas de reclusão de até 10 anos aos infratores da norma.",
+      "b": "Integra a estrutura direta do Ministério da Fazenda, sendo competente para expedir mandados de prisão e realizar buscas judiciais.",
+      "c": "Vincula-se ao Banco Central, com autonomia técnica para produzir relatórios de inteligência, sem poder de polícia nem de julgamento.",
+      "d": "Funciona como autoridade policial de apuração com poder para indiciar criminalmente os investidores que realizarem movimentações atípicas."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "O Coaf é uma unidade de inteligência financeira e não um tribunal com poderes para aplicar penas judiciais de reclusão.",
+      "b": "O Coaf vincula-se ao Banco Central (e não ao Ministério da Fazenda) e não possui poder de polícia nem competência para expedir mandados.",
+      "d": "O Coaf não investiga, não tem poder de polícia e não indicia criminalmente; apenas analisa e compartilha informações de inteligência."
+     }
+    },
+    {
+     "id": "cpa-rel-28-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. As comunicações por parâmetro objetivo decorrem do simples atingimento do critério normativo, prescindindo de juízo de valor. Já as comunicações por suspeita dependem da conclusão da análise atípica, devendo ser encaminhadas no prazo de 24 horas contadas da data em que se concluiu a referida análise.</p><p>As alternativas A, B e C erram ao exigir aviso ou autorização do cliente (conduta expressamente vedada), errar a contagem do prazo de 24 horas ou citar prazos incorretos para a declaração de não ocorrência.</p>",
+     "enunciado": "<p>Uma instituição financeira analisa dois tipos de movimentações financeiras para fins de cumprimento das obrigações de comunicação de prevenção à lavagem de dinheiro: 1. Uma operação de depósito em espécie de valor elevado que atingiu exatamente o parâmetro objetivo estipulado pela norma do regulador. 2. Uma operação atípica fracionada cuja análise técnica interna foi concluída confirmando a atipicidade e a suspeita de lavagem.</p><p>À luz dos prazos e ritos normativos, as comunicações dos casos 1 e 2 devem ser efetuadas, respectivamente:</p>",
+     "alternativas": {
+      "a": "Apenas se houver ordem do Poder Judiciário e no prazo anual fixado para a declaração de não ocorrência até o último dia útil de janeiro.",
+      "b": "Após autorização prévia do cliente em ambos os casos e no prazo de 24 horas contadas estritamente da data da realização da operação.",
+      "c": "Em até 30 dias úteis após a operação e mediante notificação por carta registrada enviada ao titular da conta bancária.",
+      "d": "Por parâmetro objetivo, sem análise de suspeita, e em 24 horas contadas da conclusão da análise que caracterizou a atipicidade."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "As comunicações obrigatórias independem de ordem judicial, e a declaração de não ocorrência da CVM tem prazo até o último dia útil de abril.",
+      "b": "É vedado dar ciência ao cliente sobre a comunicação, e o prazo de 24 horas para suspeitas conta-se da conclusão da análise, não da operação.",
+      "c": "O prazo de comunicação por suspeita não é de 30 dias e é sumariamente proibido notificar o titular da conta sobre o envio do reporte."
+     }
+    },
+    {
+     "id": "cpa-rel-28-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. O sigilo da comunicação é regra absoluta na lei: a instituição e seus funcionários devem abster-se de dar ciência do reporte a qualquer pessoa, inclusive ao próprio comunicado. Como proteção, a legislação prevê que comunicações realizadas de boa-fé não geram responsabilização civil ou administrativa para quem as efetuou.</p><p>As alternativas A, B e C erram ao sugerir a entrega do relatório ao cliente, prever reparação civil por comunicações de boa-fé ou restringir a proibição a operações cambiais.</p>",
+     "enunciado": "<p>Um gerente de contas identificou operações com indícios de estruturação na conta de um correntista e, após a conclusão da análise atípica interna, efetuou a devida comunicação de suspeita ao Coaf. Dias depois, o cliente compareceu à agência perguntando o motivo de sua conta estar sob monitoramento. Para agir em estrito cumprimento da lei e resguardar a instituição, o gerente deve saber que:</p>",
+     "alternativas": {
+      "a": "A vedação de dar ciência ao cliente aplica-se exclusivamente às operações em moeda estrangeira que ultrapassarem R$ 20 milhões.",
+      "b": "Deve entregar uma cópia integral do relatório enviado ao Coaf para comprovar a transparência e lealdade do atendimento bancário.",
+      "c": "A instituição responderá civilmente por danos morais perante o cliente caso as suspeitas não sejam confirmadas em futura apuração policial.",
+      "d": "É proibido dar ciência da comunicação ao cliente ou a terceiros, e a comunicação de boa-fé não gera responsabilidade civil."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "O dever de segredo e a proibição de dar ciência do reporte ao comunicado são absolutos e aplicam-se a qualquer tipo de operação.",
+      "b": "Revelar ao cliente que uma comunicação de suspeita foi efetuada é grave violação legal que compromete eventuais apurações.",
+      "c": "A Lei de Lavagem estabelece expressamente que as comunicações efetuadas de boa-fé não acarretam responsabilidade civil ou administrativa."
+     }
+    },
+    {
+     "id": "cpa-rel-28-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a A. Na regulação da CVM, quando não são identificadas operações passíveis de comunicação no ano civil anterior, a declaração de não ocorrência deve ser enviada até o último dia útil de abril. Quanto às sanções administrativas, a multa pode alcançar até o dobro do valor da operação, o dobro do lucro obtido ou presumivelmente obtido, ou R$ 20 milhões, prevalecendo o menor desses parâmetros.</p><p>As alternativas B, C e D erram ao estipular o mês de janeiro para a declaração, considerar a comunicação opcional ou ignorar o limite de R$ 20 milhões das multas administrativas.</p>",
+     "enunciado": "<p>Uma instituição financeira fiscalizada pela CVM não identificou nenhuma operação suspeita ou atípica ao longo de todo o ano civil anterior. Além disso, o diretor responsável pela prevenção à lavagem de dinheiro analisa o teto e os parâmetros das penalidades administrativas previstas na Lei 9.613/1998 caso a instituição descumpra as obrigações de cadastro e registro. A respeito do prazo para a declaração de não ocorrência e das sanções de multa aplicáveis, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "A declaração de não ocorrência deve ser prestada até o último dia útil do mês de abril, e a multa administrativa é limitada ao teto máximo de R$ 20 milhões.",
+      "b": "A declaração de não ocorrência deve ser entregue compulsoriamente até o último dia útil de janeiro, e a multa pode atingir valor ilimitado fixado pelo juiz criminal.",
+      "c": "A ausência de operações suspeitas no ano dispensa qualquer comunicação ao regulador, e a sanção máxima limita-se à pena de advertência por escrito.",
+      "d": "A declaração de não ocorrência aplica-se apenas a bancos públicos e a multa administrativa possui valor fixo e invariável de R$ 100.000,00 por contrato."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Na regulação da CVM, a declaração de não ocorrência deve ser feita até o último dia útil de abril (não janeiro), e a multa administrativa tem teto de R$ 20 milhões.",
+      "c": "A declaração de não ocorrência é obrigatória na ausência de suspeitas, e as sanções incluem multa, inabilitação temporária de até 10 anos e cassação.",
+      "d": "O dever de declarar a não ocorrência vigora para as instituições sujeitas à norma, e as multas variam conforme os parâmetros legais, limitadas a R$ 20 milhões."
+     }
+    }
+   ],
+   "Combate ao financiamento do terrorismo e comunicação ao Coaf": [
+    {
+     "id": "cpa-rel-29-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. Enquanto na lavagem de dinheiro o foco está em ocultar a origem ilícita do capital, no financiamento do terrorismo a preocupação central é a destinação dos recursos, os quais podem ter origem inteiramente lícita (doações, comércios legítimos, rendimentos).</p><p>As alternativas A, B e C erram ao exigir origem criminosa prévia, limitar a prevenção ao rastreio de grandes somas ou dispensar o conhecimento do cliente.</p>",
+     "enunciado": "<p>O combate ao financiamento do terrorismo possui particularidades operacionais que o diferenciam dos processos tradicionais de lavagem de dinheiro. A respeito das origens e destinações dos recursos no financiamento do terrorismo, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "O controle de valores torna-se a ferramenta mais eficaz para coibir o financiamento do terrorismo, dispensando o conhecimento sobre o cliente.",
+      "b": "O financiamento do terrorismo exige obrigatoriamente que os recursos financeiros sejam oriundos de infrações penais antecedentes violentas.",
+      "c": "A detecção do financiamento do terrorismo baseia-se unicamente no monitoramento automático de grandes movimentações de capital em espécie.",
+      "d": "No financiamento do terrorismo o vetor central é a destinação do recurso, podendo o dinheiro ter origem perfeitamente lícita."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "Devido às somas modestas, o monitoramento por valor é pouco eficaz, sendo fundamental o profundo conhecimento do cliente e de suas redes.",
+      "b": "Diferente da lavagem, os recursos no financiamento do terrorismo podem ter origem totalmente lícita (como salários ou doações).",
+      "c": "Os atos terroristas muitas vezes envolvem montantes pequenos, tornando ineficaz o monitoramento apoiado apenas em grandes valores."
+     }
+    },
+    {
+     "id": "cpa-rel-29-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. A condição de pessoa exposta politicamente perdura por 5 anos contados da data em que a pessoa deixou de se enquadrar. Já o bloqueio e a indisponibilidade de bens por sanções do Conselho de Segurança da ONU (Lei 13.810/2019) têm cumprimento imediato, sem demora, sendo vedado dar prévio aviso ao sancionado.</p><p>As alternativas A, C e D erram ao proibir contas para PEPs, atribuir confisco definitivo de propriedade à indisponibilidade, errar o prazo de expiração do status ou exigir alvarás judiciais.</p>",
+     "enunciado": "<p>A legislação brasileira impõe regras específicas sobre o enquadramento de pessoas expostas politicamente (PEP) e sobre as medidas de indisponibilidade de ativos decorrentes de resoluções do Conselho de Segurança das Nações Unidas. Ao comparar esses dois mecanismos de controle, verifica-se que:</p>",
+     "alternativas": {
+      "a": "Ser classificado como PEP impede a abertura de contas bancárias, ao passo que a indisponibilidade de ativos acarreta a perda definitiva da propriedade.",
+      "b": "A condição de PEP perdura por cinco anos após a saída do cargo, e a indisponibilidade da ONU cumpre-se sem demora e sem prévio aviso.",
+      "c": "A indisponibilidade de ativos exige aviso prévio de 30 dias ao sancionado, e o status de PEP expira no dia exato do término do mandato.",
+      "d": "Ambas as medidas exigem autorização judicial prévia, emitida em primeira instância pelo Supremo Tribunal Federal, antes de produzir efeito."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "Ser PEP não impede a abertura de conta (exige diligência reforçada) e a indisponibilidade de ativos não constitui perda do direito de propriedade.",
+      "c": "A indisponibilidade de ativos é sem prévio aviso (sem demora), e o status de PEP estende-se por 5 anos contados do desligamento da função.",
+      "d": "O cumprimento de resoluções de indisponibilidade de ativos da ONU tem executoriedade imediata, não dependendo de ordem judicial do STF."
+     }
+    },
+    {
+     "id": "cpa-rel-29-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. A Lei 13.810/2019 estabelece o cumprimento imediato (\"sem demora\", ou seja, imediatamente ou em poucas horas) da indisponibilidade de ativos sem prévio aviso aos afetados, ressalvando formalmente que a restrição de uso não significa perda do direito de propriedade (confisco).</p><p>As alternativas A, B e C erram ao prever aviso prévio, classificar o bloqueio como confisco definitivo ou condicionar a medida a assembleias de acionistas.</p>",
+     "enunciado": "<p>Uma instituição financeira foi notificada sobre a inclusão de um de seus correntistas na lista de sanções do Conselho de Segurança das Nações Unidas por envolvimento com grupos extremistas. À luz da Lei 13.810/2019, o responsável pelo cumprimento das ordens de indisponibilidade deve saber que a medida:</p>",
+     "alternativas": {
+      "a": "Depende de assembleia geral dos acionistas do banco antes de paralisar as movimentações financeiras da conta que foi atingida.",
+      "b": "Exige o envio prévio de notificação extrajudicial com prazo de 5 dias úteis para o cliente transferir seus recursos para outro banco.",
+      "c": "Importa no imediato confisco definitivo dos bens e no repasse compulsório e integral dos valores para o Fundo Penitenciário Nacional.",
+      "d": "Deve ser executada em poucas horas e sem aviso prévio ao titular, e não constitui perda do direito de propriedade dos bens."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "A executoriedade é imediata por imposição legal, sem qualquer dependência de deliberação de assembleias de acionistas.",
+      "b": "Dar prévio aviso ao sancionado inviabiliza a medida legal e é expressamente proibido pela lei.",
+      "c": "A lei estabelece expressamente que a indisponibilidade não constitui perda do direito de propriedade (não é confisco)."
+     }
+    },
+    {
+     "id": "cpa-rel-29-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. A Lei 13.260/2016 define o crime de terrorismo e criminaliza quem fornece, arrecada, oferta ou dispõe de fundos, recursos financeiros ou bens com a finalidade de financiar atos terroristas, além de tipificar atos preparatórios. Já a Lei 13.810, de 8 de março de 2019, disciplina o cumprimento das sanções do Conselho de Segurança das Nações Unidas, com executoriedade imediata e sem prévio aviso ao sancionado. Atenção à data, porque material desatualizado atribui essa lei a 2016.</p><p>As alternativas A, C e D erram ao inverter o objeto das duas leis e isentar quem financia, ao datar de 2016 a lei da indisponibilidade e condicioná-la a condenação penal, ou ao excluir a proliferação de armas do conjunto LD/FTP.</p>",
+     "enunciado": "<p>O arcabouço legal brasileiro de combate ao financiamento do terrorismo apoia-se em dois diplomas com funções distintas: um define o crime de terrorismo e criminaliza o seu financiamento, e o outro disciplina o cumprimento das medidas de indisponibilidade de ativos determinadas por resoluções do Conselho de Segurança das Nações Unidas. A respeito dessas duas normas e da abrangência atual da regulação, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "A Lei 13.260/2016 trata da indisponibilidade de ativos, e a criminalização alcança só quem executa o atentado, e não quem arrecada ou fornece os recursos.",
+      "b": "A Lei 13.260/2016 define o crime de terrorismo e criminaliza o seu financiamento, e a Lei 13.810/2019 disciplina a indisponibilidade de ativos.",
+      "c": "A lei que disciplina o cumprimento das resoluções sancionatórias da ONU é de 2016, e a indisponibilidade só se executa após o trânsito em julgado da condenação.",
+      "d": "A regulação de LD/FTP restringe-se à lavagem de dinheiro e ao financiamento do terrorismo, ficando de fora o financiamento da proliferação de armas."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "A Lei 13.260/2016 define o crime de terrorismo e criminaliza expressamente o seu financiamento, inclusive atos preparatórios; a indisponibilidade é da Lei 13.810/2019.",
+      "c": "A lei da indisponibilidade de ativos é a Lei 13.810, de 8 de março de 2019, e as resoluções sancionatórias têm executoriedade imediata, sem depender de condenação.",
+      "d": "O conjunto LD/FTP abrange também o financiamento da proliferação de armas de destruição em massa, além da lavagem de dinheiro e do financiamento do terrorismo."
+     }
+    },
+    {
+     "id": "cpa-rel-29-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a A. A comunicação de operações atípicas e suspeitas deve ser dirigida diretamente ao Coaf contendo a fundamentação detalhada, a qualificação dos envolvidos (informando expressamente a condição de PEP/familiares) e o relato do ilícito, permanecendo a instituição financeira proibida de notificar ou dar qualquer ciência do ato a quem quer que seja.</p><p>As alternativas B, C e D erram ao apontar o Ministério da Justiça como destinatário, esperar retorno compulsório sobre investigações do Coaf ou considerar opcional a identificação da condição de PEP.</p>",
+     "enunciado": "<p>O diretor responsável pela prevenção à lavagem de dinheiro e ao financiamento do terrorismo de uma corretora de valores precisa encaminhar uma comunicação ao Coaf a respeito de operações atípicas detectadas em contas mantidas por familiares de pessoas expostas politicamente. Com base no conteúdo mínimo exigido pela regulação para essa comunicação e nos trâmites posteriores ao envio, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "A comunicação vai direto ao Coaf com os sinais de alerta fundamentados, a qualificação dos envolvidos e a indicação da condição de PEP.",
+      "b": "A comunicação deve ser encaminhada prioritariamente ao Ministério da Justiça, que a repassa ao Coaf depois de uma triagem prévia de mérito.",
+      "c": "O envio do reporte obriga o Coaf a dar retorno conclusivo à instituição sobre o indiciamento dos envolvidos, no prazo de 30 dias.",
+      "d": "A qualificação da condição de PEP é facultativa na comunicação de operações suspeitas de valor inferior a R$ 100.000,00."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A comunicação de suspeita vai diretamente ao Coaf, e não ao Ministério da Justiça nem ao regulador, e não existe triagem prévia de mérito por outro órgão.",
+      "c": "A instituição não recebe retorno do Coaf sobre o desfecho das investigações e permanece sob o dever de segredo absoluto.",
+      "d": "Informar se o envolvido é pessoa exposta politicamente (ou familiar/colaborador) compõe o conteúdo mínimo obrigatório da comunicação."
+     }
+    }
+   ],
+   "Conheça seu cliente (KYC), cadastro e abordagem baseada em risco": [
+    {
+     "id": "cpa-rel-30-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. No processo de KYC, a identificação responde a \"quem é o cliente\" (nome e CPF para pessoa física; firma e CNPJ para pessoa jurídica). Já a qualificação responde se \"o dinheiro faz sentido\", avaliando a localização e a capacidade financeira do cliente (renda, patrimônio e atividade) para criar parâmetros de monitoramento.</p><p>As alternativas B, C e D erram ao igualar identificação e qualificação, dispensar a apuração da capacidade financeira ou confundir KYC com suitability.</p>",
+     "enunciado": "<p>O processo de Conheça Seu Cliente (KYC) é estruturado pelas instituições financeiras para atender às exigências de prevenção à lavagem de dinheiro e ao financiamento do terrorismo. A respeito das etapas de identificação e qualificação do cliente no cadastro, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "A identificação responde quem é o cliente, com CPF ou CNPJ, e a qualificação avalia capacidade financeira, renda e patrimônio.",
+      "b": "A identificação e a qualificação são termos rigorosamente sinônimos, referindo-se unicamente à coleta do comprovante de residência do titular.",
+      "c": "A qualificação do cliente dispensa a avaliação da capacidade financeira sempre que o correntista for pessoa física de baixa renda.",
+      "d": "A etapa de identificação do cliente serve para verificar se o produto de investimento é adequado ao seu perfil de risco e horizonte de aplicação."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A identificação trata de saber quem é a pessoa (nome, CPF/CNPJ), ao passo que a qualificação busca compreender sua situação financeira e patrimonial.",
+      "c": "A avaliação da capacidade financeira compõe obrigatoriamente a qualificação do cliente, permitindo estabelecer o parâmetro de movimentação.",
+      "d": "A verificação de adequação do produto ao perfil de risco é função do suitability, e não da etapa de identificação cadastral do KYC."
+     }
+    },
+    {
+     "id": "cpa-rel-30-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. O KYC (gerado pela Lei 9.613/1998 e regras do BCB) tem como foco proteger o sistema financeiro, verificando se a movimentação do dinheiro faz sentido para o perfil do cliente. O suitability (gerado pelas normas de conduta da CVM e Anbima) foca em proteger o investidor, analisando se o produto atende a seus objetivos, prazo e perfil de risco.</p><p>As alternativas A, B e C erram ao considerar os controles intercambiáveis, inverter as bases legais ou liberar a venda de produtos arriscados sem suitability.</p>",
+     "enunciado": "<p>Tanto o procedimento de Conheça Seu Cliente (KYC) quanto a Análise do Perfil do Investidor (suitability) envolvem o levantamento de informações cadastrais e financeiras dos correntistas. Ao comparar os objetivos e as fundamentações dessas duas exigências, verifica-se que:</p>",
+     "alternativas": {
+      "a": "A aprovação no cadastro de KYC garante que qualquer produto de renda variável de alto risco pode ser recomendado ao cliente sem consulta prévia.",
+      "b": "O KYC e o suitability possuem o mesmo objetivo regulatório, sendo dispensada a aplicação do suitability quando o cliente é aprovado no KYC.",
+      "c": "O suitability é fundamentado na Lei 9.613/1998 para combater crimes financeiros, enquanto o KYC decorre das normas de conduta para distribuição de fundos.",
+      "d": "O KYC previne a lavagem de dinheiro ao avaliar se a movimentação faz sentido, e o suitability protege o investidor indicando produto adequado."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "Passar pelos controles de KYC não autoriza a recomendação automática de produtos de alto risco sem a devida verificação de suitability.",
+      "b": "KYC e suitability atendem a finalidades e normas distintas; a aprovação cadastral no KYC não dispensa a verificação de adequação no suitability.",
+      "c": "Os fundamentos estão invertidos: o KYC decorre da Lei 9.613/1998 (prevenção à lavagem), e o suitability decorre das normas de conduta e distribuição."
+     }
+    },
+    {
+     "id": "cpa-rel-30-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. Embora o piso geral da Lei 9.613/1998 estabeleça a conservação de documentos por no mínimo cinco anos, a regulamentação específica da Circular BCB 3.978/2020 determina que as instituições supervisionadas pelo Banco Central conservem os dados de KYC, operações e dossiês pelo prazo de dez anos.</p><p>As alternativas A, C e D erram ao fixar a guarda em cinco anos para bancos supervisionados, estipular vinte anos ou reduzir o prazo para dois anos.</p>",
+     "enunciado": "<p>Em uma instituição financeira supervisionada pelo Banco Central do Brasil, o departamento de compliance precisa organizar o arquivo de documentos e determinar o prazo regulatório de conservação das informações de KYC, registros operacionais e dossiês de análise. Considerando a regra aplicável a instituições supervisionadas pelo Banco Central em comparação ao piso geral da Lei 9.613/1998, os documentos devem ser mantidos guardados pelo prazo mínimo de:</p>",
+     "alternativas": {
+      "a": "Cinco anos, sendo proibida a manutenção de registros cadastrais por prazo superior a esse teto em razão da LGPD.",
+      "b": "Dez anos, conforme estipulado pela Circular BCB 3.978/2020 para instituições supervisionadas pelo Banco Central.",
+      "c": "Vinte anos, por se tratar de crime inafiançável e imprescritível de lavagem de dinheiro praticado por pessoa jurídica.",
+      "d": "Dois anos, contados exclusivamente a partir da data de abertura da conta corrente do cliente."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "A Circular BCB 3.978/2020 exige dez anos de guarda para entidades supervisionadas pelo BCB, e a coleta tem base em obrigação legal, não violando a LGPD.",
+      "c": "O prazo regulatório de guarda do Banco Central é de dez anos, e não vinte anos.",
+      "d": "O prazo para instituições do BCB é de dez anos, contados a partir do encerramento da conta ou conclusão da transação."
+     }
+    },
+    {
+     "id": "cpa-rel-30-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. A Abordagem Baseada em Risco (ABR) orienta as instituições a categorizar os riscos e concentrar esforços: clientes de maior risco (como PEPs) passam por procedimentos de diligência reforçada (com checagem da origem de fundos e alçada superior de aprovação), enquanto situações de baixo risco admitem diligência simplificada.</p><p>As alternativas B, C e D erram ao proibir a gradação de controles na ABR, vetar contas para PEPs ou dispensar a coleta de nome e CPF na diligência simplificada.</p>",
+     "enunciado": "<p>Um analista de prevenção a ilícitos financeiros avalia as regras da Abordagem Baseada em Risco (ABR) aplicadas ao cadastro de correntistas. Ao analisar a situação de dois clientes (um aposentado contratante de um microcrédito e um deputado estadual em exercício, enquadrado como Pessoa Exposta Politicamente), o analista deve direcionar os procedimentos de diligência estabelecendo que:</p>",
+     "alternativas": {
+      "a": "O cliente PEP exige diligência reforçada, com origem dos recursos e aprovação superior, e o de menor risco admite controles simplificados.",
+      "b": "Ambas as contas devem ser monitoradas rigorosamente com exatamente a mesma intensidade e frequência de documentação, visto que a ABR proíbe a gradação de controles.",
+      "c": "O cliente classificado como PEP deve ter a abertura de sua conta sumariamente recusada, devendo os controles reforçados restringir-se ao cliente de microcrédito.",
+      "d": "O procedimento de diligência simplificada dispensa a identificação do nome completo e do número de CPF do titular da conta de menor risco."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A Abordagem Baseada em Risco existe justamente para graduar os controles, aplicando diligência reforçada no alto risco e simplificada no baixo.",
+      "c": "A condição de PEP não impede a abertura de conta nem representa irregularidade; impõe apenas diligência reforçada e aprovação hierárquica superior.",
+      "d": "Mesmo na diligência simplificada, a identificação do nome e CPF é elemento mínimo indispensável."
+     }
+    },
+    {
+     "id": "cpa-rel-30-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a C. Conhecer o cliente e comunicar ao Coaf são etapas distintas do processo. A inconsistência entre o volume movimentado e a capacidade financeira aciona a etapa de análise interna, cabendo ao banco solicitar documentos que comprovem a origem do dinheiro; somente após a conclusão dessa análise que caracterizar a atipicidade/suspeita é que se realiza a comunicação ao Coaf em até 24 horas.</p><p>As alternativas A, B e D erram ao pular a etapa de análise técnica, prever apreensão imediata do dinheiro sem o devido processo ou adulterar o cadastro para ocultar alertas do monitoramento.</p>",
+     "enunciado": "<p>Um cliente com renda mensal cadastrada e comprovada de R$ 5.000,00 realizou um depósito em espécie de R$ 400.000,00 na sua conta corrente. O sistema de monitoramento gerou um alerta automático devido ao forte descompasso entre a movimentação financeira e a capacidade informada no cadastro. Diante desse cenário e do fluxo normativo das ações de KYC e PLD/FTP, a conduta correta e imediata da instituição deve ser:</p>",
+     "alternativas": {
+      "a": "Encerrar sumariamente a conta do cliente no mesmo dia e enviar os recursos para uma conta de depósitos judiciais da União.",
+      "b": "Efetuar imediatamente a comunicação ao Coaf sem realizar qualquer análise interna ou pedido de esclarecimentos, visto que a divergência gera reporte automático.",
+      "c": "Iniciar a análise pedindo esclarecimentos e comprovação da origem dos recursos, etapa que antecede a decisão de comunicar ao Coaf.",
+      "d": "Alterar unilateralmente a renda cadastrada do cliente no sistema para R$ 400.000,00 para anular o alerta do sistema e regularizar o cadastro."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "A divergência cadastral exige apuração prévia e não autoriza o encerramento imediato de conta com perdimento de bens para juízos federais.",
+      "b": "A detecção da inconsistência aciona a fase de análise técnica e a apuração dos dados; a comunicação de suspeita depende da conclusão dessa análise.",
+      "d": "Alterar fraudulentamente a renda do cliente para abafar o alerta do sistema constitui grave infração às regras de cadastro e monitoramento."
+     }
+    }
+   ],
+   "LGPD, sigilo bancário e proteção de dados do cliente": [
+    {
+     "id": "cpa-rel-31-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. Dados biométricos (como digitais e biometria facial) enquadram-se na categoria de dados pessoais sensíveis. Na estrutura da LGPD, o controlador é quem toma as decisões sobre o tratamento de dados (ex: o banco) e o operador é quem realiza o tratamento em nome do controlador (ex: empresa terceirizada de nuvem).</p><p>As alternativas A, B e D erram ao classificar dados anonimizados como dados pessoais, confundir a definição do encarregado com a do titular de dados ou atribuir poder sancionatório de fiscalização ao operador.</p>",
+     "enunciado": "<p>A Lei Geral de Proteção de Dados Pessoais (LGPD - Lei 13.709/2018) estabelece os conceitos fundamentais sobre o tratamento de dados de pessoas naturais. A respeito das definições normativas de dados pessoais e dos papéis dos agentes envolvidos, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "O encarregado é a pessoa física titular dos dados cadastrais que exige a portabilidade das suas informações para outro banco.",
+      "b": "O dado anonimizado continua sendo classificado como dado pessoal e sujeita-se a todas as restrições da lei, independentemente de reversão.",
+      "c": "Dado sensível inclui biometria e saúde, o controlador decide sobre o tratamento e o operador trata os dados em nome dele.",
+      "d": "O operador é o órgão público federal responsável por aplicar sanções administrativas de multa simples a instituições financeiras."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "O titular é o cliente e dono dos dados; o encarregado (DPO) é o canal de comunicação entre a instituição, os titulares e a ANPD.",
+      "b": "O dado anonimizado perde a associação ao indivíduo e sai do alcance da LGPD, salvo se o processo de anonimização puder ser revertido.",
+      "d": "Quem aplica sanções administrativas é a ANPD (Autoridade Nacional de Proteção de Dados); o operador apenas trata dados em nome do controlador."
+     }
+    },
+    {
+     "id": "cpa-rel-31-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. A LGPD e o sigilo bancário (LC 105/2001) atuam em camadas paralelas e complementares: a LGPD protege os dados pessoais e a LC 105/2001 garante o segredo sobre as operações financeiras (ativas, passivas e serviços). Quebrar o sigilo bancário fora das exceções legais constitui crime e não mera falta administrativa.</p><p>As alternativas B, C e D erram ao declarar a revogação do sigilo bancário pela LGPD, desqualificar o caráter criminoso da quebra ilícita de sigilo ou proibir a revelação autorizada expressamente pelo cliente.</p>",
+     "enunciado": "<p>No mercado financeiro, a proteção de dados pessoais sob a LGPD (Lei 13.709/2018) coexiste com as regras de preservação do sigilo bancário trazidas pela Lei Complementar 105/2001. Ao comparar o regramento dessas duas legislações, verifica-se que:</p>",
+     "alternativas": {
+      "a": "A LGPD regula o tratamento de dados pessoais, e a LC 105/2001 cuida do sigilo das operações financeiras, cuja quebra ilícita é crime.",
+      "b": "A LGPD revogou integralmente a Lei Complementar 105/2001, extinguindo o dever de sigilo bancário para operações ativas e passivas.",
+      "c": "A quebra de sigilo bancário fora das hipóteses legais é classificada como infração administrativa leve, sendo isenta de sanção penal.",
+      "d": "A revelação de dados financeiros autorizada expressamente pelo interessado constitui violação criminosa de sigilo bancário."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A LGPD e a LC 105/2001 são duas camadas normativas que convivem; a LGPD não revogou o sigilo bancário.",
+      "c": "A quebra de sigilo bancário fora das hipóteses legais e autorizações é crime, sujeito à pena de reclusão de um a quatro anos e multa.",
+      "d": "A revelação prestada mediante consentimento expresso do interessado está expressamente prevista na lei como hipótese que não viola o sigilo."
+     }
+    },
+    {
+     "id": "cpa-rel-31-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. Por ser dado sensível, a biometria não pode ser tratada com base no legítimo interesse do controlador. A LGPD prevê hipótese própria: garantia da prevenção à fraude e à segurança do titular nos processos de identificação e autenticação de cadastro em sistemas eletrônicos. Havendo incidente de segurança que acarrete risco ou dano relevante (como dados de senhas/transações), o controlador deve comunicar a ANPD e os titulares em até três dias úteis do conhecimento.</p><p>As alternativas B, C e D erram ao indicar a base de legítimo interesse para biometria, estipular prazo de 30 dias para notificação ou isentar o banco de comunicar vazamentos de senhas e dados financeiros.</p>",
+     "enunciado": "<p>Uma instituição financeira colheu a biometria facial de seus clientes para autenticação no aplicativo do celular e enfrentou um incidente de segurança que afetou a base de dados de senhas e transações de correntistas. A respeito da base legal exigida pela LGPD para o tratamento dessa biometria e do prazo para comunicação do incidente à ANPD, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "A biometria funda-se na prevenção à fraude e segurança do titular, e o incidente relevante é comunicado em até três dias úteis.",
+      "b": "A biometria apoia-se no legítimo interesse do controlador, devendo o vazamento de dados de transações ser comunicado em 30 dias.",
+      "c": "O tratamento de biometria bancária exige consentimento revogável a qualquer momento sem exceções, e incidentes não requerem aviso à ANPD.",
+      "d": "A comunicação de incidentes à ANPD é dispensada caso o vazamento envolva dados financeiros e senhas de acesso de pessoas naturais."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Dados sensíveis (como biometria) não admitem a base legal do legítimo interesse, e o prazo para comunicar incidentes relevantes à ANPD é de três dias úteis.",
+      "c": "A biometria para cadastro e segurança em sistemas eletrônicos fundamenta-se na garantia da prevenção à fraude, e incidentes graves devem ser comunicados.",
+      "d": "Incidentes de segurança que acarretem risco ou dano relevante (como vazamento de dados financeiros) devem ser obrigatoriamente comunicados à ANPD e aos titulares."
+     }
+    },
+    {
+     "id": "cpa-rel-31-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. O direito de eliminação trazido pela LGPD ressalva expressamente a conservação dos dados para o cumprimento de obrigação legal ou regulatória pelo controlador. Na atividade bancária, as normas de prevenção à lavagem de dinheiro exigem a guarda dos cadastros e registros (cinco anos pela Lei 9.613/1998 e dez anos pela norma do BCB), não podendo o cliente exigir a exclusão dessas informações de conformidade.</p><p>As alternativas A, C e D erram ao tratar o direito de eliminação como absoluto, cobrar taxas pelo atendimento aos direitos da LGPD ou autorizar a destruição de históricos exigidos pelo Bacen.</p>",
+     "enunciado": "<p>Um ex-cliente comparece à agência bancária um mês após ter encerrado formalmente sua conta corrente e exige a exclusão imediata e definitiva de todos os seus dados pessoais e de seu histórico de transações mantidos pelo banco, invocando o seu direito de eliminação sob a LGPD. O gerente de atendimento deve responder que o pedido:</p>",
+     "alternativas": {
+      "a": "Deve ser prontamente cumprido em 24 horas, sendo o banco obrigado a apagar todo o histórico de operações em atendimento ao direito absoluto do titular.",
+      "b": "Não pode ser atendido quanto aos registros de guarda obrigatória, pois o dever legal de conservação de PLD se sobrepõe ao pedido.",
+      "c": "Só será atendido mediante o pagamento pelo ex-cliente de uma taxa de ressarcimento de custos operacionais de exclusão de banco de dados.",
+      "d": "É procedente e autoriza a eliminação imediata de dados exigidos pelas normas de prevenção à lavagem de dinheiro da CVM e do Banco Central."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "O direito de eliminação de dados não é absoluto e cessa diante do cumprimento de obrigações legais e regulatórias mantidas pelo banco.",
+      "c": "O exercício dos direitos dos titulares previstos na LGPD não é condicionado ao pagamento de taxas de serviço ou custas à instituição.",
+      "d": "A obrigação legal de guarda (cinco anos na Lei 9.613/1998 e dez anos na Circular BCB 3.978/2020) impede a eliminação das informações de PLD."
+     }
+    },
+    {
+     "id": "cpa-rel-31-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a C. Sob a LGPD, a confirmação da existência de tratamento e o acesso aos dados podem ser prestados imediatamente em formato simplificado ou por declaração clara e completa no prazo de até 15 dias contados do pedido. Quanto às sanções administrativas da ANPD, a multa simples limita-se a até 2% do faturamento da pessoa jurídica ou conglomerado no Brasil no último exercício (excluídos os tributos), com teto de R$ 50 milhões por infração.</p><p>As alternativas A, B e D erram ao fixar prazos incorretos de 30 ou 60 dias, estender o cálculo da multa ao faturamento global sem teto, negar acesso por sigilo ou atribuir à ANPD poder de decretação de prisão civil/penal.</p>",
+     "enunciado": "<p>Uma corretora de valores recebeu um requerimento de um investidor solicitando a confirmação da existência de tratamento de seus dados e a cópia completa de suas informações cadastrais. Paralelamente, o diretor da instituição analisa as penalidades administrativas cabíveis que a Autoridade Nacional de Proteção de Dados (ANPD) pode aplicar em caso de infração às regras de tratamento. Diante dos prazos de resposta ao titular e dos limites da sanção de multa simples sob a LGPD, a corretora deve observar que:</p>",
+     "alternativas": {
+      "a": "A confirmação de tratamento deve ser negada ao investidor por força de sigilo e a multa da ANPD limita-se ao valor único fixo de R$ 100.000,00 por contrato.",
+      "b": "A resposta com a declaração completa deve ocorrer em no máximo 30 dias úteis, e a multa da ANPD calcula-se sobre o faturamento mundial do grupo, sem teto.",
+      "c": "A declaração completa é prestada em até 15 dias, e a multa da ANPD limita-se a 2% do faturamento no Brasil, com teto de R$ 50 milhões.",
+      "d": "O acesso aos dados pelo titular pode ser fornecido em até 60 dias, cabendo à ANPD a prerrogativa de decretar a prisão preventiva dos administradores da corretora."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "O titular tem direito de obter a confirmação do tratamento, e a multa da ANPD alcança até 2% do faturamento no Brasil.",
+      "b": "O prazo regulatório de resposta com declaração completa é de até 15 dias (e não 30 dias úteis), e a multa calcula-se sobre o faturamento no Brasil, com teto de R$ 50 milhões por infração.",
+      "d": "O prazo para prestação da declaração completa é de até 15 dias, e a ANPD possui competência estritamente administrativa, não decretando prisões."
+     }
+    }
+   ],
+   "Crimes e ilícitos contra o mercado de capitais": [
+    {
+     "id": "cpa-rel-32-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. A Lei 6.385/1976 prevê pena de reclusão para a manipulação de mercado (1 a 8 anos) e para o uso indevido de informação privilegiada (1 a 5 anos). Por sua vez, o exercício irregular de cargo, profissão ou atividade no mercado de capitais é apenado com detenção de 6 meses a 2 anos (e multa).</p><p>As alternativas A, B e D erram ao atribuir reclusão de até 8 anos ao exercício irregular de atividade, negar a tipificação penal da manipulação de mercado ou isentar quem repassa informação privilegiada a terceiros.</p>",
+     "enunciado": "<p>A Lei 6.385/1976 tipifica os crimes cometidos contra o mercado de capitais no Brasil. A respeito das condutas criminosas e das respectivas penas privativas de liberdade previstas na legislação, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "A manipulação de mercado é classificada como infração administrativa exclusiva da CVM, não sujeitando o infrator a qualquer pena de reclusão no âmbito penal.",
+      "b": "O exercício irregular de profissão ou cargo no mercado de capitais é apenado com reclusão de 1 a 8 anos, equivalente à pena da manipulação de mercado.",
+      "c": "O uso indevido de informação privilegiada e a manipulação de mercado são apenados com reclusão, e o exercício irregular, com detenção.",
+      "d": "Repassar informação privilegiada a terceiros sem negociar ativos diretamente isenta o agente de responsabilidade penal por ausência de ganho financeiro direto."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "A manipulação de mercado é expressamente tipificada como crime (reclusão de 1 a 8 anos) na Lei 6.385/1976.",
+      "b": "O exercício irregular de atividade é apenado com detenção de 6 meses a 2 anos, e não com reclusão de 1 a 8 anos.",
+      "d": "Repassar a informação relevante não divulgada a terceiros incorre na mesma pena do crime de insider trading, mesmo que o repassador não opere."
+     }
+    },
+    {
+     "id": "cpa-rel-32-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. O churning diferencia-se por ter como vítima direta o próprio cliente, cuja carteira é girada de forma injustificada para gerar corretagem e comissões ao intermediário. Já o front running ocorre quando o corretor/operador executa ordens para conta própria antes de inserir a ordem de grande porte de um cliente, lucrando com a movimentação de preços resultante.</p><p>As alternativas A, C e D erram ao trocar os conceitos com spoofing, tratar as práticas como sinônimas ou considerar o front running uma prática permitida.</p>",
+     "enunciado": "<p>Um profissional de compliance de uma corretora revisa a lista de condutas operacionais vedadas pelas normas da CVM. Ao comparar as condutas conhecidas como \"churning\" e \"front running\", verifica-se que:</p>",
+     "alternativas": {
+      "a": "O front running atinge a carteira do próprio cliente para gerar taxas de administração, enquanto o churning é a inserção e cancelamento imediato de ordens falsas no livro de ofertas.",
+      "b": "O churning é o giro excessivo da carteira do cliente para gerar corretagem, e o front running é a antecipação, em conta própria, à ordem pendente do cliente.",
+      "c": "O churning e o front running são termos sinônimos utilizados pela CVM para descrever a manipulação de mercado por meio de robôs de alta frequência.",
+      "d": "O front running é a única prática permitida em mesa de renda variável, ao passo que o churning exige confissão de culpa perante a CVM."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "O giro excessivo da carteira para gerar corretagem é o churning, e a inserção de ordens falsas para cancelar em seguida é o spoofing.",
+      "c": "Churning refere-se ao giro excessivo de carteira e front running é a antecipação ilícita perante ordem pendente do cliente.",
+      "d": "O front running é severamente proibido no mercado por caracterizar uso indevido de ordem pendente para obter vantagem ilícita."
+     }
+    },
+    {
+     "id": "cpa-rel-32-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. O diretor é insider primário e, por ter o dever funcional de manter sigilo, sua pena é aumentada em um terço. As esferas penal e administrativa são independentes e correm em separado. Além disso, a celebração de termo de compromisso com a CVM encerra o processo administrativo sem implicar confissão de culpa ou reconhecimento de ilicitude.</p><p>As alternativas A, C e D erram ao exigir confissão de culpa no termo de compromisso, isentar o insider secundário que opera ou vincular a punição da CVM à absolvição criminal.</p>",
+     "enunciado": "<p>Um diretor estatutário de uma empresa aberta tomou conhecimento, em reunião confidencial, de que a companhia fechou um contrato bilionário de venda de ativos e passou a informação a seu irmão, que comprou ações da empresa antes do fato relevante. A CVM instaurou Processo Administrativo Sancionador e o Ministério Público ofereceu denúncia criminal. A respeito da tipificação do crime, dos reflexos nas esferas penal e administrativa e do termo de compromisso, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "A celebração de termo de compromisso na CVM exige obrigatoriamente a confissão de culpa penal e extingue a ação penal instaurada pelo Ministério Público.",
+      "b": "O diretor é insider primário e tem pena aumentada em um terço, as esferas são independentes e o termo de compromisso não implica confissão.",
+      "c": "O irmão do diretor é isento de sanções por ser insider secundário sem vínculo profissional com a companhia, respondendo isoladamente o diretor estatutário.",
+      "d": "Eventual absolvição criminal do diretor por insuficiência de provas cancela automaticamente as sanções administrativas já aplicadas pela CVM."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "O termo de compromisso encerra o processo na CVM sem implicar confissão de culpa nem reconhecimento de ilicitude, não extinguindo a ação penal.",
+      "c": "O insider secundário que recebe a informação privilegiada e negocia papéis responde pelo crime de uso indevido de informação privilegiada.",
+      "d": "As esferas penal e administrativa são independentes; a absolvição criminal por falta de prova não anula as sanções administrativas aplicadas pela CVM."
+     }
+    },
+    {
+     "id": "cpa-rel-32-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. A inserção de ordens de volume expressivo sem a intenção de executá-las, com cancelamento logo em seguida para simular pressão compradora ou vendedora, é a conduta ilícita denominada spoofing. Ela gera condições artificiais de oferta/demanda, enquadrando-se nas vedações expressas da Resolução CVM 62/2022.</p><p>As alternativas A, B e C erram ao considerar a fraude uma prática legítima, confundi-la com churning ou tratá-la como suitability reverso permitido.</p>",
+     "enunciado": "<p>Um operador de mercado estruturou uma operação de alta frequência em que inseria repetidamente ordens de compra de valor expressivo no livro de ofertas para simular forte demanda, cancelando todas essas ordens segundos antes de sua execução para vender suas ações no topo da cotação. Segundo a Resolução CVM 62 e as normas regulamentares do mercado de capitais, essa conduta e sua classificação técnica correspondem a:</p>",
+     "alternativas": {
+      "a": "Suitability reverso, sendo permitida desde que realizada por investidores profissionais registrados na CVM.",
+      "b": "Market making, configurando prática legítima de provimento de liquidez para os investidores qualificados da mesa.",
+      "c": "Churning compulsório, caracterizado como falta trabalhista grave sem impacto na formação de preços de mercado.",
+      "d": "Spoofing, configurando criação de condições artificiais de demanda e oferta vedada pela Resolução CVM 62."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "A manipulação do livro de ofertas por spoofing é prática ilícita proibida para qualquer categoria de investidor no mercado de capitais.",
+      "b": "A inserção de ordens falsas sem intenção de executá-las para manipular o livro não é provimento legítimo de liquidez, constituindo ilícito grave.",
+      "c": "A conduta descrita é o spoofing (ofertas falsas no livro para enganar o mercado), e não churning (giro de carteira de cliente)."
+     }
+    },
+    {
+     "id": "cpa-rel-32-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a D. Os parâmetros de multa previstos pela CVM na Lei 6.385/1976 estabelecem que prevalecerá sempre o MAIOR valor entre: I) R$ 50 milhões; II) o dobro do valor da operação irregular; III) três vezes o montante da vantagem econômica (3 x R$ 10 mi = R$ 30 mi); ou IV) o dobro do prejuízo causado aos investidores (2 x R$ 30 mi = R$ 60 mi). Assim, o maior parâmetro legal resulta em R$ 60 milhões.</p><p>As alternativas A, B e C erram ao engessar a multa em R$ 50 milhões, utilizar o triplo do prejuízo em vez do dobro ou aplicar o teto da Lei de Lavagem de Dinheiro à CVM.</p>",
+     "enunciado": "<p>A CVM concluiu um Processo Administrativo Sancionador contra um grupo de operadores que praticou manipulação de preços e operou de forma fraudulenta, gerando um prejuízo comprovado de R$ 30 milhões aos investidores, enquanto os infratores obtiveram uma vantagem econômica indevida de R$ 10 milhões no esquema. Ao calcular o valor teto aplicável para a sanção de multa simples no processo administrativo, a CVM deve fixar a multa considerando que:</p>",
+     "alternativas": {
+      "a": "A multa administrativa da CVM é de no máximo R$ 20 milhões por ser o mesmo teto fixado para o processo administrativo da Lei de Lavagem de Dinheiro.",
+      "b": "O teto máximo absoluto da multa administrativa é engessado em R$ 50 milhões, sendo proibido aplicar valor superior mesmo que o prejuízo seja maior.",
+      "c": "O valor da multa é limitado rigidamente a três vezes o prejuízo apurado pelos investidores, totalizando R$ 90 milhões como parâmetro único legal.",
+      "d": "Prevalece o maior valor entre os quatro parâmetros legais, e a multa pode chegar a R$ 60 milhões, o dobro do prejuízo dos investidores."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "O teto de R$ 20 milhões aplica-se à Lei de Lavagem de Dinheiro (Lei 9.613/1998), não sendo a regra de teto máximo da CVM.",
+      "b": "O valor de R$ 50 milhões não é um teto absoluto engessado; prevalece o maior entre os quatro parâmetros legais previstos na lei.",
+      "c": "O parâmetro relacionado ao prejuízo dos investidores calcula-se pelo dobro do prejuízo (e não o triplo)."
      }
     }
    ]
