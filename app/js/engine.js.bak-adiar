@@ -180,45 +180,6 @@ function calcPrazoConteudo(){
           diasCorridos:Math.round((pv-ini)/86400000)};
 }
 
-/* Quanto a data da prova precisa andar para os topicos dos dias perdidos
-   caberem. Espelha a regra de redistribuirTopicos: UM topico extra por dia de
-   conteudo livre (posicoes 0 a 4 do ciclo), a partir de hoje, pulando dia ja
-   estudado e dia que ja recebeu extra.
-
-   `vagas` conta so as vagas ate a Revisao Geral atual (getLimiteConteudo), que
-   e onde o conteudo novo pode entrar. Se elas bastam, `cabe` e true e a prova
-   nao precisa mudar. Se nao bastam, a caminhada continua adiante e a nova prova
-   e o ultimo dia de conteudo + 8, a mesma regra de calcPrazoConteudo: Revisao
-   Geral em +7, prova em +8.
-
-   Devolve null sem prova, sem inicio ou quando nao ha topico a recuperar. */
-function calcAdiamentoProva(missedKeys,hojeRef){
-  if(!STATE.inicio||!STATE.prova) return null;
-  let pendentes=0;
-  (missedKeys||[]).forEach(k=>{ pendentes+=getTopicosDiaBase(k).length; });
-  if(!pendentes) return null;
-  const hoje=hojeRef?parseDate(hojeRef):new Date(); hoje.setHours(0,0,0,0);
-  const lim=getLimiteConteudo();
-  let vagas=0, restam=pendentes, ultimo=null;
-  const d=new Date(hoje);
-  for(let guard=0;guard<1500&&restam>0;guard++){
-    const k=fmt(d);
-    const pos=getCicloPos(k);
-    if(pos>=0&&pos<=4&&!(STATE.dias[k]&&STATE.dias[k].percepcao)&&getExtrasDoDia(k).length===0){
-      if(lim&&d<lim) vagas++;
-      restam--; ultimo=k;
-    }
-    d.setDate(d.getDate()+1);
-  }
-  if(restam>0||!ultimo) return null;
-  const cabe=vagas>=pendentes;
-  const pv=parseDate(ultimo); pv.setDate(pv.getDate()+8);
-  const provaNova=cabe?STATE.prova:(fmt(pv)>STATE.prova?fmt(pv):STATE.prova);
-  const dias=Math.round((parseDate(provaNova)-parseDate(STATE.prova))/86400000);
-  return {topicos:pendentes,cabe,vagas,sobram:Math.max(0,pendentes-vagas),
-          provaAtual:STATE.prova,provaNova,dias,ultimoConteudo:ultimo};
-}
-
 /* Diagnostico de cobertura do edital.
    Responde a pergunta que o aluno nao tinha como fazer: "com esta data de prova
    e estas horas por dia, eu termino o edital?" Devolve tudo o que a UI precisa
@@ -353,8 +314,6 @@ function calcRevisoes(hojeRef){
   const hoje=hojeRef?parseDate(hojeRef):new Date(); hoje.setHours(0,0,0,0);
   const rev7=[], rev30=[];
   Object.entries(STATE.dias).forEach(([k,v])=>{
-    /* LEGADO, mas VIVO: a opção que criava dias `recuperado` saiu do modal em
-       05/09/2026, e quem usou antes disso tem esses dias salvos. Não remover.
     /* Dia RECUPERADO entra na fila de revisão mesmo sem nota. É o dia que o aluno
        não estudou e mandou para a revisão em vez de pular. Ele não tem percepcao
        de propósito: sem nota inventada, o conteúdo não conta como coberto no
@@ -1201,7 +1160,7 @@ function calcMedalhas(coberturaPct){
 
 /* ── Export para Node (testes). No navegador, as funções já são globais. ── */
 if(typeof module!=="undefined"&&module.exports){
-  module.exports={calcCoberturaEdital,calcAntecipacao,calcPrazoConteudo,calcAdiamentoProva,getLimiteConteudo,MIN_POR_TOPICO_H,
+  module.exports={calcCoberturaEdital,calcAntecipacao,calcPrazoConteudo,getLimiteConteudo,MIN_POR_TOPICO_H,
     fmt,parseDate,isDiaLivre,isDiaEstudo,getCicloPos,getNumRevisao,
     getMaterias,getTopicos,getTopicoDiaByKey,getTopicosDiaBase,getTopicosDoDia,
     getExtrasDoDia,getPrevNonFreeDay,isSimuladoDay,calcRevisoes,calcExpectedPerSubject,getTopicosFracos,buildAgendaSemanaICS,isProvaDay,isRevisaoGeralDay,isRetaFinalDay,

@@ -3466,10 +3466,7 @@ function redistribuirTopicos(missedKeys){
   if(!topicos.length) return 0;
   if(!STATE.extrasPorDia) STATE.extrasPorDia={};
   const hoje=new Date(); hoje.setHours(0,0,0,0);
-  /* O conteudo novo para na Revisao Geral, nao na vespera da prova: a ultima
-     semana e de treino. Antes o limite era a propria data da prova e topico
-     redistribuido caia dentro da reta final. */
-  const limite=getLimiteConteudo();
+  const limite=STATE.prova?parseDate(STATE.prova):null;
   let d=new Date(hoje), agendados=0, guard=0;
   while(topicos.length&&guard<180){
     const k=fmt(d);
@@ -3899,13 +3896,7 @@ function renderDiaNormal(dia,idx,key,est,isHoje,isPast,nomeDia){
       <div style="padding:18px 16px;text-align:center;color:#cbd5e1;font-size:.82rem;">—</div>
     </div>`;
   }
-  /* LEGADO, mas VIVO. A opção "Mandar para o Retorno Técnico" saiu do modal em
-     05/09/2026, então nenhum dia novo nasce com `recuperado`. Quem usou a opção
-     antes disso tem dias assim salvos no navegador e na nuvem, e eles precisam
-     continuar desenhando certo. Não apague este ramo, nem o tratamento de
-     `recuperado` em engine.calcRevisoes, getMissedDays e isSemanaCompleta.
-
-     Dia recuperado: o conteúdo NÃO recebeu nota. O dia só foi marcado para que
+  /* Dia recuperado: o conteúdo NÃO recebeu nota. O dia só foi marcado para que
      o motor mande o tópico para a fila de revisão e ele reapareça no Retorno
      Técnico, onde o aluno dá a nota de verdade. Cor própria para o aluno
      reconhecer de longe que aquele dia não foi estudado, foi recuperado. */
@@ -4444,7 +4435,6 @@ setInterval(setTopbarDate,60000);
 /* ── SISTEMA DE RECUPERAÇÃO ── */
 let _recoveryOption = null;
 let _missedDays = [];
-let _adiamento = null;   // medida de calcAdiamentoProva, calculada ao abrir o modal
 
 /* Próximo dia de Retorno Técnico (posição 5 do ciclo 5+1+1) a partir de hoje.
    Fallback: próximo sábado do calendário, só se nenhum RT existir no horizonte. */
@@ -4474,8 +4464,6 @@ function getMissedDays(hojeRef){
   return missed;
 }
 
-const REC_OPCOES=["redistribuir","adiar","pular"];
-
 function checkRecovery(){
   const hoje=fmt(new Date());
   if(STATE.recoveryShownDate===hoje) return; // já mostrou hoje
@@ -4483,60 +4471,15 @@ function checkRecovery(){
   if(missed.length===0) return;
   _missedDays=missed;
   _recoveryOption=null;
-  try{ _adiamento=calcAdiamentoProva(missed); }catch(e){ _adiamento=null; }
   document.getElementById("recoveryMissedBar").innerHTML=
     `⚠️ <strong>${missed.length} dia${missed.length>1?"s":""} ${missed.length>1?"úteis":"útil"} sem registro</strong> (${fmtDateRange(missed)})`;
-  renderOpcoesRecuperacao();
   // Reset visual das opções
-  REC_OPCOES.forEach(o=>{
+  ["redistribuir","pular","sabado"].forEach(o=>{
     document.getElementById("recOpt-"+o).classList.remove("selected");
   });
   const btn=document.getElementById("btnAplicarRecovery");
   btn.disabled=true; btn.textContent="Escolha uma opção acima";
   document.getElementById("recoveryModal").classList.add("open");
-}
-
-/* Escreve nas opções o que de fato vai acontecer, com número e data.
-   O aluno decide melhor vendo o preço de cada saída antes de clicar. */
-function renderOpcoesRecuperacao(){
-  const a=_adiamento;
-  const dTit=document.getElementById("recTit-redistribuir");
-  const dDesc=document.getElementById("recDesc-redistribuir");
-  const optAdiar=document.getElementById("recOpt-adiar");
-  const aTit=document.getElementById("recTit-adiar");
-  const aDesc=document.getElementById("recDesc-adiar");
-  if(!dDesc||!optAdiar) return;
-
-  if(a){
-    const n=a.topicos, so=a.sobram;
-    const ate=_dataBR(a.ultimoConteudo);
-    const alvo=n===1?"O tópico perdido entra":`Os ${n} tópicos perdidos entram`;
-    dTit.textContent="Intensificar os próximos dias";
-    if(a.cabe){
-      dDesc.textContent=`${alvo} nos próximos dias, um por dia, até ${ate}. `
-        +`São cerca de 45 min a mais por dia e a data da prova continua a mesma.`;
-    } else {
-      dDesc.textContent=`${alvo} um por dia, mas ${so===1?"1 não cabe":so+" não cabem"} antes da `
-        +`Revisão Geral e ${so===1?"vai":"vão"} para a fila do Retorno Técnico. `
-        +`A data da prova continua a mesma.`;
-    }
-  } else {
-    dTit.textContent="Intensificar os próximos dias";
-    dDesc.textContent="Os tópicos perdidos entram nos próximos dias, um por dia, e a data da prova continua a mesma.";
-  }
-
-  // Adiar só faz sentido quando o conteúdo NÃO cabe no prazo atual.
-  // Cabendo, a opção seria um clique que não muda nada.
-  if(a&&!a.cabe){
-    optAdiar.hidden=false;
-    aTit.textContent=`Adiar a prova para ${_dataBR(a.provaNova)}`;
-    aDesc.textContent=`A prova anda ${a.dias} dia${a.dias>1?"s":""} e `
-      +`${a.topicos===1?"o tópico perdido cabe":"os "+a.topicos+" tópicos perdidos cabem"} `
-      +`sem apertar o ritmo. Escolha esta opção se ainda não agendou o exame.`;
-  } else {
-    optAdiar.hidden=true;
-    if(_recoveryOption==="adiar") _recoveryOption=null;
-  }
 }
 
 function fmtDateRange(keys){
@@ -4548,15 +4491,12 @@ function fmtDateRange(keys){
 
 function selectRecovery(option){
   _recoveryOption=option;
-  REC_OPCOES.forEach(o=>{
+  ["redistribuir","pular","sabado"].forEach(o=>{
     document.getElementById("recOpt-"+o).classList.toggle("selected",o===option);
   });
   const btn=document.getElementById("btnAplicarRecovery");
   btn.disabled=false;
-  const labels={
-    "redistribuir":"\u26A1 Intensificar os pr\u00F3ximos dias",
-    "adiar":_adiamento?`\uD83D\uDCC5 Adiar a prova para ${_dataBR(_adiamento.provaNova)}`:"\uD83D\uDCC5 Adiar a prova",
-    "pular":"\u27A1\uFE0F Pular e seguir em frente"};
+  const labels={"redistribuir":"\u2696\uFE0F Redistribuir t\u00F3picos","pular":"\u27A1\uFE0F Pular e seguir em frente","sabado":"\u26A1\uFE0F Agendar no s\u00E1bado"};
   btn.textContent=labels[option]||"Aplicar recupera\u00E7\u00E3o";
 }
 
@@ -4567,26 +4507,39 @@ function applyRecovery(){
     if(n>0){ STATE.redistribuindo=true; STATE.diasRedistribuir=_missedDays.length; }
     // marca a origem: evita re-redistribuição e permite exibir "Data transferida"
     _missedDays.forEach(k=>{ if(!STATE.dias[k]) STATE.dias[k]={}; STATE.dias[k].transferido=true; });
-  } else if(_recoveryOption==="adiar"){
-    /* ADIAR A PROVA. O aluno não aperta o ritmo: a data alvo anda o suficiente
-       para o conteúdo perdido caber e só então a redistribuição roda.
-       A ORDEM IMPORTA: redistribuirTopicos lê getLimiteConteudo(), que é
-       derivado de STATE.prova. Redistribuir antes de mover a data faria o
-       conteúdo esbarrar no limite antigo. */
-    if(_adiamento&&!_adiamento.cabe) STATE.prova=_adiamento.provaNova;
-    const n=redistribuirTopicos(_missedDays);
-    if(n>0){ STATE.redistribuindo=true; STATE.diasRedistribuir=_missedDays.length; }
-    _missedDays.forEach(k=>{ if(!STATE.dias[k]) STATE.dias[k]={}; STATE.dias[k].transferido=true; });
   } else if(_recoveryOption==="pular"){
     _missedDays.forEach(k=>{ if(!STATE.dias[k]) STATE.dias[k]={}; STATE.dias[k].skipped=true; });
+  } else if(_recoveryOption==="sabado"){
+    /* MANDAR PARA O RETORNO TÉCNICO, em um clique.
+       O dia recebe a marca `recuperado` e NÃO recebe nota. É a diferença que
+       importa: o motor passa a puxar aquele conteúdo para as revisões de 7 e 30
+       dias (engine.calcRevisoes trata `recuperado` como elegível), mas nada é
+       contado como estudado. A cobertura do edital e o domínio por matéria leem
+       `percepcao`, que aqui não existe, então nenhum número mente.
+       Os tópicos também vão para o card do Retorno Técnico com o vínculo de
+       origem, e é lá que o aluno dá a nota de verdade quando estudar. */
+    const itens=[];
+    _missedDays.forEach(k=>{
+      const tops=getTopicosDiaBase(k);
+      if(!tops.length) return;
+      if(!STATE.dias[k]) STATE.dias[k]={};
+      STATE.dias[k].recuperado=true;
+      tops.forEach((t,ti)=>{
+        if(t) itens.push({mat:t.mat,top:t.top,key:k,topIdx:tops.length>1?ti:null});
+      });
+    });
+    if(itens.length){
+      /* Objeto com `key` e `topIdx`, e não texto solto. Era isto que faltava: sem
+         o vínculo, o card do Retorno Técnico caía no ramo de compatibilidade e
+         desenhava o item sem estrela e sem onde registrar o exercício. */
+      STATE.recuperacao=[...(STATE.recuperacao||[]),...itens];
+      STATE.recuperacaoData=fmt(getProximoRetornoTecnico());
+    }
   }
   STATE.recoveryShownDate=fmt(new Date());
   save();
   document.getElementById("recoveryModal").classList.remove("open");
   renderTudo();
   navTo("hoje");
-  showToast(_recoveryOption==="adiar"&&_adiamento&&!_adiamento.cabe
-    ? `\u2705 Prova adiada para ${_dataBR(_adiamento.provaNova)} e conte\u00FAdo redistribu\u00EDdo.`
-    : _recoveryOption==="redistribuir" ? "\u2705 Conte\u00FAdo perdido redistribu\u00EDdo nos pr\u00F3ximos dias."
-    : "\u2705 Recupera\u00E7\u00E3o aplicada!");
+  showToast("\u2705 Recupera\u00E7\u00E3o aplicada!");
 }
