@@ -119,8 +119,6 @@ const ACTIONS={
   abrirConteudo:d=>abrirConteudo(d.mat,d.top),
   voltarDoConteudo:()=>navTo(_conteudoVoltarPara||"cronograma"),
   limparBuscaConteudo:()=>limparBuscaConteudo(),
-  toggleMateria:d=>toggleMateria(d.i),
-  toggleTodasMaterias:()=>toggleTodasMaterias(),
   // Menu de exercícios
   exToggleNivel:d=>exToggleNivel(d.nivel),
   exToggleTopico:d=>exToggleTopico(d.i),
@@ -3039,27 +3037,18 @@ function renderMaterias(){
     const topsHtml=tops.map(t=>chip(m.nome,t)).join("");
     const nTexto=tops.filter(t=>comTexto(m.nome,t)).length;
     const selo=nTexto?`<span class="mat-selo" title="Tópicos desta matéria com texto publicado">📖 ${nTexto} de ${tops.length}</span>`:"";
-    /* Resumo que substitui a lista quando a matéria está fechada: o aluno
-       precisa saber o tamanho da matéria antes de decidir abrir. */
-    const nAval=tops.filter(x=>{
-      const inf=agenda[_normTexto(m.nome)+"|"+_normTexto(x)];
-      return inf&&inf.percepcao;
-    }).length;
-    const resumo=`${tops.length} tópico${tops.length===1?"":"s"}`+(nAval?` · ${nAval} já avaliado${nAval===1?"":"s"}`:"");
-    return`<div class="mat-item" data-busca="${esc(m.nome.toLowerCase())}" data-i="${i}">
-      <button type="button" class="mat-item-header" data-action="toggleMateria" data-i="${i}" aria-expanded="false" aria-controls="matSubs${i}">
-        <span class="mat-item-left">
-          <span class="mat-num">${String(i+1).padStart(2,"0")}</span>
-          <span class="mat-item-txt"><span class="mat-nome">${m.nome}${selo}</span><span class="mat-resumo">${resumo}</span></span>
-        </span>
-        <span class="mat-item-right">
-          <span class="mat-stat"><span class="mat-stat-label">Peso</span><span class="mat-stat-val">${m.peso}%</span></span>
-          <span class="mat-stat"><span class="mat-stat-label">Questões</span><span class="mat-stat-val">${questoes}</span></span>
-          <span class="mat-stat"><span class="mat-stat-label">Segurança</span><span class="mat-stat-val" style="color:${semConf?"var(--gray-400)":confColor}${semConf?";font-size:.7rem;font-weight:600":""}">${confLabel}</span></span>
-          <span class="mat-chevron" aria-hidden="true">⌄</span>
-        </span>
-      </button>
-      <div class="mat-subs" id="matSubs${i}" hidden><ul>${topsHtml}</ul></div>
+    return`<div class="mat-item" data-busca="${esc(m.nome.toLowerCase())}">
+      <div class="mat-item-header">
+        <div class="mat-item-left">
+          <div class="mat-num">${String(i+1).padStart(2,"0")}</div>
+          <div style="flex:1;min-width:0"><div class="mat-nome">${m.nome}${selo}</div><div class="mat-subs"><ul>${topsHtml}</ul></div></div>
+        </div>
+        <div class="mat-item-right">
+          <div class="mat-stat"><span class="mat-stat-label">Peso</span><span class="mat-stat-val">${m.peso}%</span></div>
+          <div class="mat-stat"><span class="mat-stat-label">Questões</span><span class="mat-stat-val">${questoes}</span></div>
+          <div class="mat-stat"><span class="mat-stat-label">Segurança</span><span class="mat-stat-val" style="color:${semConf?"var(--gray-400)":confColor}${semConf?";font-size:.7rem;font-weight:600":""}">${confLabel}</span></div>
+        </div>
+      </div>
     </div>`;
   }).join("");
 
@@ -3069,10 +3058,7 @@ function renderMaterias(){
       <input type="text" id="matBusca" data-input="filtrarConteudo" placeholder="Buscar matéria ou tópico" value="${esc(_buscaConteudo)}" autocomplete="off" spellcheck="false">
       <button type="button" class="mat-busca-x" data-action="limparBuscaConteudo" title="Limpar busca">✕</button>
     </div>
-    <div class="mat-busca-ajuda">
-      <span>${totalComTexto} de ${totalTop} tópicos já têm texto publicado. Toque na matéria para abrir a lista e no tópico com 📖 para ler.</span>
-      <button type="button" class="mat-todas" data-action="toggleTodasMaterias" id="matTodasBtn">Abrir todas</button>
-    </div>
+    <div class="mat-busca-ajuda">${totalComTexto} de ${totalTop} tópicos já têm texto publicado. Toque no tópico com 📖 para ler sem passar pelo cronograma.</div>
     <div class="mat-busca-vazio" id="matBuscaVazio" hidden>Nenhum tópico encontrado para essa busca.</div>`;
 
   grid.innerHTML=contextoBanner+buscaHtml+`<div class="mat-lista">${itensHtml}</div>`;
@@ -3087,22 +3073,6 @@ function renderMaterias(){
    aparece; senão, só os tópicos que casam, e a matéria some quando
    nenhum tópico dela sobrar. */
 let _buscaConteudo="";
-/* Matérias abertas no acordeão. Fechadas por padrão: a tela abre limpa e o
-   aluno escolhe onde entrar. Preferência só da sessão, não vai para o STATE. */
-let _matAbertas=new Set();
-function toggleMateria(i){
-  const k=String(i);
-  if(_matAbertas.has(k)) _matAbertas.delete(k); else _matAbertas.add(k);
-  aplicarBuscaConteudo();
-}
-function toggleTodasMaterias(){
-  const grid=document.getElementById("mapaGridMaterias");
-  if(!grid) return;
-  const itens=[...grid.querySelectorAll(".mat-item")];
-  const todasAbertas=itens.length>0&&itens.every(it=>_matAbertas.has(String(it.dataset.i)));
-  _matAbertas=todasAbertas?new Set():new Set(itens.map(it=>String(it.dataset.i)));
-  aplicarBuscaConteudo();
-}
 function _normBusca(s){
   return String(s??"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/\s+/g," ").trim();
 }
@@ -3112,7 +3082,6 @@ function aplicarBuscaConteudo(){
   const termo=_normBusca(_buscaConteudo);
   const itens=grid.querySelectorAll(".mat-item");
   let visiveis=0;
-  let abertas=0;
   itens.forEach(it=>{
     const nomeMat=_normBusca(it.dataset.busca||"");
     const matCasa=!termo||nomeMat.includes(termo);
@@ -3125,21 +3094,7 @@ function aplicarBuscaConteudo(){
     const mostra=!termo||matCasa||algum;
     it.hidden=!mostra;
     if(mostra) visiveis++;
-    /* Buscando, a matéria com resultado abre sozinha: senão o aluno digita
-       e não vê nada. Sem busca, vale o que ele abriu com o clique. */
-    const aberta=termo?(matCasa||algum):_matAbertas.has(String(it.dataset.i));
-    if(aberta) abertas++;
-    it.classList.toggle("aberta",aberta);
-    const subs=it.querySelector(".mat-subs");
-    if(subs) subs.hidden=!aberta;
-    const cab=it.querySelector(".mat-item-header");
-    if(cab) cab.setAttribute("aria-expanded",aberta?"true":"false");
   });
-  const btnTodas=document.getElementById("matTodasBtn");
-  if(btnTodas){
-    btnTodas.hidden=!!termo;
-    btnTodas.textContent=(itens.length&&abertas>=itens.length)?"Fechar todas":"Abrir todas";
-  }
   const vazio=document.getElementById("matBuscaVazio");
   if(vazio) vazio.hidden=visiveis>0;
   const x=grid.querySelector(".mat-busca-x");
