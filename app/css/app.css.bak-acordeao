@@ -803,28 +803,14 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
 
 /* MATÉRIAS */
 .mat-lista { display:flex; flex-direction:column; gap:.6rem; }
-.mat-item { background:var(--white); border:1px solid var(--gray-200); border-radius:var(--radius-md); transition:box-shadow .18s,border-color .18s; overflow:hidden; }
+.mat-item { background:var(--white); border:1px solid var(--gray-200); border-radius:var(--radius-md); padding:1rem 1.1rem; transition:box-shadow .18s,border-color .18s; }
 .mat-item:hover { box-shadow:0 2px 10px rgba(0,0,0,.07); border-color:var(--gray-300); }
-.mat-item.aberta { border-color:var(--green-border); }
-/* Cabeçalho é o botão que abre a matéria: ocupa a linha inteira para dar
-   um alvo grande no celular, e é <button> para funcionar no teclado. */
-.mat-item-header { display:flex; align-items:flex-start; gap:.9rem; justify-content:space-between; width:100%; padding:1rem 1.1rem; background:none; border:none; font-family:inherit; text-align:left; cursor:pointer; }
-.mat-item-header:hover { background:var(--gray-50); }
-.mat-item-header:focus-visible { outline:2px solid var(--green); outline-offset:-2px; }
-.mat-item-txt { display:block; flex:1; min-width:0; }
-.mat-resumo { display:block; font-size:.7rem; color:var(--gray-400); }
-.mat-chevron { font-size:.95rem; line-height:1; color:var(--gray-400); align-self:center; transition:transform .18s; flex-shrink:0; }
-.mat-item.aberta .mat-chevron { transform:rotate(180deg); color:var(--green); }
-.mat-subs { padding:0 1.1rem 1rem; }
-.mat-subs[hidden] { display:none !important; }
-.mat-todas { border:1px solid var(--gray-200); background:var(--white); color:var(--gray-600); border-radius:99px; padding:2px 11px; font-family:inherit; font-size:.7rem; font-weight:600; cursor:pointer; white-space:nowrap; flex-shrink:0; }
-.mat-todas:hover { border-color:var(--green); color:var(--green); }
-.mat-todas[hidden] { display:none !important; }
+.mat-item-header { display:flex; align-items:flex-start; gap:.9rem; justify-content:space-between; }
 .mat-item-left { display:flex; align-items:flex-start; gap:.75rem; flex:1; min-width:0; }
 .dfc-limpar { border:1px solid var(--gray-200); background:var(--white); border-radius:var(--radius-xs); padding:3px 7px; font-size:.75rem; cursor:pointer; color:var(--gray-400); transition:all .15s; }
 .dfc-limpar:hover { background:var(--red-pale); border-color:var(--red-mid); color:var(--red); }
 .mat-num { font-family:'Bricolage Grotesque',sans-serif; font-size:.72rem; font-weight:800; color:var(--gray-400); background:var(--gray-100); border-radius:var(--radius-xs); padding:2px 7px; white-space:nowrap; flex-shrink:0; margin-top:2px; }
-.mat-nome { display:block; font-family:'Bricolage Grotesque',sans-serif; font-size:.92rem; font-weight:700; color:var(--navy); margin-bottom:.15rem; }
+.mat-nome { font-family:'Bricolage Grotesque',sans-serif; font-size:.92rem; font-weight:700; color:var(--navy); margin-bottom:.3rem; }
 .mat-subs ul { list-style:none; display:flex; flex-wrap:wrap; gap:.3rem .4rem; padding:0; margin:0; }
 .mat-subs li { font-size:.73rem; color:var(--gray-500); display:flex; align-items:center; gap:4px; }
 /* Tópico do Conteúdo programático: chip. Com texto publicado vira botão
@@ -852,15 +838,14 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
 .mat-busca input::placeholder { color:var(--gray-400); }
 .mat-busca-x { border:none; background:var(--gray-100); color:var(--gray-500); border-radius:99px; width:22px; height:22px; line-height:1; cursor:pointer; font-size:.7rem; flex-shrink:0; }
 .mat-busca-x:hover { background:var(--red-pale); color:var(--red); }
-.mat-busca-ajuda { display:flex; align-items:center; gap:.6rem; justify-content:space-between; font-size:.72rem; color:var(--gray-400); margin:0 .2rem .9rem; }
+.mat-busca-ajuda { font-size:.72rem; color:var(--gray-400); margin:0 .2rem .9rem; }
 .mat-busca-vazio { font-size:.8rem; color:var(--gray-500); background:var(--gray-50); border:1px dashed var(--gray-300); border-radius:var(--radius-md); padding:1rem; text-align:center; margin-bottom:.9rem; }
 /* No celular a matéria empilha: cabeçalho em coluna, um tópico por linha.
    Sem isto os chips ficam espremidos entre o número da matéria e a coluna
    de peso/questões, e cada nome quebra letra a letra. */
 @media (max-width:720px){
   .mat-item-header { flex-direction:column; gap:.7rem; }
-  .mat-item-right { width:100%; justify-content:space-between; gap:.5rem; align-items:center; }
-  .mat-busca-ajuda { flex-direction:column; align-items:flex-start; gap:.4rem; }
+  .mat-item-right { width:100%; justify-content:space-between; gap:.5rem; }
   .mat-subs ul { flex-direction:column; align-items:stretch; gap:.35rem; }
   .mat-top { width:100%; justify-content:flex-start; }
   .mat-top .mt-nome { flex:1; min-width:0; }
