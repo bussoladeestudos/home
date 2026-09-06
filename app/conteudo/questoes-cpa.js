@@ -1,5 +1,5 @@
 /* GERADO por outputs/questoes_para_js.py. NAO editar a mao.
-   Fonte: _conteudo/cpa/questoes/**.yaml  ·  370 questoes em 74 topicos
+   Fonte: _conteudo/cpa/questoes/**.yaml  ·  410 questoes em 82 topicos
    Para mudar uma questao, edite o YAML e rode o script de novo. */
 window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
  "cpaAnbima": {
@@ -129,7 +129,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "simulado",
       "revisao"
      ],
-     "comentario": "<p>A resposta é a A. Banco Central, CVM, Susep e Previc são as quatro entidades supervisoras. Elas autorizam, fiscalizam, exigem informações, instauram processos administrativos e aplicam penalidades. A B e a C misturam ou apresentam órgãos normativos. A D inclui bancos e cooperativas, que estão no nível operador.</p><p>Regra de bolso: conselho fixa e disciplina; autarquia autoriza, fiscaliza e pune.</p>",
+     "comentario": "<p>A resposta é a A. Banco Central, CVM, Susep e Previc são as quatro entidades supervisoras. Elas autorizam, fiscalizam, exigem informações, instauram processos administrativos e aplicam penalidades.</p><p>As alternativas B, C e D misturam ou apresentam órgãos normativos, ou incluem bancos e cooperativas, que estão no nível operador.</p><p>Regra de bolso: conselho fixa e disciplina; autarquia autoriza, fiscaliza e pune.</p>",
      "enunciado": "<p>Em uma apresentação sobre o Sistema Financeiro Nacional, um instrutor explica que os supervisores são autarquias que colocam em prática as regras dos conselhos. Qual conjunto reúne apenas supervisores?</p>",
      "alternativas": {
       "a": "Banco Central, CVM, Susep e Previc.",
@@ -233,6 +233,934 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "b": "O registro é automático pelo envio eletrônico dos documentos e não representa avaliação da estratégia ou rentabilidade.",
       "c": "O funcionamento do fundo depende de registro prévio, embora sua concessão seja automática.",
       "d": "O registro não transforma a CVM em garantidora dos resultados do investimento."
+     }
+    }
+   ],
+   "Operadores: bancos, caixas econômicas e cooperativas de crédito": [
+    {
+     "id": "cpa-sfn-03-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. O banco comercial é definido pela autorização para captar depósito à vista e, por isso, cria moeda escritural por meio do efeito multiplicador do crédito.</p><p>A B confunde o banco comercial com o banco de investimento. A C restringe indevidamente as fontes de recursos do banco comercial. A D atribui ao banco comercial uma atuação estadual que não faz parte de sua definição.</p><p>Regra de bolso: depósito à vista é o divisor de águas do banco comercial.</p>",
+     "enunciado": "<p>Durante um atendimento, um cliente pergunta qual característica diferencia o banco comercial das demais instituições. Considerando o conteúdo estudado, a resposta correta é:</p>",
+     "alternativas": {
+      "a": "Capta depósito à vista e, por isso, cria moeda escritural.",
+      "b": "Atua somente com operações de longo prazo e captação a prazo.",
+      "c": "Funciona apenas com recursos de investidores externos ao país.",
+      "d": "Concede crédito somente para empresas estaduais e municipais."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A atuação somente no longo prazo é característica associada ao banco de investimento, não ao banco comercial.",
+      "c": "O banco comercial não funciona apenas com recursos externos; ele pode captar depósitos à vista.",
+      "d": "O foco exclusivo em empresas estaduais não caracteriza o banco comercial."
+     }
+    },
+    {
+     "id": "cpa-sfn-03-q2",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. O Decreto-Lei 759/1969 determina que a Caixa Econômica Federal explore com exclusividade os serviços da Loteria Federal do Brasil e da Loteria Esportiva Federal, e que exerça o monopólio das operações sobre penhores civis. Ela é ainda o agente operador do FGTS e o principal agente do Sistema Financeiro da Habitação.</p><p>As alternativas A, B e D erram ao tratar penhor e loteria como serviços bancários comuns, ao transferir as exclusividades para outra instituição ou ao atribuí-las a uma fintech de crédito.</p><p>Regra de bolso: Caixa tem loteria, penhor civil, FGTS e SFH.</p>",
+     "enunciado": "<p>Um cliente quer empenhar uma joia de família para levantar recursos e, na mesma conversa, pergunta qual instituição explora as loterias federais. Considerando as exclusividades legais tratadas no material, a resposta correta é:</p>",
+     "alternativas": {
+      "a": "O Banco do Brasil, que acumula o penhor civil e a exploração das loterias por delegação do Tesouro Nacional.",
+      "b": "Qualquer banco múltiplo com carteira comercial, já que penhor e loteria são serviços bancários comuns no varejo bancário.",
+      "c": "A Caixa Econômica Federal, que detém o monopólio do penhor civil e explora com exclusividade as loterias federais.",
+      "d": "Uma sociedade de crédito direto, que pode operar penhor por ser instituição financeira autorizada pelo BCB."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "As duas exclusividades são da Caixa Econômica Federal, por força do Decreto-Lei 759/1969, e não do Banco do Brasil.",
+      "b": "O penhor civil é monopólio legal da Caixa Econômica Federal, e as loterias federais são exploradas por ela com exclusividade.",
+      "d": "A sociedade de crédito direto empresta capital próprio por plataforma eletrônica e não opera penhor civil."
+     }
+    },
+    {
+     "id": "cpa-sfn-03-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. Pela Resolução CMN 2.099/1994, o banco múltiplo deve ter no mínimo duas carteiras, e uma delas precisa ser obrigatoriamente comercial ou de investimento.</p><p>A A erra ao admitir apenas uma carteira. A C transforma a carteira de desenvolvimento em requisito obrigatório, o que não está no texto. A D aumenta o mínimo para três e cria uma exigência inexistente de duas carteiras comerciais.</p><p>Regra de bolso: banco múltiplo é no mínimo duas carteiras, uma delas comercial ou de investimento.</p>",
+     "enunciado": "<p>Uma instituição pretende ser classificada como banco múltiplo. Ao revisar sua estrutura, o responsável verifica o número e a composição das carteiras. Qual configuração atende à regra apresentada no material?</p>",
+     "alternativas": {
+      "a": "Uma carteira apenas, desde que seja a de investimento.",
+      "b": "Duas carteiras, sendo uma obrigatoriamente comercial ou de investimento.",
+      "c": "Duas carteiras, sendo uma delas obrigatoriamente a carteira de desenvolvimento.",
+      "d": "Três carteiras, sendo duas delas obrigatoriamente comerciais."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "Uma única carteira não atende ao requisito mínimo de duas carteiras.",
+      "c": "A carteira de desenvolvimento não é obrigatória; uma das carteiras deve ser comercial ou de investimento.",
+      "d": "A regra exige no mínimo duas carteiras, não três, e não exige duas carteiras comerciais."
+     }
+    },
+    {
+     "id": "cpa-sfn-03-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. Na cooperativa, vale um voto por associado, independentemente do capital. A cooperativa não visa lucro; o resultado positivo é chamado de sobra e é distribuído entre os associados.</p><p>A A cria voto proporcional ao capital e troca sobra por lucro. A C também transforma o capital em poder de voto. A B acerta o voto, mas chama de lucro o que o texto define como sobra.</p><p>Regra de bolso: na cooperativa é um associado, um voto, e o resultado positivo é sobra.</p>",
+     "enunciado": "<p>Em uma cooperativa de crédito, dois associados participam de uma assembleia. Um possui mil reais aplicados e outro possui dez milhões. Sobre o direito de voto e o resultado da instituição, o gerente explica corretamente que:</p>",
+     "alternativas": {
+      "a": "O associado com mais capital tem mais votos e recebe o lucro proporcionalmente.",
+      "b": "Cada associado tem um voto, mas a cooperativa distribui lucro aos investidores.",
+      "c": "O número de votos depende do valor aplicado, e o resultado positivo fica com a cooperativa.",
+      "d": "Cada associado tem um voto, e o resultado positivo é chamado de sobra."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "O voto não é proporcional ao capital, e o resultado positivo da cooperativa é chamado de sobra, não lucro.",
+      "b": "Embora cada associado tenha um voto, a cooperativa não distribui lucro; o resultado positivo é chamado de sobra.",
+      "c": "O voto não depende do valor aplicado, e o resultado positivo é chamado de sobra."
+     }
+    },
+    {
+     "id": "cpa-sfn-03-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a C. Aplicações em cooperativas são protegidas pelo FGCoop, com limite de R$ 250 mil por associado em cada instituição. Diferentemente do FGC, o FGCoop não possui teto global de R$ 1 milhão por CPF a cada quatro anos.</p><p>A A troca o FGCoop pelo FGC e leva para a cooperativa o teto global do FGC.</p><p>A B aumenta indevidamente o limite por instituição para R$ 1 milhão. A D reconhece o mesmo limite ordinário, mas erra ao dizer que os dois fundos possuem o mesmo teto global.</p><p>Regra de bolso: cooperativa é FGCoop, R$ 250 mil por instituição, sem o teto de R$ 1 milhão em quatro anos.</p>",
+     "enunciado": "<p>Um associado possui recursos aplicados em uma cooperativa de crédito e pergunta qual fundo protege seu dinheiro. Ele também quer saber se o limite global de R$ 1 milhão a cada quatro anos é aplicado a essa proteção. Qual orientação está correta?</p>",
+     "alternativas": {
+      "a": "O FGC cobre até R$ 250 mil por associado, com teto global de R$ 1 milhão a cada quatro anos.",
+      "b": "O FGCoop cobre até R$ 1 milhão por associado em cada instituição, sem qualquer limite adicional.",
+      "c": "O FGCoop cobre até R$ 250 mil por associado em cada instituição, sem o teto global de R$ 1 milhão.",
+      "d": "O FGC e o FGCoop têm a mesma cobertura de R$ 250 mil e o mesmo teto global de R$ 1 milhão em quatro anos."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "A proteção da cooperativa é do FGCoop, não do FGC, e o teto global de R$ 1 milhão a cada quatro anos é do FGC.",
+      "b": "O limite do FGCoop é R$ 250 mil por associado em cada instituição, não R$ 1 milhão.",
+      "d": "Embora ambos tenham cobertura ordinária de R$ 250 mil, somente o FGC possui o teto global de R$ 1 milhão a cada quatro anos."
+     }
+    }
+   ],
+   "Instituições de pagamento, fintechs, corretoras, distribuidoras e B3": [
+    {
+     "id": "cpa-sfn-04-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. O texto estabelece expressamente que a instituição de pagamento não é instituição financeira. Ela mantém conta de pagamento, que não é conta corrente, e não pode captar depósitos nem conceder empréstimos com recursos de clientes.</p><p>A A confunde conta de pagamento com conta corrente. A B cria uma regra que não existe no texto. A C elimina as instituições de pagamento do sistema, contrariando sua própria função.</p><p>Regra de bolso: instituição de pagamento viabiliza pagamentos, mas não é banco.</p>",
+     "enunciado": "<p>Um cliente utiliza um aplicativo de pagamentos e pergunta se a empresa que mantém sua conta de pagamento é uma instituição financeira. Considerando o conteúdo estudado, a resposta correta é:</p>",
+     "alternativas": {
+      "a": "Sim, porque toda conta de pagamento é uma conta corrente bancária comum.",
+      "b": "Sim, porque toda instituição que movimenta dinheiro é instituição financeira.",
+      "c": "Não, porque apenas os bancos podem oferecer serviços de pagamento.",
+      "d": "Não, porque instituição de pagamento não é instituição financeira."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "Conta de pagamento não é conta corrente, e a instituição de pagamento não é instituição financeira.",
+      "b": "Movimentar pagamentos não transforma automaticamente uma empresa em instituição financeira.",
+      "c": "Instituições de pagamento existem justamente para viabilizar pagamentos sem serem bancos."
+     }
+    },
+    {
+     "id": "cpa-sfn-04-q2",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. A Sociedade de Crédito Direto, SCD, empresta exclusivamente com capital próprio. A Sociedade de Empréstimo entre Pessoas, SEP, conecta credor e devedor e não utiliza capital próprio.</p><p>A B inverte as duas figuras. A C confunde fintechs de crédito com corretoras e distribuidoras. A D troca a SCD por uma instituição de pagamento, que não pode conceder empréstimos com recursos de clientes.</p><p>Regra de bolso: na SCD o dinheiro é da fintech; na SEP, é de outra pessoa.</p>",
+     "enunciado": "<p>Um cliente compara duas fintechs de crédito. A primeira empresta recursos próprios. A segunda conecta pessoas que têm dinheiro a pessoas que precisam de crédito. Qual classificação corresponde às duas instituições, respectivamente?</p>",
+     "alternativas": {
+      "a": "SCD e SEP, nessa ordem.",
+      "b": "SEP e SCD, nessa ordem.",
+      "c": "CTVM e DTVM, nessa ordem.",
+      "d": "Instituição de pagamento e SCD."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A SEP conecta credor e devedor, enquanto a SCD empresta exclusivamente capital próprio.",
+      "c": "CTVM e DTVM intermediam o acesso ao mercado de capitais, e não exercem as funções descritas.",
+      "d": "Instituição de pagamento não é a fintech que empresta capital próprio, enquanto a SCD exerce essa função."
+     }
+    },
+    {
+     "id": "cpa-sfn-04-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. A Decisão Conjunta BCB/CVM nº 17, de 2 de março de 2009, autorizou as distribuidoras a operar diretamente nos ambientes de negociação da bolsa. Desde então, CTVM e DTVM fazem as mesmas operações.</p><p>A A reproduz a diferença histórica que deixou de existir. A C inventa uma condição para a atuação da DTVM. A D também mantém uma distinção que o texto afirma ter acabado.</p><p>Regra de bolso: CTVM e DTVM fazem as mesmas operações desde 2009.</p>",
+     "enunciado": "<p>Um investidor afirma que uma distribuidora não pode operar diretamente nos ambientes de negociação da bolsa. Outro profissional lembra que essa diferença deixou de existir. Qual explicação está correta?</p>",
+     "alternativas": {
+      "a": "Desde 2009, apenas as CTVM podem operar diretamente na bolsa.",
+      "b": "Desde 2009, CTVM e DTVM podem realizar as mesmas operações.",
+      "c": "As DTVM podem operar em bolsa, mas só quando não distribuem títulos.",
+      "d": "CTVM e DTVM seguem com operações diferentes por exigência regulatória."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "A Decisão Conjunta BCB/CVM nº 17, de 2 de março de 2009, autorizou as DTVM a operar diretamente nos ambientes de negociação da bolsa.",
+      "c": "A possibilidade de operação das DTVM não depende da condição descrita na alternativa.",
+      "d": "A diferença histórica entre CTVM e DTVM acabou, e o texto afirma que as duas fazem as mesmas operações."
+     }
+    },
+    {
+     "id": "cpa-sfn-04-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. Os recursos mantidos em conta de pagamento pré-paga têm destinação obrigatória e ficam segregados do patrimônio da instituição. Por isso, se ela quebrar, o dinheiro do cliente não entra na massa falida.</p><p>A A erra ao falar em massa falida e FGC. A B permite um empréstimo que o texto proíbe e ainda cria cobertura do FGC. A C nega a própria regra de segregação dos recursos.</p><p>Regra de bolso: conta de pagamento não tem FGC, e a proteção que ela tem no lugar dele é a segregação dos recursos.</p>",
+     "enunciado": "<p>Uma cliente mantém saldo em uma conta de pagamento pré-paga e pergunta o que acontece com esse dinheiro caso a instituição de pagamento quebre. Qual explicação está de acordo com o material?</p>",
+     "alternativas": {
+      "a": "O dinheiro entra na massa falida, mas recebe cobertura automática do FGC.",
+      "b": "O dinheiro pode ser emprestado pela instituição, mas segue protegido pelo FGC.",
+      "c": "O dinheiro pertence ao patrimônio da instituição até o encerramento da falência.",
+      "d": "O dinheiro é segregado do patrimônio da instituição e não entra na massa falida."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "Os recursos são segregados e não entram na massa falida, além de não haver cobertura do FGC.",
+      "b": "Os recursos de conta pré-paga não podem ser emprestados pela instituição e não possuem FGC.",
+      "c": "A segregação significa justamente que os recursos não integram o patrimônio da instituição."
+     }
+    },
+    {
+     "id": "cpa-sfn-04-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a C. A B3 é uma companhia aberta, reúne ambientes de bolsa e balcão organizado, câmaras de compensação e depositária central. Sua autorregulação ocorre por meio da BSM, enquanto a CVM exerce a fiscalização com poder sancionador estatal.</p><p>A A transforma a B3 em autarquia e atribui a ela poder de polícia. A B classifica incorretamente a B3 como instituição financeira e troca os papéis de autorregulação e fiscalização. A D erra a natureza societária e atribui à B3 um poder estatal que ela não possui.</p><p>Regra de bolso: a B3 autorregula, e a CVM fiscaliza com poder estatal.</p>",
+     "enunciado": "<p>Um investidor está avaliando quem exerce cada função no mercado de capitais. Ele sabe que a B3 organiza ambientes de negociação, compensação e custódia, mas quer distinguir autorregulação de fiscalização estatal. Qual orientação está correta?</p>",
+     "alternativas": {
+      "a": "A B3 é uma autarquia federal e exerce fiscalização estatal sobre os participantes.",
+      "b": "A B3 é instituição financeira supervisionada pelo Banco Central e autorregulada pela CVM.",
+      "c": "A B3 é companhia aberta, exerce autorregulação pela BSM e é fiscalizada pela CVM.",
+      "d": "A B3 é companhia fechada e exerce poder de polícia sobre o mercado organizado."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "A B3 é companhia aberta, não autarquia, e não possui poder de polícia estatal.",
+      "b": "O texto não classifica a B3 como instituição financeira, e a CVM exerce fiscalização estatal, não autorregulação da B3.",
+      "d": "A B3 é companhia aberta e não possui poder de polícia do Estado."
+     }
+    }
+   ],
+   "Demais operadores: sociedades de crédito, consórcios, seguradoras e previdência": [
+    {
+     "id": "cpa-sfn-05-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. A SCFI é a financeira voltada ao crédito ao consumidor, não capta depósito à vista e pode captar a prazo por letra de câmbio e RDB.</p><p>A B atribui à financeira uma captação que ela não pode fazer. A C confunde a SCFI com a agência de fomento, que opera com capital próprio e repasses.</p><p>A D atribui à SCFI a utilização de poupança no SBPE, característica da SCI.</p><p>Regra de bolso: financeira lembra crédito ao consumidor, sem depósito à vista, com captação a prazo.</p>",
+     "enunciado": "<p>Um cliente procura uma instituição para financiar a compra de um veículo. O gerente explica que a financeira, ou SCFI, é uma instituição voltada ao crédito ao consumidor. Sobre a forma de captação dessa instituição, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "Não capta depósito à vista e pode emitir letra de câmbio e RDB.",
+      "b": "Capta depósito à vista e utiliza a poupança para financiar veículos.",
+      "c": "Não capta recursos e opera apenas com repasses de fundos governamentais.",
+      "d": "Capta poupança no SBPE e direciona os recursos ao crédito ao consumidor."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A SCFI não capta depósito à vista e não trabalha com poupança como fonte de captação.",
+      "c": "A SCFI capta a prazo por instrumentos próprios, como letra de câmbio e RDB.",
+      "d": "A poupança no SBPE é característica da SCI, não da SCFI."
+     }
+    },
+    {
+     "id": "cpa-sfn-05-q2",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. A SCI integra o SBPE e trabalha com recursos da caderneta de poupança, enquanto a companhia hipotecária financia imóveis sem captar poupança.</p><p>A A erra ao dizer que ambas captam poupança. A C troca as fontes de recursos das duas instituições. A D atribui à companhia hipotecária uma captação de depósitos à vista que não aparece em sua característica de captação.</p><p>Regra de bolso: poupança é da SCI; companhia hipotecária, não.</p>",
+     "enunciado": "<p>Um cliente quer entender a diferença entre a Sociedade de Crédito Imobiliário e a companhia hipotecária antes de contratar um financiamento. Considerando a fonte de recursos dessas instituições, a explicação correta é:</p>",
+     "alternativas": {
+      "a": "Ambas captam poupança, mas somente a companhia hipotecária integra o SBPE como agente.",
+      "b": "A SCI trabalha com poupança no SBPE, e a companhia hipotecária não capta poupança.",
+      "c": "A companhia hipotecária capta poupança no SBPE, enquanto a SCI usa apenas debêntures.",
+      "d": "A SCI não capta poupança, enquanto a companhia hipotecária capta depósitos à vista."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "A companhia hipotecária não capta poupança e não integra o SBPE dessa forma.",
+      "c": "A relação está invertida. A SCI trabalha com poupança no SBPE, enquanto a companhia hipotecária usa outros instrumentos de captação.",
+      "d": "A SCI trabalha com poupança no SBPE, e a companhia hipotecária não capta depósitos à vista."
+     }
+    },
+    {
+     "id": "cpa-sfn-05-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. O consórcio é autofinanciamento, sem juros, com cobrança de taxa de administração e contemplação exclusivamente por sorteio ou lance.</p><p>A A transforma o consórcio em operação de crédito e cria uma forma de contemplação que não existe. A B trata o fundo comum como empréstimo entre participantes. A D troca as regras de contemplação por uma análise de crédito.</p><p>Regra de bolso: consórcio é autofinanciamento, não empréstimo. Sem juros, com taxa de administração, e contemplação por sorteio ou lance.</p>",
+     "enunciado": "<p>Uma pessoa avalia entrar em um grupo de consórcio e pergunta ao gerente como funciona a remuneração da administradora e a contemplação. Qual explicação está de acordo com as regras apresentadas?</p>",
+     "alternativas": {
+      "a": "O consórcio é uma operação de crédito com cobrança de juros e contemplação por ordem de antiguidade no grupo.",
+      "b": "O grupo empresta os recursos aos participantes e cobra juros sobre cada parcela mensal do contrato.",
+      "c": "O consórcio é autofinanciamento, sem juros, com taxa de administração e contemplação por sorteio ou lance.",
+      "d": "A administradora empresta recursos próprios e define a contemplação conforme análise de crédito."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "Consórcio não é operação de crédito, não cobra juros e não contempla por antiguidade.",
+      "b": "O dinheiro pertence ao próprio grupo, portanto não há empréstimo entre participantes com cobrança de juros.",
+      "d": "A contemplação não depende de análise de crédito nem de recursos próprios da administradora."
+     }
+    },
+    {
+     "id": "cpa-sfn-05-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. O título de capitalização não é produto de investimento; ele combina formação de capital com sorteio, e seu apelo real está no sorteio.</p><p>A A apresenta justamente a classificação inadequada que o texto trata como erro de conduta. A B transforma capitalização em investimento, o que o tópico rejeita. A C confunde capitalização com previdência complementar.</p><p>Regra de bolso: capitalização não é investimento. O elemento central é a formação de capital associada ao sorteio.</p>",
+     "enunciado": "<p>Durante um atendimento, um cliente afirma que deseja comprar um título de capitalização porque procura uma aplicação conservadora para obter rendimento. Considerando a orientação adequada, o profissional deve explicar que:</p>",
+     "alternativas": {
+      "a": "O título é um investimento conservador com rentabilidade próxima à renda fixa.",
+      "b": "O título é uma aplicação financeira destinada principalmente à formação de patrimônio.",
+      "c": "O título é uma modalidade de previdência complementar com sorteios periódicos.",
+      "d": "O título não é produto de investimento e combina formação de capital com sorteio."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "O texto alerta que tratar capitalização como aplicação conservadora é erro de conduta.",
+      "b": "A capitalização não é classificada como produto de investimento destinado à formação de patrimônio.",
+      "c": "Título de capitalização não é modalidade de previdência complementar."
+     }
+    },
+    {
+     "id": "cpa-sfn-05-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a B. A EAPC é sociedade anônima com fins lucrativos, aberta a qualquer pessoa e fiscalizada pela Susep; a EFPC é sem fins lucrativos, restrita a empregados de patrocinadora ou associados de instituidora e fiscalizada pela Previc.</p><p>A A troca as duas classificações. A C coloca a EFPC sob a Susep, quando sua supervisão é da Previc. A D transforma a EAPC em entidade sem fins lucrativos e também atribui a ela a supervisão da Previc.</p><p>Regra de bolso: EAPC lembra aberta, fins lucrativos e Susep; EFPC lembra fundo de pensão, sem fins lucrativos e Previc.</p>",
+     "enunciado": "<p>Um cliente está comparando dois planos de previdência complementar. Um é oferecido por uma sociedade anônima com fins lucrativos e pode ser contratado por qualquer pessoa. O outro é oferecido por uma entidade sem fins lucrativos, restrita aos empregados de uma patrocinadora ou associados de uma instituidora. A classificação correta é:</p>",
+     "alternativas": {
+      "a": "O primeiro é EFPC, sob Previc; o segundo é EAPC, sob Susep.",
+      "b": "O primeiro é EAPC, sob Susep; o segundo é EFPC, sob Previc.",
+      "c": "Ambos são EAPC e respondem à Susep, pois oferecem previdência complementar.",
+      "d": "Ambos são EFPC e respondem à Previc, pois não são produtos bancários."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "A classificação está invertida. EAPC é a sociedade com fins lucrativos e EFPC é a entidade sem fins lucrativos.",
+      "c": "A EFPC não é EAPC e responde à Previc, não à Susep.",
+      "d": "A EAPC é sociedade anônima com fins lucrativos e responde à Susep."
+     }
+    }
+   ],
+   "Autorreguladores, FGC e Sistema Brasileiro de Pagamentos": [
+    {
+     "id": "cpa-sfn-06-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. A adesão à autorregulação é voluntária, mas o cumprimento do código é obrigatório para quem aderiu, e a sanção privada não impede punição pelo Estado.</p><p>A B confunde as esferas privada e estatal. A A erra ao transformar a adesão voluntária em cumprimento facultativo. A D atribui à exclusão da associação um efeito que ela não possui sobre processos estatais.</p><p>Regra de bolso: aderir é voluntário; cumprir é obrigatório; sanção privada e punição estatal são esferas independentes.</p>",
+     "enunciado": "<p>Uma instituição aderiu voluntariamente a um código de autorregulação e, depois, descumpriu uma de suas regras. Sobre as consequências desse descumprimento, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "A adesão voluntária torna facultativo o cumprimento das regras do código.",
+      "b": "A sanção privada substitui a punição do Banco Central ou da CVM.",
+      "c": "A sanção privada pode ocorrer sem impedir eventual punição estatal.",
+      "d": "A exclusão da associação encerra qualquer processo estatal sobre o fato."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "A adesão é voluntária, mas o cumprimento do código passa a ser obrigatório após a adesão.",
+      "b": "A sanção privada não substitui nem impede a punição estatal.",
+      "d": "A exclusão da associação não encerra eventual processo do Banco Central ou da CVM."
+     }
+    },
+    {
+     "id": "cpa-sfn-06-q2",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. A Apimec representa e credencia analistas de valores mobiliários, a Planejar concede o CFP aos planejadores financeiros e a Ancord credencia os assessores de investimento.</p><p>A A troca Apimec e Planejar. A C atribui o credenciamento de analistas à Ancord e também troca as demais entidades. A B distribui as três funções entre associações diferentes das indicadas no tópico.</p><p>Regra de bolso: Apimec lembra analista, Planejar lembra planejador e Ancord lembra assessor.</p>",
+     "enunciado": "<p>Durante um treinamento, três profissionais precisam identificar qual entidade está relacionada à sua atividade. Um atua como analista de valores mobiliários, outro como planejador financeiro e o terceiro como assessor de investimento. A associação correta para cada atividade é:</p>",
+     "alternativas": {
+      "a": "Apimec para planejadores, Planejar para analistas e Ancord para assessores.",
+      "b": "Planejar para analistas, Ancord para planejadores e Apimec para assessores.",
+      "c": "Ancord para analistas, Apimec para planejadores e Planejar para assessores.",
+      "d": "Apimec para analistas, Planejar para planejadores e Ancord para assessores."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "Apimec credencia analistas e Planejar concede o CFP aos planejadores.",
+      "b": "As funções de analistas, planejadores e assessores foram atribuídas às entidades erradas.",
+      "c": "Ancord não é a entidade de credenciamento dos analistas, e as demais relações também estão trocadas."
+     }
+    },
+    {
+     "id": "cpa-sfn-06-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. O limite ordinário do FGC é de R$ 250 mil por CPF ou CNPJ, e a unidade de cálculo é a instituição ou o conglomerado financeiro.</p><p>A C ignora a soma dos créditos cobertos. A B multiplica indevidamente o limite por produto. A D trata instituições do mesmo conglomerado como se tivessem limites independentes.</p><p>Regra de bolso: no FGC, não conte bancos isoladamente quando eles pertencem ao mesmo conglomerado; o teto ordinário é compartilhado.</p>",
+     "enunciado": "<p>Um cliente possui R$ 200 mil em CDB de um banco e R$ 200 mil em LCI de outra instituição pertencente ao mesmo conglomerado financeiro. Se ambas as instituições entrarem em liquidação, considerando o limite ordinário do FGC apresentado no tópico, qual valor total ficará coberto?</p>",
+     "alternativas": {
+      "a": "R$ 250 mil, pois o limite é único para a instituição ou conglomerado.",
+      "b": "R$ 250 mil, pois cada produto possui cobertura própria dentro do conglomerado.",
+      "c": "R$ 200 mil, pois o limite considera apenas o primeiro produto contratado.",
+      "d": "R$ 400 mil, pois são dois produtos emitidos por instituições diferentes."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "O limite não é multiplicado por produto quando as instituições pertencem ao mesmo conglomerado.",
+      "c": "O FGC não limita a cobertura ao primeiro produto. Os valores elegíveis são somados dentro do conglomerado.",
+      "d": "Instituições do mesmo conglomerado compartilham o limite ordinário de R$ 250 mil."
+     }
+    },
+    {
+     "id": "cpa-sfn-06-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. Na conta conjunta, a garantia é de R$ 250 mil, ou o saldo se for menor, dividida pelo número de titulares; com dois titulares, cada um recebe R$ 125 mil.</p><p>A A multiplica indevidamente o saldo por titular. A D aplica o teto de R$ 250 mil individualmente à conta conjunta. A C divide o saldo total, quando a regra manda dividir o limite da garantia.</p><p>Regra de bolso: conta conjunta não multiplica o FGC; primeiro encontre o teto garantido e depois divida pelo número de titulares.</p>",
+     "enunciado": "<p>Uma conta conjunta de dois titulares possui saldo de R$ 280 mil na data da liquidação da instituição. Considerando o limite do FGC e a regra de divisão da conta conjunta, quanto cabe a cada titular?</p>",
+     "alternativas": {
+      "a": "R$ 280 mil para cada titular, pois ambos possuem direito individual ao saldo.",
+      "b": "R$ 125 mil para cada titular, pois a garantia de R$ 250 mil se divide por dois.",
+      "c": "R$ 140 mil para cada titular, pois o saldo total é que deve ser dividido igualmente.",
+      "d": "R$ 250 mil para cada titular, pois o limite do FGC é aplicado por CPF."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "O saldo total da conta não é multiplicado pelo número de titulares.",
+      "c": "A divisão ocorre sobre o limite de R$ 250 mil, e não sobre todo o saldo de R$ 280 mil.",
+      "d": "A conta conjunta tem uma garantia total de R$ 250 mil, não R$ 250 mil para cada titular."
+     }
+    },
+    {
+     "id": "cpa-sfn-06-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a D. O SPB reúne regras, procedimentos e sistemas para liquidar transferências com segurança e reduzir o risco de que a falha de uma instituição contamine as demais.</p><p>A A atribui ao SPB uma garantia contra falências que ele não oferece. A C transforma redução de risco em eliminação, contrariando expressamente o texto. A B confunde a infraestrutura de pagamentos com a função estatal do Banco Central.</p><p>Regra de bolso: o SPB reduz o risco sistêmico, mas não elimina esse risco.</p>",
+     "enunciado": "<p>Uma instituição financeira realiza diversas transferências de recursos com outras instituições ao longo do dia. Em uma situação de falha, existe preocupação de que o problema se espalhe para as demais instituições. Considerando a função do Sistema de Pagamentos Brasileiro, a explicação mais adequada ao cliente é:</p>",
+     "alternativas": {
+      "a": "O SPB garante que nenhuma instituição financeira poderá sofrer falência.",
+      "b": "O SPB substitui o Banco Central na supervisão das instituições financeiras.",
+      "c": "O SPB elimina o risco sistêmico ao impedir qualquer falha durante o dia.",
+      "d": "O SPB reduz o risco sistêmico ao liquidar as transferências com segurança."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "O SPB não impede que uma instituição sofra falência; sua função é reduzir o risco de contaminação do sistema.",
+      "b": "O Banco Central está no centro da estrutura do SPB, e o sistema não substitui sua função de supervisão.",
+      "c": "O texto destaca que o risco sistêmico é reduzido, não eliminado."
+     }
+    }
+   ],
+   "Fluxo circular da renda e subdivisões do mercado financeiro": [
+    {
+     "id": "cpa-sfn-07-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. O sistema financeiro recolhe a parcela poupada e a devolve ao circuito por meio de crédito e investimento, evitando que a poupança parada se transforme em vazamento.</p><p>A A trata a poupança como se o objetivo do sistema financeiro fosse retirá-la da economia, quando a função é justamente recolocá-la no circuito. A C atribui ao sistema financeiro a produção de bens e serviços, atividade das empresas. A D restringe a função financeira ao curtíssimo prazo, ignorando o financiamento do investimento de longo prazo.</p><p>Regra de bolso: poupança parada é vazamento; poupança intermediada vira crédito e investimento.</p>",
+     "enunciado": "<p>Em uma conversa com um cliente, o gerente explica que o sistema financeiro tem uma função econômica importante no fluxo circular da renda. Qual alternativa descreve corretamente essa função?</p>",
+     "alternativas": {
+      "a": "Retirar a poupança do circuito da renda para reduzir o consumo das famílias.",
+      "b": "Recolher a poupança e devolvê-la ao circuito como crédito e investimento.",
+      "c": "Substituir as empresas na produção de bens e serviços, de modo a gerar renda.",
+      "d": "Concentrar toda a renda poupada do país em operações de curtíssimo prazo."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "A poupança parada é que representa um vazamento; o sistema financeiro procura recolocá-la no circuito.",
+      "c": "O sistema financeiro não substitui as empresas na produção, mas direciona recursos para quem precisa deles.",
+      "d": "A função não se limita ao curtíssimo prazo, pois a poupança também financia investimento produtivo."
+     }
+    },
+    {
+     "id": "cpa-sfn-07-q2",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. No mercado de crédito, o banco fica entre o depositante e o tomador e assume o risco da operação. No mercado de capitais, a empresa capta diretamente do investidor, que fica exposto ao risco do emissor.</p><p>A A inverte os papéis, pois a captação direta é própria do mercado de capitais e não do crédito. A C troca os prazos típicos dos dois mercados. A B elimina indevidamente o banco do mercado de crédito e ainda atribui à instituição financeira uma garantia que não existe no mercado de capitais.</p><p>Regra de bolso: crédito significa intermediação e risco no banco; capitais significa desintermediação e risco no investidor.</p>",
+     "enunciado": "<p>Um cliente quer entender a diferença entre o mercado de crédito e o mercado de capitais antes de investir. Considerando prazo, finalidade e participação da instituição financeira, qual comparação está correta?</p>",
+     "alternativas": {
+      "a": "No crédito, a empresa capta diretamente do investidor; nos capitais, o banco assume a dívida.",
+      "b": "No crédito não há instituição financeira; nos capitais, ela garante o pagamento ao investidor da dívida.",
+      "c": "No crédito, a operação é sempre de longo prazo; nos capitais, ela é sempre de curtíssimo prazo.",
+      "d": "No crédito, o banco fica no meio e assume o risco; nos capitais, o investidor assume o risco do emissor."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "A captação direta do poupador pela empresa é característica do mercado de capitais, não do crédito.",
+      "b": "No crédito, o banco participa da operação e assume o risco; nos capitais, a instituição não garante a dívida do emissor.",
+      "c": "O mercado de crédito é de curto e médio prazo, enquanto o mercado de capitais é de médio e longo prazo."
+     }
+    },
+    {
+     "id": "cpa-sfn-07-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. O mercado monetário é de curtíssimo prazo e existe para garantir a liquidez diária do próprio sistema, com bancos emprestando entre si e o Banco Central operando com títulos públicos. Financiamento ao consumidor é mercado de crédito.</p><p>A B define o mercado pelo envolvimento de dinheiro e de banco, quando o critério é prazo e finalidade. A C trata 48 meses como curtíssimo prazo. A D confunde a tomada de crédito no banco com a captação direta que caracteriza o mercado de capitais.</p><p>Regra de bolso: monetário é curtíssimo prazo entre instituições; financiamento ao consumidor é mercado de crédito.</p>",
+     "enunciado": "<p>Um cliente financia um veículo em 48 parcelas no seu banco e afirma que essa operação pertence ao mercado monetário, por envolver dinheiro e uma instituição financeira. Considerando o prazo e a finalidade de cada mercado, a classificação correta é:</p>",
+     "alternativas": {
+      "a": "Mercado de crédito, pois o monetário é de curtíssimo prazo e cuida da liquidez entre instituições.",
+      "b": "Mercado monetário, pois qualquer operação com dinheiro dentro de um banco pertence a esse mercado.",
+      "c": "Mercado monetário, pois o prazo de 48 meses ainda é considerado curto para um financiamento.",
+      "d": "Mercado de capitais, pois o cliente está tomando recursos de longo prazo junto ao seu banco."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Não é o envolvimento de dinheiro ou de banco que define o mercado, e sim o prazo e a finalidade da operação.",
+      "c": "Quarenta e oito meses é prazo médio; o mercado monetário opera no curtíssimo prazo, entre instituições.",
+      "d": "No mercado de capitais a empresa capta diretamente do poupador, e não o cliente tomando crédito no banco."
+     }
+    },
+    {
+     "id": "cpa-sfn-07-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. Ao poupar mais, a família reduz o consumo no curto prazo, mas fornece funding ao sistema financeiro, que pode direcionar esses recursos para investimentos de longo prazo.</p><p>A A considera a poupança sempre um vazamento, mas o texto diferencia a poupança parada daquela captada pelo sistema financeiro. A B inverte o efeito imediato da poupança sobre o consumo. A D mistura a decisão de poupar com a distribuição de risco característica do mercado de crédito.</p><p>Regra de bolso: poupar reduz consumo agora, mas, quando intermediada, ajuda a financiar investimento depois.</p>",
+     "enunciado": "<p>Uma família decidiu aumentar sua poupança mensal. O gerente explica que, no curto prazo, essa decisão reduz o consumo, mas pode produzir outro efeito econômico relevante. Qual é esse efeito?</p>",
+     "alternativas": {
+      "a": "Retira recursos definitivamente do circuito e reduz o investimento produtivo.",
+      "b": "Aumenta imediatamente o consumo e reduz o funding disponível no sistema.",
+      "c": "Abastece o sistema financeiro com funding para financiar investimentos.",
+      "d": "Transfere automaticamente o risco do banco para o tomador do crédito."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "A poupança só representa vazamento quando fica parada; intermediada, ela pode financiar investimento.",
+      "b": "A poupança reduz o consumo no curto prazo, em vez de aumentá-lo, e abastece o funding.",
+      "d": "A decisão de poupar não altera por si só a distribuição do risco entre banco e tomador."
+     }
+    },
+    {
+     "id": "cpa-sfn-07-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a B. No mercado de crédito, o banco fica no meio e assume o risco do tomador, enquanto o depositante mantém o risco do próprio banco. Na debênture, a empresa capta diretamente do investidor e o risco de crédito do emissor fica com esse investidor.</p><p>A A atribui ao depositante o risco da empresa tomadora, mas o texto deixa claro que o risco do depositante é o do próprio banco. A D coloca o risco do crédito no tomador, quando ele é assumido pelo banco, e atribui ao banco um risco que, no mercado de capitais, pertence ao investidor. A C atribui riscos às instituições erradas nas duas situações.</p><p>Regra de bolso: no crédito, o banco fica com o risco do tomador; nos capitais, o investidor fica com o risco do emissor.</p>",
+     "enunciado": "<p>Um cliente compara duas situações. Na primeira, deposita dinheiro em um banco, que posteriormente financia uma empresa. Na segunda, compra uma debênture emitida diretamente por uma empresa por meio de uma corretora. Se a empresa da primeira situação der calote e a emissora da segunda quebrar, quem assume o risco em cada caso?</p>",
+     "alternativas": {
+      "a": "No primeiro caso, o depositante; no segundo, a corretora distribuidora do papel.",
+      "b": "No primeiro caso, o banco; no segundo, o investidor da debênture.",
+      "c": "No primeiro caso, a corretora; no segundo, o depositante do banco.",
+      "d": "No primeiro caso, a empresa tomadora; no segundo, o banco intermediário."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "No crédito, o depositante não assume o risco do tomador; e a corretora não garante a debênture.",
+      "c": "A corretora não assume o risco do emissor, e o depositante não é quem financia diretamente a empresa.",
+      "d": "No crédito, o banco assume o risco da operação; na debênture, o risco fica com o investidor."
+     }
+    }
+   ],
+   "Política fiscal, dívida pública e Lei de Responsabilidade Fiscal": [
+    {
+     "id": "cpa-sfn-08-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. Pelo art. 19 da Lei de Responsabilidade Fiscal, a despesa total com pessoal não pode exceder 50% da receita corrente líquida na União e 60% nos estados e nos municípios.</p><p>A B inverte os percentuais entre a União e os demais entes. A A uniformiza o limite em 50% para todos, quando estados e municípios têm 60%. A D troca a base de cálculo, que é sempre a receita corrente líquida.</p><p>Regra de bolso: 50% na União e 60% nos estados e municípios, sempre sobre a receita corrente líquida.</p>",
+     "enunciado": "<p>Um servidor da área de planejamento de um município precisa conferir o limite de despesa total com pessoal previsto na Lei de Responsabilidade Fiscal. Sobre esse limite, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "É de 50% da receita corrente líquida para todos os entes da federação, sem distinção.",
+      "b": "É de 60% da receita corrente líquida na União e de 50% nos estados e municípios.",
+      "c": "É de 50% da receita corrente líquida na União e de 60% nos estados e municípios.",
+      "d": "É calculado sobre a receita bruta arrecadada no exercício, e não sobre a corrente líquida."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "O limite não é o mesmo para todos os entes, pois a União fica em 50% e estados e municípios em 60%.",
+      "b": "Os percentuais estão invertidos: a União tem limite de 50% e os estados e municípios, de 60%.",
+      "d": "A base de cálculo do limite é a receita corrente líquida, e não a receita bruta arrecadada."
+     }
+    },
+    {
+     "id": "cpa-sfn-08-q2",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. Cortar gastos públicos é uma política fiscal contracionista, que retira recursos do circuito, desacelera a atividade e ajuda a conter a inflação.</p><p>A B chama de expansionista uma medida que reduz o gasto e esfria a economia. A C confunde uma decisão orçamentária com política monetária. A D também troca as políticas e acrescenta aumento de tributos, que não foi a medida apresentada no caso.</p><p>Regra de bolso: mais gasto ou menos tributo é expansionista; menos gasto ou mais tributo é contracionista.</p>",
+     "enunciado": "<p>O governo decidiu reduzir gastos públicos para desacelerar a atividade econômica e ajudar a conter a inflação. Um cliente quer saber como essa decisão deve ser classificada. Qual é a resposta correta?</p>",
+     "alternativas": {
+      "a": "Política fiscal contracionista, pois reduz o gasto e ajuda a conter a inflação.",
+      "b": "Política fiscal expansionista, pois reduz a pressão sobre o orçamento público.",
+      "c": "Política monetária expansionista, pois reduz o dinheiro em circulação na economia.",
+      "d": "Política monetária contracionista, pois aumenta os tributos e reduz o gasto."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Reduzir gastos é uma medida fiscal contracionista, não expansionista.",
+      "c": "A decisão envolve gasto público, portanto é fiscal, e não uma ação monetária do Banco Central.",
+      "d": "A medida descrita é fiscal e não menciona aumento de tributos nem atuação monetária."
+     }
+    },
+    {
+     "id": "cpa-sfn-08-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. O resultado nominal corresponde ao resultado primário depois de descontada a despesa com juros, portanto R$ 100 bilhões menos R$ 300 bilhões resulta em déficit de R$ 200 bilhões.</p><p>A A soma os juros ao primário, quando eles devem ser descontados. A B considera apenas a diferença em módulo, mas ignora que os juros superaram o superávit e produziram déficit. A C também usa a soma dos valores, chegando a R$ 400 bilhões, em vez da diferença entre eles.</p><p>Regra de bolso: nominal é o primário depois dos juros; se os juros superam o superávit, o nominal é deficitário.</p>",
+     "enunciado": "<p>Em determinado período, o governo registrou superávit primário de R$ 100 bilhões e pagou R$ 300 bilhões de juros da dívida. Ao explicar o resultado ao cliente, qual resultado nominal deve ser apresentado?</p>",
+     "alternativas": {
+      "a": "Superávit nominal de R$ 400 bilhões no período apurado.",
+      "b": "Superávit nominal de R$ 200 bilhões no período apurado.",
+      "c": "Déficit nominal de R$ 400 bilhões no período apurado.",
+      "d": "Déficit nominal de R$ 200 bilhões no período apurado."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "Os juros são descontados do resultado primário, não somados a ele.",
+      "b": "O pagamento de R$ 300 bilhões em juros supera o superávit primário de R$ 100 bilhões.",
+      "c": "O resultado nominal é de R$ 200 bilhões negativos, e não de R$ 400 bilhões."
+     }
+    },
+    {
+     "id": "cpa-sfn-08-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. Quando precisa financiar o rombo, o Tesouro Nacional emite títulos no mercado primário, enquanto o Banco Central atua no mercado secundário com títulos já emitidos, para regular a liquidez e executar a política monetária.</p><p>A A atribui ao Banco Central a emissão de títulos, vedada expressamente pelo art. 34 da Lei de Responsabilidade Fiscal. A D coloca o Tesouro comprando títulos no mercado secundário, quando sua função é emitir no primário. A C troca as atribuições das duas instituições.</p><p>Regra de bolso: o Tesouro emite; o Banco Central opera no mercado secundário.</p>",
+     "enunciado": "<p>Um cliente ouviu que o governo precisa se financiar quando gasta acima do que arrecada e pergunta como ocorre essa operação. Qual explicação está correta?</p>",
+     "alternativas": {
+      "a": "O Banco Central emite títulos no mercado primário para cobrir o rombo do governo.",
+      "b": "O Tesouro emite títulos no mercado primário e o Banco Central atua no secundário.",
+      "c": "O Banco Central emite os títulos e o Tesouro regula a liquidez no mercado secundário.",
+      "d": "O Tesouro compra títulos no mercado secundário para financiar o déficit apurado."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "O Banco Central é proibido de emitir títulos da dívida pública; quem emite é o Tesouro.",
+      "c": "As funções estão invertidas: o Tesouro emite e o Banco Central atua no mercado secundário.",
+      "d": "O Tesouro emite os títulos no mercado primário; a atuação do Banco Central ocorre no mercado secundário."
+     }
+    },
+    {
+     "id": "cpa-sfn-08-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a D. O art. 17 da Lei de Responsabilidade Fiscal exige, para criar ou aumentar despesa obrigatória de caráter continuado por período superior a dois exercícios, a indicação prévia da origem dos recursos.</p><p>A A ignora a exigência expressa de indicar a fonte de custeio. A B tenta substituir a fonte de custeio por endividamento, mas o texto não permite essa dispensa. A C atribui ao Banco Central uma competência que não tem relação com a exigência fiscal apresentada.</p><p>Regra de bolso: gasto permanente exige fonte permanente indicada antes de ser criado.</p>",
+     "enunciado": "<p>Um gestor público pretende criar uma despesa obrigatória de caráter continuado cuja execução deverá se estender por período superior a dois exercícios. Ele afirma que basta haver dinheiro disponível no caixa do ano para criar a despesa. À luz da LRF, qual orientação está correta?</p>",
+     "alternativas": {
+      "a": "A despesa pode ser criada, pois o caixa disponível no ano dispensa qualquer indicação.",
+      "b": "A despesa pode ser criada, desde que venha a ser financiada por dívida pública.",
+      "c": "A despesa pode ser criada, mas somente depois de aprovada pelo Banco Central.",
+      "d": "A despesa exige a indicação prévia da origem dos recursos para o seu custeio."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "A disponibilidade de caixa no ano não substitui a exigência de indicar a fonte de custeio.",
+      "b": "O financiamento por dívida não elimina a exigência prevista para a despesa continuada.",
+      "c": "A regra de fonte de custeio não depende de aprovação do Banco Central."
+     }
+    }
+   ],
+   "Política monetária: instrumentos e canais de transmissão": [
+    {
+     "id": "cpa-sfn-09-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. A política monetária é do Banco Central e atua sobre a quantidade de moeda e o custo do dinheiro, buscando a estabilidade de preços.</p><p>A B troca o responsável e o campo de atuação: orçamento é política fiscal, ligada ao Tesouro. A C também inverte os papéis, pois liquidez é objeto da política monetária. A D mistura as duas políticas, porque política fiscal é do Tesouro e a Selic é instrumento monetário.</p><p>Regra de bolso: fiscal é Tesouro e orçamento; monetária é Banco Central, moeda e juros.</p>",
+     "enunciado": "<p>Em uma reunião de equipe, um gerente precisa explicar a diferença entre política fiscal e política monetária. Qual afirmação está correta?</p>",
+     "alternativas": {
+      "a": "A política monetária é conduzida pelo Banco Central e atua sobre moeda e juros.",
+      "b": "A política monetária é conduzida pelo Tesouro e atua sobre o orçamento público.",
+      "c": "A política fiscal é conduzida pelo Banco Central e atua sobre a liquidez.",
+      "d": "A política fiscal é conduzida pelo Banco Central e define a taxa Selic."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A alternativa troca os responsáveis. O Tesouro está associado à política fiscal, enquanto a política monetária é do Banco Central.",
+      "c": "A alternativa atribui ao Banco Central uma competência que pertence à política fiscal e ao Tesouro.",
+      "d": "Orçamento e tributos são política fiscal, do Tesouro; a Selic é instrumento da política monetária, decidida pelo Copom."
+     }
+    },
+    {
+     "id": "cpa-sfn-09-q2",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. A política expansionista injeta liquidez e força os juros para baixo, enquanto a contracionista enxuga liquidez e eleva os juros.</p><p>A A inverte a direção da liquidez nas duas políticas. A C atribui à expansionista os efeitos da contracionista e vice-versa. A D ignora justamente a diferença central entre as duas, que está no sentido da liquidez e dos juros.</p><p>Regra de bolso: expansionista expande liquidez e atividade; contracionista contrai liquidez e atividade.</p>",
+     "enunciado": "<p>Um analista compara duas decisões possíveis do Banco Central. Em uma delas, o objetivo é estimular crédito e atividade econômica. Na outra, o objetivo é conter uma inflação pressionada pelo excesso de demanda. Qual comparação está correta?</p>",
+     "alternativas": {
+      "a": "A expansionista enxuga a liquidez e a contracionista injeta liquidez no sistema.",
+      "b": "A expansionista injeta liquidez e reduz juros; a contracionista faz o inverso disso.",
+      "c": "A expansionista eleva juros e reduz crédito; a contracionista reduz juros e aquece o consumo.",
+      "d": "As duas políticas reduzem os juros e diferem apenas pelo canal de transmissão usado."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "A alternativa inverte os efeitos. Expansionista injeta liquidez, enquanto contracionista enxuga liquidez.",
+      "c": "A alternativa trocou os sentidos. Juros mais baixos e crédito mais acessível caracterizam a política expansionista.",
+      "d": "As políticas têm sentidos opostos sobre liquidez e juros, e não diferem apenas pelo canal."
+     }
+    },
+    {
+     "id": "cpa-sfn-09-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. Para contrair, o Banco Central vende títulos, aumenta o compulsório e aumenta a taxa de redesconto, reduzindo a liquidez e encarecendo o crédito.</p><p>A A usa três medidas expansionistas, pois compra títulos, reduz o compulsório e reduz o redesconto. A B mistura uma venda contracionista com duas medidas expansionistas. A D também mistura efeitos, porque comprar títulos injeta dinheiro no mercado.</p><p>Regra de bolso: no open market, vender contrai; no compulsório e no redesconto, aumentar contrai.</p>",
+     "enunciado": "<p>Um profissional precisa escolher rapidamente a ação adequada para cada instrumento de política monetária. Qual combinação está correta para uma atuação contracionista?</p>",
+     "alternativas": {
+      "a": "Comprar títulos no open market, reduzir o compulsório e reduzir a taxa de redesconto.",
+      "b": "Vender títulos no open market, reduzir o compulsório e reduzir a taxa de redesconto.",
+      "c": "Vender títulos no open market, aumentar o compulsório e aumentar a taxa de redesconto.",
+      "d": "Comprar títulos no open market, aumentar o compulsório e aumentar a taxa de redesconto."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "A compra de títulos injeta liquidez e é expansionista, e as reduções do compulsório e do redesconto também estimulam o crédito.",
+      "b": "A venda é contracionista, mas reduzir o compulsório e a taxa de redesconto produz efeito expansionista.",
+      "d": "A compra de títulos injeta dinheiro no mercado, portanto é expansionista, mesmo com compulsório e redesconto mais restritivos."
+     }
+    },
+    {
+     "id": "cpa-sfn-09-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. No canal dos preços de ativos, juros altos tornam a renda fixa mais atrativa, podem reduzir o preço das ações e produzir efeito riqueza negativo sobre o consumo.</p><p>A A inverte o efeito do canal do crédito, pois juros altos encarecem o financiamento. A B inverte o sentido do canal cambial, já que juros altos atraem capital e tendem a valorizar o real. A C inverte o canal das expectativas, pois uma postura firme pode reduzir a inflação projetada.</p><p>Regra de bolso: juros altos apertam o crédito, atraem capital, reduzem expectativas de inflação e podem derrubar preços de ativos.</p>",
+     "enunciado": "<p>Um cliente pergunta por que uma alta dos juros pode ajudar a conter a inflação. O gerente explica que a decisão do Banco Central pode chegar à economia por diferentes canais. Qual explicação está correta?</p>",
+     "alternativas": {
+      "a": "Pelo canal do crédito, os juros altos barateiam as parcelas do financiamento e ampliam a demanda.",
+      "b": "Pelo canal do câmbio, os juros altos reduzem a entrada de capital estrangeiro e desvalorizam o real.",
+      "c": "Pelo canal das expectativas, os juros altos fazem o mercado elevar a inflação projetada do ano.",
+      "d": "Pelo canal dos preços de ativos, a renda fixa fica mais atrativa e o consumo esfria."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "Juros altos encarecem as parcelas e tendem a reduzir a demanda, não a ampliá-la.",
+      "b": "Juros altos atraem capital estrangeiro, o que tende a valorizar o real e baratear importados.",
+      "c": "A firmeza do Banco Central pode levar os agentes a revisar para baixo a inflação projetada, e não para cima."
+     }
+    },
+    {
+     "id": "cpa-sfn-09-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a B. O Banco Central controla o juro de curtíssimo prazo, enquanto o juro longo depende das expectativas do mercado e pode subir quando há desconfiança fiscal.</p><p>A A confunde o juro curto com o longo: a atuação diária no open market permite ao Banco Central controlar o curto. A C cria uma relação automática que o texto rejeita, pois o juro longo pode subir junto com a Selic. A D atribui ao Banco Central um controle direto sobre uma taxa que ele apenas influencia.</p><p>Regra de bolso: juro curto é decisão do Banco Central; juro longo é expectativa do mercado.</p>",
+     "enunciado": "<p>O Banco Central elevou a Selic para combater uma inflação que espera estar pressionada nos próximos meses. Ao mesmo tempo, o mercado passou a desconfiar da trajetória fiscal e os juros de longo prazo subiram. Qual interpretação é compatível com o texto?</p>",
+     "alternativas": {
+      "a": "O Banco Central perdeu o controle do juro curto, que agora depende apenas das expectativas fiscais do mercado.",
+      "b": "O Banco Central controla o juro curto, mas só influencia o longo, que pode subir com a desconfiança fiscal.",
+      "c": "A alta da Selic garante que o juro longo caia, porque os dois movimentos são sempre inversos entre si.",
+      "d": "O Banco Central controla diretamente o juro longo, porque é ele quem define as expectativas do mercado."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "O Banco Central controla com precisão o juro de curtíssimo prazo por meio de suas operações no open market.",
+      "c": "O texto afirma que o juro longo pode subir junto com a Selic quando há desconfiança sobre a trajetória fiscal.",
+      "d": "O juro longo não é definido diretamente pelo Banco Central. Ele depende das expectativas de inflação e das contas públicas."
+     }
+    }
+   ],
+   "Copom, regime de metas de inflação e taxa Selic": [
+    {
+     "id": "cpa-sfn-10-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. O CMN define a meta de inflação, enquanto o Copom, órgão decisório do Banco Central, define a meta da Selic.</p><p>A A inverte os papéis entre CMN e Copom. A B confunde a função do Banco Central, que persegue a meta, com a do IBGE, que apura o IPCA. A D atribui ao IBGE uma competência que o texto não lhe dá.</p><p>Regra de bolso: CMN define a meta de inflação; Copom define a meta da Selic; IBGE apura o IPCA.</p>",
+     "enunciado": "<p>Durante um atendimento, um cliente pergunta quem é responsável por definir a meta de inflação e quem define a meta da taxa Selic. Qual resposta está correta?</p>",
+     "alternativas": {
+      "a": "O Copom define a meta de inflação e o CMN define a meta da taxa Selic.",
+      "b": "O Banco Central define a meta de inflação e o Copom apura o índice IPCA.",
+      "c": "O CMN define a meta de inflação e o Copom define a meta da taxa Selic.",
+      "d": "O IBGE define a meta de inflação e o Banco Central define a meta da Selic."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "A alternativa troca as competências. O CMN define a meta de inflação, enquanto o Copom define a meta da Selic.",
+      "b": "O Banco Central persegue a meta de inflação, e o IPCA é apurado pelo IBGE.",
+      "d": "O IBGE apura o IPCA, mas não define a meta de inflação. A meta da Selic é decisão do Copom."
+     }
+    },
+    {
+     "id": "cpa-sfn-10-q2",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. A meta Selic é a decisão do Copom, a Selic efetiva resulta de operações com título público federal como lastro e a DI resulta de operações com título privado.</p><p>A A trata a meta como média de mercado e atribui ao Banco Central a apuração da DI, mas o texto diz que a DI é apurada pela B3. A C dá lastro à meta e retira o lastro da Selic efetiva, invertendo os conceitos. A D transforma médias de mercado em decisões do Copom e da B3.</p><p>Regra de bolso: meta é decisão; Selic efetiva tem lastro público; DI tem lastro privado.</p>",
+     "enunciado": "<p>Um assessor precisa explicar a diferença entre as três taxas relacionadas à política monetária. Qual alternativa compara corretamente a meta Selic, a Selic efetiva e a taxa DI?</p>",
+     "alternativas": {
+      "a": "A meta Selic é média de mercado, a Selic efetiva vem do Copom e a DI é apurada pelo Banco Central.",
+      "b": "A meta Selic é decisão do Copom, a Selic efetiva tem lastro público e a DI tem lastro privado.",
+      "c": "A meta Selic usa título público como lastro, a Selic efetiva não tem lastro e a DI vem do Copom.",
+      "d": "A meta Selic e a Selic efetiva são decisões do Copom, enquanto a taxa DI é decidida pela B3."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "A meta Selic é uma decisão do Copom, não uma média de mercado, e a DI é apurada pela B3.",
+      "c": "A meta Selic é um alvo de política monetária e não possui lastro, enquanto a Selic efetiva tem título público como lastro.",
+      "d": "A Selic efetiva é uma média de mercado, não uma decisão do Copom, e a DI também é uma média de mercado apurada pela B3."
+     }
+    },
+    {
+     "id": "cpa-sfn-10-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. O CDI é o benchmark da renda fixa privada e representa a referência das operações interbancárias com lastro privado.</p><p>A A confunde CDI com a meta Selic, que é definida pelo Copom. A B troca o CDI pela Selic, que remunera o Tesouro Selic. A D atribui ao CMN a definição da taxa, mas a DI é uma média diária apurada pela B3.</p><p>Regra de bolso: CDB e renda fixa privada lembram CDI; Tesouro Selic lembra Selic.</p>",
+     "enunciado": "<p>Um cliente pergunta por que o CDI aparece como referência em um CDB anunciado como \"100% do CDI\". Qual explicação está correta?</p>",
+     "alternativas": {
+      "a": "O CDI é a meta definida pelo Copom e serve de referência para todos os títulos públicos federais.",
+      "b": "O CDI é a taxa do Tesouro Selic e representa a remuneração definida pelo Banco Central.",
+      "c": "O CDI é o benchmark da renda fixa privada e reflete as operações entre bancos com lastro privado.",
+      "d": "O CDI é uma taxa definida pelo CMN para orientar o rendimento dos investimentos privados."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "O CDI não é a meta do Copom. A meta da Selic é a decisão de política monetária.",
+      "b": "O CDI não é a taxa do Tesouro Selic. O texto relaciona o CDI à renda fixa privada e a Selic ao Tesouro Selic.",
+      "d": "O CDI não é definido pelo CMN. A taxa DI é uma média diária apurada pela B3."
+     }
+    },
+    {
+     "id": "cpa-sfn-10-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. No regime de meta contínua, o descumprimento ocorre quando o IPCA acumulado em doze meses fica fora do intervalo de tolerância por seis meses consecutivos.</p><p>A A transforma um único mês em descumprimento, mas o texto exige seis meses consecutivos. A B cria uma condição ligada à decisão do Copom que não faz parte do critério. A C limita o descumprimento à inflação abaixo da meta, quando o critério considera estar fora do intervalo de tolerância.</p><p>Regra de bolso: no regime contínuo, um mês fora é sinal de atenção; seis meses consecutivos fora caracterizam o descumprimento.</p>",
+     "enunciado": "<p>Um cliente acompanha o regime de metas de inflação e observa que o IPCA acumulado em doze meses ficou fora do intervalo de tolerância durante um único mês. Ele pergunta se a meta já foi considerada descumprida. Qual é a orientação correta?</p>",
+     "alternativas": {
+      "a": "Sim, qualquer mês fora do intervalo de tolerância caracteriza descumprimento imediato.",
+      "b": "Sim, desde que o Copom tenha elevado a meta da Selic no mesmo período de apuração.",
+      "c": "Não, mas o descumprimento ocorre quando a inflação fica abaixo da meta por seis meses.",
+      "d": "Não, o descumprimento exige seis meses consecutivos fora do intervalo de tolerância."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "Um único mês fora do intervalo não caracteriza descumprimento no regime contínuo.",
+      "b": "A decisão do Copom sobre a Selic não substitui o critério de seis meses consecutivos fora do intervalo.",
+      "c": "O critério vale para ficar fora do intervalo, tanto acima quanto abaixo, e não apenas abaixo da meta."
+     }
+    },
+    {
+     "id": "cpa-sfn-10-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a A. Com a alta da Selic, os prefixados antigos tendem a perder preço no mercado, a renda fixa fica mais atrativa que a bolsa e a entrada de capital estrangeiro tende a valorizar o real.</p><p>A B inverte os três efeitos principais: o prefixado antigo perde preço, a bolsa perde atratividade e o real tende a se valorizar. A C ignora a marcação a mercado dos prefixados e inverte o efeito cambial. A D acerta a queda do prefixado, mas inverte os efeitos sobre bolsa e câmbio.</p><p>Regra de bolso: Selic sobe, prefixado antigo cai de preço, bolsa perde atratividade e real tende a se valorizar.</p>",
+     "enunciado": "<p>Um cliente possui um título prefixado antigo e decide vendê-lo antes do vencimento depois de uma elevação da Selic pelo Copom. Ao mesmo tempo, pergunta por que o câmbio e a bolsa podem reagir à decisão. Qual explicação reúne corretamente os efeitos descritos no texto?</p>",
+     "alternativas": {
+      "a": "O prefixado antigo tende a cair de preço, a bolsa perde atratividade e o real tende a se valorizar.",
+      "b": "O prefixado antigo tende a subir de preço, a bolsa ganha atratividade e o real tende a se desvalorizar.",
+      "c": "O prefixado antigo não muda de preço, a bolsa tende a cair e o real tende a se desvalorizar.",
+      "d": "O prefixado antigo tende a cair de preço, a bolsa ganha atratividade e o real tende a se desvalorizar."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A alta da Selic tende a reduzir o preço dos prefixados antigos, diminuir a atratividade da bolsa e valorizar o real.",
+      "c": "O prefixado antigo sofre marcação a mercado, e juros altos tendem a valorizar o real pela atração de capital estrangeiro.",
+      "d": "A bolsa tende a perder atratividade e o real tende a se valorizar quando a Selic sobe, não o contrário."
      }
     }
    ]
