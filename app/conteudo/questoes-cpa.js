@@ -1,5 +1,5 @@
 /* GERADO por outputs/questoes_para_js.py. NAO editar a mao.
-   Fonte: _conteudo/cpa/questoes/**.yaml  ·  410 questoes em 82 topicos
+   Fonte: _conteudo/cpa/questoes/**.yaml  ·  450 questoes em 90 topicos
    Para mudar uma questao, edite o YAML e rode o script de novo. */
 window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
  "cpaAnbima": {
@@ -1161,6 +1161,934 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "b": "A alta da Selic tende a reduzir o preço dos prefixados antigos, diminuir a atratividade da bolsa e valorizar o real.",
       "c": "O prefixado antigo sofre marcação a mercado, e juros altos tendem a valorizar o real pela atração de capital estrangeiro.",
       "d": "A bolsa tende a perder atratividade e o real tende a se valorizar quando a Selic sobe, não o contrário."
+     }
+    }
+   ],
+   "Política cambial, regimes de câmbio e taxa PTAX": [
+    {
+     "id": "cpa-sfn-11-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. O CMN fixa as diretrizes da política cambial, enquanto o Banco Central executa, comprando e vendendo moeda, administrando reservas e operando derivativos.</p><p>A B troca as funções do CMN e do Banco Central. A C atribui ao CMN a administração das reservas, que cabe ao Banco Central. A D erra ao colocar o Banco Central como responsável pelas diretrizes e o mercado como executor das intervenções.</p><p>Regra de bolso: CMN define a direção, Banco Central executa a política cambial.</p>",
+     "enunciado": "<p>Um cliente pergunta quem é responsável por definir as diretrizes da política cambial e quem executa as medidas de intervenção no mercado de câmbio. A explicação correta é:</p>",
+     "alternativas": {
+      "a": "O CMN fixa as diretrizes, e o Banco Central executa a política cambial.",
+      "b": "O Banco Central fixa as diretrizes, e o CMN executa a política cambial.",
+      "c": "O CMN administra as reservas, e o Banco Central apenas acompanha o mercado.",
+      "d": "O Banco Central define as diretrizes, e o mercado executa as intervenções."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A alternativa inverte as competências. O CMN fixa as diretrizes, enquanto o Banco Central executa.",
+      "c": "A administração das reservas é uma atividade do Banco Central, não uma função de execução atribuída ao CMN.",
+      "d": "O Banco Central executa a política, mas as diretrizes são fixadas pelo CMN."
+     }
+    },
+    {
+     "id": "cpa-sfn-11-q2",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. Na flutuação suja, o preço do câmbio continua sendo formado pelo mercado, mas o Banco Central pode intervir para conter volatilidade excessiva ou disfuncionalidade.</p><p>A A aproxima o regime de uma cotação administrada por faixa. A B descreve a flutuação pura, na qual não há intervenção da autoridade monetária. A D transforma a intervenção em defesa de uma cotação específica, o que descaracterizaria o regime flutuante.</p><p>Regra de bolso: flutuação suja é o mercado formando o preço, com o Banco Central suavizando excessos.</p>",
+     "enunciado": "<p>Um cliente compara os três regimes cambiais estudados e quer entender por que o regime brasileiro é chamado de flutuação suja. Qual explicação está correta?</p>",
+     "alternativas": {
+      "a": "O governo fixa a cotação, mas permite pequenas oscilações dentro de uma faixa estreita.",
+      "b": "O preço é definido apenas pela oferta e procura, sem qualquer intervenção do Banco Central.",
+      "c": "O preço flutua pelo mercado, e o Banco Central intervém para suavizar movimentos excessivos.",
+      "d": "O Banco Central define uma cotação diária e usa as reservas do país para defendê-la no mercado."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "A descrição corresponde a uma lógica de câmbio fixo ou de bandas, não à flutuação suja adotada pelo Brasil.",
+      "b": "A ausência de intervenção caracteriza a flutuação pura, enquanto a flutuação suja admite intervenção.",
+      "d": "Na flutuação suja o Banco Central não defende um número específico. Ele intervém para suavizar volatilidade."
+     }
+    },
+    {
+     "id": "cpa-sfn-11-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. O swap cambial é um derivativo liquidado em reais, no qual no vencimento não há entrega de dólares, mas apenas o acerto da diferença entre as taxas contratadas.</p><p>A A descreve uma intervenção com uso direto das reservas. A C confunde a PTAX, que é uma taxa de referência, com um instrumento de política cambial. A D confunde o VET, que reúne taxa de câmbio, tributos e tarifas, com um instrumento de intervenção.</p><p>Regra de bolso: swap é hedge sem entrega de dólar, porque a liquidação ocorre em reais.</p>",
+     "enunciado": "<p>Durante uma alta rápida do dólar, um cliente pergunta como o Banco Central pode oferecer proteção cambial sem entregar dólares de suas reservas no vencimento. Qual instrumento corresponde a essa descrição?</p>",
+     "alternativas": {
+      "a": "Reservas internacionais, com venda direta de dólares no mercado à vista.",
+      "b": "Swap cambial, com liquidação financeira da diferença entre as taxas em reais.",
+      "c": "PTAX, com compra automática de dólares pelo Banco Central no fechamento do dia.",
+      "d": "VET, com cobrança conjunta de câmbio, tributos e tarifas da operação de compra."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "A venda direta de dólares utiliza as reservas, enquanto o swap permite intervir sem gastar reservas na liquidação.",
+      "c": "A PTAX é uma taxa de referência calculada a partir de cotações dos dealers, não um instrumento de intervenção.",
+      "d": "O VET mostra o custo efetivo da operação cambial e não é um derivativo de intervenção."
+     }
+    },
+    {
+     "id": "cpa-sfn-11-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. A PTAX é uma taxa de referência do Banco Central, enquanto o VET reúne a taxa de câmbio, os tributos e as tarifas para mostrar o custo efetivo da operação.</p><p>A A transforma uma taxa de referência em preço de balcão. A B atribui à PTAX custos que fazem parte do VET. A C erra ao dizer que o Banco Central simplesmente define a PTAX, pois ela é calculada a partir das cotações informadas pelos dealers.</p><p>Regra de bolso: PTAX é referência; VET mostra quanto a operação cambial custa de verdade.</p>",
+     "enunciado": "<p>Um cliente pretende comprar moeda estrangeira e pergunta se a PTAX representa necessariamente o valor que ele pagará no balcão. Qual orientação está correta?</p>",
+     "alternativas": {
+      "a": "Sim. A PTAX é o preço final pago pelo cliente em qualquer operação cambial de balcão.",
+      "b": "Sim. A PTAX já incorpora automaticamente todos os tributos e tarifas da operação.",
+      "c": "Não. A PTAX é definida pelo Banco Central e não depende das cotações dos dealers.",
+      "d": "Não. A PTAX é referência, e o VET reúne câmbio, tributos e tarifas da operação."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "A PTAX é uma taxa de referência e não corresponde necessariamente ao preço final pago pelo cliente.",
+      "b": "Tributos e tarifas fazem parte do VET, não da PTAX calculada como referência.",
+      "c": "A PTAX é calculada a partir das cotações dos dealers, após o descarte dos extremos."
+     }
+    },
+    {
+     "id": "cpa-sfn-11-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a A. Com a Selic mantida e a expectativa de desvalorização do real aumentando, o cupom cambial cai porque parte do juro interno seria consumida pela perda na conversão de volta para reais.</p><p>A B inverte o efeito da expectativa de desvalorização. A C ignora que o cupom também depende da expectativa cambial. A D trata a expectativa cambial como se eliminasse a taxa, quando o efeito descrito é uma redução do cupom.</p><p>Regra de bolso: expectativa de real mais fraco, cupom cambial menor.</p>",
+     "enunciado": "<p>Uma empresa acompanha o mercado cambial e observa aumento da expectativa de desvalorização do real, enquanto a Selic permanece inalterada. Ao analisar o cupom cambial, qual conclusão é compatível com o material?</p>",
+     "alternativas": {
+      "a": "O cupom cambial tende a cair, pois a perda na conversão consome parte do juro.",
+      "b": "O cupom cambial tende a subir, pois a desvalorização aumenta o retorno em dólar.",
+      "c": "O cupom cambial permanece necessariamente igual, pois depende apenas da Selic.",
+      "d": "O cupom cambial deixa de existir, pois a expectativa cambial substitui os juros."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A maior expectativa de desvalorização reduz o cupom cambial, pois parte do juro seria consumida pela perda na conversão.",
+      "c": "O cupom não depende apenas da Selic. A expectativa de câmbio também influencia seu comportamento.",
+      "d": "A expectativa de desvalorização afeta o cupom, mas não elimina a existência da taxa de juros em dólar."
+     }
+    }
+   ],
+   "Indicadores econômicos: PIB, IPCA, IGP-M e desemprego": [
+    {
+     "id": "cpa-sfn-12-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. O PIB soma bens e serviços finais para evitar que os produtos intermediários sejam contabilizados novamente e provoquem dupla contagem. Somar o aço e depois o carro pronto contaria o aço duas vezes.</p><p>A A restringe indevidamente o PIB às vendas para famílias. A C exclui sem fundamento os produtos industriais, que podem compor a produção final. A D confunde a medição da produção com a variação dos preços.</p><p>Regra de bolso: no PIB, conte o produto final, não os insumos que já estão dentro dele.</p>",
+     "enunciado": "<p>Em uma conversa com um cliente, um gerente explica por que o PIB considera apenas bens e serviços finais produzidos no país. Qual é a razão apresentada no material?</p>",
+     "alternativas": {
+      "a": "Para medir somente os produtos vendidos diretamente às famílias brasileiras.",
+      "b": "Para evitar a dupla contagem de bens e serviços intermediários.",
+      "c": "Para excluir da conta os produtos fabricados por empresas industriais.",
+      "d": "Para considerar apenas os produtos que tiveram aumento de preço no período."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "O PIB não se limita aos produtos vendidos às famílias. A regra é considerar bens e serviços finais.",
+      "c": "Produtos industriais podem fazer parte do PIB. O ponto central é evitar a contagem de bens intermediários.",
+      "d": "A definição do PIB não depende de o produto ter aumentado de preço."
+     }
+    },
+    {
+     "id": "cpa-sfn-12-q2",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. O IPCA abrange famílias de 1 a 40 salários mínimos, com renda de qualquer fonte, enquanto o INPC abrange famílias de 1 a 5 salários mínimos cuja pessoa de referência seja assalariada.</p><p>A A inverte as faixas de renda dos dois índices. A B atribui ao IPCA uma restrição de renda que não existe e ignora o recorte assalariado do INPC. A C troca os usos dos índices, pois o IPCA é a referência da meta de inflação e o INPC é clássico nos reajustes salariais.</p><p>Regra de bolso: IPCA é 1 a 40 e meta de inflação; INPC é 1 a 5 e reajuste salarial.</p>",
+     "enunciado": "<p>Uma cliente confunde IPCA e INPC porque ambos são índices mensais calculados pelo IBGE. Ao explicar a diferença entre os dois, qual comparação está correta?</p>",
+     "alternativas": {
+      "a": "O IPCA observa 1 a 5 salários mínimos, enquanto o INPC observa de 1 a 40.",
+      "b": "O IPCA considera apenas renda salarial, enquanto o INPC considera qualquer fonte.",
+      "c": "O IPCA é usado no reajuste salarial, enquanto o INPC é a meta de inflação.",
+      "d": "O IPCA cobre 1 a 40 salários mínimos, e o INPC cobre 1 a 5 com chefe assalariado."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "As faixas estão invertidas. O IPCA cobre 1 a 40 salários mínimos e o INPC, 1 a 5.",
+      "b": "A renda de qualquer fonte é considerada no IPCA. O INPC tem o recorte de famílias com pessoa de referência assalariada.",
+      "c": "O IPCA é o índice oficial da meta de inflação, enquanto o INPC é associado ao reajuste salarial."
+     }
+    },
+    {
+     "id": "cpa-sfn-12-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. A composição fixa do IGP é formada por IPA com 60%, que mede o atacado, IPC com 30%, que mede o varejo, e INCC com 10%, que mede a construção civil.</p><p>A B troca os pesos do IPA e do IPC. A C coloca o maior peso no INCC, embora ele represente apenas 10%. A D reduz o IPC para 10% e aumenta o INCC para 30%, invertendo os pesos desses componentes.</p><p>Regra de bolso: no IGP, memorize 60, 30 e 10 na ordem IPA, IPC e INCC.</p>",
+     "enunciado": "<p>Um contrato privado utiliza o IGP-M como indexador. Em uma análise do índice, o cliente pergunta qual é a sua composição. Qual alternativa apresenta a composição descrita no material?</p>",
+     "alternativas": {
+      "a": "IPA com 60%, IPC com 30% e INCC com 10%.",
+      "b": "IPA com 30%, IPC com 60% e INCC com 10%.",
+      "c": "IPA com 10%, IPC com 30% e INCC com 60%.",
+      "d": "IPA com 60%, IPC com 10% e INCC com 30%."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A alternativa troca os pesos do IPA e do IPC. O IPA representa 60% e o IPC, 30%.",
+      "c": "A alternativa atribui ao INCC o maior peso, mas no IGP o INCC representa 10%.",
+      "d": "A alternativa troca os pesos do IPC e do INCC. O IPC representa 30% e o INCC, 10%."
+     }
+    },
+    {
+     "id": "cpa-sfn-12-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. IGP-M, IGP-DI e IGP-10 utilizam a mesma fórmula do IGP, com diferença apenas nas respectivas janelas de coleta.</p><p>A A atribui ao IGP-DI uma composição que não existe no material. A B afirma que as fórmulas são diferentes, contrariando a característica comum das três versões. A D troca os elementos da diferença, pois os pesos permanecem iguais e as janelas é que mudam.</p><p>Regra de bolso: mesma fórmula, janela diferente. IGP-M vai do dia 21 ao 20, IGP-DI do 1 ao 30 e IGP-10 do 11 ao 10.</p>",
+     "enunciado": "<p>Um cliente acompanha o IGP-M e o IGP-DI e acredita que os dois possuem fórmulas diferentes. Qual explicação corrige essa interpretação?</p>",
+     "alternativas": {
+      "a": "O IGP-M usa 60, 30 e 10, enquanto o IGP-DI usa apenas preços ao consumidor.",
+      "b": "O IGP-M e o IGP-DI têm fórmulas diferentes, mas ambos medem preços no atacado.",
+      "c": "Os dois têm a mesma fórmula, e o que muda entre eles é a janela de coleta.",
+      "d": "Os dois têm a mesma janela de coleta, mas pesos diferentes entre IPA, IPC e INCC."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "O IGP-DI também segue a composição do IGP, e não é formado apenas por preços ao consumidor.",
+      "b": "A fórmula é a mesma. A diferença apresentada no material está na janela de coleta.",
+      "d": "Os pesos são os mesmos, 60, 30 e 10. O que muda é a janela de coleta de cada versão."
+     }
+    },
+    {
+     "id": "cpa-sfn-12-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a B. Quando uma pessoa deixa de procurar emprego por desalento, ela deixa de cumprir o critério de desocupada e também sai da força de trabalho, que é o denominador da conta. A taxa pode cair sem que uma única carteira tenha sido assinada.</p><p>A A confunde desistência da procura com ocupação. A C altera indevidamente a definição da força de trabalho, que inclui ocupados e desocupados. A D atribui a queda a uma mudança da pesquisa, quando o fenômeno descrito ocorre pela mudança de condição das pessoas que desistiram de procurar.</p><p>Regra de bolso: desemprego pode cair sem emprego novo, quando o desalento tira gente da força de trabalho.</p>",
+     "enunciado": "<p>Uma cidade registra queda na taxa de desocupação, mas não houve novas contratações no período. Ao analisar os dados, verifica-se que muitas pessoas deixaram de procurar emprego após longo período de tentativas. Qual explicação é compatível com o material?</p>",
+     "alternativas": {
+      "a": "A taxa caiu porque quem não encontrou vaga passou automaticamente a ser ocupado.",
+      "b": "A taxa caiu porque pessoas em desalento saíram da força de trabalho.",
+      "c": "A taxa caiu porque a força de trabalho passou a incluir apenas os ocupados.",
+      "d": "A taxa caiu porque a PNAD Contínua deixou de considerar pessoas sem trabalho."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "Deixar de procurar emprego não transforma a pessoa em ocupada. Ela sai da condição de desocupada por desalento.",
+      "c": "A força de trabalho continua formada por ocupados e desocupados entre pessoas de 14 anos ou mais.",
+      "d": "A PNAD Contínua continua medindo a desocupação. O efeito ocorre pela saída da pessoa da força de trabalho."
+     }
+    }
+   ],
+   "Risco de liquidez, de crédito e de mercado": [
+    {
+     "id": "cpa-sfn-13-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. Risco de crédito é a possibilidade de a contraparte não pagar no prazo e nas condições combinadas, ou seja, o risco de calote.</p><p>A B descreve liquidez de mercado, pois o problema é encontrar comprador pelo preço justo. A C descreve risco de mercado, causado pela oscilação do preço diante dos juros. A D trata de risco sistemático, que atinge o mercado inteiro e não é eliminado pela diversificação.</p><p>Regra de bolso: crédito é não pagar, mercado é o preço oscilar, liquidez é não conseguir sair ou não ter caixa na hora.</p>",
+     "enunciado": "<p>Um investidor está revisando os principais riscos de sua carteira e quer identificar a origem de cada um. Qual situação caracteriza risco de crédito?</p>",
+     "alternativas": {
+      "a": "A contraparte não paga no prazo e nas condições que foram combinadas.",
+      "b": "O ativo não encontra comprador pelo preço justo no prazo desejado.",
+      "c": "O preço de um título prefixado cai depois de uma alta dos juros.",
+      "d": "Uma carteira diversificada sofre os efeitos de uma recessão econômica."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A dificuldade de vender pelo preço justo caracteriza liquidez de mercado.",
+      "c": "A queda do preço de um prefixado por alta dos juros caracteriza risco de mercado.",
+      "d": "Os efeitos de uma recessão sobre o mercado são associados ao risco sistemático."
+     }
+    },
+    {
+     "id": "cpa-sfn-13-q2",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. O Tesouro Selic acompanha a taxa básica dia a dia e, entre os três títulos citados, apresenta o menor risco de mercado, razão pela qual serve de reserva de emergência. Os três têm o mesmo risco de crédito, que é o soberano.</p><p>A A inverte a comparação, pois o Tesouro Selic tem menor risco de mercado. A B confunde acompanhar a inflação com não sofrer oscilação de preço, já que o Tesouro IPCA+ reage à curva de juros. A D ignora que Prefixado e IPCA+ possuem risco de mercado relevante.</p><p>Regra de bolso: entre esses três, Selic é o de menor risco de mercado; Prefixado e IPCA+ oscilam com a curva.</p>",
+     "enunciado": "<p>Dois clientes analisam títulos públicos. Um pretende manter o investimento por longo prazo, enquanto o outro quer uma reserva de emergência com menor oscilação de preço. Considerando o risco de mercado, qual comparação está correta?</p>",
+     "alternativas": {
+      "a": "O Tesouro Selic tem risco de mercado maior que o do Tesouro Prefixado.",
+      "b": "O Tesouro IPCA+ não possui risco de mercado, por acompanhar a inflação.",
+      "c": "O Tesouro Selic apresenta o menor risco de mercado entre os três.",
+      "d": "Os três títulos públicos possuem um risco de mercado igualmente baixo."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "O Tesouro Selic é justamente o título de menor risco de mercado entre os três.",
+      "b": "O Tesouro IPCA+ possui risco de mercado relevante porque seu preço reage à curva de juros.",
+      "d": "Prefixado e IPCA+ têm risco de mercado relevante, enquanto o Selic tem o menor entre eles."
+     }
+    },
+    {
+     "id": "cpa-sfn-13-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. A deterioração da capacidade de pagamento do emissor caracteriza risco de crédito, ainda que esse problema se manifeste por uma queda de preço da debênture.</p><p>A A classifica pelo efeito e não pela origem, pois queda de preço não significa automaticamente problema de liquidez. A C transforma um problema específico do emissor em risco sistemático, que atinge o mercado inteiro. A D também olha apenas para o efeito no preço e ignora que a causa foi a piora da solvência.</p><p>Regra de bolso: classifique pela causa da perda. Se a causa é a capacidade de pagamento do emissor, é crédito.</p>",
+     "enunciado": "<p>Uma debênture de determinada empresa sofre forte queda de preço no mercado secundário depois que a companhia divulga um balanço ruim e aumenta a dúvida sobre sua capacidade de pagamento. Como deve ser classificado o risco pela origem do problema?</p>",
+     "alternativas": {
+      "a": "Risco de liquidez, porque houve uma queda no preço do título.",
+      "b": "Risco de crédito, porque a solvência do emissor se deteriorou.",
+      "c": "Risco sistemático, porque a perda apareceu no mercado secundário.",
+      "d": "Risco de mercado, porque o efeito observado foi uma queda de preço."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "A queda de preço não indica liquidez por si só; a origem foi a deterioração do emissor.",
+      "c": "O caso não descreve um choque que atinja o mercado inteiro, mas um problema de solvência do emissor.",
+      "d": "Embora a perda apareça no preço, sua origem é o risco de crédito do emissor."
+     }
+    },
+    {
+     "id": "cpa-sfn-13-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. Liquidez de caixa, também chamada de funding, é a dificuldade de ter dinheiro disponível para honrar um compromisso na data, mesmo quando existe patrimônio aplicado.</p><p>A A descreve liquidez de mercado, que ocorre quando não há comprador pelo preço justo no prazo desejado. A B confunde falta de caixa com inadimplência da contraparte. A C descreve um risco de alcance geral, enquanto o caso trata da disponibilidade de recursos do fundo.</p><p>Regra de bolso: vender sem comprador é liquidez de mercado; pagar sem dinheiro na data é liquidez de caixa.</p>",
+     "enunciado": "<p>Um fundo recebe muitos pedidos de resgate concentrados em determinado dia. O patrimônio está aplicado em ativos, mas o fundo não possui dinheiro disponível para honrar imediatamente os resgates. Que tipo de risco está diretamente presente nessa situação?</p>",
+     "alternativas": {
+      "a": "Liquidez de mercado, porque faltam compradores para os ativos do fundo.",
+      "b": "Risco de crédito, porque o fundo pode não receber os seus investimentos.",
+      "c": "Risco sistemático, porque os resgates atingem o mercado financeiro inteiro.",
+      "d": "Liquidez de caixa, porque falta recurso disponível na data do pagamento."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "A situação descrita é falta de dinheiro para honrar os compromissos, não falta de comprador.",
+      "b": "O problema apresentado não é a inadimplência de uma contraparte do fundo.",
+      "c": "Não há indicação de um choque que atinja o mercado financeiro inteiro."
+     }
+    },
+    {
+     "id": "cpa-sfn-13-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a A. Risco sistemático é o risco de mercado que a diversificação não remove, como recessão, choque de juros e crise cambial. Risco sistêmico é outra coisa: o efeito dominó no sistema financeiro, em que a quebra de uma instituição contamina as demais.</p><p>A B troca os dois termos entre si, que é exatamente a confusão que a banca explora. A C chama de não sistemático o risco que permanece, quando o não sistemático é justamente o que sai com a diversificação. A D classifica como liquidez o risco que sobra depois de diversificar.</p><p>Regra de bolso: sistemático é o que a diversificação não remove; sistêmico é o efeito dominó no sistema.</p>",
+     "enunciado": "<p>Um analista lê dois trechos de um relatório. O primeiro afirma que uma carteira diversificada continua exposta ao risco que a diversificação não remove. O segundo trata do efeito dominó em que a quebra de uma instituição contamina outras dentro do sistema financeiro. Como se classificam, respectivamente, os riscos descritos nos dois trechos?</p>",
+     "alternativas": {
+      "a": "Risco sistemático no primeiro trecho e risco sistêmico no segundo.",
+      "b": "Risco sistêmico no primeiro trecho e risco sistemático no segundo.",
+      "c": "Risco não sistemático no primeiro trecho e risco de crédito no segundo.",
+      "d": "Risco de liquidez no primeiro trecho e risco sistemático no segundo."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Os dois termos estão trocados: sistemático é o risco de mercado não diversificável, e sistêmico é o efeito dominó.",
+      "c": "O risco não sistemático é justamente o que a diversificação remove, e o efeito dominó não é risco de crédito de uma contraparte.",
+      "d": "O primeiro trecho descreve o risco que sobra depois de diversificar, e não a dificuldade de vender um ativo ou de ter caixa."
+     }
+    }
+   ],
+   "Taxa de juros nominal e real, indexadores e fórmula de Fisher": [
+    {
+     "id": "cpa-sfn-14-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. A taxa nominal é a taxa contratada ou observada, aquela que aparece no contrato, no extrato ou no anúncio da aplicação. Ela mede quanto o número na conta cresceu.</p><p>A A descreve a taxa real, que mede o ganho de poder de compra. A C reproduz o erro de subtrair diretamente a inflação da taxa nominal. A D confunde a relação de Fisher com a definição da taxa nominal.</p><p>Regra de bolso: nominal é o número do extrato; real é o que sobra de poder de compra depois da inflação.</p>",
+     "enunciado": "<p>Um cliente observa no extrato que sua aplicação cresceu 10% no ano e quer saber o que essa taxa representa. Considerando os conceitos do tópico, o que caracteriza a taxa nominal?</p>",
+     "alternativas": {
+      "a": "O ganho de poder de compra que sobra depois da inflação do período.",
+      "b": "A taxa que aparece no contrato, no extrato ou no anúncio.",
+      "c": "A diferença entre o rendimento obtido e a inflação daquele período.",
+      "d": "O resultado da aplicação da fórmula de Fisher sobre o investimento."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "O ganho de poder de compra é medido pela taxa real, e não pela nominal.",
+      "c": "A taxa nominal não é obtida pela simples diferença entre rendimento e inflação.",
+      "d": "A fórmula de Fisher relaciona as taxas, mas não define a taxa nominal como seu resultado."
+     }
+    },
+    {
+     "id": "cpa-sfn-14-q2",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. O CDI representa o juro dos empréstimos entre bancos, enquanto a TR é a Taxa Referencial e possui piso zero.</p><p>A A troca os significados dos dois indexadores e ainda atribui ao CDI a medição da inflação oficial. A B trata CDI e TR como índices de preços, mas o CDI representa juros entre bancos. A C iguala TR e IPCA, embora o IPCA seja o índice oficial de preços ao consumidor e a TR não meça inflação.</p><p>Regra de bolso: CDI é juro entre bancos; TR é Taxa Referencial com piso zero; IPCA é inflação oficial.</p>",
+     "enunciado": "<p>Dois investidores analisam produtos diferentes. Um encontra uma aplicação atrelada ao CDI e outro um produto corrigido pela TR. Considerando os indexadores apresentados no tópico, qual comparação está correta?</p>",
+     "alternativas": {
+      "a": "O CDI mede a inflação oficial e a TR mede os juros entre os bancos.",
+      "b": "O CDI e a TR são índices de preços usados para corrigir aplicações.",
+      "c": "A TR e o IPCA são equivalentes, pois os dois medem a inflação do país.",
+      "d": "O CDI representa o juro entre bancos, enquanto a TR tem piso zero."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "O CDI está ligado aos juros dos empréstimos entre bancos, e a TR não mede a inflação oficial.",
+      "b": "CDI e TR não são ambos índices de preços; o CDI representa juros entre bancos.",
+      "c": "A TR e o IPCA não são equivalentes, pois o IPCA mede a inflação oficial ao consumidor."
+     }
+    },
+    {
+     "id": "cpa-sfn-14-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. Pela fórmula de Fisher, a taxa real é 1,10 dividido por 1,06, menos 1, o que resulta em 3,7736%.</p><p>A B usa a subtração direta de 10% menos 6%, que é apenas uma aproximação. A C confunde a inflação do período com a taxa real. A D repete o rendimento nominal e ignora o efeito da inflação sobre o poder de compra.</p><p>Regra de bolso: para a taxa real, divida 1 mais o nominal por 1 mais a inflação e subtraia 1.</p>",
+     "enunciado": "<p>Uma aplicação rendeu 10% no ano, enquanto a inflação do mesmo período foi de 6%. Um cliente calcula seu ganho real simplesmente fazendo 10% menos 6%. Qual é o resultado correto pela fórmula de Fisher?</p>",
+     "alternativas": {
+      "a": "Ganho real de 3,7736% no período da aplicação.",
+      "b": "Ganho real de 4,0000% no período da aplicação.",
+      "c": "Ganho real de 6,0000% no período da aplicação.",
+      "d": "Ganho real de 10,0000% no período da aplicação."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Os 4% resultam da subtração direta, que é apenas uma aproximação e não o cálculo de Fisher.",
+      "c": "Os 6% correspondem à inflação do período, e não ao ganho real da aplicação.",
+      "d": "Os 10% correspondem ao rendimento nominal, e não ao ganho de poder de compra."
+     }
+    },
+    {
+     "id": "cpa-sfn-14-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. Em um produto IPCA mais 6%, os 6% representam o juro real contratado, enquanto o retorno nominal só pode ser conhecido depois da inflação do período.</p><p>A A troca as posições entre juro real e nominal. A B afirma incorretamente que o juro real deixa de existir quando a inflação é conhecida. A D repete a armadilha da soma direta, pois a relação é multiplicativa e, com inflação de 4%, o nominal seria 10,24%.</p><p>Regra de bolso: em IPCA mais juro, o contratado é real; multiplique 1 mais inflação por 1 mais juro real.</p>",
+     "enunciado": "<p>Um cliente avalia um título que promete IPCA mais 6% ao ano. Ele afirma que receberá exatamente 10% ao ano, pois considera 4% de inflação mais 6% de juros. Considerando a lógica do produto, qual explicação está correta?</p>",
+     "alternativas": {
+      "a": "Os 6% são a taxa nominal, e o IPCA define apenas a correção do saldo.",
+      "b": "Os 6% deixam de existir assim que a inflação do período é conhecida.",
+      "c": "Os 6% são o juro real, e o nominal depende da inflação observada.",
+      "d": "Os 6% devem ser somados diretamente à inflação para formar o nominal."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "Os 6% representam o juro real contratado, e não a taxa nominal do título.",
+      "b": "O juro real continua fazendo parte da remuneração contratada depois de a inflação ser conhecida.",
+      "d": "A relação é multiplicativa, e com inflação de 4% o retorno nominal seria de 10,24%."
+     }
+    },
+    {
+     "id": "cpa-sfn-14-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a B. Quando o rendimento nominal de 8% fica abaixo da inflação de 10%, a taxa real é negativa; pela fórmula de Fisher, ela é de aproximadamente 1,818% negativos.</p><p>A A confunde crescimento do saldo com aumento do poder de compra. A C ignora que a comparação é possível quando rendimento e inflação se referem ao mesmo período. A D usa a subtração direta e ainda erra o sinal do resultado.</p><p>Regra de bolso: nominal abaixo da inflação significa taxa real negativa; para quantificar, use Fisher.</p>",
+     "enunciado": "<p>Uma aplicação rende 8% no período, enquanto a inflação é de 10%. O cliente estranha porque o saldo da aplicação aumentou, mas seu poder de compra parece ter diminuído. Como esse resultado deve ser interpretado?</p>",
+     "alternativas": {
+      "a": "A taxa real é positiva, porque o saldo nominal da aplicação aumentou.",
+      "b": "A taxa real é negativa, porque o rendimento ficou abaixo da inflação.",
+      "c": "A taxa real é nula, porque rendimento e inflação não são comparáveis.",
+      "d": "A taxa real é de 2%, porque se subtrai a inflação do rendimento obtido."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "O aumento nominal do saldo não impede que o poder de compra tenha diminuído.",
+      "c": "Rendimento e inflação são comparáveis quando se referem ao mesmo período de apuração.",
+      "d": "A subtração de 8% menos 10% é uma aproximação, e ainda daria resultado negativo."
+     }
+    }
+   ],
+   "Capitalização simples versus capitalização composta": [
+    {
+     "id": "cpa-sfn-15-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. Na capitalização simples, o juro incide sempre sobre o capital inicial; na composta, ele incide sobre o montante acumulado, incorporando o juro anterior à base do período seguinte.</p><p>A A inverte justamente a base de cálculo de cada regime. A C cria uma diferença de unidade que não existe, pois a taxa pode estar em diferentes períodos nos dois regimes. A D erra ao afirmar que o prazo não altera o resultado da capitalização composta.</p><p>Regra de bolso: simples olha sempre para o capital inicial; composto olha para o saldo acumulado.</p>",
+     "enunciado": "<p>Durante um atendimento, um cliente pergunta qual é a principal diferença entre capitalização simples e capitalização composta. A explicação correta é:</p>",
+     "alternativas": {
+      "a": "No regime simples, o juro incide sobre o montante acumulado; no composto, sobre o capital inicial.",
+      "b": "No regime simples, o juro incide sobre o capital inicial; no composto, sobre o saldo acumulado.",
+      "c": "No regime simples, a taxa é sempre anual; no composto, ela é obrigatoriamente mensal.",
+      "d": "No regime simples, o prazo altera a taxa; no composto, o prazo não altera o resultado."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "A alternativa inverte os mecanismos dos dois regimes.",
+      "c": "A unidade da taxa não define o regime de capitalização.",
+      "d": "O prazo participa do cálculo nos dois regimes, cada um com seu mecanismo."
+     }
+    },
+    {
+     "id": "cpa-sfn-15-q2",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. Em três anos, a capitalização simples gera R$ 1.300,00, enquanto a composta gera R$ 1.331,00 porque os juros anteriores entram na base dos períodos seguintes.</p><p>A A troca os resultados entre simples e composto. A B ignora o efeito dos juros sobre juros no regime composto. A D usa corretamente os valores do exemplo de seis anos, mas aplica esses montantes ao prazo de três anos.</p><p>Regra de bolso: no mesmo capital e taxa, a diferença entre simples e composto aparece com mais força à medida que o prazo aumenta.</p>",
+     "enunciado": "<p>Um cliente aplica R$ 1.000,00 a 10% ao ano durante três anos e quer comparar os dois regimes de capitalização. Qual comparação está correta?</p>",
+     "alternativas": {
+      "a": "No simples, o montante é R$ 1.331,00; no composto, R$ 1.300,00.",
+      "b": "Nos dois regimes, o montante é R$ 1.300,00 após três anos.",
+      "c": "No simples, o montante é R$ 1.300,00; no composto, R$ 1.331,00.",
+      "d": "No simples, o montante é R$ 1.600,00; no composto, R$ 1.771,56."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "Os valores estão invertidos entre os regimes de capitalização.",
+      "b": "Os regimes só coincidem exatamente quando há um único período.",
+      "d": "R$ 1.600,00 e R$ 1.771,56 correspondem ao exemplo de seis anos, não de três."
+     }
+    },
+    {
+     "id": "cpa-sfn-15-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. A taxa proporcional pertence ao regime simples e usa divisão ou multiplicação direta; a taxa equivalente pertence ao regime composto e usa conversão por raiz.</p><p>A A inverte a associação entre as taxas e os regimes. A B erra porque a taxa equivalente do composto não é obtida por divisão simples. A C limita indevidamente o uso das taxas ao prazo anual.</p><p>Regra de bolso: proporcional é simples e divide; equivalente é composto e usa raiz.</p>",
+     "enunciado": "<p>Um cliente precisa converter uma taxa antes de realizar um cálculo e pergunta qual relação deve observar entre taxa proporcional e taxa equivalente. A orientação correta é:</p>",
+     "alternativas": {
+      "a": "A taxa proporcional pertence ao composto e a equivalente pertence ao simples.",
+      "b": "As duas taxas pertencem ao simples e são convertidas sempre por divisão.",
+      "c": "A taxa proporcional e a equivalente são usadas apenas quando o prazo é anual.",
+      "d": "A taxa proporcional pertence ao simples; a equivalente pertence ao composto."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "A alternativa inverte os regimes associados às duas taxas.",
+      "b": "A taxa equivalente do composto não é obtida simplesmente por divisão.",
+      "c": "A escolha da taxa não depende de o prazo ser anual."
+     }
+    },
+    {
+     "id": "cpa-sfn-15-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. A taxa e o prazo precisam estar no mesmo período antes do cálculo, portanto uma taxa anual exige que o prazo seja convertido para anos ou que a taxa seja convertida para a unidade do prazo.</p><p>A B mantém unidades diferentes e pode gerar cálculo incorreto. A C confunde a compatibilização das unidades com a escolha do regime. A D trata taxa e prazo como grandezas que poderiam ser somadas, o que não corresponde ao procedimento apresentado no tópico.</p><p>Regra de bolso: primeiro alinhe a unidade da taxa com a do prazo, depois aplique a fórmula.</p>",
+     "enunciado": "<p>Um cliente apresenta uma operação com taxa de 10% ao ano e prazo de 18 meses. Antes de aplicar a fórmula de capitalização, qual procedimento está correto?</p>",
+     "alternativas": {
+      "a": "Ajustar taxa e prazo para que estejam expressos no mesmo período.",
+      "b": "Manter os 18 meses, pois a taxa anual pode ser usada diretamente.",
+      "c": "Trocar automaticamente a capitalização composta pela capitalização simples.",
+      "d": "Somar 10% ao prazo de 18 meses antes de realizar o cálculo."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "Taxa anual e prazo em meses não estão na mesma unidade para o cálculo.",
+      "c": "A unidade não determina a troca do regime de capitalização.",
+      "d": "Taxa e prazo devem ser compatibilizados, não somados."
+     }
+    },
+    {
+     "id": "cpa-sfn-15-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a D. Em um único período, os dois regimes produzem exatamente o mesmo resultado, pois o efeito de incorporar juros anteriores à base ainda não aparece.</p><p>A A atribui a igualdade a uma conversão de taxa, quando ela decorre do próprio prazo de um período. A B usa a palavra sempre e ignora a exceção expressamente apresentada no tópico. A C inverte o resultado do caso de um período.</p><p>Regra de bolso: o composto se diferencia do simples quando existe período anterior para gerar juros sobre juros; com um único período, os dois coincidem.</p>",
+     "enunciado": "<p>Um cliente afirma que a capitalização composta sempre entrega um montante maior que a simples. Ao analisar uma aplicação em que o prazo é de um único período, qual orientação está correta?</p>",
+     "alternativas": {
+      "a": "Os dois regimes só coincidem quando a taxa é convertida por divisão.",
+      "b": "O composto sempre supera o simples, independentemente do prazo.",
+      "c": "O simples sempre supera o composto quando há apenas um período.",
+      "d": "Os dois regimes entregam exatamente o mesmo resultado."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "A coincidência decorre do prazo de um período, não da conversão da taxa.",
+      "b": "A afirmação ignora o caso limite de um único período.",
+      "c": "Não há vantagem de um regime sobre o outro nesse caso."
+     }
+    }
+   ],
+   "Fluxo de caixa: valor presente, valor futuro e VPL": [
+    {
+     "id": "cpa-sfn-16-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. Valores em datas diferentes não podem ser comparados nem somados diretamente; é necessário trazê-los para a mesma data usando o desconto.</p><p>A A ignora o efeito do tempo sobre o valor do dinheiro. A B considera apenas o tamanho nominal dos valores e desconsidera a taxa de oportunidade. A D elimina justamente o fator que permite transformar o valor futuro em valor presente.</p><p>Regra de bolso: antes de comparar dinheiro em datas diferentes, traga tudo para a mesma data.</p>",
+     "enunciado": "<p>Durante um atendimento, um cliente compara valores que serão recebidos em datas diferentes. Qual orientação está de acordo com o conceito de valor presente?</p>",
+     "alternativas": {
+      "a": "Valores em datas diferentes podem ser somados diretamente, sem nenhum ajuste.",
+      "b": "O maior valor nominal é sempre a melhor alternativa para o cliente.",
+      "c": "Valores em datas diferentes devem ser trazidos para a mesma data.",
+      "d": "O valor futuro não precisa considerar a taxa de desconto do período."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "Valores em datas diferentes não podem ser somados sem antes serem trazidos para a mesma data.",
+      "b": "O tamanho nominal do valor não determina sozinho qual alternativa é melhor.",
+      "d": "A taxa é necessária para trazer o valor futuro para a data presente."
+     }
+    },
+    {
+     "id": "cpa-sfn-16-q2",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. Capitalizar leva o valor para frente multiplicando por (1 + i)ⁿ, enquanto descontar traz o valor futuro para hoje dividindo pelo mesmo fator.</p><p>A A atribui a divisão também à capitalização. A B ignora que desconto e capitalização são operações inversas da mesma equação. A C separa indevidamente os conceitos, pois valor presente e futuro aparecem relacionados nas duas operações.</p><p>Regra de bolso: para ir para frente, multiplique pelo fator; para voltar, divida pelo fator.</p>",
+     "enunciado": "<p>Um cliente quer entender a diferença entre capitalizar um valor e descontar um valor futuro. Qual comparação está correta?</p>",
+     "alternativas": {
+      "a": "Capitalizar e descontar são operações que sempre dividem pelo mesmo fator.",
+      "b": "Capitalizar e descontar são operações independentes, sem relação matemática.",
+      "c": "Capitalizar usa apenas o valor presente; descontar usa apenas o valor futuro.",
+      "d": "Capitalizar multiplica pelo fator; descontar divide pelo mesmo fator."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "Apenas o desconto divide pelo fator; a capitalização multiplica.",
+      "b": "As duas operações são a mesma equação lida em sentidos diferentes.",
+      "c": "As duas operações relacionam valor presente e valor futuro em direções opostas."
+     }
+    },
+    {
+     "id": "cpa-sfn-16-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. Descontando R$ 1.100,00 por um ano a 10%, temos R$ 1.100,00 dividido por 1,10, resultando em R$ 1.000,00.</p><p>A B usa o valor presente apresentado no tópico quando a taxa é de 12%. A C repete o valor futuro sem realizar o desconto. A D capitaliza o valor por mais um ano, em vez de descontar o recebimento para hoje.</p><p>Regra de bolso: valor presente é o valor futuro trazido para hoje pela divisão pelo fator de desconto.</p>",
+     "enunciado": "<p>Um cliente receberá R$ 1.100,00 daqui a um ano e considera um custo de oportunidade de 10% ao ano. Qual é o valor presente desse recebimento?</p>",
+     "alternativas": {
+      "a": "R$ 1.000,00",
+      "b": "R$ 982,14",
+      "c": "R$ 1.100,00",
+      "d": "R$ 1.210,00"
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "R$ 982,14 é o valor presente de R$ 1.100,00 quando a taxa é de 12%.",
+      "c": "R$ 1.100,00 é o valor futuro, não o valor presente descontado a 10%.",
+      "d": "R$ 1.210,00 resulta de capitalizar R$ 1.100,00 por mais um ano a 10%, não do desconto apresentado."
+     }
+    },
+    {
+     "id": "cpa-sfn-16-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. Um VPL de R$ 2,25 é positivo, portanto o projeto remunera acima do custo de oportunidade e deve ser aceito.</p><p>A A interpreta o sinal positivo de forma invertida. A B cria um limite de R$ 200,00 que não faz parte da regra apresentada. A D confunde VPL positivo ou igual a zero com ausência de retorno, embora VPL igual a zero represente retorno exatamente igual ao custo de oportunidade.</p><p>Regra de bolso: VPL maior que zero aceita; igual a zero é indiferente; menor que zero rejeita.</p>",
+     "enunciado": "<p>Um cliente analisa um projeto que exige investimento de R$ 1.000,00 hoje e apresenta VPL de R$ 2,25, considerando custo de oportunidade de 10% ao ano. Qual deve ser a decisão?</p>",
+     "alternativas": {
+      "a": "Rejeitar, porque o VPL positivo indica retorno insuficiente ao investidor.",
+      "b": "Aceitar apenas se o VPL do projeto superar R$ 200,00 no período.",
+      "c": "Aceitar, porque o VPL positivo supera o custo de oportunidade.",
+      "d": "Ser indiferente, porque qualquer VPL próximo de zero indica ausência de retorno."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "VPL positivo indica que o projeto remunera acima do custo de oportunidade.",
+      "b": "Não existe exigência de VPL mínimo de R$ 200,00 para a regra de decisão apresentada.",
+      "d": "VPL próximo de zero não significa ausência de retorno; a regra depende de ser maior, igual ou menor que zero."
+     }
+    },
+    {
+     "id": "cpa-sfn-16-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a B. Ao elevar a taxa de desconto de 10% para 12%, o valor presente dos fluxos futuros diminui, fazendo o VPL cair de R$ 2,25 para R$ -30,73.</p><p>A A atribui a mudança a alterações nos fluxos, mas o exemplo informa que eles permaneceram iguais. A C ignora que o investimento inicial entra no VPL com sinal negativo. A D inverte o efeito da taxa, pois uma taxa maior reduz o valor presente dos fluxos futuros.</p><p>Regra de bolso: quanto maior a taxa de desconto, menor o valor presente e menor o VPL, mantendo os demais fluxos constantes.</p>",
+     "enunciado": "<p>Um projeto apresenta VPL de R$ 2,25 quando o custo de oportunidade é de 10% ao ano. Mantendo os mesmos fluxos, o custo de oportunidade passa para 12% ao ano e o VPL passa a R$ -30,73. O que explica essa mudança?</p>",
+     "alternativas": {
+      "a": "Os recebimentos aumentaram, mas o investimento inicial foi reduzido.",
+      "b": "A taxa maior reduziu o valor presente dos fluxos e, com isso, o VPL.",
+      "c": "O investimento inicial passou a ser positivo por causa da nova taxa.",
+      "d": "A taxa maior aumentou o valor presente e tornou o VPL negativo."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "Os fluxos não mudaram; apenas o custo de oportunidade passou de 10% para 12%.",
+      "c": "O investimento inicial continua entrando no VPL com sinal negativo.",
+      "d": "A taxa maior reduz, e não aumenta, o valor presente dos fluxos futuros."
+     }
+    }
+   ],
+   "TIR, custo de oportunidade, taxa livre de risco e duration": [
+    {
+     "id": "cpa-sfn-17-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. A TIR é a taxa que faz o VPL do fluxo ser exatamente igual a zero e é extraída dos próprios fluxos do projeto.</p><p>A A descreve o custo de oportunidade. A B confunde a TIR com uma taxa externa usada para descontar fluxos. A D trata a taxa livre de risco como se fosse a definição da TIR, mas são conceitos diferentes.</p><p>Regra de bolso: TIR é a taxa que zera o VPL do próprio projeto.</p>",
+     "enunciado": "<p>Durante uma análise de investimento, um cliente pergunta o que representa a Taxa Interna de Retorno. Considerando o conceito apresentado no material, a definição correta é:</p>",
+     "alternativas": {
+      "a": "O retorno da melhor alternativa deixada de lado pelo investidor.",
+      "b": "A taxa de mercado usada para descontar todos os fluxos.",
+      "c": "A taxa de desconto que faz o VPL do fluxo do projeto ser igual a zero.",
+      "d": "A taxa livre de risco usada como referência para qualquer investimento."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "O retorno da melhor alternativa deixada de lado é o custo de oportunidade.",
+      "b": "A TIR é extraída do próprio fluxo e não depende de uma taxa externa de mercado.",
+      "d": "A taxa livre de risco é uma referência de retorno, enquanto a TIR mede o retorno intrínseco do fluxo."
+     }
+    },
+    {
+     "id": "cpa-sfn-17-q2",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. A regra de decisão é aceitar o projeto quando a TIR supera o custo de oportunidade, pois o projeto rende mais que a alternativa deixada de lado.</p><p>A B inverte o significado do VPL positivo. A C considera qualquer TIR positiva suficiente, ignorando a taxa mínima exigida. A D troca a condição de igualdade pela de superioridade, quando a igualdade é justamente o ponto de indiferença.</p><p>Regra de bolso: TIR maior, aceita; TIR menor, rejeita; TIR igual, indiferença.</p>",
+     "enunciado": "<p>Uma empresa está comparando um projeto com seu custo de oportunidade. Em determinada análise, a TIR do projeto é de 10,1331% ao ano. Sobre a decisão, é correto afirmar que:</p>",
+     "alternativas": {
+      "a": "O projeto deve ser aceito se a TIR superar o custo de oportunidade.",
+      "b": "O projeto deve ser rejeitado sempre que seu VPL for positivo.",
+      "c": "O projeto deve ser aceito sempre que sua TIR for positiva.",
+      "d": "O projeto é indiferente somente quando a TIR for maior que o custo."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "VPL positivo indica que o retorno supera a taxa exigida, e não motivo para rejeição.",
+      "c": "Uma TIR positiva não basta. Ela precisa superar o custo de oportunidade.",
+      "d": "A indiferença ocorre quando a TIR é igual ao custo de oportunidade, ponto em que o VPL é zero."
+     }
+    },
+    {
+     "id": "cpa-sfn-17-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. Como a TIR é 10,1331%, ela supera a taxa de 10%, produzindo VPL positivo, mas fica abaixo de 12%, produzindo VPL negativo.</p><p>A A inverte a relação entre TIR e VPL positivo. A B confunde a taxa de 12% com a TIR do projeto. A C ignora justamente a regra de decisão, que exige comparar a TIR com o custo de oportunidade.</p><p>Regra de bolso: se a taxa exigida fica abaixo da TIR, o VPL é positivo; se fica acima, o VPL é negativo.</p>",
+     "enunciado": "<p>Um analista compara a TIR e o VPL de um mesmo projeto. A 10% ao ano, o VPL é de R$ 2,25, enquanto a 12% ao ano o VPL é de R$ 30,73 negativo. Sabendo que a TIR do projeto é de 10,1331% ao ano, qual interpretação está correta?</p>",
+     "alternativas": {
+      "a": "A TIR é inferior a 10%, por isso o VPL é positivo nessa taxa.",
+      "b": "A TIR é igual a 12%, pois nessa taxa o VPL fica negativo.",
+      "c": "A TIR não pode ser comparada com o custo de oportunidade do projeto.",
+      "d": "A TIR supera 10% e fica abaixo de 12%, explicando os dois VPLs."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "A TIR de 10,1331% é superior a 10%, e essa diferença explica o VPL positivo.",
+      "b": "A TIR não é 12%. O VPL negativo nessa taxa ocorre porque 10,1331% não alcança a exigência de 12%.",
+      "c": "A TIR precisa ser comparada ao custo de oportunidade para produzir uma decisão."
+     }
+    },
+    {
+     "id": "cpa-sfn-17-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. O CMPC é a média ponderada do custo do capital próprio e do capital de terceiros, com o custo da dívida considerado líquido de imposto.</p><p>A A exclui a dívida, embora ela faça parte da estrutura de capital. A C exclui o capital próprio, que também participa do cálculo. A D ignora tanto o benefício fiscal da dívida quanto a ponderação das fontes de financiamento.</p><p>Regra de bolso: CMPC é a régua da empresa, combinando capital próprio e dívida, com a dívida líquida de imposto.</p>",
+     "enunciado": "<p>Uma empresa avalia um projeto financiado por capital próprio e capital de terceiros. O analista explica que o custo de oportunidade da empresa é representado pelo CMPC. Nessa situação, qual explicação está correta?</p>",
+     "alternativas": {
+      "a": "O CMPC considera somente o custo do capital próprio.",
+      "b": "O CMPC pondera capital próprio e dívida, com a dívida líquida de imposto.",
+      "c": "O CMPC considera somente a dívida, porque seus juros são dedutíveis.",
+      "d": "O CMPC usa o custo da dívida sem imposto e desconsidera a estrutura de capital."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "O CMPC combina o custo do capital próprio com o custo da dívida.",
+      "c": "A dívida participa do cálculo, mas não é a única fonte considerada.",
+      "d": "A dívida entra líquida de imposto, e o cálculo considera a participação de cada fonte na estrutura de capital."
+     }
+    },
+    {
+     "id": "cpa-sfn-17-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a D. Em um título sem cupom, todo o fluxo está concentrado no vencimento, fazendo a duration coincidir com o prazo e deixando maior sensibilidade a juros do que em um título equivalente com cupons.</p><p>A A inverte o efeito dos cupons, pois receber dinheiro antes reduz a duration. A B ignora que os cupons antecipam parte dos fluxos e reduzem a duration. A C desconsidera a distribuição dos fluxos ao longo do tempo.</p><p>Regra de bolso: sem cupom, duration igual ao prazo; com cupom, duration menor. Quanto maior a duration, maior a sensibilidade do preço aos juros.</p>",
+     "enunciado": "<p>Um cliente compara títulos de mesmo prazo e observa que um deles paga cupons durante a vida do investimento, enquanto o outro não paga cupons. Ele quer saber qual tende a apresentar maior sensibilidade a variações de juros. Considerando o conceito de duration, a explicação correta é:</p>",
+     "alternativas": {
+      "a": "O título com cupom tende a ter maior duration porque recebe fluxos antes do vencimento.",
+      "b": "O título com cupom sempre tem duration igual ao prazo de vencimento.",
+      "c": "Os dois títulos têm a mesma duration quando possuem o mesmo prazo.",
+      "d": "O título sem cupom tende a ter maior duration e maior sensibilidade a juros."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "Receber fluxos antes do vencimento reduz, e não aumenta, a duration.",
+      "b": "Com cupom, a duration fica abaixo do prazo porque parte do dinheiro retorna antes do vencimento.",
+      "c": "Mesmo com o mesmo prazo, os fluxos antecipados alteram a duration."
+     }
+    }
+   ],
+   "Sistemas de amortização SAC e price, payback e desconto bancário": [
+    {
+     "id": "cpa-sfn-18-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a A. Toda parcela tem duas partes, amortização, que reduz o saldo devedor, e juros, que remuneram o saldo existente no início do período.</p><p>A B acrescenta uma tarifa que não faz parte da composição apresentada. A C mistura uma característica do SAC com uma taxa que não integra a composição da parcela. A D confunde a lógica da amortização com a do desconto bancário.</p><p>Regra de bolso: parcela = amortização + juros.</p>",
+     "enunciado": "<p>Um cliente quer entender a composição das parcelas de um financiamento. Considerando os conceitos dos sistemas SAC e price, cada parcela é formada por:</p>",
+     "alternativas": {
+      "a": "Amortização do saldo devedor e juros sobre o saldo anterior.",
+      "b": "Apenas juros sobre o valor financiado e uma tarifa de contratação.",
+      "c": "Amortização constante e uma taxa fixa sobre o valor da parcela.",
+      "d": "Juros sobre o valor nominal e uma tarifa de antecipação do pagamento."
+     },
+     "gabarito": "a",
+     "feedback": {
+      "b": "A parcela não é formada apenas por juros e tarifa. Ela contém amortização e juros.",
+      "c": "A amortização pode ser constante no SAC, mas isso não define a composição geral da parcela.",
+      "d": "Juros sobre valor nominal e tarifa de antecipação pertencem a outro contexto, não à composição das parcelas de amortização."
+     }
+    },
+    {
+     "id": "cpa-sfn-18-q2",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a D. No SAC, a amortização é constante em R$ 30.000,00 e os juros diminuem conforme o saldo devedor cai, fazendo a parcela também diminuir.</p><p>A A troca as características do SAC, pois a parcela não é constante. A B descreve incorretamente uma parcela decrescente no price. A C atribui ao price uma amortização constante e juros iguais, quando ocorre o contrário, a amortização cresce e os juros caem.</p><p>Regra de bolso: SAC mantém a amortização; price mantém a parcela.</p>",
+     "enunciado": "<p>Um cliente compara SAC e price para um financiamento de R$ 120.000,00 em quatro parcelas anuais, a 10% ao ano. Ele quer saber como os sistemas se comportam ao longo do contrato. Qual afirmação está correta?</p>",
+     "alternativas": {
+      "a": "No SAC, a parcela é constante e a amortização aumenta a cada período.",
+      "b": "No price, a parcela cai porque os juros diminuem sobre o saldo.",
+      "c": "No price, a amortização é constante e os juros permanecem iguais.",
+      "d": "No SAC, a amortização é constante e a parcela diminui a cada ano."
+     },
+     "gabarito": "d",
+     "feedback": {
+      "a": "No SAC, quem permanece constante é a amortização, enquanto a parcela diminui.",
+      "b": "No price, a parcela permanece constante, mesmo com a queda dos juros.",
+      "c": "No price, a parcela é constante, mas a amortização cresce e os juros caem."
+     }
+    },
+    {
+     "id": "cpa-sfn-18-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a C. O SAC começa com parcela de R$ 42.000,00 e totaliza R$ 30.000,00 de juros, enquanto o price começa com R$ 37.856,50 e totaliza R$ 31.425,99 de juros.</p><p>A A inverte tanto o comportamento da primeira parcela quanto o custo total. A B troca as características dos dois sistemas. A D ignora as diferenças mostradas nos cálculos, tanto na primeira parcela quanto nos juros totais.</p><p>Regra de bolso: SAC pesa mais no começo, mas amortiza mais rápido e paga menos juros no total.</p>",
+     "enunciado": "<p>Dois clientes contratam o mesmo financiamento de R$ 120.000,00 em quatro parcelas anuais, a 10% ao ano, mas um escolhe SAC e o outro escolhe price. Considerando os valores apresentados no material, qual comparação está correta?</p>",
+     "alternativas": {
+      "a": "O SAC tem primeira parcela menor e paga mais juros no total.",
+      "b": "O price tem primeira parcela maior e paga menos juros no total.",
+      "c": "O SAC tem primeira parcela maior e paga menos juros no total.",
+      "d": "Os dois têm a mesma primeira parcela e o mesmo total de juros."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "No SAC, a primeira parcela é R$ 42.000,00, maior que a do price, e o total de juros é menor.",
+      "b": "No price, a primeira parcela é R$ 37.856,50, menor que a do SAC, e o total de juros é maior.",
+      "d": "Os sistemas apresentam parcelas iniciais e totais de juros diferentes."
+     }
+    },
+    {
+     "id": "cpa-sfn-18-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A resposta é a B. O payback simples recupera o investimento durante o terceiro ano, enquanto o descontado também ocorre no terceiro ano, mas mais tarde, pois considera os valores presentes.</p><p>A A antecipa indevidamente a recuperação para o segundo ano, quando o acumulado simples é apenas R$ 900,00. A C ignora que o acumulado descontado no segundo ano é R$ 776,86. A D troca as definições, pois o payback descontado considera o valor do dinheiro no tempo.</p><p>Regra de bolso: payback simples olha o fluxo nominal; payback descontado olha o fluxo a valor presente. O simples nunca recupera depois do descontado.</p>",
+     "enunciado": "<p>Um investidor aplicou R$ 1.000,00 em um projeto que gera R$ 400,00 no primeiro ano, R$ 500,00 no segundo e R$ 300,00 no terceiro. Ao analisar o prazo de recuperação, ele compara o payback simples com o payback descontado a 10%. Qual conclusão está correta?</p>",
+     "alternativas": {
+      "a": "O payback simples ocorre no segundo ano e o descontado no terceiro.",
+      "b": "Ambos ocorrem no terceiro ano, mas o simples recupera antes dentro do período.",
+      "c": "O payback descontado ocorre no segundo ano porque considera o valor do dinheiro.",
+      "d": "Ambos ocorrem no terceiro ano, mas o descontado ignora o valor do dinheiro."
+     },
+     "gabarito": "b",
+     "feedback": {
+      "a": "No segundo ano, o acumulado simples chega a R$ 900,00, ainda abaixo do investimento.",
+      "c": "O acumulado descontado chega a R$ 776,86 no segundo ano e só supera R$ 1.000,00 no terceiro.",
+      "d": "Quem ignora o valor do dinheiro no tempo é o payback simples, não o descontado."
+     }
+    },
+    {
+     "id": "cpa-sfn-18-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A resposta é a C. O desconto é de R$ 600,00 e o cliente recebe R$ 9.400,00. O custo efetivo do período é 6,383%, que corresponde a 3,1421% ao mês em termos equivalentes.</p><p>A A confunde a taxa de desconto anunciada com o custo efetivo da operação. A B apresenta o custo efetivo de todo o período, não sua equivalência mensal. A D apenas dobra a taxa de desconto para dois meses e não calcula o custo sobre o valor efetivamente recebido.</p><p>Regra de bolso: no desconto bancário, compare o desconto com o dinheiro que efetivamente entrou no caixa. Por isso o custo efetivo supera a taxa de desconto anunciada.</p>",
+     "enunciado": "<p>Uma empresa possui uma duplicata de R$ 10.000,00 para 60 dias e precisa antecipar o recebimento. O banco informa uma taxa de desconto de 3% ao mês. Aplicando o desconto bancário apresentado no material, qual é o custo efetivo mensal aproximado da operação?</p>",
+     "alternativas": {
+      "a": "3,0000% ao mês, pois essa é a taxa que o banco anunciou na operação.",
+      "b": "6,3830% ao mês, porque esse é o custo efetivo de todo o período.",
+      "c": "3,1421% ao mês, porque o custo incide sobre o valor recebido.",
+      "d": "6,0000% ao mês, porque a taxa de 3% incide durante dois meses."
+     },
+     "gabarito": "c",
+     "feedback": {
+      "a": "A taxa anunciada de 3% ao mês é a taxa de desconto, não o custo efetivo sobre o valor recebido.",
+      "b": "6,383% é o custo efetivo do período de 60 dias, não o equivalente mensal.",
+      "d": "Multiplicar a taxa anunciada por dois produz o desconto acumulado, não o custo efetivo mensal."
      }
     }
    ]
