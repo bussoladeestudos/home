@@ -7,7 +7,7 @@
    Só intercepta GET da MESMA ORIGEM (Firebase/Google passam direto).
    Ao mudar a versão abaixo, o SW novo assume e limpa os caches antigos.
    ════════════════════════════════════════════════════════════════ */
-const CACHE = "bussola-v5";   // v5 (06/09): index.html passou a pedir os arquivos com ?v=
+const CACHE = "bussola-v4";   // v4 (26/08): entrou conteudo/conteudo-cpa.js no SHELL
 const SHELL = [
   "./",
   "index.html",
@@ -53,9 +53,7 @@ self.addEventListener("fetch", (e) => {
         return resp;
       })
       .catch(() =>
-        /* ignoreSearch: o index pede "css/app.css?v=...", e o SHELL guardou
-           "css/app.css" sem query. Sem isso o app offline ficava sem CSS. */
-        caches.match(req, { ignoreSearch: true }).then((hit) => hit || caches.match("index.html"))
+        caches.match(req).then((hit) => hit || caches.match("index.html"))
       )
   );
 });
