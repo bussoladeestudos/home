@@ -7,7 +7,7 @@
    Só intercepta GET da MESMA ORIGEM (Firebase/Google passam direto).
    Ao mudar a versão abaixo, o SW novo assume e limpa os caches antigos.
    ════════════════════════════════════════════════════════════════ */
-const CACHE = "bussola-v5";   // v5 (06/09): index.html passou a pedir os arquivos com ?v=
+const CACHE = "bussola-v10";   // v10 (08/09): oito aulas de politica e KYC ASSBAN
 const SHELL = [
   "./",
   "index.html",
@@ -16,6 +16,7 @@ const SHELL = [
   "editais.js",
   "cursos.js",
   "conteudo/conteudo-cpa.js",
+  "conteudo/conteudo-assban-pldft-lgpd.js",
   "js/state.js",
   "js/engine.js",
   "js/ui.js",
