@@ -2181,7 +2181,7 @@ function buildCoachHtml(prog, conf, ritmo, projecao, totalRev){
       p4=`🔔 Há <strong>${totalRev} revisão(ões) pendentes</strong>. Acesse a aba <strong>Revisões</strong> para consolidar o conteúdo já estudado — a revisão espaçada é fundamental para fixação.`;
     } else if(matAtrasadas.length>0){
       const top=matAtrasadas[0];
-      p4=`💡 Recomendo dedicar a sessão de hoje a <strong>${top.nome}</strong> (${top.peso}% do edital). Avance ${Math.min(5,top.peso)}% desta semana para reequilibrar o cronograma.`;
+      p4=`💡 Recomendo dedicar a sessão de hoje a <strong>${top.nome}</strong> (${top.peso}% ${usaPrioridadeEditorial()?"de prioridade de estudo":"do edital"}). Avance ${Math.min(5,top.peso)}% desta semana para reequilibrar o cronograma.`;
     } else if(matFracas.length>0){
       const top=matFracas[0];
       p4=`💡 Use o próximo <strong>Retorno Técnico</strong> para reforçar <strong>${top.nome}</strong> com exercícios práticos. Meta: elevar o domínio de ${top.dominio}% para 60%+.`;
@@ -2354,7 +2354,7 @@ function renderHoje(){
     label="Exercícios de Revisão"; titulo="Pratique os ciclos encerrados"; sub="Questões dos ciclos anteriores — pratique, não releia.";
   } else {
     const td=getTopicoDiaHoje();
-    titulo=td.mat; sub=`${td.top} · peso ${td.peso}% no edital`;
+    titulo=td.mat; sub=`${td.top} · ${rotuloPeso().toLowerCase()} ${td.peso}%`;
     const _aula=_btnConteudo(td.mat,td.top)+_btnAula(td.mat,td.top);
     if(_aula) sub+=`<br>${_aula}`;
     const extras=getExtrasDoDia(hojeKey);
@@ -2955,7 +2955,7 @@ function renderMapaCalorPage(targetId){
     return`<div class="mapa-item">
       <div>
         <div class="mapa-materia">${m.nome}</div>
-        <span class="mapa-peso-tag">Peso ${m.peso}%</span>
+        <span class="mapa-peso-tag">${rotuloPeso()} ${m.peso}%</span>
       </div>
       <div class="mapa-prog-col">
         <div class="mapa-bar-row">
@@ -2985,6 +2985,10 @@ let _medExpandido=false;
 function toggleMedalhas(){ _medExpandido=!_medExpandido; renderMedalhas(); }
 function toggleMapaTudo(){ _mapaTudo=!_mapaTudo; renderMapaCalorPage("mapaGrid"); }
 
+function usaPrioridadeEditorial(){
+  return typeof EDITAIS!=="undefined" && EDITAIS[STATE.prefeitura]?.pesoTipo==="planejamento";
+}
+function rotuloPeso(){ return usaPrioridadeEditorial()?"Prioridade de estudo":"Peso"; }
 function renderMaterias(){
   const grid=document.getElementById("mapaGridMaterias");
   if(!grid) return;
@@ -3031,7 +3035,7 @@ function renderMaterias(){
   };
 
   const itensHtml=materias.map((m,i)=>{
-    const questoes=Math.round(totalQuestoes*(m.peso/100));
+    const questoes=usaPrioridadeEditorial()?"Não informado":Math.round(totalQuestoes*(m.peso/100));
     const confColor=m.conf>=70?"var(--green)":m.conf>=50?"var(--yellow)":"var(--red)";
     const semConf=!m.conf;
     const confLabel=m.conf>=70?"Alta":m.conf>=50?"Média":m.conf>0?"Baixa":"Sem dados";
@@ -3050,10 +3054,10 @@ function renderMaterias(){
       <button type="button" class="mat-item-header" data-action="toggleMateria" data-i="${i}" aria-expanded="false" aria-controls="matSubs${i}">
         <span class="mat-item-left">
           <span class="mat-num">${String(i+1).padStart(2,"0")}</span>
-          <span class="mat-item-txt"><span class="mat-nome">${m.nome}${selo}</span><span class="mat-resumo">${resumo}</span></span>
+          <span class="mat-item-txt"><span class="mat-nome">${esc(m.nome)}${selo}</span><span class="mat-resumo">${resumo}</span></span>
         </span>
         <span class="mat-item-right">
-          <span class="mat-stat"><span class="mat-stat-label">Peso</span><span class="mat-stat-val">${m.peso}%</span></span>
+          <span class="mat-stat"><span class="mat-stat-label">${rotuloPeso()}</span><span class="mat-stat-val">${m.peso}%</span></span>
           <span class="mat-stat"><span class="mat-stat-label">Questões</span><span class="mat-stat-val">${questoes}</span></span>
           <span class="mat-stat"><span class="mat-stat-label">Segurança</span><span class="mat-stat-val" style="color:${semConf?"var(--gray-400)":confColor}${semConf?";font-size:.7rem;font-weight:600":""}">${confLabel}</span></span>
           <span class="mat-chevron" aria-hidden="true">⌄</span>
@@ -3075,7 +3079,8 @@ function renderMaterias(){
     </div>
     <div class="mat-busca-vazio" id="matBuscaVazio" hidden>Nenhum tópico encontrado para essa busca.</div>`;
 
-  grid.innerHTML=contextoBanner+buscaHtml+`<div class="mat-lista">${itensHtml}</div>`;
+  const avisoEditorial=usaPrioridadeEditorial()?`<p role="note">${esc(EDITAIS[STATE.prefeitura]._info)}</p>`:"";
+  grid.innerHTML=avisoEditorial+contextoBanner+buscaHtml+`<div class="mat-lista">${itensHtml}</div>`;
   aplicarBuscaConteudo();
 }
 
@@ -4340,7 +4345,7 @@ function renderDiaNormal(dia,idx,key,est,isHoje,isPast,nomeDia){
       ${medalHtml}
       ${isMulti
         ?`<div class="multi-topico-header"><span class="multi-topico-tag">📚 ${tops.length} tópicos · Modo intensivo</span></div><div class="multi-topico-list">${tops.map((t,i)=>`<div class="multi-topico-row"><div class="mtr-head"><span class="multi-topico-num">${i+1}</span><span class="multi-topico-mat" title="${esc(t.mat)}">${esc(t.mat)}</span></div><div class="multi-topico-text">${t.top}</div>${_btnConteudo(t.mat,t.top)}${_btnAula(t.mat,t.top)}</div>`).join("")}</div>`
-        :`<div class="dia-topico">${mat}</div><div class="dia-subtopico">${top}</div><div class="dia-peso">Peso ${peso}%</div>${_btnConteudo(mat,top)}${_btnAula(mat,top)}`}
+        :`<div class="dia-topico">${mat}</div><div class="dia-subtopico">${top}</div><div class="dia-peso">${rotuloPeso()} ${peso}%</div>${_btnConteudo(mat,top)}${_btnAula(mat,top)}`}
       ${getExtrasDoDia(key).length?`<div class="dia-extras">${getExtrasDoDia(key).map(e=>`<div class="dia-extra-item">➕ <strong>${esc(e.mat)}</strong>: ${esc(e.top)}</div>`).join("")}<div class="dia-extra-tag">⚖️ Recuperação de conteúdo</div></div>`:""}
       <div class="check-group">
         <label class="check-item" data-action="toggleCheck" data-key="${key}" data-campo="lido"><div class="check-box ${lidoCls}" id="cb-${key}-lido">✓</div><span class="check-label">Conteúdo Lido</span></label>
