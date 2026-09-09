@@ -17,7 +17,7 @@ let CONTEUDO=(typeof window!=="undefined"&&window.CONTEUDO_DATA)||{};
 /* Banco de questões por tópico — gerado em app/conteudo/questoes-<cert>.js */
 let QUESTOES=(typeof window!=="undefined"&&window.QUESTOES_DATA)||{};
 
-let STATE = {
+function initialState(){ return {
   concurso:"", prefeitura:"", cargo:"", nome:"",
   inicio:null, prova:null, horasDia:3,
   semanaOffset:0, mesOffset:0, cronView:"semana", pagina:"dashboard",
@@ -27,7 +27,10 @@ let STATE = {
   cursinho:"",    // cursinho contratado pelo aluno (id em cursos.js) — libera o link das aulas
   questoes:{},    // histórico por questão: { <id>: {n, ok, ultima, ultimaOpcao, ultimaCerta} }
   exDias:{},      // respostas por dia: { "AAAA-MM-DD": {n, ok} } — base do Painel de Exercícios
-};
+}; }
+let STATE = initialState();
+function cleanState(raw){ return {...initialState(),...migrateState(raw||{})}; }
+function storageKey(uid){ return uid?STATE_STORAGE_KEY+":"+uid:STATE_STORAGE_KEY+":guest"; }
 
 /* ── MIGRAÇÃO DE SCHEMA ──
    v1 (sem schemaVersion): dados podem vir de versões antigas ou de
@@ -145,11 +148,26 @@ function save(){
     // Saves automáticos de boot (ex.: navegação inicial) não carimbam —
     // sem isso, um dispositivo desatualizado "pareceria" mais novo que a nuvem.
     if(typeof window==="undefined"||window._bussolaUserActed) STATE.updatedAt=Date.now();
-    localStorage.setItem(STATE_STORAGE_KEY,JSON.stringify(STATE));
+    localStorage.setItem(storageKey(_cloudUser&&_cloudUser.uid),JSON.stringify(STATE));
   }catch(e){}
   _cloudAgendarPush();
 }
-function load(){ try{ const s=localStorage.getItem(STATE_STORAGE_KEY); if(s) STATE=migrateState({...STATE,...JSON.parse(s)}); }catch(e){} }
+function load(){
+  const uid=_cloudUser&&_cloudUser.uid;
+  let raw=null;
+  try{
+    const saved=localStorage.getItem(storageKey(uid));
+    if(saved) raw=JSON.parse(saved);
+    // Migração conservadora: cache antigo só pertence ao UID marcado.
+    if(!raw){
+      const legacy=JSON.parse(localStorage.getItem(STATE_STORAGE_KEY)||"null");
+      if(legacy&&(uid?legacy._syncUid===uid:!legacy._syncUid)) raw=legacy;
+    }
+  }catch(e){}
+  if(raw&&raw._syncUid&&raw._syncUid!==uid) raw=null;
+  STATE=cleanState(raw);
+  if(uid) STATE._syncUid=uid;
+}
 
 /* ── BACKUP: EXPORTAR / IMPORTAR ── */
 function exportarDados(){
@@ -176,7 +194,9 @@ function importarDados(ev){
         showToast("⚠️ Arquivo inválido: não parece um backup da Bússola."); return;
       }
       if(!confirm("Importar este backup substituirá os dados atuais. Continuar?")) return;
-      STATE=migrateState({...STATE,...novoState});
+      STATE=cleanState(novoState);
+      if(_cloudUser) STATE._syncUid=_cloudUser.uid;
+      else delete STATE._syncUid;
       save();
       document.getElementById("setupModal").classList.remove("open");
       renderTudo();
@@ -195,7 +215,7 @@ function importarDados(ev){
    e é a ponte entre dispositivos. Documento único: alunos/{uid},
    protegido por regra de segurança (uid do próprio aluno).
    ══════════════════════════════════════════════════════════════ */
-let _cloudUser=null,_cloudTimer=null;
+let _cloudUser=null,_cloudTimer=null,_cloudEpoch=0,_cloudReady=false;
 
 /* Decisão de conflito local × nuvem (pura, testável):
    1. Dados locais de OUTRO usuário nunca valem (computador compartilhado).
@@ -229,30 +249,43 @@ function _syncStatus(st,title){
 
 function _cloudAgendarPush(){
   if(typeof window==="undefined") return;
-  if(!_cloudUser||typeof DB==="undefined"||!DB) return;
+  if(!_cloudReady||!_cloudUser||STATE._syncUid!==_cloudUser.uid||typeof DB==="undefined"||!DB) return;
   _syncStatus("sync");
   clearTimeout(_cloudTimer);
-  _cloudTimer=setTimeout(_cloudPush,2000);
+  const epoch=_cloudEpoch;
+  _cloudTimer=setTimeout(function(){ if(epoch===_cloudEpoch) _cloudPush(); },2000);
 }
 async function _cloudPush(){
-  if(!_cloudUser||typeof DB==="undefined"||!DB) return;
+  if(!_cloudReady||!_cloudUser||STATE._syncUid!==_cloudUser.uid||typeof DB==="undefined"||!DB) return;
+  const uid=_cloudUser.uid,epoch=_cloudEpoch,payload=JSON.parse(JSON.stringify(STATE));
   try{
-    await DB.collection("alunos").doc(_cloudUser.uid).set(JSON.parse(JSON.stringify(STATE)));
-    _syncStatus("ok");
-  }catch(e){ _syncStatus("err"); }
+    await DB.collection("alunos").doc(uid).set(payload);
+    if(epoch===_cloudEpoch) _syncStatus("ok");
+  }catch(e){ if(epoch===_cloudEpoch) _syncStatus("err"); }
 }
 
 async function cloudOnLogin(user){
+  const epoch=++_cloudEpoch;
+  clearTimeout(_cloudTimer); _cloudReady=false;
   _cloudUser=user;
-  if(typeof DB==="undefined"||!DB){ _syncStatus("err","Firestore não inicializado"); return; }
+  if(typeof window!=="undefined") window._bussolaUserActed=false;
+  if(typeof resetAccountUI==="function") resetAccountUI();
+  load();
+  if(typeof DB==="undefined"||!DB){
+    _syncStatus("err","Firestore não inicializado");
+    if(typeof renderTudo==="function") renderTudo();
+    _showAccount();
+    return true;
+  }
   _syncStatus("sync");
   try{
-    load(); // garante que o STATE reflete o localStorage antes de decidir
     const snap=await DB.collection("alunos").doc(user.uid).get();
+    if(epoch!==_cloudEpoch) return false;
     const remote=snap.exists?snap.data():null;
     const d=decideSync(STATE,remote,user.uid);
-    if(d.winner==="remote"&&remote) STATE=migrateState({...STATE,...remote});
+    if(d.winner==="remote") STATE=cleanState(remote);
     STATE._syncUid=user.uid;
+    _cloudReady=true;
     save(); // grava local e agenda o push (nuvem termina igual ao vencedor)
     _syncStatus("ok");
     // Nuvem trouxe cronograma configurado → este NÃO é um primeiro acesso:
@@ -270,10 +303,32 @@ async function cloudOnLogin(user){
       const atual=document.querySelector(".page.active");
       if(atual&&typeof navTo==="function") navTo(atual.id.replace("page-",""));
     }
-  }catch(e){ _syncStatus("err"); }
+    _showAccount();
+    return true;
+  }catch(e){
+    if(epoch!==_cloudEpoch) return false;
+    _syncStatus("err");
+    // Somente cache do próprio UID; nenhum push antes de consultar a nuvem.
+    if(typeof renderTudo==="function") renderTudo();
+    _showAccount();
+    return true;
+  }
+}
+function _showAccount(){
+  if(typeof document==="undefined") return;
+  if(!STATE.inicio){
+    const setup=document.getElementById("setupModal");
+    if(setup) setup.classList.add("open");
+  }
+  const login=document.getElementById("loginScreen");
+  if(login) login.style.display="none";
+  if(document.body) document.body.classList.remove("aguardando-auth");
 }
 function cloudOnLogout(){
-  _cloudUser=null;
+  ++_cloudEpoch; clearTimeout(_cloudTimer); _cloudTimer=null;
+  _cloudReady=false; _cloudUser=null; STATE=initialState();
+  if(typeof window!=="undefined") window._bussolaUserActed=false;
+  if(typeof resetAccountUI==="function") resetAccountUI();
   if(typeof document!=="undefined"){
     const el=document.getElementById("syncDot");
     if(el) el.remove();

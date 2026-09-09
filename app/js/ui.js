@@ -4982,3 +4982,10 @@ function applyRecovery(){
     : _recoveryOption==="redistribuir" ? "\u2705 Conte\u00FAdo perdido redistribu\u00EDdo nos pr\u00F3ximos dias."
     : "\u2705 Recupera\u00E7\u00E3o aplicada!");
 }
+
+/* Descarta sessão transitória de exercícios ao trocar a identidade. */
+function resetAccountUI(){
+  _exSessao=null; _exLista=[]; _exBuscaTop="";
+  _exFiltro={materia:"",topicos:[],niveis:[],soErradas:false};
+  _exPeriodo="7";
+}
