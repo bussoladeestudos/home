@@ -989,7 +989,10 @@ function apagarHistoricoExercicios(periodo,hojeRef){
     const detalhado=Object.values(r.porDia||{}).reduce((a,d)=>a+d.n,0);
     return (r.n||0)>detalhado&&(!((r.legado||r).ultima)||dentro((r.legado||r).ultima));
   })) return false;
-  if(periodo==="sempre"){ STATE.questoes={}; STATE.exDias={}; return true; }
+  if(periodo==="sempre"){ STATE.questoes={}; STATE.exDias={}; STATE.revisoesResultados={}; return true; }
+  Object.keys(STATE.revisoesResultados||{}).forEach(k=>{
+    if(dentro(STATE.revisoesResultados[k].dia)) delete STATE.revisoesResultados[k];
+  });
   Object.keys(hist).forEach(id=>{
     const r=hist[id];
     Object.keys(r.porDia||{}).filter(dentro).forEach(d=>{
