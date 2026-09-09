@@ -129,6 +129,7 @@ const ACTIONS={
   exToggleErradas:()=>exToggleErradas(),
   exLimparFiltro:()=>exLimparFiltro(),
   exComecar:()=>exComecar(),
+  exApagarHistorico:d=>exApagarHistorico(d.periodo),
   exSair:()=>exSair(),
   exResponder:d=>exResponder(d.id,d.op),
   exVerComentario:()=>exVerComentario(),
@@ -149,6 +150,7 @@ document.addEventListener("click",e=>{
 document.addEventListener("input",e=>{
   if(!e.target||!e.target.dataset) return;
   if(e.target.dataset.input==="filtrarConteudo") filtrarConteudo(e.target.value);
+  else if(e.target.dataset.input==="exQuantidade"){ _exQuantidade=e.target.value; _exAtualizarContagem(); }
   else if(e.target.dataset.input==="exBuscarTopico") exBuscarTopico(e.target.value);
 });
 document.addEventListener("change",e=>{
@@ -3737,13 +3739,15 @@ function getMedalha(perc){
    resolve tudo numa sessao so. Lista vazia = banco inteiro (dentro da materia
    escolhida, se houver). */
 let _exFiltro={materia:"",topicos:[],niveis:[],soErradas:false};
+let _exQuantidade="";
 let _exBuscaTop="";   /* texto do campo de busca de topico */
 let _exLista=[];      /* [{mat,top,n}] na ordem em que foi desenhada; o data-i das linhas aponta aqui */
 let _exSessao=null;   /* {itens, i, respostas:{id:opcao}, verComentario} */
 
 function _exListar(){
+  if(!_exFiltro.materia&&!_exFiltro.topicos.length) return [];
   return listarQuestoes(STATE.prefeitura,{
-    materia:_exFiltro.materia||null,
+    materia:_exFiltro.topicos.length||_exFiltro.materia==="*"?null:(_exFiltro.materia||null),
     topicos:_exFiltro.topicos,
     niveis:_exFiltro.niveis,
     soErradas:_exFiltro.soErradas
@@ -3769,7 +3773,7 @@ function renderExercicios(){
       <div style="font-size:2rem;margin-bottom:.5rem">✏️</div>
       <div style="font-weight:700;color:var(--gray-600);margin-bottom:.3rem">O banco de questões ainda não saiu para esta certificação</div>
       <div style="font-size:.83rem">Assim que as questões forem publicadas, elas aparecem aqui organizadas por matéria e tópico.</div>
-    </div>`;
+    </div>${exHistoricoHtml()}`;
     return;
   }
 
@@ -3784,7 +3788,7 @@ function renderExercicios(){
   const sel=_exListar();
   const nErradas=listarQuestoes(STATE.prefeitura,{soErradas:true}).length;
 
-  const optMat=[`<option value="">Todas as matérias</option>`].concat(
+  const optMat=[`<option value=""${!_exFiltro.materia?" selected":""}>Selecione matéria</option><option value="*"${_exFiltro.materia==="*"?" selected":""}>Todas as matérias</option>`].concat(
     matsComQ.map(m=>`<option value="${esc(m.nome)}"${_exFiltro.materia===m.nome?" selected":""}>${esc(m.nome)} (${cont.porMateria[m.nome]})</option>`)
   ).join("");
   const chipNivel=n=>`<button type="button" class="ex-chip${_exFiltro.niveis.indexOf(n)>-1?" on":""}" data-action="exToggleNivel" data-nivel="${n}">${_exNivelLabel(n)}</button>`;
@@ -3794,7 +3798,7 @@ function renderExercicios(){
      assunto e não consegue juntar dois. Cada linha é um botão de liga/desliga,
      agrupado por matéria quando ele não escolheu uma. */
   _exLista=[];
-  const grupos=(_exFiltro.materia?matsComQ.filter(m=>m.nome===_exFiltro.materia):matsComQ);
+  const grupos=(!_exFiltro.materia?[]:_exFiltro.materia==="*"?matsComQ:matsComQ.filter(m=>m.nome===_exFiltro.materia));
   const listaHtml=grupos.map(m=>{
     const tops=(topicos[m.nome]||[]).filter(t=>temQuestoes(STATE.prefeitura,m.nome,t));
     if(!tops.length) return "";
@@ -3818,11 +3822,11 @@ function renderExercicios(){
   el.innerHTML=`
     <div class="ex-filtro">
       <div class="ex-linha">
-        <label class="ex-lab">Matéria</label>
+        <label class="ex-lab" for="exMateria">1. Matéria</label>
         <select class="form-input" id="exMateria" data-change="exMateria">${optMat}</select>
       </div>
-      <div class="ex-linha ex-linha-tops">
-        <label class="ex-lab">Tópicos</label>
+      <div class="ex-linha ex-linha-tops"${_exFiltro.materia?"":" hidden"}>
+        <label class="ex-lab">2. Tópicos</label>
         <div class="ex-tops">
           <div class="ex-tops-topo">
             <input type="text" class="form-input ex-tops-busca" id="exBuscaTop" data-input="exBuscarTopico"
@@ -3836,10 +3840,15 @@ function renderExercicios(){
         </div>
       </div>
       <div class="ex-linha">
-        <label class="ex-lab">Nível</label>
+        <label class="ex-lab">3. Nível</label>
         <div class="ex-chips">${chipNivel(1)}${chipNivel(2)}${chipNivel(3)}
           <button type="button" class="ex-chip${_exFiltro.soErradas?" on":""}" data-action="exToggleErradas" title="Só as questões que você errou da última vez">❌ Só as que errei${nErradas?" ("+nErradas+")":""}</button>
         </div>
+      </div>
+      <div class="ex-linha">
+        <label class="ex-lab" for="exQuantidade">4. Quantidade</label>
+        <div><input class="form-input" id="exQuantidade" type="number" min="1" step="1" value="${esc(_exQuantidade)}" placeholder="Ex.: 10" data-input="exQuantidade">
+        <small>Escolha quantas questões quer resolver nesta sessão.</small></div>
       </div>
       <div class="ex-rodape">
         <div class="ex-conta" id="exConta"><strong>${sel.length}</strong> ${sel.length===1?"questão selecionada":"questões selecionadas"}</div>
@@ -3849,7 +3858,8 @@ function renderExercicios(){
         </div>
       </div>
     </div>
-    ${sel.length?"":`<div class="ex-vazio">Nenhuma questão com esse filtro. Solte um dos critérios acima.</div>`}
+    ${sel.length?"":`<div class="ex-vazio">Selecione uma matéria ou ajuste os filtros para encontrar questões.</div>`}
+    ${exHistoricoHtml()}
     <div class="ex-resumo-titulo">Banco disponível</div>
     <div class="ex-cards">${materias.map(m=>{
       const n=cont.porMateria[m.nome]||0;
@@ -3870,9 +3880,8 @@ function renderExercicios(){
 
 /* ── Ações do filtro ── */
 function exSetMateria(v){
-  /* Trocar de matéria zera os tópicos marcados: manter marcação de outra
-     matéria daria uma contagem que não bate com o que está na tela. */
-  _exFiltro.materia=v||""; _exFiltro.topicos=[]; renderExercicios();
+  /* Mantém os tópicos para combinar matérias na mesma sessão. */
+  _exFiltro.materia=v||""; if(!_exFiltro.materia) _exFiltro.topicos=[]; _exBuscaTop=""; renderExercicios();
 }
 
 /* Marca e desmarca SEM redesenhar o painel. Redesenhar apagaria o foco do
@@ -3942,14 +3951,14 @@ function exLimparTopicos(){
 function _exAtualizarContagem(){
   const sel=_exListar();
   const conta=document.getElementById("exConta");
-  if(conta) conta.innerHTML=`<strong>${sel.length}</strong> ${sel.length===1?"questão selecionada":"questões selecionadas"}`;
+  if(conta) conta.textContent=_exQuantidadeValida()?Math.min(Number(_exQuantidade),sel.length)+" questões na sessão · "+sel.length+" disponíveis":"Informe a quantidade · "+sel.length+" questões disponíveis";
   const btn=document.getElementById("exBtnComecar");
-  if(btn) btn.disabled=!sel.length;
+  if(btn) btn.disabled=!sel.length||!_exQuantidadeValida();
   const marc=document.getElementById("exTopsSel");
   if(marc){
     const n=_exFiltro.topicos.length;
     if(!n){
-      marc.textContent="Nenhum tópico marcado: vale a matéria inteira.";
+      marc.textContent="Sem marcações: usar todos os tópicos da matéria escolhida. Marque tópicos e troque de matéria para combinar assuntos.";
     } else {
       /* Os nomes na tela, e não só a contagem: o aluno marca por busca e os
          tópicos escolhidos costumam ficar fora da parte visível da lista. */
@@ -3967,7 +3976,7 @@ function exToggleNivel(n){
   renderExercicios();
 }
 function exToggleErradas(){ _exFiltro.soErradas=!_exFiltro.soErradas; renderExercicios(); }
-function exLimparFiltro(){ _exFiltro={materia:"",topicos:[],niveis:[],soErradas:false}; _exBuscaTop=""; renderExercicios(); }
+function exLimparFiltro(){ _exQuantidade=""; _exFiltro={materia:"",topicos:[],niveis:[],soErradas:false}; _exBuscaTop=""; renderExercicios(); }
 
 /* Embaralhar é decisão da tela, e não do engine, para o motor continuar
    testável. Fisher-Yates sobre a lista já filtrada. */
@@ -3976,10 +3985,12 @@ function _embaralhar(a){
   for(let i=r.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); const t=r[i]; r[i]=r[j]; r[j]=t; }
   return r;
 }
+function _exQuantidadeValida(){ return Number.isSafeInteger(Number(_exQuantidade))&&Number(_exQuantidade)>0; }
 function exComecar(){
+  if(!_exQuantidadeValida()) return;
   const itens=_exListar();
   if(!itens.length) return;
-  _exSessao={itens:_embaralhar(itens),i:0,respostas:{},verComentario:false};
+  _exSessao={itens:_embaralhar(itens).slice(0,_exQuantidade),i:0,respostas:{},verComentario:false};
   renderExercicios(); window.scrollTo(0,0);
 }
 function exSair(){ _exSessao=null; renderExercicios(); window.scrollTo(0,0); }
@@ -4987,5 +4998,26 @@ function applyRecovery(){
 function resetAccountUI(){
   _exSessao=null; _exLista=[]; _exBuscaTop="";
   _exFiltro={materia:"",topicos:[],niveis:[],soErradas:false};
-  _exPeriodo="7";
+  _exPeriodo="7"; _exQuantidade="";
 }
+
+function exApagarHistorico(periodo){
+  const rotulos={hoje:"de hoje",7:"dos últimos 7 dias",sempre:"de todo o período"};
+  if(!rotulos[periodo]) return;
+  if(!confirm("Apagar seu histórico de exercícios "+rotulos[periodo]+" em todas as certificações? Esta ação não pode ser desfeita e será sincronizada com sua conta.")) return;
+  if(!apagarHistoricoExercicios(periodo)){
+    alert("Há registros antigos sem detalhamento diário por questão. Não é possível separar esse período com segurança. Nenhum dado foi apagado. A exclusão de todo o histórico continua disponível."); return;
+  }
+  save(); renderExercicios(); renderPainelExercicios();
+  showToast("Histórico de exercícios apagado.");
+}
+
+function exHistoricoHtml(){ return `    <details class="ex-historico"><summary>Gerenciar meu histórico de exercícios</summary>
+      <p>Apaga respostas e indicadores de exercícios da sua conta, em todas as certificações. O progresso de conteúdo é preservado.</p>
+      <div class="ex-chips">
+      <button type="button" class="ex-btn-sec" data-action="exApagarHistorico" data-periodo="hoje">Apagar hoje</button>
+      <button type="button" class="ex-btn-sec" data-action="exApagarHistorico" data-periodo="7">Apagar últimos 7 dias</button>
+      <button type="button" class="ex-btn-sec" data-action="exApagarHistorico" data-periodo="sempre">Apagar todo o histórico</button></div>
+      <small>Últimos 7 dias inclui hoje. A confirmação aparece antes de apagar.</small>
+    </details>
+`; }

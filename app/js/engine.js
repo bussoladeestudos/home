@@ -957,12 +957,18 @@ function registrarResposta(id,opcao,acertou,hojeRef){
   if(!id) return null;
   const h=_hist();
   const r=h[id]||{n:0,ok:0};
+  if(!r.porDia&&r.n&&!r.legado) r.legado={n:r.n,ok:r.ok||0,ultima:r.ultima,ultimaOpcao:r.ultimaOpcao,ultimaCerta:r.ultimaCerta};
   r.n=(r.n||0)+1;
   if(acertou) r.ok=(r.ok||0)+1;
   r.ultimaOpcao=opcao;
   r.ultimaCerta=!!acertou;
   const dia=hojeRef||fmt(new Date());
   r.ultima=dia;
+  if(!r.porDia) r.porDia={};
+  const bucket=r.porDia[dia]||{n:0,ok:0};
+  bucket.n++; if(acertou) bucket.ok++;
+  bucket.ultimaOpcao=opcao; bucket.ultimaCerta=!!acertou;
+  r.porDia[dia]=bucket;
   h[id]=r;
   const d=_exDias();
   const acc=d[dia]||{n:0,ok:0};
@@ -970,6 +976,36 @@ function registrarResposta(id,opcao,acertou,hojeRef){
   if(acertou) acc.ok=(acc.ok||0)+1;
   d[dia]=acc;
   return r;
+}
+
+/* Exclusão restrita ao STATE da conta ativa. Pré-valida antes de mutar. */
+function apagarHistoricoExercicios(periodo,hojeRef){
+  if(!["hoje","7","sempre"].includes(periodo)) return false;
+  const hoje=hojeRef||fmt(new Date()), inicio=parseDate(hoje);
+  if(periodo==="7") inicio.setDate(inicio.getDate()-6);
+  const corte=fmt(inicio), dentro=d=>periodo==="sempre"||(d>=corte&&d<=hoje);
+  const hist=_hist();
+  if(periodo!=="sempre"&&Object.values(hist).some(r=>{
+    const detalhado=Object.values(r.porDia||{}).reduce((a,d)=>a+d.n,0);
+    return (r.n||0)>detalhado&&(!((r.legado||r).ultima)||dentro((r.legado||r).ultima));
+  })) return false;
+  if(periodo==="sempre"){ STATE.questoes={}; STATE.exDias={}; return true; }
+  Object.keys(hist).forEach(id=>{
+    const r=hist[id];
+    Object.keys(r.porDia||{}).filter(dentro).forEach(d=>{
+      r.n-=r.porDia[d].n; r.ok-=r.porDia[d].ok; delete r.porDia[d];
+    });
+    if(r.n<=0){ delete hist[id]; return; }
+    if(dentro(r.ultima)){
+      const ultima=Object.keys(r.porDia||{}).sort().pop();
+      const anterior=ultima?r.porDia[ultima]:(r.legado||{});
+      r.ultima=ultima||anterior.ultima||"";
+      r.ultimaOpcao=anterior.ultimaOpcao;
+      r.ultimaCerta=anterior.ultimaCerta;
+    }
+  });
+  Object.keys(STATE.exDias||{}).filter(dentro).forEach(d=>delete STATE.exDias[d]);
+  return true;
 }
 
 /* PAINEL DE EXERCICIOS do dashboard. Compila STATE.exDias, que e alimentado
