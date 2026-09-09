@@ -1728,3 +1728,36 @@ body.aguardando-auth > *:not(#loginScreen) { visibility:hidden !important; point
   .pex-leg-top, .pex-leg.dir .pex-leg-top { justify-content:center; }
   .pex-col-dow { display:none; }
 }
+
+/* Configuração de sessões e histórico */
+.ex-linha[hidden]{display:none}
+.ex-filtro small,.ex-historico small{display:block;color:var(--gray-600);font-size:.78rem;margin-top:.5rem;line-height:1.5}
+#exQuantidade{max-width:140px}
+.ex-historico{margin:1.2rem 0;padding:1rem;border:1px solid var(--gray-200);border-radius:12px}
+.ex-historico summary{cursor:pointer;font-weight:700}
+.ex-historico p{font-size:.85rem;line-height:1.6}
+.ex-historico button{color:var(--red)}
+
+/* Etapas do treino: paleta verde e creme da Bússola. */
+.ex-filtro{border-top:4px solid var(--green);padding:1.35rem;box-shadow:0 4px 16px rgba(23,62,44,.04)}
+.ex-filtro .ex-linha{gap:1rem;padding:.85rem 0;margin:0;border-bottom:1px solid var(--gray-100)}
+.ex-filtro .ex-lab{width:118px;color:var(--navy);font-size:.75rem;letter-spacing:.025em}
+.ex-filtro .form-input{background:var(--white);border-color:var(--gray-200);min-height:44px}
+.ex-filtro .form-input:focus{background:var(--white);border-color:var(--green)}
+.ex-filtro .ex-chip{min-height:40px;padding:8px 16px}
+.ex-filtro .ex-chip.on{background:var(--navy);border-color:var(--navy)}
+.ex-filtro .ex-rodape{background:var(--green-pale);border:1px solid var(--green-border);border-radius:var(--radius-md);padding:1rem;margin-top:1.2rem}
+.ex-filtro .ex-conta{color:var(--navy);font-weight:600;line-height:1.5}
+.ex-filtro .ex-btn{min-height:44px}
+.ex-filtro :is(button,input,select):focus-visible,.ex-historico :is(summary,button):focus-visible{outline:3px solid var(--green);outline-offset:3px}
+.ex-historico{background:var(--gray-50);border-radius:var(--radius-md)}
+.ex-historico summary{color:var(--navy);padding:.25rem 0}
+.ex-historico p{margin:.75rem 0;color:var(--gray-700)}
+.ex-historico .ex-btn-sec:hover{color:var(--red);border-color:var(--red);background:var(--red-pale)}
+@media(max-width:600px){
+ .ex-filtro{padding:1rem}
+ .ex-filtro .ex-linha{flex-direction:column;align-items:stretch;gap:.65rem}
+ .ex-filtro .ex-lab{width:auto}
+ .ex-filtro .ex-rodape{padding:.85rem}
+ .ex-historico .ex-btn-sec{min-height:44px;flex:1 1 160px}
+}
