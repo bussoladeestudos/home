@@ -524,7 +524,7 @@ window.EDITAIS_DATA = {
   "pldftLgpdAssban": {
     "nome": "PLDFT + LGPD — Microcertificação ASSBAN",
     "estado": "BR",
-    "_info": "Microcertificação ASSBAN de PLDFT + LGPD. Plano editorial com 36 tópicos em cinco matérias. Prioridade de estudo igual entre matérias; os percentuais não são pesos oficiais de prova. Escopo LGPD sujeito à confirmação do programa combinado. Vinte aulas disponíveis: Fundamentos, Tipologias e Política de prevenção completos; demais aulas e análise estratégica em preparação. Defina a data do seu exame ao configurar.",
+    "_info": "Microcertificação ASSBAN de PLDFT + LGPD. Plano editorial com 36 tópicos em cinco matérias. Prioridade de estudo igual entre matérias; os percentuais não são pesos oficiais de prova. Escopo LGPD sujeito à confirmação do programa combinado. Vinte e seis aulas disponíveis: quatro primeiras matérias completas; LGPD e análise estratégica em preparação. Defina a data do seu exame ao configurar.",
     "tipo": "microcertificacao",
     "pesoTipo": "planejamento",
     "cargos": [
