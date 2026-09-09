@@ -113,8 +113,7 @@ if (!FIREBASE_CONFIGURADO) {
 
   AUTH.onAuthStateChanged(function(user) {
     if (user) {
-      document.getElementById("loginScreen").style.display = "none";
-      document.body.classList.remove("aguardando-auth");
+      document.body.classList.add("aguardando-auth");
       const iniciais = user.email.charAt(0).toUpperCase();
       const av = document.getElementById("topbarAvatar");
       if (av) { av.textContent = iniciais; av.title = user.email; }
@@ -774,9 +773,9 @@ function fazerLogout() {
 <script src="editais.js?v=20260907k"></script> <script src="cursos.js?v=20260907k"></script> <script src="conteudo/conteudo-cpa.js?v=20260907k"></script>
 <script src="conteudo/conteudo-assban-pldft-lgpd.js?v=20260909b"></script>
 <script src="conteudo/questoes-cpa.js?v=20260907k"></script>
-<script src="js/state.js?v=20260907k"></script>
+<script src="js/state.js?v=20260909-isolamento"></script>
 <script src="js/engine.js?v=20260907k"></script>
-<script src="js/ui.js?v=20260907k"></script>
+<script src="js/ui.js?v=20260909-isolamento"></script>
 <script src="js/pomodoro.js?v=20260907k"></script>
 
 <script>
