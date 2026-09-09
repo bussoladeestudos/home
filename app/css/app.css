@@ -1761,3 +1761,20 @@ body.aguardando-auth > *:not(#loginScreen) { visibility:hidden !important; point
  .ex-filtro .ex-rodape{padding:.85rem}
  .ex-historico .ex-btn-sec{min-height:44px;flex:1 1 160px}
 }
+
+/* Questões dos blocos de revisão */
+.rev-questoes,.rev-resultado{padding:1rem;margin-bottom:1rem;border:1px solid var(--green-border);border-radius:var(--radius-md);background:var(--white)}
+.rev-questoes h3,.rev-resultado strong{color:var(--navy);font-size:1rem}
+.rev-questoes p,.rev-resultado p,.rev-resultado li{font-size:.82rem;line-height:1.6;color:var(--gray-700);margin:.5rem 0}
+.rev-quantidade{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.8rem 0;border-top:1px solid var(--gray-100)}
+.rev-quantidade label{font-size:.85rem;font-weight:600;color:var(--navy)}
+.rev-quantidade small{display:block;font-weight:400;color:var(--gray-600);margin-top:.25rem}
+.rev-quantidade input{width:140px;min-height:44px;background:var(--white);flex-shrink:0}
+.rev-resultado{background:var(--green-pale)}
+.rev-resultado ul{padding-left:1.2rem}
+.rev-questoes .ex-btn{min-height:44px;margin-top:.65rem}
+@media(max-width:600px){.rev-quantidade{align-items:stretch;flex-direction:column;gap:.5rem}.rev-quantidade input{width:100%}.rev-questoes .ex-btn{width:100%}}
+
+.rev-sessao-titulo{color:var(--navy);font-size:1rem;margin-bottom:1rem}
+
+.rev-disponibilidade{padding-left:1.2rem;color:var(--gray-700);font-size:.82rem;line-height:1.7}
