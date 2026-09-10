@@ -1778,3 +1778,13 @@ body.aguardando-auth > *:not(#loginScreen) { visibility:hidden !important; point
 .rev-sessao-titulo{color:var(--navy);font-size:1rem;margin-bottom:1rem}
 
 .rev-disponibilidade{padding-left:1.2rem;color:var(--gray-700);font-size:.82rem;line-height:1.7}
+
+/* Todos os tópicos previstos no menu Hoje */
+.hoje-topico{margin-top:1rem;padding:1rem 0;border-top:1px solid var(--gray-200)}
+.hoje-topico-materia{color:var(--green);font-size:.8rem;font-weight:700;margin-bottom:.35rem}
+.hoje-topico h3{color:var(--navy);font-size:1rem;line-height:1.5}
+.hoje-topico .hoje-topico-avaliar{color:var(--gray-600);font-size:.8rem;margin-top:.8rem}
+.hoje-topico-estrelas{display:flex;gap:.3rem;flex-wrap:wrap}
+.hoje-topico-estrelas button{background:transparent;border:0;font-size:1.8rem;color:var(--gray-300);min-width:44px;min-height:44px;cursor:pointer}
+.hoje-topico-estrelas button.on{color:var(--yellow)}
+.hoje-topico-estrelas button:focus-visible{outline:2px solid var(--green);border-radius:var(--radius-xs)}
