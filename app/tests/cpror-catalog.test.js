@@ -54,18 +54,23 @@ test('Matérias usa 45 questões e informa que a divisão é estimada',()=>{
   assert.match(grid.innerHTML,/0 de 125 tópicos/);
   assert.doesNotMatch(grid.innerHTML,/data-action="abrirConteudo"/);
 });
-test('bundle C-Pro R entrega somente os três tópicos aprovados do primeiro lote',()=>{
+test('bundle C-Pro R entrega exatamente os tópicos publicados no mapa editorial',()=>{
   const ctx=vm.createContext({window:{}});
   for(const file of ['app/editais.js','app/conteudo/conteudo-cpror.js'])
     vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),ctx);
   const ed=ctx.window.EDITAIS_DATA.cproRAnbima;
   const conteudo=ctx.window.CONTEUDO_DATA.cproRAnbima;
-  const materia=ed.materias[0].nome;
-  assert.deepEqual(JSON.parse(JSON.stringify(Object.keys(conteudo[materia]))),
-    JSON.parse(JSON.stringify(ed.topicos[materia].slice(0,3))));
-  assert.equal(Object.values(conteudo).reduce((n,m)=>n+Object.keys(m).length,0),3);
-  for(const aula of Object.values(conteudo[materia])){
-    assert.match(aula.frase,/\S/);
-    for(const secao of ['prova','corpo','pegadinhas','cartao']) assert.match(aula[secao],/<[a-z]+>/);
+  const plano=JSON.parse(fs.readFileSync(path.join(root,'_docs/CPRO-R/topicos.json'),'utf8'));
+  let total=0;
+  for(const modulo of plano.modulos){
+    const esperados=modulo.topicos.filter(t=>t.status==='publicado localmente').map(t=>t.titulo);
+    const atuais=Object.keys(conteudo[modulo.nome]||{});
+    assert.deepEqual(atuais,esperados);
+    total+=atuais.length;
+    for(const aula of Object.values(conteudo[modulo.nome]||{})){
+      assert.match(aula.frase,/\S/);
+      for(const secao of ['prova','corpo','pegadinhas','cartao']) assert.match(aula[secao],/<[a-z]+>/);
+    }
   }
+  assert.equal(total,25);
 });
