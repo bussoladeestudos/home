@@ -564,6 +564,19 @@ function aggregateEstrelas(estrelasList,totalTopicos){
    Puro, sem DOM. Regra comum: dia livre planejado NUNCA conta como falha
    (o método prevê até 4 dias livres/semana). Todas aceitam hojeRef (ISO)
    para os testes — no app, omitido = hoje real. */
+function retornoTecnicoSemPendencia(dateKey){
+  if(dateKey>fmt(new Date())) return false;
+  if(getCicloPos(dateKey)!==5||isSimuladoDay(dateKey)||isRevisaoGeralDay(dateKey)||isProvaDay(dateKey)) return false;
+  if(_diaFeito(dateKey)) return false;
+  if(STATE.recuperacaoData===dateKey&&(STATE.recuperacao||[]).length) return false;
+  const seg=parseDate(dateKey),dow=seg.getDay();
+  seg.setDate(seg.getDate()+(dow===0?-6:1-dow));
+  return !getTopicosFracos(seg).some(f=>{
+    const est=(STATE.dias||{})[f.key]||{};
+    const conf=(f.topIdx!=null?(est.percepcoes||{})[f.topIdx]:est.percepcao)||"";
+    return conf&&conf!=="alta";
+  });
+}
 function _diaPrevisto(dateKey){
   if(!STATE.inicio||dateKey<STATE.inicio) return false;
   if(STATE.prova&&dateKey>STATE.prova) return false;
@@ -989,6 +1002,12 @@ function apagarHistoricoExercicios(periodo,hojeRef){
     const detalhado=Object.values(r.porDia||{}).reduce((a,d)=>a+d.n,0);
     return (r.n||0)>detalhado&&(!((r.legado||r).ultima)||dentro((r.legado||r).ultima));
   })) return false;
+  Object.values(STATE.dias||{}).forEach(d=>{
+    const id=d.simuladoResultadoId,r=id&&(STATE.revisoesResultados||{})[id];
+    if(id&&(periodo==="sempre"||(r&&dentro(r.dia)))){
+      delete d.simuladoFeito;delete d.simuladoScore;delete d.simuladoResultadoId;
+    }
+  });
   if(periodo==="sempre"){ STATE.questoes={}; STATE.exDias={}; STATE.revisoesResultados={}; return true; }
   Object.keys(STATE.revisoesResultados||{}).forEach(k=>{
     if(dentro(STATE.revisoesResultados[k].dia)) delete STATE.revisoesResultados[k];

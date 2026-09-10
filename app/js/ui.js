@@ -79,6 +79,7 @@ const ACTIONS={
   setStar:d=>setStar(d.key,+d.n),
   setStarTopico:d=>setStarTopico(d.key,+d.ti,+d.n),
   setStarHoje:d=>setStarHoje(+d.n,d.key),
+  setStarHojeTopico:d=>setStarHojeTopico(d.key,+d.ti,+d.n),
   setSabStar:d=>setSabStar(d.key,+d.n,d.source,d.ti,d.sab),
   toggleSabMais:d=>toggleSabMais(d.key),
   popupSegundaAgenda:()=>popupSegundaAgenda(),
@@ -130,6 +131,7 @@ const ACTIONS={
   exLimparFiltro:()=>exLimparFiltro(),
   exComecar:()=>exComecar(),
   revIniciarQuestoes:d=>revIniciarQuestoes(Number(d.num)),
+  miniIniciarQuestoes:d=>miniIniciarQuestoes(d.key),
   exApagarHistorico:d=>exApagarHistorico(d.periodo),
   exSair:()=>exSair(),
   exResponder:d=>exResponder(d.id,d.op),
@@ -307,7 +309,7 @@ function calcProgresso(){
   let total=0;
   for(let d=new Date(ini);d<=fimRef;d.setDate(d.getDate()+1)){
     const dow=d.getDay();
-    if(isDiaEstudo(dow)) total++;
+    if(isDiaEstudo(dow)&&!retornoTecnicoSemPendencia(fmt(d))) total++;
   }
 
   const base=Math.max(total, done, 1);
@@ -328,13 +330,13 @@ function calcProgressoDetalhado(){
   let total=0;
   for(let d=new Date(ini);d<=fimRef;d.setDate(d.getDate()+1)){
     const dow=d.getDay();
-    if(isDiaEstudo(dow)) total++;
+    if(isDiaEstudo(dow)&&!retornoTecnicoSemPendencia(fmt(d))) total++;
   }
   // total previsto até a prova
   let totalProva=0;
   for(let d=new Date(ini);d<=pro;d.setDate(d.getDate()+1)){
     const dow=d.getDay();
-    if(isDiaEstudo(dow)) totalProva++;
+    if(isDiaEstudo(dow)&&!retornoTecnicoSemPendencia(fmt(d))) totalProva++;
   }
   const base=Math.max(total,done,1);
   return {pct:Math.min(100,Math.round((done/base)*100)), done, total:Math.max(total,done), totalProva};
@@ -2356,12 +2358,11 @@ function renderHoje(){
   } else if(pos===6){
     label="Exercícios de Revisão"; titulo="Pratique os ciclos encerrados"; sub="Questões dos ciclos anteriores — pratique, não releia.";
   } else {
-    const td=getTopicoDiaHoje();
-    titulo=td.mat; sub=`${td.top} · ${rotuloPeso().toLowerCase()} ${td.peso}%`;
-    const _aula=_btnConteudo(td.mat,td.top)+_btnAula(td.mat,td.top);
-    if(_aula) sub+=`<br>${_aula}`;
+    const topicos=getTopicosDiaBase(hojeKey);
+    titulo=topicos.length>1?`${topicos.length} tópicos para hoje`:topicos.length?esc(topicos[0].mat):"Conteúdo de hoje";
+    sub=renderTopicosHoje(hojeKey,topicos);
     const extras=getExtrasDoDia(hojeKey);
-    if(extras.length) sub+=`<br>+ recuperação: ${extras.map(e=>`${esc(e.mat)} — ${esc(e.top)}`).join(", ")}`;
+    if(extras.length) sub+=`<section class="hoje-topico"><strong>Recuperação</strong>${extras.map(t=>`<div><p>${esc(t.mat)}: ${esc(t.top)}</p>${_btnConteudo(t.mat,t.top)}${_btnAula(t.mat,t.top)}</div>`).join("")}</section>`;
     isContent=true;
   }
   // No modo Dia 1, as estrelas/conclusão referem-se ao registro do dia de início
@@ -2385,7 +2386,7 @@ function renderHoje(){
     coachMsg=`Seu ritmo está <strong>abaixo do planejado</strong>, sem culpa. Conclua o foco de hoje e seguimos recuperando juntos.`;
   }
 
-  const starsRow = isContent ? `
+  const starsRow = isDia1 ? `
     <div style="border-top:1px solid #F0EADF;margin-top:16px;padding-top:14px;">
       <div style="font-size:.82rem;color:#6B6155;font-weight:600;margin-bottom:9px;">${concl?"Tópico concluído — sua confiança:":isDia1?"Plano claro? Avalie sua clareza:":"Concluiu? Toque para avaliar sua confiança:"}</div>
       <div style="display:flex;gap:6px;">${[1,2,3,4,5].map(n=>`<span data-action="setStarHoje" data-n="${n}" data-key="${starKey}" class="hv-zoom" style="cursor:pointer;font-size:1.7rem;line-height:1;color:${n<=estrelas?"#E8B23A":"#E0D6C5"};transition:transform .1s;">★</span>`).join("")}</div>
@@ -2499,8 +2500,8 @@ function getFocoHojeLabel(){
   const pos=getCicloPos(hk);
   if(pos===5) return "⚡ Retorno Técnico — pontos fracos";
   if(pos===6) return "🔄 Exercícios de Revisão";
-  const td=getTopicoDiaByKey(hk);
-  return td?`${td.mat} — ${td.top}`:"Revisão Geral";
+  const topicos=getTopicosDiaBase(hk);
+  return topicos.length?topicos.map(t=>`${t.mat}: ${t.top}`).join(" · "):"Revisão Geral";
 }
 function hoverStarHoje(n){ paintStarsEl("hoje-stars","hoje-starlabel",n); }
 function unhoverStarHoje(){ paintStarsEl("hoje-stars","hoje-starlabel",STATE.dias[fmt(new Date())]?.estrelas||0); }
@@ -2668,7 +2669,7 @@ function buildStatusCard(o){
       </div>
     </div>
     <div id="sc-body-${o.id||""}" style="${bodyOpenStyle}">
-      <div style="padding:0 1.15rem .6rem">${bullets}</div>
+      <div style="padding:0 1.15rem .6rem">${bullets}${o.bodyHtml||""}</div>
       <div style="padding:.7rem 1.15rem;border-top:1px solid ${sepColor};display:flex;align-items:center;justify-content:space-between;gap:.6rem">
         ${scoreHtml}${btn}
       </div>
@@ -2715,7 +2716,7 @@ function renderSimuladoPage(){
   </div>`;
 
   // Instrução de uso — o app monta a pauta; as questões são resolvidas por fora
-  html+=`<div style="display:flex;gap:.6rem;align-items:flex-start;background:#FBF6EA;border:1px solid #F2E2AE;border-radius:12px;padding:.75rem .9rem;margin-bottom:1.2rem;font-size:.8rem;color:#6B5512;line-height:1.55"><span style="flex-shrink:0">💡</span><span><strong>Como funciona:</strong> a Bússola monta a pauta do simulado — as questões você resolve por fora. Selecione <strong>~20 questões dos temas listados</strong> no seu banco de questões (QConcursos, TEC, provas anteriores da banca), cronometre, corrija e registre aqui seu percentual de acertos.</span></div>`;
+  html+=`<div style="display:flex;gap:.6rem;align-items:flex-start;background:#FBF6EA;border:1px solid #F2E2AE;border-radius:12px;padding:.75rem .9rem;margin-bottom:1.2rem;font-size:.8rem;color:#6B5512;line-height:1.55"><span style="flex-shrink:0">💡</span><span><strong>Como funciona:</strong> informe <strong>quantas questões por tópico</strong> quer resolver. A Bússola usa os tópicos previstos no Mini Simulado, gera as questões e salva sua nota ao concluir. Se usar material externo, você pode registrar o resultado manualmente.</span></div>`;
 
   // ── 1. Mini Simulados (lista principal) ──
   html+=`<div style="font-family:'Bricolage Grotesque',sans-serif;font-size:.82rem;font-weight:700;color:#6B6155;margin:0 0 .7rem;padding-left:.1rem">Mini Simulados</div>`;
@@ -2724,12 +2725,12 @@ function renderSimuladoPage(){
     const feito=!!est.simuladoFeito;
     const score=feito&&est.simuladoScore!=null?est.simuladoScore:null;
     html+=buildStatusCard({
-      titulo:`Mini Simulado — Rev. ${info.revNums.join(", ")}`,
+      titulo:`Mini Simulado: Rev. ${info.revNums.join(", ")}`,
       sub:date.toLocaleDateString("pt-BR",{weekday:"short",day:"2-digit",month:"2-digit"}),
       estado:statusOf(feito,isHoje,isPast),
-      bullets:[`<em style="color:#8A6212">Resolva ~20 questões destes temas no seu banco de questões e registre o % de acertos:</em>`,...info.topicos.map(t=>`${t.mat}: ${t.top}`)],
-      scoreLabel:"acertos", score, emptyLabel:isHoje?"Resolva por fora e registre aqui":(isPast?"Aguardando registro":"Agendado"),
-      btnLabel:feito?"Editar":"Registrar resultado",
+      bullets:[], bodyHtml:miniConfiguracaoHtml(key),
+      scoreLabel:"acertos", score, emptyLabel:isHoje?"Escolha a quantidade por tópico":(isPast?"Aguardando registro":"Agendado"),
+      btnLabel:feito?"Editar registro manual":"Registrar resultado externo",
       btnAction:"abrirSimulado", btnKey:key,
       collapsible:true, id:key, startOpen:isHoje
     });
@@ -3444,6 +3445,7 @@ function abrirSimulado(key){
   if(!STATE.dias[key]) STATE.dias[key]={};
   STATE.dias[key].simuladoFeito=true; _carimbarRegistro(key);
   STATE.dias[key].simuladoScore=score;
+  delete STATE.dias[key].simuladoResultadoId;
   save(); renderSemana(); renderSimuladoPage(); updateNavBadges();
 }
 
@@ -3996,9 +3998,9 @@ function exComecar(){
 }
 function exSair(){
   const revisao=_exSessao&&_exSessao.revisao;
-  if(revisao&&!_exSessao.resultadoSalvo&&!confirm("Sair desta revisão? As respostas já dadas ficam no histórico, mas a nota final só é salva ao responder todas as questões.")) return;
+  if(revisao&&!_exSessao.resultadoSalvo&&!confirm("Sair desta sessão? As respostas já dadas ficam no histórico, mas a nota final só é salva ao responder todas as questões.")) return;
   _exSessao=null;
-  if(revisao) navTo("revisoes"); else renderExercicios();
+  if(revisao) navTo(revisao.tipo==="mini"?"simulado":"revisoes"); else renderExercicios();
   window.scrollTo(0,0);
 }
 
@@ -4074,7 +4076,7 @@ function renderExercicioRun(){
 
   el.innerHTML=`
     <div class="ex-run">
-      ${S.revisao?`<h3 class="rev-sessao-titulo">Revisão ${esc(S.revisao.num)}</h3>`:""}
+      ${S.revisao?`<h3 class="rev-sessao-titulo">${S.revisao.tipo==="mini"?"Mini Simulado":"Revisão"} ${esc(S.revisao.num)}</h3>`:""}
       <div class="ex-run-topo">
         <button type="button" class="ex-voltar" data-action="exSair">← Sair</button>
         <div class="ex-prog"><div class="ex-prog-fill" style="width:${pct}%"></div></div>
@@ -4142,15 +4144,15 @@ function renderExercicioFim(){
 
   el.innerHTML=`
     <div class="ex-fim">
-      ${S.revisao?`<h3>Resultado da Revisão ${esc(S.revisao.num)}</h3><p>Nota final: ${esc((10*acertos/total).toFixed(1))} / 10</p>`:""}
+      ${S.revisao?`<h3>Resultado da ${S.revisao.tipo==="mini"?"Mini Simulado":"Revisão"} ${esc(S.revisao.num)}</h3><p>Nota final: ${esc((10*acertos/total).toFixed(1))} / 10</p>`:""}
       <div class="ex-fim-nota" style="color:${cor}">${pct}%</div>
       <div class="ex-fim-sub">${acertos} de ${total} ${total===1?"questão":"questões"}</div>
-      <div class="ex-fim-recado">${S.revisao?"Resultado salvo nesta revisão. A nota considera todas as questões respondidas.":recado}</div>
+      <div class="ex-fim-recado">${S.revisao?"Resultado salvo. A nota considera todas as questões respondidas.":recado}</div>
       ${S.revisao?revResultadoHtml((STATE.revisoesResultados||{})[S.revisao.id]):""}
       ${_exResumoPorTopico(porTopico)}
       <div class="ex-acoes" style="justify-content:center">
         ${erradas&&!S.revisao?`<button type="button" class="ex-btn-sec" data-action="exRefazerErradas">↻ Refazer as ${erradas} que errei</button>`:""}
-        <button type="button" class="ex-btn" data-action="exSair">${S.revisao?"Voltar às revisões":"Voltar aos exercícios"}</button>
+        <button type="button" class="ex-btn" data-action="exSair">${S.revisao?(S.revisao.tipo==="mini"?"Voltar aos Mini Simulados":"Voltar às revisões"):"Voltar aos exercícios"}</button>
       </div>
     </div>`;
 }
@@ -4566,7 +4568,7 @@ function renderDiaRetornoTecnico(dia,key,est,isHoje,isPast,fraquezas){
       if(!temRecuperacao){
         const algumEstudado=todosItens.some(f=>f.perc);
         if(algumEstudado){
-          itens=`<div class="sabado-empty">🏆 Todos os tópicos desta semana com Alta Confiança! Aproveite para adiantar conteúdo.</div>`;
+          itens=`<div class="sabado-empty">🏆 Todos os tópicos desta semana com Alta Confiança! Aproveite para revisar o conteúdo e resolver exercícios.</div>`;
         } else {
           itens=`<div class="sabado-empty">📚 Nenhum tópico estudado esta semana ainda. Complete os dias de estudo antes do Retorno Técnico.</div>`;
         }
@@ -4683,7 +4685,7 @@ function renderExerciciosSection(){
     const conc=blocos.filter(b=>b.concluida);
     if(conc.length) _revCicloAberto.add(conc[conc.length-1].num);
   }
-  let html=`<div style="display:flex;gap:.6rem;align-items:flex-start;background:#EFF6FF;border:1px solid #DBEAFE;border-radius:12px;padding:.7rem .9rem;margin-bottom:1rem;font-size:.8rem;color:#1E40AF;line-height:1.55"><span style="flex-shrink:0">💡</span><span><strong>Como usar:</strong> cada ciclo lista os tópicos que você estudou. As ★ mostram a confiança que você registrou na época. Defina a quantidade por matéria para gerar uma revisão com questões destes tópicos e receber sua nota. Você também pode praticar no seu material e marcar ✅ ao concluir. Se sua segurança mudou, reavalie o tópico no <strong>Retorno Técnico</strong> do cronograma.</span></div>`;
+  let html=`<div style="display:flex;gap:.6rem;align-items:flex-start;background:#EFF6FF;border:1px solid #DBEAFE;border-radius:12px;padding:.7rem .9rem;margin-bottom:1rem;font-size:.8rem;color:#1E40AF;line-height:1.55"><span style="flex-shrink:0">💡</span><span><strong>Como usar:</strong> cada ciclo lista os tópicos que você estudou. As ★ mostram a confiança que você registrou na época. Defina a quantidade por tópico para gerar uma revisão com questões destes tópicos e receber sua nota. Você também pode praticar no seu material e marcar ✅ ao concluir. Se sua segurança mudou, reavalie o tópico no <strong>Retorno Técnico</strong> do cronograma.</span></div>`;
   // Mantém ordem cronológica (Revisão 1, 2, 3…)
   blocos.forEach(bloco=>{
     const isOpen=_revCicloAberto.has(bloco.num);
@@ -5034,33 +5036,33 @@ function exHistoricoHtml(){ return `    <details class="ex-historico"><summary>G
 `; }
 
 /* Revisão guiada: usa exclusivamente os tópicos do bloco planejado. */
-function revResultadoId(bloco){ return JSON.stringify([STATE.prefeitura,STATE.inicio,bloco.key]); }
-function revMaterias(bloco){
-  const materias=[...new Set(bloco.topicos.map(t=>t.mat))];
-  return materias.map(mat=>{
-    const topicos=bloco.topicos.filter(t=>t.mat===mat).map(t=>({mat:t.mat,top:t.top}));
+function revResultadoId(bloco){ return JSON.stringify([STATE.prefeitura,STATE.inicio,(bloco.tipo==="mini"?"mini:":"")+bloco.key]); }
+function revTopicos(bloco){
+  const pares=new Map();
+  bloco.topicos.forEach(t=>pares.set(JSON.stringify([t.mat,t.top]),{mat:t.mat,top:t.top}));
+  return [...pares.values()].map(t=>{
     const vistos=new Set();
-    const itens=listarQuestoes(STATE.prefeitura,{materia:mat,topicos}).filter(it=>{
+    const itens=listarQuestoes(STATE.prefeitura,{materia:t.mat,topicos:[t]}).filter(it=>{
       if(vistos.has(it.q.id)) return false; vistos.add(it.q.id); return true;
     });
-    return {mat,itens};
+    return {mat:t.mat,top:t.top,itens};
   });
 }
 function revResultadoHtml(r){
   if(!r) return "";
-  return `<div class="rev-resultado"><strong>Última revisão: ${esc(r.nota)} / 10 · ${esc(r.pct)}%</strong>
+  return `<div class="rev-resultado"><strong>Último resultado: ${esc(r.nota)} / 10 · ${esc(r.pct)}%</strong>
     <p>${esc(r.acertos)} de ${esc(r.total)} acertos · ${esc(r.dia)}</p>
     <ul>${(r.materias||[]).map(m=>`<li>${esc(m.mat)}: ${esc(m.acertos)} / ${esc(m.total)} acertos (${esc(m.pct)}%)</li>`).join("")}</ul></div>`;
 }
 function revConfiguracaoHtml(bloco){
   const resultado=revResultadoHtml((STATE.revisoesResultados||{})[revResultadoId(bloco)]);
   if(bloco.isFutura||!bloco.topicos.length) return resultado;
-  const materias=revMaterias(bloco),tem= materias.some(m=>m.itens.length);
+  const materias=revTopicos(bloco),tem= materias.some(m=>m.itens.length);
   return `${resultado}<section class="rev-questoes" aria-label="Configurar questões da revisão">
     <h3>Praticar esta revisão</h3>
-    <div class="rev-quantidade"><label for="rev-q-${esc(bloco.num)}">Quantas questões por matéria?<small>O número informado vale para cada matéria com questões disponíveis. Exemplo: 1 em três matérias gera 3 questões.</small></label>
+    <div class="rev-quantidade"><label for="rev-q-${esc(bloco.num)}">Quantas questões por tópico?<small>O número informado vale para cada tópico com questões disponíveis. Exemplo: 2 em três tópicos gera 6 questões.</small></label>
       <input class="form-input" id="rev-q-${esc(bloco.num)}" type="number" min="1" step="1" placeholder="Ex.: 1"${tem?"":" disabled"}></div>
-    <p>Matérias desta revisão:</p><ul class="rev-disponibilidade">${materias.map(m=>`<li>${esc(m.mat)}: ${esc(m.itens.length)} questões disponíveis${m.itens.length?"":" (não entra na sessão)"}</li>`).join("")}</ul>
+    <p>Tópicos desta revisão:</p><ul class="rev-disponibilidade">${materias.map(m=>`<li>${esc(m.top)} <small>(${esc(m.mat)})</small>: ${esc(m.itens.length)} questões disponíveis${m.itens.length?"":" (não entra na sessão)"}</li>`).join("")}</ul>
     <button class="ex-btn" type="button" data-action="revIniciarQuestoes" data-num="${esc(bloco.num)}"${tem?"":" disabled"}>Gerar revisão</button>
     <p class="rev-ajuda">${tem?"Questões embaralhadas, sem repetição na sessão. A nota é salva ao responder todas. As marcações de tópicos abaixo continuam sob seu controle. Um novo resultado substitui a nota anterior deste bloco.":"Ainda não há questões publicadas para os tópicos desta revisão. Você pode continuar usando seu material."}</p>
   </section>`;
@@ -5068,21 +5070,25 @@ function revConfiguracaoHtml(bloco){
 function revIniciarQuestoes(num){
   const bloco=buildBlocosRevisao().find(b=>b.num===num);
   if(!bloco||bloco.isFutura) return;
-  const materias=revMaterias(bloco),itens=[],vistos=new Set();
+  iniciarBlocoQuestoes(bloco);
+}
+function iniciarBlocoQuestoes(bloco){
+  const num=bloco.num;
+  const materias=revTopicos(bloco),itens=[],vistos=new Set();
   const campo=document.getElementById("rev-q-"+num),n=Number(campo?campo.value:0);
-  if(!Number.isSafeInteger(n)||n<1){showToast("Informe quantas questões por matéria: um número inteiro maior que zero.");if(campo) campo.focus();return;}
+  if(!Number.isSafeInteger(n)||n<1){showToast("Informe quantas questões por tópico: um número inteiro maior que zero.");if(campo) campo.focus();return;}
   for(const m of materias){
     if(!m.itens.length) continue;
     if(n>m.itens.length){
-      showToast("A matéria "+m.mat+" tem apenas "+m.itens.length+" questões disponíveis. Reduza a quantidade por matéria.");if(campo) campo.focus();return;
+      showToast("O tópico "+m.top+" tem apenas "+m.itens.length+" questões disponíveis. Reduza a quantidade por tópico.");if(campo) campo.focus();return;
     }
     const escolhidos=_embaralhar(m.itens.filter(it=>!vistos.has(it.q.id))).slice(0,n);
-    if(escolhidos.length<n){ showToast("Há questões repetidas entre matérias. Reduza a quantidade solicitada para "+m.mat+"."); return; }
+    if(escolhidos.length<n){ showToast("Há questões repetidas entre tópicos. Reduza a quantidade solicitada para "+m.top+"."); return; }
     escolhidos.forEach(it=>{vistos.add(it.q.id);itens.push(it);});
   }
   if(!itens.length){showToast("Não há questões disponíveis para esta revisão.");return;}
-  if(_exSessao&&!confirm("Iniciar a revisão substituirá a sessão de exercícios em andamento. Continuar?")) return;
-  _exSessao={itens:_embaralhar(itens),i:0,respostas:{},verComentario:false,revisao:{id:revResultadoId(bloco),num:bloco.num}};
+  if(_exSessao&&!confirm("Iniciar esta atividade substituirá a sessão de exercícios em andamento. Continuar?")) return;
+  _exSessao={itens:_embaralhar(itens),i:0,respostas:{},verComentario:false,revisao:{id:revResultadoId(bloco),num:bloco.num,tipo:bloco.tipo||"revisao",key:bloco.key}};
   navTo("exercicios"); window.scrollTo(0,0);
 }
 function revSalvarResultado(sessao){
@@ -5097,5 +5103,52 @@ function revSalvarResultado(sessao){
   const total=sessao.itens.length,pct=Math.round(100*acertos/total);
   if(!STATE.revisoesResultados) STATE.revisoesResultados={};
   STATE.revisoesResultados[sessao.revisao.id]={dia:fmt(new Date()),total,acertos,pct,nota:(10*acertos/total).toFixed(1),materias};
+  if(sessao.revisao.tipo==="mini"){
+    const key=sessao.revisao.key;
+    if(!STATE.dias[key]) STATE.dias[key]={};
+    STATE.dias[key].simuladoFeito=true;
+    STATE.dias[key].simuladoScore=pct;
+    STATE.dias[key].simuladoResultadoId=sessao.revisao.id;
+  }
   sessao.resultadoSalvo=true;return true;
+}
+
+function miniBloco(key){
+  if(!STATE.inicio||!STATE.prova||key<STATE.inicio||key>STATE.prova||!isSimuladoDay(key)) return null;
+  const info=getSimuladoInfo(key);
+  return {tipo:"mini",num:key,key,topicos:info.topicos,isFutura:key>fmt(new Date())};
+}
+function miniConfiguracaoHtml(key){
+  const bloco=miniBloco(key);if(!bloco) return "";
+  if(bloco.isFutura) return `<p>Disponível na data planejada. Tópicos previstos:</p><ul>${bloco.topicos.map(t=>`<li>${esc(t.top)} (${esc(t.mat)})</li>`).join("")}</ul>`;
+  return revConfiguracaoHtml(bloco)
+    .replace('Praticar esta revisão','Praticar este Mini Simulado')
+    .replace('Tópicos desta revisão:','Tópicos deste Mini Simulado:')
+    .replace('data-action="revIniciarQuestoes" data-num="'+esc(bloco.num)+'"','data-action="miniIniciarQuestoes" data-key="'+esc(key)+'"')
+    .replace('Gerar revisão','Gerar Mini Simulado')
+    .replace('As marcações de tópicos abaixo continuam sob seu controle. ','');
+}
+function miniIniciarQuestoes(key){
+  const bloco=miniBloco(key);if(!bloco||bloco.isFutura) return;
+  iniciarBlocoQuestoes(bloco);
+}
+
+function renderTopicosHoje(key,topicos){
+  if(!topicos.length) return "Nenhum conteúdo novo previsto. Consulte o cronograma para a atividade do dia.";
+  const est=STATE.dias[key]||{},multi=topicos.length>1;
+  return topicos.map((t,i)=>{
+    const n=multi?((est.estrelasList||{})[i]||0):(est.estrelas||nivelToStars(est.percepcao||""));
+    return `<section class="hoje-topico" aria-label="${esc(t.mat+": "+t.top)}">
+      ${multi?`<div class="hoje-topico-materia">${esc(i+1)}. ${esc(t.mat)}</div>`:""}
+      <h3>${esc(t.top)}</h3>
+      ${_btnConteudo(t.mat,t.top)}${_btnAula(t.mat,t.top)}
+      <p class="hoje-topico-avaliar">${n?"Sua confiança neste tópico:":"Concluiu este tópico? Avalie sua confiança:"}</p>
+      <div class="hoje-topico-estrelas">${[1,2,3,4,5].map(v=>`<button type="button" ${multi?'data-action="setStarHojeTopico"':'data-action="setStarHoje"'} data-key="${esc(key)}" data-ti="${esc(i)}" data-n="${v}" aria-label="${v} de 5 estrelas para ${esc(t.top)}" aria-pressed="${n===v}" class="${v<=n?"on":""}">★</button>`).join("")}</div>
+    </section>`;
+  }).join("");
+}
+function setStarHojeTopico(key,ti,n){
+  if(!Number.isInteger(ti)||ti<0||ti>=getTopicosDiaBase(key).length||!Number.isInteger(n)||n<1||n>5) return;
+  setStarTopico(key,ti,n);
+  renderHoje();
 }
