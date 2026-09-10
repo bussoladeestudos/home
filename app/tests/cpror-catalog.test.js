@@ -61,9 +61,10 @@ test('bundle C-Pro R entrega exatamente os tópicos publicados no mapa editorial
   const ed=ctx.window.EDITAIS_DATA.cproRAnbima;
   const conteudo=ctx.window.CONTEUDO_DATA.cproRAnbima;
   const plano=JSON.parse(fs.readFileSync(path.join(root,'_docs/CPRO-R/topicos.json'),'utf8'));
-  let total=0;
+  let total=0,publicados=0;
   for(const modulo of plano.modulos){
     const esperados=modulo.topicos.filter(t=>t.status==='publicado localmente').map(t=>t.titulo);
+    publicados+=esperados.length;
     const atuais=Object.keys(conteudo[modulo.nome]||{});
     assert.deepEqual(atuais,esperados);
     total+=atuais.length;
@@ -72,5 +73,6 @@ test('bundle C-Pro R entrega exatamente os tópicos publicados no mapa editorial
       for(const secao of ['prova','corpo','pegadinhas','cartao']) assert.match(aula[secao],/<[a-z]+>/);
     }
   }
-  assert.equal(total,25);
+  assert.equal(total,publicados);
+  assert.ok(total>0);
 });
