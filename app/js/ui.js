@@ -2998,7 +2998,7 @@ function renderMaterias(){
   if(!grid) return;
   const materias=calcMateriasStats();
   const topicos=getTopicos();
-  const totalQuestoes=100;
+  const totalQuestoes=EDITAIS[STATE.prefeitura]?.prova?.questoes||100;
   /* Dia multi-tópico guarda a confiança em d.percepcoes[i], e não em
      d.percepcao. Sem olhar os dois, o banner de "ainda não há dados"
      aparecia para quem já tinha avaliado a semana inteira. */
@@ -3062,7 +3062,7 @@ function renderMaterias(){
         </span>
         <span class="mat-item-right">
           <span class="mat-stat"><span class="mat-stat-label">${rotuloPeso()}</span><span class="mat-stat-val">${m.peso}%</span></span>
-          <span class="mat-stat"><span class="mat-stat-label">Questões</span><span class="mat-stat-val">${questoes}</span></span>
+          <span class="mat-stat"><span class="mat-stat-label">${EDITAIS[STATE.prefeitura]?.prova?"Questões estimadas":"Questões"}</span><span class="mat-stat-val">${questoes}</span></span>
           <span class="mat-stat"><span class="mat-stat-label">Segurança</span><span class="mat-stat-val" style="color:${semConf?"var(--gray-400)":confColor}${semConf?";font-size:.7rem;font-weight:600":""}">${confLabel}</span></span>
           <span class="mat-chevron" aria-hidden="true">⌄</span>
         </span>
