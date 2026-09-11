@@ -1,0 +1,346 @@
+/* ════════════════════════════════════════════════════════════════
+   BÚSSOLA DE ESTUDOS — STATE (estado, persistência e backup)
+   Fonte única do STATE global, save/load em localStorage com versão
+   de schema (migrações), e exportação/importação de backup.
+   Testes: node --test tests/state.test.js  (a partir da pasta app/)
+   ════════════════════════════════════════════════════════════════ */
+
+const STATE_STORAGE_KEY="cronos_v4";
+const STATE_SCHEMA_VERSION=7;
+
+/* Catálogo de certificações — carregado de editais.js (window.EDITAIS_DATA) */
+let EDITAIS=(typeof window!=="undefined"&&window.EDITAIS_DATA)||{};
+/* Catálogo de aulas dos cursinhos — carregado de cursos.js */
+let CURSOS=(typeof window!=="undefined"&&window.CURSOS_DATA)||{};
+/* Conteúdo de estudo por tópico — gerado em app/conteudo/conteudo-<cert>.js */
+let CONTEUDO=(typeof window!=="undefined"&&window.CONTEUDO_DATA)||{};
+/* Banco de questões por tópico — gerado em app/conteudo/questoes-<cert>.js */
+let QUESTOES=(typeof window!=="undefined"&&window.QUESTOES_DATA)||{};
+
+function initialState(){ return {
+  concurso:"", prefeitura:"", cargo:"", nome:"",
+  inicio:null, prova:null, horasDia:3,
+  semanaOffset:0, mesOffset:0, cronView:"semana", pagina:"dashboard",
+  dias:{},
+  diasLivres:[],  // dias da semana que o usuário NÃO estuda (0=Dom..6=Sáb)
+  notasSemana:{}, // anotações livres por semana (chave = data da segunda-feira)
+  cursinho:"",    // cursinho contratado pelo aluno (id em cursos.js) — libera o link das aulas
+  questoes:{},    // histórico por questão: { <id>: {n, ok, ultima, ultimaOpcao, ultimaCerta} }
+  exDias:{},      // respostas por dia: { "AAAA-MM-DD": {n, ok} } — base do Painel de Exercícios
+}; }
+let STATE = initialState();
+function cleanState(raw){ return {...initialState(),...migrateState(raw||{})}; }
+function storageKey(uid){ return uid?STATE_STORAGE_KEY+":"+uid:STATE_STORAGE_KEY+":guest"; }
+
+/* ── MIGRAÇÃO DE SCHEMA ──
+   v1 (sem schemaVersion): dados podem vir de versões antigas ou de
+   backups editados à mão — garante containers e tipos corretos.   */
+function migrateState(raw){
+  const s={...raw};
+  const v=s.schemaVersion||1;
+  if(v<2){
+    s.dias=(s.dias&&typeof s.dias==="object")?s.dias:{};
+    s.diasLivres=Array.isArray(s.diasLivres)?s.diasLivres:[];
+    s.notasSemana=(s.notasSemana&&typeof s.notasSemana==="object")?s.notasSemana:{};
+    s.extrasPorDia=(s.extrasPorDia&&typeof s.extrasPorDia==="object")?s.extrasPorDia:{};
+    s.horasDia=parseInt(s.horasDia)||3;
+    s.cursinho=typeof s.cursinho==="string"?s.cursinho:"";
+    s.schemaVersion=2;
+  }
+  if(v<3){
+    /* 25/08/2026: o produto virou só de certificações e os 10 editais de
+       concurso saíram do editais.js. Sem isto, quem tinha um deles salvo
+       continuaria com STATE.prefeitura apontando para uma chave morta —
+       e engine.getMaterias cai no PRIMEIRO edital da lista, então o aluno
+       veria o conteúdo do CFP sob o nome do concurso antigo, em silêncio.
+       Melhor devolver ao setup do que exibir o edital errado. O catálogo
+       só existe no navegador; em Node (testes) EDITAIS vem vazio e a
+       migração não roda, senão zeraria qualquer estado de teste. */
+    if(Object.keys(EDITAIS||{}).length && s.prefeitura && !EDITAIS[s.prefeitura]){
+      s.prefeitura=""; s.concurso=""; s.cargo="";
+      s.inicio=null; s.prova=null; s.dias={};
+    }
+    s.schemaVersion=3;
+  }
+  if(v<4){
+    /* 31/08/2026: entrou o banco de questões. O histórico é indexado pelo
+       `id` da questão, que é permanente por regra do formato, então basta
+       garantir o container. Nada a converter de versão anterior. */
+    s.questoes=(s.questoes&&typeof s.questoes==="object")?s.questoes:{};
+    s.exDias=(s.exDias&&typeof s.exDias==="object")?s.exDias:{};
+    s.schemaVersion=4;
+  }
+  if(v<5){
+    /* 05/09/2026: o dia de recuperação nunca foi o sábado do calendário. Ele é o
+       RETORNO TÉCNICO, a posição 5 do ciclo 5+1+1, que cai em qualquer dia da
+       semana conforme a data de início e os dias de descanso do aluno. O nome
+       antigo mentia e confundia o dono do produto. As chaves foram renomeadas e
+       o valor de quem já tinha recuperação pendente é preservado. */
+    if(s.sabadoRecuperacao!==undefined&&s.recuperacao===undefined) s.recuperacao=s.sabadoRecuperacao;
+    if(s.sabadoRecuperacaoData!==undefined&&s.recuperacaoData===undefined) s.recuperacaoData=s.sabadoRecuperacaoData;
+    delete s.sabadoRecuperacao; delete s.sabadoRecuperacaoData;
+    s.schemaVersion=5;
+  }
+  if(v<6){
+    /* 05/09/2026: a fila de recuperação nunca era esvaziada. NADA no sistema
+       removia um item dela: nem dar a nota no Retorno Técnico, nem o
+       "Reiniciar cronograma completo". Quem usou a opção antiga de mandar os
+       dias perdidos para o Retorno Técnico ficou com dezenas de tópicos presos
+       num único dia do calendário, para sempre, mesmo depois de reiniciar.
+       Esta migração limpa o que já não faz sentido:
+         - cronograma sem nenhum dia registrado: não há o que recuperar;
+         - item cujo dia de origem já recebeu nota: já foi recuperado;
+         - item em formato de texto solto, das versões anteriores ao vínculo
+           com o dia de origem: sem `key` não há onde gravar nota, é peso morto. */
+    const dias=s.dias||{};
+    if(Array.isArray(s.recuperacao)&&s.recuperacao.length){
+      if(!Object.keys(dias).length){
+        s.recuperacao=[];
+      } else {
+        s.recuperacao=s.recuperacao.filter(function(it){
+          if(!it||typeof it!=="object"||!it.key) return false;
+          const d=dias[it.key];
+          if(!d) return true;
+          /* Nota do tópico quando o dia tem vários, e a nota agregada do dia
+             como rede de segurança: o agregado só existe quando TODOS os
+             tópicos daquele dia já foram avaliados. */
+          const porTopico=(it.topIdx!==null&&it.topIdx!==undefined&&it.topIdx!=="")
+            ? (d.percepcoes||{})[it.topIdx] : null;
+          return !(porTopico||d.percepcao);
+        });
+      }
+    }
+    if(!s.recuperacao||!s.recuperacao.length) delete s.recuperacaoData;
+    s.schemaVersion=6;
+  }
+  if(v<7){
+    /* 05/09/2026: o Painel de Exercícios precisa de quantas questões o aluno
+       respondeu em CADA dia, e o histórico por questão só guarda a última data
+       de cada uma. Nasce STATE.exDias, alimentado por registrarResposta.
+
+       Para quem já respondeu antes desta versão, semeamos o acumulado a partir
+       do que existe. O total fica EXATO (a soma de exDias bate com a soma do
+       histórico); só a distribuição por dia é aproximada, porque todas as
+       tentativas de uma questão entram na data da última. É a melhor
+       reconstrução possível com o dado que foi guardado, e o painel prefere um
+       total certo com dias aproximados a um painel vazio. */
+    if(!s.exDias||typeof s.exDias!=="object"){
+      const acc={};
+      const h=(s.questoes&&typeof s.questoes==="object")?s.questoes:{};
+      Object.keys(h).forEach(function(id){
+        const r=h[id]||{};
+        if(!r.ultima||!r.n) return;
+        const d=acc[r.ultima]||{n:0,ok:0};
+        d.n+=r.n; d.ok+=(r.ok||0);
+        acc[r.ultima]=d;
+      });
+      s.exDias=acc;
+    }
+    s.schemaVersion=7;
+  }
+  return s;
+}
+
+function save(){
+  try{
+    STATE.schemaVersion=STATE_SCHEMA_VERSION;
+    // Carimbo de versão para o sync: só após ação real do usuário.
+    // Saves automáticos de boot (ex.: navegação inicial) não carimbam —
+    // sem isso, um dispositivo desatualizado "pareceria" mais novo que a nuvem.
+    if(typeof window==="undefined"||window._bussolaUserActed) STATE.updatedAt=Date.now();
+    localStorage.setItem(storageKey(_cloudUser&&_cloudUser.uid),JSON.stringify(STATE));
+  }catch(e){}
+  _cloudAgendarPush();
+}
+function load(){
+  const uid=_cloudUser&&_cloudUser.uid;
+  let raw=null;
+  try{
+    const saved=localStorage.getItem(storageKey(uid));
+    if(saved) raw=JSON.parse(saved);
+    // Migração conservadora: cache antigo só pertence ao UID marcado.
+    if(!raw){
+      const legacy=JSON.parse(localStorage.getItem(STATE_STORAGE_KEY)||"null");
+      if(legacy&&(uid?legacy._syncUid===uid:!legacy._syncUid)) raw=legacy;
+    }
+  }catch(e){}
+  if(raw&&raw._syncUid&&raw._syncUid!==uid) raw=null;
+  STATE=cleanState(raw);
+  if(uid) STATE._syncUid=uid;
+}
+
+/* ── BACKUP: EXPORTAR / IMPORTAR ── */
+function exportarDados(){
+  const dados={app:"bussola-estudos",versao:1,exportadoEm:new Date().toISOString(),state:STATE};
+  const blob=new Blob([JSON.stringify(dados,null,2)],{type:"application/json"});
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(blob);
+  a.download=`bussola-backup-${fmt(new Date())}.json`;
+  document.body.appendChild(a); a.click();
+  setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); },1000);
+  showToast("⬇ Backup exportado! Guarde o arquivo em local seguro.");
+}
+
+function importarDados(ev){
+  const file=ev.target.files&&ev.target.files[0];
+  ev.target.value=""; // permite reimportar o mesmo arquivo
+  if(!file) return;
+  const reader=new FileReader();
+  reader.onload=e=>{
+    try{
+      const dados=JSON.parse(e.target.result);
+      const novoState=(dados.app==="bussola-estudos"||dados.app==="cronos-concursos")?dados.state:dados; // aceita backup ou STATE puro
+      if(!novoState||typeof novoState!=="object"||!("dias" in novoState)){
+        showToast("⚠️ Arquivo inválido: não parece um backup da Bússola."); return;
+      }
+      if(!confirm("Importar este backup substituirá os dados atuais. Continuar?")) return;
+      STATE=cleanState(novoState);
+      if(_cloudUser) STATE._syncUid=_cloudUser.uid;
+      else delete STATE._syncUid;
+      save();
+      document.getElementById("setupModal").classList.remove("open");
+      renderTudo();
+      showToast("✅ Backup importado com sucesso!");
+    }catch(err){
+      showToast("⚠️ Não foi possível ler o arquivo. É um JSON válido?");
+    }
+  };
+  reader.readAsText(file);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SINCRONIZAÇÃO EM NUVEM (Firestore) — modelo local-first
+   O localStorage continua sendo o cache imediato (app instantâneo,
+   funciona offline); a nuvem recebe as mudanças com debounce de 2s
+   e é a ponte entre dispositivos. Documento único: alunos/{uid},
+   protegido por regra de segurança (uid do próprio aluno).
+   ══════════════════════════════════════════════════════════════ */
+let _cloudUser=null,_cloudTimer=null,_cloudEpoch=0,_cloudReady=false;
+
+/* Decisão de conflito local × nuvem (pura, testável):
+   1. Dados locais de OUTRO usuário nunca valem (computador compartilhado).
+   2. Dispositivo sem cronograma configurado nunca vence uma nuvem configurada.
+   3. Ambos configurados: vence o carimbo updatedAt mais recente. */
+function decideSync(local,remote,uid){
+  if(local&&local._syncUid&&uid&&local._syncUid!==uid) return {winner:"remote",motivo:"outro-usuario"};
+  if(!remote) return {winner:"local",motivo:"sem-nuvem"};
+  const localConfig=!!(local&&local.inicio), remoteConfig=!!remote.inicio;
+  if(remoteConfig&&!localConfig) return {winner:"remote",motivo:"local-vazio"};
+  if(localConfig&&!remoteConfig) return {winner:"local",motivo:"nuvem-vazia"};
+  const lu=(local&&local.updatedAt)||0, ru=remote.updatedAt||0;
+  return {winner: ru>lu?"remote":"local", motivo:"mais-recente"};
+}
+
+function _syncStatus(st,title){
+  if(typeof document==="undefined") return;
+  let el=document.getElementById("syncDot");
+  if(!el){
+    const tr=document.querySelector(".topbar-right");
+    if(!tr) return;
+    el=document.createElement("div"); el.id="syncDot";
+    tr.insertBefore(el,tr.firstChild);
+  }
+  el.className="sync-dot "+st;
+  el.textContent=st==="ok"?"☁️":st==="sync"?"⟳":"⚠";
+  el.title=title||(st==="ok"?"Progresso sincronizado na nuvem"
+    :st==="sync"?"Sincronizando…"
+    :"Sem conexão com a nuvem — dados salvos neste dispositivo");
+}
+
+function _cloudAgendarPush(){
+  if(typeof window==="undefined") return;
+  if(!_cloudReady||!_cloudUser||STATE._syncUid!==_cloudUser.uid||typeof DB==="undefined"||!DB) return;
+  _syncStatus("sync");
+  clearTimeout(_cloudTimer);
+  const epoch=_cloudEpoch;
+  _cloudTimer=setTimeout(function(){ if(epoch===_cloudEpoch) _cloudPush(); },2000);
+}
+async function _cloudPush(){
+  if(!_cloudReady||!_cloudUser||STATE._syncUid!==_cloudUser.uid||typeof DB==="undefined"||!DB) return;
+  const uid=_cloudUser.uid,epoch=_cloudEpoch,payload=JSON.parse(JSON.stringify(STATE));
+  try{
+    await DB.collection("alunos").doc(uid).set(payload);
+    if(epoch===_cloudEpoch) _syncStatus("ok");
+  }catch(e){ if(epoch===_cloudEpoch) _syncStatus("err"); }
+}
+
+async function cloudOnLogin(user){
+  const epoch=++_cloudEpoch;
+  clearTimeout(_cloudTimer); _cloudReady=false;
+  _cloudUser=user;
+  if(typeof window!=="undefined") window._bussolaUserActed=false;
+  if(typeof resetAccountUI==="function") resetAccountUI();
+  load();
+  if(typeof DB==="undefined"||!DB){
+    _syncStatus("err","Firestore não inicializado");
+    if(typeof renderTudo==="function") renderTudo();
+    _showAccount();
+    return true;
+  }
+  _syncStatus("sync");
+  try{
+    const snap=await DB.collection("alunos").doc(user.uid).get();
+    if(epoch!==_cloudEpoch) return false;
+    const remote=snap.exists?snap.data():null;
+    const d=decideSync(STATE,remote,user.uid);
+    if(d.winner==="remote") STATE=cleanState(remote);
+    STATE._syncUid=user.uid;
+    _cloudReady=true;
+    save(); // grava local e agenda o push (nuvem termina igual ao vencedor)
+    _syncStatus("ok");
+    // Nuvem trouxe cronograma configurado → este NÃO é um primeiro acesso:
+    // fecha o fluxo de boas-vindas/configuração que o boot deste dispositivo
+    // pode ter aberto antes do login resolver (corrida boot × nuvem).
+    if(STATE.inicio&&typeof document!=="undefined"){
+      const w=document.getElementById("welcomeOverlay"); if(w) w.classList.remove("open");
+      const m=document.getElementById("setupModal");     if(m) m.classList.remove("open");
+      try{ localStorage.setItem("bussola_onboard_done","1"); }catch(e){}
+      if(typeof selecionarPref==="function"&&EDITAIS[STATE.prefeitura]) selecionarPref(STATE.prefeitura,false);
+    }
+    // Re-renderiza com os dados vencedores (a UI pode já ter desenhado o boot)
+    if(typeof renderTudo==="function"){
+      renderTudo();
+      const atual=document.querySelector(".page.active");
+      if(atual&&typeof navTo==="function") navTo(atual.id.replace("page-",""));
+    }
+    _showAccount();
+    return true;
+  }catch(e){
+    if(epoch!==_cloudEpoch) return false;
+    _syncStatus("err");
+    // Somente cache do próprio UID; nenhum push antes de consultar a nuvem.
+    if(typeof renderTudo==="function") renderTudo();
+    _showAccount();
+    return true;
+  }
+}
+function _showAccount(){
+  if(typeof document==="undefined") return;
+  if(!STATE.inicio){
+    const setup=document.getElementById("setupModal");
+    if(setup) setup.classList.add("open");
+  }
+  const login=document.getElementById("loginScreen");
+  if(login) login.style.display="none";
+  if(document.body) document.body.classList.remove("aguardando-auth");
+}
+function cloudOnLogout(){
+  ++_cloudEpoch; clearTimeout(_cloudTimer); _cloudTimer=null;
+  _cloudReady=false; _cloudUser=null; STATE=initialState();
+  if(typeof window!=="undefined") window._bussolaUserActed=false;
+  if(typeof resetAccountUI==="function") resetAccountUI();
+  if(typeof document!=="undefined"){
+    const el=document.getElementById("syncDot");
+    if(el) el.remove();
+  }
+}
+/* Se o login aconteceu antes deste arquivo carregar, processa agora */
+if(typeof window!=="undefined"&&window._pendingAuthUser){
+  cloudOnLogin(window._pendingAuthUser);
+  window._pendingAuthUser=null;
+}
+
+/* ── Export para Node (testes) ── */
+if(typeof module!=="undefined"&&module.exports){
+  module.exports={migrateState,decideSync,STATE_SCHEMA_VERSION,STATE_STORAGE_KEY};
+}
