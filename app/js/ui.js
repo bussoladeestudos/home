@@ -119,6 +119,9 @@ const ACTIONS={
   // Conteúdo de estudo do tópico
   abrirConteudo:d=>abrirConteudo(d.mat,d.top),
   voltarDoConteudo:()=>navTo(_conteudoVoltarPara||"cronograma"),
+  contSetStar:d=>contSetStar(+d.n),
+  contPraticar:()=>contPraticar(),
+  contProximo:()=>contProximo(),
   limparBuscaConteudo:()=>limparBuscaConteudo(),
   toggleMateria:d=>toggleMateria(d.i),
   toggleTodasMaterias:()=>toggleTodasMaterias(),
@@ -3848,14 +3851,13 @@ function renderExercicios(){
           <button type="button" class="ex-chip${_exFiltro.soErradas?" on":""}" data-action="exToggleErradas" title="Só as questões que você errou da última vez">❌ Só as que errei${nErradas?" ("+nErradas+")":""}</button>
         </div>
       </div>
-      <div class="ex-linha">
-        <label class="ex-lab" for="exQuantidade">4. Quantidade</label>
-        <div><input class="form-input" id="exQuantidade" type="number" min="1" step="1" value="${esc(_exQuantidade)}" placeholder="Ex.: 10" data-input="exQuantidade">
-        <small>Escolha quantas questões quer resolver nesta sessão.</small></div>
-      </div>
       <div class="ex-rodape">
-        <div class="ex-conta" id="exConta"><strong>${sel.length}</strong> ${sel.length===1?"questão selecionada":"questões selecionadas"}</div>
-        <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+        <div class="ex-rodape-esq">
+          <label class="ex-qtd-lab" for="exQuantidade">4. Quantidade</label>
+          <input class="form-input ex-qtd-input" id="exQuantidade" type="number" min="1" step="1" value="${esc(_exQuantidade)}" placeholder="Ex.: 10" data-input="exQuantidade">
+          <div class="ex-conta" id="exConta"><strong>${sel.length}</strong> ${sel.length===1?"questão selecionada":"questões selecionadas"}</div>
+        </div>
+        <div class="ex-rodape-acoes">
           <button type="button" class="ex-btn-sec" data-action="exLimparFiltro">Limpar filtro</button>
           <button type="button" class="ex-btn" id="exBtnComecar" data-action="exComecar"${sel.length?"":" disabled"}>▶ Começar</button>
         </div>
@@ -4204,7 +4206,95 @@ function renderConteudo(){
     + bloco("O que cai na prova",c.prova,"cont-prova")
     + bloco("Conteúdo",c.corpo,"cont-corpo")
     + bloco("Pegadinhas",c.pegadinhas,"cont-peg")
-    + bloco("Cartão de revisão",c.cartao,"cont-cartao");
+    + bloco("Cartão de revisão",c.cartao,"cont-cartao")
+    + _contRodapeHTML(mat,top);
+}
+
+/* ── RODAPÉ DA AULA ──────────────────────────────────────────────────────
+   Fecha o ciclo de leitura sem obrigar o aluno a voltar ao cronograma:
+   ele avalia a confiança (a mesma nota das estrelas, que alimenta as
+   revisões), vai para os exercícios já filtrados no tópico que acabou de
+   ler, ou segue para o próximo conteúdo publicado. */
+
+/* Onde este tópico cai na agenda. Devolve {key, ti, percepcao} ou null
+   quando não há plano ou o tópico está além do limite de conteúdo. */
+function _contAgenda(mat,top){
+  if(typeof indexarAgendaTopicos!=="function") return null;
+  const idx=indexarAgendaTopicos();
+  return idx[_normTexto(mat)+"|"+_normTexto(top)]||null;
+}
+/* Estrelas já registradas para o tópico. Dia multi guarda em estrelasList[ti]. */
+function _contEstrelas(ag){
+  if(!ag) return 0;
+  const est=STATE.dias[ag.key]||{};
+  if(ag.ti!=null) return (est.estrelasList||{})[ag.ti]||nivelToStars((est.percepcoes||{})[ag.ti]||"")||0;
+  return est.estrelas||nivelToStars(est.percepcao||"")||0;
+}
+/* Próximo tópico do edital que tenha texto publicado. Percorre matérias e
+   tópicos na ordem do edital e pula o que ainda não foi escrito, para o
+   botão nunca abrir uma tela vazia. */
+function _contProxTopico(mat,top){
+  const tops=getTopicos(), mats=getMaterias(), seq=[];
+  mats.forEach(m=>(tops[m.nome]||[]).forEach(t=>seq.push({mat:m.nome,top:t})));
+  const i=seq.findIndex(x=>x.mat===mat&&x.top===top);
+  if(i<0) return null;
+  for(let j=i+1;j<seq.length;j++)
+    if(temConteudo(STATE.prefeitura,seq[j].mat,seq[j].top)) return seq[j];
+  return null;
+}
+function _contRodapeHTML(mat,top){
+  const ag=_contAgenda(mat,top);
+  const n=_contEstrelas(ag);
+  const prox=_contProxTopico(mat,top);
+  const temQ=temQuestoes(STATE.prefeitura,mat,top);
+  const nota=ag
+    ? `<div class="cont-rod-tit">Qual sua confiança neste tópico?</div>
+       <div class="cont-rod-stars" role="group" aria-label="Avaliar confiança de 1 a 5">${
+         [1,2,3,4,5].map(s=>`<button type="button" class="cont-star${s<=n?" on":""}" data-action="contSetStar" data-n="${s}" aria-label="${s} de 5 estrelas">★</button>`).join("")
+       }</div>
+       <div class="cont-rod-hint">${n?`Sua nota atual é ${n} de 5. Toque para mudar.`:"A nota alimenta as estrelas do cronograma e a fila de revisões."}</div>`
+    : `<div class="cont-rod-tit">Avaliação indisponível</div>
+       <div class="cont-rod-hint">Este tópico ainda não está posicionado no seu cronograma. Configure o plano para registrar a confiança.</div>`;
+  return `<section class="cont-rodape">
+    <div class="cont-rod-nota">${nota}</div>
+    <div class="cont-rod-acoes">
+      <button type="button" class="cont-rod-btn cont-rod-praticar" data-action="contPraticar">✍️ Responder questões</button>
+      <button type="button" class="cont-rod-btn cont-rod-prox" data-action="contProximo"${prox?"":" disabled"}>${
+        prox?`Próximo conteúdo →<span class="cont-rod-prox-nome">${esc(prox.top)}</span>`:"Último conteúdo publicado"
+      }</button>
+    </div>
+  </section>`;
+}
+function contSetStar(n){
+  if(!_conteudoAtual) return;
+  const ag=_contAgenda(_conteudoAtual.mat,_conteudoAtual.top);
+  if(!ag){ showToast("Configure seu cronograma para registrar a confiança."); return; }
+  if(ag.ti!=null) gravarNotaTopico(ag.key,ag.ti,n);
+  else{
+    if(!STATE.dias[ag.key]) STATE.dias[ag.key]={};
+    STATE.dias[ag.key].estrelas=n;
+    STATE.dias[ag.key].percepcao=starToNivel(n);
+    _carimbarRegistro(ag.key);
+  }
+  save(); renderConteudo(); renderTudo();
+  showToast("Confiança registrada: "+n+" de 5.");
+}
+/* Leva ao menu de exercícios já filtrado. Sem questões no tópico, abre a
+   matéria inteira e avisa, em vez de entregar uma tela vazia. */
+function contPraticar(){
+  if(!_conteudoAtual) return;
+  const mat=_conteudoAtual.mat, top=_conteudoAtual.top;
+  const temQ=temQuestoes(STATE.prefeitura,mat,top);
+  _exFiltro={materia:mat,topicos:temQ?[{mat:mat,top:top}]:[],niveis:[],soErradas:false};
+  _exBuscaTop=""; _exQuantidade="";
+  navTo("exercicios"); window.scrollTo(0,0);
+  if(!temQ) showToast("Ainda não há questões deste tópico. Abri a matéria inteira.");
+}
+function contProximo(){
+  if(!_conteudoAtual) return;
+  const p=_contProxTopico(_conteudoAtual.mat,_conteudoAtual.top);
+  if(!p){ showToast("Este é o último conteúdo publicado."); return; }
+  abrirConteudo(p.mat,p.top);
 }
 
 function _btnAula(mat,top){

@@ -1181,7 +1181,7 @@ function indexarAgendaTopicos(){
       if(!t||!t.mat||!t.top) return;
       const k=_normTexto(t.mat)+"|"+_normTexto(t.top);
       if(idx[k]) return;              // primeira ocorrência manda
-      idx[k]={ key:key, percepcao:(multi?(est.percepcoes||{})[i]:est.percepcao)||null };
+      idx[k]={ key:key, ti:(multi?i:null), percepcao:(multi?(est.percepcoes||{})[i]:est.percepcao)||null };
     });
   }
   return idx;
