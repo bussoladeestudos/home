@@ -4,7 +4,7 @@ const code=ui.slice(ui.indexOf('/* Revisão guiada:'));
 function setup(){
  const bloco={num:1,key:'2026-09-09',topicos:[{mat:'A',top:'a'},{mat:'B',top:'b'}]};
  const chamadas=[],toasts=[],campos=[{value:'2',focus(){}},{value:'1',focus(){}}];
- const c=vm.createContext({STATE:{prefeitura:'demo',inicio:'2026-09-01',dias:{}},fmt:()=> '2026-09-09',esc:s=>String(s).replace(/</g,'&lt;'),buildBlocosRevisao:()=>[bloco],listarQuestoes:(ed,f)=>{chamadas.push(f);return Array.from({length:3},(_,i)=>({mat:f.materia,top:f.topicos[0].top,q:{id:f.materia+i,gabarito:'a'}}));},_embaralhar:a=>a.slice(),document:{getElementById:id=>campos[0]},showToast:s=>toasts.push(s),confirm:()=>true,navTo:p=>{c.pagina=p},window:{scrollTo(){}}});
+ const c=vm.createContext({STATE:{prefeitura:'demo',inicio:'2026-09-01',dias:{'2026-09-02':{percepcao:'alta'},'2026-09-03':{percepcao:'alta'}}},getTopicosDoDia:k=>({'2026-09-02':[{mat:'A',top:'a'}],'2026-09-03':[{mat:'B',top:'b'}]})[k]||[],fmt:()=> '2026-09-09',esc:s=>String(s).replace(/</g,'&lt;'),buildBlocosRevisao:()=>[bloco],listarQuestoes:(ed,f)=>{chamadas.push(f);return Array.from({length:3},(_,i)=>({mat:f.materia,top:f.topicos[0].top,q:{id:f.materia+i,gabarito:'a'}}));},_embaralhar:a=>a.slice(),document:{getElementById:id=>campos[0]},showToast:s=>toasts.push(s),confirm:()=>true,navTo:p=>{c.pagina=p},window:{scrollTo(){}}});
  vm.runInContext('let _exSessao=null;',c);vm.runInContext(code,c);
  return {c,bloco,campos,chamadas,toasts,run:s=>vm.runInContext(s,c)};
 }
@@ -122,4 +122,30 @@ test('excluir histórico remove nota automática de mini mas preserva registro e
  const c=vm.createContext({STATE:{questoes:{},exDias:{},revisoesResultados:{mini:{dia:'2026-09-09'}},dias:{automatico:{simuladoResultadoId:'mini',simuladoFeito:true,simuladoScore:80,lido:true},externo:{simuladoFeito:true,simuladoScore:70}}}});
  vm.runInContext(fs.readFileSync(path.join(__dirname,'../js/engine.js'),'utf8'),c);vm.runInContext('apagarHistoricoExercicios("hoje","2026-09-09")',c);
  assert.equal(c.STATE.dias.automatico.simuladoFeito,undefined);assert.equal(c.STATE.dias.automatico.lido,true);assert.equal(c.STATE.dias.externo.simuladoScore,70);
+});
+test('tópico não avaliado não entra no simulado',()=>{
+ const h=setup();h.c.STATE.prova='2026-10-01';h.c.isSimuladoDay=()=>true;
+ h.c.getSimuladoInfo=()=>({topicos:h.bloco.topicos,revNums:[1]});
+ delete h.c.STATE.dias['2026-09-03'];
+ h.run('miniIniciarQuestoes("2026-09-09")');
+ assert.equal(h.run('_exSessao.itens.length'),3);
+ assert.equal(h.run('_exSessao.itens.every(x=>x.mat==="A")'),true);
+});
+test('sem nenhum tópico avaliado, o simulado explica o que falta e não inicia',()=>{
+ const h=setup();h.c.STATE.prova='2026-10-01';h.c.isSimuladoDay=()=>true;
+ h.c.getSimuladoInfo=()=>({topicos:h.bloco.topicos,revNums:[1]});
+ h.c.STATE.dias={};
+ const html=h.run('miniConfiguracaoHtml("2026-09-09")');
+ assert.ok(html.includes('Nenhum tópico deste simulado foi estudado'));
+ assert.ok(!html.includes('data-action="miniIniciarQuestoes"'));
+ h.run('miniIniciarQuestoes("2026-09-09")');
+ assert.equal(h.run('_exSessao'),null);
+});
+test('a revisão geral também só usa o que foi estudado',()=>{
+ const h=setup();h.c.STATE.prova='2026-10-01';
+ h.c.getMaterias=()=>[{nome:'A'},{nome:'B'},{nome:'C'}];
+ h.c.getTopicos=()=>({A:['a'],B:['b'],C:['c']});
+ h.run('rgIniciarQuestoes("2026-09-09")');
+ assert.equal(h.run('_exSessao.itens.length'),6);
+ assert.equal(h.run('_exSessao.itens.some(x=>x.mat==="C")'),false);
 });
