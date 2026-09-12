@@ -14,6 +14,7 @@ function acoesUsadas(){
   const re=/data-action="(\w+)"/g, set=new Set();
   for(const src of [html,ui,pomo]) for(const m of src.matchAll(re)) set.add(m[1]);
   for(const m of ui.matchAll(/btnAction:"(\w+)"/g)) set.add(m[1]); // dinâmicas
+  for(const m of ui.matchAll(/\bacao:"(\w+)"/g)) set.add(m[1]);    // dinâmicas (cfg dos simulados)
   return set;
 }
 function acoesRegistradas(){

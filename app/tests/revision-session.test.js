@@ -36,18 +36,87 @@ test('tópico sem banco é informado e não recebe questões de outro assunto',(
  h.run('revIniciarQuestoes(1)');assert.equal(h.run('_exSessao.itens.length'),1);assert.ok(h.run('revConfiguracaoHtml(buildBlocosRevisao()[0])').includes('(não entra na sessão)'));
 });
 
-test('mini simulado gera por tópico e salva nota no planejamento',()=>{
+test('mini simulado é montado pelo sistema, sem escolha de quantidade',()=>{
  const h=setup();h.c.STATE.prova='2026-10-01';h.c.isSimuladoDay=()=>true;h.c.getSimuladoInfo=()=>({topicos:h.bloco.topicos});
- h.campos[0].value='2';h.run('miniIniciarQuestoes("2026-09-09")');assert.equal(h.run('_exSessao.itens.length'),4);
+ h.run('miniIniciarQuestoes("2026-09-09")');
+ assert.equal(h.run('_exSessao.itens.length'),6);
  h.run('_exSessao.itens.forEach(it=>_exSessao.respostas[it.q.id]="a");revSalvarResultado(_exSessao)');
  assert.equal(h.c.STATE.dias['2026-09-09'].simuladoScore,100);assert.equal(h.c.STATE.dias['2026-09-09'].simuladoFeito,true);
  assert.ok(h.c.STATE.dias['2026-09-09'].simuladoResultadoId.includes('mini:'));
- const html=h.run('miniConfiguracaoHtml("2026-09-09")');assert.ok(html.includes('data-action="miniIniciarQuestoes"'));assert.ok(html.includes('Quantas questões por tópico?'));
+ const html=h.run('miniConfiguracaoHtml("2026-09-09")');
+ assert.ok(html.includes('data-action="miniIniciarQuestoes"'));
+ assert.ok(!html.includes('Quantas questões por tópico?'));
+ assert.ok(html.includes('6 questões'));
+ assert.ok(html.includes('12 minutos'));
 });
-test('mini futuro ou fora do plano não gera sessão',()=>{
+test('mini simulado corta em 30 questões e reveza entre os tópicos',()=>{
  const h=setup();h.c.STATE.prova='2026-10-01';h.c.isSimuladoDay=()=>true;h.c.getSimuladoInfo=()=>({topicos:h.bloco.topicos});
+ h.c.listarQuestoes=(ed,f)=>Array.from({length:40},(_,i)=>({mat:f.materia,top:f.topicos[0].top,q:{id:f.materia+i,gabarito:'a'}}));
+ h.run('miniIniciarQuestoes("2026-09-09")');
+ assert.equal(h.run('_exSessao.itens.length'),30);
+ assert.equal(h.run('_exSessao.itens.filter(x=>x.mat==="A").length'),15);
+ assert.equal(h.run('_exSessao.itens.filter(x=>x.mat==="B").length'),15);
+ assert.equal(h.run('new Set(_exSessao.itens.map(it=>it.q.id)).size'),30);
+});
+test('banco menor que o limite entra inteiro e a tela avisa o tamanho',()=>{
+ const h=setup();h.c.STATE.prova='2026-10-01';h.c.isSimuladoDay=()=>true;h.c.getSimuladoInfo=()=>({topicos:h.bloco.topicos});
+ h.c.listarQuestoes=(ed,f)=>f.materia==='A'?[{mat:'A',top:'a',q:{id:'a1',gabarito:'a'}}]:[];
+ const html=h.run('miniConfiguracaoHtml("2026-09-09")');
+ assert.ok(html.includes('1 questão'));
+ assert.ok(html.includes('comporta até 30'));
+ h.run('miniIniciarQuestoes("2026-09-09")');
+ assert.equal(h.run('_exSessao.itens.length'),1);
+});
+test('simulado sem banco nenhum não inicia e explica o registro manual',()=>{
+ const h=setup();h.c.STATE.prova='2026-10-01';h.c.isSimuladoDay=()=>true;h.c.getSimuladoInfo=()=>({topicos:h.bloco.topicos});
+ h.c.listarQuestoes=()=>[];
+ const html=h.run('miniConfiguracaoHtml("2026-09-09")');
+ assert.ok(html.includes('Ainda não há questões publicadas'));assert.ok(html.includes(' disabled'));
+ h.run('miniIniciarQuestoes("2026-09-09")');
+ assert.equal(h.run('_exSessao'),null);
+});
+test('revisão geral sorteia de todo o edital, limita em 50 e grava no dia',()=>{
+ const h=setup();h.c.STATE.prova='2026-10-01';
+ h.c.getMaterias=()=>[{nome:'A'},{nome:'B'}];h.c.getTopicos=()=>({A:['a'],B:['b']});
+ h.c.listarQuestoes=(ed,f)=>Array.from({length:40},(_,i)=>({mat:f.materia,top:f.topicos[0].top,q:{id:f.materia+i,gabarito:'a'}}));
+ h.run('rgIniciarQuestoes("2026-09-09")');
+ assert.equal(h.run('_exSessao.itens.length'),50);
+ assert.equal(h.run('_exSessao.revisao.tipo'),'geral');
+ h.run('_exSessao.itens.forEach(it=>_exSessao.respostas[it.q.id]="a");revSalvarResultado(_exSessao)');
+ const dia=h.c.STATE.dias['2026-09-09'];
+ assert.equal(dia.revisaoGeralFeita,true);assert.equal(dia.revisaoGeralScore,100);
+ assert.ok(dia.revisaoGeralResultadoId.includes('geral:'));
+ assert.equal(dia.simuladoFeito,undefined);
+});
+test('revisão geral e mini do mesmo dia não dividem a mesma nota',()=>{
+ const h=setup();h.c.STATE.prova='2026-10-01';h.c.isSimuladoDay=()=>true;h.c.getSimuladoInfo=()=>({topicos:h.bloco.topicos});
+ h.c.getMaterias=()=>[{nome:'A'},{nome:'B'}];h.c.getTopicos=()=>({A:['a'],B:['b']});
+ const idMini=h.run('revResultadoId(miniBloco("2026-09-09"))');
+ const idGeral=h.run('revResultadoId(rgBloco("2026-09-09"))');
+ assert.notEqual(idMini,idGeral);
+});
+test('simulado futuro com revisão pendente não inicia e mostra só o que está previsto',()=>{
+ const h=setup();h.c.STATE.prova='2026-10-01';h.c.isSimuladoDay=()=>true;h.bloco.isFutura=true;
+ h.c.getSimuladoInfo=()=>({topicos:h.bloco.topicos,revNums:[1]});
+ h.c.getMaterias=()=>[{nome:'A'},{nome:'B'}];h.c.getTopicos=()=>({A:['a'],B:['b']});
  h.run('miniIniciarQuestoes("2026-09-10")');assert.equal(h.run('_exSessao'),null);
- h.run('miniIniciarQuestoes("2026-08-01")');assert.equal(h.run('_exSessao'),null);
+ h.run('rgIniciarQuestoes("2026-09-10")');assert.equal(h.run('_exSessao'),null);
+ const html=h.run('rgConfiguracaoHtml("2026-09-10")');
+ assert.ok(html.includes('Abre na data planejada'));
+ assert.ok(!html.includes('data-action="rgIniciarQuestoes"'));
+});
+test('simulado futuro abre antes da data quando as revisões que ele cobre já estão liberadas',()=>{
+ const h=setup();h.c.STATE.prova='2026-10-01';h.c.isSimuladoDay=()=>true;h.bloco.isFutura=false;
+ h.c.getSimuladoInfo=()=>({topicos:h.bloco.topicos,revNums:[1]});
+ h.c.getMaterias=()=>[{nome:'A'},{nome:'B'}];h.c.getTopicos=()=>({A:['a'],B:['b']});
+ h.run('miniIniciarQuestoes("2026-09-10")');assert.equal(h.run('_exSessao.itens.length'),6);
+ h.run('_exSessao=null;rgIniciarQuestoes("2026-09-10")');assert.equal(h.run('_exSessao.itens.length'),6);
+ assert.ok(h.run('miniConfiguracaoHtml("2026-09-10")').includes('data-action="miniIniciarQuestoes"'));
+});
+test('sem revisão nenhuma identificada, o simulado futuro continua preso à data',()=>{
+ const h=setup();h.c.STATE.prova='2026-10-01';h.c.isSimuladoDay=()=>true;h.bloco.isFutura=false;
+ h.c.getSimuladoInfo=()=>({topicos:h.bloco.topicos});
+ h.run('miniIniciarQuestoes("2026-09-10")');assert.equal(h.run('_exSessao'),null);
 });
 test('excluir histórico remove nota automática de mini mas preserva registro externo',()=>{
  const c=vm.createContext({STATE:{questoes:{},exDias:{},revisoesResultados:{mini:{dia:'2026-09-09'}},dias:{automatico:{simuladoResultadoId:'mini',simuladoFeito:true,simuladoScore:80,lido:true},externo:{simuladoFeito:true,simuladoScore:70}}}});
