@@ -128,6 +128,7 @@ const ACTIONS={
   limparBuscaConteudo:()=>limparBuscaConteudo(),
   toggleMateria:d=>toggleMateria(d.i),
   toggleTodasMaterias:()=>toggleTodasMaterias(),
+  fecharDicaConteudo:()=>fecharDicaConteudo(),
   // Menu de exercícios
   exToggleNivel:d=>exToggleNivel(d.nivel),
   exToggleTopico:d=>exToggleTopico(d.i),
@@ -2401,6 +2402,51 @@ function getDicaDoDia(){
   return dicas[diaIdx];
 }
 
+/* ── TELA HOJE: helpers da rotina do dia ────────────────────────────────
+   A tela se chama Hoje, então o dia tem que ser o primeiro e o maior bloco.
+   Antes ela abria com saudação, cartão de prazo e Coach, e a atividade
+   aparecia em quarto lugar, o que fazia dela um resumo do Dashboard em vez
+   de uma tela de execução. */
+
+/* Próxima atividade real do cronograma. Em dia de descanso é ela que impede
+   a tela de parecer vazia, e em dia de estudo dá o que vem depois. */
+function _hojeProxAtividade(){
+  if(!STATE.inicio) return null;
+  const d=new Date(); d.setHours(0,0,0,0);
+  for(let i=1;i<=21;i++){
+    d.setDate(d.getDate()+1);
+    const k=fmt(d);
+    if(STATE.prova&&k>STATE.prova) return null;
+    if(isDiaLivre(d.getDay())) continue;
+    const p=getCicloPos(k);
+    if(p<0) continue;
+    const quando=i===1?"Amanhã"
+      :(i<7?d.toLocaleDateString("pt-BR",{weekday:"long"})
+           :d.toLocaleDateString("pt-BR",{day:"2-digit",month:"2-digit"}));
+    if(p===5) return {quando,titulo:"Retorno Técnico",sub:"reforço dos pontos fracos da semana",key:k,revisoes:0};
+    if(p===6) return {quando,titulo:"Exercícios de Revisão",sub:"questões dos ciclos encerrados",key:k,revisoes:1};
+    const tops=(typeof getTopicosDoDia==="function")?getTopicosDoDia(k):[];
+    if(!tops.length) continue;
+    const mats=[...new Set(tops.map(t=>t.mat))];
+    return {quando,titulo:mats.join(" · "),
+      sub:tops.length>1?(tops.length+" tópicos"):tops[0].top,key:k,tops:tops.length,revisoes:0};
+  }
+  return null;
+}
+/* Próximo dia de Exercícios de Revisão, que é o fechamento do ciclo. */
+function _hojeProxRevisao(){
+  if(!STATE.inicio) return null;
+  const d=new Date(); d.setHours(0,0,0,0);
+  for(let i=0;i<=60;i++){
+    const k=fmt(d);
+    if(STATE.prova&&k>STATE.prova) return null;
+    if(!isDiaLivre(d.getDay())&&getCicloPos(k)===6){
+      return {dias:i,rotulo:i===0?"hoje":i===1?"amanhã":i<7?("em "+i+" dias"):d.toLocaleDateString("pt-BR",{day:"2-digit",month:"2-digit"})};
+    }
+    d.setDate(d.getDate()+1);
+  }
+  return null;
+}
 function renderHoje(){
   const hojeKey=fmt(new Date());
   const est=STATE.dias[hojeKey]||{};
@@ -2433,28 +2479,44 @@ function renderHoje(){
   const dataExt=new Date().toLocaleDateString("pt-BR",{weekday:"long",day:"numeric",month:"long"});
   { const _ht=document.getElementById("hojeTitulo"); if(_ht)_ht.style.display="none"; const _hs=document.getElementById("hojeSub"); if(_hs)_hs.style.display="none"; }
 
-  let label="Foco de hoje", titulo="", sub="", isContent=false;
+  /* O tom da saudação vem do dia, não de uma frase fixa: "Bora avançar?"
+     em cima de "Dia de descanso" se contradiz. */
+  let label="Hoje", titulo="", sub="", isContent=false, tipoChip="", fraseDia="Bora avançar?", resumoDia="";
   // Dia 1 (Orientações do Coach) vale enquanto não for concluído — mesmo que a data de início já tenha passado ou ainda esteja no futuro
   const isDia1=isHojeDia1();
   // Primeiro acesso: nada estudado ainda — estado de boas-vindas limpo, sem métricas zeradas
   const primeiroAcesso=isDia1&&diasConcl===0;
   if(isDia1){
-    label="Dia 1 — Início da Preparação";
-    titulo="🧭 Orientações do Coach";
+    label="Dia 1"; tipoChip="🧭 Início da preparação";
+    fraseDia="Hoje é dia de conhecer o terreno.";
+    titulo="Orientações do Coach";
     sub=`Leia o edital na íntegra, estude a <strong>Análise do Edital &amp; Banca</strong> e defina sua rotina de <strong>${STATE.horasDia}h/dia</strong>. Ao final, avalie sua clareza sobre o plano com as estrelas.`;
     if(hojeKey<STATE.inicio) sub+=`<br><em style="color:#8A8072">Seu cronograma de conteúdo começa em ${parseDate(STATE.inicio).toLocaleDateString("pt-BR")}.</em>`;
     isContent=true;
   } else if(isDiaLivre(dow)){
-    label="Hoje"; titulo="Dia de descanso"; sub="Seu cérebro consolida enquanto você repousa. Aproveite.";
+    tipoChip="☕ Descanso / consolidação";
+    fraseDia="Hoje é dia de consolidar.";
+    titulo="Dia de descanso";
+    sub="Seu cérebro consolida enquanto você repousa. Aproveite para recuperar energia e voltar forte amanhã.";
   } else if(pos===5){
-    label="Retorno Técnico"; titulo="Reforço dos pontos fracos"; sub="Revise os tópicos com menor confiança da semana.";
+    tipoChip="⚡ Retorno Técnico";
+    fraseDia="Hoje é dia de reforçar os pontos fracos.";
+    titulo="Reforço dos pontos fracos";
+    sub="Revise os tópicos com menor confiança da semana.";
   } else if(pos===6){
-    label="Exercícios de Revisão"; titulo="Pratique os ciclos encerrados"; sub="Questões dos ciclos anteriores — pratique, não releia.";
+    tipoChip="🔄 Exercícios de Revisão";
+    fraseDia="Hoje é dia de praticar questões.";
+    titulo="Pratique os ciclos encerrados";
+    sub="Questões dos ciclos anteriores. Pratique, não releia.";
   } else {
     const topicos=getTopicosDiaBase(hojeKey);
+    const extras=getExtrasDoDia(hojeKey);
+    const nAtiv=topicos.length+extras.length;
+    tipoChip="📗 Conteúdo novo";
+    fraseDia=nAtiv>1?`Hoje são ${nAtiv} tópicos.`:"Hoje é dia de conteúdo novo.";
+    resumoDia=`${nAtiv} ${nAtiv===1?"atividade":"atividades"} · ${fmtHoras(STATE.horasDia||1)} previstas`;
     titulo=topicos.length>1?`${topicos.length} tópicos para hoje`:topicos.length?esc(topicos[0].mat):"Conteúdo de hoje";
     sub=renderTopicosHoje(hojeKey,topicos);
-    const extras=getExtrasDoDia(hojeKey);
     if(extras.length) sub+=`<section class="hoje-topico"><strong>Recuperação</strong>${extras.map(t=>`<div><p>${esc(t.mat)}: ${esc(t.top)}</p>${_btnConteudo(t.mat,t.top)}${_btnAula(t.mat,t.top)}</div>`).join("")}</section>`;
     isContent=true;
   }
@@ -2466,31 +2528,64 @@ function renderHoje(){
 
   const ringPct=cob.pct; const _RC=2*Math.PI*32; const rdash=Math.round(_RC*ringPct/100);
   const ritmo=calcRitmo();
-  let coachMsg;
+  /* Coach em uma linha: aqui ele é contexto, não relatório. O diagnóstico
+     completo continua na página do Coach. */
+  let coachCurto;
   if(primeiroAcesso){
-    coachMsg=`Bem-vindo, <strong>${esc(primeiro)}</strong>! Hoje é dia de conhecer o terreno: leia o edital, estude a <strong>Análise do Edital &amp; Banca</strong> e avalie sua clareza com as estrelas. O conteúdo do cronograma começa em seguida.`;
+    coachCurto=`Comece pelo edital e avalie sua clareza com as estrelas. É assim que eu calibro suas revisões.`;
   } else if(confMedia===null){
-    coachMsg=`Bem-vindo, <strong>${esc(primeiro)}</strong>! Conclua o foco de hoje e avalie sua confiança com as estrelas — é assim que eu calibro suas revisões.`;
+    coachCurto=`Conclua o foco de hoje e avalie sua confiança com as estrelas.`;
   } else if(ritmo.emoji==="🟢"){
-    coachMsg=`Você está <strong>adiantado</strong> no cronograma, com ${confMedia}% de confiança média. Mantenha o ritmo — hoje é ${isContent?"um dia de conteúdo novo":"um dia de consolidação"}.`;
+    coachCurto=`Você está <strong>adiantado</strong>, com ${confMedia}% de confiança média. ${isContent?"Aproveite o embalo e feche o dia.":"Aproveite o descanso de hoje sem perder o ritmo."}`;
   } else if(ritmo.emoji==="🟡"){
-    coachMsg=`Ritmo <strong>moderado</strong> — ${cob.pct}% do edital coberto. Foque no tópico de hoje e marque sua confiança ao terminar.`;
+    coachCurto=`Ritmo <strong>moderado</strong>, ${cob.pct}% do edital coberto. Feche o dia de hoje e marque sua confiança.`;
   } else {
-    coachMsg=`Seu ritmo está <strong>abaixo do planejado</strong>, sem culpa. Conclua o foco de hoje e seguimos recuperando juntos.`;
+    coachCurto=`Seu ritmo está <strong>abaixo do planejado</strong>, sem culpa. Feche o dia de hoje e seguimos recuperando.`;
   }
 
+  /* Botão do dia: cada tipo de dia tem uma ação própria, e ela abre a
+     atividade em vez de mandar o aluno procurar no cronograma. */
+  let botoes;
+  if(isDia1){
+    botoes=`<button class="hj-btn" data-action="navTo" data-page="edital">Abrir Análise do Edital →</button>
+      <button class="hj-btn hj-btn-sec" data-action="irParaHojeCronograma">Ver cronograma</button>`;
+  } else if(isDiaLivre(dow)){
+    botoes=`<button class="hj-btn" data-action="irParaHojeCronograma">Ver próximos dias →</button>`;
+  } else if(pos===6){
+    botoes=`<button class="hj-btn" data-action="navTo" data-page="revisoes">Praticar questões →</button>`;
+  } else if(pos===5){
+    botoes=`<button class="hj-btn" data-action="irParaHojeCronograma">Abrir o Retorno Técnico →</button>`;
+  } else {
+    const t0=(getTopicosDiaBase(hojeKey)||[])[0];
+    botoes=(t0&&temConteudo(STATE.prefeitura,t0.mat,t0.top))
+      ?`<button class="hj-btn" data-action="abrirConteudo" data-mat="${esc(t0.mat)}" data-top="${esc(t0.top)}">Começar rotina →</button>`
+      :`<button class="hj-btn" data-action="irParaHojeCronograma">Começar rotina →</button>`;
+  }
+
+  const prox=_hojeProxAtividade();
+  const proxRev=_hojeProxRevisao();
+  const _ICO_CAL=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18"/><path d="M8 3v4"/><path d="M16 3v4"/></svg>`;
+  const proxHtml=prox
+    ? `<div class="hj-prox-quando">${esc(prox.quando)}</div>
+       <div class="hj-prox-tit">${esc(prox.titulo)}</div>
+       <div class="hj-prox-sub">${esc(prox.sub)}</div>
+       <div class="hj-prox-meta">${fmtHoras(STATE.horasDia||1)} previstas</div>`
+    : `<div class="hj-prox-sub">Sem atividade programada nos próximos dias.</div>`;
+
   const starsRow = isDia1 ? `
-    <div style="border-top:1px solid #F0EADF;margin-top:16px;padding-top:14px;">
-      <div style="font-size:.82rem;color:#6B6155;font-weight:600;margin-bottom:9px;">${concl?"Tópico concluído — sua confiança:":isDia1?"Plano claro? Avalie sua clareza:":"Concluiu? Toque para avaliar sua confiança:"}</div>
-      <div style="display:flex;gap:6px;">${[1,2,3,4,5].map(n=>`<span data-action="setStarHoje" data-n="${n}" data-key="${starKey}" class="hv-zoom" style="cursor:pointer;font-size:1.7rem;line-height:1;color:${n<=estrelas?"#E8B23A":"#E0D6C5"};transition:transform .1s;">★</span>`).join("")}</div>
+    <div class="hj-stars">
+      <div class="hj-stars-lbl">${concl?"Tópico concluído, sua confiança:":"Plano claro? Avalie sua clareza:"}</div>
+      <div class="hj-stars-row">${[1,2,3,4,5].map(n=>`<span data-action="setStarHoje" data-n="${n}" data-key="${starKey}" class="hv-zoom" style="cursor:pointer;font-size:1.7rem;line-height:1;color:${n<=estrelas?"#E8B23A":"#E0D6C5"};transition:transform .1s;">★</span>`).join("")}</div>
     </div>` : "";
 
+  const _card=(ico,valor,rot)=>`<div class="hj-card"><span class="hj-card-ico">${ico}</span><div><div class="hj-card-val">${valor}</div><div class="hj-card-lbl">${rot}</div></div></div>`;
+
   el.innerHTML = `
-  <div style="max-width:880px;margin:0 auto;">
-    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:24px;">
-      <div style="flex:1;min-width:280px;">
-        <div style="font-size:.9rem;color:#9A9082;font-weight:500;margin-bottom:6px;text-transform:capitalize;">${dataExt}</div>
-        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:2.05rem;letter-spacing:-.02em;line-height:1.07;color:#241F18;">${saud}, ${esc(primeiro)}.<br><span style="color:#2FB374;">Bora avançar?</span></div>
+  <div class="hj-wrap">
+    <header class="hj-topo">
+      <div class="hj-saud">
+        <div class="hj-data">${dataExt}</div>
+        <div class="hj-titulo">${saud}, ${esc(primeiro)}.<br><span>${fraseDia}</span></div>
       </div>
       ${dias!==null?(primeiroAcesso?`<div class="sticky-note" style="color:#3A3010;padding:18px 26px 18px 22px;display:flex;align-items:center;gap:14px;transform:rotate(-1.2deg);">
         <span style="font-size:1.9rem;flex-shrink:0;">🗓️</span>
@@ -2502,27 +2597,27 @@ function renderHoje(){
         </div>
         <div><div style="font-size:.72rem;color:#8A7322;text-transform:uppercase;letter-spacing:.07em;font-weight:600;">Edital coberto</div><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:1.5rem;margin:2px 0;color:#2A2208;">${dias} dias</div><div style="font-size:.76rem;color:#8A7322;">até a prova</div></div>
       </div>`):""}
-    </div>
+    </header>
 
-    <div style="display:flex;gap:14px;background:#EAF4EE;border:1px solid #D2E7DA;border-radius:18px;padding:17px 19px;margin-bottom:20px;">
-      <div style="width:36px;height:36px;border-radius:11px;background:#2FB374;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#0E2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M15.5 8.5l-2 5-5 2 2-5z"></path></svg>
+    <section class="hj-rotina">
+      <div class="hj-rot-main">
+        <div class="hj-chips"><span class="hj-chip">${label}</span>${tipoChip?`<span class="hj-chip hj-chip-tipo">${tipoChip}</span>`:""}</div>
+        <div class="hj-kicker">Rotina de hoje</div>
+        <div class="hj-rot-tit">${titulo}</div>
+        ${resumoDia?`<div class="hj-rot-resumo">${resumoDia}</div>`:""}
+        <div class="hj-rot-sub">${sub}</div>
+        ${starsRow}
+        <div class="hj-acoes">${botoes}</div>
       </div>
-      <div style="flex:1;">
-        <div style="display:inline-flex;align-items:center;gap:5px;background:#D4EBDC;color:#1C5E3D;font-size:.64rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:99px;margin-bottom:8px;">✦ Coach Bússola</div>
-        <div style="font-size:.92rem;line-height:1.6;color:#2E4A3A;">${coachMsg}</div>
-      </div>
-    </div>
+      <aside class="hj-prox">
+        <div class="hj-prox-head">${_ICO_CAL} Próxima atividade</div>
+        ${proxHtml}
+      </aside>
+    </section>
 
-    <div style="background:#fff;border:1px solid #EFE6D7;border-radius:18px;padding:20px 22px;margin-bottom:16px;">
-      <span style="display:inline-block;font-size:.66rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#1C5E3D;background:#E4F4EA;padding:4px 11px;border-radius:99px;margin-bottom:11px;">${label}</span>
-      <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:1.45rem;color:#241F18;line-height:1.15;">${titulo}</div>
-      <div style="font-size:.92rem;color:#8A8072;margin-top:5px;line-height:1.55;">${sub}</div>
-      ${starsRow}
-      ${isDia1
-        ?`<button data-action="navTo" data-page="edital" style="margin-top:16px;margin-right:10px;display:inline-flex;align-items:center;gap:7px;background:#173E2C;color:#fff;font-size:.85rem;font-weight:600;padding:10px 18px;border-radius:12px;border:none;cursor:pointer;font-family:inherit;">🔍 Abrir Análise do Edital &amp; Banca</button>
-         <button data-action="irParaHojeCronograma" style="margin-top:16px;display:inline-flex;align-items:center;gap:7px;background:transparent;color:#6B6155;font-size:.82rem;font-weight:600;padding:10px 16px;border-radius:12px;border:1.5px solid #E5DCCB;cursor:pointer;font-family:inherit;">Ver cronograma →</button>`
-        :`<button data-action="irParaHojeCronograma" style="margin-top:16px;display:inline-flex;align-items:center;gap:7px;background:#173E2C;color:#fff;font-size:.85rem;font-weight:600;padding:10px 18px;border-radius:12px;border:none;cursor:pointer;font-family:inherit;">Abrir no cronograma →</button>`}
+    <div class="hj-coach">
+      <span class="hj-coach-tag">✦ Coach</span>
+      <span class="hj-coach-txt">${coachCurto}</span>
     </div>
 
     ${primeiroAcesso?`
@@ -2531,12 +2626,15 @@ function renderHoje(){
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
         ${[["1","Leia o edital e a Análise da Banca"],["2","Avalie sua clareza com as ★ acima"],["3","Amanhã o conteúdo do ciclo começa"]].map(p=>`<div style="display:flex;gap:9px;align-items:flex-start;"><span style="width:22px;height:22px;border-radius:99px;background:#173E2C;color:#fff;font-size:.72rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">${p[0]}</span><span style="font-size:.78rem;color:#6B6155;line-height:1.45;">${p[1]}</span></div>`).join("")}
       </div>
-      <div style="font-size:.74rem;color:#A89E8E;margin-top:12px;font-style:italic;">Suas métricas — dias estudados, sequência, cobertura do edital e confiança — aparecem aqui a partir do primeiro dia de conteúdo.</div>
+      <div style="font-size:.74rem;color:#A89E8E;margin-top:12px;font-style:italic;">Suas métricas aparecem aqui a partir do primeiro dia de conteúdo.</div>
     </div>`:`
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:14px;">
-      ${[["dias estudados",diasConcl],["sequência",streak>0?"🔥 "+streak:"0"],["edital coberto",cob.pct+"%"],["confiança média",confMedia!==null?confMedia+"%":"—"]].map(c=>`<div style="background:#fff;border:1px solid #EFE6D7;border-radius:16px;padding:15px 16px;text-align:center;"><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.4rem;color:#241F18;line-height:1;">${c[1]}</div><div style="font-size:.74rem;color:#9A9082;margin-top:5px;">${c[0]}</div></div>`).join("")}
+    <div class="hj-cards">
+      ${_card("📘",diasConcl,"dias estudados")}
+      ${_card("🔥",streak,"sequência")}
+      ${_card("✅",cob.cobertos,"tópicos concluídos")}
+      <div class="hj-card"><span class="hj-card-ico">${_ICO_CAL}</span><div><div class="hj-card-lbl">Próxima revisão</div><div class="hj-card-val hj-card-val-txt">${proxRev?esc(proxRev.rotulo):"sem data"}</div></div></div>
     </div>`}
-    <div style="text-align:center;font-size:.88rem;color:#A89E8E;font-style:italic;padding:6px 0;">“${msg}”</div>
+    <div class="hj-frase">“${msg}”</div>
   </div>`;
 }
 
@@ -3174,16 +3272,19 @@ function renderMaterias(){
       <button type="button" class="mat-item-header" data-action="toggleMateria" data-i="${i}" aria-expanded="false" aria-controls="matSubs${i}">
         <span class="mat-item-left">
           <span class="mat-num">${String(i+1).padStart(2,"0")}</span>
-          <span class="mat-item-txt"><span class="mat-nome">${esc(m.nome)}${selo}</span><span class="mat-resumo">${resumo}</span></span>
+          <span class="mat-item-txt"><span class="mat-nome">${esc(m.nome)}${selo}<span class="mat-pill">Expandida</span></span>
+            <span class="mat-resumo">${resumo}<span class="mat-cta mat-cta-abrir"> · toque para ver os tópicos</span><span class="mat-cta mat-cta-fechar"> · toque novamente para recolher</span></span></span>
         </span>
         <span class="mat-item-right">
           <span class="mat-stat"><span class="mat-stat-label">${rotuloPeso()}</span><span class="mat-stat-val">${m.peso}%</span></span>
           <span class="mat-stat"><span class="mat-stat-label">${EDITAIS[STATE.prefeitura]?.prova?"Questões estimadas":"Questões"}</span><span class="mat-stat-val">${questoes}</span></span>
           <span class="mat-stat"><span class="mat-stat-label">Segurança</span><span class="mat-stat-val" style="color:${semConf?"var(--gray-400)":confColor}${semConf?";font-size:.7rem;font-weight:600":""}">${confLabel}</span></span>
-          <span class="mat-chevron" aria-hidden="true">⌄</span>
+          <span class="mat-chevron" aria-hidden="true"><svg class="mat-chevron-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span>
         </span>
       </button>
-      <div class="mat-subs" id="matSubs${i}" hidden><ul>${topsHtml}</ul></div>
+      <div class="mat-subs" id="matSubs${i}" hidden>
+        <div class="mat-subs-head">Tópicos da matéria (${tops.length})</div>
+        <ul>${topsHtml}</ul></div>
     </div>`;
   }).join("");
 
@@ -3200,7 +3301,17 @@ function renderMaterias(){
     <div class="mat-busca-vazio" id="matBuscaVazio" hidden>Nenhum tópico encontrado para essa busca.</div>`;
 
   const avisoEditorial=usaPrioridadeEditorial()?`<p role="note">${esc(EDITAIS[STATE.prefeitura]._info)}</p>`:"";
-  grid.innerHTML=avisoEditorial+contextoBanner+buscaHtml+`<div class="mat-lista">${itensHtml}</div>`;
+  /* O acordeao fechado nao se anuncia sozinho: quem chega aqui pela
+     primeira vez ve uma lista de barras e nao adivinha que cada uma abre.
+     O aviso ensina uma vez e some quando o aluno fecha, guardado no STATE
+     para nao voltar em outro aparelho. */
+  const dica=STATE.dicaConteudoFechada?"":`<div class="mat-dica">
+    <span class="mat-dica-ico" aria-hidden="true">👆</span>
+    <span class="mat-dica-txt"><strong>Toque na matéria para ver os tópicos</strong>
+      <span>Cada matéria abre a lista completa dela, com o peso e o número de questões da prova.</span></span>
+    <button type="button" class="mat-dica-x" data-action="fecharDicaConteudo" aria-label="Fechar este aviso">✕</button>
+  </div>`;
+  grid.innerHTML=avisoEditorial+contextoBanner+buscaHtml+dica+`<div class="mat-lista">${itensHtml}</div>`;
   aplicarBuscaConteudo();
 }
 
@@ -3219,6 +3330,9 @@ function toggleMateria(i){
   const k=String(i);
   if(_matAbertas.has(k)) _matAbertas.delete(k); else _matAbertas.add(k);
   aplicarBuscaConteudo();
+}
+function fecharDicaConteudo(){
+  STATE.dicaConteudoFechada=true; save(); renderMaterias();
 }
 function toggleTodasMaterias(){
   const grid=document.getElementById("mapaGridMaterias");
@@ -3438,7 +3552,7 @@ function renderDiaRevisaoGeral(dia, key, isHoje){
       </div>`:""
   const btnHtml=feito
     ?`<button style="margin-top:.6rem;background:transparent;border:1.5px solid rgba(255,255,255,.3);color:#E8F0E9;border-radius:10px;padding:7px 14px;font-size:.75rem;cursor:pointer;font-weight:700" data-action="abrirRevisaoGeral" data-key="${key}">Editar resultado</button>`
-    :`<button style="margin-top:.7rem;background:#2FB374;color:#0E2A1D;border:none;border-radius:10px;padding:8px 15px;font-size:.78rem;font-weight:700;cursor:pointer;transition:filter .15s" class="hv-dim" data-action="abrirRevisaoGeral" data-key="${key}">Registrar Revisão Geral</button>`;
+    :`<button style="margin-top:.7rem" class="dia-btn-acao" data-action="abrirRevisaoGeral" data-key="${key}">Registrar Revisão Geral</button>`;
   return`<div class="dia-card card-rev-geral" id="card-${key}">
     <div class="dia-header" style="border-bottom:1px solid rgba(255,255,255,.08)">
       <div class="dia-header-left"><div class="dia-label">${nomeDia}</div><div class="dia-date">${dataBR}</div></div>
@@ -3534,7 +3648,7 @@ function renderDiaSimulado(dia, key, isHoje){
     ?`<div style="display:flex;align-items:center;justify-content:space-between;margin-top:.5rem;padding:.4rem .6rem;background:#fff;border:1px solid #F0D9C2;border-radius:8px"><span style="font-size:.73rem;color:#A8693A;font-weight:600">Resultado</span><span style="font-family:'Bricolage Grotesque',sans-serif;font-size:1rem;font-weight:800;color:#A8693A">${score}%</span></div>`:"";
   const btnHtml=feito
     ?`<button style="margin-top:.6rem;background:transparent;border:1.5px solid #CBE3D4;color:#2E7D54;border-radius:10px;padding:7px 14px;font-size:.75rem;cursor:pointer;font-weight:700" data-action="irParaSimulados" data-key="${key}">Ver em Simulados →</button>`
-    :`<button style="margin-top:.7rem;background:#2E7D54;color:#fff;border:none;border-radius:10px;padding:8px 15px;font-size:.78rem;font-weight:700;cursor:pointer;transition:filter .15s" class="hv-dim" data-action="irParaSimulados" data-key="${key}">Registrar em Simulados →</button>`;
+    :`<button style="margin-top:.7rem" class="dia-btn-acao" data-action="irParaSimulados" data-key="${key}">Registrar em Simulados →</button>`;
   return`<div class="dia-card card-simulado" id="card-${key}">
     <div class="dia-header">
       <div class="dia-header-left"><div class="dia-label">${nomeDia}</div><div class="dia-date">${dataBR}</div></div>
@@ -3583,23 +3697,34 @@ function irParaSimulados(key){
   },350);
 }
 
-function scrollAteCardHoje(){
+// O botao Hoje do cronograma precisa pousar no cartao do dia. Ele falhava
+// quando hoje era dia de descanso, porque aquele cartao era o unico sem id, e
+// tambem quando a grade ainda nao tinha terminado de montar. Agora insiste por
+// ate 1,2s e, se mesmo assim nao houver cartao do dia, leva a grade para o topo.
+function scrollAteCardHoje(tentativa){
+  const t=tentativa||0;
   setTimeout(()=>{
     requestAnimationFrame(()=>{
       const key=fmt(new Date());
       const card=document.getElementById("card-"+key);
-      if(!card) return;
+      if(!card){
+        if(t<5){ scrollAteCardHoje(t+1); return; }
+        const grade=document.querySelector("#viewSemana .semana-grid");
+        if(grade) grade.scrollIntoView({behavior:"smooth",block:"start"});
+        return;
+      }
       card.scrollIntoView({behavior:"smooth",block:"center"});
       card.classList.remove("card-pulse");
       void card.offsetWidth;
       card.classList.add("card-pulse");
       card.addEventListener("animationend",()=>card.classList.remove("card-pulse"),{once:true});
     });
-  },350);
+  },t?180:320);
 }
 function irParaHojeCronograma(){
   STATE.semanaOffset=0; STATE.cronView="semana"; save();
   navTo("cronograma");
+  // navTo ja pinta a semana; a espera cobre o caso de a pagina trocar de aba
   scrollAteCardHoje();
 }
 
@@ -4482,7 +4607,7 @@ function renderDiaNormal(dia,idx,key,est,isHoje,isPast,nomeDia){
   // Antes do início: card neutro sem matéria
   if(STATE.inicio&&key<STATE.inicio){
     const nomeM=["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"][dia.getMonth()];
-    return`<div class="dia-card" style="border:1px solid #e2e8f0;opacity:0.45;">
+    return`<div class="dia-card" id="card-${key}" style="border:1px solid #e2e8f0;opacity:0.45;">
       <div class="dia-header" style="background:#f8fafc;">
         <div class="dia-header-left"><div class="dia-label">${nomeDia}</div><div class="dia-date">${dia.toLocaleDateString("pt-BR",{day:"2-digit",month:"2-digit"})}</div></div>
         <span class="dia-badge" style="background:#f1f5f9;color:#94a3b8;border-color:#e2e8f0;">Antes do início</span>
@@ -4559,12 +4684,19 @@ function renderDiaNormal(dia,idx,key,est,isHoje,isPast,nomeDia){
   const dfcInfo=isDone?`<span class="dfc-info">Confiança: <strong>${confPct}</strong> · ${mat}</span>`:"";
   const bodyStyle=""; // CSS .is-collapsed handles visibility
   const collClass=isCollapsed?"is-collapsed":"";
+  /* MODO COMPACTO (12/09): o cartao de dia de estudo nasce fechado, mostrando
+     so a materia e um botao. Isso existe porque tres topicos, cada um com
+     botao de conteudo, de aula, duas caixas de marcacao e as estrelas,
+     faziam a linha da grade ficar tao alta que a segunda fileira da semana
+     saia da tela. Quem abre e o aluno, no dia que vai estudar. */
+  const compacto=!isDone&&est.aberto!==true;
+  const rotuloAbrir=isHoje?"📚 Estudar hoje":"📚 Estudar";
   // estrelas apenas depois de marcar lido + exercicios
   const percShow=(est.lido&&est.exercicios)||isDone?"show":"";
   const percHint=!est.lido?`<div class="perc-hint" style="font-size:.72rem;color:var(--gray-400);margin-top:.45rem;font-style:italic">✔ Marque "Conteúdo Lido" e "Exercícios Resolvidos" para liberar a avaliação de confiança.</div>`
     :!est.exercicios?`<div class="perc-hint" style="font-size:.72rem;color:var(--gray-400);margin-top:.45rem;font-style:italic">✔ Marque "Exercícios Resolvidos" — depois disso avalie sua confiança com as estrelas.</div>`:"";
-  return`<div class="dia-card ${cardState} ${collClass}" id="card-${key}">
-    <div class="dia-header" data-action="toggleDia" data-key="${key}" style="cursor:${isDone?'pointer':'default'}">
+  return`<div class="dia-card ${cardState} ${collClass} ${compacto?"dia-compacto":""}" id="card-${key}">
+    <div class="dia-header" data-action="toggleDia" data-key="${key}" style="cursor:pointer">
       <div class="dia-header-left"><div class="dia-label">${nomeDia}</div><div class="dia-date">${dia.toLocaleDateString("pt-BR",{day:"2-digit",month:"2-digit"})}</div></div>
       <span class="dia-badge ${badgeClass}">${badgeLabel}${isDone?`<span class="dia-badge-chevron">${isCollapsed?'▾':'▴'}</span>`:''}</span>
     </div>
@@ -4579,6 +4711,7 @@ function renderDiaNormal(dia,idx,key,est,isHoje,isPast,nomeDia){
         <label class="check-item" data-action="toggleCheck" data-key="${key}" data-campo="exercicios"><div class="check-box ${exCls}" id="cb-${key}-ex">✓</div><span class="check-label">Exercícios Resolvidos</span></label>
       </div>
       ${percHint}
+      <div class="dia-abrir-wrap"><button class="dia-btn-acao dia-abrir" data-action="toggleDia" data-key="${key}">${rotuloAbrir}</button></div>
       <div class="percepcao-selector ${percShow}" id="perc-${key}">
         <div class="percepcao-label-text">⭐ Avalie sua confiança — isso agenda sua revisão:</div>
         ${isMulti
@@ -4589,6 +4722,7 @@ function renderDiaNormal(dia,idx,key,est,isHoje,isPast,nomeDia){
         </div>`}
         <div style="font-size:.67rem;color:var(--gray-400);margin-top:.3rem">1–2★ volta em 7 dias · 3–4★ em 30 dias · 5★ dominado</div>
       </div>
+      <div class="dia-fechar-wrap"><button class="dia-fechar" data-action="toggleDia" data-key="${key}">▴ Fechar o dia</button></div>
     </div>
     <div class="dia-footer-collapsed" id="footer-${key}" style="${isDone?'':'display:none'}" data-action="toggleDia" data-key="${key}">
       <span style="font-size:.8rem;color:${perc==='alta'?'var(--green)':perc==='media'?'var(--yellow-viv)':'var(--red-viv)'};flex-shrink:0">${'★'.repeat(nEstrelas)}${'☆'.repeat(5-nEstrelas)}</span>
@@ -4792,7 +4926,7 @@ function renderDiaRetornoTecnico(dia,key,est,isHoje,isPast,fraquezas){
 function renderDiaLivre(d,key,isHoje){
   const nomeDia=["Dom","Seg","Ter","Qua","Qui","Sex","Sáb"][d.getDay()];
   const borda=isHoje?"border:2px solid #2FB374;":"border:1px solid #E5DAC8;";
-  return`<div class="dia-card" style="${borda}background:#F4EFE6;">
+  return`<div class="dia-card" id="card-${key}" style="${borda}background:#F4EFE6;">
     <div class="dia-header">
       <div class="dia-header-left"><div class="dia-label" style="color:#9A8B73">${nomeDia}</div><div class="dia-date" style="color:#8A7A5E">${d.toLocaleDateString("pt-BR",{day:"2-digit",month:"2-digit"})}</div></div>
       <span class="dia-badge" style="background:#EAE0CE;color:#8A6F45;border:none;">🌙 Descanso</span>
@@ -4831,7 +4965,7 @@ function renderDiaDomingo(dia,key,est,isHoje,isPast,topicos){
     corpo=`<div style="display:flex;flex-direction:column;align-items:center;gap:.6rem;padding:.4rem 0 .5rem">
       <div style="font-size:.71rem;color:var(--gray-500)">${total>0?total+" tópico"+(total>1?"s":"")+" para praticar":"Conclua os estudos da semana primeiro"}</div>
       <div style="font-size:.72rem;font-weight:700;color:${progColor}">${progLabel}</div>
-      ${total>0?`<button data-action="irParaExercicios" data-num="${numRev}" style="background:var(--blue);color:#fff;border:none;border-radius:var(--radius-sm);padding:.5rem 1rem;font-size:.73rem;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:5px;transition:opacity .15s" class="hv-op">📋 Registrar exercícios da revisão ${numRev}</button>`:""}
+      ${total>0?`<button data-action="irParaExercicios" data-num="${numRev}" class="dia-btn-acao">📋 Registrar exercícios da revisão ${numRev}</button>`:""}
     </div>`;
   }
 
@@ -5044,9 +5178,14 @@ function repaintAllStars(){
 }
 
 function toggleDia(key){
-  if(!STATE.dias[key]?.percepcao) return; // só age em dias concluídos
-  STATE.dias[key].collapsed = (STATE.dias[key].collapsed===false); // toggle
+  const d=STATE.dias[key]||(STATE.dias[key]={});
+  // dia concluido usa "collapsed"; dia ainda por estudar usa "aberto"
+  if(d.percepcao) d.collapsed=(d.collapsed===false);
+  else d.aberto=!d.aberto;
+  const abriu=d.percepcao?d.collapsed===false:!!d.aberto;
   save(); renderSemana();
+  // cartao aberto cresce; sem isto ele pode nascer fora da tela
+  if(abriu) requestAnimationFrame(()=>{ const c=document.getElementById("card-"+key); if(c) c.scrollIntoView({behavior:"smooth",block:"nearest"}); });
 }
 
 function semanaStart(){
