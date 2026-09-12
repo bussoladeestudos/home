@@ -1848,3 +1848,49 @@ body.aguardando-auth > *:not(#loginScreen) { visibility:hidden !important; point
 .sim-formato strong{color:var(--navy);font-weight:800}
 .sim-ritmo{font-size:.78rem !important;color:var(--gray-600) !important;line-height:1.65 !important;
   border-left:3px solid var(--green-border,#A6E2BE);padding-left:.7rem}
+
+/* Lista dos conteudos que entram no sorteio do simulado.
+   O aluno confere aqui se a prova bate com o que ele estudou, entao os nomes
+   aparecem sempre. Lista longa ganha rolagem propria em vez de virar resumo,
+   para o botao de comecar nao sair da tela. */
+.sim-lista{margin:.4rem 0 .2rem}
+.sim-lista .sim-lista-mat{list-style:none;margin-left:-1.2rem;margin-top:.55rem;
+  font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;
+  color:var(--navy)}
+.sim-lista .sim-lista-mat:first-child{margin-top:0}
+.sim-lista-rolagem{max-height:220px;overflow-y:auto;padding:.5rem .6rem .5rem 1.6rem;
+  border:1px solid var(--gray-200);border-radius:10px;background:var(--gray-50)}
+
+/* Cartao da medalha e do nivel: reaproveita a caixa do popup de segunda
+   (.ps-overlay/.ps-card), so acrescenta o que e proprio dele. */
+.md-pop{position:relative;overflow:hidden;max-width:380px}
+.md-pop-grande{font-size:3rem}
+.md-pop-cinza{filter:grayscale(100%);opacity:.45}
+.md-pop-fam{font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;
+  color:#8A7A5E;margin-bottom:.25rem}
+.md-pop-barra{height:8px;background:#E5DAC8;border-radius:99px;overflow:hidden;margin:.2rem 0 .8rem}
+.md-pop-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,#2FB374,#5FD79A);
+  transition:width .8s cubic-bezier(.4,0,.2,1)}
+.md-pop-ok{font-size:.85rem;font-weight:800;color:#1C7A4B;background:#E4F4EA;
+  border:1px solid #A6E2BE;border-radius:10px;padding:.5rem .7rem}
+.md-pop-falta{font-size:.83rem;line-height:1.55;color:#6B5512;background:#FBF6EA;
+  border:1px solid #F2E2AE;border-radius:10px;padding:.5rem .7rem}
+.md-pop .ps-frase{font-style:normal}
+
+/* As pecas viraram botao: precisa zerar o estilo de botao e trocar o cursor,
+   porque agora clicar faz alguma coisa. */
+.md-icone{font-family:inherit;color:inherit;padding:0;cursor:pointer}
+button.md-selo{border:none;font-family:inherit;cursor:pointer;padding:0}
+button.md-patente{background:none;border:none;padding:0;font-family:'Bricolage Grotesque',sans-serif;
+  cursor:pointer;text-align:left}
+button.md-patente:hover,button.md-selo:hover{filter:brightness(1.12)}
+button.md-patente:focus-visible,button.md-selo:focus-visible{outline:2px solid #5FD79A;outline-offset:3px}
+
+/* Revisao bloqueada: o aviso precisa dizer O QUE FAZER, nao so que esta
+   trancada, senao o aluno fica olhando o cadeado sem saber o caminho. */
+.rev-bloqueio-topo{display:flex;gap:.6rem;align-items:flex-start;background:#FBF6EA;
+  border:1px solid #F2E2AE;border-radius:12px;padding:.75rem .9rem;margin-bottom:1rem;
+  font-size:.8rem;color:#6B5512;line-height:1.55}
+.rcc-bloqueio{background:#FBF6EA;border:1px solid #F2E2AE;border-radius:10px;
+  padding:.6rem .75rem;margin-bottom:.8rem;font-size:.8rem;color:#6B5512;line-height:1.55}
+.rcc-bloqueio strong{color:#5A4510}
