@@ -90,6 +90,9 @@ const ACTIONS={
   menuInstalarApp:()=>menuInstalarApp(),
   toggleMapaTudo:()=>toggleMapaTudo(),
   toggleMedalhas:()=>toggleMedalhas(),
+  verMedalha:d=>verMedalha(d.id),
+  verPatente:()=>verPatente(),
+  fecharMedalhaPopup:()=>fecharMedalhaPopup(),
   navegarMesHabito:d=>navegarMesHabito(+d.dir),
   limparDia:(d,el,e)=>{e.stopPropagation();limparDia(d.key);},
   marcarDia1Concluido:d=>marcarDia1Concluido(d.key),
@@ -1352,13 +1355,26 @@ function updateNavBadges(){
   const revBadgeEl=document.getElementById("revBadge");
   if(revBadgeEl){ revBadgeEl.textContent=_revDisp; revBadgeEl.style.display=_revDisp>0?"inline-block":"none"; }
   // simBadge — percorre do inicio até hoje: mini simulados + revisão geral
+  /* Vai até a prova, não até hoje: simulado liberado antes da data por
+     conteúdo concluído também é pendência, e era justamente esse que não
+     avisava. Data futura só conta quando o simulado já abriu e tem tópico
+     estudado, senão o menu ficaria com aviso permanente. */
   let simPendente=false;
   if(STATE.inicio){
+    const fimSim=STATE.prova||hojeKey;
     let d=parseDate(STATE.inicio);
-    while(fmt(d)<=hojeKey){
+    while(fmt(d)<=fimSim){
       const dk=fmt(d);
-      if(isSimuladoDay(dk)&&!STATE.dias[dk]?.simuladoFeito){ simPendente=true; break; }
-      if(isRevisaoGeralDay(dk)&&!STATE.dias[dk]?.revisaoGeralFeita){ simPendente=true; break; }
+      if(isSimuladoDay(dk)&&!STATE.dias[dk]?.simuladoFeito){
+        if(dk<=hojeKey){ simPendente=true; break; }
+        const bl=miniBloco(dk);
+        if(bl&&!bl.isFutura&&(bl.topicos||[]).length){ simPendente=true; break; }
+      }
+      if(isRevisaoGeralDay(dk)&&!STATE.dias[dk]?.revisaoGeralFeita){
+        if(dk<=hojeKey){ simPendente=true; break; }
+        const rb=rgBloco(dk);
+        if(rb&&!rb.isFutura&&(rb.topicos||[]).length){ simPendente=true; break; }
+      }
       d.setDate(d.getDate()+1);
     }
   }
@@ -1403,8 +1419,7 @@ function renderDashboard(){
   const horas=calcHorasEstudadas();
   const dias=calcDiasConcluidos();
   const ritmo=calcRitmo();
-  const {rev7,rev30}=calcRevisoes();
-  const totalRev=rev7.length+rev30.length;
+  const totalRev=revisoesPendentes();
   const projecao=calcProjecao();
 
   // Painel collapsed stats
@@ -1730,8 +1745,8 @@ function renderMedalhas(){
   const visiveis=_medExpandido?m.medalhas:conquistadas.concat(pendentes).slice(0,_LIM_MED);
   const ocultas=m.medalhas.length-visiveis.length;
   const icones=visiveis.map(function(x){
-    const tit=x.ok?`${x.nome} — ${x.desc}`:`${x.nome} (bloqueada) — ${x.desc}. Faltam ${x.falta}`;
-    return `<span class="md-icone md-n${x.nivel}${x.ok?"":" md-off"}" tabindex="0" role="img" aria-label="${esc(tit)}" title="${esc(tit)}">${x.icone}</span>`;
+    const tit=x.ok?`${x.nome}: ${x.desc}`:`${x.nome} (bloqueada): ${x.desc}. Faltam ${x.falta}`;
+    return `<button type="button" class="md-icone md-n${x.nivel}${x.ok?"":" md-off"}" data-action="verMedalha" data-id="${esc(x.id)}" aria-label="${esc(tit)}" title="${esc(tit)}">${x.icone}</button>`;
   }).join("")+(
     ocultas>0
       ? `<button class="md-icone md-mais" data-action="toggleMedalhas" title="Ver as ${ocultas} medalhas restantes" aria-label="Ver as ${ocultas} medalhas restantes">+${ocultas}</button>`
@@ -1752,9 +1767,9 @@ function renderMedalhas(){
     </div>
     <div class="md-corpo">
       <div class="md-hero">
-        <span class="md-selo" title="${esc(seloTit)}" role="img" aria-label="${esc(seloTit)}">${seloIcone}</span>
+        <button type="button" class="md-selo" data-action="verPatente" title="${esc(seloTit)}" aria-label="${esc(seloTit)}">${seloIcone}</button>
         <div class="md-hero-txt">
-          <span class="md-patente">${esc(p.nome)}</span>
+          <button type="button" class="md-patente" data-action="verPatente">${esc(p.nome)}</button>
           <div class="md-barra"><div class="md-barra-fill" style="width:${p.pct}%"></div></div>
           <div class="md-xp">${m.xp} XP${p.xpProx?` · faltam ${p.xpProx-m.xp} para ${esc(p.proxNome)}`:" · nível máximo"}</div>
         </div>
@@ -1763,6 +1778,81 @@ function renderMedalhas(){
     </div>
     ${prox}
   </div>`;
+  _celebrarPatente(m);
+}
+/* ── CARTÃO DA MEDALHA E DO NÍVEL ───────────────────────────────────────
+   A galeria dizia o que é cada peça só no title do navegador. No celular
+   não existe hover, e no computador o aluno clicava e não acontecia nada.
+   Agora cada peça abre um cartão centralizado, e ele reabre a cada clique,
+   quantas vezes o aluno quiser. A subida de nível usa o mesmo cartão, com
+   confete, e fica registrada em STATE.patenteVista para não comemorar duas
+   vezes sozinha. Clicar no selo reabre a comemoração quando ele quiser. */
+const _PATENTE_ICONE=["🌱","🥉","🥈","🥇","🔷","💎"];
+function fecharMedalhaPopup(){ const el=document.getElementById("medalhaPopup"); if(el) el.remove(); }
+function _mdPopup(corpo,confete){
+  fecharMedalhaPopup();
+  const ov=document.createElement("div");
+  ov.className="ps-overlay"; ov.id="medalhaPopup";
+  ov.innerHTML=`<div class="ps-card md-pop">${corpo}
+    <button class="ps-depois" type="button" data-action="fecharMedalhaPopup">Fechar</button>
+  </div>`;
+  document.body.appendChild(ov);
+  if(confete){
+    const card=ov.querySelector(".md-pop");
+    if(card) setTimeout(function(){ dispararConfetti(card); },120);
+  }
+}
+function _mdBarra(pct){
+  return `<div class="md-pop-barra"><div class="md-pop-fill" style="width:${Math.max(0,Math.min(100,pct))}%"></div></div>`;
+}
+function verMedalha(id){
+  const m=calcMedalhas(calcCobertura().pct).medalhas.find(function(x){ return x.id===id; });
+  if(!m) return;
+  const un=m.id.indexOf("cob")===0?"%":"";
+  const pct=m.meta>0?Math.round(100*Math.min(m.valor,m.meta)/m.meta):0;
+  const estado=m.ok
+    ? `<div class="md-pop-ok">✓ Conquistada</div>`
+    : `<div class="md-pop-falta">Você está em <strong>${esc(m.valor)}${un}</strong> de ${esc(m.meta)}${un}. Faltam ${esc(m.falta)}${un}.</div>`;
+  _mdPopup(`
+    <div class="ps-emoji${m.ok?"":" md-pop-cinza"}">${m.icone}</div>
+    <div class="md-pop-fam">${esc(m.familia)} · nível ${esc(m.nivel)} de 3</div>
+    <div class="ps-titulo">${esc(m.nome)}</div>
+    <p class="ps-frase">${esc(m.desc)}</p>
+    ${_mdBarra(pct)}${estado}`, false);
+}
+function verPatente(){
+  const m=calcMedalhas(calcCobertura().pct),p=m.patente;
+  const prox=p.xpProx
+    ? `<div class="md-pop-falta">Faltam <strong>${esc(p.xpProx-m.xp)} XP</strong> para ${esc(p.proxNome)}.</div>`
+    : `<div class="md-pop-ok">✓ Nível máximo alcançado</div>`;
+  _mdPopup(`
+    <div class="ps-emoji">${_PATENTE_ICONE[p.indice]||"🏅"}</div>
+    <div class="md-pop-fam">Seu nível</div>
+    <div class="ps-titulo">${esc(p.nome)}</div>
+    <p class="ps-frase">${esc(m.xp)} XP acumulados e ${esc(m.conquistadas)} de ${esc(m.total)} medalhas conquistadas.</p>
+    ${_mdBarra(p.pct)}${prox}`, false);
+}
+/* Comemora a subida de nível uma vez. Quem já estava acima de Iniciante
+   antes desta versão recebe a comemoração do nível atual na primeira
+   abertura, o que é verdade e não invenção: ele chegou ali de fato. */
+function _celebrarPatente(m){
+  if(!m||!m.patente) return;
+  const idx=m.patente.indice;
+  const vista=(typeof STATE.patenteVista==="number")?STATE.patenteVista:0;
+  if(idx<=vista){ if(STATE.patenteVista!==idx){ STATE.patenteVista=idx; save(); } return; }
+  STATE.patenteVista=idx; save();
+  const p=m.patente;
+  const prox=p.xpProx
+    ? `<div class="md-pop-falta">Próximo nível: <strong>${esc(p.proxNome)}</strong>, a ${esc(p.xpProx-m.xp)} XP daqui.</div>`
+    : `<div class="md-pop-ok">✓ Você chegou ao topo da escala</div>`;
+  setTimeout(function(){
+    _mdPopup(`
+      <div class="ps-emoji md-pop-grande">${_PATENTE_ICONE[idx]||"🏅"}</div>
+      <div class="md-pop-fam">Novo nível</div>
+      <div class="ps-titulo">Você chegou a ${esc(p.nome)}!</div>
+      <p class="ps-frase">São ${esc(m.xp)} XP acumulados e ${esc(m.conquistadas)} de ${esc(m.total)} medalhas. Cada dia registrado, cada revisão e cada simulado somou para chegar até aqui.</p>
+      ${_mdBarra(p.pct)}${prox}`, true);
+  },500);
 }
 /* ── PAINEL DE EXERCÍCIOS ──────────────────────────────────────────
    Compila o que o menu Exercícios registra. Duas leituras lado a lado:
@@ -2270,11 +2360,11 @@ function renderCoachPage(){
   const conf=calcConfiancaMedia();
   const ritmo=calcRitmo();
   const projecao=calcProjecao();
-  const {rev7,rev30}=calcRevisoes();
+  const totalRev=revisoesPendentes();
   el.innerHTML=`
     <div class="coach-block" style="margin-bottom:1rem;">
       <div class="coach-header"><span class="coach-badge">✦ Coach Bússola</span></div>
-      <div class="coach-text">${buildCoachHtml(prog,conf,ritmo,projecao,rev7.length+rev30.length)}</div>
+      <div class="coach-text">${buildCoachHtml(prog,conf,ritmo,projecao,totalRev)}</div>
     </div>
     <div style="background:#FBF6ED;border:1px solid #ECE2D1;border-radius:14px;padding:1rem 1.25rem;">
       <div style="font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#8A7322;margin-bottom:.4rem;">💡 Dica do dia</div>
@@ -2295,8 +2385,7 @@ function getDicaDoDia(){
   const pos=getCicloPos(hojeKey);
   const streak=calcStreak();
   const dias=calcDiasRestantes();
-  const {rev7,rev30}=calcRevisoes();
-  const totalRev=rev7.length+rev30.length;
+  const totalRev=revisoesPendentes();
   const diaIdx=new Date().getDate()%5;
   const dicas=[
     "Resolver questões sem consultar o material fortalece mais a memória do que releituras sucessivas.",
@@ -2574,26 +2663,41 @@ function buildBlocosRevisao(){
       const dow=d.getDay();
       const diff=dow===0?-6:1-dow;
       const seg=new Date(d); seg.setDate(seg.getDate()+diff);
+      /* Liberação por CONTEÚDO, não por data (12/09/2026, decisão do dono).
+         Antes bastava a data chegar para a revisão abrir, mesmo com o aluno
+         sem ter estudado nada do ciclo, e a cascata ainda abria a seguinte
+         quando a anterior era concluída. Revisar o que não foi estudado não
+         é revisão. Agora o único critério é: todos os tópicos do ciclo
+         estudados E avaliados.
+         O filtro usa a nota POR TÓPICO (t.perc), não a do dia: em dia com
+         vários tópicos a nota do dia fecha pela agregação e deixava passar
+         tópico sem avaliação quando o dia tinha extras de recuperação. */
       const allTopicos=getTopicosFracos(seg);
-      const topicos=allTopicos.filter(t=>STATE.dias[t.key]?.percepcao);
-      const todosEstudados=allTopicos.length>0&&topicos.length>=allTopicos.length;
-      const isFutura=fmt(d)>fmt(hoje)&&!todosEstudados;
+      const topicos=allTopicos.filter(t=>!!t.perc);
+      const previstos=allTopicos.length;
+      const todosEstudados=previstos>0&&topicos.length>=previstos;
+      const isFutura=!todosEstudados;
       const total=topicos.length;
       const feitos=topicos.filter(t=>STATE.dias[t.key]?.exRevisao).length;
       const concluida=!isFutura&&total>0&&feitos===total;
       const estado=isFutura?"futura":concluida?"concluida":"disponivel";
-      blocos.push({num:revNum,key:k,date:new Date(d),topicos,total,feitos,concluida,estado,isFutura});
+      blocos.push({num:revNum,key:k,date:new Date(d),topicos,total,feitos,concluida,estado,isFutura,
+        previstos,faltam:Math.max(0,previstos-topicos.length)});
     }
     d.setDate(d.getDate()+1);
   }
-  // Desbloqueio em cascata: se revisão N-1 concluída, libera N mesmo que futura
-  for(let i=1;i<blocos.length;i++){
-    if(blocos[i-1].concluida && blocos[i].isFutura){
-      blocos[i].isFutura=false;
-      blocos[i].estado="disponivel";
-    }
-  }
+  /* A cascata (revisão N-1 concluída abria a N) foi removida junto: ela
+     liberava revisão de conteúdo que o aluno ainda nem tinha aberto. */
   return blocos;
+}
+
+/* Revisões pendentes de verdade: ciclos LIBERADOS que ainda não foram
+   concluídos. O contador antigo somava a fila de tópicos por 7 e 30 dias,
+   que é outra medida e não tem onde ser resolvida desde que a página de
+   Revisões passou a trabalhar por ciclos. O dashboard prometia cinco
+   revisões e o menu não tinha nenhuma para fazer. */
+function revisoesPendentes(){
+  return buildBlocosRevisao().filter(function(b){ return b.estado==="disponivel"&&b.total>0; }).length;
 }
 
 function toggleRevCiclo(num){
@@ -2627,6 +2731,9 @@ const STATUS_TOKENS = {
   today:   { label:"Hoje",      bg:"#F1F8F3",  border:"#2FB374", chipBg:"#173E2C", chipFg:"#FFFFFF", accent:"#1C7A4B" },
   pending: { label:"Pendente",  bg:"#fff",     border:"#F2D0C8", chipBg:"#FBE8E4", chipFg:"#B5483F", accent:"#B5483F" },
   future:  { label:"Agendado",  bg:"#fff",     border:"#EAE0D1", chipBg:"#F4EEE4", chipFg:"#8A8072", accent:"#8A8072" },
+  /* Simulado que abriu antes da data por conteúdo concluído. Não é "hoje",
+     não é "agendado": está disponível, e o cartão tem que dizer isso. */
+  aberto:  { label:"Disponível", bg:"#F1F8F3", border:"#A6E2BE", chipBg:"#E4F4EA", chipFg:"#1C7A4B", accent:"#1C7A4B" },
 };
 function statusOf(feito, isHoje, isPast){ return feito?"done":isHoje?"today":isPast?"pending":"future"; }
 
@@ -2720,7 +2827,7 @@ function renderSimuladoPage(){
   </div>`;
 
   // Instrução de uso — o app monta a pauta; as questões são resolvidas por fora
-  html+=`<div style="display:flex;gap:.6rem;align-items:flex-start;background:#FBF6EA;border:1px solid #F2E2AE;border-radius:12px;padding:.75rem .9rem;margin-bottom:1.2rem;font-size:.8rem;color:#6B5512;line-height:1.55"><span style="flex-shrink:0">💡</span><span><strong>Como funciona:</strong> quem monta a prova é a Bússola. O Mini Simulado sorteia até <strong>30 questões</strong> entre os tópicos das revisões que ele cobre, e a Revisão Geral sorteia até <strong>50</strong> entre todos os tópicos do edital. Você não escolhe a quantidade de propósito: o que se treina aqui é o ritmo de prova, responder tudo de uma vez, sem pausa e sem consultar. A nota é salva ao concluir. Cada simulado abre na data prevista, ou antes disso se você já tiver concluído as revisões que ele cobre. Se preferir usar material externo, dá para registrar o resultado à mão.</span></div>`;
+  html+=`<div style="display:flex;gap:.6rem;align-items:flex-start;background:#FBF6EA;border:1px solid #F2E2AE;border-radius:12px;padding:.75rem .9rem;margin-bottom:1.2rem;font-size:.8rem;color:#6B5512;line-height:1.55"><span style="flex-shrink:0">💡</span><span><strong>Como funciona:</strong> quem monta a prova é a Bússola. O Mini Simulado sorteia até <strong>30 questões</strong> entre os tópicos que você já estudou nas revisões que ele cobre, e a Revisão Geral sorteia até <strong>50</strong> entre todos os tópicos do edital que você já estudou. Matéria que você ainda não viu não entra na prova. Você não escolhe a quantidade de propósito: o que se treina aqui é o ritmo de prova, responder tudo de uma vez, sem pausa e sem consultar. A nota é salva ao concluir. Cada simulado abre na data prevista, ou antes disso se você já tiver concluído as revisões que ele cobre. Se preferir usar material externo, dá para registrar o resultado à mão.</span></div>`;
 
   // ── 1. Mini Simulados (lista principal) ──
   html+=`<div style="font-family:'Bricolage Grotesque',sans-serif;font-size:.82rem;font-weight:700;color:#6B6155;margin:0 0 .7rem;padding-left:.1rem">Mini Simulados</div>`;
@@ -2728,12 +2835,14 @@ function renderSimuladoPage(){
     const {key,date,info,est,isPast,isHoje}=s;
     const feito=!!est.simuladoFeito;
     const score=feito&&est.simuladoScore!=null?est.simuladoScore:null;
+    const bl=miniBloco(key);
+    const liberado=!!bl&&!bl.isFutura&&(bl.topicos||[]).length>0;
     html+=buildStatusCard({
       titulo:`Mini Simulado: Rev. ${info.revNums.join(", ")}`,
       sub:date.toLocaleDateString("pt-BR",{weekday:"short",day:"2-digit",month:"2-digit"}),
-      estado:statusOf(feito,isHoje,isPast),
+      estado:feito?"done":isHoje?"today":isPast?"pending":(liberado?"aberto":"future"),
       bullets:[], bodyHtml:miniConfiguracaoHtml(key),
-      scoreLabel:"acertos", score, emptyLabel:isHoje?"Pronto para começar":(isPast?"Aguardando registro":"Agendado"),
+      scoreLabel:"acertos", score, emptyLabel:(isHoje||liberado)?"Simulado disponível":(isPast?"Aguardando registro":"Agendado"),
       btnLabel:feito?"Editar registro manual":"Registrar resultado externo",
       btnAction:"abrirSimulado", btnKey:key,
       collapsible:true, id:key, startOpen:isHoje
@@ -2749,15 +2858,17 @@ function renderSimuladoPage(){
     const rvFeita=!!rvEst.revisaoGeralFeita;
     const rvScore=rvEst.revisaoGeralScore!=null?rvEst.revisaoGeralScore:null;
     const rvIsHoje=fmt(hoje)===rvKey;
+    const rgBl=rgBloco(rvKey);
+    const rgLiberada=!!rgBl&&!rgBl.isFutura&&(rgBl.topicos||[]).length>0;
     html+=`<div style="font-family:'Bricolage Grotesque',sans-serif;font-size:.82rem;font-weight:700;color:#6B6155;margin:1.5rem 0 .7rem;padding-left:.1rem">Avaliação Final</div>`;
     html+=buildStatusCard({
       titulo:"📋 Revisão Geral — Simulado Completo",
       sub:`${rvD.toLocaleDateString("pt-BR",{weekday:"short",day:"2-digit",month:"2-digit"})} · 7 dias antes da prova`,
-      estado:statusOf(rvFeita,rvIsHoje,rvD<hoje),
-      chipLabel:rvFeita?"Concluída":rvIsHoje?"Hoje":rvD<hoje?"Pendente":"Agendada",
+      estado:rvFeita?"done":rvIsHoje?"today":rvD<hoje?"pending":(rgLiberada?"aberto":"future"),
+      chipLabel:rvFeita?"Concluída":rvIsHoje?"Hoje":rvD<hoje?"Pendente":(rgLiberada?"Disponível":"Agendada"),
       bullets:["Simule a prova no formato real: responda tudo de uma vez, sem pausa e sem consultar.","É sua última grande avaliação antes do dia decisivo."],
       bodyHtml:rgConfiguracaoHtml(rvKey),
-      scoreLabel:"acertos", score:rvFeita?rvScore:null, emptyLabel:rvIsHoje?"Disponível para registro":(rvD<hoje?"Aguardando registro":"7 dias antes da prova"),
+      scoreLabel:"acertos", score:rvFeita?rvScore:null, emptyLabel:(rvIsHoje||rgLiberada)?"Simulado disponível":(rvD<hoje?"Aguardando registro":"7 dias antes da prova"),
       btnLabel:rvFeita?"Editar":"Registrar Revisão Geral",
       btnAction:"abrirRevisaoGeral", btnKey:rvKey,
       destaque:true,
@@ -4770,14 +4881,14 @@ function renderExerciciosSection(){
     el.innerHTML=`<div style="text-align:center;padding:3rem 1rem;color:var(--gray-400)"><div style="font-size:2rem;margin-bottom:.5rem">📋</div><div style="font-weight:700;color:var(--gray-600);margin-bottom:.3rem">Nenhuma revisão ainda</div><div style="font-size:.83rem">Complete dias de estudo no Cronograma para gerar revisões.</div></div>`;
     return;
   }
-  // Auto-open: abre qualquer revisão disponível que ainda não esteja no set
-  blocos.filter(b=>b.estado==="disponivel"&&!_revCicloAberto.has(b.num)).forEach(b=>_revCicloAberto.add(b.num));
-  // Fallback: se nada aberto, abre a última concluída
-  if(_revCicloAberto.size===0){
-    const conc=blocos.filter(b=>b.concluida);
-    if(conc.length) _revCicloAberto.add(conc[conc.length-1].num);
-  }
+  /* Todos os cartões começam FECHADOS e só o clique abre. Antes havia um
+     auto-open que readicionava as revisões disponíveis ao conjunto a cada
+     render; como fechar um cartão dispara render, ele reabria sozinho e o
+     aluno não conseguia fechá-lo. */
   let html=`<div style="display:flex;gap:.6rem;align-items:flex-start;background:#EFF6FF;border:1px solid #DBEAFE;border-radius:12px;padding:.7rem .9rem;margin-bottom:1rem;font-size:.8rem;color:#1E40AF;line-height:1.55"><span style="flex-shrink:0">💡</span><span><strong>Como usar:</strong> cada ciclo lista os tópicos que você estudou. As ★ mostram a confiança que você registrou na época. Defina a quantidade por tópico para gerar uma revisão com questões destes tópicos e receber sua nota. Você também pode praticar no seu material e marcar ✅ ao concluir. Se sua segurança mudou, reavalie o tópico no <strong>Retorno Técnico</strong> do cronograma.</span></div>`;
+  if(!blocos.some(b=>b.estado!=="futura")){
+    html+=`<div class="rev-bloqueio-topo">🔒 <strong>Nenhuma revisão liberada ainda.</strong> Cada revisão abre quando você conclui e avalia, no Cronograma, todos os conteúdos do ciclo dela. Enquanto isso ela fica aqui, mostrando o que falta.</div>`;
+  }
   // Mantém ordem cronológica (Revisão 1, 2, 3…)
   blocos.forEach(bloco=>{
     const isOpen=_revCicloAberto.has(bloco.num);
@@ -4785,7 +4896,7 @@ function renderExerciciosSection(){
     const dataStr=bloco.date.toLocaleDateString("pt-BR",{day:"2-digit",month:"2-digit",year:"2-digit"});
     const badge=estado==="concluida"?`<span class="rcc-badge b-concluida">✅ Concluída</span>`:
                 estado==="disponivel"?`<span class="rcc-badge b-disponivel">📋 Disponível</span>`:
-                `<span class="rcc-badge b-futura">🔒 Futura</span>`;
+                `<span class="rcc-badge b-futura">🔒 Aguardando conteúdo</span>`;
     const counter=total>0?`<span class="rcc-counter">${feitos}/${total}</span>`:"";
     const chevron=`<span class="rcc-chevron${isOpen?" open":""}">▼</span>`;
     html+=`<div class="rev-ciclo-card rc-${estado}" id="rc-card-${num}">
@@ -4797,9 +4908,14 @@ function renderExerciciosSection(){
         <div class="rcc-right">${badge}${counter}${chevron}</div>
       </div>`;
     if(isOpen){
-      html+=`<div class="rcc-body">${revConfiguracaoHtml(bloco)}`;
+      html+=`<div class="rcc-body">`;
+      if(isFutura){
+        const prev=bloco.previstos||0;
+        html+=`<div class="rcc-bloqueio">🔒 <strong>Revisão bloqueada.</strong> Ela abre quando você concluir e avaliar no Cronograma os conteúdos deste ciclo.${prev?` Faltam <strong>${bloco.faltam}</strong> de ${prev} tópico${prev!==1?"s":""}.`:""}</div>`;
+      }
+      html+=revConfiguracaoHtml(bloco);
       if(total===0){
-        html+=`<div class="rcc-empty">Nenhum tópico estudado antes desta revisão.</div>`;
+        if(!isFutura) html+=`<div class="rcc-empty">Nenhum tópico estudado antes desta revisão.</div>`;
       } else {
         const pct=Math.round((feitos/total)*100);
         html+=`<div class="rcc-prog-row">
@@ -5222,6 +5338,31 @@ function revSalvarResultado(sessao){
    poder testar. As Revisões já resolvem isso em cascata; os simulados
    passam a usar o mesmo critério. Quem não estudou continua vendo a data,
    porque prova de matéria não vista não mede preparação, mede sorte. */
+/* Só entra na prova o tópico que o aluno estudou E avaliou. A nota por
+   tópico é a fonte: em dia com vários tópicos, percepcoes[ti] diz qual
+   deles foi avaliado, um por um. O filtro das Revisões olha a nota do DIA,
+   que fica preenchida pela agregação e deixa passar tópico não avaliado
+   quando o dia tem extras de recuperação. Num simulado isso não pode
+   acontecer: prova de matéria não vista não mede preparação. */
+function _simTopicosEstudados(){
+  const set=new Set();
+  if(typeof getTopicosDoDia!=="function") return set;
+  Object.entries(STATE.dias||{}).forEach(([k,v])=>{
+    if(!v) return;
+    const tops=getTopicosDoDia(k)||[];
+    const porTopico=v.percepcoes&&Object.keys(v.percepcoes).length>0;
+    tops.forEach((t,ti)=>{
+      if(!t||!t.mat||!t.top) return;
+      const avaliado=porTopico?!!v.percepcoes[ti]:!!v.percepcao;
+      if(avaliado) set.add(t.mat+"|"+t.top);
+    });
+  });
+  return set;
+}
+function _simFiltrarEstudados(topicos){
+  const set=_simTopicosEstudados();
+  return (topicos||[]).filter(t=>t&&set.has(t.mat+"|"+t.top));
+}
 function _simRevsLiberadas(revNums){
   if(!Array.isArray(revNums)||!revNums.length) return false;
   const blocos=buildBlocosRevisao();
@@ -5237,7 +5378,7 @@ function miniBloco(key){
   if(!STATE.inicio||!STATE.prova||key<STATE.inicio||key>STATE.prova||!isSimuladoDay(key)) return null;
   const info=getSimuladoInfo(key);
   const futura=key>fmt(new Date())&&!_simRevsLiberadas(info.revNums);
-  return {tipo:"mini",num:key,key,topicos:info.topicos,isFutura:futura};
+  return {tipo:"mini",num:key,key,topicos:_simFiltrarEstudados(info.topicos),isFutura:futura};
 }
 /* ── SIMULADOS: quem monta a prova é o sistema ──────────────────────────
    Na revisão o aluno escolhe quantas questões por tópico, e faz sentido:
@@ -5282,17 +5423,18 @@ function _simMinutos(n){ return Math.max(5,n*SIM_MIN_POR_QUESTAO); }
    caso da Revisão Geral, vira resumo por matéria: 125 linhas de tópico não
    informam nada, só empurram o botão para fora da tela. */
 const SIM_MAX_LISTA=12;
+/* O aluno quer ver QUAIS conteúdos entram, não um resumo por matéria: é
+   assim que ele confere se a prova bate com o que estudou. Lista longa não
+   vira resumo, vira caixa com rolagem, para o botão não sair da tela. */
 function _simListaTopicos(grupos){
-  if(grupos.length>SIM_MAX_LISTA){
-    const mats=new Map();
-    grupos.forEach(g=>{
-      const m=mats.get(g.mat)||{tops:0,comQ:0,q:0};
-      m.tops++; if(g.itens.length){ m.comQ++; m.q+=g.itens.length; }
-      mats.set(g.mat,m);
-    });
-    return `<ul class="rev-disponibilidade">${[...mats].map(([mat,m])=>`<li>${esc(mat)}: ${esc(m.q)} questões em ${esc(m.comQ)} de ${esc(m.tops)} tópicos</li>`).join("")}</ul>`;
-  }
-  return `<ul class="rev-disponibilidade">${grupos.map(g=>`<li>${esc(g.top)} <small>(${esc(g.mat)})</small>: ${esc(g.itens.length)} questões disponíveis${g.itens.length?"":" (não entra no sorteio)"}</li>`).join("")}</ul>`;
+  const cls=grupos.length>SIM_MAX_LISTA?" sim-lista-rolagem":"";
+  const porMat=new Map();
+  grupos.forEach(g=>{ if(!porMat.has(g.mat)) porMat.set(g.mat,[]); porMat.get(g.mat).push(g); });
+  const itens=[...porMat].map(([mat,gs])=>
+    `<li class="sim-lista-mat">${esc(mat)}</li>`+gs.map(g=>
+      `<li>${esc(g.top)}: ${esc(g.itens.length)} ${g.itens.length===1?"questão":"questões"}${g.itens.length?"":" (não entra no sorteio)"}</li>`
+    ).join("")).join("");
+  return `<ul class="rev-disponibilidade sim-lista${cls}">${itens}</ul>`;
 }
 /* cfg: {titulo, escopo, acao, rotulo} */
 function simConfiguracaoHtml(bloco,cfg){
@@ -5309,6 +5451,12 @@ function simConfiguracaoHtml(bloco,cfg){
       <ul class="rev-disponibilidade">${previstos}</ul>
     </section>`;
   }
+  if(!(bloco.topicos||[]).length){
+    return `${resultado}<section class="rev-questoes" aria-label="${esc(cfg.titulo)}">
+      <h3>${esc(cfg.titulo)}</h3>
+      <p>${esc(cfg.vazio)}</p>
+    </section>`;
+  }
   const p=_simPlano(bloco);
   const tem=p.total>0;
   const formato=tem
@@ -5322,7 +5470,7 @@ function simConfiguracaoHtml(bloco,cfg){
   return `${resultado}<section class="rev-questoes" aria-label="${esc(cfg.titulo)}">
     <h3>${esc(cfg.titulo)}</h3>
     ${formato}${ritmo}
-    <p>Tópicos que entram no sorteio:</p>${_simListaTopicos(p.grupos)}
+    <p>${esc(cfg.lista)} (<strong>${esc(p.grupos.length)}</strong>):</p>${_simListaTopicos(p.grupos)}
     <button class="ex-btn" type="button" data-action="${esc(cfg.acao)}" data-key="${esc(bloco.key)}"${tem?"":" disabled"}>${esc(cfg.rotulo)}</button>
     <p class="rev-ajuda">${tem?"Questões embaralhadas, sem repetição na mesma prova. A nota é salva quando você responde todas, e uma nova tentativa substitui a nota anterior.":"Ainda não há questões publicadas para estes tópicos. Você pode fazer o simulado no seu material e registrar o resultado pelo botão do cartão."}</p>
   </section>`;
@@ -5340,8 +5488,10 @@ function iniciarSimulado(bloco){
 function miniConfiguracaoHtml(key){
   return simConfiguracaoHtml(miniBloco(key),{
     titulo:"Mini Simulado",
-    escopo:"entre os tópicos das revisões que ele cobre",
+    escopo:"entre os tópicos já estudados das revisões que ele cobre",
     espera:"Abre na data planejada, ou antes disso se você concluir as revisões que ele cobre.",
+    vazio:"Nenhum tópico deste simulado foi estudado e avaliado até agora. A prova é montada aqui assim que você concluir e dar sua nota de confiança aos tópicos das revisões que ele cobre.",
+    lista:"Conteúdos que você estudou nestas revisões e entram no sorteio",
     acao:"miniIniciarQuestoes",
     rotulo:"Começar o Mini Simulado"
   });
@@ -5359,13 +5509,15 @@ function rgTopicosEdital(){
 function rgBloco(key){
   if(!STATE.inicio||!STATE.prova||!key) return null;
   const futura=key>fmt(new Date())&&!_simGeralLiberada();
-  return {tipo:"geral",num:key,key,topicos:rgTopicosEdital(),isFutura:futura};
+  return {tipo:"geral",num:key,key,topicos:_simFiltrarEstudados(rgTopicosEdital()),isFutura:futura};
 }
 function rgConfiguracaoHtml(key){
   return simConfiguracaoHtml(rgBloco(key),{
     titulo:"Revisão Geral: simulado completo",
-    escopo:"entre todos os tópicos do edital",
+    escopo:"entre todos os tópicos do edital que você já estudou",
     espera:"Abre na data planejada, ou antes disso se você concluir todas as revisões do plano.",
+    vazio:"Nenhum tópico do edital foi estudado e avaliado até agora. A prova completa é montada aqui conforme você avança no cronograma.",
+    lista:"Conteúdos que você já estudou e entram no sorteio",
     acao:"rgIniciarQuestoes",
     rotulo:"Começar a Revisão Geral"
   });
