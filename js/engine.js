@@ -1007,6 +1007,13 @@ function apagarHistoricoExercicios(periodo,hojeRef){
     if(id&&(periodo==="sempre"||(r&&dentro(r.dia)))){
       delete d.simuladoFeito;delete d.simuladoScore;delete d.simuladoResultadoId;
     }
+    /* Mesma regra para a Revisao Geral: a nota gerada pelo app some junto
+       com as questoes que a produziram; o registro manual, que nao tem id
+       de resultado, fica onde esta. */
+    const idG=d.revisaoGeralResultadoId,rG=idG&&(STATE.revisoesResultados||{})[idG];
+    if(idG&&(periodo==="sempre"||(rG&&dentro(rG.dia)))){
+      delete d.revisaoGeralFeita;delete d.revisaoGeralScore;delete d.revisaoGeralResultadoId;
+    }
   });
   if(periodo==="sempre"){ STATE.questoes={}; STATE.exDias={}; STATE.revisoesResultados={}; return true; }
   Object.keys(STATE.revisoesResultados||{}).forEach(k=>{
