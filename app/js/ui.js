@@ -135,6 +135,7 @@ const ACTIONS={
   exComecar:()=>exComecar(),
   revIniciarQuestoes:d=>revIniciarQuestoes(Number(d.num)),
   miniIniciarQuestoes:d=>miniIniciarQuestoes(d.key),
+  rgIniciarQuestoes:d=>rgIniciarQuestoes(d.key),
   exApagarHistorico:d=>exApagarHistorico(d.periodo),
   exSair:()=>exSair(),
   exResponder:d=>exResponder(d.id,d.op),
@@ -2719,7 +2720,7 @@ function renderSimuladoPage(){
   </div>`;
 
   // Instrução de uso — o app monta a pauta; as questões são resolvidas por fora
-  html+=`<div style="display:flex;gap:.6rem;align-items:flex-start;background:#FBF6EA;border:1px solid #F2E2AE;border-radius:12px;padding:.75rem .9rem;margin-bottom:1.2rem;font-size:.8rem;color:#6B5512;line-height:1.55"><span style="flex-shrink:0">💡</span><span><strong>Como funciona:</strong> informe <strong>quantas questões por tópico</strong> quer resolver. A Bússola usa os tópicos previstos no Mini Simulado, gera as questões e salva sua nota ao concluir. Se usar material externo, você pode registrar o resultado manualmente.</span></div>`;
+  html+=`<div style="display:flex;gap:.6rem;align-items:flex-start;background:#FBF6EA;border:1px solid #F2E2AE;border-radius:12px;padding:.75rem .9rem;margin-bottom:1.2rem;font-size:.8rem;color:#6B5512;line-height:1.55"><span style="flex-shrink:0">💡</span><span><strong>Como funciona:</strong> quem monta a prova é a Bússola. O Mini Simulado sorteia até <strong>30 questões</strong> entre os tópicos das revisões que ele cobre, e a Revisão Geral sorteia até <strong>50</strong> entre todos os tópicos do edital. Você não escolhe a quantidade de propósito: o que se treina aqui é o ritmo de prova, responder tudo de uma vez, sem pausa e sem consultar. A nota é salva ao concluir. Cada simulado abre na data prevista, ou antes disso se você já tiver concluído as revisões que ele cobre. Se preferir usar material externo, dá para registrar o resultado à mão.</span></div>`;
 
   // ── 1. Mini Simulados (lista principal) ──
   html+=`<div style="font-family:'Bricolage Grotesque',sans-serif;font-size:.82rem;font-weight:700;color:#6B6155;margin:0 0 .7rem;padding-left:.1rem">Mini Simulados</div>`;
@@ -2732,7 +2733,7 @@ function renderSimuladoPage(){
       sub:date.toLocaleDateString("pt-BR",{weekday:"short",day:"2-digit",month:"2-digit"}),
       estado:statusOf(feito,isHoje,isPast),
       bullets:[], bodyHtml:miniConfiguracaoHtml(key),
-      scoreLabel:"acertos", score, emptyLabel:isHoje?"Escolha a quantidade por tópico":(isPast?"Aguardando registro":"Agendado"),
+      scoreLabel:"acertos", score, emptyLabel:isHoje?"Pronto para começar":(isPast?"Aguardando registro":"Agendado"),
       btnLabel:feito?"Editar registro manual":"Registrar resultado externo",
       btnAction:"abrirSimulado", btnKey:key,
       collapsible:true, id:key, startOpen:isHoje
@@ -2754,7 +2755,8 @@ function renderSimuladoPage(){
       sub:`${rvD.toLocaleDateString("pt-BR",{weekday:"short",day:"2-digit",month:"2-digit"})} · 7 dias antes da prova`,
       estado:statusOf(rvFeita,rvIsHoje,rvD<hoje),
       chipLabel:rvFeita?"Concluída":rvIsHoje?"Hoje":rvD<hoje?"Pendente":"Agendada",
-      bullets:["Simule a prova no formato real: mesmo número de questões e tempo limitado.","É sua última grande avaliação antes do dia decisivo."],
+      bullets:["Simule a prova no formato real: responda tudo de uma vez, sem pausa e sem consultar.","É sua última grande avaliação antes do dia decisivo."],
+      bodyHtml:rgConfiguracaoHtml(rvKey),
       scoreLabel:"acertos", score:rvFeita?rvScore:null, emptyLabel:rvIsHoje?"Disponível para registro":(rvD<hoje?"Aguardando registro":"7 dias antes da prova"),
       btnLabel:rvFeita?"Editar":"Registrar Revisão Geral",
       btnAction:"abrirRevisaoGeral", btnKey:rvKey,
@@ -5126,7 +5128,10 @@ function exHistoricoHtml(){ return `    <details class="ex-historico"><summary>G
 `; }
 
 /* Revisão guiada: usa exclusivamente os tópicos do bloco planejado. */
-function revResultadoId(bloco){ return JSON.stringify([STATE.prefeitura,STATE.inicio,(bloco.tipo==="mini"?"mini:":"")+bloco.key]); }
+function revResultadoId(bloco){
+  const pre=bloco.tipo==="mini"?"mini:":bloco.tipo==="geral"?"geral:":"";
+  return JSON.stringify([STATE.prefeitura,STATE.inicio,pre+bloco.key]);
+}
 function revTopicos(bloco){
   const pares=new Map();
   bloco.topicos.forEach(t=>pares.set(JSON.stringify([t.mat,t.top]),{mat:t.mat,top:t.top}));
@@ -5200,28 +5205,172 @@ function revSalvarResultado(sessao){
     STATE.dias[key].simuladoScore=pct;
     STATE.dias[key].simuladoResultadoId=sessao.revisao.id;
   }
+  if(sessao.revisao.tipo==="geral"){
+    const key=sessao.revisao.key;
+    if(!STATE.dias[key]) STATE.dias[key]={};
+    STATE.dias[key].revisaoGeralFeita=true;
+    STATE.dias[key].revisaoGeralScore=pct;
+    STATE.dias[key].revisaoGeralResultadoId=sessao.revisao.id;
+    if(typeof _carimbarRegistro==="function") _carimbarRegistro(key);
+  }
   sessao.resultadoSalvo=true;return true;
 }
 
+/* Liberação antecipada dos simulados (12/09/2026).
+   A data sozinha travava quem estuda adiantado: o aluno terminava as três
+   revisões que o Mini Simulado cobre e ainda esperava duas semanas para
+   poder testar. As Revisões já resolvem isso em cascata; os simulados
+   passam a usar o mesmo critério. Quem não estudou continua vendo a data,
+   porque prova de matéria não vista não mede preparação, mede sorte. */
+function _simRevsLiberadas(revNums){
+  if(!Array.isArray(revNums)||!revNums.length) return false;
+  const blocos=buildBlocosRevisao();
+  return revNums.every(n=>{ const b=blocos.find(x=>x.num===n); return !!b&&!b.isFutura; });
+}
+/* A Revisão Geral cobre o edital inteiro, então o gatilho dela é o plano
+   inteiro: todas as revisões liberadas. */
+function _simGeralLiberada(){
+  const blocos=buildBlocosRevisao();
+  return blocos.length>0&&blocos.every(b=>!b.isFutura);
+}
 function miniBloco(key){
   if(!STATE.inicio||!STATE.prova||key<STATE.inicio||key>STATE.prova||!isSimuladoDay(key)) return null;
   const info=getSimuladoInfo(key);
-  return {tipo:"mini",num:key,key,topicos:info.topicos,isFutura:key>fmt(new Date())};
+  const futura=key>fmt(new Date())&&!_simRevsLiberadas(info.revNums);
+  return {tipo:"mini",num:key,key,topicos:info.topicos,isFutura:futura};
 }
+/* ── SIMULADOS: quem monta a prova é o sistema ──────────────────────────
+   Na revisão o aluno escolhe quantas questões por tópico, e faz sentido:
+   ali ele treina assunto por assunto. No simulado não serve. São muitas
+   matérias de uma vez, e o que se treina não é o tópico, é o ritmo da
+   prova. Então o sistema sorteia: rodízio entre os tópicos, até o limite
+   do formato. Banco menor que o limite não trava nada, entra o que existe
+   e a tela diz o número antes de começar, porque o aluno precisa saber o
+   tamanho da prova para se organizar. */
+const SIM_LIMITE={mini:30,geral:50};
+const SIM_MIN_POR_QUESTAO=2;
+
+/* Rodízio: uma questão de cada tópico por vez, na ordem embaralhada dos
+   tópicos. Sem isso, um tópico com banco grande abocanha a prova inteira
+   e outro com três questões nunca aparece. */
+function _simSortear(grupos,limite){
+  const filas=_embaralhar(grupos.filter(g=>g.itens.length)).map(g=>_embaralhar(g.itens.slice()));
+  const vistos=new Set(),out=[];
+  let rodouAlgo=true;
+  while(rodouAlgo&&out.length<limite){
+    rodouAlgo=false;
+    for(const fila of filas){
+      if(out.length>=limite) break;
+      while(fila.length){
+        const it=fila.shift();
+        if(vistos.has(it.q.id)) continue;
+        vistos.add(it.q.id); out.push(it); rodouAlgo=true; break;
+      }
+    }
+  }
+  return _embaralhar(out);
+}
+function _simPlano(bloco){
+  const grupos=revTopicos(bloco),vistos=new Set();
+  grupos.forEach(g=>g.itens.forEach(it=>vistos.add(it.q.id)));
+  const limite=SIM_LIMITE[bloco.tipo]||SIM_LIMITE.mini;
+  const disponiveis=vistos.size;
+  return {grupos,disponiveis,limite,total:Math.min(limite,disponiveis)};
+}
+function _simMinutos(n){ return Math.max(5,n*SIM_MIN_POR_QUESTAO); }
+/* Lista por tópico enquanto couber na tela. Acima de 12 tópicos, que é o
+   caso da Revisão Geral, vira resumo por matéria: 125 linhas de tópico não
+   informam nada, só empurram o botão para fora da tela. */
+const SIM_MAX_LISTA=12;
+function _simListaTopicos(grupos){
+  if(grupos.length>SIM_MAX_LISTA){
+    const mats=new Map();
+    grupos.forEach(g=>{
+      const m=mats.get(g.mat)||{tops:0,comQ:0,q:0};
+      m.tops++; if(g.itens.length){ m.comQ++; m.q+=g.itens.length; }
+      mats.set(g.mat,m);
+    });
+    return `<ul class="rev-disponibilidade">${[...mats].map(([mat,m])=>`<li>${esc(mat)}: ${esc(m.q)} questões em ${esc(m.comQ)} de ${esc(m.tops)} tópicos</li>`).join("")}</ul>`;
+  }
+  return `<ul class="rev-disponibilidade">${grupos.map(g=>`<li>${esc(g.top)} <small>(${esc(g.mat)})</small>: ${esc(g.itens.length)} questões disponíveis${g.itens.length?"":" (não entra no sorteio)"}</li>`).join("")}</ul>`;
+}
+/* cfg: {titulo, escopo, acao, rotulo} */
+function simConfiguracaoHtml(bloco,cfg){
+  if(!bloco) return "";
+  const resultado=revResultadoHtml((STATE.revisoesResultados||{})[revResultadoId(bloco)]);
+  if(bloco.isFutura){
+    const tops=bloco.topicos||[];
+    const previstos=tops.length>SIM_MAX_LISTA
+      ?[...new Set(tops.map(t=>t.mat))].map(m=>`<li>${esc(m)}</li>`).join("")
+      :tops.map(t=>`<li>${esc(t.top)} <small>(${esc(t.mat)})</small></li>`).join("");
+    return `${resultado}<section class="rev-questoes" aria-label="${esc(cfg.titulo)}">
+      <h3>${esc(cfg.titulo)}</h3>
+      <p>${esc(cfg.espera)} ${tops.length>SIM_MAX_LISTA?"Matérias previstas:":"Tópicos previstos:"}</p>
+      <ul class="rev-disponibilidade">${previstos}</ul>
+    </section>`;
+  }
+  const p=_simPlano(bloco);
+  const tem=p.total>0;
+  const formato=tem
+    ?(p.disponiveis>=p.limite
+      ?`<p class="sim-formato">Esta prova tem <strong>${esc(p.total)} questões</strong>, sorteadas pelo sistema ${esc(cfg.escopo)}. A cada tentativa o sorteio é novo.</p>`
+      :`<p class="sim-formato">Esta prova tem <strong>${esc(p.total)} ${p.total===1?"questão":"questões"}</strong>, que é tudo o que existe publicado ${esc(cfg.escopo)}. O formato comporta até ${esc(p.limite)}, e a prova cresce sozinha conforme o banco aumenta.</p>`)
+    :"";
+  const ritmo=tem
+    ?`<p class="sim-ritmo">Simulado não serve só para medir o que você sabe. Ele treina o que o estudo de conteúdo não treina: ler o enunciado uma vez, decidir, marcar e seguir para a próxima sem voltar atrás. Quem nunca fez isso chega na prova sabendo a matéria e perdendo tempo. Resolva as ${esc(p.total)} questões de uma vez só, sem pausa e sem consultar o material. Como referência de ritmo, reserve cerca de <strong>${esc(_simMinutos(p.total))} minutos</strong>, na conta de dois minutos por questão.</p>`
+    :"";
+  return `${resultado}<section class="rev-questoes" aria-label="${esc(cfg.titulo)}">
+    <h3>${esc(cfg.titulo)}</h3>
+    ${formato}${ritmo}
+    <p>Tópicos que entram no sorteio:</p>${_simListaTopicos(p.grupos)}
+    <button class="ex-btn" type="button" data-action="${esc(cfg.acao)}" data-key="${esc(bloco.key)}"${tem?"":" disabled"}>${esc(cfg.rotulo)}</button>
+    <p class="rev-ajuda">${tem?"Questões embaralhadas, sem repetição na mesma prova. A nota é salva quando você responde todas, e uma nova tentativa substitui a nota anterior.":"Ainda não há questões publicadas para estes tópicos. Você pode fazer o simulado no seu material e registrar o resultado pelo botão do cartão."}</p>
+  </section>`;
+}
+function iniciarSimulado(bloco){
+  if(!bloco||bloco.isFutura) return;
+  const p=_simPlano(bloco);
+  const itens=p.total?_simSortear(p.grupos,p.limite):[];
+  if(!itens.length){ showToast("Ainda não há questões publicadas para este simulado."); return; }
+  if(_exSessao&&!confirm("Iniciar esta atividade substituirá a sessão de exercícios em andamento. Continuar?")) return;
+  _exSessao={itens,i:0,respostas:{},verComentario:false,revisao:{id:revResultadoId(bloco),num:bloco.num,tipo:bloco.tipo,key:bloco.key}};
+  navTo("exercicios"); window.scrollTo(0,0);
+}
+
 function miniConfiguracaoHtml(key){
-  const bloco=miniBloco(key);if(!bloco) return "";
-  if(bloco.isFutura) return `<p>Disponível na data planejada. Tópicos previstos:</p><ul>${bloco.topicos.map(t=>`<li>${esc(t.top)} (${esc(t.mat)})</li>`).join("")}</ul>`;
-  return revConfiguracaoHtml(bloco)
-    .replace('Praticar esta revisão','Praticar este Mini Simulado')
-    .replace('Tópicos desta revisão:','Tópicos deste Mini Simulado:')
-    .replace('data-action="revIniciarQuestoes" data-num="'+esc(bloco.num)+'"','data-action="miniIniciarQuestoes" data-key="'+esc(key)+'"')
-    .replace('Gerar revisão','Gerar Mini Simulado')
-    .replace('As marcações de tópicos abaixo continuam sob seu controle. ','');
+  return simConfiguracaoHtml(miniBloco(key),{
+    titulo:"Mini Simulado",
+    escopo:"entre os tópicos das revisões que ele cobre",
+    espera:"Abre na data planejada, ou antes disso se você concluir as revisões que ele cobre.",
+    acao:"miniIniciarQuestoes",
+    rotulo:"Começar o Mini Simulado"
+  });
 }
-function miniIniciarQuestoes(key){
-  const bloco=miniBloco(key);if(!bloco||bloco.isFutura) return;
-  iniciarBlocoQuestoes(bloco);
+function miniIniciarQuestoes(key){ iniciarSimulado(miniBloco(key)); }
+
+/* A Revisão Geral é o ensaio da prova, então sorteia de TODO o edital, não
+   só do que já foi estudado. Faltar assunto no ensaio é informação: mostra
+   onde a cobertura não fechou antes do dia que importa. */
+function rgTopicosEdital(){
+  const tops=getTopicos(),mats=getMaterias(),out=[];
+  mats.forEach(m=>(tops[m.nome]||[]).forEach(t=>out.push({mat:m.nome,top:t})));
+  return out;
 }
+function rgBloco(key){
+  if(!STATE.inicio||!STATE.prova||!key) return null;
+  const futura=key>fmt(new Date())&&!_simGeralLiberada();
+  return {tipo:"geral",num:key,key,topicos:rgTopicosEdital(),isFutura:futura};
+}
+function rgConfiguracaoHtml(key){
+  return simConfiguracaoHtml(rgBloco(key),{
+    titulo:"Revisão Geral: simulado completo",
+    escopo:"entre todos os tópicos do edital",
+    espera:"Abre na data planejada, ou antes disso se você concluir todas as revisões do plano.",
+    acao:"rgIniciarQuestoes",
+    rotulo:"Começar a Revisão Geral"
+  });
+}
+function rgIniciarQuestoes(key){ iniciarSimulado(rgBloco(key)); }
 
 function renderTopicosHoje(key,topicos){
   if(!topicos.length) return "Nenhum conteúdo novo previsto. Consulte o cronograma para a atividade do dia.";
