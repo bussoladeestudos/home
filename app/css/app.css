@@ -1430,9 +1430,48 @@ body.aguardando-auth > *:not(#loginScreen) { visibility:hidden !important; point
 
 #page-conteudo{max-width:760px;margin:0 auto}
 .cont-topo{display:flex;align-items:center;gap:.75rem;margin-bottom:1rem;flex-wrap:wrap}
-.cont-voltar{background:none;border:1.5px solid #e5e7eb;border-radius:10px;
-  padding:.35rem .75rem;font-family:inherit;font-size:.8rem;font-weight:700;color:#173E2C;cursor:pointer}
-.cont-voltar:hover{background:#F0F7F3;border-color:#2FB374}
+/* O voltar era um contorno cinza de 0,8rem no alto da página e o aluno não
+   o encontrava. Agora tem preenchimento verde-claro, borda da marca e altura
+   de alvo de toque. */
+.cont-voltar{background:var(--green-pale,#F0F7F3);border:1.5px solid var(--green-border,#BFE3CE);
+  border-radius:10px;padding:.55rem 1rem;font-family:inherit;font-size:.9rem;font-weight:800;
+  color:#173E2C;cursor:pointer;min-height:42px;display:inline-flex;align-items:center;gap:.4rem;
+  box-shadow:0 1px 3px rgba(23,62,44,.08);transition:background .15s,border-color .15s,transform .1s}
+.cont-voltar:hover{background:#DFF1E6;border-color:#2FB374;transform:translateX(-2px)}
+.cont-voltar:active{transform:translateX(-2px) scale(.98)}
+.cont-voltar:focus-visible{outline:3px solid #2FB374;outline-offset:3px}
+
+/* Rodapé da aula: avaliar, praticar e seguir. Fecha o ciclo sem voltar ao menu. */
+.cont-rodape{margin-top:2rem;padding-top:1.3rem;border-top:2px solid var(--green-border,#BFE3CE);
+  display:flex;flex-direction:column;gap:1.1rem}
+.cont-rod-nota{background:var(--green-pale,#F0F7F3);border:1px solid var(--green-border,#BFE3CE);
+  border-radius:14px;padding:1rem 1.1rem;text-align:center}
+.cont-rod-tit{font-size:.95rem;font-weight:800;color:#173E2C;margin-bottom:.6rem}
+.cont-rod-stars{display:flex;gap:.35rem;justify-content:center;margin-bottom:.5rem}
+.cont-star{background:none;border:none;padding:0 .1rem;cursor:pointer;font-size:2rem;line-height:1;
+  color:#E0D6C5;transition:transform .1s,color .1s}
+.cont-star.on{color:#E8B23A}
+.cont-star:hover{transform:scale(1.15)}
+.cont-star:focus-visible{outline:3px solid #2FB374;outline-offset:2px;border-radius:6px}
+.cont-rod-hint{font-size:.78rem;color:#5b6b62;line-height:1.5}
+.cont-rod-acoes{display:flex;gap:.7rem;flex-wrap:wrap}
+.cont-rod-btn{flex:1 1 220px;min-width:0;min-height:52px;border-radius:12px;font-family:inherit;font-size:.9rem;
+  font-weight:800;cursor:pointer;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:.15rem;padding:.6rem 1rem;transition:filter .15s,transform .1s}
+.cont-rod-btn:active{transform:scale(.99)}
+.cont-rod-btn:focus-visible{outline:3px solid #2FB374;outline-offset:3px}
+.cont-rod-praticar{background:#fff;border:1.5px solid var(--green-border,#BFE3CE);color:#173E2C}
+.cont-rod-praticar:hover{background:#F0F7F3;border-color:#2FB374}
+.cont-rod-prox{background:#173E2C;border:1.5px solid #173E2C;color:#fff}
+.cont-rod-prox:hover{filter:brightness(1.15)}
+.cont-rod-prox[disabled]{background:#E5E7EB;border-color:#E5E7EB;color:#8b968f;cursor:not-allowed}
+.cont-rod-prox-nome{font-size:.72rem;font-weight:600;opacity:.85;width:100%;min-width:0;
+  text-align:center;line-height:1.3;white-space:normal;overflow-wrap:anywhere;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+@media(max-width:600px){
+  .cont-rod-btn{flex:1 1 100%}
+  .cont-star{font-size:1.8rem}
+}
 .cont-mat{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#6b7a72}
 .cont-titulo{font-size:1.5rem;line-height:1.25;color:#173E2C;margin:0 0 .5rem}
 .cont-frase{font-size:1.02rem;line-height:1.55;color:#3d4a43;margin:0 0 1.5rem;
