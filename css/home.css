@@ -2,3 +2,107 @@
 @media(max-width:1000px){.hero-grid{gap:30px}.nav nav{gap:16px}.hero{padding:55px 0}.value-grid,.offer-grid,.faq-grid{gap:40px}.hero-actions{gap:16px}.section{padding:65px 0}.demo-body{padding:20px}}
 @media(max-width:760px){.wrap{width:calc(100% - 40px)}.nav{min-height:70px;gap:14px}.nav nav{display:none}.brand{font-size:20px}.login{font-size:12px}.hero-grid,.value-grid,.offer-grid,.faq-grid{grid-template-columns:minmax(0,1fr)}.hero{padding:42px 0}.hero-copy{max-width:560px}.product-demo{width:100%;max-width:520px;margin:10px auto 0}.hero-grid{gap:35px}.hero h1{font-size:clamp(36px,8vw,54px)}.lead{font-size:16px}.hero-points{margin-top:22px}.section-heading{display:block}.section-heading>p{margin-top:20px}.steps{grid-template-columns:1fr}.steps article{padding:20px 0}.step-num{float:right}.step-label{margin-top:7px}.steps h3{max-width:85%}.cert-grid{grid-template-columns:1fr}.cert-options{display:grid;grid-template-columns:1fr 1fr;padding:10px}.cert-detail{padding:22px}.section{padding:52px 0}.value-grid,.offer-grid,.faq-grid{gap:30px}.price-card{padding:25px}.footer{flex-wrap:wrap;gap:15px}.footer>div{flex-wrap:wrap}.program-links{justify-content:flex-start;gap:22px 30px}.program-links a{font-size:19px}.demo-body{min-height:335px}.closing h2{font-size:30px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+
+/* ══════════════════════════════════════════════════════════════════
+   HERO COM A AQUARELA DA TRILHA (12/09/2026)
+   O dono enviou uma aquarela propria: bussola no canto esquerdo, vale ao
+   centro e a trilha pontilhada subindo ate a bandeira no alto da montanha.
+   Ela nao entra como "background" do hero por um motivo pratico: os quatro
+   marcos da jornada precisam pousar EM CIMA de pontos concretos do desenho.
+   Por isso a imagem vive numa camada com a proporcao original travada
+   (1600x900), ancorada embaixo e com 100% de largura. Assim cada marco pode
+   ser posicionado em porcentagem e cai sempre no mesmo lugar do desenho, em
+   qualquer tela. Se a janela for mais baixa que a camada, o corte acontece
+   em cima, onde so ha ceu.
+   ══════════════════════════════════════════════════════════════════ */
+.hero{position:relative;overflow:hidden;background:#F9F9F2;padding:74px 0 78px;min-height:min(50vw,700px);display:flex;align-items:center}
+.hero-art{position:absolute;left:0;right:0;bottom:0;aspect-ratio:1600/900;
+  background:url("../img/hero-trilha.webp") center bottom/100% 100% no-repeat}
+/* Sem z-index proprio, a camada nao vira contexto de empilhamento e os
+   marcos conseguem subir acima do veu, que tambem e z-index 0. */
+.trilha-marco,.hero-frase{z-index:2}
+.hero-grid{position:relative;z-index:1}
+/* Veu so atras do texto. Lavar a imagem inteira apagaria a bussola, que e a
+   marca; aqui a tinta clareia onde ha leitura e continua viva no resto. */
+.hero-copy{position:relative;z-index:1}
+/* O veu atravessa o hero inteiro na horizontal, sem caixa: caixa deixa
+   canto visivel por cima da aquarela. Ele nasce fraco na borda esquerda,
+   para a bussola continuar viva, firma onde o texto passa e se dissolve
+   antes do cartao de demonstracao. */
+.hero::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:linear-gradient(90deg,rgba(250,251,246,.3) 0%,rgba(250,251,246,.62) 7%,rgba(250,251,246,.82) 15%,rgba(250,251,246,.8) 34%,rgba(250,251,246,.5) 46%,rgba(250,251,246,.12) 56%,rgba(250,251,246,0) 64%)}
+
+/* Marcos da trilha. As coordenadas seguem pontos do desenho: o inicio do
+   caminho, a curva no meio do vale, a subida e a bandeira. */
+.trilha-marco{position:absolute;transform:translate(-50%,-50%);
+  font:800 10px "Hanken Grotesque",sans-serif;letter-spacing:.16em;text-transform:uppercase;
+  color:#2C6047;background:rgba(255,255,255,.72);border:1px solid rgba(44,96,71,.16);
+  padding:7px 13px;border-radius:99px;white-space:nowrap;
+  -webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);box-shadow:0 2px 8px rgba(23,62,44,.07)}
+/* O cartao de demonstracao ocupa toda a metade direita, entao os tres
+   primeiros marcos seguem a trilha na faixa livre, a esquerda e embaixo. */
+.marco-1{left:19%;top:94%}
+.marco-2{left:37%;top:89%}
+.marco-3{left:45%;top:87%}
+.marco-4{left:93%;top:25%;color:#17462F;background:rgba(255,255,255,.86);border-color:rgba(44,96,71,.3);font-weight:800}
+.marco-4::before{content:"✓";margin-right:7px;color:#1C7A4B}
+/* A frase mora na margem, fora da coluna de 1160px. Abaixo de 1440px nao ha
+   margem para ela, entao ela some em vez de brigar com o cartao. */
+.hero-frase{position:absolute;right:1.5%;top:60%;width:190px;margin:0;
+  font:italic 500 13px/1.6 "Hanken Grotesque",sans-serif;color:#4B5D51;border-top:1px solid rgba(44,96,71,.25);padding-top:14px}
+/* A bandeira e a frase vivem na margem que sobra ao lado do cartao. Sem
+   essa margem elas atrapalham em vez de enfeitar. */
+@media(max-width:1599px){.hero-frase{display:none}}
+@media(max-width:1399px){.marco-4{display:none}}
+@media(max-width:1099px){.trilha-marco{display:none}}
+
+/* ── Cabecalho: certificacoes viram menu, e o Comece agora sai do meio da
+   pagina para o alto, onde a decisao acontece. ── */
+.nav-acoes{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.nav-cta{min-height:44px;padding:11px 18px}
+.nav-drop{position:relative}
+.nav-drop-btn{display:inline-flex;align-items:center;gap:6px;background:none;border:0;padding:0;
+  font:600 14px "Hanken Grotesque",sans-serif;color:inherit}
+.nav-drop-btn:hover{color:#1c7a4b}
+.nav-chevron{width:15px;height:15px;transition:transform .18s}
+.nav-drop-btn[aria-expanded=true] .nav-chevron{transform:rotate(180deg)}
+.nav-drop-menu{position:absolute;top:calc(100% + 14px);left:-14px;z-index:20;min-width:268px;
+  background:#fff;border:1px solid #dce5dc;border-radius:14px;padding:8px;
+  box-shadow:0 18px 40px rgba(23,62,44,.14);display:grid;gap:2px}
+.nav-drop-menu a{display:block;text-decoration:none;padding:10px 12px;border-radius:9px}
+.nav-drop-menu a:hover{background:#F1F6F0}
+.nav-drop-menu strong{display:block;font:700 14px "Bricolage Grotesque",sans-serif;color:#173e2c}
+.nav-drop-menu small{display:block;font-size:10px;letter-spacing:.1em;color:#627164;margin-top:2px}
+
+@media(max-width:1000px){
+  .hero{padding:60px 0 64px;min-height:0}
+}
+/* Entre 760 e 900px o menu de secoes e os dois botoes nao cabem na mesma
+   linha: o menu sai primeiro, porque as secoes continuam alcancaveis pela
+   rolagem, e os botoes sao o que leva a compra e ao login. */
+@media(max-width:900px){ .nav nav{display:none} }
+@media(max-width:760px){
+  /* O "Comece agora" continua no cabecalho do celular, so menor: e o botao
+   que leva a oferta, e no celular o menu de secoes nao aparece. */
+  .nav-acoes{gap:8px}
+  .nav-cta{min-height:40px;padding:9px 12px;font-size:12px}
+  .nav-cta span{display:none}
+  .login{padding:9px 11px}
+}
+@media(max-width:760px){
+  /* No celular o veu e vertical: firme em cima, onde fica todo o texto, e
+     aberto embaixo, para a aquarela aparecer como rodape do hero. */
+  .hero::after{background:linear-gradient(180deg,rgba(250,251,246,.93) 0%,rgba(250,251,246,.88) 52%,rgba(250,251,246,.5) 72%,rgba(250,251,246,.05) 90%,rgba(250,251,246,0) 100%)}
+  /* No celular a camada com a proporcao do desenho viraria uma faixa baixa
+     demais. Ela cresce e sai para a esquerda, de modo que a bussola e a
+     montanha continuem reconheciveis atras do texto. */
+  .hero{padding:36px 0 150px}
+  .hero-art{width:215%;left:-52%;right:auto}
+}
+/* Telas estreitas de verdade: a marca encolhe para os dois botoes caberem. */
+@media(max-width:430px){
+  .brand{font-size:18px}
+  .brand-mark{width:36px;height:38px;font-size:24px}
+  .nav-cta,.login{font-size:11px;padding:9px 10px}
+  .login span{display:none}
+}
