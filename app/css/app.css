@@ -1838,3 +1838,13 @@ body.aguardando-auth > *:not(#loginScreen) { visibility:hidden !important; point
 .hoje-topico-estrelas button{background:transparent;border:0;font-size:1.8rem;color:var(--gray-300);min-width:44px;min-height:44px;cursor:pointer}
 .hoje-topico-estrelas button.on{color:var(--yellow)}
 .hoje-topico-estrelas button:focus-visible{outline:2px solid var(--green);border-radius:var(--radius-xs)}
+
+/* Simulados: o tamanho da prova e o porquê de fazer sem pausa.
+   O tamanho vem primeiro e em destaque, porque e a informacao que o aluno
+   precisa antes de decidir comecar. O texto do ritmo vem depois, menor,
+   porque e leitura de uma vez so e nao de toda tentativa. */
+.sim-formato{background:var(--green-pale,#E4F4EA);border:1px solid var(--green-border,#A6E2BE);
+  border-radius:10px;padding:.6rem .75rem;font-size:.86rem !important;color:var(--navy) !important}
+.sim-formato strong{color:var(--navy);font-weight:800}
+.sim-ritmo{font-size:.78rem !important;color:var(--gray-600) !important;line-height:1.65 !important;
+  border-left:3px solid var(--green-border,#A6E2BE);padding-left:.7rem}
