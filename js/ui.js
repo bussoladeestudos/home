@@ -25,13 +25,40 @@ const ACTIONS={
  demoRead:()=>{read=!read;demo();body.querySelector('[data-action="demoRead"]').focus({preventScroll:true});},
  demoAnswer:d=>{if(!['a','b'].includes(d.answer))return;answered=d.answer;demo();body.querySelector('[data-answer="'+answered+'"]').focus({preventScroll:true});},
  demoReset:()=>{answered=null;view='questoes';demo();body.querySelector('button').focus({preventScroll:true});},
- cert:d=>{const n=Number(d.index);if(!Number.isInteger(n)||!certs[n])return;activeCert=n;renderCert();document.querySelector('#certOptions [aria-pressed="true"]').focus({preventScroll:true});},
- checkout:()=>{} // link nativo preserva teclado, abertura em aba e funcionamento sem JS.
+ cert:d=>{const n=Number(d.index);if(!Number.isInteger(n)||!certs[n])return;activeCert=n;renderCert();
+  const menu=document.getElementById('navCertsMenu');
+  if(menu&&!menu.hidden){menu.hidden=true;document.querySelector('[data-action="abrirCerts"]').setAttribute('aria-expanded','false');}
+  document.querySelector('#certOptions [aria-pressed="true"]').focus({preventScroll:true});},
+ checkout:()=>{}, // link nativo preserva teclado, abertura em aba e funcionamento sem JS.
+ /* Menu de certificacoes no cabecalho (12/09/2026). A lista sai do mesmo
+    dados-site.js que alimenta a secao, entao nunca fica defasada. Sem JS o
+    botao simplesmente nao abre, e os links da pagina continuam levando a
+    secao de certificacoes. */
+ abrirCerts:()=>{
+  const btn=document.querySelector('[data-action="abrirCerts"]'),menu=document.getElementById('navCertsMenu');
+  if(!btn||!menu)return;
+  const abrir=menu.hidden;
+  menu.hidden=!abrir;btn.setAttribute('aria-expanded',String(abrir));
+ }
 };
 document.addEventListener('click',e=>{const el=e.target.closest('[data-action]');if(el&&ACTIONS[el.dataset.action])ACTIONS[el.dataset.action](el.dataset);});
+/* Fecha o menu do cabecalho ao clicar fora ou com Esc. */
+document.addEventListener('click',e=>{
+ const menu=document.getElementById('navCertsMenu');if(!menu||menu.hidden)return;
+ if(e.target.closest('.nav-drop'))return;
+ menu.hidden=true;document.querySelector('[data-action="abrirCerts"]').setAttribute('aria-expanded','false');
+});
+document.addEventListener('keydown',e=>{
+ if(e.key!=='Escape')return;const menu=document.getElementById('navCertsMenu');if(!menu||menu.hidden)return;
+ menu.hidden=true;const b=document.querySelector('[data-action="abrirCerts"]');b.setAttribute('aria-expanded','false');b.focus();
+});
 document.querySelectorAll('[data-price]').forEach(el=>el.textContent=PRICE);
 document.querySelectorAll('[data-action="checkout"]').forEach(el=>el.href=CHECKOUT);
 document.getElementById('programLinks').innerHTML=certs.map(c=>`<a href="#certificacoes">${esc(String(c.nome).split('—')[0].trim())}<small>${esc(c.organizacao)}</small></a>`).join('')||'<a href="#certificacoes">Conheça os programas ↓</a>';
+/* Popula o menu de certificacoes do cabecalho. Cada item leva a secao e ja
+   deixa a certificacao escolhida aberta la embaixo. */
+const navMenu=document.getElementById('navCertsMenu');
+if(navMenu) navMenu.innerHTML=certs.map((c,i)=>`<a href="#certificacoes" data-action="cert" data-index="${i}"><strong>${esc(String(c.nome).split(/\s+[\u2014-]\s+/)[0].trim())}</strong><small>${esc(c.organizacao)} \u00b7 ${esc(c.area)}</small></a>`).join('')||'<a href="#certificacoes"><strong>Ver os programas</strong><small>NA SE\u00c7\u00c3O DE CERTIFICA\u00c7\u00d5ES</small></a>';
 demo();renderCert();
 if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('enter');observer.unobserve(entry.target);}}),{threshold:.12});document.querySelectorAll('.steps article,.value-list article,.price-card').forEach(el=>observer.observe(el));}
 })();
