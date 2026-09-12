@@ -1732,7 +1732,7 @@ body.aguardando-auth > *:not(#loginScreen) { visibility:hidden !important; point
 /* Configuração de sessões e histórico */
 .ex-linha[hidden]{display:none}
 .ex-filtro small,.ex-historico small{display:block;color:var(--gray-600);font-size:.78rem;margin-top:.5rem;line-height:1.5}
-#exQuantidade{max-width:140px}
+.ex-qtd-input{width:104px;max-width:104px;flex:0 0 auto;text-align:center}
 .ex-historico{margin:1.2rem 0;padding:1rem;border:1px solid var(--gray-200);border-radius:12px}
 .ex-historico summary{cursor:pointer;font-weight:700}
 .ex-historico p{font-size:.85rem;line-height:1.6}
@@ -1748,6 +1748,14 @@ body.aguardando-auth > *:not(#loginScreen) { visibility:hidden !important; point
 .ex-filtro .ex-chip.on{background:var(--navy);border-color:var(--navy)}
 .ex-filtro .ex-rodape{background:var(--green-pale);border:1px solid var(--green-border);border-radius:var(--radius-md);padding:1rem;margin-top:1.2rem}
 .ex-filtro .ex-conta{color:var(--navy);font-weight:600;line-height:1.5}
+/* A quantidade mora no rodape, ao lado da contagem: decidir quantas questoes
+   so faz sentido diante do numero de disponiveis. Numa linha acima, separada
+   da contagem por uma borda, as duas informacoes eram lidas como assuntos
+   diferentes. */
+.ex-rodape-esq{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;flex:1 1 auto;min-width:0}
+.ex-qtd-lab{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--navy);flex-shrink:0}
+.ex-rodape-acoes{display:flex;gap:.5rem;flex-wrap:wrap;flex-shrink:0}
+.ex-filtro .ex-qtd-input{min-height:40px;width:104px;max-width:104px}
 .ex-filtro .ex-btn{min-height:44px}
 .ex-filtro :is(button,input,select):focus-visible,.ex-historico :is(summary,button):focus-visible{outline:3px solid var(--green);outline-offset:3px}
 .ex-historico{background:var(--gray-50);border-radius:var(--radius-md)}
@@ -1759,6 +1767,9 @@ body.aguardando-auth > *:not(#loginScreen) { visibility:hidden !important; point
  .ex-filtro .ex-linha{flex-direction:column;align-items:stretch;gap:.65rem}
  .ex-filtro .ex-lab{width:auto}
  .ex-filtro .ex-rodape{padding:.85rem}
+ .ex-rodape-esq{width:100%}
+ .ex-rodape-acoes{width:100%}
+ .ex-rodape-acoes .ex-btn,.ex-rodape-acoes .ex-btn-sec{flex:1 1 auto}
  .ex-historico .ex-btn-sec{min-height:44px;flex:1 1 160px}
 }
 
