@@ -7,7 +7,7 @@
    Só intercepta GET da MESMA ORIGEM (Firebase/Google passam direto).
    Ao mudar a versão abaixo, o SW novo assume e limpa os caches antigos.
    ════════════════════════════════════════════════════════════════ */
-const CACHE = "bussola-v62";   // v62 (12/09): cartao de dia de estudo nasce fechado com o botao Estudar, cronograma na grade 4+4 sem imagens de fundo, botao de registrar translucido e botao Hoje pousando no cartao; mantem C-Pro R ate inv-45, ?v=20260912-abrir no CSS e no ui.js
+const CACHE = "bussola-v63";   // v63 (13/09): o dia ja concluido tambem fica compacto no cronograma, sem os botoes de conteudo por topico; mantem C-Pro R ate inv-45, ?v=20260913-fechado no CSS e no ui.js
 const SHELL = [
   "./",
   "index.html",
