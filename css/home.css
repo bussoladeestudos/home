@@ -64,7 +64,7 @@
 /* ── Cabecalho: certificacoes viram menu, e o Comece agora sai do meio da
    pagina para o alto, onde a decisao acontece. ── */
 .nav-acoes{display:flex;align-items:center;gap:12px;flex-shrink:0}
-.nav-burger,.menu-mobile{display:none}
+.nav-burger,.menu-mobile,.rot-curto{display:none}
 /* A linha do preco virou duas partes para poder empilhar no celular. Na tela
    grande ela continua sendo uma frase so, com o ponto de separacao posto
    pelo CSS. */
@@ -93,47 +93,29 @@
    rolagem, e os botoes sao o que leva a compra e ao login. */
 @media(max-width:900px){ .nav nav{display:none} }
 @media(max-width:760px){
-  /* O "Comece agora" continua no cabecalho do celular, so menor: e o botao
-   que leva a oferta, e no celular o menu de secoes nao aparece. */
-  .nav-acoes{gap:8px}
-  .nav-cta{min-height:40px;padding:9px 12px;font-size:12px}
-  .nav-cta span{display:none}
-  .login{padding:9px 11px}
-}
-@media(max-width:760px){
   /* No celular o veu e vertical: firme em cima, onde fica todo o texto, e
      aberto embaixo, para a aquarela aparecer como rodape do hero. */
   .hero::after{background:linear-gradient(180deg,rgba(250,251,246,.96) 0%,rgba(250,251,246,.92) 55%,rgba(250,251,246,.5) 74%,rgba(250,251,246,0) 84%)}
   /* No celular a camada com a proporcao do desenho viraria uma faixa baixa
      demais. Ela cresce e sai para a esquerda, de modo que a bussola e a
      montanha continuem reconheciveis atras do texto. */
-  /* A PAISAGEM FICA PRESA NO PE DA TELA (13/09/2026)
-     Pedido do dono: "tem como esse fundo ficar fixo e a rolagem ir sendo
-     feita em degrade da parte de baixo?". A camada sai do fluxo e passa a
-     viver colada na base da JANELA, com z-index -1: ela fica atras de tudo
-     que tem fundo proprio e aparece onde a pagina e transparente. Enquanto o
-     visitante le o hero, a paisagem nao se mexe; quando ele rola, os blocos
-     brancos sobem por cima dela como uma cortina.
-     A altura e 56,25vw, que e a propria proporcao do desenho: assim a
-     bussola, a trilha e a bandeira aparecem inteiras, sem deformar. A
-     mascara dissolve o topo da faixa, entao nao existe linha de corte.
-     background-attachment:fixed faria algo parecido em uma linha, mas e
-     justamente o que o Safari do iPhone ignora ou engasga. */
-  .hero{background:transparent}
-  .hero-art{position:fixed;left:0;right:0;bottom:0;top:auto;width:auto;height:56.25vw;
-    aspect-ratio:auto;z-index:-1;background-size:100% 100%;background-position:center bottom;
-    -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 34%);
-    mask-image:linear-gradient(180deg,transparent 0,#000 34%)}
-  /* O fundo da janela fica na cor do ceu do desenho, para o encontro entre a
-     faixa e o resto da tela nao ter emenda. */
-  body{background:#F9F9F2}
-  /* Os blocos de conteudo cobrem a paisagem quando passam por cima dela, mas
-     nao totalmente: 92% de opacidade deixam a aquarela respirar no pe da
-     tela durante a rolagem inteira, sem tirar contraste do texto, que fica
-     na parte de cima de cada bloco. */
-  .program-strip,.section:not(.value-section):not(.offer-section){background:rgba(255,253,248,.92)}
-  .value-section{background:rgba(248,246,240,.93)}
-  .offer-section{background:rgba(239,245,237,.93)}
+  /* A PAISAGEM NO ALTO, ONDE ELA PRECISA SER VISTA (13/09/2026)
+     Tentamos a faixa no pe do hero e depois a camada presa na base da
+     janela. Nas duas o cartao de demonstracao e os blocos brancos, que sao
+     opacos, cobriam o desenho: no celular a aquarela virava um detalhe no
+     fim da pagina. Agora ela ocupa o topo do hero, atras do texto de
+     abertura, que e onde o dono sempre disse que ela tinha de estar.
+     O recorte (cover, ancorado em 74% da altura) pega a metade de baixo do
+     desenho, que e onde estao a bussola, as folhas e a trilha; a metade de
+     cima e so ceu. A mascara dissolve o pe da faixa, entao ela termina sem
+     linha de corte. */
+  .hero-art{top:0;bottom:auto;left:0;right:0;width:auto;height:390px;aspect-ratio:auto;
+    background-size:cover;background-position:20% 76%;
+    -webkit-mask-image:linear-gradient(180deg,#000 62%,transparent 100%);
+    mask-image:linear-gradient(180deg,#000 62%,transparent 100%)}
+  /* O veu protege a leitura do titulo sem apagar o desenho: fraco no alto,
+     onde ha ceu, e firme onde o texto passa por cima da folhagem. */
+  .hero::after{background:linear-gradient(180deg,rgba(250,251,246,.12) 0%,rgba(250,251,246,.3) 11%,rgba(250,251,246,.55) 21%,rgba(250,251,246,.78) 31%,rgba(250,251,246,.94) 41%,rgba(250,251,246,1) 52%)}
 }
 /* Telas estreitas de verdade: a marca encolhe para os dois botoes caberem. */
 @media(max-width:430px){
@@ -161,11 +143,26 @@
   .brand{font-size:19px;gap:9px}
   .brand-mark{width:36px;height:38px;font-size:25px;border-radius:11px}
   .brand-sub{font-size:8px;letter-spacing:.18em;margin-top:4px}
-  /* O acesso do aluno passa a morar no menu: no celular ele e a excecao, e
-     quem chega pela primeira vez precisa de um caminho so. */
-  .login{display:none}
-  .nav-cta{display:inline-flex;min-height:40px;padding:10px 14px;font-size:13px;border-radius:11px}
-  .nav-cta span{display:none}
+  /* Os dois caminhos ficam visiveis na barra: comprar e entrar. O menu
+     guarda so as secoes da pagina. */
+  .login{display:inline-flex;align-items:center;font-size:11px;padding:8px 9px;border-radius:10px;white-space:nowrap}
+  .login span{display:none}
+  .nav-cta{display:inline-flex;min-height:38px;padding:9px 10px;font-size:11px;border-radius:10px}
+  .nav-cta span[aria-hidden]{display:none}
+  /* Na barra estreita o botao usa o rotulo curto; o longo volta na tela
+     grande. Assim os dois caminhos, comprar e entrar, cabem lado a lado. */
+  .rot-longo{display:none}
+  .rot-curto{display:inline}
+  .nav-acoes{gap:5px}
+  /* A marca pode encolher; os botoes, nao. Sem isto a barra quebra em duas
+     linhas quando falta um punhado de pixels. */
+  .brand{min-width:0;overflow:hidden;white-space:nowrap}
+  .nav-acoes{flex-shrink:0}
+  .brand{font-size:16.5px;gap:7px}
+  .brand-mark{width:33px;height:35px;font-size:23px;border-radius:10px}
+  .nav{padding:0 8px 0 11px;gap:6px}
+  .nav-burger{width:36px;height:36px}
+  .nav-burger svg{width:21px;height:21px}
   .nav-burger{display:inline-grid;place-items:center;width:42px;height:42px;flex-shrink:0;
     background:none;border:0;color:#173e2c;border-radius:11px}
   .nav-burger svg{width:23px;height:23px}
