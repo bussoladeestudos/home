@@ -49,16 +49,27 @@
 .marco-1{left:19%;top:94%}
 .marco-2{left:37%;top:89%}
 .marco-3{left:45%;top:87%}
-.marco-4{left:93%;top:25%;color:#17462F;background:rgba(255,255,255,.86);border-color:rgba(44,96,71,.3);font-weight:800}
+.marco-4{left:auto;right:18px;top:25%;transform:translateY(-50%);color:#17462F;background:rgba(255,255,255,.86);border-color:rgba(44,96,71,.3);font-weight:800}
 .marco-4::before{content:"✓";margin-right:7px;color:#1C7A4B}
 /* A frase mora na margem, fora da coluna de 1160px. Abaixo de 1440px nao ha
    margem para ela, entao ela some em vez de brigar com o cartao. */
 .hero-frase{position:absolute;right:1.5%;top:60%;width:190px;margin:0;
   font:italic 500 13px/1.6 "Hanken Grotesque",sans-serif;color:#4B5D51;border-top:1px solid rgba(44,96,71,.25);padding-top:14px}
-/* A bandeira e a frase vivem na margem que sobra ao lado do cartao. Sem
-   essa margem elas atrapalham em vez de enfeitar. */
+/* A bandeira e a frase vivem na margem que sobra ao lado do cartao. A
+   coluna de conteudo tem 1160px no maximo; abaixo de 1520px de janela a
+   margem nao comporta o selo sem encostar no cartao, que foi exatamente o
+   que aconteceu em 1400px. Por isso ele e ancorado a direita, e nao numa
+   porcentagem da largura.
+   O limite de cima existe por outro motivo: a camada do desenho cresce com
+   a largura da janela e e ancorada embaixo, entao acima de ~1720px o alto
+   da montanha, com a bandeira, sai do enquadramento. Um selo de APROVACAO
+   pendurado sem bandeira nenhuma nao quer dizer nada. */
 @media(max-width:1599px){.hero-frase{display:none}}
-@media(max-width:1399px){.marco-4{display:none}}
+@media(max-width:1519px),(min-width:1721px){.marco-4{display:none}}
+/* A frase mora sobre a folhagem, que e a parte mais escura do desenho. Sem
+   um apoio de vidro ela simplesmente nao se le. */
+.hero-frase{background:rgba(255,255,255,.6);-webkit-backdrop-filter:blur(7px);backdrop-filter:blur(7px);
+  padding:13px 15px 14px;border-radius:13px;border-top:0;box-shadow:0 3px 12px rgba(23,62,44,.08);color:#3F5247}
 @media(max-width:1099px){.trilha-marco{display:none}}
 
 /* ── Cabecalho: certificacoes viram menu, e o Comece agora sai do meio da
@@ -215,7 +226,7 @@
   .demo-body h2{font-size:19px}
   .demo-body p{font-size:12.5px;margin-top:7px}
   .demo-topic{padding:9px 11px;margin-top:8px;border-radius:9px}
-  .demo-topic small{font-size:9px}
+  .demo-topic small{font-size:9px;color:#4C6154}
   .demo-topic strong{font-size:12.5px;margin:3px 0 0;line-height:1.35}
   .demo-topic button{font-size:11px;padding:5px 9px;margin-top:7px}
   .demo-answers{gap:7px;margin-top:12px}
@@ -264,4 +275,52 @@
   .faq p{font-size:13.5px;margin-top:11px}
   .closing{padding:46px 0}
   .closing h2{font-size:26px}
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   TELA GRANDE: O CARTAO DE DEMONSTRACAO ENCOLHE E DEIXA A PAISAGEM PASSAR
+   (13/09/2026)
+   Pedido do dono: reduzir o cartao em 25% e dar alguma transparencia. Ele
+   ocupava metade do hero e, sendo opaco, tapava justamente o trecho da
+   aquarela onde estao a trilha e a bandeira. Nada foi tirado de dentro dele:
+   as tres abas, os dois topicos e os botoes continuam iguais, apenas em
+   escala menor. A transparencia e de vidro, com desfoque, entao a leitura
+   nao depende do que estiver atras.
+   ══════════════════════════════════════════════════════════════════ */
+@media(min-width:761px){
+  /* A coluna do cartao estreita e a do texto respira. */
+  .hero-grid{grid-template-columns:1.35fr .72fr;gap:56px}
+  /* A coluna do texto ficou mais larga; sem um limite o titulo passaria a
+     quebrar em "passo rumo", o que estraga o ritmo das tres linhas. */
+  .hero h1{max-width:580px}
+  .hero .lead{max-width:490px}
+  .product-demo{
+    background:rgba(255,255,255,.5);
+    border-color:rgba(255,255,255,.55);
+    -webkit-backdrop-filter:blur(9px) saturate(1.1);
+    backdrop-filter:blur(9px) saturate(1.1);
+    box-shadow:0 16px 40px rgba(23,62,44,.11)}
+  /* O verde do cabecalho tambem abre um pouco, para o cartao inteiro parecer
+     uma so peca de vidro. */
+  .demo-top{background:rgba(20,56,40,.72);padding:10px 14px}
+  .demo-brand{font-size:13px}
+  .demo-brand span{font-size:7.5px;margin-top:3px}
+  .demo-status{font-size:8px;padding:4px 6px}
+  .demo-tabs{padding:0 12px;border-bottom-color:rgba(23,62,44,.1)}
+  .demo-tabs button{min-height:34px;font-size:10px;color:#55635A}
+  .demo-body{padding:13px 14px;min-height:206px}
+  .demo-body h2{font-size:17.5px}
+  .demo-body .eyebrow{font-size:8px;margin-bottom:7px}
+  .demo-body p{font-size:11px;margin-top:7px}
+  .demo-topic{padding:7px 9px;margin-top:7px;border-color:rgba(23,62,44,.1);background:rgba(255,255,255,.3)}
+  .demo-topic small{font-size:9px;color:#4C6154}
+  .demo-topic strong{font-size:11.5px;margin:2px 0 0;line-height:1.35}
+  .demo-topic button{font-size:10px;padding:4px 8px;margin-top:6px;background:rgba(233,244,231,.8)}
+  .demo-answers{gap:7px;margin-top:12px}
+  .demo-answers button{font-size:10.5px;padding:8px 10px;background:rgba(255,255,255,.45)}
+  .demo-score{font-size:46px;margin-top:12px}
+  .demo-action{margin-top:10px;min-height:32px;padding:6px 11px;font-size:11px}
+  /* Com o cartao mais aberto, os textos de apoio ficam sobre o desenho.
+     Escurecer um degrau devolve o contraste sem mudar o visual. */
+  .demo-foot{color:#4A574E;padding:7px 14px;font-size:8.5px;background:rgba(245,248,244,.3);border-top-color:rgba(23,62,44,.07)}
 }
