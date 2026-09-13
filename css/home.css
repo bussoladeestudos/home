@@ -18,6 +18,11 @@
 .hero{position:relative;overflow:hidden;background:#F9F9F2;padding:74px 0 78px;min-height:min(50vw,700px);display:flex;align-items:center}
 .hero-art{position:absolute;left:0;right:0;bottom:0;aspect-ratio:1600/900;
   background:url("../img/hero-trilha.webp") center bottom/100% 100% no-repeat}
+/* Rede de seguranca para navegador sem aspect-ratio (Safari anterior ao 15,
+   WebView antigo de Android): sem ela a camada fica com altura zero e a
+   aquarela simplesmente nao aparece. Porcentagem de padding e calculada
+   sobre a LARGURA, entao 56,25% reproduz a mesma proporcao 1600x900. */
+@supports not (aspect-ratio:16/9){ .hero-art{height:0;padding-bottom:56.25%} }
 /* Sem z-index proprio, a camada nao vira contexto de empilhamento e os
    marcos conseguem subir acima do veu, que tambem e z-index 0. */
 .trilha-marco,.hero-frase{z-index:2}
@@ -59,6 +64,12 @@
 /* ── Cabecalho: certificacoes viram menu, e o Comece agora sai do meio da
    pagina para o alto, onde a decisao acontece. ── */
 .nav-acoes{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.nav-burger,.menu-mobile{display:none}
+/* A linha do preco virou duas partes para poder empilhar no celular. Na tela
+   grande ela continua sendo uma frase so, com o ponto de separacao posto
+   pelo CSS. */
+.reassurance strong{font-weight:600;color:inherit}
+.reassurance-sub::before{content:" · "}
 .nav-cta{min-height:44px;padding:11px 18px}
 .nav-drop{position:relative}
 .nav-drop-btn{display:inline-flex;align-items:center;gap:6px;background:none;border:0;padding:0;
@@ -92,12 +103,37 @@
 @media(max-width:760px){
   /* No celular o veu e vertical: firme em cima, onde fica todo o texto, e
      aberto embaixo, para a aquarela aparecer como rodape do hero. */
-  .hero::after{background:linear-gradient(180deg,rgba(250,251,246,.93) 0%,rgba(250,251,246,.88) 52%,rgba(250,251,246,.5) 72%,rgba(250,251,246,.05) 90%,rgba(250,251,246,0) 100%)}
+  .hero::after{background:linear-gradient(180deg,rgba(250,251,246,.96) 0%,rgba(250,251,246,.92) 55%,rgba(250,251,246,.5) 74%,rgba(250,251,246,0) 84%)}
   /* No celular a camada com a proporcao do desenho viraria uma faixa baixa
      demais. Ela cresce e sai para a esquerda, de modo que a bussola e a
      montanha continuem reconheciveis atras do texto. */
-  .hero{padding:36px 0 150px}
-  .hero-art{width:215%;left:-52%;right:auto}
+  /* A PAISAGEM FICA PRESA NO PE DA TELA (13/09/2026)
+     Pedido do dono: "tem como esse fundo ficar fixo e a rolagem ir sendo
+     feita em degrade da parte de baixo?". A camada sai do fluxo e passa a
+     viver colada na base da JANELA, com z-index -1: ela fica atras de tudo
+     que tem fundo proprio e aparece onde a pagina e transparente. Enquanto o
+     visitante le o hero, a paisagem nao se mexe; quando ele rola, os blocos
+     brancos sobem por cima dela como uma cortina.
+     A altura e 56,25vw, que e a propria proporcao do desenho: assim a
+     bussola, a trilha e a bandeira aparecem inteiras, sem deformar. A
+     mascara dissolve o topo da faixa, entao nao existe linha de corte.
+     background-attachment:fixed faria algo parecido em uma linha, mas e
+     justamente o que o Safari do iPhone ignora ou engasga. */
+  .hero{background:transparent}
+  .hero-art{position:fixed;left:0;right:0;bottom:0;top:auto;width:auto;height:56.25vw;
+    aspect-ratio:auto;z-index:-1;background-size:100% 100%;background-position:center bottom;
+    -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 34%);
+    mask-image:linear-gradient(180deg,transparent 0,#000 34%)}
+  /* O fundo da janela fica na cor do ceu do desenho, para o encontro entre a
+     faixa e o resto da tela nao ter emenda. */
+  body{background:#F9F9F2}
+  /* Os blocos de conteudo cobrem a paisagem quando passam por cima dela, mas
+     nao totalmente: 92% de opacidade deixam a aquarela respirar no pe da
+     tela durante a rolagem inteira, sem tirar contraste do texto, que fica
+     na parte de cima de cada bloco. */
+  .program-strip,.section:not(.value-section):not(.offer-section){background:rgba(255,253,248,.92)}
+  .value-section{background:rgba(248,246,240,.93)}
+  .offer-section{background:rgba(239,245,237,.93)}
 }
 /* Telas estreitas de verdade: a marca encolhe para os dois botoes caberem. */
 @media(max-width:430px){
@@ -105,4 +141,130 @@
   .brand-mark{width:36px;height:38px;font-size:24px}
   .nav-cta,.login{font-size:11px;padding:9px 10px}
   .login span{display:none}
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   CELULAR: UMA PAGINA PENSADA PARA A MAO, NAO A DE COMPUTADOR EMPILHADA
+   (13/09/2026)
+   O dono foi preciso no diagnostico: a identidade esta boa, o problema e que
+   o desktop so foi empilhado. A pagina ficava longa e alguns elementos
+   ganhavam peso demais. O que muda aqui e ritmo e tamanho, nunca conteudo:
+   nenhuma informacao foi removida, so reorganizada.
+   ══════════════════════════════════════════════════════════════════ */
+@media(max-width:760px){
+  /* ── Cabecalho: marca menor, um botao em destaque e o resto no tres-tracos.
+     Ele flutua como cartao para nao virar uma faixa cheia atravessada na
+     tela. ── */
+  .header{background:transparent;border-bottom:0;-webkit-backdrop-filter:none;backdrop-filter:none;padding-top:9px}
+  .nav{min-height:62px;flex-wrap:wrap;gap:10px;padding:0 10px 0 13px;background:#fff;
+    border:1px solid #E2EAE3;border-radius:18px;box-shadow:0 8px 22px rgba(23,62,44,.09)}
+  .brand{font-size:19px;gap:9px}
+  .brand-mark{width:36px;height:38px;font-size:25px;border-radius:11px}
+  .brand-sub{font-size:8px;letter-spacing:.18em;margin-top:4px}
+  /* O acesso do aluno passa a morar no menu: no celular ele e a excecao, e
+     quem chega pela primeira vez precisa de um caminho so. */
+  .login{display:none}
+  .nav-cta{display:inline-flex;min-height:40px;padding:10px 14px;font-size:13px;border-radius:11px}
+  .nav-cta span{display:none}
+  .nav-burger{display:inline-grid;place-items:center;width:42px;height:42px;flex-shrink:0;
+    background:none;border:0;color:#173e2c;border-radius:11px}
+  .nav-burger svg{width:23px;height:23px}
+  .nav-burger[aria-expanded=true]{background:#F1F6F0}
+  .menu-mobile{width:100%;order:9;display:grid;gap:2px;padding:6px 0 12px;border-top:1px solid #EAF0EA}
+  .menu-mobile a{text-decoration:none;font-size:15px;font-weight:600;color:#173e2c;padding:12px 4px;border-radius:9px}
+  .menu-mobile a:active{background:#F1F6F0}
+  .menu-mobile-aluno{font-weight:700;color:#1c7a4b}
+
+  /* ── Hero: titulo em tres linhas, texto mais curto de largura e o cartao de
+     demonstracao comecando ainda na primeira rolagem. ── */
+  .hero{padding:26px 0 150px}
+  .hero-grid{gap:24px}
+  .eyebrow{font-size:10px;letter-spacing:.12em;margin-bottom:13px}
+  .hero h1{font-size:clamp(34px,8.8vw,45px);letter-spacing:-.04em}
+  .hero .lead{font-size:15.5px;line-height:1.62;margin-top:16px;max-width:33ch}
+  /* display:contents solta os dois botoes do bloco e deixa a ordem ser
+     decidida aqui: acao principal, preco, e so entao o link secundario. */
+  .hero-copy{display:flex;flex-direction:column}
+  .hero-copy .eyebrow{order:1}
+  .hero-copy h1{order:2}
+  .hero-copy .lead{order:3}
+  .hero-actions{display:contents}
+  .hero-actions .button{order:4;width:100%;max-width:340px;margin-top:24px;min-height:54px;font-size:15px}
+  .reassurance{order:5;margin-top:13px;font-size:13px;display:flex;flex-direction:column;gap:2px}
+  .reassurance strong{color:#173e2c;font-weight:700}
+  .reassurance-sub{font-size:11.5px;color:#6B7A70}
+  .reassurance-sub::before{content:none}
+  .hero-actions .text-link{order:6;margin-top:16px;font-size:14px;text-decoration:underline;text-underline-offset:5px}
+  /* Os tres beneficios deixam de ser texto solto e viram prova rapida, logo
+     antes da demonstracao. */
+  .hero-points{order:7;gap:8px;margin-top:24px}
+  .hero-points span{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;color:#2C5745;
+    background:rgba(255,255,255,.8);border:1px solid rgba(44,96,71,.16);border-radius:99px;padding:8px 14px 8px 9px;
+    -webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+  .hero-points span:before{content:"✓";display:grid;place-items:center;width:19px;height:19px;border-radius:50%;
+    background:#1C7A4B;color:#fff;font-size:11px;font-weight:800;margin:0;flex-shrink:0}
+
+  /* ── Demonstracao: mesmo conteudo, menos moldura. Ela ja mostra uma etapa
+     de cada vez; o que pesava era o tamanho de cada parte. ── */
+  .product-demo{margin:4px auto 0;border-radius:16px}
+  .demo-top{padding:13px 15px}
+  .demo-brand{font-size:14px}
+  .demo-brand span{font-size:7.5px;margin-top:3px}
+  .demo-status{font-size:8.5px;padding:4px 6px}
+  .demo-tabs{padding:0 8px;gap:4px}
+  .demo-tabs button{min-height:44px;font-size:11.5px}
+  .demo-body{padding:15px 14px;min-height:240px}
+  .demo-body .eyebrow{margin-bottom:6px}
+  .demo-body h2{font-size:19px}
+  .demo-body p{font-size:12.5px;margin-top:7px}
+  .demo-topic{padding:9px 11px;margin-top:8px;border-radius:9px}
+  .demo-topic small{font-size:9px}
+  .demo-topic strong{font-size:12.5px;margin:3px 0 0;line-height:1.35}
+  .demo-topic button{font-size:11px;padding:5px 9px;margin-top:7px}
+  .demo-answers{gap:7px;margin-top:12px}
+  .demo-answers button{padding:9px 11px;font-size:11.5px}
+  .demo-score{font-size:46px;margin-top:12px}
+  .demo-action{margin-top:12px;min-height:44px}
+  .demo-foot{padding:10px 14px;font-size:9.5px}
+
+  /* A paisagem volta uma vez no meio do caminho, como respiro entre os
+     blocos brancos e antes da oferta. E a mesma imagem ja carregada, entao
+     nao custa nada, e aqui ela pode ser recortada: o que importa e a
+     textura, nao a cena inteira. */
+  .offer-section::before{content:"";display:block;height:148px;margin:-38px 0 28px;
+    background:url("../img/hero-trilha.webp") center 64%/cover no-repeat;
+    -webkit-mask-image:linear-gradient(180deg,#000 62%,transparent 100%);
+    mask-image:linear-gradient(180deg,#000 62%,transparent 100%)}
+  /* ── Ritmo geral. A pagina do celular estava longa porque cada bloco herdou
+     medidas de tela grande: titulo de 30px, entrelinha de 1,8 e respiro de
+     52px entre secoes. Aqui tudo encolhe junto, proporcionalmente. Nenhuma
+     informacao sai; o que muda e a densidade. ── */
+  .section{padding:38px 0}
+  .program-strip{padding:20px 0}
+  .program-links{gap:16px 26px}
+  .program-links a{font-size:17px}
+  h2{font-size:26px}
+  .section-heading{margin-bottom:26px}
+  .section-heading>p{margin-top:14px;font-size:14px}
+  .steps article{padding:17px 0}
+  .steps h3{font-size:20px;margin-bottom:10px}
+  .steps article>p:last-child{font-size:13.5px;line-height:1.65}
+  .step-num{font-size:34px}
+  .replan{padding:16px 18px;margin-top:16px}
+  .replan p{font-size:13.5px}
+  .small{font-size:15.5px;margin-bottom:16px}
+  .value-list article{padding:17px 0;gap:16px}
+  .value-list h3{font-size:18px;margin-bottom:7px}
+  .value-list p{font-size:13.5px}
+  .cert-options button{min-height:52px;padding:11px 12px}
+  .cert-detail{padding:20px 18px}
+  .cert-detail h3{font-size:22px}
+  .offer-list{font-size:13.5px;line-height:1.95}
+  .price-card{padding:22px 20px}
+  .price{font-size:46px;margin-top:14px}
+  .faq details{padding:15px 0}
+  .faq summary{font-size:15px}
+  .faq p{font-size:13.5px;margin-top:11px}
+  .closing{padding:46px 0}
+  .closing h2{font-size:26px}
 }
