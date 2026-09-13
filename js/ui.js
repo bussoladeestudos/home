@@ -1,7 +1,7 @@
 /* Homepage: scripts clássicos e interações delegadas, separados do app. */
 (function(){
 'use strict';
-const PRICE='R$ 29,90', CHECKOUT='https://pay.hotmart.com/N106305634J';
+const PRICE='R$ 299,90', CHECKOUT='https://pay.hotmart.com/N106305634J';
 const certs=window.CERTIFICACOES_DATA||[];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const clean=s=>String(s||'').replace(/\s*—\s*/g,': ');
@@ -34,6 +34,15 @@ const ACTIONS={
     dados-site.js que alimenta a secao, entao nunca fica defasada. Sem JS o
     botao simplesmente nao abre, e os links da pagina continuam levando a
     secao de certificacoes. */
+ /* Menu do celular. As tres secoes e o acesso do aluno moram aqui, para o
+    cabecalho ficar com a marca, um botao e o tres-tracos. */
+ abrirMenu:()=>{
+  const btn=document.querySelector('[data-action="abrirMenu"]'),menu=document.getElementById('menuMobile');
+  if(!btn||!menu)return;
+  const abrir=menu.hidden;
+  menu.hidden=!abrir;btn.setAttribute('aria-expanded',String(abrir));
+  btn.setAttribute('aria-label',abrir?'Fechar menu':'Abrir menu');
+ },
  abrirCerts:()=>{
   const btn=document.querySelector('[data-action="abrirCerts"]'),menu=document.getElementById('navCertsMenu');
   if(!btn||!menu)return;
@@ -42,6 +51,17 @@ const ACTIONS={
  }
 };
 document.addEventListener('click',e=>{const el=e.target.closest('[data-action]');if(el&&ACTIONS[el.dataset.action])ACTIONS[el.dataset.action](el.dataset);});
+/* Fecha o menu do celular ao escolher uma secao. */
+function fecharMenuMobile(){
+ const menu=document.getElementById('menuMobile');if(!menu||menu.hidden)return;
+ menu.hidden=true;
+ const b=document.querySelector('[data-action="abrirMenu"]');
+ if(b){b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Abrir menu');}
+}
+document.addEventListener('click',e=>{
+ if(e.target.closest('#menuMobile a')){fecharMenuMobile();return;}
+ if(!e.target.closest('.header')) fecharMenuMobile();
+});
 /* Fecha o menu do cabecalho ao clicar fora ou com Esc. */
 document.addEventListener('click',e=>{
  const menu=document.getElementById('navCertsMenu');if(!menu||menu.hidden)return;
@@ -49,7 +69,7 @@ document.addEventListener('click',e=>{
  menu.hidden=true;document.querySelector('[data-action="abrirCerts"]').setAttribute('aria-expanded','false');
 });
 document.addEventListener('keydown',e=>{
- if(e.key!=='Escape')return;const menu=document.getElementById('navCertsMenu');if(!menu||menu.hidden)return;
+ if(e.key!=='Escape')return;fecharMenuMobile();const menu=document.getElementById('navCertsMenu');if(!menu||menu.hidden)return;
  menu.hidden=true;const b=document.querySelector('[data-action="abrirCerts"]');b.setAttribute('aria-expanded','false');b.focus();
 });
 document.querySelectorAll('[data-price]').forEach(el=>el.textContent=PRICE);
