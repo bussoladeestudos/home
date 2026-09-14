@@ -7,7 +7,7 @@
    Só intercepta GET da MESMA ORIGEM (Firebase/Google passam direto).
    Ao mudar a versão abaixo, o SW novo assume e limpa os caches antigos.
    ════════════════════════════════════════════════════════════════ */
-const CACHE = "bussola-v63";   // v63 (13/09): o dia ja concluido tambem fica compacto no cronograma, sem os botoes de conteudo por topico; mantem C-Pro R ate inv-45, ?v=20260913-fechado no CSS e no ui.js
+const CACHE = "bussola-v75";   // v75 (14/09): o cronograma distribui os topicos na ordem de estudo da Analise do Edital e o dia ja registrado congela os seus topicos; mantem C-Pro R em ?v=20260913-car03 e ?v=20260914-ordem no engine.js e no ui.js
 const SHELL = [
   "./",
   "index.html",
@@ -18,6 +18,7 @@ const SHELL = [
   "conteudo/conteudo-cpa.js",
   "conteudo/conteudo-assban-pldft-lgpd.js",
   "conteudo/conteudo-cpror.js",
+  "conteudo/questoes-cpror.js",
   "js/state.js",
   "js/engine.js",
   "js/ui.js",
