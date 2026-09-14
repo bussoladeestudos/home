@@ -7,7 +7,7 @@
    Só intercepta GET da MESMA ORIGEM (Firebase/Google passam direto).
    Ao mudar a versão abaixo, o SW novo assume e limpa os caches antigos.
    ════════════════════════════════════════════════════════════════ */
-const CACHE = "bussola-v75";   // v75 (14/09): o cronograma distribui os topicos na ordem de estudo da Analise do Edital e o dia ja registrado congela os seus topicos; mantem C-Pro R em ?v=20260913-car03 e ?v=20260914-ordem no engine.js e no ui.js
+const CACHE = "bussola-v76";   // v76 (14/09): o site fica so com CPA, C-Pro R e a mini certificacao ASSBAN PLD/FT + LGPD; CFP, FBB100 e CA-600 sairam do editais.js e do dados-site.js, e a ASSBAN passou para o grupo "Mini certificacoes" na configuracao; editais.js e ui.js em ?v=20260914-limpa.
 const SHELL = [
   "./",
   "index.html",
