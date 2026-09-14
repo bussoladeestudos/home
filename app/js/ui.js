@@ -566,7 +566,7 @@ function getGrupos(){
 }
 
 let _grupoSelecionado=null;
-let _prefSelecionada=Object.keys(EDITAIS||{})[0]||"cfpPlanejar";
+let _prefSelecionada=Object.keys(EDITAIS||{})[0]||"cpaAnbima";
 
 function renderPrefButtons(){
   const grid=document.getElementById("prefGrid");
@@ -1124,7 +1124,6 @@ const EDITAL_ANALISES={
      fica de pé para quando existir um grupo com análise compartilhada. */
 };
 const EDITAL_ANALISES_POR_CHAVE={
-  "cfpPlanejar":{ url:"edital-cfp.pdf", sub:"Análise Estratégica — Certificação CFP® (Planejar)", arquivo:"Analise_Estrategica_Certificacao_CFP.pdf" },
   "cpaAnbima":{ url:"edital-cpa.pdf", sub:"Análise do Edital · CPA Anbima", arquivo:"Analise_do_Edital_CPA_Anbima.pdf" },
   "cproRAnbima":{ url:"edital-cpror.pdf", sub:"Análise do Edital · C-Pro R Anbima", arquivo:"Analise_do_Edital_CPRO_R_Anbima.pdf" }
 };
