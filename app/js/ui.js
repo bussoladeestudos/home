@@ -512,6 +512,15 @@ window.addEventListener("DOMContentLoaded",async ()=>{
   // Se a prefeitura salva não existe mais no EDITAIS, reseta para campinas
   if(!EDITAIS[STATE.prefeitura]) STATE.prefeitura=Object.keys(EDITAIS)[0];
   if(STATE.inicio){
+    /* Uma vez por conta: os dias que já têm registro guardam os tópicos que
+       estavam valendo quando foram estudados. Protege o histórico de
+       qualquer mudança futura na lista do edital. */
+    if(!STATE.topicosCongelados){
+      try{
+        Object.keys(STATE.dias||{}).forEach(k=>congelarTopicosDoDia(k));
+        STATE.topicosCongelados=1; save();
+      }catch(e){}
+    }
     document.getElementById("setupModal").classList.remove("open");
     renderTudo();
     navTo("dashboard"); // sempre abre no Dashboard
@@ -995,6 +1004,11 @@ function iniciarBússola(forcar){
   STATE.concurso=ed?`${ed.nome.replace("Prefeitura de ","")} — ${cargoText}`:editKey;
   STATE.inicio=i; STATE.prova=p; STATE.horasDia=h;
   STATE.diasLivres=[..._dowSelected].sort((a,b)=>a-b);
+  /* Plano criado ou reconfigurado a partir de 14/09/2026 segue a ordem de
+     estudo publicada na Análise do Edital. Plano antigo continua na ordem
+     antiga de propósito: trocar a ordem no meio do caminho embaralharia o
+     histórico, porque o vínculo entre dia e tópico é posicional. */
+  STATE.ordemPlano="recomendada";
   STATE.semanaOffset=0; save();
   if(btn){ btn.disabled=false; btn.textContent="💾 Salvar Configurações"; }
   document.getElementById("setupModal").classList.remove("open");
@@ -1111,7 +1125,8 @@ const EDITAL_ANALISES={
 };
 const EDITAL_ANALISES_POR_CHAVE={
   "cfpPlanejar":{ url:"edital-cfp.pdf", sub:"Análise Estratégica — Certificação CFP® (Planejar)", arquivo:"Analise_Estrategica_Certificacao_CFP.pdf" },
-  "cpaAnbima":{ url:"edital-cpa.pdf", sub:"Análise do Edital · CPA Anbima", arquivo:"Analise_do_Edital_CPA_Anbima.pdf" }
+  "cpaAnbima":{ url:"edital-cpa.pdf", sub:"Análise do Edital · CPA Anbima", arquivo:"Analise_do_Edital_CPA_Anbima.pdf" },
+  "cproRAnbima":{ url:"edital-cpror.pdf", sub:"Análise do Edital · C-Pro R Anbima", arquivo:"Analise_do_Edital_CPRO_R_Anbima.pdf" }
 };
 /* NÃO EXISTE MAIS FALLBACK (25/08/2026). Antes, quem não tinha análise
    registrada caía na do Campina Grande, o que passou a ser impossível
@@ -2662,6 +2677,7 @@ function getTopicoDiaHoje(){
 function toggleCheckHoje(campo){
   const k=fmt(new Date());
   if(!STATE.dias[k]) STATE.dias[k]={};
+  congelarTopicosDoDia(k);
   STATE.dias[k][campo]=!STATE.dias[k][campo];
   save();
   renderHoje(); // re-renderiza o fluxo guiado (passos 1-2-3)
@@ -2670,6 +2686,7 @@ function toggleCheckHoje(campo){
 function setStarHoje(n,key){
   const k=key||fmt(new Date());
   if(!STATE.dias[k]) STATE.dias[k]={};
+  congelarTopicosDoDia(k);
   STATE.dias[k].estrelas=n; STATE.dias[k].percepcao=starToNivel(n); _carimbarRegistro(k);
   save(); renderHoje(); renderTudo();
 }
@@ -3891,10 +3908,7 @@ function renderSemana(){
 }
 
 function getTopicoDia(idx){
-  const materias=getMaterias().slice().sort((a,b)=>b.peso-a.peso);
-  const topicos=getTopicos();
-  const todos=[];
-  materias.forEach(m=>(topicos[m.nome]||[]).forEach(t=>todos.push({mat:m.nome,top:t,peso:m.peso})));
+  const todos=getSequenciaTopicos();
   const i=((STATE.semanaOffset*5+idx)*3+7)%todos.length;
   return todos[i]||{mat:"Revisão Geral",top:"Conteúdo do Dia",peso:10};
 }
@@ -4689,7 +4703,11 @@ function renderDiaNormal(dia,idx,key,est,isHoje,isPast,nomeDia){
      botao de conteudo, de aula, duas caixas de marcacao e as estrelas,
      faziam a linha da grade ficar tao alta que a segunda fileira da semana
      saia da tela. Quem abre e o aluno, no dia que vai estudar. */
-  const compacto=!isDone&&est.aberto!==true;
+  /* O dia concluido e fechado tambem entra no modo compacto. Antes, "fechado"
+     so escondia medalha, peso, marcacoes e estrelas: a lista de topicos
+     continuava com um botao "Ler o conteudo" embaixo de cada um, e o cartao
+     do dia ja estudado ficava tao alto quanto o de um dia por estudar. */
+  const compacto=isCollapsed||(!isDone&&est.aberto!==true);
   const rotuloAbrir=isHoje?"📚 Estudar hoje":"📚 Estudar";
   // estrelas apenas depois de marcar lido + exercicios
   const percShow=(est.lido&&est.exercicios)||isDone?"show":"";
@@ -5085,8 +5103,18 @@ function renderExerciciosSection(){
   });
   el.innerHTML=html;
 }
+/* Grava, no primeiro registro do dia, quais tópicos aquele dia tinha. Daí
+   em diante o dia não troca de assunto, mesmo que a lista do edital mude ou
+   que a ordem do plano mude. Ver o comentário do CONGELAMENTO em engine.js. */
+function congelarTopicosDoDia(key){
+  const d=STATE.dias[key];
+  if(!d||Array.isArray(d.topicosFix)) return;
+  const base=getTopicosDiaBase(key);
+  if(base.length) d.topicosFix=base.map(t=>({mat:t.mat,top:t.top,peso:t.peso}));
+}
 function toggleCheck(key,campo){
   if(!STATE.dias[key]) STATE.dias[key]={};
+  congelarTopicosDoDia(key);
   STATE.dias[key][campo]=!STATE.dias[key][campo]; save();
   const isLido=campo==="lido";
   const box=document.getElementById(`cb-${key}-${isLido?"lido":"ex"}`);
@@ -5142,6 +5170,7 @@ function hoverStar(key,n){ paintStars(key,n); }
 function unhoverStar(key){ paintStars(key,STATE.dias[key]?.estrelas||0); }
 function setStar(key,n){
   if(!STATE.dias[key]) STATE.dias[key]={};
+  congelarTopicosDoDia(key);
   STATE.dias[key].estrelas=n; STATE.dias[key].percepcao=starToNivel(n); STATE.dias[key].collapsed=true; _carimbarRegistro(key);
   save(); renderSemana(); renderTudo();
 }
@@ -5154,6 +5183,7 @@ function unhoverStarTopico(key,ti){
    prioriza est.percepcao e mascararia edições por tópico se ele persistisse. */
 function gravarNotaTopico(key,ti,n){
   if(!STATE.dias[key]) STATE.dias[key]={};
+  congelarTopicosDoDia(key);
   const est=STATE.dias[key];
   est.estrelasList=Object.assign({},est.estrelasList,{[ti]:n});
   est.percepcoes=Object.assign({},est.percepcoes,{[ti]:starToNivel(n)});

@@ -59,6 +59,88 @@ function getNumRevisao(dateKey){
 function getMaterias(){ const ed=EDITAIS[STATE.prefeitura]||EDITAIS[Object.keys(EDITAIS)[0]]; return ed?JSON.parse(JSON.stringify(ed.materias)):[]; }
 function getTopicos(){ const ed=EDITAIS[STATE.prefeitura]||EDITAIS[Object.keys(EDITAIS)[0]]; return ed?ed.topicos:{}; }
 
+/* ══════════════════════════════════════════════════════════════════
+   ORDEM DE ESTUDO DO CRONOGRAMA (14/09/2026)
+   Ate aqui o plano distribuia os topicos numa ordem so: materia mais
+   pesada primeiro, e dentro dela a ordem do edital. Funciona, mas ensina
+   na ordem errada. Na CPA, por exemplo, o aluno via os 43 topicos de
+   Produtos antes de saber quem regula o mercado, que e a materia 1.
+   A Analise do Edital de cada certificacao ja publicava uma ordem de
+   estudo pensada para reduzir retrabalho. Agora o cronograma segue
+   exatamente essa ordem, e as duas coisas param de se contradizer.
+   Como funciona: cada receita e uma lista de fatias, na forma
+   { m: nome da materia, de: primeiro topico, ate: ultimo topico }, com
+   numeracao de 1 e limites inclusivos, na ordem do editais.js.
+   Tres garantias, e elas importam mais que a receita em si:
+   1. Topico que a receita nao citar entra no fim, na ordem antiga. Se o
+      edital ganhar topico novo depois, ninguem fica sem ele.
+   2. Se a conta nao fechar, a funcao devolve a ordem antiga inteira.
+      Receita errada nao derruba plano.
+   3. So vale para plano criado a partir de agora (STATE.ordemPlano).
+      Mudar a ordem de um plano em andamento embaralharia o historico,
+      porque o vinculo entre dia e topico e posicional.
+   ══════════════════════════════════════════════════════════════════ */
+const ORDEM_RECOMENDADA={
+  "cpaAnbima":[
+    { m:"Estrutura e Dinâmica do Sistema Financeiro Nacional", de:1,  ate:6  },
+    { m:"Estrutura e Dinâmica do Sistema Financeiro Nacional", de:19, ate:22 },
+    { m:"Produtos do Mercado Financeiro",                      de:1,  ate:11 },
+    { m:"Produtos do Mercado Financeiro",                      de:12, ate:28 },
+    { m:"Relacionamento com o Cliente",                        de:23, ate:32 },
+    { m:"Estrutura e Dinâmica do Sistema Financeiro Nacional", de:7,  ate:18 },
+    { m:"Produtos do Mercado Financeiro",                      de:29, ate:43 },
+    { m:"Relacionamento com o Cliente",                        de:1,  ate:22 },
+    { m:"Inovação e Desenvolvimento de Mercado",               de:1,  ate:11 }
+  ],
+  "cproRAnbima":[
+    { m:"Análise de informações do cliente",                   de:1,  ate:25 },
+    { m:"Indicação de investimentos",                          de:1,  ate:12 },
+    { m:"Prospecção e relacionamento com a pessoa investidora",de:20, ate:25 },
+    { m:"Indicação de investimentos",                          de:13, ate:32 },
+    { m:"Indicação de investimentos",                          de:37, ate:46 },
+    { m:"Análise de portfólio e monitoramento da carteira",    de:1,  ate:25 },
+    { m:"Prospecção e relacionamento com a pessoa investidora",de:1,  ate:19 },
+    { m:"Indicação de investimentos",                          de:33, ate:36 },
+    { m:"Indicação de investimentos",                          de:47, ate:50 }
+  ]
+};
+/* Ordem historica: materia mais pesada primeiro, topicos na ordem do edital. */
+function _sequenciaPorPeso(){
+  const materias=getMaterias().slice().sort((a,b)=>b.peso-a.peso);
+  const topicos=getTopicos();
+  const todos=[];
+  materias.forEach(m=>(topicos[m.nome]||[]).forEach(t=>todos.push({mat:m.nome,top:t,peso:m.peso})));
+  return todos;
+}
+/* FONTE UNICA da ordem do plano. Todo lugar que precisa da lista corrida de
+   topicos chama esta funcao, senao a cobertura calcula uma ordem e o
+   cronograma distribui outra. */
+function getSequenciaTopicos(){
+  const padrao=_sequenciaPorPeso();
+  const receita=ORDEM_RECOMENDADA[STATE.prefeitura];
+  if(!padrao.length||!receita||STATE.ordemPlano!=="recomendada") return padrao;
+  const topicos=getTopicos();
+  const pesoDe={}; getMaterias().forEach(m=>{ pesoDe[m.nome]=m.peso; });
+  const usados=new Set(), seq=[];
+  receita.forEach(faixa=>{
+    const lista=topicos[faixa.m]||[];
+    const ate=Math.min(faixa.ate,lista.length);
+    for(let i=faixa.de;i<=ate;i++){
+      const t=lista[i-1];
+      if(t==null) continue;
+      const chave=faixa.m+"||"+t;
+      if(usados.has(chave)) continue;
+      usados.add(chave);
+      seq.push({mat:faixa.m,top:t,peso:pesoDe[faixa.m]});
+    }
+  });
+  padrao.forEach(t=>{
+    const chave=t.mat+"||"+t.top;
+    if(!usados.has(chave)){ usados.add(chave); seq.push(t); }
+  });
+  return seq.length===padrao.length?seq:padrao;
+}
+
 function getExtrasDoDia(dateKey){ return (STATE.extrasPorDia||{})[dateKey]||[]; }
 
 // Todos os tópicos de um dia: base (densidade dinâmica) + extras de recuperação
@@ -227,8 +309,7 @@ function calcAdiamentoProva(missedKeys,hojeRef){
 function calcCoberturaEdital(){
   const materias=getMaterias().slice().sort((a,b)=>b.peso-a.peso);
   const topicos=getTopicos();
-  const todos=[];
-  materias.forEach(m=>(topicos[m.nome]||[]).forEach(t=>todos.push({mat:m.nome,top:t})));
+  const todos=getSequenciaTopicos();
   const total=todos.length;
   if(!total||!STATE.inicio) return {cobre:true,total:0,agendados:0,faltam:0,materias:[]};
 
@@ -288,6 +369,13 @@ function calcCoberturaEdital(){
    - Garante cobertura 100% mesmo com início tardio              */
 function getTopicosDiaBase(dateKey){
   if(!STATE.inicio||dateKey<STATE.inicio) return [];
+  /* CONGELAMENTO. O vinculo entre dia e topico e posicional: o dia 12 do
+     plano mostra o 12o topico da lista. Se a lista mudar, e ela muda quando
+     o edital ganha topico novo, o dia ja estudado passaria a exibir outro
+     assunto e a nota do aluno mudaria de dono. Por isso o primeiro registro
+     do dia grava os topicos daquele dia, e a partir dai eles nao se mexem. */
+  const _fix=(STATE.dias[dateKey]||{}).topicosFix;
+  if(Array.isArray(_fix)&&_fix.length) return _fix.map(t=>({mat:t.mat,top:t.top,peso:t.peso}));
   // Conteudo novo termina na Revisao Geral; dali ate a prova e so treino.
   const _lim=getLimiteConteudo();
   if(_lim&&dateKey>=fmt(_lim)) return [];
@@ -295,11 +383,8 @@ function getTopicosDiaBase(dateKey){
   if(pos<0||pos>4) return [];
   // Dia 1 é sempre Orientações do Coach — não recebe tópicos de conteúdo
   if(dateKey===STATE.inicio) return [];
-  // Lista de tópicos ordenada por peso decrescente (priorização)
-  const materias=getMaterias().slice().sort((a,b)=>b.peso-a.peso);
-  const topicos=getTopicos();
-  const todos=[];
-  materias.forEach(m=>(topicos[m.nome]||[]).forEach(t=>todos.push({mat:m.nome,top:t,peso:m.peso})));
+  // Lista corrida de tópicos, na ordem do plano (ver getSequenciaTopicos)
+  const todos=getSequenciaTopicos();
   if(!todos.length) return [{mat:"Revisão Geral",top:"Conteúdo do Dia",peso:10}];
   const diasLivres=STATE.diasLivres||[];
   const ini=parseDate(STATE.inicio); ini.setHours(0,0,0,0);
@@ -322,8 +407,7 @@ function calcExpectedPerSubject(hojeKey){
   hojeKey=hojeKey||fmt(new Date());
   const materias=getMaterias().slice().sort((a,b)=>b.peso-a.peso);
   const topicos=getTopicos();
-  const todos=[];
-  materias.forEach(m=>(topicos[m.nome]||[]).forEach(t=>todos.push({mat:m.nome,top:t})));
+  const todos=getSequenciaTopicos();
   if(!todos.length) return {};
   // dias de conteúdo decorridos até hoje (pos 0-4, excluindo o Dia 1)
   let conteudo=0;
@@ -1361,6 +1445,7 @@ if(typeof module!=="undefined"&&module.exports){
   module.exports={calcCoberturaEdital,calcAntecipacao,calcPrazoConteudo,calcAdiamentoProva,getLimiteConteudo,MIN_POR_TOPICO_H,
     fmt,parseDate,isDiaLivre,isDiaEstudo,getCicloPos,getNumRevisao,
     getMaterias,getTopicos,getTopicoDiaByKey,getTopicosDiaBase,getTopicosDoDia,
+    getSequenciaTopicos,ORDEM_RECOMENDADA,
     getExtrasDoDia,getPrevNonFreeDay,isSimuladoDay,calcRevisoes,calcExpectedPerSubject,getTopicosFracos,buildAgendaSemanaICS,isProvaDay,isRevisaoGeralDay,isRetaFinalDay,
     _densityFor,aggregateEstrelas,calcStreaks,calcHeatmapConsistencia,calcRitmoSemanal,calcMarcos,MARCOS_SEQUENCIA,calcRumo,RUMO_TAGS,calcMesConsistencia,calcMedalhas,PATENTES,
     calcDominio,DOMINIO_MIN_AMOSTRA,
