@@ -1,5 +1,5 @@
 /* GERADO por outputs/questoes_para_js.py. NAO editar a mao.
-   Fonte: _conteudo/cpror/questoes/**.yaml  ·  82 questoes em 9 topicos
+   Fonte: _conteudo/cpror/questoes/**.yaml  ·  188 questoes em 20 topicos
    Para mudar uma questao, edite o YAML e rode o script de novo. */
 window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
  "cproRAnbima": {
@@ -503,6 +503,1907 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "b": "Registrar direção, causa e surpresa, mapear os canais por classe e comparar o risco atualizado com o objetivo.",
       "c": "Manter as posições sem atualizar premissas porque os pesos continuam dentro das faixas estratégicas.",
       "d": "Escolher o indicador com reação recente intensa e usá-lo como explicação única da carteira."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Revisão do perfil e comparação da alocação atual com a desejada": [
+    {
+     "id": "cpror-car-04-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O método confirma primeiro se a referência pertence ao cliente atual, constrói o alvo, mede os pesos e só então calcula e explica os desvios.</p><p>A alternativa B coloca operação antes da revisão. A alternativa C adapta o alvo ao movimento do mercado. A alternativa D começa pela seleção e transforma o resultado em referência sem validar o cliente.</p><p>Regra de bolso: confirme a referência, tire a fotografia, meça a distância e descubra a causa.</p>",
+     "enunciado": "<p>Um profissional inicia a análise anual de uma carteira e precisa evitar que a recomendação anteceda o diagnóstico. Organize a sequência usada para comparar a estrutura observada com a desejada.</p>",
+     "alternativas": {
+      "a": "Confirmar cliente e objetivos, definir o alvo, medir a carteira, calcular desvios e identificar suas causas.",
+      "b": "Calcular os desvios, escolher operações, atualizar o perfil e ajustar o alvo ao resultado das transações.",
+      "c": "Observar a classe valorizada, alterar a meta, revisar custos e depois perguntar sobre o objetivo do cliente.",
+      "d": "Selecionar novos ativos, medir seus preços, excluir fluxos e registrar a carteira resultante como referência."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-04-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O peso atual usa R$ 360.000 de valor de mercado dividido por R$ 1 milhão, resultando em 36%.</p><p>A alternativa A usa custo de aquisição e esconde a exposição corrente. A alternativa C conta o capital duas vezes. A alternativa D transforma apenas o ganho em peso da classe.</p><p>Regra de bolso: alocação atual é fotografia de mercado, e não memória do preço pago.</p>",
+     "enunciado": "<p>Uma cliente comprou ações por R$ 250.000, e elas valem R$ 360.000 na data comum da revisão. O patrimônio analisado soma R$ 1 milhão. Calcule o peso atual que deve entrar no diagnóstico da alocação.</p>",
+     "alternativas": {
+      "a": "25%, usando o custo histórico para preservar a referência da compra.",
+      "b": "36%, usando o valor de mercado da posição dividido pelo patrimônio atual.",
+      "c": "61%, somando o custo de aquisição à valorização como duas exposições.",
+      "d": "11%, usando apenas a diferença entre o valor atual e o valor aplicado."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-04-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. R$ 360.000 divididos por R$ 1 milhão resultam em 36%. Frente ao alvo de 30%, há sobrepeso de 6 pontos percentuais, equivalente a R$ 60.000.</p><p>A alternativa A usa o alvo como peso atual e calcula valor incompatível. A alternativa B acerta o peso, mas inverte o sinal. A alternativa D trata a diferença monetária como se fosse a própria participação.</p><p>Regra de bolso: atual menos alvo define o sinal e o tamanho do desvio.</p>",
+     "enunciado": "<p>Uma carteira de R$ 1 milhão tem alvo de 30% em ações e posição atual de R$ 360.000 nessa classe. Calcule o peso observado, o desvio em pontos percentuais e o desvio em reais.</p>",
+     "alternativas": {
+      "a": "Peso de 30%, desvio de +6 p.p. e excesso de R$ 30.000.",
+      "b": "Peso de 36%, desvio de -6 p.p. e falta de R$ 60.000.",
+      "c": "Peso de 36%, desvio de +6 p.p. e excesso de R$ 60.000.",
+      "d": "Peso de 60%, desvio de +30 p.p. e excesso de R$ 360.000."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-04-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Contas ligadas ao mesmo objetivo precisam entrar no perímetro, e os valores devem representar uma data comum para que pesos e desvios sejam comparáveis.</p><p>A alternativa A confunde instituição principal com patrimônio completo. A alternativa B usa custo para preencher dados de mercado e presume alinhamento temporal. A alternativa C aplica uma correção arbitrária à posição ausente.</p><p>Regra de bolso: defina o que entra e congele a mesma data antes de dividir qualquer posição pelo total.</p>",
+     "enunciado": "<p>Um cliente mantém investimentos destinados ao mesmo objetivo em duas instituições. O relatório inclui apenas uma delas e mistura valores de sexta-feira com valores posteriores a uma forte oscilação na segunda-feira. Avalie a qualidade da fotografia.</p>",
+     "alternativas": {
+      "a": "A fotografia permanece válida porque a instituição principal representa a estratégia escolhida pelo cliente.",
+      "b": "O custo histórico pode substituir os valores ausentes e alinhar automaticamente as datas de referência.",
+      "c": "A oscilação posterior deve ser aplicada apenas à conta excluída para equilibrar o patrimônio consolidado.",
+      "d": "O perímetro incompleto e as datas diferentes podem criar pesos e concentrações que a carteira consolidada não possui."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-04-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A valorização relativa aumentou o peso das ações sem alterar o cliente, de modo que o alvo permanece como referência e registra sobrepeso de mercado.</p><p>A alternativa B deduz mudança de perfil a partir do retorno. A alternativa C apaga o desvio ao adaptar a meta à carteira. A alternativa D atribui o movimento a fluxo e inverte o efeito da valorização.</p><p>Regra de bolso: mercado muda peso; informação do cliente muda estratégia.</p>",
+     "enunciado": "<p>Uma carteira começou alinhada ao alvo de 30% em ações. Essa classe se valorizou acima das demais e passou a representar 36%, enquanto objetivos, horizonte e capacidade da cliente permaneceram iguais. Identifique a causa e o diagnóstico.</p>",
+     "alternativas": {
+      "a": "O mercado deslocou os pesos, produzindo sobrepeso frente ao alvo vigente sem mudança da estratégia da cliente.",
+      "b": "O perfil mudou para arrojado porque a valorização elevou a tolerância e a capacidade financeira da cliente.",
+      "c": "O alvo deve passar a 36% porque a carteira observada revela a distribuição desejada depois do desempenho.",
+      "d": "O desvio nasceu de resgate, pois a alta de uma classe reduz seu valor de mercado dentro do patrimônio."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-04-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Após o resgate, a liquidez é R$ 20.000 e o patrimônio é R$ 920.000, resultando em 2,17%. A renda fixa permanece em R$ 500.000 e passa a 54,35% do total.</p><p>A alternativa A usa o patrimônio anterior. A alternativa C distribui o resgate por classes que permaneceram intactas. A alternativa D recoloca o fluxo no denominador e troca os pesos.</p><p>Regra de bolso: fluxo altera a posição atingida e também o total usado no cálculo de cada peso.</p>",
+     "enunciado": "<p>Uma carteira alinhada possui R$ 1 milhão, dos quais R$ 100.000 estão em liquidez e R$ 500.000 em renda fixa. O cliente resgata R$ 80.000 apenas da liquidez, sem oscilação de mercado. Calcule os novos pesos dessas duas classes.</p>",
+     "alternativas": {
+      "a": "Liquidez de 2,00% e renda fixa de 50,00%, mantendo o patrimônio inicial no denominador.",
+      "b": "Liquidez de 2,17% e renda fixa de 54,35%, usando o patrimônio final de R$ 920.000.",
+      "c": "Liquidez de 8,00% e renda fixa de 42,00%, retirando o fluxo das duas posições.",
+      "d": "Liquidez de 10,87% e renda fixa de 45,65%, somando o resgate novamente ao patrimônio."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-04-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A obrigação próxima exige nova referência. Frente ao alvo atualizado, 8% menos 25% resulta em -17 pontos percentuais, e 36% menos 20% resulta em +16.</p><p>A alternativa A separa o objetivo da estratégia. A alternativa B usa apenas a causa de mercado e mantém meta vencida. A alternativa D ajusta o alvo à fotografia para esconder os desvios.</p><p>Regra de bolso: objetivo novo pede alvo novo antes da comparação.</p>",
+     "enunciado": "<p>Uma cliente com horizonte longo passa a precisar de R$ 250.000 em dezoito meses. Após revisão, o alvo muda de 10% para 25% em liquidez e de 30% para 20% em ações. A carteira atual mantém 8% e 36% nessas classes. Interprete os desvios.</p>",
+     "alternativas": {
+      "a": "A meta antiga continua válida porque os valores de mercado permaneceram iguais durante a revisão do objetivo.",
+      "b": "A valorização explica o caso inteiro, permitindo comparar a carteira apenas com 10% e 30%.",
+      "c": "O novo objetivo altera a referência, gerando falta de 17 p.p. em liquidez e excesso de 16 p.p. em ações.",
+      "d": "O alvo deve copiar 8% e 36% para preservar a carteira e eliminar a necessidade de novo diagnóstico."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-04-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A revisão confirmou a referência, a tabela mediu os desvios e a valorização explicou sua origem. O diagnóstico está pronto, enquanto a decisão de rebalancear ainda depende de critérios posteriores.</p><p>A alternativa A adapta a estratégia ao resultado do mercado. A alternativa B transforma medida em ordem e ignora custos e fluxos. A alternativa C confunde deslocamento dos pesos com falha na seleção dos instrumentos.</p><p>Regra de bolso: termine esta etapa com alvo, distância e causa, e deixe a execução para a análise seguinte.</p>",
+     "enunciado": "<p>Uma carteira de R$ 1 milhão tem alvo de 10% em liquidez, 50% em renda fixa, 30% em ações e 10% no exterior. Os pesos atuais são 8%, 46%, 36% e 10%. O cliente mantém objetivo e perfil, e a valorização das ações explica o desvio. Estruture a conclusão desta etapa.</p>",
+     "alternativas": {
+      "a": "Elevar o alvo de ações a 36% e reduzir as metas das classes que ficaram abaixo para coincidir com a carteira.",
+      "b": "Vender R$ 60.000 em ações imediatamente porque o desvio calculado já define operação, prazo e custo.",
+      "c": "Refazer a seleção dos produtos porque a valorização demonstra incompatibilidade das classes com o perfil.",
+      "d": "Registrar alvo válido, sobrepeso de 6 p.p. em ações, faltas compensatórias e causa de mercado antes de decidir o ajuste."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-04-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. A mudança do cliente redefine o alvo, o resgate altera posições e patrimônio, e a valorização explica parte da distância observada. As três camadas precisam ser separadas.</p><p>A alternativa B descarta informações relevantes. A alternativa C mantém referência vencida e retira um fluxo efetivo da fotografia. A alternativa D elimina o diagnóstico ao copiar os pesos atuais.</p><p>Regra de bolso: quando as causas se acumulam, atualize primeiro o cliente, depois os fluxos e por fim decomponha o mercado.</p>",
+     "enunciado": "<p>Durante a revisão, ações se valorizaram, o cliente realizou resgate concentrado na liquidez e informou nova obrigação em prazo curto. A carteira apresenta desvios relevantes. Organize o diagnóstico diante das três causas simultâneas.</p>",
+     "alternativas": {
+      "a": "Atualizar a referência pela nova obrigação, recalcular pesos após o fluxo e separar a parcela dos desvios associada aos movimentos de mercado.",
+      "b": "Escolher a causa com impacto visual intenso e ignorar as demais para preservar uma explicação simples ao cliente.",
+      "c": "Manter o alvo anterior, retirar o resgate do patrimônio e classificar a nova obrigação como oscilação de mercado.",
+      "d": "Igualar o alvo aos pesos atuais porque múltiplas causas impedem calcular uma estrutura desejada para o cliente."
+     },
+     "gabarito": "a"
+    }
+   ],
+   "Rentabilidade real, volatilidade e correlação no monitoramento": [
+    {
+     "id": "cpror-car-05-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Rentabilidade real mede mudança do poder de compra, volatilidade mede dispersão e correlação mede associação linear entre os retornos das posições.</p><p>A alternativa B atribui poder de compra à volatilidade. A alternativa C troca as funções dos três indicadores. A alternativa D usa retorno nominal para poder de compra e inflação como medida de movimento conjunto.</p><p>Regra de bolso: real responde quanto comprou, volatilidade quanto oscilou e correlação como oscilou junto.</p>",
+     "enunciado": "<p>Em uma reunião de acompanhamento, o profissional precisa separar três perguntas: ganho de poder de compra, dispersão dos retornos e movimento conjunto das posições. Associe cada pergunta ao indicador correspondente.</p>",
+     "alternativas": {
+      "a": "Rentabilidade real, volatilidade e correlação, nessa ordem.",
+      "b": "Volatilidade, correlação e rentabilidade nominal, nessa ordem.",
+      "c": "Correlação, rentabilidade real e volatilidade, nessa ordem.",
+      "d": "Rentabilidade nominal, correlação e inflação, nessa ordem."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-05-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A divisão de 1,12 por 1,07 resulta em aproximadamente 1,0467. Subtraindo 1, a rentabilidade real é 4,67%.</p><p>A alternativa A usa a aproximação por subtração. A alternativa C aplica a inflação sobre a taxa em vez de comparar fatores. A alternativa D combina os percentuais sem relação com ganho real.</p><p>Regra de bolso: transforme retorno e inflação em fatores, divida e retire a unidade.</p>",
+     "enunciado": "<p>Uma carteira rendeu 12% em um ano no qual a inflação foi de 7%. O cliente deseja conhecer o ganho exato de poder de compra no mesmo período. Calcule a rentabilidade real pela divisão dos fatores.</p>",
+     "alternativas": {
+      "a": "5,00%, obtidos pela diferença simples entre retorno e inflação.",
+      "b": "4,67%, obtidos por 1,12 dividido por 1,07, com subtração final de 1.",
+      "c": "5,61%, obtidos aplicando a inflação sobre o retorno nominal de 12%.",
+      "d": "19,84%, obtidos pela multiplicação direta dos percentuais informados."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-05-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. O cálculo 1,04 dividido por 1,06, com subtração final de 1, resulta em aproximadamente -1,89%. O saldo cresceu em reais, mas perdeu poder de compra.</p><p>A alternativa A interpreta incorretamente a diferença das taxas. A alternativa B confunde aumento nominal com preservação real. A alternativa D multiplica as taxas em vez de dividir os fatores.</p><p>Regra de bolso: saldo nominal crescente ainda pode comprar menos quando fica abaixo da inflação acumulada.</p>",
+     "enunciado": "<p>Um investimento passou de R$ 100.000 para R$ 104.000, enquanto a inflação do período foi de 6%. O extrato mostra ganho nominal, e o cliente pergunta se preservou o poder de compra. Calcule e interprete o retorno real.</p>",
+     "alternativas": {
+      "a": "+2,00%, porque o saldo nominal cresceu quatro pontos e a inflação consumiu dois.",
+      "b": "0,00%, porque o retorno nominal positivo apresentado preserva o poder de compra.",
+      "c": "-1,89%, porque 1,04 dividido por 1,06 fica abaixo de 1.",
+      "d": "-2,40%, porque a inflação incide diretamente sobre o retorno nominal de 4%."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-05-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Sob a mesma metodologia, volatilidade de 7% indica dispersão inferior à de 15% no período, mas não garante comportamento futuro nem decide a adequação isoladamente.</p><p>A alternativa A trata volatilidade como perda realizada. A alternativa B transforma oscilação em retorno real. A alternativa C ignora os caminhos diferentes que podem levar ao mesmo retorno acumulado.</p><p>Regra de bolso: retorno informa chegada; volatilidade descreve a irregularidade do caminho.</p>",
+     "enunciado": "<p>Duas carteiras renderam 10% no ano sob a mesma base de cálculo. A carteira A apresentou volatilidade anualizada de 7%, e a carteira B, de 15%. Explique o que essa comparação permite concluir sobre o período medido.</p>",
+     "alternativas": {
+      "a": "A carteira A apresentou perdas de 7%, enquanto a B apresentou perdas de 15%.",
+      "b": "A carteira B entregou retorno real superior porque sua volatilidade ficou acima da carteira A.",
+      "c": "As duas tiveram trajetórias idênticas porque encerraram o ano com o mesmo retorno acumulado.",
+      "d": "A carteira A apresentou retornos com dispersão inferior, sem garantia de repetição ou adequação ao cliente."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-05-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. C possui associação linear inferior com A e B na janela e pode contribuir para diversificação, mas sua volatilidade e seu peso ainda influenciam o risco da carteira.</p><p>A alternativa B inverte a leitura da correlação positiva. A alternativa C transforma correlação baixa em independência absoluta. A alternativa D usa um único indicador para eliminar o risco individual e o tamanho da posição.</p><p>Regra de bolso: correlação mostra como combina; volatilidade e peso mostram quanto a posição pode afetar.</p>",
+     "enunciado": "<p>Uma carteira possui ativos A, B e C. Na mesma janela, as correlações são 0,85 entre A e B, 0,10 entre A e C e 0,20 entre B e C. O profissional avalia qual posição acrescenta comportamento distinto, considerando também peso e volatilidade. Interprete a matriz.</p>",
+     "alternativas": {
+      "a": "C apresenta potencial de diversificação em relação a A e B, pois suas correlações são inferiores, sujeito aos demais riscos.",
+      "b": "B oferece compensação completa a A porque correlação positiva indica movimentos em direções opostas.",
+      "c": "A e C são independentes nos demais cenários porque correlação próxima de zero elimina relações de estresse.",
+      "d": "A volatilidade de C perde relevância porque a correlação baixa define sozinha o risco acrescentado à carteira."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-05-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A média ponderada é 0,60 vezes 10% somada a 0,40 vezes 20%, resultando em 14%. Dividindo 14% pela volatilidade da carteira de 11%, o DR é 1,27.</p><p>A alternativa A substitui a média ponderada pelo risco da carteira. A alternativa C usa média e razão sem relação com a fórmula. A alternativa D soma volatilidades e ignora os pesos.</p><p>Regra de bolso: primeiro pondere as volatilidades individuais; depois divida esse resultado pela volatilidade conjunta.</p>",
+     "enunciado": "<p>Uma carteira investe 60% no ativo A, com volatilidade de 10%, e 40% no ativo B, com volatilidade de 20%. A volatilidade da carteira foi 11%. Calcule a média ponderada e o coeficiente de diversificação adotado na aula.</p>",
+     "alternativas": {
+      "a": "Média de 11% e DR de 1,00, usando a volatilidade da carteira como numerador e denominador.",
+      "b": "Média de 14% e DR de 1,27, dividindo 14% por 11%.",
+      "c": "Média de 15% e DR de 0,73, dividindo o peso de A pela volatilidade de B.",
+      "d": "Média de 30% e DR de 2,73, somando as volatilidades sem ponderar os pesos."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-05-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Correlação depende da amostra, da frequência e do regime econômico. A comparação precisa manter metodologia comum ou explicar o efeito de cada escolha.</p><p>A alternativa A presume comparabilidade automática. A alternativa B trata janela longa como exclusão dos regimes que ela contém. A alternativa D atribui funções incompatíveis às frequências de retorno.</p><p>Regra de bolso: compare coeficientes apenas depois de alinhar período, frequência e fórmula.</p>",
+     "enunciado": "<p>Um relatório compara correlação calculada com retornos diários dos últimos doze meses a outra calculada com retornos mensais de cinco anos. A segunda apresenta valor inferior, e o cliente conclui que a diversificação aumentou. Avalie a comparabilidade.</p>",
+     "alternativas": {
+      "a": "A conclusão é direta porque coeficientes de correlação mantêm a mesma interpretação sob frequências e janelas distintas.",
+      "b": "O valor inferior comprova mudança estrutural porque a janela longa elimina regimes econômicos anteriores.",
+      "c": "Frequência e janela diferentes podem explicar a divergência, exigindo metodologia comum antes de atribuir mudança à carteira.",
+      "d": "Retornos diários medem volatilidade, enquanto retornos mensais medem apenas rentabilidade real acumulada."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-05-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A conta 1,11 dividido por 1,06, com subtração final de 1, gera 4,72%. A volatilidade de 9% respeita a referência de 10%, e DR acima de 1 indica benefício observado.</p><p>A alternativa A usa subtração simples e inverte volatilidade e DR. A alternativa B troca a relação entre retorno e inflação. A alternativa C transforma uma medida histórica em garantia e elimina o objetivo.</p><p>Regra de bolso: leia poder de compra, oscilação e diversificação separadamente antes de reuni-los no diagnóstico.</p>",
+     "enunciado": "<p>Uma cliente busca preservar poder de compra e aceita volatilidade anual de até 10% na estratégia. A carteira rendeu 11%, a inflação foi 6%, a volatilidade ficou em 9% e o DR em 1,30. Integre os indicadores para avaliar o período.</p>",
+     "alternativas": {
+      "a": "O ganho real foi 5%, a volatilidade superou o limite e o DR indica aumento de risco pela diversificação.",
+      "b": "O retorno nominal abaixo da inflação produziu perda real, apesar de volatilidade e DR compatíveis.",
+      "c": "O DR de 1,30 garante manutenção dos resultados e substitui a comparação com o objetivo de poder de compra.",
+      "d": "O ganho real foi cerca de 4,72%, a volatilidade ficou dentro da referência e houve redução observada por diversificação."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-05-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. O DR anterior é 14% dividido por 11%, ou 1,27. O atual é 14% dividido por 13%, ou 1,08. A aproximação de 1 mostra perda de benefício.</p><p>A alternativa B erra o cálculo e o efeito da correlação elevada. A alternativa C ignora a mudança da volatilidade conjunta. A alternativa D inverte a fórmula definida na aula.</p><p>Regra de bolso: correlações sobem, volatilidade conjunta se aproxima da média ponderada e o DR tende a 1.</p>",
+     "enunciado": "<p>Em um período de estresse, a média ponderada das volatilidades permanece em 14%, mas a volatilidade da carteira sobe de 11% para 13% porque as correlações aumentaram. Compare o DR anterior com o atual e interprete a mudança.</p>",
+     "alternativas": {
+      "a": "O DR cai de 1,27 para 1,08, sinalizando redução do benefício observado de diversificação.",
+      "b": "O DR sobe de 1,27 para 1,40, sinalizando que correlação elevada reduz a volatilidade conjunta.",
+      "c": "O DR permanece em 1,27 porque pesos e volatilidades individuais ficaram constantes.",
+      "d": "O DR cai para 0,79 porque a volatilidade da carteira deve ocupar o numerador da convenção adotada."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-05-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. Inflação acima do retorno indica perda de poder de compra, e correlação crescente pode reduzir o benefício de diversificação mesmo com volatilidade corrente reduzida.</p><p>A alternativa A confunde retorno nominal com objetivo real. A alternativa C interpreta movimento conjunto como redução de risco. A alternativa D troca medidas de desempenho por simples contagem de posições.</p><p>Regra de bolso: ganho real responde ao objetivo, e correlação e volatilidade mostram como o risco foi entregue.</p>",
+     "enunciado": "<p>Uma carteira apresentou retorno nominal positivo, volatilidade reduzida e correlação crescente entre suas classes. A inflação superou o retorno, e o cliente depende de preservação do poder de compra. Organize o diagnóstico antes de formular nova recomendação.</p>",
+     "alternativas": {
+      "a": "Priorizar a volatilidade reduzida e classificar o período como adequado, pois retorno nominal positivo atende ao objetivo.",
+      "b": "Registrar perda real, examinar se a correlação comprometeu a diversificação e comparar o risco conjunto com a referência do cliente.",
+      "c": "Usar a correlação crescente como prova de estabilidade, porque movimentos conjuntos reduzem a dispersão da carteira.",
+      "d": "Substituir os indicadores pelo número de posições, pois quantidade de ativos mede simultaneamente retorno real e risco."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Diagnóstico da carteira e comunicação de novas recomendações": [
+    {
+     "id": "cpror-car-06-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A devolutiva começa pelo fato observado, explica suas causas, conecta o achado aos objetivos do cliente e apresenta a conduta proposta.</p><p>A alternativa B parte do produto e inclui previsão. A alternativa C usa promessa e execução apressada. A alternativa D reúne elementos sem construir relação entre evidência e decisão.</p><p>Regra de bolso: diga o que ocorreu, por que ocorreu, o que significa e o que fazer.</p>",
+     "enunciado": "<p>Um profissional prepara a devolutiva da análise de uma carteira. Qual sequência organiza a explicação do diagnóstico e da conduta proposta?</p>",
+     "alternativas": {
+      "a": "Observação, causa, significado para os objetivos e proposta de ação.",
+      "b": "Produto, rentabilidade recente, previsão de mercado e ordem de aplicação.",
+      "c": "Referência, promessa de recuperação, venda imediata e novo produto.",
+      "d": "Oscilação diária, opinião do cliente, ranking de retorno e execução."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-06-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Um trimestre abaixo da referência pode caber no comportamento esperado e precisa ser interpretado com risco, mandato, horizonte e causa.</p><p>A alternativa A conclui pela troca a partir de um período isolado. A alternativa C descarta a referência sem análise. A alternativa D converte observação passada em previsão.</p><p>Regra de bolso: resultado curto vira diagnóstico apenas depois de receber contexto.</p>",
+     "enunciado": "<p>Uma carteira ficou abaixo de sua referência em um trimestre, permaneceu dentro das faixas de risco e atende a uma meta distante. Como esse resultado deve ser tratado na análise inicial?</p>",
+     "alternativas": {
+      "a": "Como falha definitiva da estratégia, seguida de troca integral da carteira.",
+      "b": "Como oscilação que pede contexto antes de justificar mudança na estratégia.",
+      "c": "Como prova de inadequação da referência escolhida para o acompanhamento.",
+      "d": "Como confirmação de que a carteira entregará recuperação no período seguinte."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-06-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. O peso ultrapassou a faixa planejada e modificou o risco da carteira, embora o movimento tenha sido acompanhado por ganho.</p><p>A alternativa A usa o retorno para ocultar o desvio. A alternativa B abandona o parâmetro sem revisar o planejamento. A alternativa D condiciona o risco à ocorrência de perda.</p><p>Regra de bolso: desempenho favorável também pode deslocar a carteira para fora do risco combinado.</p>",
+     "enunciado": "<p>Após valorização da renda variável, sua participação passou de 20% para 32%, acima da faixa definida. A carteira teve retorno positivo e passou a oscilar além da referência do cliente. Identifique o sinal relevante.</p>",
+     "alternativas": {
+      "a": "O retorno positivo elimina a necessidade de examinar a composição atual.",
+      "b": "A valorização indica que a faixa anterior perdeu utilidade para o planejamento.",
+      "c": "O peso acima da faixa alterou o risco e pode fundamentar uma nova recomendação.",
+      "d": "A oscilação deve ser avaliada apenas quando produzir perda nominal no período."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-06-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Ela apresenta período, referência, risco e causa provável, permitindo discutir se a parcela defensiva cumpriu sua função.</p><p>A alternativa A transforma diferença em erro automático. A alternativa B elimina objetivo e risco da avaliação. A alternativa C recomenda retirada antes de interpretar a finalidade da proteção.</p><p>Regra de bolso: rentabilidade útil vem acompanhada de período, referência, risco e explicação.</p>",
+     "enunciado": "<p>Uma carteira rendeu 9% em doze meses, ante 10% de uma referência compatível, com volatilidade dentro da faixa planejada. A diferença decorreu principalmente de uma parcela defensiva. Qual comunicação oferece contexto adequado?</p>",
+     "alternativas": {
+      "a": "A carteira decepcionou porque a diferença observada para a referência indica erro de gestão.",
+      "b": "O retorno de 9% comprova sucesso, independentemente do objetivo e do risco assumido.",
+      "c": "A parcela defensiva deve ser retirada porque reduziu o retorno relativo no período.",
+      "d": "A carteira ficou um ponto abaixo da referência, com risco dentro da faixa, e cabe avaliar o papel da proteção antes de mudar."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-06-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Os dados indicam que a estratégia continua compatível, de modo que manter pode ser uma recomendação ativa, acompanhada de revisão.</p><p>A alternativa B usa promessa de resultado. A alternativa C ignora os parâmetros válidos da carteira. A alternativa D retira o contexto necessário à compreensão.</p><p>Regra de bolso: manutenção fundamentada também é decisão de carteira.</p>",
+     "enunciado": "<p>O cliente pede venda após uma queda de 4% na parcela de longo prazo. A alocação permanece na faixa definida, a reserva de curto prazo está preservada e o perfil segue válido. Qual devolutiva é coerente?</p>",
+     "alternativas": {
+      "a": "Explicar a compatibilidade da oscilação com o plano, recomendar manutenção fundamentada e definir nova revisão.",
+      "b": "Prometer recuperação para impedir uma decisão motivada pela queda recente.",
+      "c": "Executar a venda porque a preocupação manifestada substitui a análise do perfil.",
+      "d": "Mostrar apenas o retorno acumulado e omitir o risco para reduzir a inquietação."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-06-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A proposta deve explicar o problema corrigido, seus efeitos, consequências da execução e critérios de revisão.</p><p>A alternativa A transforma cenário em certeza. A alternativa C omite a relação com o diagnóstico. A alternativa D promete resultados que dependem do mercado.</p><p>Regra de bolso: recomendação clara mostra finalidade, consequências, execução e acompanhamento.</p>",
+     "enunciado": "<p>Uma recomendação propõe reduzir concentração e aproximar a carteira da faixa planejada. Que conjunto de informações deve acompanhar a proposta ao cliente?</p>",
+     "alternativas": {
+      "a": "Ranking dos produtos, retorno passado e cenário apresentado como certo.",
+      "b": "Objetivo da mudança, efeito esperado, riscos, custos, restrições e forma de acompanhamento.",
+      "c": "Nome dos ativos, opinião do profissional e autorização para operações futuras.",
+      "d": "Previsão de rentabilidade, prazo de recuperação e garantia de proteção patrimonial."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-06-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A mudança merece acompanhamento, mas amostra curta e risco ainda enquadrado pedem verificação antes de classificá-la como estrutural.</p><p>A alternativa A conclui e executa cedo. A alternativa B descarta informação relevante. A alternativa D prevê reversão sem base suficiente.</p><p>Regra de bolso: comunique o grau de certeza e indique qual evidência poderá confirmar o sinal.</p>",
+     "enunciado": "<p>A análise sugere que correlações subiram durante um choque, mas a amostra ainda é curta e o risco da carteira permanece na faixa. Qual conduta distingue evidência de certeza?</p>",
+     "alternativas": {
+      "a": "Classificar a diversificação como encerrada e substituir as posições na mesma reunião.",
+      "b": "Ignorar a mudança porque correlação possui pouca utilidade no acompanhamento.",
+      "c": "Explicar o sinal, observar outras janelas e acompanhar seu efeito antes de concluir por mudança estrutural.",
+      "d": "Afirmar que as correlações retornarão ao padrão assim que o choque terminar."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-06-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A mudança de horizonte afeta a função da carteira e exige comparar ajustes capazes de oferecer liquidez, com seus custos e riscos.</p><p>A alternativa A usa bom retorno para ignorar o novo prazo. A alternativa B adia um diagnóstico já necessário. A alternativa C amplia risco quando a proximidade da meta pede atenção à disponibilidade dos recursos.</p><p>Regra de bolso: mudança do cliente pode pesar mais que o desempenho recente na nova recomendação.</p>",
+     "enunciado": "<p>Um cliente precisará de recursos em seis meses. Sua carteira, antes voltada ao longo prazo, possui ativos sujeitos a oscilação e custo de saída. O retorno recente superou a referência. Como interpretar e comunicar o caso?</p>",
+     "alternativas": {
+      "a": "Preservar a carteira porque o retorno relativo positivo confirma adequação ao novo prazo.",
+      "b": "Esperar uma queda para discutir a necessidade de liquidez e os custos de saída.",
+      "c": "Recomendar aumento do risco para buscar o valor necessário antes do resgate.",
+      "d": "Tratar a nova necessidade como sinal, explicar o conflito de prazo e comparar alternativas de ajuste e seus custos."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-06-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. O registro deve permitir reconstruir o motivo da recomendação, a escolha feita, a execução prevista e o critério que será monitorado.</p><p>A alternativa B omite o fundamento da decisão. A alternativa C retira os caminhos discutidos. A alternativa D posterga a definição da medida usada para acompanhar a proposta.</p><p>Regra de bolso: uma recomendação termina com decisão documentada e próximo acompanhamento definido.</p>",
+     "enunciado": "<p>O profissional identificou concentração acima da faixa, apresentou duas formas de ajuste e o cliente escolheu executar em etapas por causa dos custos. Qual procedimento fecha adequadamente o ciclo?</p>",
+     "alternativas": {
+      "a": "Registrar evidências, alternativas, escolha, riscos, etapas e condição de acompanhamento da concentração.",
+      "b": "Registrar apenas as ordens executadas, pois a conversa perde relevância após a decisão.",
+      "c": "Guardar o diagnóstico sem as alternativas para simplificar uma futura análise da carteira.",
+      "d": "Aguardar o fim das etapas para definir o indicador que mostrará o efeito da recomendação."
+     },
+     "gabarito": "a"
+    }
+   ],
+   "Rebalanceamento por calendário e por faixas percentuais": [
+    {
+     "id": "cpror-car-07-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A regra usa datas fixas para iniciar a revisão, característica do rebalanceamento por calendário.</p><p>A alternativa B dependeria do rompimento de limites de peso. A alternativa C confunde frequência e risco. A alternativa D atribui às datas um comportamento de mercado que elas não determinam.</p><p>Regra de bolso: calendário olha quando revisar; faixa olha quanto o peso desviou.</p>",
+     "enunciado": "<p>Uma política determina a revisão da carteira em junho e dezembro. Qual gatilho de rebalanceamento ela utiliza?</p>",
+     "alternativas": {
+      "a": "Calendário, porque a análise ocorre em datas predeterminadas.",
+      "b": "Faixa, porque a data mede a distância em relação ao peso-alvo.",
+      "c": "Volatilidade, porque o semestre fixa o risco aceito pela carteira.",
+      "d": "Retorno, porque junho e dezembro encerram ciclos de valorização."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-07-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A faixa usa a magnitude do desvio como gatilho e atua quando o peso sai do intervalo permitido.</p><p>A alternativa A continuaria ligada à data, salvo regra adicional. A alternativa C permite a deriva dos pesos. A alternativa D confunde peso atual com taxa de retorno.</p><p>Regra de bolso: rompeu o limite definido, surgiu o gatilho percentual.</p>",
+     "enunciado": "<p>Uma classe possui alvo de 60% e faixa permitida entre 55% e 65%. Seu peso chega a 66% entre as revisões anuais. Qual regra reage diretamente a esse evento?</p>",
+     "alternativas": {
+      "a": "Calendário puro, porque o rompimento antecipa a data anual.",
+      "b": "Faixa percentual, porque o peso ultrapassou o limite de 65%.",
+      "c": "Buy and hold, porque a valorização recompõe o peso de 60%.",
+      "d": "Revisão por retorno, porque 66% representa a rentabilidade da classe."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-07-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A data semestral aciona o calendário com retorno obrigatório, enquanto 64% permanece dentro da faixa permitida.</p><p>A alternativa A ignora a regra temporal. A alternativa B inverte os gatilhos. A alternativa D trata peso dentro da faixa como rompimento.</p><p>Regra de bolso: o mesmo peso pode gerar operação pelo calendário e manutenção pela faixa.</p>",
+     "enunciado": "<p>Na data semestral, a renda variável está em 64%, com alvo de 60% e faixa de 55% a 65%. Compare calendário com retorno obrigatório ao alvo e regra por faixa.</p>",
+     "alternativas": {
+      "a": "As duas regras aguardam porque a diferença é de quatro pontos percentuais.",
+      "b": "A faixa rebalanceia, enquanto o calendário aguarda nova oscilação.",
+      "c": "O calendário rebalanceia, enquanto a faixa permite a manutenção em 64%.",
+      "d": "As duas regras rebalanceiam porque a data e o peso acionam a mesma condição."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-07-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O calendário puro depende da data, enquanto a faixa reage ao peso que saiu do intervalo permitido.</p><p>A alternativa A elimina a função da faixa. A alternativa B troca os critérios. A alternativa C confunde estar acima do alvo com ultrapassar o limite.</p><p>Regra de bolso: entre datas, apenas a política sensível à faixa reage ao rompimento.</p>",
+     "enunciado": "<p>Dois meses após uma revisão, o peso de renda variável atinge 68%, acima do limite de 65%. Compare calendário puro e faixa com acompanhamento contínuo.</p>",
+     "alternativas": {
+      "a": "O calendário e a faixa aguardam a data porque o peso-alvo segue em 60%.",
+      "b": "O calendário age pela magnitude, e a faixa aguarda o intervalo programado.",
+      "c": "As duas regras agem porque o desvio acima do alvo exige correção imediata.",
+      "d": "O calendário aguarda a data, e a faixa aciona o ajuste pelo rompimento."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-07-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A data garante exame periódico, e a faixa filtra diferenças que podem ter pouco benefício diante dos custos.</p><p>A alternativa B ignora movimentos entre revisões. A alternativa C presume pesos estáveis. A alternativa D elimina consequências possíveis da execução.</p><p>Regra de bolso: calendário organiza a revisão, e faixa decide se o desvio merece operação.</p>",
+     "enunciado": "<p>Uma política prevê revisão trimestral e operação apenas quando o peso estiver fora da faixa definida. Qual benefício essa combinação procura obter?</p>",
+     "alternativas": {
+      "a": "Preservar disciplina de revisão e evitar transações motivadas por desvios pequenos.",
+      "b": "Eliminar o risco de desvio entre as datas trimestrais.",
+      "c": "Fixar os pesos durante o trimestre sem necessidade de negociação.",
+      "d": "Impedir custos e tributação quando a faixa for ultrapassada."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-07-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A renda variável vale R$ 84.000 e deve chegar a R$ 72.000, enquanto a renda fixa passa de R$ 36.000 para R$ 48.000.</p><p>A alternativa A deixa os pesos acima e abaixo dos alvos. A alternativa C amplia o desvio. A alternativa D levaria a renda variável para R$ 60.000, abaixo do objetivo.</p><p>Regra de bolso: calcule os valores-alvo sobre o patrimônio e mova apenas a diferença.</p>",
+     "enunciado": "<p>Uma carteira de R$ 120.000 possui 70% em renda variável e 30% em renda fixa. Para retornar ao alvo de 60/40 sem aporte, qual movimentação é necessária?</p>",
+     "alternativas": {
+      "a": "Transferir R$ 8.000 da renda variável para a renda fixa.",
+      "b": "Transferir R$ 12.000 da renda variável para a renda fixa.",
+      "c": "Transferir R$ 20.000 da renda fixa para a renda variável.",
+      "d": "Transferir R$ 24.000 da renda variável para a renda fixa."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-07-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. O alvo exige correção de oito pontos percentuais, enquanto o limite exige correção de três pontos, antes dos efeitos da própria negociação.</p><p>A alternativa A inverte os volumes. A alternativa B atribui ao alvo proximidade com o limite superior. A alternativa D trata um ajuste pontual como dispensa de monitoramento.</p><p>Regra de bolso: voltar ao alvo corrige mais; voltar à faixa negocia menos.</p>",
+     "enunciado": "<p>Uma classe com alvo de 60% alcança 68%, acima da faixa de 55% a 65%. A política admite retorno ao alvo ou ao limite. Qual comparação está correta?</p>",
+     "alternativas": {
+      "a": "Retornar a 65% exige movimentação ampliada em relação ao retorno a 60%.",
+      "b": "Retornar a 60% mantém a carteira perto de novo rompimento do limite superior.",
+      "c": "Retornar a 60% corrige parcela mais ampla, enquanto retornar a 65% reduz o volume negociado.",
+      "d": "Retornar a 65% elimina a necessidade de definir novo gatilho de acompanhamento."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-07-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A decisão precisa confrontar o risco de manter o desvio com custos, imposto, prazo do aporte e capacidade de correção de cada alternativa.</p><p>A alternativa A ignora o resultado líquido. A alternativa B presume que o aporte será suficiente e oportuno. A alternativa C deixa a tributação substituir o limite de risco.</p><p>Regra de bolso: escolha a execução depois de comparar o custo de agir com o risco de esperar.</p>",
+     "enunciado": "<p>Uma carteira fora da faixa possui ganho acumulado na classe a ser reduzida. O cliente fará novo aporte em breve. Qual análise integra risco, custo e tributação?</p>",
+     "alternativas": {
+      "a": "Vender de imediato sem comparar o custo, pois o peso-alvo prevalece sobre os efeitos líquidos.",
+      "b": "Aguardar o aporte sem avaliar a exposição atual, pois dinheiro novo corrige a concentração observada.",
+      "c": "Manter o desvio para evitar imposto, ainda que o risco ultrapasse o limite aceito.",
+      "d": "Comparar venda, aporte dirigido e ajuste parcial, considerando urgência do risco e consequências de cada execução."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-07-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. A combinação mantém governança temporal, tolera oscilações previstas e permite tratar desvios relevantes antes da revisão seguinte.</p><p>A alternativa B devolve a decisão ao improviso. A alternativa C amplia giro e custos. A alternativa D troca o controle de alocação por desempenho recente.</p><p>Regra de bolso: uma política combinada define quando revisar, quanto tolerar e qual rompimento merece atenção.</p>",
+     "enunciado": "<p>Uma política anual deixa passar grandes desvios entre as datas. Uma política com faixa estreita gerou operações repetidas durante alta volatilidade. Qual ajuste preserva disciplina e controla o giro?</p>",
+     "alternativas": {
+      "a": "Adotar revisões periódicas, faixa coerente com o risco e alertas para rompimentos relevantes entre as datas.",
+      "b": "Retirar os limites e decidir após observar cada movimento do mercado.",
+      "c": "Rebalancear após cada variação de preço para conservar os pesos exatos.",
+      "d": "Usar apenas retorno recente como critério para antecipar ou adiar operações."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-07-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. Após o aporte, a renda fixa soma R$ 56.000 e o patrimônio chega a R$ 140.000. Os R$ 84.000 em renda variável representam 60%, e os R$ 56.000 representam 40%.</p><p>A alternativa A subestima o efeito do aporte. As alternativas C e D atribuem à renda fixa pesos acima daqueles produzidos pelos valores informados.</p><p>Regra de bolso: aporte dirigido pode recuperar o alvo sem vender a classe valorizada.</p>",
+     "enunciado": "<p>Uma carteira tem R$ 84.000 em renda variável e R$ 36.000 em renda fixa. O cliente aporta R$ 20.000 na renda fixa. Quais pesos resultam após o aporte?</p>",
+     "alternativas": {
+      "a": "65% em renda variável e 35% em renda fixa.",
+      "b": "60% em renda variável e 40% em renda fixa.",
+      "c": "58% em renda variável e 42% em renda fixa.",
+      "d": "55% em renda variável e 45% em renda fixa."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Buy and hold: comportamento dos pesos e limites da estratégia": [
+    {
+     "id": "cpror-car-08-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. No buy and hold puro, as unidades são mantidas, mas o valor de cada posição muda e altera sua participação no patrimônio.</p><p>A alternativa B descreve pesos constantes, que exigiriam negociação. A alternativa C confunde valor e preço. A alternativa D presume estabilidade do risco apesar da deriva de alocação.</p><p>Regra de bolso: o método congela quantidades, e o mercado movimenta os pesos.</p>",
+     "enunciado": "<p>Uma carteira adota buy and hold em sua forma pura. Os preços dos ativos mudam e nenhuma negociação é realizada. Qual elemento permanece fixo e qual tende a variar?</p>",
+     "alternativas": {
+      "a": "As quantidades permanecem fixas, enquanto os pesos variam com os preços.",
+      "b": "Os pesos permanecem fixos, enquanto as quantidades variam com os preços.",
+      "c": "O valor financeiro permanece fixo, enquanto os preços são recompostos.",
+      "d": "O nível de risco permanece fixo, enquanto a alocação retorna à origem."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-08-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A valorização eleva o valor relativo da classe arriscada e, sem rebalanceamento, aumenta seu peso e sua influência.</p><p>A alternativa A introduz venda ausente na estratégia. A alternativa C inverte o efeito relativo. A alternativa D confunde quantidades mantidas com proporções mantidas.</p><p>Regra de bolso: a posição que cresce acima das demais passa a comandar parcela ampliada da carteira.</p>",
+     "enunciado": "<p>Em uma carteira com uma classe arriscada e outra defensiva, a classe arriscada se valoriza acima da defensiva. Qual efeito caracteriza o buy and hold?</p>",
+     "alternativas": {
+      "a": "A classe valorizada retorna ao peso inicial por venda automática.",
+      "b": "A classe valorizada ganha peso e amplia sua influência sobre o risco da carteira.",
+      "c": "A classe defensiva ganha peso porque sua quantidade permaneceu fixa.",
+      "d": "As duas classes conservam a proporção inicial devido à ausência de operações."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-08-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. As ações passam a R$ 120.000 e a carteira a R$ 160.000. A divisão de R$ 120.000 por R$ 160.000 resulta em 75%.</p><p>A alternativa A mantém os pesos iniciais apesar da valorização desigual. A alternativa B usa uma base incompatível com o novo patrimônio. A alternativa D atribui às ações participação acima do valor calculado.</p><p>Regra de bolso: recalcule o peso dividindo o novo valor da posição pelo novo patrimônio total.</p>",
+     "enunciado": "<p>Uma carteira possui R$ 60.000 em ações e R$ 40.000 em renda fixa. As ações dobram de valor e a renda fixa permanece em R$ 40.000. Calcule os novos pesos sem negociação.</p>",
+     "alternativas": {
+      "a": "60% em ações e 40% em renda fixa.",
+      "b": "66,67% em ações e 33,33% em renda fixa.",
+      "c": "75% em ações e 25% em renda fixa.",
+      "d": "80% em ações e 20% em renda fixa."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-08-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Após a queda, as ações valem R$ 30.000 e o patrimônio soma R$ 70.000. A razão de R$ 30.000 por R$ 70.000 é 42,86%.</p><p>A alternativa A aplica a queda diretamente ao peso. A alternativa B trata percentual como valor monetário. A alternativa C mantém um peso que também depende do novo patrimônio.</p><p>Regra de bolso: quando a parcela arriscada cai, seu peso encolhe e a carteira fica relativamente defensiva.</p>",
+     "enunciado": "<p>Uma carteira parte de R$ 60.000 em ações e R$ 40.000 em renda fixa. As ações perdem metade do valor, e a renda fixa permanece estável. Qual passa a ser o peso aproximado das ações?</p>",
+     "alternativas": {
+      "a": "25,00%, porque a perda foi aplicada ao peso inicial.",
+      "b": "30,00%, porque o valor perdido é subtraído diretamente do percentual.",
+      "c": "40,00%, porque a renda fixa conserva seu peso inicial.",
+      "d": "42,86%, porque R$ 30.000 representam essa parcela dos R$ 70.000 restantes."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-08-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Menos negociações podem reduzir custos de giro e evitar a realização tributável provocada por uma venda de rebalanceamento.</p><p>A alternativa B cria uma isenção geral. A alternativa C apaga custos já ocorridos. A alternativa D ignora que rendimentos e eventos podem seguir regras tributárias próprias.</p><p>Regra de bolso: adiar a venda pode diferir imposto sobre ganho, mas não torna a carteira isenta.</p>",
+     "enunciado": "<p>Um cliente pergunta por que o baixo giro pode favorecer o resultado líquido da estratégia. Qual explicação é tecnicamente adequada?</p>",
+     "alternativas": {
+      "a": "Poucas transações reduzem custos e podem adiar o imposto ligado à venda com ganho, conforme a regra do ativo.",
+      "b": "A manutenção das posições concede isenção tributária aos rendimentos recebidos pela carteira.",
+      "c": "A ausência de rebalanceamento elimina spreads e custos existentes na compra inicial.",
+      "d": "O buy and hold impede eventos tributáveis provocados por rendimentos ou eventos dos ativos."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-08-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A deriva para 75% em ações pode elevar a oscilação e a perda possível além das faixas ainda válidas para o cliente.</p><p>A alternativa A confunde peso com quantidade. A alternativa C interpreta perda relativa de peso como perda financeira. A alternativa D usa ganho para afastar a análise de adequação.</p><p>Regra de bolso: a carteira pode mudar de risco mesmo quando o investidor não muda as quantidades.</p>",
+     "enunciado": "<p>Após um ciclo de alta, uma carteira inicialmente 60/40 chegou a 75/25. O perfil e as faixas do planejamento permanecem válidos. Qual é o principal limite da estratégia nesse caso?</p>",
+     "alternativas": {
+      "a": "A quantidade de ações aumentou sem autorização do cliente.",
+      "b": "O risco atual pode ter se afastado daquele aceito, embora nenhuma unidade tenha sido comprada.",
+      "c": "A renda fixa perdeu valor na mesma proporção do ganho de peso das ações.",
+      "d": "O retorno positivo impede a comparação da carteira com o perfil vigente."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-08-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. O aporte dirigido à classe defasada reduz a deriva sem realizar o ganho da posição valorizada, mas introduz uma regra de correção.</p><p>A alternativa A ignora o efeito do aporte nos pesos. A alternativa B exige uma venda desnecessária. A alternativa D transforma um ajuste pontual em estabilidade futura.</p><p>Regra de bolso: usar fluxos para corrigir pesos é ajuste indireto e deve constar da política.</p>",
+     "enunciado": "<p>Uma investidora recebe novo aporte e o direciona para a classe que perdeu peso. Como essa decisão se relaciona com o buy and hold puro?</p>",
+     "alternativas": {
+      "a": "Mantém o modelo puro porque aportes não alteram a distribuição percentual.",
+      "b": "Encerra a estratégia porque a entrada exige venda das posições valorizadas.",
+      "c": "Introduz ajuste por fluxo, aproximando os pesos sem vender a classe valorizada.",
+      "d": "Fixa os pesos futuros porque o aporte impede novas diferenças de desempenho."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-08-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A nova necessidade de recursos e a concentração de risco exigem diagnóstico, mesmo sob uma regra de baixo giro.</p><p>A alternativa A transforma manutenção em proibição de revisar. A alternativa B reage ao preço sem conectar a venda ao objetivo. A alternativa C confunde valorização com disponibilidade adequada dos recursos.</p><p>Regra de bolso: buy and hold reduz operações, mas mudanças do cliente continuam capazes de alterar a decisão.</p>",
+     "enunciado": "<p>Uma carteira de longo prazo teve forte valorização de uma classe, que passou a dominar o risco. O cliente manteve o perfil, mas precisará de parte dos recursos em breve. Qual análise respeita os limites do buy and hold?</p>",
+     "alternativas": {
+      "a": "Manter as posições por definição, pois a estratégia impede revisão motivada por mudança do cliente.",
+      "b": "Vender a classe valorizada apenas porque seu preço subiu no período recente.",
+      "c": "Usar o ganho acumulado como prova de que a nova necessidade de liquidez está atendida.",
+      "d": "Reavaliar peso, risco, liquidez e custo de saída antes de decidir se a manutenção continua adequada."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-08-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. O vencedor ganha participação e o perdedor perde participação, fazendo a exposição acompanhar a direção do desempenho relativo.</p><p>A alternativa B inverte os efeitos sobre os pesos. A alternativa C confunde unidades fixas com pesos fixos. A alternativa D ignora que preços diferentes modificam a composição e o risco.</p><p>Regra de bolso: no buy and hold, o mercado decide a deriva dos pesos quando o investidor não negocia.</p>",
+     "enunciado": "<p>Duas carteiras iniciam com a mesma alocação. Na primeira, a classe arriscada sobe e ganha peso; na segunda, ela cai e perde peso. Nenhuma delas negocia. Qual comparação descreve o piloto automático da estratégia?</p>",
+     "alternativas": {
+      "a": "A primeira amplia a exposição após a alta, enquanto a segunda reduz a exposição após a queda.",
+      "b": "A primeira reduz risco após a alta, enquanto a segunda amplia risco após a queda.",
+      "c": "As duas retornam à alocação inicial porque a quantidade de unidades foi conservada.",
+      "d": "As duas preservam o risco inicial porque a ausência de ordens estabiliza os pesos."
+     },
+     "gabarito": "a"
+    }
+   ],
+   "Constant mix: recomposição dos pesos e cenários de mercado": [
+    {
+     "id": "cpror-car-09-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Constant mix utiliza compras e vendas para recuperar as proporções definidas na política de alocação.</p><p>A alternativa B descreve buy and hold. A alternativa C confunde proporção constante com valor constante. A alternativa D persegue o desempenho recente em vez de recompor o alvo.</p><p>Regra de bolso: constant mix negocia unidades para manter os pesos.</p>",
+     "enunciado": "<p>Uma carteira adota constant mix com alvo de 60% em renda variável e 40% em renda fixa. Qual conduta caracteriza a estratégia quando os preços alteram a composição?</p>",
+     "alternativas": {
+      "a": "Negociar as classes para restaurar os pesos de 60% e 40%.",
+      "b": "Manter as quantidades e aceitar a nova distribuição produzida pelo mercado.",
+      "c": "Fixar os valores monetários iniciais de cada classe durante o horizonte.",
+      "d": "Concentrar os recursos na classe com retorno recente superior."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-09-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Constant mix combate a deriva e retorna ao alvo, enquanto buy and hold mantém as unidades e deixa o peso valorizado crescer.</p><p>A alternativa A inverte as estratégias. A alternativa C atribui recomposição ao buy and hold. A alternativa D ignora a diferença central entre os métodos.</p><p>Regra de bolso: buy and hold acompanha a deriva; constant mix a corrige.</p>",
+     "enunciado": "<p>A renda variável se valoriza e passa a representar 75% de uma carteira cujo alvo é 60%. Como constant mix e buy and hold respondem ao movimento?</p>",
+     "alternativas": {
+      "a": "Constant mix mantém 75%, e buy and hold vende até 60%.",
+      "b": "Constant mix vende parte da renda variável, e buy and hold aceita o peso de 75%.",
+      "c": "As duas estratégias vendem até 60%, mas usam gatilhos diferentes.",
+      "d": "As duas estratégias mantêm 75%, pois a valorização ocorreu sem aporte."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-09-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. O patrimônio é R$ 160.000, de modo que os valores-alvo são R$ 96.000 e R$ 64.000. A renda variável possui R$ 24.000 acima do alvo.</p><p>A alternativa A corrige apenas parte da diferença. A alternativa B usa a valorização absoluta como transferência. A alternativa D igualaria valores, produzindo 50/50.</p><p>Regra de bolso: calcule os valores-alvo sobre o patrimônio atualizado e mova a diferença.</p>",
+     "enunciado": "<p>Uma carteira começou com R$ 60.000 em renda variável e R$ 40.000 em renda fixa. A renda variável dobrou, e a renda fixa permaneceu estável. Quanto deve ser transferido para restaurar 60/40?</p>",
+     "alternativas": {
+      "a": "R$ 12.000 da renda variável para a renda fixa.",
+      "b": "R$ 20.000 da renda variável para a renda fixa.",
+      "c": "R$ 24.000 da renda variável para a renda fixa.",
+      "d": "R$ 40.000 da renda variável para a renda fixa."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-09-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. No buy and hold, R$ 120.000 caem para R$ 60.000, somados a R$ 40.000. No constant mix, R$ 96.000 caem para R$ 48.000, somados a R$ 64.000.</p><p>A alternativa A ignora a parcela defensiva. A alternativa B subestima a proteção criada pela venda. A alternativa C troca os resultados das estratégias.</p><p>Regra de bolso: vender parte da alta preserva recursos na classe estável se houver reversão.</p>",
+     "enunciado": "<p>Após a renda variável dobrar, o buy and hold mantém R$ 120.000 nela e R$ 40.000 em renda fixa. Constant mix recompõe para R$ 96.000 e R$ 64.000. Se a renda variável cair 50%, quais patrimônios resultam?</p>",
+     "alternativas": {
+      "a": "R$ 80.000 no buy and hold e R$ 80.000 no constant mix.",
+      "b": "R$ 100.000 no buy and hold e R$ 104.000 no constant mix.",
+      "c": "R$ 112.000 no buy and hold e R$ 100.000 no constant mix.",
+      "d": "R$ 100.000 no buy and hold e R$ 112.000 no constant mix."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-09-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Reversões permitem que a venda após valorização e a compra após queda contribuam para o resultado da carteira.</p><p>A alternativa B reduz cedo a exposição ao vencedor. A alternativa C recompõe repetidamente o ativo em queda. A alternativa D oferece pouca oscilação para a regra explorar.</p><p>Regra de bolso: constant mix tende a favorecer movimentos de ida e volta.</p>",
+     "enunciado": "<p>Em qual trajetória constant mix tende a capturar benefício de sua regra de vender após alta e comprar após queda?</p>",
+     "alternativas": {
+      "a": "Oscilações com reversões ao redor de uma referência.",
+      "b": "Alta persistente da classe reduzida em cada recomposição.",
+      "c": "Queda contínua da classe comprada em cada recomposição.",
+      "d": "Estabilidade completa dos preços durante o horizonte."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-09-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A renda variável chega a R$ 180.000 no buy and hold e a R$ 144.000 no constant mix. Somadas as parcelas de renda fixa, resultam R$ 220.000 e R$ 208.000.</p><p>A alternativa A atribui ao constant mix a exposição conservada pelo buy and hold. A alternativa C ignora as composições diferentes. A alternativa D troca os resultados.</p><p>Regra de bolso: em alta persistente, vender o vencedor reduz a participação na continuação do movimento.</p>",
+     "enunciado": "<p>Depois da primeira alta, a renda variável avança mais 50%. O buy and hold parte de R$ 120.000 nessa classe, e constant mix parte de R$ 96.000. A renda fixa permanece em R$ 40.000 e R$ 64.000. Compare os resultados.</p>",
+     "alternativas": {
+      "a": "Constant mix alcança R$ 220.000 porque restaurou o peso de risco.",
+      "b": "Buy and hold alcança R$ 220.000, ante R$ 208.000 no constant mix.",
+      "c": "As duas carteiras alcançam R$ 208.000 porque começaram a etapa com R$ 160.000.",
+      "d": "Buy and hold alcança R$ 208.000, ante R$ 220.000 no constant mix."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-09-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A compra recupera a proporção estratégica, mas deixa uma parcela ampliada sujeita a nova queda se o movimento persistir.</p><p>A alternativa A atribui à compra efeito sobre o preço futuro. A alternativa B elimina o risco mantido pela recomposição. A alternativa D confunde perda e custo operacional.</p><p>Regra de bolso: comprar o que caiu ajuda na reversão e prejudica se a queda prosseguir.</p>",
+     "enunciado": "<p>Após uma queda, a renda variável ficou abaixo do peso-alvo. A política constant mix manda recompor a classe. Qual risco acompanha essa decisão?</p>",
+     "alternativas": {
+      "a": "A quantidade comprada impede que a classe volte a se valorizar.",
+      "b": "A recomposição elimina a exposição à queda seguinte.",
+      "c": "A carteira compra durante a baixa e amplia a exposição caso a tendência de queda continue.",
+      "d": "O peso-alvo converte a perda de mercado em custo fixo de negociação."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-09-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A venda pode realizar ganho tributável, e as operações podem gerar custos que reduzem o patrimônio disponível para reinvestimento.</p><p>A alternativa A altera o resultado da estratégia que não vendeu. A alternativa B desfaz a comparação de carteiras. A alternativa C ignora que frequência elevada pode ampliar o atrito.</p><p>Regra de bolso: vantagem antes de custos não equivale a vantagem líquida.</p>",
+     "enunciado": "<p>Um relatório mostra vantagem teórica do constant mix após uma reversão. A estratégia realizou venda com ganho e novas compras. O que deve ser feito antes de comparar o resultado líquido com buy and hold?</p>",
+     "alternativas": {
+      "a": "Acrescentar ao resultado o imposto diferido pelo buy and hold.",
+      "b": "Excluir a parcela defensiva para comparar apenas o ativo arriscado.",
+      "c": "Tratar a vantagem teórica como independente da frequência das operações.",
+      "d": "Descontar imposto, spreads e demais custos gerados pela recomposição."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-09-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. O método mantém a estrutura de risco e pode se beneficiar da trajetória oscilante, mas depende de custos e de um alvo ainda adequado.</p><p>A alternativa B transforma regra de alocação em previsão. A alternativa C promete proteção contra quedas. A alternativa D trata pesos constantes como substitutos do acompanhamento do cliente.</p><p>Regra de bolso: constant mix disciplina a alocação, sem prever preços nem congelar a adequação.</p>",
+     "enunciado": "<p>Uma cliente deseja manter o risco próximo de 60/40, aceita operar pelas regras definidas e investe em classes com oscilações e reversões frequentes. Qual justificativa sustenta constant mix?</p>",
+     "alternativas": {
+      "a": "A recomposição preserva os pesos e pode capturar reversões, sujeita a custos e à continuidade da adequação do alvo.",
+      "b": "A estratégia garante ganho ao identificar antecipadamente pontos de reversão do mercado.",
+      "c": "A regra elimina perdas ao reduzir a classe arriscada antes de cada queda.",
+      "d": "A proporção constante dispensa revisão do perfil e dos objetivos da cliente."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-09-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. O patrimônio caiu para R$ 70.000, e 60% desse valor equivalem a R$ 42.000. A posição de R$ 30.000 precisa receber R$ 12.000.</p><p>A alternativa A levaria a classe a 51,43% do patrimônio. A alternativa C levaria a 68,57%. A alternativa D deixaria apenas R$ 10.000 na renda fixa.</p><p>Regra de bolso: após a queda, aplique o peso-alvo ao patrimônio reduzido antes de calcular a transferência.</p>",
+     "enunciado": "<p>Uma carteira de R$ 100.000 possui R$ 60.000 em renda variável e R$ 40.000 em renda fixa. A renda variável cai para R$ 30.000. Quanto deve ser transferido da renda fixa para restaurar 60/40 sobre o novo patrimônio?</p>",
+     "alternativas": {
+      "a": "R$ 6.000, levando a renda variável a R$ 36.000.",
+      "b": "R$ 12.000, levando a renda variável a R$ 42.000.",
+      "c": "R$ 18.000, levando a renda variável a R$ 48.000.",
+      "d": "R$ 30.000, levando a renda variável a R$ 60.000."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "CPPI: piso, colchão, multiplicador e limitações": [
+    {
+     "id": "cpror-car-10-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O colchão é a diferença entre o patrimônio atual da carteira e o piso que a estratégia procura preservar.</p><p>A alternativa B combina elementos sem calcular a distância disponível. A alternativa C produz uma razão. A alternativa D soma valores que cumprem funções diferentes.</p><p>Regra de bolso: colchão é o espaço financeiro entre a carteira e o piso.</p>",
+     "enunciado": "<p>Na estratégia CPPI, qual expressão define o colchão disponível para assumir risco?</p>",
+     "alternativas": {
+      "a": "Diferença entre patrimônio atual e piso.",
+      "b": "Piso vezes multiplicador.",
+      "c": "Patrimônio atual dividido pelo piso.",
+      "d": "Exposição arriscada mais piso."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-10-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A fórmula básica da exposição arriscada é <code>E = m x C</code>, em que <code>m</code> é o multiplicador e <code>C</code> é o colchão.</p><p>A alternativa A inverte a relação entre os elementos. A alternativa C mistura valor e número. A alternativa D não representa a regra de alocação.</p><p>Regra de bolso: o multiplicador transforma o colchão em orçamento de risco.</p>",
+     "enunciado": "<p>Depois de calcular o colchão, como o CPPI determina a exposição-alvo ao ativo arriscado?</p>",
+     "alternativas": {
+      "a": "Divide o piso pelo colchão.",
+      "b": "Multiplica o colchão pelo multiplicador.",
+      "c": "Soma o patrimônio ao multiplicador.",
+      "d": "Subtrai o ativo defensivo do piso."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-10-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. O colchão é R$ 100.000 menos R$ 80.000, resultando em R$ 20.000. Multiplicado por 3, gera R$ 60.000 de risco e deixa R$ 40.000 no defensivo.</p><p>A alternativa A aplica multiplicador 2. A alternativa B troca colchão e exposição. A alternativa D usa o piso como colchão.</p><p>Regra de bolso: calcule a distância até o piso, multiplique e complete o patrimônio com o defensivo.</p>",
+     "enunciado": "<p>Uma carteira possui R$ 100.000, piso de R$ 80.000 e multiplicador 3. Calcule colchão, exposição arriscada e parcela defensiva.</p>",
+     "alternativas": {
+      "a": "R$ 20.000, R$ 40.000 e R$ 60.000.",
+      "b": "R$ 60.000, R$ 20.000 e R$ 80.000.",
+      "c": "R$ 20.000, R$ 60.000 e R$ 40.000.",
+      "d": "R$ 80.000, R$ 60.000 e R$ 40.000."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-10-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O novo patrimônio é R$ 106.000, o colchão é R$ 26.000 e sua multiplicação por 3 produz exposição-alvo de R$ 78.000.</p><p>A alternativa A ignora a variação do colchão. A alternativa B confunde posição antes do ajuste com alvo. A alternativa C deixa de aplicar o multiplicador ao colchão completo.</p><p>Regra de bolso: após mudar o patrimônio, recalcule primeiro o colchão e depois a exposição.</p>",
+     "enunciado": "<p>A posição arriscada inicial de R$ 60.000 sobe 10%, e os R$ 40.000 defensivos ficam estáveis. Com piso de R$ 80.000 e multiplicador 3, qual é a nova exposição-alvo?</p>",
+     "alternativas": {
+      "a": "R$ 60.000, porque o multiplicador permanece igual.",
+      "b": "R$ 66.000, porque a posição valorizada já representa o alvo.",
+      "c": "R$ 72.000, porque a alta acrescentou R$ 6.000 ao colchão.",
+      "d": "R$ 78.000, porque o patrimônio é R$ 106.000 e o colchão é R$ 26.000."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-10-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O patrimônio cai para R$ 94.000, o colchão para R$ 14.000 e a exposição-alvo para R$ 42.000. A posição de R$ 54.000 precisa ser reduzida em R$ 12.000.</p><p>A alternativa B amplia risco após a queda. A alternativa C restaura o valor inicial sem usar a fórmula. A alternativa D deixa exposição acima do novo alvo.</p><p>Regra de bolso: a queda reduz o colchão e obriga o CPPI a vender risco.</p>",
+     "enunciado": "<p>A posição arriscada inicial de R$ 60.000 cai 10%, e os R$ 40.000 defensivos ficam estáveis. Mantidos piso de R$ 80.000 e multiplicador 3, qual ajuste o CPPI realiza?</p>",
+     "alternativas": {
+      "a": "Vende R$ 12.000 do ativo arriscado para reduzir a exposição a R$ 42.000.",
+      "b": "Compra R$ 12.000 do ativo arriscado para recuperar a exposição de R$ 66.000.",
+      "c": "Vende R$ 6.000 do defensivo para manter R$ 60.000 no arriscado.",
+      "d": "Mantém R$ 54.000 no arriscado porque a perda já reduziu o risco."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-10-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A alta amplia o colchão no CPPI e aumenta sua exposição, enquanto constant mix reduz a classe que ficou acima do peso-alvo.</p><p>A alternativa A atribui movimento pró-cíclico às duas. A alternativa C inverte os comportamentos. A alternativa D descreve buy and hold e altera um parâmetro sem fundamento.</p><p>Regra de bolso: CPPI acompanha o movimento; constant mix negocia contra a deriva.</p>",
+     "enunciado": "<p>Qual comparação descreve os movimentos de CPPI e constant mix depois de uma alta do ativo arriscado?</p>",
+     "alternativas": {
+      "a": "As duas estratégias compram risco para acompanhar a valorização.",
+      "b": "CPPI compra risco, enquanto constant mix vende para restaurar o peso.",
+      "c": "CPPI vende risco, enquanto constant mix aceita a deriva da carteira.",
+      "d": "As duas estratégias conservam as quantidades e alteram o piso."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-10-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Reversões rápidas podem fazer o CPPI comprar depois da alta e vender depois da queda repetidamente, fenômeno associado ao serrilhamento.</p><p>A alternativa A confunde piso e posição. A alternativa B retira elemento central da fórmula. A alternativa D presume comportamento conjunto entre ativos diferentes.</p><p>Regra de bolso: em mercado serrilhado, a resposta pró-cíclica pode negociar em momentos desfavoráveis.</p>",
+     "enunciado": "<p>Uma estratégia CPPI sofre oscilações rápidas e alternadas, recalibrando a exposição após cada movimento. Qual limitação pode aparecer nesse cenário?</p>",
+     "alternativas": {
+      "a": "O piso passa a equivaler à exposição arriscada.",
+      "b": "O multiplicador deixa de participar do cálculo.",
+      "c": "Compras após altas e vendas após quedas podem repetir perdas e custos.",
+      "d": "A parcela defensiva passa a acompanhar integralmente o ativo arriscado."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-10-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A perda é 40% de R$ 60.000, ou R$ 24.000. Subtraída dos R$ 100.000, leva o patrimônio a R$ 76.000.</p><p>A alternativa A trata o piso como garantia. A alternativa B aplica a queda à base errada. A alternativa C atribui a mesma queda ao defensivo.</p><p>Regra de bolso: movimento brusco pode consumir o colchão antes que a venda seja executada.</p>",
+     "enunciado": "<p>Uma carteira inicia com R$ 60.000 no ativo arriscado e R$ 40.000 no defensivo, com piso de R$ 80.000. Antes da recalibragem, o arriscado sofre queda instantânea de 40%. Qual é o resultado?</p>",
+     "alternativas": {
+      "a": "O patrimônio fica em R$ 80.000 porque o piso absorve a perda excedente.",
+      "b": "O patrimônio fica em R$ 84.000 porque a perda incide sobre o colchão.",
+      "c": "O patrimônio fica em R$ 60.000 porque o ativo defensivo também perde 40%.",
+      "d": "O patrimônio fica em R$ 76.000 e atravessa o piso em R$ 4.000."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-10-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. CPPI é uma técnica dinâmica e sua capacidade de preservar o piso depende de preços, liquidez, monitoramento e execução.</p><p>A alternativa B transforma parâmetro em garantia. A alternativa C cria obrigação inexistente. A alternativa D presume recuperação de valor que a fórmula não fornece.</p><p>Regra de bolso: insurance descreve a finalidade da técnica, e não uma promessa de capital.</p>",
+     "enunciado": "<p>Um cliente interpreta a expressão portfolio insurance como garantia contratual do piso. Qual explicação corrige essa leitura?</p>",
+     "alternativas": {
+      "a": "A proteção depende da alocação e da execução; gaps, liquidez e custos podem levar o patrimônio abaixo do piso.",
+      "b": "O multiplicador assegura o piso desde que seja superior a 1.",
+      "c": "O ativo defensivo cobre perdas da parcela arriscada por obrigação contratual.",
+      "d": "A estratégia recompõe o valor do piso após uma ruptura por meio de novas compras."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-10-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. Sem alavancagem, a exposição calculada por <code>m x C</code> fica limitada ao patrimônio de R$ 120.000.</p><p>A alternativa A introduz alavancagem vedada pela política. A alternativa C altera o piso sem resolver o excesso. A alternativa D modifica o patrimônio em vez de limitar a alocação.</p><p>Regra de bolso: quando <code>m x C</code> supera o patrimônio, aplique o teto previsto pela política.</p>",
+     "enunciado": "<p>Um CPPI sem alavancagem possui patrimônio de R$ 120.000, piso de R$ 80.000 e multiplicador 4. A fórmula simples gera exposição de R$ 160.000. Como aplicar a restrição da política?</p>",
+     "alternativas": {
+      "a": "Investir R$ 160.000 no arriscado e registrar R$ 40.000 negativos no defensivo.",
+      "b": "Limitar a exposição arriscada a R$ 120.000, valor do patrimônio disponível.",
+      "c": "Elevar o piso para R$ 120.000 e manter exposição arriscada de R$ 160.000.",
+      "d": "Reduzir o patrimônio contábil para R$ 80.000 e aplicar a diferença no arriscado."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Casamento e união estável: revisão dos objetivos financeiros": [
+    {
+     "id": "cpror-car-11-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O evento muda a estrutura financeira, de modo que a carteira deve ser analisada depois da revisão do planejamento.</p><p>A alternativa B movimenta recursos antes de definir função e titularidade. A alternativa C apaga diferenças individuais. A alternativa D ignora metas com prazos e prioridades distintos.</p><p>Regra de bolso: primeiro redesenhe o plano; depois avalie a carteira.</p>",
+     "enunciado": "<p>Um cliente comunica que iniciará vida financeira em casal. Qual deve ser a primeira etapa antes de alterar seus investimentos?</p>",
+     "alternativas": {
+      "a": "Atualizar objetivos, horizontes, fluxos, patrimônio, responsabilidades e titularidades.",
+      "b": "Unificar as carteiras em uma conta e definir depois a finalidade dos recursos.",
+      "c": "Adotar um perfil intermediário calculado pela média dos dois perfis atuais.",
+      "d": "Concentrar os investimentos na meta com prazo distante para simplificar o plano."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-11-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Objetivos comuns e individuais coexistem e precisam de identificação própria para receber contribuição, prazo, liquidez e risco coerentes.</p><p>A alternativa A mistura horizontes. A alternativa C concentra responsabilidade sem base no plano. A alternativa D subordina objetivos aos produtos atuais.</p><p>Regra de bolso: cada objetivo precisa de nome, prazo, recurso e responsável.</p>",
+     "enunciado": "<p>Um casal possui uma meta imobiliária comum e mantém projetos profissionais individuais. Como esses objetivos devem aparecer no planejamento?</p>",
+     "alternativas": {
+      "a": "Reunidos em uma meta familiar com prazo médio.",
+      "b": "Separados por finalidade, prazo, prioridade, responsável e fonte de recursos.",
+      "c": "Vinculados à pessoa com renda elevada, que assume a decisão da carteira.",
+      "d": "Ordenados apenas pela rentabilidade dos investimentos já existentes."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-11-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. As rendas representam 40% e 60% dos R$ 20.000 conjuntos. Aplicados aos R$ 10.000, resultam R$ 4.000 e R$ 6.000.</p><p>A alternativa A usa proporção de 30/70. A alternativa B divide igualmente, em vez de proporcionalmente. A alternativa D troca as participações de renda.</p><p>Regra de bolso: divida a renda individual pela renda conjunta e aplique a proporção à despesa.</p>",
+     "enunciado": "<p>Duas pessoas recebem R$ 8.000 e R$ 12.000 líquidos. Elas decidem dividir R$ 10.000 de despesas comuns proporcionalmente à renda. Quais contribuições resultam?</p>",
+     "alternativas": {
+      "a": "R$ 3.000 e R$ 7.000.",
+      "b": "R$ 5.000 e R$ 5.000.",
+      "c": "R$ 4.000 e R$ 6.000.",
+      "d": "R$ 6.000 e R$ 4.000."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-11-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Uma reserva conjunta precisa estar disponível quando necessária, com acesso e procedimento coerentes com sua finalidade.</p><p>A alternativa A relaciona acesso a retorno. A alternativa B atribui prazo incompatível com emergência. A alternativa C usa titularidade para definir perfil.</p><p>Regra de bolso: reserva adequada exige valor, liquidez e possibilidade real de movimentação.</p>",
+     "enunciado": "<p>O casal possui reserva suficiente, mas o dinheiro está em conta individual acessível apenas por uma pessoa. Qual aspecto precisa ser corrigido para a função conjunta?</p>",
+     "alternativas": {
+      "a": "Rentabilidade nominal, porque acesso depende do retorno acumulado.",
+      "b": "Horizonte previdenciário, porque reserva familiar possui prazo longo.",
+      "c": "Perfil médio, porque a conta individual define tolerância ao risco.",
+      "d": "Acesso operacional, titularidade e procedimento de uso em uma emergência."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-11-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O profissional levanta regime informado, titularidade, datas e origem dos recursos, mas solicita validação especializada para conclusão jurídica.</p><p>A alternativa B presume comunhão sem analisar documentos. A alternativa C transforma cadastro em conclusão legal. A alternativa D omite exposição patrimonial relevante.</p><p>Regra de bolso: organize a informação financeira e encaminhe a interpretação jurídica.</p>",
+     "enunciado": "<p>Durante o inventário financeiro do casal, surge dúvida sobre a classificação de um bem diante do regime patrimonial informado. Qual conduta cabe ao profissional de investimentos?</p>",
+     "alternativas": {
+      "a": "Registrar os dados e encaminhar a questão jurídica a especialista antes de uma decisão dependente da classificação.",
+      "b": "Definir o bem como comum com base apenas na existência da relação.",
+      "c": "Definir o bem como particular com base apenas na titularidade cadastral.",
+      "d": "Ignorar o bem na análise consolidada até que ele seja vendido."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-11-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Emprego e investimentos ligados ao mesmo setor podem sofrer juntos e ampliar a vulnerabilidade financeira familiar.</p><p>A alternativa A confunde contas separadas com riscos separados. A alternativa C impede uma consolidação útil. A alternativa D usa titularidade para apagar dependência econômica.</p><p>Regra de bolso: consolide exposições para enxergar riscos que as contas individuais escondem.</p>",
+     "enunciado": "<p>Duas pessoas mantêm carteiras individuais diversificadas, mas ambas concentram investimentos no setor em que trabalham. O que a visão familiar revela?</p>",
+     "alternativas": {
+      "a": "A separação cadastral neutraliza a exposição econômica ao setor.",
+      "b": "Renda e patrimônio podem depender do mesmo risco, criando concentração conjunta.",
+      "c": "Perfis diferentes impedem a comparação das exposições familiares.",
+      "d": "A concentração deixa de importar quando os investimentos possuem titulares distintos."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-11-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A revisão verifica se as indicações refletem a vontade atual e segue as condições e o procedimento de cada contrato.</p><p>A alternativa A presume automatismo cadastral. A alternativa B substitui uma decisão por suposição jurídica. A alternativa D altera titularidade sem relação necessária com a atualização.</p><p>Regra de bolso: evento familiar pede conferência ativa dos beneficiários registrados.</p>",
+     "enunciado": "<p>Após o casamento, uma cliente percebe que seu seguro e sua previdência mantêm indicações feitas anos antes. Qual procedimento financeiro é adequado?</p>",
+     "alternativas": {
+      "a": "Presumir atualização cadastral pela mudança do estado civil.",
+      "b": "Retirar as indicações e aguardar aplicação automática de uma regra sucessória.",
+      "c": "Conferir vontade atual, dados, percentuais, contrato e procedimento de alteração de cada plano.",
+      "d": "Transferir a titularidade dos planos para formar patrimônio conjunto."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-11-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A reserva protege o fluxo comum, a dívida reduz capacidade de poupança e a meta precisa de contribuições compatíveis com o prazo.</p><p>A alternativa A deixa o casal exposto a imprevistos. A alternativa B ignora efeito da prestação no orçamento. A alternativa C eleva risco de um recurso com data definida.</p><p>Regra de bolso: proteja a base financeira antes de financiar uma nova meta.</p>",
+     "enunciado": "<p>Um casal planeja imóvel em quatro anos. Uma pessoa possui reserva de emergência; a outra, dívida com prestação relevante. Usar a reserva como entrada deixaria o núcleo sem liquidez. Qual sequência é coerente?</p>",
+     "alternativas": {
+      "a": "Usar a reserva e reconstruí-la após a compra, pois o imóvel é uma meta comum.",
+      "b": "Manter a dívida fora do plano porque foi assumida antes da relação.",
+      "c": "Aplicar a reserva em ativos de risco para acelerar o valor da entrada.",
+      "d": "Preservar liquidez, avaliar a dívida e definir contribuições para a meta antes de alterar os investimentos."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-11-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. A sequência trata fluxo, proteção, cadastros e limite profissional antes de recomendar operação que dependa da classificação jurídica.</p><p>A alternativa B apaga perfis e adia pendências. A alternativa C coloca produto antes do diagnóstico. A alternativa D elimina metas individuais sem fundamento.</p><p>Regra de bolso: converta cada mudança de vida em uma pendência financeira clara e responsável.</p>",
+     "enunciado": "<p>Uma profissional concluiu a revisão de um casal. Há metas comuns e individuais, rendas instáveis, beneficiários desatualizados e dúvida jurídica sobre um ativo. Qual plano de ação integra os achados?</p>",
+     "alternativas": {
+      "a": "Definir contribuições e reservas, revisar coberturas e beneficiários e encaminhar a dúvida jurídica antes da movimentação relacionada ao ativo.",
+      "b": "Fundir as carteiras, escolher um perfil conjunto e resolver os cadastros na revisão anual.",
+      "c": "Priorizar retorno da carteira e tratar orçamento e titularidade depois da primeira operação.",
+      "d": "Suspender objetivos individuais e concentrar recursos na meta comum de prazo distante."
+     },
+     "gabarito": "a"
+    }
+   ],
+   "Divórcio e falecimento: mudanças patrimoniais e necessidade de liquidez": [
+    {
+     "id": "cpror-car-12-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. As despesas e decisões podem surgir antes que ativos ilíquidos, sujeitos a procedimentos ou destinados ao longo prazo estejam disponíveis.</p><p>A alternativa B presume conversão imediata. A alternativa C ignora a reorganização financeira. A alternativa D atribui ao evento efeito inexistente sobre custos de mercado.</p><p>Regra de bolso: patrimônio informa quanto existe; liquidez informa quando pode ser usado.</p>",
+     "enunciado": "<p>Divórcio e falecimento são eventos distintos. Qual efeito financeiro pode ocorrer em ambos e exige atenção da carteira?</p>",
+     "alternativas": {
+      "a": "Necessidade de liquidez antes que parte do patrimônio possa ser acessada ou vendida adequadamente.",
+      "b": "Conversão automática dos ativos de longo prazo em recursos disponíveis.",
+      "c": "Manutenção das despesas, metas e capacidade de risco na forma anterior.",
+      "d": "Eliminação do custo de saída das posições por causa do evento familiar."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-12-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O novo orçamento e a estrutura patrimonial precisam ser compreendidos antes de decidir quais investimentos continuam adequados.</p><p>A alternativa A coloca produto antes do diagnóstico. A alternativa C executa antes de conhecer a necessidade. A alternativa D apaga as condições individuais após a separação.</p><p>Regra de bolso: reorganize duas vidas financeiras antes de reorganizar os ativos.</p>",
+     "enunciado": "<p>Após um divórcio, a família precisa manter duas moradias e reorganizar despesas. Qual revisão vem antes de uma nova alocação de investimentos?</p>",
+     "alternativas": {
+      "a": "Seleção de produtos com retorno recente elevado.",
+      "b": "Mapeamento de caixa, despesas, dívidas, objetivos, titularidades e capacidade de risco de cada pessoa.",
+      "c": "Venda conjunta das posições com prazo de liquidação longo.",
+      "d": "Definição de um perfil comum que permaneça válido para as duas pessoas."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-12-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A necessidade de R$ 150.000 subtraída dos R$ 40.000 acessíveis produz lacuna de R$ 110.000.</p><p>A alternativa A apresenta apenas o caixa. A alternativa B subestima a diferença. A alternativa D soma necessidade e disponibilidade.</p><p>Regra de bolso: lacuna de liquidez é a necessidade próxima que o caixa acessível ainda não cobre.</p>",
+     "enunciado": "<p>Uma transição exige R$ 150.000 em curto prazo, e a carteira possui R$ 40.000 acessíveis. Qual é a lacuna de liquidez antes de considerar outras fontes?</p>",
+     "alternativas": {
+      "a": "R$ 40.000.",
+      "b": "R$ 90.000.",
+      "c": "R$ 110.000.",
+      "d": "R$ 190.000."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-12-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Imóvel e participação empresarial podem possuir valor e, ainda assim, exigir tempo, documentos, comprador ou desconto para gerar caixa.</p><p>A alternativa A confunde patrimônio e disponibilidade. A alternativa B ignora a necessidade de monetização. A alternativa C transforma avaliação em liquidez.</p><p>Regra de bolso: ativo valioso pode falhar como fonte de pagamento imediato.</p>",
+     "enunciado": "<p>Uma família possui imóvel e participação empresarial de valor elevado, mas pouco dinheiro disponível após um falecimento. Qual diagnóstico é adequado?</p>",
+     "alternativas": {
+      "a": "O valor patrimonial elimina a necessidade de reserva de transição.",
+      "b": "A residência pode ser usada para despesas correntes sem venda ou crédito.",
+      "c": "A participação empresarial equivale a caixa por possuir avaliação financeira.",
+      "d": "Existe riqueza patrimonial com risco de falta de caixa no curto prazo."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-12-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Seis meses de R$ 12.000 exigem R$ 72.000. Depois de considerar R$ 25.000 em caixa, resta lacuna de R$ 47.000.</p><p>A alternativa B considera cinco meses sem usar o caixa. A alternativa C mostra a necessidade bruta. A alternativa D soma caixa e necessidade.</p><p>Regra de bolso: estime a perda mensal pelo período e desconte apenas os recursos acessíveis.</p>",
+     "enunciado": "<p>Após um falecimento, a renda mensal disponível cai R$ 12.000. A família possui R$ 25.000 em caixa e deseja cobrir seis meses da lacuna. Quanto ainda falta, antes de despesas extraordinárias?</p>",
+     "alternativas": {
+      "a": "R$ 47.000.",
+      "b": "R$ 60.000.",
+      "c": "R$ 72.000.",
+      "d": "R$ 97.000."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-12-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A orientação da SUSEP prevê resgate aos beneficiários indicados durante o diferimento, e a execução observa estrutura do plano e documentos.</p><p>A alternativa A presume crédito automático. A alternativa C ignora diferença entre diferimento e renda. A alternativa D uniformiza modalidades com condições distintas.</p><p>Regra de bolso: confirme tipo, fase, beneficiário e procedimento antes de estimar quando o recurso estará disponível.</p>",
+     "enunciado": "<p>Em previdência complementar aberta com capitalização financeira, o participante falece durante o período de diferimento. Qual ponto deve orientar a análise da disponibilidade?</p>",
+     "alternativas": {
+      "a": "O saldo passa diretamente à conta conjunta sem pedido ou documento.",
+      "b": "O resgate é devido aos beneficiários indicados, sujeito ao plano, à documentação e à verificação do caso.",
+      "c": "A fase do plano perde relevância depois do falecimento do participante.",
+      "d": "O pagamento segue a mesma modalidade em planos em acumulação e em fase de renda."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-12-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A organização preventiva localiza instituições e documentos, mas a movimentação dos ativos deve seguir autorização e procedimento formal.</p><p>A alternativa A realiza operação sem base confirmada. A alternativa B viola segurança das credenciais. A alternativa D usa urgência para contornar o processo aplicável.</p><p>Regra de bolso: informação sobre onde está o patrimônio não equivale a autorização para movimentá-lo.</p>",
+     "enunciado": "<p>A família sabe a senha da conta de investimentos da pessoa falecida e precisa pagar despesas próximas. Qual conduta preserva segurança e regularidade?</p>",
+     "alternativas": {
+      "a": "Movimentar a conta e regularizar a transferência após o inventário.",
+      "b": "Compartilhar a senha com o profissional para acelerar os pagamentos.",
+      "c": "Usar recursos já acessíveis e seguir os procedimentos formais para ativos do falecido.",
+      "d": "Vender as posições ilíquidas pela conta antes que a instituição receba a comunicação."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-12-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A urgência precisa ser quantificada, e as fontes devem ser comparadas pelo tempo, custo e consequência antes de desmontar posições.</p><p>A alternativa A vende sem priorização. A alternativa B eleva risco diante de obrigação próxima. A alternativa C deixa uma necessidade corrente sem plano financeiro.</p><p>Regra de bolso: organize o caixa urgente antes de decidir qual patrimônio converter.</p>",
+     "enunciado": "<p>Após um divórcio, uma cliente precisa de R$ 80.000 para nova moradia. Sua reserva cobre R$ 30.000, e o restante está em ativos com perda recente e baixa liquidez. Qual abordagem reduz decisões destrutivas?</p>",
+     "alternativas": {
+      "a": "Vender cada posição imediatamente para encerrar a relação patrimonial.",
+      "b": "Assumir risco adicional para recuperar a perda antes do pagamento.",
+      "c": "Ignorar a necessidade até a definição jurídica de cada ativo.",
+      "d": "Proteger despesas essenciais e comparar prazos, vendas, custos e alternativas para cobrir a lacuna."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-12-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. A linha do tempo precisa distinguir recursos presentes daqueles sujeitos a cobertura, modalidade, documentos, procedimento ou venda.</p><p>A alternativa B ignora prazos diferentes. A alternativa C presume valor e data sem análise contratual. A alternativa D prioriza um ativo potencialmente lento antes de mapear o caixa.</p><p>Regra de bolso: disponibilidade exige valor, data provável, condição de acesso e responsável pelo procedimento.</p>",
+     "enunciado": "<p>Uma família possui reserva, seguro de vida, previdência em fase de renda e imóveis. Após o falecimento, como montar a linha do tempo de liquidez?</p>",
+     "alternativas": {
+      "a": "Identificar caixa acessível, renda remanescente, despesas e procedimentos de cada contrato e ativo antes de contar com os recursos.",
+      "b": "Somar o patrimônio e dividir pelas despesas, tratando cada ativo como disponível na mesma data.",
+      "c": "Considerar seguro e previdência como pagamentos imediatos de valor confirmado.",
+      "d": "Usar os imóveis como primeira fonte porque representam parcela relevante do patrimônio."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-12-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. Caixa acessível, mapa de ativos, documentação e proteções atualizadas compram tempo para atravessar a transição.</p><p>A alternativa A amplia o problema de concentração. A alternativa C troca liquidez atual por venda incerta. A alternativa D cria risco de segurança e autorização.</p><p>Regra de bolso: prevenção combina dinheiro acessível, informação organizada e contratos atualizados.</p>",
+     "enunciado": "<p>Um profissional revisa preventivamente a carteira de uma família cuja riqueza está concentrada em empresa e imóvel. Qual conjunto reduz o risco de falta de caixa em uma transição?</p>",
+     "alternativas": {
+      "a": "Aumentar a concentração nos ativos conhecidos pela família.",
+      "b": "Manter reserva acessível, mapear liquidez, organizar documentos e revisar coberturas e beneficiários.",
+      "c": "Substituir a reserva por expectativa de venda futura do imóvel.",
+      "d": "Compartilhar credenciais para facilitar movimentações entre familiares."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Planejamento de descendentes: metas e horizontes de investimento": [
+    {
+     "id": "cpror-car-13-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A meta precisa de valor na data de uso, prazo, recursos já acumulados e contribuição capaz de completar a necessidade.</p><p>A alternativa B parte de produto e histórico. A alternativa C reúne dados insuficientes. A alternativa D omite a atualização do custo e o financiamento da meta.</p><p>Regra de bolso: objetivo financiável possui valor, data, saldo e contribuição.</p>",
+     "enunciado": "<p>Uma família deseja financiar a formação de um descendente. Quais elementos transformam essa intenção em objetivo financeiro mensurável?</p>",
+     "alternativas": {
+      "a": "Valor futuro, prazo, saldo existente e aporte necessário.",
+      "b": "Produto escolhido, retorno passado e idade do responsável.",
+      "c": "Perfil familiar médio, instituição e quantidade de contas.",
+      "d": "Custo atual, classe arriscada e previsão do mercado."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-13-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O risco precisa ser avaliado pelo tempo que ainda existe para recuperar oscilações antes da despesa.</p><p>A alternativa A congela a classificação inicial. A alternativa C soma tempo transcorrido. A alternativa D confunde incerteza de custo com ausência de prazo.</p><p>Regra de bolso: horizonte encolhe a cada revisão, mesmo com a data final preservada.</p>",
+     "enunciado": "<p>Um plano educacional começou com horizonte de quinze anos e agora está a dois anos do primeiro pagamento. Como o horizonte deve ser classificado na revisão?</p>",
+     "alternativas": {
+      "a": "Quinze anos, porque a classificação acompanha a data de criação do plano.",
+      "b": "Dois anos, porque o prazo relevante vai da revisão até o uso do recurso.",
+      "c": "Dezessete anos, porque o período passado deve ser somado ao restante.",
+      "d": "Indefinido, porque metas educacionais podem alterar seu custo."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-13-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Aplicando <code>R$ 120.000 x (1,05)^10</code>, o custo projetado chega a aproximadamente R$ 195.467.</p><p>A alternativa A usa crescimento abaixo da composição informada. A alternativa B não corresponde à potência de dez anos. A alternativa D dobra o valor sem relação com a taxa.</p><p>Regra de bolso: custo futuro cresce de forma composta pelo número de períodos.</p>",
+     "enunciado": "<p>Uma formação custa R$ 120.000 hoje. Seu custo cresce 5% ao ano e será pago em dez anos. Qual é o valor futuro aproximado?</p>",
+     "alternativas": {
+      "a": "R$ 170.000.",
+      "b": "R$ 180.000.",
+      "c": "R$ 195.467.",
+      "d": "R$ 240.000."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-13-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A aplicação de <code>FV x i / ((1 + i)^n - 1)</code> com os valores informados resulta em aproximadamente R$ 1.117 por mês.</p><p>As alternativas A e B subestimam o esforço. A alternativa C aproxima uma divisão simples do valor pelos meses e ignora o efeito composto esperado.</p><p>Regra de bolso: o aporte financia o valor futuro enquanto cada contribuição acumula por prazo diferente.</p>",
+     "enunciado": "<p>Uma família precisa formar R$ 195.467 em 120 meses, sem saldo inicial, com retorno estimado de 0,6% ao mês e aportes no fim do mês. Qual aporte aproximado atende à fórmula apresentada?</p>",
+     "alternativas": {
+      "a": "R$ 630.",
+      "b": "R$ 895.",
+      "c": "R$ 1.630.",
+      "d": "R$ 1.117."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-13-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Rentabilidade projetada precisa ser coerente com uma carteira que a família consegue manter e com o prazo da despesa.</p><p>A alternativa B mistura retorno do investimento e crescimento do custo. A alternativa C transforma premissa em garantia. A alternativa D ignora perdas possíveis sobre o saldo.</p><p>Regra de bolso: reduzir aporte no papel por meio de retorno agressivo pode apenas esconder o déficit.</p>",
+     "enunciado": "<p>O cálculo usa retorno elevado para reduzir o aporte, mas a família possui baixa capacidade de suportar perdas e a meta tem data rígida. Qual é o problema?</p>",
+     "alternativas": {
+      "a": "A premissa de retorno pode exigir risco incompatível e criar falsa impressão de viabilidade.",
+      "b": "A taxa elevada reduz o valor futuro do custo educacional.",
+      "c": "O prazo rígido transforma o retorno projetado em resultado contratual.",
+      "d": "A capacidade de risco perde relevância quando existe aporte mensal."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-13-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Cada pagamento possui horizonte próprio, permitindo proteger o uso próximo sem tratar a meta inteira como imediata.</p><p>A alternativa A esconde a urgência inicial. A alternativa C conserva risco antigo apesar do prazo reduzido. A alternativa D expõe a primeira despesa a uma queda próxima.</p><p>Regra de bolso: metas parceladas formam uma sequência de horizontes.</p>",
+     "enunciado": "<p>Uma graduação será paga em quatro anuidades. Faltam dois anos para a primeira e cinco anos para a última. Qual estrutura de carteira reconhece o calendário de uso?</p>",
+     "alternativas": {
+      "a": "Tratar o valor integral como prazo de cinco anos.",
+      "b": "Proteger a parcela próxima e manter horizonte adicional nas parcelas posteriores, conforme o perfil.",
+      "c": "Manter a alocação inicial até o pagamento da última anuidade.",
+      "d": "Concentrar a primeira anuidade em ativos sujeitos a oscilação para elevar o retorno."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-13-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A maioridade do descendente não muda automaticamente a titularidade de um recurso mantido em nome do responsável.</p><p>A alternativa A presume transferência automática. A alternativa B confunde beneficiário e titular. A alternativa D cria cotitularidade sem ato correspondente.</p><p>Regra de bolso: intenção de uso e maioridade não substituem a titularidade registrada.</p>",
+     "enunciado": "<p>Uma reserva destinada ao descendente está em nome do responsável financeiro. O descendente completa dezoito anos. Qual efeito ocorre sobre a titularidade?</p>",
+     "alternativas": {
+      "a": "A instituição transfere o saldo ao descendente na data do aniversário.",
+      "b": "O beneficiário indicado assume a conta por alcançar capacidade civil.",
+      "c": "O responsável continua titular até realizar procedimento adequado de transferência ou destinação.",
+      "d": "O investimento passa a ter dois titulares até a meta ser utilizada."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-13-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A maioridade altera a capacidade de exercício direto sobre recursos em nome do titular e exige preparação operacional e financeira.</p><p>A alternativa A prolonga representação sem base apresentada. A alternativa B muda titularidade sem análise. A alternativa C ignora os direitos do titular e o procedimento institucional.</p><p>Regra de bolso: prepare autonomia e cadastro antes da transição de controle.</p>",
+     "enunciado": "<p>Uma conta de investimentos está em nome de um descendente com dezessete anos e é administrada com representante legal. Qual preparação é adequada para a maioridade?</p>",
+     "alternativas": {
+      "a": "Manter a representação por prazo indeterminado para preservar a finalidade definida pela família.",
+      "b": "Transferir o saldo ao responsável antes da mudança de capacidade.",
+      "c": "Bloquear o acesso do titular até a conclusão da meta educacional.",
+      "d": "Antecipar atualização cadastral, acesso, educação financeira e regras de decisão conforme a instituição."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-13-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Com risco já no limite, o déficit precisa ser tratado por contribuição, prazo ou escopo da meta.</p><p>A alternativa B muda a projeção sem criar recurso. A alternativa C depende de resultado incerto em prazo curto. A alternativa D enfraquece a proteção financeira da família.</p><p>Regra de bolso: déficit exige mudar aporte, tempo ou meta quando o risco já alcançou seu limite.</p>",
+     "enunciado": "<p>Faltam três anos para uma meta educacional. O patrimônio projetado está abaixo do necessário, e a família já atingiu seu limite de risco. Qual conjunto de alternativas deve ser discutido?</p>",
+     "alternativas": {
+      "a": "Aumentar aporte, revisar prazo ou redimensionar a meta, sem elevar o risco além da capacidade.",
+      "b": "Elevar a rentabilidade esperada na planilha e preservar o aporte atual.",
+      "c": "Manter o plano e contar com recuperação do mercado antes da matrícula.",
+      "d": "Usar a reserva de emergência para sustentar uma alocação agressiva."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-13-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A diferença entre a meta de R$ 195.467 e o saldo futuro projetado de R$ 71.591 é R$ 123.876.</p><p>A alternativa A mostra apenas o saldo projetado. A alternativa C desconta o saldo atual em vez do saldo futuro. A alternativa D ignora o patrimônio já acumulado.</p><p>Regra de bolso: projete o saldo existente até a data e financie apenas a diferença.</p>",
+     "enunciado": "<p>Há R$ 50.000 acumulados para uma meta de R$ 195.467 em 60 meses. A 0,6% ao mês, o saldo pode chegar a R$ 71.591. Qual valor futuro ainda precisa ser financiado por aportes?</p>",
+     "alternativas": {
+      "a": "R$ 71.591.",
+      "b": "R$ 123.876.",
+      "c": "R$ 145.467.",
+      "d": "R$ 195.467."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Mudança de país e eventos especiais: revisão da carteira": [
+    {
+     "id": "cpror-car-14-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A residência fiscal orienta obrigações, comunicações e o tratamento aplicável ao relacionamento financeiro.</p><p>A alternativa B confunde nacionalidade com residência fiscal. As alternativas C e D usam elementos que não definem essa condição.</p><p>Regra de bolso: mudança de país começa pela confirmação da residência fiscal.</p>",
+     "enunciado": "<p>Na preparação para uma mudança internacional, qual condição orienta as obrigações fiscais e cadastrais do cliente?</p>",
+     "alternativas": {
+      "a": "A residência fiscal aplicável após a mudança.",
+      "b": "A nacionalidade indicada no passaporte.",
+      "c": "A moeda usada na compra da passagem.",
+      "d": "O país de emissão dos investimentos atuais."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-14-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O risco da meta deve ser analisado em relação à moeda na qual o recurso será efetivamente gasto.</p><p>A alternativa A olha o histórico do ativo. A alternativa C usa nacionalidade. A alternativa D transfere a decisão ao custodiante sem considerar a despesa.</p><p>Regra de bolso: a moeda do gasto é a unidade de medida da meta.</p>",
+     "enunciado": "<p>Um cliente viverá em Portugal e pagará moradia, saúde e educação em euros. Qual referência orienta a exposição cambial dessas metas?</p>",
+     "alternativas": {
+      "a": "A moeda em que o patrimônio apresentou rentabilidade passada.",
+      "b": "O euro, porque será a moeda de pagamento das despesas.",
+      "c": "O real, porque o cliente nasceu no Brasil.",
+      "d": "A moeda escolhida pela instituição custodiante."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-14-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A divisão de R$ 300.000 por R$ 6,60 por euro resulta em aproximadamente EUR 45.455.</p><p>As alternativas A e B ampliam a perda cambial. A alternativa D preserva a equivalência inicial e ignora a nova cotação.</p><p>Regra de bolso: patrimônio estável em reais pode perder poder de compra diante de uma despesa em moeda estrangeira.</p>",
+     "enunciado": "<p>Uma reserva de R$ 300.000 financia uma meta de EUR 50.000. Se o euro passa de R$ 6 para R$ 6,60 e o saldo em reais permanece igual, qual é o valor aproximado da reserva em euros?</p>",
+     "alternativas": {
+      "a": "EUR 40.000.",
+      "b": "EUR 42.000.",
+      "c": "EUR 45.455.",
+      "d": "EUR 50.000."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-14-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A posição pode seguir as condições pactuadas, enquanto o cliente e a instituição cumprem os procedimentos ligados à mudança de condição.</p><p>A alternativa A presume encerramento obrigatório. A alternativa B muda a titularidade sem fundamento. A alternativa C deixa cadastro e regras incompatíveis com a situação informada.</p><p>Regra de bolso: a mudança de residência exige comunicação e atualização, mas não impõe resgate automático.</p>",
+     "enunciado": "<p>Um investidor informa que passará da condição de residente no Brasil para residente no exterior e possui aplicações contratadas no país. Qual encaminhamento está alinhado à regulamentação vigente?</p>",
+     "alternativas": {
+      "a": "Encerrar cada posição antes de atualizar os dados cadastrais.",
+      "b": "Transferir cada aplicação para conta de familiar residente.",
+      "c": "Ignorar a alteração enquanto os produtos tiverem liquidez.",
+      "d": "Informar a instituição, atualizar o cadastro e verificar as exigências da nova condição."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-14-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Continuidade contratual e adequação financeira são avaliações distintas, pois a nova vida altera regras, moedas e objetivos.</p><p>A alternativa B não resolve o atendimento regulatório. A alternativa C usa período curto. A alternativa D mede variedade sem examinar função e risco.</p><p>Regra de bolso: posição mantida também precisa passar pela revisão da nova realidade.</p>",
+     "enunciado": "<p>Um cliente poderá manter suas aplicações brasileiras após mudar de país. Que análise determina se elas continuam adequadas?</p>",
+     "alternativas": {
+      "a": "Cadastro, tratamento aplicável, acesso, moeda, prazo e finalidade dos recursos.",
+      "b": "Existência de agência da instituição no país de destino.",
+      "c": "Desempenho das aplicações no mês anterior à viagem.",
+      "d": "Quantidade de produtos que compõem a carteira brasileira."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-14-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A necessidade anual é EUR 48.000 e, após deduzir EUR 15.000 já líquidos, faltam EUR 33.000.</p><p>A alternativa A apresenta apenas a reserva existente. A alternativa C mostra a despesa bruta. A alternativa D soma a reserva à necessidade.</p><p>Regra de bolso: liquidez de transição corresponde à necessidade do período deduzida dos recursos acessíveis na moeda adequada.</p>",
+     "enunciado": "<p>Na instalação no exterior, o cliente estima gastos de EUR 4.000 por mês durante doze meses e possui EUR 15.000 líquidos nessa moeda. Qual é a lacuna operacional estimada?</p>",
+     "alternativas": {
+      "a": "EUR 15.000.",
+      "b": "EUR 33.000.",
+      "c": "EUR 48.000.",
+      "d": "EUR 63.000."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-14-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Cada fluxo possui exposição própria, e a finalidade mostra qual variação cambial ameaça cada compromisso.</p><p>A alternativa A apaga o risco econômico. A alternativa B omite o euro das despesas. A alternativa D escolhe referência sem vínculo com os objetivos.</p><p>Regra de bolso: renda, patrimônio e gasto podem criar exposições cambiais diferentes.</p>",
+     "enunciado": "<p>Uma pessoa recebe em dólares, paga despesas em euros e mantém investimentos em reais. Como o profissional deve estruturar o diagnóstico?</p>",
+     "alternativas": {
+      "a": "Converter cada valor para reais e desconsiderar sua finalidade.",
+      "b": "Avaliar apenas o câmbio entre dólar e real por causa da renda.",
+      "c": "Mapear renda, ativos, despesas e objetivos nas respectivas moedas e prazos.",
+      "d": "Escolher uma moeda de referência sem examinar os pagamentos futuros."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-14-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. O evento alterou patrimônio, renda futura e objetivos, exigindo novas premissas antes de uma alocação estrutural.</p><p>A alternativa A mantém um plano antigo. A alternativa B amplia a ligação com o setor de origem. A alternativa C decide por desempenho passado.</p><p>Regra de bolso: recurso extraordinário pede pausa, diagnóstico e nova finalidade.</p>",
+     "enunciado": "<p>Um cliente vendeu sua empresa e recebeu R$ 2 milhões, enquanto sua renda futura e seus objetivos ainda estão indefinidos. Qual conduta atende ao princípio de revisão extraordinária?</p>",
+     "alternativas": {
+      "a": "Repetir de imediato os pesos da carteira anterior.",
+      "b": "Concentrar o recurso no setor em que o cliente trabalhou.",
+      "c": "Distribuir o valor segundo a rentabilidade do último ano.",
+      "d": "Preservar liquidez enquanto renda, objetivos, risco e nova alocação são definidos."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-14-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Patrimônio sem acesso no prazo da despesa pode obrigar crédito, venda inadequada ou atraso em pagamentos essenciais.</p><p>A alternativa B pode compor outro risco, mas não resolve a urgência. As alternativas C e D afastam a análise do calendário de caixa.</p><p>Regra de bolso: liquidez precisa existir na data e na moeda do gasto.</p>",
+     "enunciado": "<p>Uma mudança internacional ocorrerá em quatro meses. O cliente possui patrimônio elevado, mas a parcela destinada à instalação está em ativo com carência superior ao prazo. Qual risco precisa ser tratado primeiro?</p>",
+     "alternativas": {
+      "a": "A incompatibilidade entre o acesso ao recurso e o calendário das despesas.",
+      "b": "A quantidade reduzida de emissores no ativo com carência.",
+      "c": "A oscilação histórica da moeda usada antes da mudança.",
+      "d": "A comparação do produto com seu indicador de referência anual."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-14-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. Os compromissos possuem moedas e horizontes diferentes, e cada parcela da carteira deve refletir sua finalidade.</p><p>A alternativa A ignora obrigações futuras em reais. A alternativa C ignora despesas no exterior. A alternativa D presume que a moeda da renda coincide com cada pagamento.</p><p>Regra de bolso: uma mudança temporária pode exigir várias reservas vinculadas a moedas e datas distintas.</p>",
+     "enunciado": "<p>Um cliente mudou-se temporariamente para o exterior, conserva uma obrigação imobiliária no Brasil e planeja retornar em três anos. Qual abordagem integra seus objetivos?</p>",
+     "alternativas": {
+      "a": "Converter o patrimônio integral para a moeda do país temporário.",
+      "b": "Separar recursos pelas moedas e datas das despesas no exterior, da obrigação brasileira e do retorno.",
+      "c": "Manter cada investimento em reais porque existe plano de retorno.",
+      "d": "Usar a moeda do salário como referência para cada compromisso."
      },
      "gabarito": "b"
     }
