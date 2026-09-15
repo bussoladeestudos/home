@@ -1,5 +1,5 @@
 /* GERADO por outputs/questoes_para_js.py. NAO editar a mao.
-   Fonte: _conteudo/cpror/questoes/**.yaml  ·  188 questoes em 20 topicos
+   Fonte: _conteudo/cpror/questoes/**.yaml  ·  218 questoes em 23 topicos
    Para mudar uma questao, edite o YAML e rode o script de novo. */
 window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
  "cproRAnbima": {
@@ -2404,6 +2404,543 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "b": "Separar recursos pelas moedas e datas das despesas no exterior, da obrigação brasileira e do retorno.",
       "c": "Manter cada investimento em reais porque existe plano de retorno.",
       "d": "Usar a moeda do salário como referência para cada compromisso."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "STVM e transferências internas e externas de custódia": [
+    {
+     "id": "cpror-car-15-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. STVM identifica a solicitação usada para movimentar valores mobiliários entre contas de custódia.</p><p>As alternativas B, C e D apresentam expansões que não correspondem ao uso oficial da sigla no mercado.</p><p>Regra de bolso: em STVM, a letra S representa Solicitação.</p>",
+     "enunciado": "<p>Qual é o significado da sigla STVM no processo de movimentação de investimentos?</p>",
+     "alternativas": {
+      "a": "Solicitação de Transferência de Valores Mobiliários.",
+      "b": "Sistema Tributário de Valores de Mercado.",
+      "c": "Serviço de Transação e Venda Mobiliária.",
+      "d": "Sistema de Titularidade e Valoração Monetária."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-15-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A posição muda de custodiante, enquanto o investidor permanece titular dos mesmos valores mobiliários.</p><p>As alternativas A e C tratam a movimentação como negociação. A alternativa D supõe transformação do produto, que não ocorre na transferência.</p><p>Regra de bolso: portabilidade muda onde o ativo está custodiado.</p>",
+     "enunciado": "<p>Um investidor transfere ações de sua conta na instituição A para sua conta na instituição B. O que caracteriza essa operação?</p>",
+     "alternativas": {
+      "a": "Alienação das ações para a instituição de origem.",
+      "b": "Mudança de custódia com preservação da titularidade.",
+      "c": "Compra das ações pela instituição de destino.",
+      "d": "Conversão das ações em novo produto financeiro."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-15-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A transferência preserva o custo histórico de R$ 30 por ação para eventual apuração futura.</p><p>A alternativa A mostra a valorização unitária. A alternativa B usa uma média sem fundamento. A alternativa D trata o valor de mercado como novo custo.</p><p>Regra de bolso: mudar a custódia não redefine o preço original de aquisição.</p>",
+     "enunciado": "<p>Um cliente comprou 100 ações por R$ 30 cada e as transfere quando valem R$ 52. Qual preço de aquisição deve acompanhar a posição?</p>",
+     "alternativas": {
+      "a": "R$ 22 por ação.",
+      "b": "R$ 41 por ação.",
+      "c": "R$ 30 por ação.",
+      "d": "R$ 52 por ação."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-15-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A transferência externa possui custodiante ou intermediário de origem e outro de destino.</p><p>A alternativa A descreve transferência interna. A alternativa B realiza troca de investimento. A alternativa C altera cadastro sem mover o ativo.</p><p>Regra de bolso: externa significa que a custódia atravessa instituições.</p>",
+     "enunciado": "<p>Na classificação do programa, qual situação representa transferência externa de custódia?</p>",
+     "alternativas": {
+      "a": "Movimentação entre contas do investidor dentro da mesma instituição.",
+      "b": "Venda de um fundo e compra de outro na mesma plataforma.",
+      "c": "Mudança de perfil cadastral sem movimentar posições.",
+      "d": "Movimentação da posição entre instituições diferentes, com a mesma titularidade."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-15-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A transferência movimenta a posição existente sem venda e recompra motivadas somente pela troca de custodiante.</p><p>A alternativa B ignora a elegibilidade do destino. A alternativa C promete ausência de oscilação. A alternativa D altera indevidamente o histórico.</p><p>Regra de bolso: portabilidade evita criar uma venda onde bastava mover o ativo.</p>",
+     "enunciado": "<p>Um cliente quer trocar de corretora e pensa em vender sua carteira para recomprá-la no destino. Qual vantagem da transferência deve ser apresentada?</p>",
+     "alternativas": {
+      "a": "Preservar as posições e evitar a realização do resultado apenas para mudar a custódia.",
+      "b": "Garantir que cada ativo será aceito pela instituição de destino.",
+      "c": "Eliminar a oscilação dos ativos durante o processo de transferência.",
+      "d": "Transformar o preço de mercado em novo custo de aquisição."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-15-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A capacidade do destino é condição operacional, e uma posição incompatível pode precisar permanecer na origem.</p><p>A alternativa A ignora a limitação. A alternativa C cria obrigação para o emissor. A alternativa D transforma transferência em resgate.</p><p>Regra de bolso: confirme a elegibilidade no destino antes de solicitar a movimentação.</p>",
+     "enunciado": "<p>A instituição de destino informa ser incapaz de custodiar um título específico do cliente. Qual consequência é coerente?</p>",
+     "alternativas": {
+      "a": "O título passa a ser custodiado no destino por determinação do investidor.",
+      "b": "A posição pode permanecer na origem enquanto se avaliam alternativas compatíveis.",
+      "c": "O emissor precisa recomprar o título pelo preço de aquisição.",
+      "d": "A transferência converte o título em saldo disponível na nova conta."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-15-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A norma determina a transmissão de dados históricos necessários à continuidade da posição no destino.</p><p>As alternativas A e B omitem elementos essenciais. A alternativa D reúne projeção e dado comercial que não substituem o histórico do ativo.</p><p>Regra de bolso: a posição muda de endereço, mas leva consigo seu histórico econômico.</p>",
+     "enunciado": "<p>Quais informações históricas devem ser transmitidas pela origem conforme as características do ativo portado?</p>",
+     "alternativas": {
+      "a": "Somente o valor de mercado no dia da transferência.",
+      "b": "Apenas a data de abertura da conta do investidor.",
+      "c": "Quantidade, preço de aquisição, preço unitário, taxa e data de movimentação.",
+      "d": "Projeção de rentabilidade e classificação comercial do cliente."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-15-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. O ativo em garantia pode estar indisponível, enquanto a parcela livre pode seguir se o processo admitir efetivação parcial autorizada.</p><p>A alternativa A ignora o ônus. A alternativa B transforma portabilidade em venda. A alternativa C descarta posições disponíveis sem avaliar a opção do cliente.</p><p>Regra de bolso: um impedimento específico não precisa bloquear a parcela elegível da carteira.</p>",
+     "enunciado": "<p>Parte de uma carteira está livre, enquanto outro ativo serve como garantia de uma operação. Como a solicitação deve tratar essa situação?</p>",
+     "alternativas": {
+      "a": "Transferir o ativo em garantia e encerrar a obrigação no destino.",
+      "b": "Vender o ativo bloqueado e transferir o dinheiro recebido.",
+      "c": "Cancelar definitivamente a movimentação de cada posição livre.",
+      "d": "Identificar o impedimento e avaliar a efetivação da parte disponível conforme o consentimento do investidor."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-15-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. O valor de R$ 5.200 dividido por R$ 54 corresponde a cerca de 96,30 ações, antes de custos e das regras de negociação.</p><p>As alternativas B, C e D não correspondem à divisão dos recursos obtidos pelo novo preço unitário.</p><p>Regra de bolso: venda e recompra expõem o cliente à variação de preço entre as operações.</p>",
+     "enunciado": "<p>Um investidor vende por R$ 52 as 100 ações que pretendia transferir e tenta recomprá-las quando a cotação chega a R$ 54. Quantas ações o valor bruto permite adquirir aproximadamente?</p>",
+     "alternativas": {
+      "a": "96 ações.",
+      "b": "98 ações.",
+      "c": "100 ações.",
+      "d": "104 ações."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-15-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A decisão separa adequação da carteira, viabilidade operacional e qualidade do destino antes de executar a movimentação.</p><p>A alternativa A vende sem comparar a portabilidade. A alternativa C posterga verificações essenciais. A alternativa D confunde custódia com composição da carteira.</p><p>Regra de bolso: primeiro avalie o que manter, depois confirme o que pode ser movido e para onde.</p>",
+     "enunciado": "<p>Um cliente deseja consolidar a carteira em outra instituição para obter relatórios integrados. Qual sequência produz uma recomendação adequada?</p>",
+     "alternativas": {
+      "a": "Encerrar as posições, abrir a conta de destino e recomprar os produtos disponíveis.",
+      "b": "Avaliar a adequação dos ativos, confirmar a elegibilidade no destino e planejar a transferência das posições compatíveis.",
+      "c": "Solicitar a movimentação e analisar custos e restrições depois da conclusão.",
+      "d": "Transferir a carteira porque a mudança de custódia corrige sua concentração."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Portabilidade de mesma titularidade: processo e cuidados": [
+    {
+     "id": "cpror-car-16-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A identidade do titular é preservada enquanto a posição muda de conta ou instituição.</p><p>A alternativa B descreve alienação. A alternativa C cria disponibilidade financeira. A alternativa D atribui a propriedade ao custodiante.</p><p>Regra de bolso: mesma titularidade muda a custódia e conserva o dono.</p>",
+     "enunciado": "<p>Qual característica define a portabilidade de mesma titularidade?</p>",
+     "alternativas": {
+      "a": "As contas de origem e destino pertencem à mesma pessoa.",
+      "b": "O ativo é vendido antes de chegar ao destino.",
+      "c": "O recurso é entregue ao investidor durante o processo.",
+      "d": "A posição passa a pertencer à instituição receptora."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-16-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O custo histórico permite comparar uma alienação futura com o valor efetivamente investido.</p><p>A alternativa A é projeção. A alternativa C descreve a plataforma. A alternativa D confunde preço de mercado com preço de aquisição.</p><p>Regra de bolso: a posição transferida precisa levar sua memória econômica.</p>",
+     "enunciado": "<p>Qual informação econômica precisa acompanhar a posição para uma apuração futura correta?</p>",
+     "alternativas": {
+      "a": "A cotação projetada pela instituição de destino.",
+      "b": "O custo original de aquisição e seu histórico.",
+      "c": "A rentabilidade média da plataforma anterior.",
+      "d": "O preço exibido no encerramento da transferência."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-16-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A norma oferece ao investidor esses pontos de entrada, conforme o alcance e a estrutura aplicáveis.</p><p>As alternativas A, B e D restringem indevidamente os canais previstos para o pedido.</p><p>Regra de bolso: o investidor escolhe o ponto de solicitação entre os canais regulados.</p>",
+     "enunciado": "<p>Onde o investidor pode iniciar uma solicitação de portabilidade disciplinada pela Resolução CVM 210?</p>",
+     "alternativas": {
+      "a": "Exclusivamente no custodiante de origem.",
+      "b": "Somente no intermediário de destino.",
+      "c": "Na origem, no destino ou no depositário central.",
+      "d": "Apenas no emissor do valor mobiliário."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-16-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A preparação reduz divergências e cria base para conferir posição e histórico depois da movimentação.</p><p>A alternativa A altera o custo. A alternativa B presume venda. A alternativa C elimina justamente os comprovantes necessários.</p><p>Regra de bolso: confira conta, ativo e documentação antes de apertar o botão.</p>",
+     "enunciado": "<p>Um cliente prepara a portabilidade de sua carteira. Qual ação deve ocorrer antes do envio da solicitação?</p>",
+     "alternativas": {
+      "a": "Adotar a cotação do dia como custo de cada posição.",
+      "b": "Encerrar operações pendentes por meio de venda imediata.",
+      "c": "Descartar extratos antigos após abrir a nova conta.",
+      "d": "Confirmar titularidade, elegibilidade no destino e documentos do custo histórico."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-16-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Um ativo dado em garantia pode estar indisponível até a liberação ou regularização do vínculo.</p><p>A alternativa B presume encerramento do ônus. A alternativa C transforma a posição sem base. A alternativa D cria mudança de proprietário.</p><p>Regra de bolso: posição onerada precisa ser liberada ou tratada antes de ser movida.</p>",
+     "enunciado": "<p>Uma posição está vinculada como garantia de outra operação. Qual cuidado é adequado ao planejar sua portabilidade?</p>",
+     "alternativas": {
+      "a": "Tratar o vínculo como possível impedimento e verificar quando a posição ficará disponível.",
+      "b": "Solicitar a transferência e considerar a garantia encerrada automaticamente.",
+      "c": "Substituir o ativo por dinheiro sem consultar as condições da operação.",
+      "d": "Alterar a titularidade para liberar a posição no destino."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-16-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A conclusão operacional precisa ser reconciliada com a posição anterior e com seu histórico.</p><p>A alternativa A destrói a trilha documental. As alternativas C e D reiniciam indevidamente custo e data.</p><p>Regra de bolso: concluído significa transferido; conferido significa transferido corretamente.</p>",
+     "enunciado": "<p>O status da solicitação aparece como concluído. Qual providência encerra adequadamente a conferência do cliente?</p>",
+     "alternativas": {
+      "a": "Apagar os documentos da instituição de origem.",
+      "b": "Comparar quantidade, custo, datas, direitos e ônus recebidos no destino.",
+      "c": "Atualizar o custo de aquisição pela cotação de encerramento.",
+      "d": "Considerar a data da chegada como nova data de compra."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-16-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A venda soma R$ 40.000 e o custo preservado soma R$ 22.000, resultando em ganho de R$ 18.000.</p><p>As alternativas A e B não correspondem à diferença. A alternativa D ignora o custo e trata a receita como ganho.</p><p>Regra de bolso: ganho é valor de alienação deduzido do custo comprovado.</p>",
+     "enunciado": "<p>Uma investidora possui 1.000 ações adquiridas por R$ 22 e vendidas após a portabilidade por R$ 40. Desconsiderando despesas, qual é o ganho correto?</p>",
+     "alternativas": {
+      "a": "R$ 12.000.",
+      "b": "R$ 16.000.",
+      "c": "R$ 18.000.",
+      "d": "R$ 40.000."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-16-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Sem o custo de R$ 22.000, o valor integral da venda pode ser tratado incorretamente como resultado positivo.</p><p>A alternativa A reduz o ganho. A alternativa B iguala valores distintos. A alternativa C altera a receita em vez de corrigir o custo.</p><p>Regra de bolso: custo ausente transforma capital investido em ganho fictício.</p>",
+     "enunciado": "<p>O destino registrou custo zero para ações cujo custo comprovado era R$ 22.000. A venda posterior foi de R$ 40.000. Qual distorção aparece antes de outras deduções?</p>",
+     "alternativas": {
+      "a": "O ganho fica reduzido de R$ 18.000 para R$ 0.",
+      "b": "O custo passa a ser igual ao valor da venda.",
+      "c": "A receita da venda diminui para R$ 22.000.",
+      "d": "O ganho é inflado de R$ 18.000 para R$ 40.000."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-16-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. A multiplicação de R$ 18.000 por 15% resulta em R$ 2.700 no exemplo simplificado.</p><p>A alternativa B mostra a diferença diante do cálculo com custo zero. A alternativa C seria o imposto sobre R$ 40.000. A alternativa D repete o ganho.</p><p>Regra de bolso: a base correta depende do custo histórico preservado.</p>",
+     "enunciado": "<p>No caso anterior, qual imposto seria calculado sobre o ganho correto de R$ 18.000 usando a alíquota ilustrativa de 15%, sem deduções ou compensações?</p>",
+     "alternativas": {
+      "a": "R$ 2.700.",
+      "b": "R$ 3.300.",
+      "c": "R$ 6.000.",
+      "d": "R$ 18.000."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-16-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A portabilidade pode afetar temporariamente a movimentação, e o calendário da obrigação precisa orientar o que será transferido.</p><p>A alternativa A ignora a liquidez próxima. A alternativa C corrompe o histórico. A alternativa D muda o proprietário sem resolver o prazo.</p><p>Regra de bolso: necessidade imediata de caixa deve ser separada antes da transferência.</p>",
+     "enunciado": "<p>Um cliente pretende vender parte da carteira em três dias para pagar uma obrigação e solicita portabilidade hoje. Qual orientação considera o risco operacional?</p>",
+     "alternativas": {
+      "a": "Transferir cada posição porque o prazo de venda perde relevância.",
+      "b": "Separar a necessidade próxima, verificar prazos e transferir apenas posições compatíveis com o calendário.",
+      "c": "Alterar o custo dos ativos para acelerar o processamento.",
+      "d": "Mudar a titularidade da parcela destinada ao pagamento."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Transferência entre titularidades: requisitos e distinções": [
+    {
+     "id": "cpror-car-17-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Na transferência entre titulares, o ativo sai do patrimônio de uma pessoa e entra no de outra.</p><p>As alternativas B, C e D também podem existir em movimentações que conservam o mesmo proprietário.</p><p>Regra de bolso: mudar de conta conserva o dono; mudar de titular altera o patrimônio.</p>",
+     "enunciado": "<p>Qual elemento diferencia uma transferência entre titularidades de uma portabilidade comum?</p>",
+     "alternativas": {
+      "a": "A mudança do proprietário do investimento.",
+      "b": "A existência de instituição custodiante.",
+      "c": "A identificação do valor mobiliário.",
+      "d": "O uso de uma conta de investimentos."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-17-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A ausência de mudança do titular integra a própria definição regulatória de portabilidade.</p><p>As alternativas A, C e D representam transferências patrimoniais com causas e documentos específicos.</p><p>Regra de bolso: portabilidade regulada pela CVM preserva a titularidade.</p>",
+     "enunciado": "<p>Como a Resolução CVM 210 caracteriza a portabilidade de valores mobiliários?</p>",
+     "alternativas": {
+      "a": "Transferência gratuita para um familiar.",
+      "b": "Movimentação entre instituições sem alteração de titularidade.",
+      "c": "Atribuição de investimentos durante uma partilha.",
+      "d": "Entrega de ativos do espólio aos herdeiros."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-17-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A doação muda a propriedade e exige causa documentada, tratamento cadastral e avaliação dos efeitos tributários.</p><p>A alternativa A disfarça a mudança de titular. A alternativa B presume venda. A alternativa D ignora o valor atribuído ao ato.</p><p>Regra de bolso: doação é transferência patrimonial, e não portabilidade comum.</p>",
+     "enunciado": "<p>Uma cliente deseja doar ações ao filho. Qual encaminhamento reconhece a natureza da operação?</p>",
+     "alternativas": {
+      "a": "Usar o fluxo comum de mesma titularidade e trocar o CPF no destino.",
+      "b": "Vender as ações e transferir o dinheiro como etapa obrigatória.",
+      "c": "Formalizar a doação, verificar documentos e obter análise tributária específica.",
+      "d": "Copiar o custo da doadora sem considerar o valor do instrumento."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-17-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A diferença entre R$ 120.000 e R$ 80.000 corresponde a R$ 40.000.</p><p>As alternativas A, B e C não representam a diferença entre o valor atribuído e o valor anteriormente declarado.</p><p>Regra de bolso: valor acima do custo declarado pode criar diferença sujeita à análise tributária.</p>",
+     "enunciado": "<p>Um investimento consta na declaração do doador por R$ 80.000 e será transferido por R$ 120.000. Qual diferença pode ser relevante para ganho de capital?</p>",
+     "alternativas": {
+      "a": "R$ 20.000.",
+      "b": "R$ 30.000.",
+      "c": "R$ 80.000.",
+      "d": "R$ 40.000."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-17-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A instituição executa a atribuição patrimonial com base no inventário, na partilha, na adjudicação ou em documento competente.</p><p>As alternativas B, C e D não demonstram isoladamente o direito sobre as posições nem a parcela devida.</p><p>Regra de bolso: sucessão precisa de documento que transforme direito em instrução executável.</p>",
+     "enunciado": "<p>Após um falecimento, um familiar pede que os investimentos sejam enviados diretamente à sua conta. Qual requisito deve orientar a instituição?</p>",
+     "alternativas": {
+      "a": "Documento sucessório competente que identifique beneficiário, ativos e parcela atribuída.",
+      "b": "Mensagem do familiar declarando ser herdeiro.",
+      "c": "Senha usada pelo antigo titular para acessar a conta.",
+      "d": "Comprovante de parentesco sem definição da partilha."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-17-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O ITCMD incide conforme a legislação estadual ou distrital aplicável às doações e transmissões causa mortis.</p><p>As alternativas A, C e D tratam de fatos econômicos diferentes da transmissão patrimonial apresentada.</p><p>Regra de bolso: doação e herança exigem conferir o ITCMD no local aplicável.</p>",
+     "enunciado": "<p>Qual tributo deve ser verificado segundo a legislação do estado ou do Distrito Federal em doações e transmissões causa mortis?</p>",
+     "alternativas": {
+      "a": "IOF sobre câmbio.",
+      "b": "ITCMD.",
+      "c": "IPI.",
+      "d": "ISS."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-17-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A instituição precisa executar exatamente a atribuição formal e verificar se a posição admite a divisão determinada.</p><p>As alternativas A, B e D não comprovam direito, quantidade ou viabilidade da transferência.</p><p>Regra de bolso: o documento define a partilha e a operação confirma se ela pode ser executada como escrita.</p>",
+     "enunciado": "<p>Uma partilha atribui 1.200 cotas a uma pessoa e 800 a outra. Qual verificação operacional vem antes da execução?</p>",
+     "alternativas": {
+      "a": "Rentabilidade esperada das cotas no mês seguinte.",
+      "b": "Preferência comercial do intermediário de origem.",
+      "c": "Correspondência entre o instrumento, as quantidades e a possibilidade de divisão da posição.",
+      "d": "Desempenho de outro fundo disponível no destino."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-17-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. O custo do recebedor deve ser coerente com o ato formal e com a regra tributária aplicável.</p><p>A alternativa A aceita possível erro. A alternativa B usa cotação sem base documental. A alternativa C escolhe valor pelo resultado pretendido.</p><p>Regra de bolso: custo recebido precisa nascer do documento e da regra, e não de conveniência.</p>",
+     "enunciado": "<p>O instrumento de doação informa valor diferente do custo exibido no sistema de destino. Qual conduta reduz o risco de apuração futura inconsistente?</p>",
+     "alternativas": {
+      "a": "Manter o custo exibido porque a instituição realizou o cadastro.",
+      "b": "Substituir o valor pelo preço de mercado do dia.",
+      "c": "Escolher o valor que produza imposto reduzido.",
+      "d": "Reconciliar instrumento, tratamento tributário confirmado e registro da instituição."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-17-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. A execução exige identificar com precisão quais posições ou parcelas cabem a cada beneficiário.</p><p>A alternativa B cria liquidação automática. A alternativa C entrega decisão patrimonial à instituição. A alternativa D confunde preço com quantidade atribuída.</p><p>Regra de bolso: direito genérico precisa virar instrução específica antes da transferência.</p>",
+     "enunciado": "<p>Uma ordem de partilha identifica o beneficiário, mas omite quais valores mobiliários e quantidades serão atribuídos. Qual risco surge?</p>",
+     "alternativas": {
+      "a": "A instituição carece de instrução suficiente para executar a distribuição das posições.",
+      "b": "A custódia converte automaticamente os ativos em dinheiro.",
+      "c": "O beneficiário recebe a carteira em proporções escolhidas pela instituição.",
+      "d": "O valor de mercado resolve a omissão das quantidades."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-17-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. O profissional organiza os dados e explica efeitos econômicos, enquanto a estrutura jurídica e tributária exige competência específica.</p><p>As alternativas A, C e D escolhem valores sem validar causa, documentos e regras aplicáveis.</p><p>Regra de bolso: explique o impacto, mas encaminhe a decisão jurídica e fiscal ao especialista.</p>",
+     "enunciado": "<p>Um cliente solicita ao profissional de investimentos que escolha o valor tributário de uma doação. Qual resposta respeita o limite de atuação?</p>",
+     "alternativas": {
+      "a": "Adotar o custo histórico porque produz continuidade automática.",
+      "b": "Explicar os impactos financeiros e encaminhar a definição a especialistas jurídicos e tributários.",
+      "c": "Usar a cotação atual porque aparece na plataforma.",
+      "d": "Escolher o valor declarado pelo recebedor sem examinar o instrumento."
      },
      "gabarito": "b"
     }
