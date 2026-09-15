@@ -133,7 +133,7 @@
   .brand{font-size:18px}
   .brand-mark{width:36px;height:38px;font-size:24px}
   .nav-cta,.login{font-size:11px;padding:9px 10px}
-  .login span{display:none}
+  .login span[aria-hidden]{display:none}
 }
 
 /* ══════════════════════════════════════════════════════════════════
@@ -157,7 +157,7 @@
   /* Os dois caminhos ficam visiveis na barra: comprar e entrar. O menu
      guarda so as secoes da pagina. */
   .login{display:inline-flex;align-items:center;font-size:11px;padding:8px 9px;border-radius:10px;white-space:nowrap}
-  .login span{display:none}
+  .login span[aria-hidden]{display:none}
   .nav-cta{display:inline-flex;min-height:38px;padding:9px 10px;font-size:11px;border-radius:10px}
   .nav-cta span[aria-hidden]{display:none}
   /* Na barra estreita o botao usa o rotulo curto; o longo volta na tela
@@ -323,4 +323,55 @@
   /* Com o cartao mais aberto, os textos de apoio ficam sobre o desenho.
      Escurecer um degrau devolve o contraste sem mudar o visual. */
   .demo-foot{color:#4A574E;padding:7px 14px;font-size:8.5px;background:rgba(245,248,244,.3);border-top-color:rgba(23,62,44,.07)}
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   O PRECO SAI DO RODAPE DA PAGINA E VAI PARA ONDE A DECISAO ACONTECE
+   (15/09/2026)
+   O dono viu que o valor estava escondido: aparecia em cinza de 12px embaixo
+   do botao do hero e so voltava la embaixo, no cartao da oferta. Agora ele
+   esta em tres alturas: no botao do cabecalho, que segue o aluno a pagina
+   inteira porque a barra e fixa, na linha do hero e no cartao. O valor cheio
+   fica riscado ao lado do valor de hoje, sempre menor e em cinza, para o olho
+   pousar no numero que importa.
+   ══════════════════════════════════════════════════════════════════ */
+.rot-preco,.rot-acao{display:block}
+.nav-cta .rot-longo [data-price]{font-weight:800}
+.reassurance{font-size:14px;display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 8px}
+.reassurance strong{display:inline-flex;align-items:baseline;gap:6px;font-weight:600;color:#173e2c}
+.reassurance s{color:#8C9A92;font-weight:600;text-decoration-thickness:1.5px}
+.reassurance b{font:800 22px "Bricolage Grotesque",sans-serif;letter-spacing:-.03em;color:#173e2c}
+.reassurance-uni{font-weight:600;color:#55665C}
+.price-de{font-size:14px;color:#66776C;margin-top:20px}
+.price-de s{font-weight:700;color:#8C9A92;text-decoration-thickness:1.5px}
+.price{margin-top:2px}
+
+@media(max-width:760px){
+  /* No celular o botao da barra vira duas linhas curtas, acao em cima e preco
+     embaixo. Escrito lado a lado ele empurraria o "Ja sou aluno" para fora e a
+     barra quebraria em duas linhas. */
+  .rot-curto{display:flex;flex-direction:column;align-items:center;line-height:1.1;gap:1px}
+  .rot-acao{font-size:9.5px;font-weight:700;opacity:.85;letter-spacing:.02em}
+  .rot-preco{font-size:12px;font-weight:800;letter-spacing:-.01em}
+  .nav-cta{padding:7px 11px;min-height:40px}
+  .reassurance{order:5;font-size:13px;flex-direction:row;align-items:baseline;gap:4px 7px}
+  .reassurance strong{gap:5px}
+  .reassurance b{font-size:20px}
+  .reassurance-sub{width:100%}
+  .price-de{margin-top:14px;font-size:13px}
+}
+@media(max-width:430px){
+  .rot-acao{font-size:9px}
+  .rot-preco{font-size:11.5px}
+  .nav-cta{padding:7px 9px}
+}
+
+/* Telas de 375px e menos: a barra quebrava em duas linhas desde antes desta
+   mudanca, por falta de uns 14 pixels. O rotulo do aluno encurta para
+   "Entrar" e os dois caminhos voltam a caber na mesma linha do cabecalho. */
+.login-curto{display:none}
+@media(max-width:385px){
+  .login-longo{display:none}
+  .login-curto{display:inline}
+  .login{padding:8px 10px}
 }
