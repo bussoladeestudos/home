@@ -151,88 +151,6 @@ window.CERTIFICACOES_DATA = [
     ]
   },
   {
-    "id": "pldftLgpdAssban",
-    "nome": "PLDFT + LGPD — Microcertificação ASSBAN",
-    "organizacao": "ASSBAN",
-    "tipo": "microcertificacao",
-    "area": "Prevenção a ilícitos e proteção de dados",
-    "nivel": "Microcertificação",
-    "descricao": "Microcertificação ASSBAN de PLDFT + LGPD. Plano editorial com 36 tópicos em cinco matérias. Prioridade de estudo igual entre matérias; os percentuais não são pesos oficiais de prova. Escopo LGPD sujeito à confirmação do programa combinado. Vinte e seis aulas disponíveis: quatro primeiras matérias completas; LGPD e análise estratégica em preparação. Defina a data do seu exame ao configurar.",
-    "modulos": [
-      {
-        "numero": 1,
-        "nome": "Fundamentos de PLD/FTP e legislação",
-        "descricao": "6 tópicos de estudo.",
-        "topicos": [
-          "Lavagem de dinheiro: conceito, origem ilícita e impactos",
-          "Colocação, ocultação e integração: etapas e reconhecimento",
-          "Lei 9.613/1998 e mudanças da Lei 12.683/2012",
-          "Pessoas obrigadas, deveres preventivos e sanções",
-          "Prevenção no Brasil: evolução, Coaf e órgãos de controle",
-          "Terrorismo e proliferação: financiamento e prevenção"
-        ]
-      },
-      {
-        "numero": 2,
-        "nome": "Tipologias, práticas nocivas e sinais de alerta",
-        "descricao": "6 tópicos de estudo.",
-        "topicos": [
-          "Empresas de fachada, empresas fictícias e interpostas pessoas",
-          "Fracionamento, mescla e movimentação incompatível",
-          "Imóveis, seguros, ativos de valor e comércio exterior",
-          "Transferências, câmbio irregular e ativos digitais",
-          "Tráfico de drogas, corrupção, tráfico de pessoas e migração irregular",
-          "Evasão fiscal, elisão fiscal e conduta no atendimento"
-        ]
-      },
-      {
-        "numero": 3,
-        "nome": "Política de prevenção e conhecimento das partes",
-        "descricao": "8 tópicos de estudo.",
-        "topicos": [
-          "Política de PLD/FT: alcance, governança e responsabilidades",
-          "Avaliação interna de risco e medidas proporcionais",
-          "Identificação do cliente e atualização cadastral",
-          "Qualificação, capacidade financeira e classificação de risco",
-          "Início do relacionamento e diligências: condições e exceções",
-          "Beneficiário final e cadeia de participação societária",
-          "Pessoas expostas politicamente e acompanhamento reforçado",
-          "Funcionários, parceiros, terceiros e relações internacionais"
-        ]
-      },
-      {
-        "numero": 4,
-        "nome": "Operações, comunicações e efetividade dos controles",
-        "descricao": "6 tópicos de estudo.",
-        "topicos": [
-          "Registro de operações, pagamentos e transferências",
-          "Operações em espécie: registros e solicitação de saques",
-          "Monitoramento, seleção, análise e dossiê",
-          "Comunicações ao Coaf e declaração de não ocorrência",
-          "Guarda de documentos: prazos e eventos de contagem",
-          "Controles, avaliação de efetividade e plano de ação"
-        ]
-      },
-      {
-        "numero": 5,
-        "nome": "LGPD aplicada ao mercado financeiro",
-        "descricao": "10 tópicos de estudo.",
-        "topicos": [
-          "Finalidade, abrangência e exceções da LGPD",
-          "Dados pessoais, sensíveis e anonimização",
-          "Princípios do tratamento de dados",
-          "Bases legais e consentimento",
-          "Direitos do titular e atendimento de solicitações",
-          "Controlador, operador, encarregado e governança",
-          "Compartilhamento, conservação e descarte",
-          "Segurança, incidentes e boas práticas",
-          "ANPD, responsabilidade e sanções",
-          "PLD/FT e LGPD: decisões integradas"
-        ]
-      }
-    ]
-  },
-  {
     "id": "cpror",
     "nome": "C-Pro R - Certificação Profissional Anbima de Relacionamento",
     "organizacao": "ANBIMA",
@@ -392,6 +310,88 @@ window.CERTIFICACOES_DATA = [
           "Risco e desvio padrão da carteira: benefício da diversificação",
           "Beta, riscos absoluto e relativo e risco diversificável",
           "Dominância entre carteiras, Sharpe e Treynor: uso e limitações"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pldftLgpdAssban",
+    "nome": "PLDFT + LGPD — Microcertificação ASSBAN",
+    "organizacao": "ASSBAN",
+    "tipo": "microcertificacao",
+    "area": "Prevenção a ilícitos e proteção de dados",
+    "nivel": "Microcertificação",
+    "descricao": "Microcertificação ASSBAN de PLDFT + LGPD. Plano editorial com 36 tópicos em cinco matérias. Prioridade de estudo igual entre matérias; os percentuais não são pesos oficiais de prova. Escopo LGPD sujeito à confirmação do programa combinado. Vinte e seis aulas disponíveis: quatro primeiras matérias completas; LGPD e análise estratégica em preparação. Defina a data do seu exame ao configurar.",
+    "modulos": [
+      {
+        "numero": 1,
+        "nome": "Fundamentos de PLD/FTP e legislação",
+        "descricao": "6 tópicos de estudo.",
+        "topicos": [
+          "Lavagem de dinheiro: conceito, origem ilícita e impactos",
+          "Colocação, ocultação e integração: etapas e reconhecimento",
+          "Lei 9.613/1998 e mudanças da Lei 12.683/2012",
+          "Pessoas obrigadas, deveres preventivos e sanções",
+          "Prevenção no Brasil: evolução, Coaf e órgãos de controle",
+          "Terrorismo e proliferação: financiamento e prevenção"
+        ]
+      },
+      {
+        "numero": 2,
+        "nome": "Tipologias, práticas nocivas e sinais de alerta",
+        "descricao": "6 tópicos de estudo.",
+        "topicos": [
+          "Empresas de fachada, empresas fictícias e interpostas pessoas",
+          "Fracionamento, mescla e movimentação incompatível",
+          "Imóveis, seguros, ativos de valor e comércio exterior",
+          "Transferências, câmbio irregular e ativos digitais",
+          "Tráfico de drogas, corrupção, tráfico de pessoas e migração irregular",
+          "Evasão fiscal, elisão fiscal e conduta no atendimento"
+        ]
+      },
+      {
+        "numero": 3,
+        "nome": "Política de prevenção e conhecimento das partes",
+        "descricao": "8 tópicos de estudo.",
+        "topicos": [
+          "Política de PLD/FT: alcance, governança e responsabilidades",
+          "Avaliação interna de risco e medidas proporcionais",
+          "Identificação do cliente e atualização cadastral",
+          "Qualificação, capacidade financeira e classificação de risco",
+          "Início do relacionamento e diligências: condições e exceções",
+          "Beneficiário final e cadeia de participação societária",
+          "Pessoas expostas politicamente e acompanhamento reforçado",
+          "Funcionários, parceiros, terceiros e relações internacionais"
+        ]
+      },
+      {
+        "numero": 4,
+        "nome": "Operações, comunicações e efetividade dos controles",
+        "descricao": "6 tópicos de estudo.",
+        "topicos": [
+          "Registro de operações, pagamentos e transferências",
+          "Operações em espécie: registros e solicitação de saques",
+          "Monitoramento, seleção, análise e dossiê",
+          "Comunicações ao Coaf e declaração de não ocorrência",
+          "Guarda de documentos: prazos e eventos de contagem",
+          "Controles, avaliação de efetividade e plano de ação"
+        ]
+      },
+      {
+        "numero": 5,
+        "nome": "LGPD aplicada ao mercado financeiro",
+        "descricao": "10 tópicos de estudo.",
+        "topicos": [
+          "Finalidade, abrangência e exceções da LGPD",
+          "Dados pessoais, sensíveis e anonimização",
+          "Princípios do tratamento de dados",
+          "Bases legais e consentimento",
+          "Direitos do titular e atendimento de solicitações",
+          "Controlador, operador, encarregado e governança",
+          "Compartilhamento, conservação e descarte",
+          "Segurança, incidentes e boas práticas",
+          "ANPD, responsabilidade e sanções",
+          "PLD/FT e LGPD: decisões integradas"
         ]
       }
     ]
