@@ -1,7 +1,10 @@
 /* Homepage: scripts clássicos e interações delegadas, separados do app. */
 (function(){
 'use strict';
-const PRICE='R$ 29,90', CHECKOUT='https://pay.hotmart.com/N106305634J';
+/* Preco: PRICE e o que o aluno paga hoje, PRICE_DE e o valor cheio que fica
+   riscado ao lado. Os dois saem daqui e entram no HTML por [data-price] e
+   [data-price-de], entao trocar de promocao e mexer em uma linha so. */
+const PRICE='R$ 29,90', PRICE_DE='R$ 299,90', CHECKOUT='https://pay.hotmart.com/N106305634J';
 const certs=window.CERTIFICACOES_DATA||[];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const clean=s=>String(s||'').replace(/\s*—\s*/g,': ');
@@ -73,6 +76,7 @@ document.addEventListener('keydown',e=>{
  menu.hidden=true;const b=document.querySelector('[data-action="abrirCerts"]');b.setAttribute('aria-expanded','false');b.focus();
 });
 document.querySelectorAll('[data-price]').forEach(el=>el.textContent=PRICE);
+document.querySelectorAll('[data-price-de]').forEach(el=>el.textContent=PRICE_DE);
 document.querySelectorAll('[data-action="checkout"]').forEach(el=>el.href=CHECKOUT);
 document.getElementById('programLinks').innerHTML=certs.map(c=>`<a href="#certificacoes">${esc(String(c.nome).split('—')[0].trim())}<small>${esc(c.organizacao)}</small></a>`).join('')||'<a href="#certificacoes">Conheça os programas ↓</a>';
 /* Popula o menu de certificacoes do cabecalho. Cada item leva a secao e ja
