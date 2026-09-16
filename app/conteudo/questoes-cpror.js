@@ -1,5 +1,5 @@
 /* GERADO por outputs/questoes_para_js.py. NAO editar a mao.
-   Fonte: _conteudo/cpror/questoes/**.yaml  ·  218 questoes em 23 topicos
+   Fonte: _conteudo/cpror/questoes/**.yaml  ·  300 questoes em 31 topicos
    Para mudar uma questao, edite o YAML e rode o script de novo. */
 window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
  "cproRAnbima": {
@@ -2943,6 +2943,1473 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "d": "Escolher o valor declarado pelo recebedor sem examinar o instrumento."
      },
      "gabarito": "b"
+    }
+   ],
+   "Transferência de custódia como instrumento de rebalanceamento": [
+    {
+     "id": "cpror-car-18-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A soma das contas mostra a exposição real e permite comparar o conjunto com a alocação desejada.</p><p>A alternativa B muda apenas um rótulo. A alternativa C promete estabilidade de preço. A alternativa D retira a referência usada no rebalanceamento.</p><p>Regra de bolso: primeiro consolide a visão; depois calcule o desvio.</p>",
+     "enunciado": "<p>Qual benefício da consolidação apoia diretamente o rebalanceamento de uma carteira distribuída em várias instituições?</p>",
+     "alternativas": {
+      "a": "Revelar os pesos e riscos do patrimônio considerado em conjunto.",
+      "b": "Alterar a classe dos ativos transferidos.",
+      "c": "Fixar o preço de mercado durante a movimentação.",
+      "d": "Eliminar a necessidade de definir uma alocação-alvo."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-18-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Transferência muda o prestador que custodia a posição, mas conserva o ativo e seus riscos.</p><p>A alternativa A altera a classificação sem base. A alternativa C elimina um risco que continua existente. A alternativa D descreve venda ou resgate.</p><p>Regra de bolso: portabilidade muda endereço, e não exposição.</p>",
+     "enunciado": "<p>Uma posição de ações é transferida para outra instituição do mesmo titular. Qual efeito ocorre sobre sua exposição econômica?</p>",
+     "alternativas": {
+      "a": "A posição passa a ser renda fixa.",
+      "b": "A exposição às ações permanece, embora a custódia mude.",
+      "c": "O risco de mercado é encerrado durante a transferência.",
+      "d": "O valor vira caixa disponível para outra classe."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-18-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A divisão de R$ 290.000 por R$ 700.000 resulta em aproximadamente 41,4%.</p><p>A alternativa A representa o alvo do caso. A alternativa B não corresponde à divisão. A alternativa D representa o peso aproximado da renda fixa.</p><p>Regra de bolso: peso consolidado é o valor da classe dividido pelo patrimônio agregado.</p>",
+     "enunciado": "<p>Uma carteira de R$ 700.000 possui R$ 320.000 em renda fixa, R$ 290.000 em renda variável e R$ 90.000 em alternativos. Qual é o peso aproximado da renda variável?</p>",
+     "alternativas": {
+      "a": "30,0%.",
+      "b": "35,7%.",
+      "c": "41,4%.",
+      "d": "45,7%."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-18-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A multiplicação de R$ 700.000 por 30% resulta em R$ 210.000.</p><p>A alternativa A corresponde ao alvo de alternativos. A alternativa B não corresponde ao percentual informado. A alternativa C mostra a posição atual.</p><p>Regra de bolso: valor-alvo é patrimônio multiplicado pelo peso desejado.</p>",
+     "enunciado": "<p>Na carteira anterior, o alvo de renda variável é 30%. Qual valor deve permanecer nessa classe após o ajuste sobre R$ 700.000?</p>",
+     "alternativas": {
+      "a": "R$ 140.000.",
+      "b": "R$ 180.000.",
+      "c": "R$ 290.000.",
+      "d": "R$ 210.000."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-18-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A diferença entre R$ 290.000 e R$ 210.000 é R$ 80.000.</p><p>A alternativa B corresponde ao déficit de alternativos. A alternativa C corresponde ao déficit de renda fixa. A alternativa D não corresponde aos desvios calculados.</p><p>Regra de bolso: exposição excedente é posição atual deduzida do valor-alvo.</p>",
+     "enunciado": "<p>A renda variável atual soma R$ 290.000 e seu alvo é R$ 210.000. Sem recursos novos ou fluxos compensatórios, qual redução é necessária?</p>",
+     "alternativas": {
+      "a": "R$ 80.000.",
+      "b": "R$ 50.000.",
+      "c": "R$ 30.000.",
+      "d": "R$ 20.000."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-18-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A custódia pode mudar sem realizar ganhos ou criar exposição ao intervalo entre venda e recompra das posições mantidas.</p><p>A alternativa A elimina risco existente. A alternativa C ignora a elegibilidade. A alternativa D abandona uma conferência essencial.</p><p>Regra de bolso: transfira o que será preservado e venda o que precisa mudar economicamente.</p>",
+     "enunciado": "<p>Por que transferir as posições que permanecerão pode ser preferível a vender a carteira inteira para trocar de plataforma?</p>",
+     "alternativas": {
+      "a": "Porque a transferência elimina o risco dos ativos preservados.",
+      "b": "Porque evita alienações sem função econômica e conserva o histórico das posições elegíveis.",
+      "c": "Porque torna cada produto compatível com a instituição receptora.",
+      "d": "Porque dispensa a conferência de custos no destino."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-18-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A localização da custódia não retira o fundo do patrimônio nem de sua classe de risco.</p><p>A alternativa A omite exposição existente. A alternativa B muda a natureza do ativo. A alternativa D altera a carteira antes do diagnóstico.</p><p>Regra de bolso: ativo fora do painel principal continua dentro da carteira.</p>",
+     "enunciado": "<p>Um fundo mantido na instituição de origem carece de acordo operacional no destino. Como ele deve entrar no diagnóstico consolidado?</p>",
+     "alternativas": {
+      "a": "Deve ser retirado dos pesos até se tornar portável.",
+      "b": "Deve ser classificado como caixa por permanecer na origem.",
+      "c": "Deve continuar nos pesos da carteira, mesmo fora da instituição principal.",
+      "d": "Deve ser substituído por ativo disponível antes de calcular a alocação."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-18-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A visão consolidada vem primeiro, seguida da decisão de custódia e das alterações econômicas necessárias.</p><p>A alternativa A vende antes do diagnóstico. A alternativa B escolhe estrutura antes do alvo. A alternativa C mantém a fragmentação da análise.</p><p>Regra de bolso: veja o conjunto, preserve o que fica e ajuste o que sobra.</p>",
+     "enunciado": "<p>Qual sequência separa corretamente consolidação, custódia e rebalanceamento econômico?</p>",
+     "alternativas": {
+      "a": "Vender posições, estimar os pesos antigos e escolher o destino.",
+      "b": "Escolher uma plataforma, transferir posições e definir o alvo depois.",
+      "c": "Calcular cada conta isolada, portar ativos e somar apenas os recebidos.",
+      "d": "Agregar posições, definir desvios, transferir ativos preservados e negociar o excedente necessário."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-18-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Reunir posições melhora a visão e a operação, mas conserva a quantidade e a classe dos ativos.</p><p>A alternativa B presume alteração de peso. A alternativa C confunde portabilidade com alienação. A alternativa D cria uma conversão inexistente.</p><p>Regra de bolso: concentração visual em uma conta não equivale a correção da concentração econômica.</p>",
+     "enunciado": "<p>Um cliente transfere R$ 290.000 em ações para uma única corretora e mantém cada posição. Qual conclusão descreve o resultado?</p>",
+     "alternativas": {
+      "a": "A custódia foi consolidada, mas o valor exposto à renda variável continua em R$ 290.000.",
+      "b": "O peso da renda variável cai para o alvo de 30%.",
+      "c": "A transferência realiza o ganho das ações portadas.",
+      "d": "A parcela excedente migra automaticamente para renda fixa."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-18-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. O caminho operacional precisa respeitar a urgência do ajuste e as consequências de cada alternativa.</p><p>A alternativa A transforma portabilidade em requisito. A alternativa C muda apenas o relatório. A alternativa D omite risco ainda existente.</p><p>Regra de bolso: prazo de execução participa da escolha entre transferir primeiro ou negociar na origem.</p>",
+     "enunciado": "<p>Uma posição excedente precisa ser reduzida imediatamente, mas sua transferência levará vários dias. Qual decisão deve ser comparada?</p>",
+     "alternativas": {
+      "a": "Aguardar a portabilidade porque vender na origem é incompatível com rebalanceamento.",
+      "b": "Avaliar venda na origem ou transferência prévia considerando urgência, liquidez, custos e tributação.",
+      "c": "Alterar a classe do ativo no relatório durante o processamento.",
+      "d": "Excluir a posição do cálculo até sua chegada ao destino."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Resgate antecipado: impactos em renda fixa, variável e alternativos": [
+    {
+     "id": "cpror-car-19-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Liquidez econômica considera preço, tributos, despesas e efeitos da retirada sobre a carteira.</p><p>A alternativa B trata apenas do acesso à operação. A alternativa C descreve comunicação comercial. A alternativa D indica uma referência de consulta.</p><p>Regra de bolso: dinheiro disponível precisa ser comparado com o custo da saída.</p>",
+     "enunciado": "<p>Qual fator distingue liquidez econômica de mera possibilidade operacional de saída?</p>",
+     "alternativas": {
+      "a": "O custo de transformar a posição em dinheiro naquele momento.",
+      "b": "A existência de um botão de venda na plataforma.",
+      "c": "O nome comercial usado pela instituição.",
+      "d": "A data em que o extrato foi consultado."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-19-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O FII é uma estrutura fechada e a saída antecipada costuma ocorrer pela negociação das cotas com outro investidor.</p><p>A alternativa A presume resgate pelo valor patrimonial. A alternativa C cria uma conversão automática. A alternativa D descreve uma troca inexistente.</p><p>Regra de bolso: em fundo fechado, procure a porta do mercado secundário.</p>",
+     "enunciado": "<p>Como o cotista costuma sair de um FII antes da liquidação do fundo?</p>",
+     "alternativas": {
+      "a": "Solicitando ao emissor o pagamento do valor patrimonial.",
+      "b": "Vendendo as cotas a outro investidor no mercado secundário.",
+      "c": "Convertendo as cotas em depósito bancário pelo custodiante.",
+      "d": "Trocando a posição por título público junto ao administrador."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-19-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. O rendimento é R$ 2.000, e R$ 2.000 multiplicados por 22,5% resultam em R$ 450.</p><p>A alternativa A usa 10%. A alternativa B usa 18%. A alternativa D duplica o valor correto.</p><p>Regra de bolso: aplique a alíquota ao rendimento, e não ao valor vendido.</p>",
+     "enunciado": "<p>Um título custou R$ 48.000 e foi vendido por R$ 50.000 após 150 dias. Qual imposto incide sobre o rendimento pela alíquota de 22,5%?</p>",
+     "alternativas": {
+      "a": "R$ 200.",
+      "b": "R$ 360.",
+      "c": "R$ 450.",
+      "d": "R$ 900."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-19-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Taxas exigidas mais altas reduzem o valor presente dos fluxos e pressionam o preço do título.</p><p>A alternativa A muda a modalidade do ativo. A alternativa B ignora o preço vigente. A alternativa C confunde vencimento com venda antecipada.</p><p>Regra de bolso: taxa de mercado sobe, preço do título prefixado tende a cair.</p>",
+     "enunciado": "<p>Qual efeito pode ocorrer na venda antecipada de um título prefixado após elevação das taxas exigidas pelo mercado?</p>",
+     "alternativas": {
+      "a": "Conversão automática em ativo pós-fixado.",
+      "b": "Pagamento pelo valor projetado para o vencimento.",
+      "c": "Preservação da taxa contratada em qualquer data.",
+      "d": "Redução do preço de venda por marcação a mercado."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-19-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O ganho simplificado é R$ 8.000, e 15% desse valor correspondem a R$ 1.200.</p><p>A alternativa B aplica percentual sobre base diferente. A alternativa C aproxima o custo da posição. A alternativa D aplica a alíquota ao valor vendido.</p><p>Regra de bolso: em ETF, apure o ganho líquido antes de aplicar a alíquota.</p>",
+     "enunciado": "<p>Uma parcela de ETF foi comprada por R$ 42.000 e vendida por R$ 50.000 em operação comum. Qual imposto estimado resulta de alíquota de 15% sobre o ganho?</p>",
+     "alternativas": {
+      "a": "R$ 1.200.",
+      "b": "R$ 1.500.",
+      "c": "R$ 6.300.",
+      "d": "R$ 7.500."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-19-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O preço disponível para negociação pode ficar abaixo do valor patrimonial quando a demanda e a liquidez são limitadas.</p><p>A alternativa A promete recuperação futura. A alternativa C atribui isenção à alienação. A alternativa D transforma diferença de preço em distribuição.</p><p>Regra de bolso: valor patrimonial informa uma referência; o comprador define o preço executável.</p>",
+     "enunciado": "<p>Cotas de FII com valor patrimonial de R$ 55.000 encontram oferta de compra por R$ 50.000. O que essa diferença sinaliza para a retirada?</p>",
+     "alternativas": {
+      "a": "Garantia de recuperação do valor após a ordem.",
+      "b": "Desconto de liquidez em relação à referência patrimonial.",
+      "c": "Isenção do ganho obtido na venda das cotas.",
+      "d": "Conversão do desconto em rendimento distribuído."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-19-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A Receita exclui as cotas de fundos de índice de ações dessa isenção mensal.</p><p>A alternativa A amplia a regra para cotas. A alternativa B associa o benefício ao prazo. A alternativa D troca o limite de vendas por limite de ganho.</p><p>Regra de bolso: a isenção de certas vendas de ações não alcança ETF.</p>",
+     "enunciado": "<p>Qual afirmação descreve a isenção mensal de R$ 20.000 no caso de ETF de ações?</p>",
+     "alternativas": {
+      "a": "Abrange qualquer cota negociada em bolsa.",
+      "b": "Depende apenas do prazo da posição.",
+      "c": "Fica fora dessa isenção aplicável a certas vendas de ações.",
+      "d": "Surge quando o ganho permanece abaixo de R$ 20.000."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-19-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A venda parcial do ETF gera caixa e reduz excesso de exposição, enquanto o título protege a meta e o FII sofre desconto.</p><p>A alternativa A começa pelo desconto. A alternativa B compromete primeiro a meta. A alternativa C também prioriza a posição com custo de liquidez.</p><p>Regra de bolso: use a retirada para corrigir excessos e preserve posições com função clara ou saída onerosa.</p>",
+     "enunciado": "<p>Um cliente precisa de caixa, possui ETF acima do peso, título ligado a uma meta próxima e FII com desconto relevante. Qual ordem inicial é coerente com essas premissas?</p>",
+     "alternativas": {
+      "a": "FII, título e ETF.",
+      "b": "Título, FII e ETF.",
+      "c": "FII, ETF e título.",
+      "d": "ETF, título e FII."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-19-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. O caixa líquido é uma parte da decisão, que também considera desconto, objetivo e pesos após a retirada.</p><p>A alternativa B ignora a meta financiada pelo título. A alternativa C usa apenas a classificação. A alternativa D confunde referência patrimonial com preço executável.</p><p>Regra de bolso: compare o caixa recebido com o dano deixado na carteira.</p>",
+     "enunciado": "<p>Três saídas geram R$ 50.000 brutos. Após o tributo estimado, renda fixa entrega R$ 49.550, ETF entrega R$ 48.800 e FII entrega R$ 49.400. Qual análise orienta a decisão?</p>",
+     "alternativas": {
+      "a": "Comparar o líquido, o valor abandonado e a alocação resultante.",
+      "b": "Escolher a renda fixa apenas pelo líquido apresentado.",
+      "c": "Escolher o ETF apenas pela classe do ativo.",
+      "d": "Escolher o FII apenas pelo valor patrimonial."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-19-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A sequência dimensiona a necessidade, aproveita caixa natural e compara as consequências antes da execução.</p><p>A alternativa A calcula após vender. A alternativa C usa histórico como ordem fixa. A alternativa D presume execução pela referência contábil.</p><p>Regra de bolso: necessidade, fluxos, simulação e nova alocação vêm antes da ordem.</p>",
+     "enunciado": "<p>Antes de vender posições para atender uma necessidade de caixa, qual sequência produz diagnóstico consistente?</p>",
+     "alternativas": {
+      "a": "Executar a ordem, identificar o objetivo e calcular custos.",
+      "b": "Mapear a necessidade, usar fluxos disponíveis, simular saídas e recalcular os pesos.",
+      "c": "Ordenar classes por rentabilidade passada e vender a primeira.",
+      "d": "Consultar o valor patrimonial e definir esse valor como preço de saída."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Tributação e custos na decisão de rebalancear": [
+    {
+     "id": "cpror-car-20-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O ajuste faz sentido quando a melhora de risco e adequação justifica os recursos consumidos na execução.</p><p>A alternativa B usa retorno recente como critério. A alternativa C compara medidas sem vínculo decisório. A alternativa D relaciona informações insuficientes.</p><p>Regra de bolso: rebalanceie quando o benefício esperado justificar o custo total.</p>",
+     "enunciado": "<p>Qual comparação sustenta a decisão de executar um rebalanceamento?</p>",
+     "alternativas": {
+      "a": "Benefício de adequação diante do custo tributário e operacional.",
+      "b": "Peso atual diante da rentabilidade do último mês.",
+      "c": "Quantidade de ativos diante do número de instituições.",
+      "d": "Valor investido diante da idade da conta."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-20-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O aporte aumenta a classe deficitária e pode reduzir o peso relativo da classe excedente sem venda.</p><p>A alternativa A reforça a classe errada. A alternativa C cria efeito fiscal inexistente. A alternativa D tenta reverter despesas passadas.</p><p>Regra de bolso: fluxo novo entra onde falta peso.</p>",
+     "enunciado": "<p>Como um aporte pode reduzir o custo de rebalancear uma carteira?</p>",
+     "alternativas": {
+      "a": "Elevando o custo de aquisição da classe excedente.",
+      "b": "Direcionando dinheiro novo à classe abaixo do alvo.",
+      "c": "Convertendo ganhos acumulados em perdas fiscais.",
+      "d": "Eliminando tarifas já pagas em operações anteriores."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-20-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. O aporte eleva a renda fixa a R$ 550.000, igualando o valor de R$ 550.000 mantido no ETF.</p><p>A alternativa A leva a renda fixa a R$ 500.000. A alternativa B leva a R$ 525.000. A alternativa D eleva a classe a R$ 560.000.</p><p>Regra de bolso: calcule os pesos novamente sobre o patrimônio após o aporte.</p>",
+     "enunciado": "<p>Uma carteira possui R$ 450.000 em renda fixa e R$ 550.000 em ETF. Qual aporte exclusivo em renda fixa leva as classes a pesos iguais?</p>",
+     "alternativas": {
+      "a": "R$ 50.000.",
+      "b": "R$ 75.000.",
+      "c": "R$ 100.000.",
+      "d": "R$ 110.000."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-20-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A retirada reduz a classe excedente e evita vender uma classe que precisaria ser recomposta depois.</p><p>A alternativa A amplia o déficit. A alternativa B usa a data de compra sem analisar pesos. A alternativa C escolhe por histórico isolado.</p><p>Regra de bolso: necessidade de caixa deve sair primeiro do excesso compatível com a venda.</p>",
+     "enunciado": "<p>Uma retirada já programada pode apoiar o rebalanceamento quando é financiada por qual posição?</p>",
+     "alternativas": {
+      "a": "Classe abaixo do alvo com função prioritária.",
+      "b": "Ativo recém-comprado em qualquer classe.",
+      "c": "Posição escolhida apenas pela rentabilidade passada.",
+      "d": "Classe acima do peso desejado para a carteira."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-20-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O ganho é R$ 40.000 e a compensação de R$ 10.000 deixa base de R$ 30.000.</p><p>A alternativa B ignora a compensação. A alternativa C usa o valor de venda. A alternativa D soma a perda ao ganho.</p><p>Regra de bolso: ganho realizado menos prejuízo admitido forma a base remanescente.</p>",
+     "enunciado": "<p>Uma venda de R$ 50.000 possui custo de aquisição de R$ 10.000 e usa R$ 10.000 de prejuízo compensável. Qual base resta para tributação?</p>",
+     "alternativas": {
+      "a": "R$ 30.000.",
+      "b": "R$ 40.000.",
+      "c": "R$ 50.000.",
+      "d": "R$ 60.000."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-20-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O imposto é R$ 4.500 e, somado aos R$ 100 operacionais, produz custo de R$ 4.600.</p><p>A alternativa A usa alíquota de 10%. A alternativa C acrescenta R$ 400. A alternativa D desconsidera a base informada.</p><p>Regra de bolso: custo explícito soma tributo estimado e despesas de execução.</p>",
+     "enunciado": "<p>Sobre base remanescente de R$ 30.000, a alíquota do exemplo é 15% e os custos das duas operações somam R$ 100. Qual é o custo explícito?</p>",
+     "alternativas": {
+      "a": "R$ 3.100.",
+      "b": "R$ 4.600.",
+      "c": "R$ 4.900.",
+      "d": "R$ 5.500."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-20-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Com exposição e adequação equivalentes, a posição com ganho acumulado mais baixo tende a realizar base tributável menor.</p><p>A alternativa A observa preço unitário. A alternativa B ignora custo e valor de venda. A alternativa D usa quantidade sem resultado econômico.</p><p>Regra de bolso: entre vendas igualmente adequadas, compare o ganho que será realizado.</p>",
+     "enunciado": "<p>Duas posições oferecem exposição equivalente e podem ser reduzidas. Qual característica pode diminuir o imposto atual da venda?</p>",
+     "alternativas": {
+      "a": "Cotação unitária mais alta.",
+      "b": "Data de compra mais recente por si só.",
+      "c": "Ganho acumulado mais baixo na parcela alienada.",
+      "d": "Quantidade mais alta de cotas na conta."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-20-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Prejuízos de day trade e de operações comuns pertencem a modalidades separadas para compensação.</p><p>A alternativa A mistura categorias. A alternativa B cria compensação parcial. A alternativa C altera o custo do ativo sem fundamento.</p><p>Regra de bolso: classifique a modalidade antes de usar o prejuízo fiscal.</p>",
+     "enunciado": "<p>Um cliente possui prejuízo acumulado em day trade e apura ganho em operação comum. Como esse saldo entra na simulação?</p>",
+     "alternativas": {
+      "a": "Compensa o ganho até o valor integral do saldo.",
+      "b": "Compensa metade do ganho por serem operações de bolsa.",
+      "c": "Vira custo de aquisição da posição vendida.",
+      "d": "Permanece separado porque as modalidades possuem controles distintos."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-20-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Dentro da faixa aceita, o custo de uma correção pequena pode superar o benefício produzido.</p><p>A alternativa B ignora tolerância e custos. A alternativa C muda a política para evitar diagnóstico. A alternativa D usa dado recente sem relação suficiente.</p><p>Regra de bolso: precisão de peso também possui preço.</p>",
+     "enunciado": "<p>Um desvio está dentro da faixa da política e sua correção exige venda de posição valorizada e compra de outro ativo. Qual decisão é coerente?</p>",
+     "alternativas": {
+      "a": "Comparar o benefício marginal com imposto, spread e despesas antes de negociar.",
+      "b": "Executar a venda porque qualquer diferença exige ajuste imediato.",
+      "c": "Alterar o alvo para coincidir com os pesos observados.",
+      "d": "Escolher a operação pelo retorno do pregão anterior."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-20-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A coordenação usa cada fluxo para aproximar os pesos e reduz negociações adicionais.</p><p>A alternativa A amplia o desvio. A alternativa C ignora valores e metas. A alternativa D abandona o controle do risco durante a espera.</p><p>Regra de bolso: faça entrada preencher déficit e saída reduzir excesso.</p>",
+     "enunciado": "<p>Qual plano tende a reduzir o custo para uma carteira com classe excedente, aporte próximo e retirada programada?</p>",
+     "alternativas": {
+      "a": "Comprar a classe excedente e vender a deficitária antes dos fluxos.",
+      "b": "Direcionar o aporte à classe deficitária e financiar a retirada pela excedente.",
+      "c": "Distribuir aporte e retirada pelo número de ativos existentes.",
+      "d": "Suspender o acompanhamento até a data dos dois fluxos."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Ativos livres de risco e risco de crédito: referência e limites": [
+    {
+     "id": "cpror-car-21-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A referência permite medir quanto retorno adicional um ativo oferece pela exposição a outros riscos.</p><p>A alternativa B promete estabilidade de preço. A alternativa C elimina risco inflacionário. A alternativa D dispensa variáveis necessárias.</p><p>Regra de bolso: a taxa de referência é a base da comparação, e não uma promessa de ausência de risco.</p>",
+     "enunciado": "<p>Qual função o ativo livre de risco desempenha na análise de investimentos?</p>",
+     "alternativas": {
+      "a": "Servir de referência para separar a remuneração básica dos riscos adicionais.",
+      "b": "Garantir preço estável para qualquer data de venda.",
+      "c": "Eliminar o efeito da inflação sobre o patrimônio.",
+      "d": "Substituir a avaliação do prazo e da liquidez."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-21-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A marcação a mercado atualiza o preço conforme as taxas exigidas para fluxos comparáveis.</p><p>A alternativa A cria conversão inexistente. A alternativa C altera o contrato. A alternativa D associa o título soberano a ratings corporativos.</p><p>Regra de bolso: baixo risco de crédito não elimina risco de preço.</p>",
+     "enunciado": "<p>Por que um título público prefixado pode oscilar antes do vencimento?</p>",
+     "alternativas": {
+      "a": "O emissor converte o título em ação durante o prazo.",
+      "b": "Mudanças nas taxas de mercado alteram seu preço presente.",
+      "c": "A inflação troca automaticamente a taxa contratada.",
+      "d": "O principal é recalculado pelo rating de empresas privadas."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-21-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A diferença é 2 pontos percentuais, e cada ponto percentual corresponde a 100 pontos-base.</p><p>A alternativa A desloca uma casa decimal. A alternativa B representa um ponto percentual. A alternativa D converte a taxa privada inteira.</p><p>Regra de bolso: subtraia as taxas comparáveis e multiplique os pontos percentuais por 100.</p>",
+     "enunciado": "<p>Um título público comparável rende 10% ao ano e um título privado rende 12% ao ano. Qual é o spread de crédito?</p>",
+     "alternativas": {
+      "a": "20 pontos-base.",
+      "b": "100 pontos-base.",
+      "c": "200 pontos-base.",
+      "d": "1.200 pontos-base."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-21-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Indexador e duração próximos ajudam a isolar o prêmio associado ao crédito privado.</p><p>A alternativa A mede moeda. A alternativa B representa renda variável. A alternativa C mistura indexador e horizonte.</p><p>Regra de bolso: compare curvas no mesmo indexador e em prazos equivalentes.</p>",
+     "enunciado": "<p>Qual referência é coerente para avaliar o spread de uma debênture indexada ao IPCA com prazo longo?</p>",
+     "alternativas": {
+      "a": "Taxa de câmbio à vista.",
+      "b": "Índice de ações de mercado amplo.",
+      "c": "Taxa pós-fixada de curtíssimo prazo isoladamente.",
+      "d": "Título público indexado ao IPCA com duração próxima."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-21-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A parcela perdida é 60%, e 2% multiplicados por 60% resultam em 1,2%.</p><p>A alternativa B duplica o resultado. A alternativa C desloca a escala da probabilidade. A alternativa D mostra a perda condicionada ao evento.</p><p>Regra de bolso: perda esperada aproxima probabilidade de falha multiplicada pela parcela sem recuperação.</p>",
+     "enunciado": "<p>A probabilidade anual estimada de inadimplência é 2% e a recuperação no evento é 40%. Qual é a perda esperada simplificada?</p>",
+     "alternativas": {
+      "a": "1,2%.",
+      "b": "2,4%.",
+      "c": "20%.",
+      "d": "60%."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-21-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Nas premissas apresentadas, a remuneração adicional é insuficiente até para cobrir a perda média estimada.</p><p>A alternativa A confunde prêmio com proteção. A alternativa C inverte as referências. A alternativa D retira um componente da fórmula.</p><p>Regra de bolso: compare o spread com a perda esperada antes de remunerar os demais riscos.</p>",
+     "enunciado": "<p>Um papel oferece spread de 70 pontos-base diante de perda esperada estimada em 120 pontos-base. O que a comparação sugere?</p>",
+     "alternativas": {
+      "a": "O papel elimina a possibilidade de perda patrimonial.",
+      "b": "O prêmio fica abaixo da perda esperada usada no exercício.",
+      "c": "A referência pública possui risco de crédito superior.",
+      "d": "A recuperação estimada deixa de participar da análise."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-21-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A abertura do spread pode refletir deterioração, aversão ao risco ou baixa liquidez e exige investigação.</p><p>A alternativa A transforma taxa em garantia. A alternativa B elimina um risco possível. A alternativa D descarta uma informação complementar.</p><p>Regra de bolso: spread aberto é sinal para análise, e não aprovação automática.</p>",
+     "enunciado": "<p>O spread de um emissor passa de 150 para 400 pontos-base. Qual interpretação é adequada?</p>",
+     "alternativas": {
+      "a": "O pagamento do título passou a ser garantido.",
+      "b": "O ativo perdeu sua exposição à liquidez.",
+      "c": "O mercado passou a exigir remuneração adicional pelo conjunto de riscos percebidos.",
+      "d": "O rating deixou de possuir relação com a análise do emissor."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-21-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Prêmio esperado e perda possível precisam caber no limite de risco e na concentração aceita pelo cliente.</p><p>A alternativa A trata remuneração como proteção. A alternativa B dispensa controle de emissor. A alternativa C ignora reprecificação anterior ao evento.</p><p>Regra de bolso: prêmio pequeno e perda concentrada pedem limite de posição.</p>",
+     "enunciado": "<p>Um título privado paga 200 pontos-base sobre a referência e pode perder R$ 40.000 em cenário de inadimplência. Qual conclusão orienta a carteira?</p>",
+     "alternativas": {
+      "a": "O prêmio anual funciona como garantia do principal.",
+      "b": "A diferença de taxa elimina a necessidade de diversificação.",
+      "c": "O preço do papel permanece fixo até o evento de crédito.",
+      "d": "O retorno adicional deve ser comparado com o impacto da perda e o tamanho da posição."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-21-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Salário, carreira e investimento podem sofrer juntos se a empresa enfrentar dificuldade.</p><p>A alternativa B limita a análise à taxa. A alternativa C transforma uma opinião em decisão completa. A alternativa D ignora concentração econômica.</p><p>Regra de bolso: risco do emissor inclui a exposição que já existe fora da carteira.</p>",
+     "enunciado": "<p>Um cliente recebe salário da empresa emissora e considera concentrar sua carteira nas debêntures dela. Como o spread deve ser avaliado?</p>",
+     "alternativas": {
+      "a": "Junto da dependência profissional e da concentração no mesmo emissor.",
+      "b": "Apenas pela diferença entre as taxas nominais.",
+      "c": "Apenas pelo rating vigente na data da compra.",
+      "d": "Sem considerar a renda do cliente na decisão."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-21-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A sequência isola a diferença de crédito e acrescenta as perdas e os efeitos relevantes para a carteira.</p><p>A alternativa A decide com informações parciais. A alternativa C mistura horizontes. A alternativa D abandona a capacidade de pagamento.</p><p>Regra de bolso: referência comparável, spread, perda e posição formam a leitura completa.</p>",
+     "enunciado": "<p>Qual sequência produz uma análise consistente do prêmio de crédito?</p>",
+     "alternativas": {
+      "a": "Escolher a taxa privada, observar o rating e definir a posição.",
+      "b": "Alinhar referência, calcular spread, estimar perdas e avaliar concentração e liquidez.",
+      "c": "Comparar taxas de qualquer prazo, selecionar a alta e diversificar depois.",
+      "d": "Usar a taxa nominal, retirar a inflação e dispensar a análise do emissor."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Risco, retorno e dominância entre ativos": [
+    {
+     "id": "cpror-car-22-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O retorno esperado resume uma expectativa e pode diferir do retorno que será efetivamente realizado.</p><p>A alternativa B transforma estimativa em garantia. A alternativa C descreve resultado passado. A alternativa D trata de liquidez.</p><p>Regra de bolso: esperado é projeção; realizado é resultado observado.</p>",
+     "enunciado": "<p>O que representa o retorno esperado de um ativo?</p>",
+     "alternativas": {
+      "a": "Uma estimativa do resultado futuro baseada em premissas e cenários.",
+      "b": "O resultado garantido para o fim do horizonte.",
+      "c": "A rentabilidade já obtida desde a compra.",
+      "d": "O valor disponível para resgate imediato."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-22-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A dominância melhora uma dimensão sem piorar a outra e exige alguma diferença favorável.</p><p>A alternativa A trata da localização. A alternativa C combina características sem regra de eficiência. A alternativa D usa apenas resultado histórico.</p><p>Regra de bolso: benefício sobe sem custo subir, ou custo cai sem benefício cair.</p>",
+     "enunciado": "<p>Qual condição caracteriza dominância entre dois ativos comparáveis?</p>",
+     "alternativas": {
+      "a": "Mesma instituição de custódia.",
+      "b": "Retorno igual ou superior e risco igual ou inferior, com alguma vantagem estrita.",
+      "c": "Preço unitário mais alto e prazo mais longo.",
+      "d": "Rentabilidade passada positiva nos dois ativos."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-22-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A soma ponderada é menos 1% mais 5% mais 5,4%, resultando em 9,4%.</p><p>A alternativa A omite parte do terceiro cenário. A alternativa B decorre de ponderação incorreta. A alternativa D usa o cenário intermediário isolado.</p><p>Regra de bolso: multiplique cada retorno por sua probabilidade e some os resultados.</p>",
+     "enunciado": "<p>Um ativo tem 20% de chance de retorno de -5%, 50% de retorno de 10% e 30% de retorno de 18%. Qual é o retorno esperado?</p>",
+     "alternativas": {
+      "a": "8,0%.",
+      "b": "8,6%.",
+      "c": "9,4%.",
+      "d": "10,0%."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-22-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Beta acrescenta dois pontos percentuais de retorno esperado sem elevar a volatilidade usada na comparação.</p><p>A alternativa A inverte a relação. A alternativa B pressupõe riscos diferentes. A alternativa C ignora a diferença de retorno.</p><p>Regra de bolso: para o mesmo risco, prefira o retorno esperado superior.</p>",
+     "enunciado": "<p>Alfa oferece retorno esperado de 9% com volatilidade de 6%. Beta oferece 11% com volatilidade de 6%. Qual relação existe?</p>",
+     "alternativas": {
+      "a": "Alfa domina Beta pela estabilidade.",
+      "b": "Os ativos apresentam uma troca entre risco e retorno.",
+      "c": "Os ativos possuem métricas idênticas.",
+      "d": "Beta domina Alfa pelo retorno superior com risco equivalente."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-22-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Os retornos esperados são iguais, enquanto Beta apresenta dois pontos percentuais a menos de volatilidade.</p><p>A alternativa B premia risco adicional. A alternativa C exigiria diferença de retorno. A alternativa D ignora a vantagem de risco.</p><p>Regra de bolso: para o mesmo retorno, prefira o risco inferior.</p>",
+     "enunciado": "<p>Beta oferece retorno de 11% e volatilidade de 6%. Gama oferece retorno de 11% e volatilidade de 8%. Qual conclusão decorre dos números?</p>",
+     "alternativas": {
+      "a": "Beta domina Gama porque preserva o retorno com risco inferior.",
+      "b": "Gama domina Beta porque sua volatilidade é superior.",
+      "c": "Existe troca entre risco e retorno.",
+      "d": "Falta vantagem estrita entre os ativos."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-22-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Delta acrescenta retorno e risco, enquanto Beta reduz ambos, criando uma escolha dependente do investidor.</p><p>A alternativa A ignora o retorno de Delta. A alternativa C ignora o risco adicional. A alternativa D desconsidera as diferenças.</p><p>Regra de bolso: quando retorno e risco caminham juntos, o perfil participa da escolha.</p>",
+     "enunciado": "<p>Beta oferece 11% de retorno e 6% de volatilidade. Delta oferece 14% de retorno e 12% de volatilidade. Como comparar os ativos?</p>",
+     "alternativas": {
+      "a": "Beta domina Delta pelo risco inferior.",
+      "b": "Existe troca entre retorno esperado e risco, sem dominância.",
+      "c": "Delta domina Beta pelo retorno superior.",
+      "d": "As alternativas são equivalentes nas duas dimensões."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-22-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Igualdade nas duas dimensões impede apontar vantagem estrita com base apenas nesses números.</p><p>A alternativa A usa preço nominal. A alternativa B acrescenta critério externo. A alternativa D usa ordem temporal irrelevante.</p><p>Regra de bolso: igualdade completa não produz dominância.</p>",
+     "enunciado": "<p>Dois ativos possuem o mesmo retorno esperado e a mesma volatilidade. O que o princípio da dominância indica?</p>",
+     "alternativas": {
+      "a": "O ativo com preço unitário alto domina.",
+      "b": "O ativo com histórico mais longo domina.",
+      "c": "Falta vantagem estrita para estabelecer dominância pelas duas métricas.",
+      "d": "O ativo comprado primeiro domina."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-22-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Dominância nas métricas selecionadas não corrige incompatibilidade entre disponibilidade e objetivo.</p><p>A alternativa A reduz a análise a dois números. A alternativa B altera o objetivo pelo produto. A alternativa C despreza risco de liquidez temporal.</p><p>Regra de bolso: ativo eficiente ainda precisa caber no plano.</p>",
+     "enunciado": "<p>Um ativo aparenta dominar outro por retorno e volatilidade, mas possui prazo incompatível com a meta do cliente. Qual decisão é adequada?</p>",
+     "alternativas": {
+      "a": "Escolher o dominante porque as duas métricas encerram a análise.",
+      "b": "Aumentar a meta para coincidir com o vencimento do ativo.",
+      "c": "Ignorar o prazo porque ele fica fora da volatilidade.",
+      "d": "Reavaliar a comparação, pois adequação temporal também participa da decisão."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-22-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Bases equivalentes permitem atribuir as diferenças aos ativos em vez de à metodologia.</p><p>A alternativa B mistura periodicidades. A alternativa C mistura tratamento de custos e tributos. A alternativa D compara estimativa com observação isolada.</p><p>Regra de bolso: antes de ordenar, coloque as métricas na mesma unidade.</p>",
+     "enunciado": "<p>Qual comparação oferece base metodológica coerente para aplicar dominância?</p>",
+     "alternativas": {
+      "a": "Retornos e riscos no mesmo horizonte, moeda e periodicidade.",
+      "b": "Retorno anual de um ativo e volatilidade mensal de outro.",
+      "c": "Retorno bruto de um ativo e retorno líquido do concorrente.",
+      "d": "Cenário projetado de um ativo e resultado passado isolado do outro."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-22-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. Sem dominância, a escolha depende da quantidade de risco que o cliente pode e deseja assumir.</p><p>A alternativa A transforma risco em objetivo. A alternativa C ignora adequação. A alternativa D soma grandezas com sentidos distintos.</p><p>Regra de bolso: a dominância elimina ineficiências; o perfil decide as trocas restantes.</p>",
+     "enunciado": "<p>Após eliminar ativos dominados, restam alternativas em que retorno adicional exige risco adicional. Qual é o próximo passo?</p>",
+     "alternativas": {
+      "a": "Escolher a volatilidade mais alta para ampliar o retorno.",
+      "b": "Relacionar a troca ao objetivo, horizonte e capacidade de risco do cliente.",
+      "c": "Escolher o retorno projetado mais alto em qualquer situação.",
+      "d": "Somar retorno e volatilidade e selecionar o resultado alto."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Risco e desvio padrão da carteira: benefício da diversificação": [
+    {
+     "id": "cpror-car-23-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A correlação determina quanto as oscilações individuais se reforçam ou se compensam na combinação.</p><p>A alternativa B trata da custódia. A alternativa C ignora valores e pesos. A alternativa D descreve informação operacional.</p><p>Regra de bolso: risco individual mais movimento conjunto formam o risco da carteira.</p>",
+     "enunciado": "<p>Qual elemento distingue o cálculo do risco da carteira da média ponderada das volatilidades individuais?</p>",
+     "alternativas": {
+      "a": "O movimento conjunto medido pela correlação.",
+      "b": "O nome das instituições de custódia.",
+      "c": "A quantidade nominal de cotas.",
+      "d": "A data de abertura da conta."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-23-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O desvio padrão é a raiz quadrada da variância e volta à escala dos retornos.</p><p>A alternativa A altera a expressão sem fundamento. A alternativa C mistura retorno e risco. A alternativa D calcula outra medida.</p><p>Regra de bolso: variância primeiro, raiz quadrada depois.</p>",
+     "enunciado": "<p>Após calcular a variância da carteira, qual operação produz seu desvio padrão?</p>",
+     "alternativas": {
+      "a": "Divisão pelos pesos somados.",
+      "b": "Extração da raiz quadrada.",
+      "c": "Multiplicação pelo retorno esperado.",
+      "d": "Subtração da inflação do período."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-23-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A soma de 60% de 10% com 40% de 20% resulta em 6% mais 8%, ou 14%.</p><p>A alternativa A corresponde a um caso de correlação zero do exemplo. A alternativa B usa ponderação incompleta. A alternativa D superestima a parcela de B.</p><p>Regra de bolso: a média ponderada é a referência, e não o risco automático da carteira.</p>",
+     "enunciado": "<p>Uma carteira possui 60% no ativo A, com volatilidade de 10%, e 40% no B, com volatilidade de 20%. Qual é a média ponderada das volatilidades?</p>",
+     "alternativas": {
+      "a": "10%.",
+      "b": "12%.",
+      "c": "14%.",
+      "d": "16%."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-23-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A raiz quadrada de 0,01768 é aproximadamente 0,13297, equivalente a 13,30%.</p><p>A alternativa A corresponde a outra correlação. A alternativa B pertence ao cenário de 0,10. A alternativa C dispensa a raiz correta.</p><p>Regra de bolso: converta a raiz decimal em percentual ao final.</p>",
+     "enunciado": "<p>Com os mesmos pesos e volatilidades, a correlação é 0,80 e a variância calculada é 0,01768. Qual é o desvio padrão aproximado?</p>",
+     "alternativas": {
+      "a": "10,00%.",
+      "b": "10,47%.",
+      "c": "12,00%.",
+      "d": "13,30%."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-23-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A raiz quadrada de 0,01096 é aproximadamente 0,10469, equivalente a 10,47%.</p><p>A alternativa B arredonda por método inadequado. A alternativa C pertence à correlação de 0,80. A alternativa D representa a correlação +1.</p><p>Regra de bolso: correlação reduzida encolhe o termo conjunto da variância.</p>",
+     "enunciado": "<p>Preservados pesos e volatilidades, a correlação cai para 0,10 e a variância chega a 0,01096. Qual é o desvio padrão aproximado?</p>",
+     "alternativas": {
+      "a": "10,47%.",
+      "b": "11,00%.",
+      "c": "13,30%.",
+      "d": "14,00%."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-23-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A diferença entre 13,30% e 10,47% é 2,83 pontos percentuais.</p><p>A alternativa A compara 13,30% com a referência de 14%. A alternativa C compara 10,47% com 14%. A alternativa D repete o valor final.</p><p>Regra de bolso: compare os dois desvios padrão para isolar o efeito da correlação.</p>",
+     "enunciado": "<p>A volatilidade passa de 13,30% para 10,47% apenas pela mudança de correlação. Qual é a redução aproximada?</p>",
+     "alternativas": {
+      "a": "0,70 ponto percentual.",
+      "b": "2,83 pontos percentuais.",
+      "c": "3,53 pontos percentuais.",
+      "d": "10,47 pontos percentuais."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-23-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A correlação positiva perfeita alinha os movimentos e leva o risco à média ponderada de 14% no exemplo.</p><p>A alternativa A pertence ao caso de correlação -1. A alternativa B pertence ao caso de correlação zero. A alternativa D exigiria compensação oposta exata.</p><p>Regra de bolso: correlação +1 elimina o benefício da combinação comprada.</p>",
+     "enunciado": "<p>Com correlação +1, qual resultado surge para a carteira do exemplo?</p>",
+     "alternativas": {
+      "a": "Volatilidade de 2%.",
+      "b": "Volatilidade de 10%.",
+      "c": "Volatilidade de 14%, igual à média ponderada.",
+      "d": "Volatilidade nula pela compensação das posições."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-23-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. O termo conjunto cresce e eleva o risco de 10,47% para 13,30% nas premissas do exemplo.</p><p>A alternativa A inverte o efeito. A alternativa B elimina dados preservados. A alternativa C ignora a correlação.</p><p>Regra de bolso: ativos que passam a caminhar juntos protegem menos a carteira.</p>",
+     "enunciado": "<p>Durante uma crise, a correlação estimada sobe de 0,10 para 0,80, com os demais dados preservados. Qual efeito o modelo indica?</p>",
+     "alternativas": {
+      "a": "Redução da contribuição de ambos os ativos.",
+      "b": "Desaparecimento das volatilidades individuais.",
+      "c": "Estabilidade do risco por manutenção dos pesos.",
+      "d": "Aumento da volatilidade da carteira e redução do benefício da diversificação."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-23-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. A correlação modifica a covariância e, por consequência, a variância e o desvio padrão do conjunto.</p><p>A alternativa B muda uma premissa preservada. A alternativa C trata da estrutura operacional. A alternativa D ignora pesos e retornos.</p><p>Regra de bolso: correlação entra no termo cruzado da fórmula.</p>",
+     "enunciado": "<p>Duas carteiras possuem os mesmos ativos, pesos e volatilidades, mas correlações diferentes. O que explica a diferença de risco calculado?</p>",
+     "alternativas": {
+      "a": "O tamanho do termo de covariância na variância da carteira.",
+      "b": "A alteração automática do retorno esperado dos ativos.",
+      "c": "A quantidade de instituições usadas na custódia.",
+      "d": "O valor nominal de cada cota negociada."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-23-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. Janelas alternativas e cenários de estresse mostram como o risco reage quando as relações entre ativos mudam.</p><p>A alternativa A trata estimativa como constante. A alternativa C confunde quantidade com diversificação. A alternativa D omite o conjunto.</p><p>Regra de bolso: diversificação robusta precisa sobreviver a correlações adversas.</p>",
+     "enunciado": "<p>Qual procedimento testa a robustez do benefício de diversificação de uma carteira?</p>",
+     "alternativas": {
+      "a": "Repetir a correlação recente em qualquer horizonte.",
+      "b": "Comparar janelas e simular correlações observadas em períodos de estresse.",
+      "c": "Contar posições e ignorar suas exposições econômicas.",
+      "d": "Usar apenas a volatilidade do ativo com peso elevado."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Beta, riscos absoluto e relativo e risco diversificável": [
+    {
+     "id": "cpror-car-24-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O beta estima quanto a carteira tende a reagir aos movimentos do benchmark usado como mercado.</p><p>A alternativa B trata de crédito. A alternativa C descreve liquidação. A alternativa D compara valores sem medir sensibilidade.</p><p>Regra de bolso: beta responde como a carteira reage quando o mercado se move.</p>",
+     "enunciado": "<p>O que o beta de uma carteira procura medir?</p>",
+     "alternativas": {
+      "a": "A sensibilidade dos retornos aos movimentos do mercado de referência.",
+      "b": "A chance isolada de inadimplência de cada emissor.",
+      "c": "O prazo médio para liquidação das posições.",
+      "d": "A diferença entre preço de compra e valor nominal."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-24-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Beta de 1,30 indica sensibilidade estimada equivalente a 130% do movimento do mercado escolhido.</p><p>A alternativa A corresponderia a beta próximo de zero. A alternativa C transforma estimativa em garantia. A alternativa D confunde sensibilidade com rentabilidade.</p><p>Regra de bolso: beta acima de 1 amplifica a exposição sistemática.</p>",
+     "enunciado": "<p>Um ativo apresenta beta estimado de 1,30. Qual interpretação é coerente com essa medida?</p>",
+     "alternativas": {
+      "a": "Sensibilidade nula ao índice utilizado.",
+      "b": "Tendência de amplificar em 30% os movimentos do mercado de referência.",
+      "c": "Proteção garantida em períodos de queda.",
+      "d": "Retorno anual definido em 30%."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-24-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. O cálculo é 0,50 x 1,20 mais 0,30 x 0,80 mais 0,20 x 0,10, resultando em 0,86.</p><p>A alternativa A omite parte das contribuições. A alternativa B aproxima sem ponderar corretamente. A alternativa D superestima a posição de beta elevado.</p><p>Regra de bolso: multiplique cada beta pelo peso e some as parcelas.</p>",
+     "enunciado": "<p>Uma carteira possui 50% em beta 1,20, 30% em beta 0,80 e 20% em beta 0,10. Qual é seu beta ponderado?</p>",
+     "alternativas": {
+      "a": "0,68.",
+      "b": "0,80.",
+      "c": "0,86.",
+      "d": "1,02."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-24-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A soma de 0,40 x 1,20, 0,30 x 0,80 e 0,30 x 0,10 resulta em 0,75.</p><p>A alternativa A desconsidera uma parcela. A alternativa B erra a soma ponderada. A alternativa C mantém o beta anterior ao rebalanceamento.</p><p>Regra de bolso: reduzir o peso da exposição agressiva e ampliar a defensiva reduz o beta ponderado.</p>",
+     "enunciado": "<p>Após mover 10 pontos percentuais da posição com beta 1,20 para a posição com beta 0,10, os pesos ficam em 40%, 30% e 30%. Qual é o novo beta?</p>",
+     "alternativas": {
+      "a": "0,64.",
+      "b": "0,70.",
+      "c": "0,86.",
+      "d": "0,75."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-24-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Beta próximo de zero limita a relação linear estimada com o benchmark, mas eventos próprios ainda podem gerar perdas e oscilações.</p><p>A alternativa B confunde beta com risco integral. A alternativa C promete estabilidade. A alternativa D iguala exposições diferentes.</p><p>Regra de bolso: beta baixo pode conviver com risco específico elevado.</p>",
+     "enunciado": "<p>Uma ação possui beta próximo de zero e forte exposição a um evento próprio da empresa. Qual leitura combina as duas informações?</p>",
+     "alternativas": {
+      "a": "Baixa sensibilidade linear ao benchmark com presença possível de risco específico.",
+      "b": "Ausência de risco por causa do beta reduzido.",
+      "c": "Retorno estável em qualquer cenário econômico.",
+      "d": "Equivalência automática a uma posição de caixa."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-24-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A carteira oscila bastante em termos próprios, mas seu retorno ativo varia pouco diante do índice.</p><p>A alternativa A inverte as medidas. A alternativa C extrapola o efeito da diversificação. A alternativa D não decorre dos dados fornecidos.</p><p>Regra de bolso: carteira e benchmark podem oscilar juntos e conservar tracking error baixo.</p>",
+     "enunciado": "<p>Um fundo tem volatilidade de 21%, seu índice tem volatilidade de 22% e o tracking error é 2%. Como interpretar o conjunto?</p>",
+     "alternativas": {
+      "a": "Oscilação baixa da carteira e amplo afastamento do índice.",
+      "b": "Risco absoluto elevado e risco relativo baixo.",
+      "c": "Risco específico integralmente removido.",
+      "d": "Beta negativo diante do índice."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-24-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A diluição de eventos particulares entre emissores e setores reduz a contribuição do risco não sistemático.</p><p>A alternativa A classifica um choque amplo como específico. A alternativa B troca as categorias. A alternativa D atribui garantia à diversificação.</p><p>Regra de bolso: diversificação combate o risco específico, enquanto o risco de mercado permanece.</p>",
+     "enunciado": "<p>Qual associação entre fontes de risco e diversificação está correta?</p>",
+     "alternativas": {
+      "a": "Choques macroeconômicos formam risco específico de cada empresa.",
+      "b": "Eventos próprios do emissor compõem o risco sistemático.",
+      "c": "Risco específico pode ser reduzido pela combinação de exposições distintas.",
+      "d": "Diversificação transforma risco de mercado em retorno garantido."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-24-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Alterações financeiras e operacionais podem modificar a reação da empresa aos movimentos do mercado.</p><p>A alternativa A congela uma relação histórica. A alternativa B troca a natureza da medida. A alternativa C transforma sensibilidade em previsão.</p><p>Regra de bolso: mudança estrutural pede revisão do beta.</p>",
+     "enunciado": "<p>Uma empresa altera seu endividamento e passa a obter receitas de mercados diferentes. O que essa mudança exige na análise do beta?</p>",
+     "alternativas": {
+      "a": "Preservação definitiva da estimativa anterior.",
+      "b": "Conversão do beta em medida de liquidez.",
+      "c": "Uso do beta como previsão exata de retorno.",
+      "d": "Nova estimação, pois a sensibilidade histórica pode ter mudado."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-24-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Risco relativo só informa algo útil quando o benchmark representa o universo e a proposta da carteira.</p><p>A alternativa B confunde mercado com crédito. A alternativa C troca risco por retorno. A alternativa D não depende da referência escolhida.</p><p>Regra de bolso: benchmark inadequado distorce a leitura do desvio relativo.</p>",
+     "enunciado": "<p>Um gestor compara uma carteira de ações brasileiras com uma referência incompatível com sua estratégia. Qual problema surge na avaliação relativa?</p>",
+     "alternativas": {
+      "a": "O tracking error perde capacidade de representar o desvio relevante da estratégia.",
+      "b": "O beta passa a medir inadimplência dos emissores.",
+      "c": "A volatilidade da carteira vira uma taxa de retorno.",
+      "d": "Os pesos da carteira deixam de somar 100%."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-24-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A combinação de posições pode diluir eventos particulares sem remover a sensibilidade aos choques gerais do mercado.</p><p>A alternativa A ignora o beta igual a 1. A alternativa C trata sensibilidade como igualdade de retorno. A alternativa D amplia a conclusão para riscos diferentes.</p><p>Regra de bolso: diversificação reduz o eliminável; beta mede a parcela sistemática que permanece.</p>",
+     "enunciado": "<p>Uma carteira diversificada possui beta igual a 1 diante de um índice amplo. Qual conclusão é consistente?</p>",
+     "alternativas": {
+      "a": "A diversificação eliminou sua sensibilidade ao mercado.",
+      "b": "O risco específico pode ter sido reduzido, enquanto a exposição sistemática acompanha o índice.",
+      "c": "A carteira terá o mesmo retorno do índice em cada período.",
+      "d": "A carteira ficou livre de riscos de liquidez e crédito."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Dominância entre carteiras, Sharpe e Treynor: uso e limitações": [
+    {
+     "id": "cpror-car-25-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Sharpe relaciona o retorno acima da taxa livre de risco com a volatilidade total da carteira.</p><p>A alternativa B mistura referências. A alternativa C inverte a lógica do índice. A alternativa D introduz prazo no denominador.</p><p>Regra de bolso: Sharpe usa retorno excedente sobre desvio padrão.</p>",
+     "enunciado": "<p>Qual expressão representa o Índice de Sharpe original?</p>",
+     "alternativas": {
+      "a": "Retorno excedente dividido pelo desvio padrão da carteira.",
+      "b": "Retorno do benchmark dividido pelo beta da carteira.",
+      "c": "Volatilidade dividida pela taxa livre de risco.",
+      "d": "Retorno ativo dividido pelo prazo da aplicação."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-25-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Treynor mede o retorno excedente por unidade de risco sistemático, representado pelo beta.</p><p>A alternativa A mede desvio relativo. A alternativa C não mede risco de mercado. A alternativa D descreve outra dimensão de perda.</p><p>Regra de bolso: Treynor troca a volatilidade pelo beta.</p>",
+     "enunciado": "<p>Qual medida de risco aparece no denominador do Índice de Treynor?</p>",
+     "alternativas": {
+      "a": "Tracking error.",
+      "b": "Beta da carteira.",
+      "c": "Prazo médio.",
+      "d": "Perda máxima observada."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-25-q3",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A versão usada nesse recorte compara o retorno da carteira com o benchmark da estratégia.</p><p>A alternativa A mistura retorno e risco. A alternativa B cria denominador sem relação com Sharpe. A alternativa D elimina o elemento central da medida.</p><p>Regra de bolso: no Sharpe modificado da certificação, a referência passa a ser o benchmark.</p>",
+     "enunciado": "<p>Na convenção adotada pelas certificações ANBIMA, qual alteração caracteriza o Sharpe modificado?</p>",
+     "alternativas": {
+      "a": "Substituição do retorno da carteira pelo beta.",
+      "b": "Troca da volatilidade pelo prazo.",
+      "c": "Uso do benchmark no lugar da taxa livre de risco.",
+      "d": "Exclusão do retorno excedente."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-25-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O retorno excedente é 8%, e 8% dividido por 20% resulta em 0,40.</p><p>A alternativa A mostra apenas o excedente em decimal. A alternativa B usa somente a volatilidade. A alternativa C divide o retorno integral pela volatilidade.</p><p>Regra de bolso: subtraia a taxa livre antes de dividir pela volatilidade.</p>",
+     "enunciado": "<p>Uma carteira rende 13%, a taxa livre de risco é 5% e a volatilidade é 20%. Qual é seu Índice de Sharpe?</p>",
+     "alternativas": {
+      "a": "0,08.",
+      "b": "0,20.",
+      "c": "0,65.",
+      "d": "0,40."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-25-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O retorno excedente de 8% dividido pelo beta de 0,50 resulta em 16% por unidade de beta.</p><p>A alternativa B mantém apenas o numerador. A alternativa C usa o retorno integral de modo inadequado. A alternativa D multiplica em vez de dividir.</p><p>Regra de bolso: Treynor divide o excedente pelo beta.</p>",
+     "enunciado": "<p>A mesma carteira rende 13%, a taxa livre é 5% e seu beta é 0,50. Qual é o Índice de Treynor?</p>",
+     "alternativas": {
+      "a": "16% por unidade de beta.",
+      "b": "8% por unidade de beta.",
+      "c": "6,5% por unidade de beta.",
+      "d": "2,5% por unidade de beta."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-25-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Com retorno excedente positivo e bases comparáveis, o Sharpe de 0,583 indica eficiência superior diante do risco total.</p><p>A alternativa A inverte a ordenação. A alternativa C conclui sobre medida ausente. A alternativa D transforma dado histórico em garantia.</p><p>Regra de bolso: Sharpe ordena carteiras pela eficiência diante da volatilidade total.</p>",
+     "enunciado": "<p>A carteira A tem Sharpe de 0,40 e a carteira B tem Sharpe de 0,583, calculados na mesma base. Qual leitura decorre do indicador?</p>",
+     "alternativas": {
+      "a": "A entrega relação superior entre retorno excedente e volatilidade.",
+      "b": "B entrega relação superior entre retorno excedente e volatilidade.",
+      "c": "As duas apresentam beta idêntico.",
+      "d": "B possui retorno garantido."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-25-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Treynor avalia o retorno excedente produzido para cada unidade de beta assumida.</p><p>A alternativa A inverte os valores. A alternativa B conclui sobre risco total. A alternativa D trata de risco ausente da fórmula.</p><p>Regra de bolso: Treynor elevado indica eficiência da exposição sistemática.</p>",
+     "enunciado": "<p>A carteira A tem Treynor de 16% e a carteira B tem Treynor de 7%, sob a mesma referência. Qual interpretação é adequada?</p>",
+     "alternativas": {
+      "a": "B entrega retorno excedente superior por unidade de beta.",
+      "b": "As duas possuem volatilidade idêntica.",
+      "c": "A entrega retorno excedente superior por unidade de risco sistemático.",
+      "d": "A possui liquidez assegurada."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-25-q8",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Em um conjunto diversificado, o risco sistemático acrescentado pelo componente pode ser a medida relevante.</p><p>A alternativa A avalia liquidação. A alternativa B não ajusta desempenho ao risco. A alternativa C não mede retorno por risco sistemático.</p><p>Regra de bolso: Treynor ganha sentido quando o risco específico já está diluído no conjunto.</p>",
+     "enunciado": "<p>Um fundo representa apenas uma parcela de um patrimônio amplamente diversificado. Qual indicador pode destacar a eficiência da exposição ao mercado?</p>",
+     "alternativas": {
+      "a": "Prazo médio de liquidação.",
+      "b": "Valor nominal das cotas.",
+      "c": "Giro da carteira isoladamente.",
+      "d": "Treynor, desde que o beta e o benchmark sejam coerentes."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-car-25-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Com numerador negativo, elevar o denominador pode produzir razão menos negativa e ranking economicamente enganoso.</p><p>A alternativa B troca grandezas diferentes. A alternativa C muda a natureza do indicador. A alternativa D ignora a insuficiência de retorno.</p><p>Regra de bolso: com prêmio negativo, examine retorno e risco separadamente.</p>",
+     "enunciado": "<p>Duas carteiras têm retorno excedente de -2%. Suas volatilidades são 5% e 10%, gerando Sharpes de -0,40 e -0,20. Qual cuidado é necessário?</p>",
+     "alternativas": {
+      "a": "A ordenação numérica pode favorecer a carteira volátil porque o denominador aproxima o resultado negativo de zero.",
+      "b": "O sinal negativo converte volatilidade em retorno.",
+      "c": "Os índices passam a medir risco de crédito.",
+      "d": "As carteiras tornam-se equivalentes ao ativo livre de risco."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-car-25-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. Numerador e denominador precisam compartilhar horizonte e periodicidade compatíveis.</p><p>A alternativa A troca risco por tamanho. A alternativa C elimina o retorno excedente. A alternativa D prejudica a comparabilidade.</p><p>Regra de bolso: antes de dividir, alinhe a base temporal.</p>",
+     "enunciado": "<p>Um analista divide retorno anual por volatilidade mensal para comparar dois fundos. Qual ajuste torna a análise consistente?</p>",
+     "alternativas": {
+      "a": "Substituir a volatilidade pelo patrimônio do fundo.",
+      "b": "Colocar retorno e risco no mesmo período e método de anualização.",
+      "c": "Remover a taxa livre de risco das duas contas.",
+      "d": "Usar benchmarks diferentes para cada cálculo do mesmo fundo."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-car-25-q11",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. Preços sem atualização frequente podem reduzir a volatilidade observada e inflar a medida ajustada ao risco.</p><p>A alternativa A confunde estabilidade aparente com liquidez. A alternativa B atribui proteção ausente. A alternativa D ignora a referência do beta.</p><p>Regra de bolso: volatilidade baixa por falta de negociação pode ser uma ilusão estatística.</p>",
+     "enunciado": "<p>Um ativo pouco negociado exibe preços estáveis e Sharpe elevado. Qual risco de interpretação permanece?</p>",
+     "alternativas": {
+      "a": "A estabilidade prova facilidade de venda em cenário adverso.",
+      "b": "O Sharpe incorpora automaticamente perdas raras.",
+      "c": "A falta de negócios pode suavizar preços e esconder risco de liquidez.",
+      "d": "O beta deixa de depender do mercado escolhido."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-car-25-q12",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Dividir por número próximo de zero amplia a sensibilidade do índice a erros e pequenas variações da estimativa.</p><p>A alternativa A mistura medidas. A alternativa B atribui efeito de diversificação ao cálculo. A alternativa C ignora a instabilidade do denominador.</p><p>Regra de bolso: beta próximo de zero exige abrir a conta antes de interpretar Treynor.</p>",
+     "enunciado": "<p>Uma carteira apresenta beta muito próximo de zero. Qual efeito isso pode causar no Índice de Treynor?</p>",
+     "alternativas": {
+      "a": "Conversão do retorno excedente em tracking error.",
+      "b": "Eliminação dos riscos específicos da carteira.",
+      "c": "Estabilidade do índice em qualquer amostra.",
+      "d": "Razão instável, pois uma pequena mudança no beta altera intensamente o resultado."
+     },
+     "gabarito": "d"
     }
    ]
   },
