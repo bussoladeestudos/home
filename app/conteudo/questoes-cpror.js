@@ -1,8 +1,2602 @@
 /* GERADO por outputs/questoes_para_js.py. NAO editar a mao.
-   Fonte: _conteudo/cpror/questoes/**.yaml  ·  300 questoes em 31 topicos
+   Fonte: _conteudo/cpror/questoes/**.yaml  ·  444 questoes em 49 topicos
    Para mudar uma questao, edite o YAML e rode o script de novo. */
 window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
  "cproRAnbima": {
+  "Análise de informações do cliente": {
+   "Renda, idade e padrão de vida na capacidade de poupança": [
+    {
+     "id": "cpror-cli-01-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A poupança potencial parte da renda efetivamente disponível e retira despesas essenciais, gastos discricionários e compromissos contratados do mesmo período.</p><p>A alternativa A usa renda bruta e deixa os descontos obrigatórios fora da base disponível. A alternativa B omite gastos ajustáveis que também consomem renda. A alternativa C introduz um bônus esperado que não integra a sobra efetiva daquele mês.</p><p>Regra de bolso: capacidade de poupança começa na renda líquida menos os desembolsos do período.</p>",
+     "enunciado": "<p>Durante o levantamento financeiro de um cliente, uma especialista precisa estimar a poupança potencial do mês. Identifique a relação que serve como primeira aproximação para esse cálculo.</p>",
+     "alternativas": {
+      "a": "Subtrair da renda bruta as despesas e obrigações do período, antes dos descontos obrigatórios.",
+      "b": "Subtrair da renda líquida despesas essenciais e prestações, tratando gastos ajustáveis como sobra.",
+      "c": "Subtrair da renda líquida os desembolsos e acrescentar o bônus esperado ao saldo do mês.",
+      "d": "Subtrair da renda líquida as despesas e obrigações cobertas no mesmo período."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-01-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Valor elevado em um mês pode ampliar um aporte pontual, mas a capacidade recorrente exige observar estabilidade da renda, despesas, obrigações e sobra sustentável.</p><p>A alternativa A transforma bônus pontual em base para aporte fixo. A alternativa B deduz recorrência de um mês forte sem testar os meses de receita fraca. A alternativa C reconhece a estabilidade como fator, mas usa renda extraordinária para sustentar compromisso recorrente.</p><p>Regra de bolso: renda alta explica o tamanho de um recebimento; estabilidade ajuda a explicar se o aporte pode se repetir.</p>",
+     "enunciado": "<p>Um cliente recebeu salário elevado e um bônus pontual no mês, mas seus ganhos mensais variam e seus compromissos fixos absorvem parte relevante da renda. Compare valor e estabilidade da renda para identificar a leitura coerente sobre sua capacidade de poupança recorrente.</p>",
+     "alternativas": {
+      "a": "A renda elevada permite aporte pontual, e o mesmo valor pode virar aporte fixo se o bônus for distribuído pelos meses seguintes.",
+      "b": "A sobra do mês forte indica capacidade recorrente quando as despesas fixas estão cobertas, mesmo com ganhos variáveis.",
+      "c": "A estabilidade da renda importa, mas o bônus pode sustentar a parcela fixa do plano quando a renda ordinária oscila.",
+      "d": "A renda elevada pode gerar aporte ocasional, enquanto a recorrência depende da estabilidade e da sobra mensal."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-01-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A idade ajuda a investigar fase de vida, eventos prováveis e prazo, mas Renato e Vera precisam ser avaliados pelos fluxos, compromissos e margens que realmente possuem.</p><p>A alternativa A recolhe dados relevantes, mas deixa a idade determinar o valor do aporte. A alternativa C reconhece parte do diagnóstico, mas usa risco para criar capacidade de poupança. A alternativa D considera o patrimônio de Vera sem verificar quanto seu fluxo permite reservar mensalmente.</p><p>Regra de bolso: idade abre perguntas; renda disponível, compromissos e prazo constroem a resposta.</p>",
+     "enunciado": "<p>Dois clientes procuram a planejadora Elisa, em Goiânia, para formar uma reserva destinada a objetivos futuros. Renato tem 29 anos, renda variável, dois dependentes, aluguel e pouca margem depois das obrigações. Vera tem 58 anos, renda previsível, patrimônio líquido, despesas correntes cobertas e uma sobra mensal recorrente. Renato acredita que sua idade lhe permite poupar pouco agora e compensar por meio de investimentos arriscados; Vera supõe que a proximidade da aposentadoria impede qualquer capacidade relevante de poupança. Elisa precisa explicar como a idade participa da análise sem substituir o diagnóstico dos fluxos reais. Ela também precisa considerar que o prazo de cada meta afeta o esforço de aporte, enquanto o risco do investimento é incapaz de criar dinheiro disponível no orçamento. No atendimento, ambos pedem uma regra simples baseada somente na faixa etária, mas o orçamento de cada um mostra restrições diferentes para sustentar depósitos mensais. Analise os dois casos e indique a conclusão que orienta a conversa de Elisa.</p>",
+     "alternativas": {
+      "a": "Examinar renda e dependentes, mas fixar o aporte de Renato pela idade e o de Vera pela proximidade da aposentadoria.",
+      "b": "A idade orienta perguntas sobre fase de vida e prazo, mas a capacidade resulta da renda, estabilidade, dependentes, despesas, obrigações e mudanças esperadas.",
+      "c": "Examinar renda, dependentes e prazo, mas elevar o risco da carteira de Renato para compensar sua pequena margem mensal.",
+      "d": "Examinar prazo e despesas dos dois, mas usar o patrimônio de Vera como substituto da sobra mensal na definição do aporte."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-01-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O planejamento parte das categorias de despesas do padrão pretendido, registra hipóteses sobre o que muda e confronta o objetivo futuro com a sobra efetiva do orçamento atual.</p><p>A alternativa A começa pelo método correto, mas trata reajustes passados como sobra garantida apesar do aumento das despesas. A alternativa C verifica o fluxo atual, mas substitui a estimativa das despesas futuras por percentual fixo. A alternativa D considera duas categorias, mas elimina o apoio familiar sem testar essa hipótese.</p><p>Regra de bolso: projete despesas futuras por categoria e confira se o aporte necessário cabe no fluxo de hoje.</p>",
+     "enunciado": "<p>Em Florianópolis, o especialista Davi revisa o planejamento de Helena, médica de 46 anos que recebeu reajustes de renda nos últimos três anos. No mesmo período, ela mudou para um imóvel com prestação elevada, ampliou gastos de lazer e assumiu apoio mensal aos pais. A renda cresceu, mas as despesas avançaram em ritmo semelhante e a poupança efetiva permaneceu estável. Para a aposentadoria, Helena propõe aplicar um percentual fixo e universal sobre a renda atual, supondo que suas despesas futuras serão uma versão reduzida das despesas presentes. Davi observa que algumas prestações podem terminar, enquanto saúde, apoio familiar ou lazer podem mudar, e que o aumento de preços afeta o custo do padrão pretendido. Ele precisa transformar essas informações em uma estimativa defensável do esforço de poupança. Helena quer manter, depois de parar de trabalhar, atividades que hoje financia com a renda corrente; por isso a estimativa precisa partir do padrão que deseja custear. Avalie o caso e indique a abordagem coerente com a aula.</p>",
+     "alternativas": {
+      "a": "Estimar despesas futuras por categoria, mas converter os reajustes salariais passados em aporte adicional garantido.",
+      "b": "Estimar despesas futuras por categoria, explicitar hipóteses, considerar mudanças do padrão e verificar quanto cabe no fluxo presente de Helena.",
+      "c": "Conferir a sobra atual e projetar o padrão futuro como percentual fixo da renda, para dispensar hipóteses por categoria.",
+      "d": "Projetar saúde e lazer por categoria, mas excluir o apoio familiar porque essa despesa pode terminar antes da aposentadoria."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-01-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A conta inicial é R$ 14.000 menos R$ 7.600, R$ 3.400 e R$ 2.200, resultando em R$ 800; a redução viável de R$ 700 eleva a margem para R$ 1.500 e a conferência final evita confundir aporte bruto com poupança efetiva.</p><p>A alternativa B calcula a margem corretamente, mas usa bônus incerto para fixar contribuição de R$ 2.000. A alternativa C confunde a margem inicial com a margem após o ajuste e projeta R$ 2.000 sem fonte adicional. A alternativa D acerta os valores, mas usa transferências brutas em vez de verificar a poupança que permaneceu aplicada.</p><p>Regra de bolso: calcule a sobra, identifique o ajuste concreto, automatize um valor compatível e confira quanto permaneceu poupado.</p>",
+     "enunciado": "<p>Camila leva suas contas à consultora Bruna, em Campo Grande, com renda líquida mensal de R$ 14.000. O levantamento mostra R$ 7.600 de despesas essenciais, R$ 3.400 de compromissos contratados e R$ 2.200 de gastos ajustáveis. Camila deseja automatizar R$ 2.000 logo após o salário e pretende contar com um bônus anual incerto para cobrir eventuais faltas de caixa. Ao revisar os gastos ajustáveis, ela encontra R$ 700 que podem ser reduzidos sem atingir necessidades essenciais. Bruna quer propor uma estratégia que transforme a margem em poupança recorrente, preserve as contas do mês e permita verificar se o valor separado permaneceu investido até o fechamento do período. A transferência programada ocorrerá antes dos pagamentos variáveis do mês; Bruna precisa conferir o saldo ao fim do ciclo para distinguir aporte bruto de economia efetiva. Calcule a poupança potencial antes do ajuste e indique a estratégia compatível com os dados apresentados.</p>",
+     "alternativas": {
+      "a": "A margem inicial é R$ 800; reduzir R$ 700 dos gastos ajustáveis permite reservar R$ 1.500 após o recebimento e conferir o saldo efetivo no fim do mês.",
+      "b": "A margem inicial é R$ 800; reduzir R$ 700 permite reservar R$ 1.500, mas o bônus autoriza fixar R$ 2.000.",
+      "c": "A margem inicial é R$ 1.500; após reduzir R$ 700, Camila pode automatizar R$ 2.000 sem alterar outra despesa.",
+      "d": "A margem inicial é R$ 800; reduzir R$ 700 permite reservar R$ 1.500, medidos pelas transferências brutas."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-01-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A renda variável pede uma base que caiba no cenário conservador, complemento nos meses fortes e conferência da poupança líquida de resgates, em vez de apenas registrar a transferência inicial.</p><p>A alternativa A usa renda conservadora como base, mas supõe que rendimento incerto complete o aporte dos meses fracos. A alternativa B ajusta a contribuição à receita, porém confunde transferência bruta com poupança preservada. A alternativa D usa uma média que pode pressionar os meses fracos e deixa os resgates fora da avaliação.</p><p>Regra de bolso: renda variável combina aporte básico prudente, adicional condicional e medição do valor que permaneceu investido.</p>",
+     "enunciado": "<p>Em Manaus, o planejador Raul acompanha Ícaro, profissional autônomo cuja renda líquida passou a variar entre R$ 10.000 e R$ 16.000 por mês. Antes da mudança, Ícaro recebia valor previsível e automatizava R$ 1.500 na data do pagamento. Nos meses recentes, o débito automático ocorreu antes de algumas obrigações e ele resgatou parte do investimento para completar as contas, embora o aplicativo registrasse o aporte bruto como realizado. Ícaro quer manter o mesmo valor obrigatório para preservar a sensação de disciplina e propõe elevar a exposição da carteira para compensar os meses em que consegue poupar pouco. Raul precisa redesenhar a regra de contribuição, respeitar a renda conservadora, aproveitar os meses fortes e medir a poupança que permaneceu aplicada. Ícaro relata que as retiradas posteriores ao débito ocorrem justamente nos meses de menor receita, quando os compromissos continuam vencendo nas datas habituais. Analise a mudança e indique a estratégia que sustenta uma recorrência compatível com o novo fluxo.</p>",
+     "alternativas": {
+      "a": "Fixar uma base compatível com R$ 10.000 e completar R$ 1.500 nos meses fracos usando rendimento esperado.",
+      "b": "Fixar uma base compatível com R$ 10.000 e adicionar nos meses fortes, contando o aporte bruto como poupança.",
+      "c": "Definir aporte básico compatível com a renda conservadora, acrescentar parcela nos meses fortes e comparar aportes com resgates e saldo efetivo.",
+      "d": "Usar a média entre R$ 10.000 e R$ 16.000 para manter R$ 1.500 fixos, sem conferir resgates mensais."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-01-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. A queda de renda, o novo dependente e o aumento de despesas alteram a capacidade de poupança, exigem revisão do valor recorrente e tornam necessário comparar aportes com resgates e saldo efetivo.</p><p>A alternativa A atualiza o orçamento, mas ainda chama de poupança o aporte parcialmente resgatado. A alternativa B considera o novo dependente, porém transforma gratificação incerta em renda recorrente. A alternativa D mede o líquido corretamente, mas usa desempenho futuro para preservar obrigação incompatível com o fluxo atual.</p><p>Regra de bolso: mudança em renda, dependentes ou despesas reabre o diagnóstico antes de manter a contribuição antiga.</p>",
+     "enunciado": "<p>Seis meses após a implantação, Leandro e Fábio voltam à assessora Patrícia, em Fortaleza, para revisar o plano. O casal havia definido aporte automático de R$ 2.400 com base em duas rendas previsíveis, despesas registradas e uma meta de longo prazo. Desde então, Fábio reduziu a jornada para cuidar do filho recém-nascido, a renda familiar caiu, despesas de saúde e cuidado aumentaram e parte do valor automatizado passou a ser resgatada antes do fim do mês. Leandro deseja conservar os R$ 2.400 porque o aplicativo exibe regularidade nos aportes; Fábio propõe usar uma gratificação eventual para preencher a diferença e manter o plano original. Patrícia precisa distinguir disciplina aparente de poupança sustentável, reconhecer a mudança de dependentes e evitar que uma renda incerta sustente compromisso recorrente. O extrato confirma entradas regulares na aplicação, mas também saídas no mesmo período; o casal precisa saber quanto realmente permaneceu reservado para a meta. Avalie o caso e indique o procedimento que preserva a lógica do planejamento.</p>",
+     "alternativas": {
+      "a": "Recalcular renda e despesas após o nascimento, mas manter R$ 2.400 como poupança porque a transferência ocorreu.",
+      "b": "Refazer o orçamento com o novo dependente e usar a gratificação eventual para sustentar R$ 2.400 mensais.",
+      "c": "Refazer receitas, despesas, obrigações e prioridades, ajustar o aporte ao fluxo atual e medir o valor líquido que permanece poupado.",
+      "d": "Medir o aporte líquido de resgates, mas manter R$ 2.400 fixos até que o desempenho da carteira compense a diferença."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-01-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Encurtar o prazo para a mesma meta tende a exigir aporte superior, e a resposta pode combinar revisão do valor, da data ou da prioridade com ajuste que continue cabendo no orçamento.</p><p>A alternativa B refaz parte da conta, mas ignora se o corte proposto será sustentável. A alternativa C revisa variáveis controláveis, porém trata renda eventual incerta como aporte recorrente. A alternativa D considera prazo e despesas, mas usa retorno arriscado para completar uma capacidade de poupança ausente.</p><p>Regra de bolso: prazo curto aumenta o esforço; revise meta, data e prioridade antes de tentar substituir aporte por risco.</p>",
+     "enunciado": "<p>A mudança profissional de Nádia exige acumular R$ 180.000, e ela procura a planejadora Soraia em João Pessoa. O prazo inicialmente considerado era de seis anos, mas Nádia decide antecipar o objetivo para três anos sem alterar o valor desejado. Seu orçamento registra renda líquida estável, despesas essenciais cobertas, compromissos contratados e uma sobra recorrente já destinada ao plano. Nádia afirma que a redução do prazo pode ser resolvida apenas escolhendo investimentos com oscilação elevada, pois acredita que rentabilidade esperada dispensa ampliar o aporte. Soraia verifica que cortar de forma intensa os gastos discricionários eliminaria atividades importantes para a família e poderia tornar a estratégia difícil de sustentar. Ela precisa mostrar quais variáveis podem ser revistas sem apresentar risco como criador de capacidade financeira. Nádia quer uma resposta que possa acompanhar no orçamento a cada mês, e não uma promessa de retorno capaz de esconder eventual insuficiência de caixa. Analise a situação e indique a orientação coerente.</p>",
+     "alternativas": {
+      "a": "Recalcular o esforço e negociar valor, prazo ou prioridade, ajustando o aporte dentro do fluxo sem tratar risco como fonte de poupança.",
+      "b": "Recalcular o esforço para três anos e reduzir gastos ajustáveis sem testar se o corte poderá ser mantido pela família.",
+      "c": "Revisar valor e prioridade da meta, mas contar renda extraordinária futura como aporte mensal já disponível.",
+      "d": "Revisar prazo e despesas, mantendo o valor da meta por meio de rentabilidade esperada de uma carteira arriscada."
+     },
+     "gabarito": "a"
+    }
+   ],
+   "Planejamento financeiro para formação de poupança": [
+    {
+     "id": "cpror-cli-02-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Poupança é renda que permaneceu sem consumo; investir define o destino desse recurso. O aporte seguido de resgate para fechar as contas não produziu poupança líquida de R$ 900.</p><p>A alternativa B confunde transferência bruta com recurso efetivamente preservado. A alternativa A usa retorno esperado para substituir a apuração do fluxo. A alternativa D transforma a aplicação em diagnóstico, embora receitas e despesas ainda precisem ser examinadas.</p><p>Regra de bolso: orçamento mostra a sobra, poupança é a sobra preservada e investimento é seu destino.</p>",
+     "enunciado": "<p>Uma cliente diz que poupou R$ 900 porque transferiu esse valor da conta corrente para uma aplicação. No fim do mês, resgatou R$ 900 para pagar despesas correntes. Compare poupança e investimento nesse caso e identifique a conclusão.</p>",
+     "alternativas": {
+      "a": "O rendimento esperado da aplicação representa a poupança do mês, enquanto os R$ 900 compõem o patrimônio anterior.",
+      "b": "A transferência formou poupança de R$ 900; o resgate altera apenas o produto escolhido para guardar os recursos.",
+      "c": "A aplicação definiu o destino do dinheiro, mas o resgate para despesas impediu a formação de poupança líquida no período.",
+      "d": "O orçamento registra a transferência como despesa, e a aplicação substitui o diagnóstico dos demais desembolsos."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-02-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O fluxo de caixa permite observar receitas e desembolsos ao longo do tempo; o balanço oferece a posição de bens, direitos e dívidas em uma data.</p><p>A alternativa A troca as funções das duas visões. A alternativa C presume que patrimônio positivo assegura sobra mensal. A alternativa B omite obrigações e despesas irregulares justamente no diagnóstico que antecede a escolha do investimento.</p><p>Regra de bolso: fluxo responde como o dinheiro circula; balanço responde o que existe e o que é devido.</p>",
+     "enunciado": "<p>Ao iniciar o plano de uma família, uma assessora reúne receitas e despesas mensais, bens e direitos, dívidas e uma prestação com data de término. Identifique como fluxo de caixa e balanço patrimonial contribuem para o diagnóstico.</p>",
+     "alternativas": {
+      "a": "O balanço indica a renda disponível mês a mês, e o fluxo mostra apenas os bens mantidos em uma data.",
+      "b": "As receitas correntes bastam para definir aportes, enquanto dívidas e despesas anuais entram depois da escolha do produto.",
+      "c": "O patrimônio líquido positivo dispensa a análise das prestações, pois o saldo mensal decorre dos bens existentes.",
+      "d": "O fluxo mostra entradas e saídas ao longo do tempo, e o balanço registra bens, direitos e dívidas em uma data."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-02-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A necessidade ainda não financiada é R$ 18.000 menos R$ 3.600, ou R$ 14.400; dividida por dezoito meses, exige R$ 800 mensais, valor inferior à folga de R$ 900.</p><p>A alternativa A ignora os recursos já separados e calcula R$ 1.000. A alternativa B acerta o aporte por uma justificativa incompatível com a premissa de rendimento zero. A alternativa D toma a capacidade disponível como se ela fosse o aporte exigido pela meta.</p><p>Regra de bolso: primeiro subtraia os recursos da meta, depois divida pelo prazo e compare o resultado com a folga real.</p>",
+     "enunciado": "<p>Marina procura a planejadora Joana, em Recife, para separar R$ 18.000 para um curso a iniciar em dezoito meses. Marina já reservou R$ 3.600 exclusivamente para esse objetivo. Para isolar o esforço de contribuição, Joana calcula o aporte com valores constantes e sem rendimento. O orçamento revela uma folga mensal de R$ 900 depois das obrigações conhecidas. Marina propõe dividir R$ 18.000 pelos dezoito meses, sem considerar o valor que já separou, e usar a diferença entre essa conta e a folga para escolher uma aplicação de retorno elevado. Joana precisa apresentar a contribuição exigida pela fórmula da aula e mostrar se a meta cabe no fluxo, antes de discutir produto ou rentabilidade incerta. O curso exige pagamento na data marcada, e Marina prefere identificar primeiro a parcela financiada por recursos próprios e a parcela que depende dos próximos depósitos. O orçamento continuará sendo acompanhado até o início do curso. Calcule o aporte periódico e indique o diagnóstico resultante.</p>",
+     "alternativas": {
+      "a": "O aporte é R$ 1.000, pois o valor integral da meta deve ser dividido pelo prazo; a diferença pode orientar a escolha de investimento.",
+      "b": "O aporte é R$ 800, pois os R$ 3.600 já separados geram rendimento suficiente para cobrir qualquer diferença futura.",
+      "c": "O aporte é R$ 800, pois o valor já separado reduz a necessidade a R$ 14.400; a folga de R$ 900 cobre essa contribuição.",
+      "d": "O aporte é R$ 900, pois a folga observada define o valor da meta; o montante final pode ser ajustado pelo retorno esperado."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-02-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A folga é R$ 8.500 menos R$ 7.100, ou R$ 1.400. A reserva exige R$ 1.000 por mês, o curso R$ 750, e a soma de R$ 1.750 supera a folga em R$ 350.</p><p>A alternativa B confunde capacidade com necessidade e supõe uso sequencial que não consta dos prazos. A alternativa C acerta a soma, mas trata retorno incerto como contribuição já realizada. A alternativa D ignora que as duas metas competem pela mesma sobra mensal.</p><p>Regra de bolso: some os aportes de metas simultâneas antes de compará-los com uma única capacidade de poupança.</p>",
+     "enunciado": "<p>Em São Luís, o consultor Bruno organiza duas metas de Caetano. A primeira é uma reserva de R$ 12.000 em doze meses; a segunda é um curso de R$ 18.000 em vinte e quatro meses. Caetano parte de zero em ambas, dispõe de renda líquida de R$ 8.500 e soma R$ 7.100 de despesas mensais. Os valores e prazos são constantes e o exercício ignora rendimento. Caetano pede que Bruno registre as duas metas como plenamente financiadas porque cada aporte, analisado isoladamente, fica abaixo da folga. Ele atribui prioridade à reserva, mas aceita discutir o prazo do curso. Bruno precisa mostrar o conflito entre objetivos simultâneos e destinar a capacidade sem prometer retorno como cobertura da diferença. As duas contribuições sairiam da mesma renda mensal, de modo que aprovar cada meta em planilhas separadas não responde se as duas cabem ao mesmo tempo. A renda informada é a única fonte prevista para as duas contribuições. Calcule a necessidade mensal conjunta e a diferença diante da folga.</p>",
+     "alternativas": {
+      "a": "São necessários R$ 1.750 por mês, com déficit de R$ 350; reservar R$ 1.000 à meta prioritária deixa R$ 400 mensais ao curso.",
+      "b": "São necessários R$ 1.400 por mês, equivalentes à folga; cada objetivo usa essa capacidade em momento diferente.",
+      "c": "São necessários R$ 1.750 por mês, com déficit de R$ 350; o valor pode ser registrado como aporte realizado por projeção de retorno.",
+      "d": "São necessários R$ 750 por mês, pois a contribuição ao curso já engloba a reserva durante os doze meses iniciais."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-02-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A despesa anual exige provisão ou conversão para base mensal, equivalente a R$ 500 por mês; a prestação continua no fluxo até terminar e a capacidade precisa ser reavaliada nessa data.</p><p>A alternativa A reconhece a despesa sazonal, mas usa patrimônio positivo para cobrir uma folga mensal que não existe. A alternativa C observa o fim da prestação, mas esquece a provisão de uma obrigação previsível. A alternativa D exclui desembolsos do fluxo e confunde patrimônio com renda disponível.</p><p>Regra de bolso: despesa irregular previsível entra no planejamento, e parcela temporária recebe data de revisão.</p>",
+     "enunciado": "<p>O plano de Odete chega à especialista Lígia, em Belém, com uma sobra mensal aparente de R$ 1.200 após renda e despesas recorrentes. O patrimônio líquido é positivo, mas parte dele está em bens de uso. Na entrevista, Odete informa uma despesa anual de R$ 6.000 que costuma pagar com cartão no mesmo mês e uma prestação de R$ 300 que termina dentro de quatro meses. Odete insiste em começar imediatamente um aporte fixo de R$ 1.200 porque o balanço mostra riqueza e o aplicativo já exibe essa sobra. Lígia precisa distinguir fotografia patrimonial, fluxo mensal e datas dos desembolsos para formular um aporte executável hoje e uma revisão quando a prestação acabar. A despesa anual já tem valor conhecido, mas não aparece no quadro de desembolsos mensais apresentado por Odete; sua reserva exige provisão ao longo do ano. Ela quer evitar novo uso do cartão para uma despesa previsível. Analise quais ajustes do diagnóstico são necessários antes de confirmar o valor pedido por Odete.</p>",
+     "alternativas": {
+      "a": "Ajustar a sobra pela despesa anual, mas usar o patrimônio líquido positivo para sustentar R$ 1.200 até a prestação terminar.",
+      "b": "Registrar a despesa anual em base compatível, considerar a prestação até seu término e revisar a capacidade após quatro meses.",
+      "c": "Considerar a prestação atual e sua data final, mas registrar a despesa anual apenas no mês do pagamento, sem provisão anterior.",
+      "d": "Confirmar R$ 1.200 como aporte líquido, pois a despesa anual e a prestação pertencem ao balanço e não ao fluxo."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-02-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. R$ 1.600 transferidos menos R$ 500 resgatados deixam R$ 1.100 de contribuição líquida, e a diferença pede correção do orçamento e comparação com o esforço exigido pela meta.</p><p>A alternativa A confunde operação bruta com poupança preservada. A alternativa C mede o líquido, mas usa retorno incerto para dispensar revisão de prazo ou valor. A alternativa D toma o resgate por formação de poupança.</p><p>Regra de bolso: acompanhe contribuição líquida de resgates e confronte o realizado com a meta e o orçamento.</p>",
+     "enunciado": "<p>Em Curitiba, a assessora Sara acompanha um casal que programou aportar R$ 1.600 por mês para uma meta com data definida. Nos três meses seguintes, o registro do banco confirma transferências de R$ 1.600, mas mostra resgates de R$ 500 em cada mês para cobrir despesas antes omitidas do orçamento. O casal pede que o relatório apresente execução de cem por cento porque as transferências aconteceram na data combinada. Sara observa que o valor investido aumentou apenas R$ 1.100 por mês, antes de qualquer oscilação de preço, e que o plano original usou despesas incompletas. Ela precisa explicar ao casal qual diferença existe entre operação registrada e poupança efetiva, e que tipo de acompanhamento permite corrigir o problema antes de acumular atraso. Os resgates ocorreram antes do fim de cada mês e vieram da própria aplicação destinada à meta, sem entrada adicional que os compensasse no período. Avalie o resultado observado e indique a providência coerente.</p>",
+     "alternativas": {
+      "a": "Registrar R$ 1.600 como poupança realizada e revisar somente o rendimento da aplicação, pois a ordem de transferência foi executada.",
+      "b": "Registrar R$ 1.100 como aporte líquido, rever as despesas omitidas e comparar essa capacidade com a exigência da meta.",
+      "c": "Registrar R$ 1.100 como aporte líquido, mas conservar a meta e o prazo pela expectativa de compensação futura do investimento.",
+      "d": "Registrar R$ 500 como poupança realizada, pois o valor resgatado identifica a parcela que circulou na conta durante o mês."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-02-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. O curso acumulou R$ 400 x 6 = R$ 2.400. Faltam R$ 15.600 para os R$ 18.000, e R$ 15.600 divididos por dezoito meses exigem aproximadamente R$ 866,67. Com R$ 1.000 da reserva, o total de cerca de R$ 1.867 cabe na nova capacidade de R$ 1.900.</p><p>A alternativa C repete o aporte inicial e ignora os seis meses de contribuição inferior. A alternativa B usa os R$ 500 liberados como acréscimo ao aporte anterior sem recalcular o saldo da meta. A alternativa D divide o valor restante de modo inadequado e trata o aporte passado como verba futura livre.</p><p>Regra de bolso: após um atraso, recalcule o saldo da meta pelo prazo que restou, em vez de apenas acrescentar o dinheiro liberado.</p>",
+     "enunciado": "<p>Seis meses após iniciar as duas metas do caso da aula, Leandro retorna ao planejador Ítalo, em Porto Alegre. A reserva recebeu R$ 1.000 mensais, o curso recebeu R$ 400 e nenhuma das parcelas foi resgatada. Uma prestação de R$ 500 termina agora; mantidas as demais receitas e despesas, a capacidade passa de R$ 1.400 para R$ 1.900 mensais. Leandro quer destinar de imediato os R$ 500 liberados ao curso, afirmando que isso encerrará a diferença do plano original. Ítalo observa que o curso tinha prazo de vinte e quatro meses a partir do início, recebeu menos que os R$ 750 previstos nos seis primeiros meses e agora restam dezoito meses para a data desejada. Sem rendimento e sem alteração do valor da meta, Ítalo deve quantificar o aporte necessário daqui em diante antes de decidir se o novo fluxo basta. O planejador compara o que foi efetivamente acumulado nos seis meses com o saldo ainda exigido pela meta e distribui esse saldo pelo prazo que resta. Calcule o aporte mensal requerido para o curso e indique a conclusão.</p>",
+     "alternativas": {
+      "a": "O curso passa a exigir cerca de R$ 867 mensais; somado à reserva, cabe na nova capacidade com pequena folga.",
+      "b": "O curso passa a exigir R$ 900 mensais; somado aos R$ 1.000 da reserva, o valor cabe exatamente nos R$ 1.900 disponíveis.",
+      "c": "O curso passa a exigir R$ 750 mensais; a capacidade nova cobre as duas metas porque a prestação encerrada supera o déficit original.",
+      "d": "O curso passa a exigir R$ 1.000 mensais; a contribuição anterior de R$ 400 permanece disponível para a reserva."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-02-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Faltam R$ 24.000 menos R$ 6.000, ou R$ 18.000. Com aporte de R$ 1.200 e rendimento zero, a divisão resulta em quinze meses, prazo que Miriam afirmou poder negociar.</p><p>A alternativa A acerta o prazo, mas mantém aporte acima da capacidade e depende de retorno incerto. A alternativa B acerta o prazo, mas trata o recurso já separado como renda nova. A alternativa C conserva o prazo inviável e supõe que o investimento suprirá o valor que faltará.</p><p>Regra de bolso: se o valor da meta fica fixo, divida o saldo necessário pelo aporte viável para testar um novo prazo.</p>",
+     "enunciado": "<p>Miriam leva à consultora Raquel, em Salvador, a meta de reunir R$ 24.000 para mudar de moradia em doze meses; ela já separou R$ 6.000. Sem rendimento, o objetivo exigiria R$ 1.500 mensais, mas o diagnóstico de renda, prestações e despesas sazonais mostra capacidade recorrente de R$ 1.200. Miriam insiste em contratar um produto de preço volátil para fazer os R$ 300 faltantes aparecerem, embora uma perda possa atrasar a mudança. Raquel esclarece que retorno projetado é incerto e apresenta alternativas verificáveis. Miriam diz que a data pode ser negociada com a família, desde que o valor de R$ 24.000 seja mantido. Como primeira revisão, Raquel testa o prazo necessário com a capacidade atual e rendimento zero, sem registrar retorno futuro como aporte realizado. A família aceita examinar uma data mais distante para a mudança, mas não quer reduzir o valor planejado; isso permite testar uma variável do plano sem projetar ganhos. Calcule esse prazo e indique a resposta objetiva ao pedido de Miriam.</p>",
+     "alternativas": {
+      "a": "Ampliar para quinze meses e registrar R$ 1.500 mensais, com o retorno projetado cobrindo a diferença.",
+      "b": "Ampliar para quinze meses e contar os R$ 6.000 já separados como renda dos meses seguintes.",
+      "c": "Manter doze meses e aportar R$ 1.200 mensais, contando que o investimento cubra a diferença.",
+      "d": "Ampliar o prazo para quinze meses e contribuir R$ 1.200 por mês."
+     },
+     "gabarito": "d"
+    }
+   ],
+   "Poupança da sociedade e financiamento dos investimentos no Brasil": [
+    {
+     "id": "cpror-cli-03-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Mudar recursos já acumulados de uma aplicação para a caderneta não mostra renda nova que deixou de ser consumida no período.</p><p>A alternativa A confunde o nome de um produto com o agregado das Contas Nacionais. A alternativa C trata mudança de destino do patrimônio como sobra nova da renda. A alternativa D atribui à transferência pessoal o registro direto de um ativo fixo de produção.</p><p>Regra de bolso: caderneta é produto, poupança pessoal é renda não consumida e poupança macro é um agregado estatístico.</p>",
+     "enunciado": "<p>Uma cliente transferiu R$ 20.000 de um fundo para a caderneta de poupança e concluiu que a poupança da sociedade aumentou nesse valor. Compare os sentidos da palavra poupança e indique a leitura do movimento.</p>",
+     "alternativas": {
+      "a": "O depósito na caderneta cria poupança macroeconômica de R$ 20.000 porque o produto recebe esse nome.",
+      "b": "A transferência muda o produto que guarda patrimônio já acumulado e, isoladamente, não demonstra nova renda não consumida.",
+      "c": "A poupança pessoal aumenta em R$ 20.000 porque o dinheiro passou de um fundo para uma conta da cliente.",
+      "d": "A transferência representa formação de capital fixo porque a caderneta pode financiar projetos produtivos."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-03-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A formação bruta de capital abrange ativos fixos, variação de estoques e aquisições líquidas de objetos de valor; máquinas usadas repetidamente na produção pertencem à parcela fixa.</p><p>A alternativa A coloca estoques na parcela fixa e desloca objetos de valor para negociações bursáteis. A alternativa C troca acumulação macroeconômica pela compra de títulos e ações. A alternativa B confunde ativos produtivos com giro financeiro e restringe indevidamente a formação total.</p><p>Regra de bolso: FBC é o conjunto; FBCF é sua parcela ligada a ativos fixos usados na produção.</p>",
+     "enunciado": "<p>Um analista classifica máquinas de uso repetido na produção, variação de estoques e aquisições líquidas de objetos de valor. Identifique a relação entre formação bruta de capital e formação bruta de capital fixo nesse registro.</p>",
+     "alternativas": {
+      "a": "A formação bruta de capital fixo reúne máquinas e estoques, enquanto objetos de valor entram apenas no volume da bolsa.",
+      "b": "A formação bruta de capital fixo mede o giro de ativos financeiros, e a formação total mede apenas novas construções.",
+      "c": "A formação bruta de capital corresponde à compra de títulos, enquanto a parcela fixa reúne ações de empresas industriais.",
+      "d": "A formação bruta de capital inclui as três parcelas, enquanto máquinas produtivas entram na formação bruta de capital fixo."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-03-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. R$ 2,4 trilhões menos R$ 1,7 trilhão resultam em R$ 0,7 trilhão de poupança bruta na simplificação, um agregado diferente do saldo em cadernetas.</p><p>A alternativa A usa a renda antes de descontar consumo. A alternativa B trata consumo como se fosse a parcela não consumida. A alternativa C acerta a subtração, mas associa sem fundamento o agregado ao saldo de um produto financeiro.</p><p>Regra de bolso: poupança bruta é renda disponível bruta menos consumo final na conta simplificada.</p>",
+     "enunciado": "<p>Uma equipe de atendimento pede à economista Lara, em Belo Horizonte, que explique os dados simplificados de uma economia hipotética. A renda disponível bruta no período foi de R$ 2,4 trilhões e o consumo final, de R$ 1,7 trilhão. Uma colega propõe chamar de poupança os R$ 2,4 trilhões, pois esse valor representa os recursos disponíveis antes das decisões das famílias. Outra sugere usar somente o saldo de depósitos em cadernetas, já que o termo aparece no nome do produto. Lara lembra que a expressão das Contas Nacionais toma a parcela da renda disponível que sobra após o consumo final e que ela agrega setores institucionais. Os valores da hipótese pertencem ao mesmo período e à mesma unidade de medida; Lara deve evitar misturar o fluxo anual com o saldo de um produto financeiro. Não houve mudança de conceito entre as duas medidas. Para evitar uma conclusão baseada no nome do produto ou no valor bruto da renda, calcule a poupança bruta na simplificação da aula e identifique sua interpretação.</p>",
+     "alternativas": {
+      "a": "R$ 2,4 trilhões, pois renda disponível bruta é o valor integral que a sociedade pode poupar, antes da composição por setores.",
+      "b": "R$ 1,7 trilhão, pois o consumo final representa a circulação de recursos que depois volta ao sistema como financiamento.",
+      "c": "R$ 0,7 trilhão, a diferença entre os fluxos, que deve coincidir com o saldo transferido para cadernetas no período.",
+      "d": "R$ 0,7 trilhão, a diferença entre renda disponível bruta e consumo final, sem equivalência direta com depósitos em caderneta."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-03-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A identidade resulta em 900 + 20 - 1.100 - 10 = -190 bilhões de reais; o sinal negativo indica necessidade de financiamento perante o resto do mundo.</p><p>A alternativa A omite transferências e aquisições. A alternativa B calcula a diferença em valor absoluto, mas troca necessidade por capacidade. A alternativa D trata a aquisição líquida de ativo não produzido como acréscimo, quando ela é subtraída na fórmula.</p><p>Regra de bolso: aplique os quatro termos da identidade e interprete o sinal só depois da conta.</p>",
+     "enunciado": "<p>Em Brasília, o consultor Marcelo analisa uma economia hipotética para explicar por que investimento interno pode superar a poupança doméstica. Os dados do mesmo período, em bilhões de reais, são: poupança bruta de 900, transferências líquidas de capital de 20, formação bruta de capital de 1.100 e aquisições líquidas de ativos não financeiros não produzidos de 10. Uma cliente afirma que o investimento teria de parar em 900, pois o valor poupado internamente seria um limite físico. Marcelo decide aplicar a identidade completa apresentada na aula, levando em conta os dois termos adicionais antes de interpretar o sinal. Na reunião, a cliente quer saber se o sinal obtido descreve recursos excedentes disponíveis ao exterior ou necessidade de captar financiamento de fora. O exercício trata os quatro valores como fluxos do mesmo período. Calcule a capacidade ou necessidade de financiamento e indique o significado do resultado sob essas premissas.</p>",
+     "alternativas": {
+      "a": "Necessidade de R$ 200 bilhões, pois basta subtrair a formação de capital da poupança e ignorar os demais termos.",
+      "b": "Capacidade de R$ 190 bilhões, pois a formação de capital supera a poupança mesmo após considerar as transferências.",
+      "c": "Necessidade de R$ 190 bilhões, sinal de financiamento líquido perante o exterior nessa conta simplificada.",
+      "d": "Necessidade de R$ 170 bilhões, pois as aquisições de ativos não produzidos devem entrar com sinal positivo."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-03-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A intermediação aproxima poupadores e unidades que investem, administra parte da diferença de prazo e liquidez e incorpora informação, seleção, custo e risco.</p><p>A alternativa B descreve a conexão, mas promete eliminar risco de liquidez. A alternativa C reconhece a reunião de recursos, porém dispensa seleção e risco de crédito. A alternativa D confunde movimentação financeira pessoal com a aquisição produtiva de ativos fixos.</p><p>Regra de bolso: intermediação faz a ponte entre quem poupa e quem investe, sem apagar risco, prazo ou custo.</p>",
+     "enunciado": "<p>Um grupo de empresários procura a especialista Heloísa, em Salvador, para financiar equipamentos usados durante muitos anos. Ela explica que famílias e empresas com recursos disponíveis podem preferir aplicações de prazo curto e acesso fácil ao dinheiro, enquanto o projeto produtivo exige recursos por um horizonte extenso. Um participante diz que, se houver poupança suficiente no país, o financiamento surgirá diretamente entre os mesmos poupadores e investidores, dispensando instituições e análise de risco. Heloísa precisa mostrar o papel econômico de bancos, mercados de capitais, fundos e outros intermediários, sem apresentar a ponte financeira como eliminação dos riscos. Os poupadores querem liquidez e possibilidade de diversificar, enquanto a empresa precisa de capital por vários anos; as partes não negociaram diretamente. O custo do crédito ainda dependerá do risco e da estrutura escolhida. Analise o desencontro de prazos e indique a função da intermediação nesse caso.</p>",
+     "alternativas": {
+      "a": "Conectar recursos dispersos ao projeto, avaliando prazo, liquidez, custo, informação e risco, sem remover as perdas possíveis.",
+      "b": "Conectar poupadores ao projeto e igualar o prazo de cada aplicação ao prazo dos equipamentos, eliminando risco de liquidez.",
+      "c": "Reunir a poupança em crédito e, por causa da agregação, dispensar seleção dos projetos e análise de risco de crédito.",
+      "d": "Transformar a compra pessoal de ativos financeiros em formação bruta de capital fixo, mesmo antes de investir em equipamentos."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-03-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A conta de 900 - 1.100 = -200 bilhões mostra investimento realizado acima da poupança interna e necessidade de financiamento, cuja avaliação depende das condições e riscos da entrada externa.</p><p>A alternativa B acerta a possibilidade de financiamento, mas elimina indevidamente o risco cambial. A alternativa C limita o investimento a 900 apesar do dado de 1.100 e confunde a diferença com giro de ações. A alternativa D observa o prazo, mas transforma financiamento externo em garantia de crescimento.</p><p>Regra de bolso: déficit de financiamento indica dependência externa, não ausência de investimento nem resultado automaticamente ruim.</p>",
+     "enunciado": "<p>Em Curitiba, a analista Denise apresenta a um cliente o caso da aula: a formação bruta de capital é de R$ 1,1 trilhão e a poupança doméstica, de R$ 900 bilhões, com transferências e aquisições líquidas de ativos não produzidos iguais a zero. O cliente insiste que o país deixou de investir R$ 200 bilhões e que qualquer entrada externa representa um resultado ruim. Denise observa que o investimento de R$ 1,1 trilhão ocorreu e que a diferença demanda financiamento líquido do exterior. Ela precisa reconhecer tanto a possibilidade de financiar capacidade produtiva quanto a exposição a condições de financiamento, câmbio e disposição de investidores estrangeiros. A cliente pergunta também se a dependência de recursos externos pode variar com as condições de mercado, mesmo quando o investimento já ocorreu na hipótese. A conclusão deve separar a conta do juízo de valor sobre a entrada externa. Avalie a afirmação do cliente e indique a resposta técnica que Denise deve apresentar.</p>",
+     "alternativas": {
+      "a": "O investimento ocorreu, e a necessidade de R$ 200 bilhões exige examinar prazo, moeda, condições e uso dos recursos externos.",
+      "b": "O investimento ocorreu, e a diferença pode vir do exterior; por ser investimento produtivo, o risco cambial deixa de importar.",
+      "c": "O investimento ficou limitado à poupança doméstica de R$ 900 bilhões, enquanto R$ 200 bilhões correspondem apenas à negociação de ações.",
+      "d": "A entrada externa cobre a diferença e garante crescimento, desde que o financiamento tenha prazo compatível com o projeto."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-03-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. No primeiro período, 900 - 1.100 = -200 bilhões; no segundo, 1.000 - 1.100 = -100 bilhões. A necessidade diminui em R$ 100 bilhões, e a formação de capital informada continua igual.</p><p>A alternativa A subtrai a poupança adicional da necessidade como se ela fosse R$ 100 bilhões no início. A alternativa C transforma uma mudança na poupança em aumento causal do investimento que os dados negam. A alternativa D inverte o sinal do segundo resultado, que continua negativo.</p><p>Regra de bolso: uma identidade mostra como os saldos fecham; compare os valores observados antes de afirmar que uma variável causou outra.</p>",
+     "enunciado": "<p>O relatório do economista Rui, em Belém, acompanha a evolução de uma economia hipotética. No primeiro período, a poupança bruta foi R$ 900 bilhões e a formação bruta de capital, R$ 1,1 trilhão. No período seguinte, a poupança cresceu para R$ 1 trilhão e a formação de capital permaneceu em R$ 1,1 trilhão. Em ambos, transferências líquidas de capital e aquisições líquidas de ativos não financeiros não produzidos foram zero. Uma gestora observa a poupança adicional e diz que o investimento produtivo cresceu na mesma quantia; outra calcula apenas o novo saldo externo e evita atribuir causalidade ao movimento. Rui precisa conferir as duas contas, identificar o que mudou e separar o registro contábil de uma hipótese sobre crescimento futuro. Rui mantém a mesma definição de poupança e investimento nas duas datas para que a diferença entre elas possa ser comparada sem mudança de critério contábil. Compare os períodos e indique a conclusão sustentada pelos dados.</p>",
+     "alternativas": {
+      "a": "A necessidade passa de R$ 200 bilhões para zero, pois os R$ 100 bilhões poupados cobrem a diferença inicial.",
+      "b": "A necessidade passa de R$ 200 bilhões para R$ 100 bilhões, enquanto o investimento permanece em R$ 1,1 trilhão.",
+      "c": "A formação de capital passa a R$ 1,2 trilhão, porque a poupança adicional entra na mesma proporção no investimento.",
+      "d": "A capacidade vira R$ 100 bilhões, pois a poupança adicional supera a formação de capital do período seguinte."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-03-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. Poupança disponível pode apoiar financiamento, mas a realização de projetos depende de viabilidade, custo do capital, confiança e outras condições; a identidade não estabelece relação causal proporcional.</p><p>A alternativa A reconhece a disponibilidade de recursos, mas transforma a proporção de um para um em exigência econômica. A alternativa B considera a intermediação, porém toma crescimento como consequência demonstrada. A alternativa D reconhece o financiamento possível, mas deduz redução de risco e alocação produtiva de um saldo contábil.</p><p>Regra de bolso: a conta fecha fluxos; investimento e crescimento dependem das decisões e condições por trás deles.</p>",
+     "enunciado": "<p>Durante uma reunião sobre a poupança doméstica, a consultora Érica, em Porto Alegre, avalia um plano para elevá-la. Um diretor afirma que cada real adicional poupado será convertido em um real de máquinas novas e em crescimento futuro. A equipe confirma que a medida pode ampliar recursos disponíveis, mas a aprovação dos projetos e a definição do custo de capital ainda estão pendentes. A demanda por financiamento depende de confiança e produtividade esperada; as condições de risco, prazo e ambiente institucional também afetam as decisões. Érica precisa explicar o alcance da identidade contábil sem rejeitar a utilidade da poupança. Para testar o raciocínio, ela lembra a variação do caso da aula, na qual a poupança subiu e o investimento ficou constante. A decisão de ampliar máquinas ainda depende de projetos viáveis; a equipe pede que Érica separe disponibilidade de recursos de aplicação efetiva desses recursos. Avalie a conclusão do diretor e indique a mensagem que Érica deve apresentar.</p>",
+     "alternativas": {
+      "a": "A poupança adicional amplia recursos e exige investimento proporcional, enquanto projetos e confiança determinam apenas o prazo da execução.",
+      "b": "A poupança adicional amplia recursos e demonstra crescimento futuro, desde que a intermediação encaminhe os valores para empresas.",
+      "c": "A poupança adicional pode ampliar recursos, mas projetos viáveis, custo e confiança condicionam o investimento; a identidade não prova causalidade.",
+      "d": "A poupança adicional pode financiar projetos e reduz risco de perdas porque o saldo contábil positivo indica alocação produtiva."
+     },
+     "gabarito": "c"
+    }
+   ],
+   "Reserva de emergência para diferentes perfis de cliente": [
+    {
+     "id": "cpror-cli-04-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A reserva protege o fluxo e os objetivos quando ocorre perda inesperada de renda ou despesa relevante não prevista.</p><p>A alternativa B destina a reserva a gastos anuais conhecidos, que pedem provisão própria. A alternativa C usa volatilidade relevante para uma necessidade cujo momento é incerto. A alternativa D confunde caixa para despesas imediatas com proteção para eventos de impacto prolongado.</p><p>Regra de bolso: a reserva existe para amortecer choques, antes de buscar rendimento.</p>",
+     "enunciado": "<p>Ao organizar o patrimônio de uma cliente, uma assessora separa uma parcela para enfrentar perda inesperada de renda ou despesa relevante sem previsão. Identifique a função dessa parcela no plano financeiro.</p>",
+     "alternativas": {
+      "a": "Cobrir o choque sem interromper objetivos, vender posições em condição desfavorável ou recorrer a dívida onerosa.",
+      "b": "Pagar compromissos anuais conhecidos, mantendo os investimentos de prazo longo separados para oscilações do mercado.",
+      "c": "Buscar remuneração elevada em ativos voláteis, pois a reserva compensa perdas se o resgate ocorrer durante uma crise.",
+      "d": "Substituir proteção contra invalidez prolongada, já que uma parcela líquida pode financiar despesas imediatas."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-04-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Matrícula e tributo anual têm vencimento conhecido; a concentração em um mês pede provisão antecipada, separada da reserva para imprevistos.</p><p>A alternativa A confunde pressão de caixa com imprevisibilidade. A alternativa C muda a classificação conforme o tamanho da reserva, embora a despesa continue conhecida. A alternativa D identifica a previsibilidade, mas troca provisão por crédito e custo potencial.</p><p>Regra de bolso: gasto conhecido com data concentrada pede planejamento, não classificação como emergência.</p>",
+     "enunciado": "<p>Um cliente pagará matrícula escolar e tributo anual no mesmo mês. Ele chama esses vencimentos de emergências porque pressionam o caixa de uma vez. Classifique os pagamentos e indique onde devem ser planejados.</p>",
+     "alternativas": {
+      "a": "Emergências, pois a concentração no calendário transforma obrigações conhecidas em choques sem previsão.",
+      "b": "Despesas previsíveis, que pedem provisão no orçamento em vez de consumir a proteção contra imprevistos.",
+      "c": "Emergências, caso o cliente tenha uma reserva superior ao custo conjunto dos dois pagamentos.",
+      "d": "Despesas previsíveis, mas pagas primeiro com limite de crédito para conservar a reserva como patrimônio."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-04-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. R$ 5.000 vezes seis meses resultam em R$ 30.000 para Bruno; R$ 5.000 vezes dez meses resultam em R$ 50.000 para Denise, segundo referências escolhidas após o diagnóstico.</p><p>A alternativa B ignora vulnerabilidades distintas apesar da base mensal igual. A alternativa A transfere o critério de Denise para Bruno sem analisar seu caso. A alternativa D acerta os valores, mas os transforma em limites normativos e impede a revisão que a aula exige.</p><p>Regra de bolso: defina a base de despesas, escolha os meses segundo a vulnerabilidade e só então multiplique.</p>",
+     "enunciado": "<p>Bruno e Denise procuram a especialista Elisa, em Goiânia, com despesas essenciais mensais de R$ 5.000 cada. Bruno recebe salário estável, divide despesas com outra pessoa de renda própria e mantém seguros adequados aos riscos identificados. Denise trabalha por projetos, recebe de poucos clientes e sustenta dois dependentes. Após avaliar as exposições, ambos escolhem referências diferentes: seis meses para Bruno e dez para Denise. Um colega propõe metas iguais porque os gastos essenciais coincidem; outro aplica os meses escolhidos às despesas totais, embora o caso tenha definido a base essencial. Elisa precisa apresentar as metas resultantes sem transformar os meses em regra universal. Bruno e Denise desejam saber o montante a acumular hoje, e não apenas quantos meses cada perfil suportaria; a diferença de renda e dependentes motivou as referências escolhidas. Calcule os valores de Bruno e Denise conforme as premissas da análise.</p>",
+     "alternativas": {
+      "a": "R$ 50.000 para ambos, pois a exposição de Denise define a referência prudencial para clientes com a mesma despesa essencial.",
+      "b": "R$ 30.000 para ambos, pois a base de R$ 5.000 iguala as metas mesmo diante de fontes de renda e dependentes distintos.",
+      "c": "R$ 30.000 para Bruno e R$ 50.000 para Denise, usando R$ 5.000 de despesa essencial e os meses escolhidos em cada diagnóstico.",
+      "d": "R$ 30.000 para Bruno e R$ 50.000 para Denise, valores normativos que dispensam revisão quando as condições mudam."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-04-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Seis vezes R$ 4.200 são R$ 25.200; nove vezes R$ 4.200 são R$ 37.800. A diferença de três meses equivale a R$ 12.600.</p><p>A alternativa B chega ao valor, mas usa a causa errada: o cálculo veio dos meses de despesas essenciais definidos no novo diagnóstico. A alternativa C aplica os meses extras a uma sobra que a cena não informa. A alternativa A acerta os números, porém converte uma escolha individual em regra profissional fixa.</p><p>Regra de bolso: quando a base mensal fica igual, a mudança da meta é a despesa essencial multiplicada pelos meses acrescentados.</p>",
+     "enunciado": "<p>Em Recife, o planejador Caio revisa a reserva de Marta, cujas despesas essenciais são R$ 4.200 por mês. Marta tinha emprego estável e havia escolhido uma referência de seis meses. Passou a trabalhar por projetos com poucos contratantes, tornou-se responsável pelo sustento de um familiar e, após o novo diagnóstico, escolheu uma referência de nove meses. Uma colega sugere elevar a meta pelo mesmo valor do último aumento de renda de Marta, embora o risco principal agora seja a possibilidade de interrupção dessa renda. Marta pede que Caio quantifique o efeito da revisão antes de decidir como acumular o valor faltante. A base de despesas permanece R$ 4.200 e o cálculo considera rendimento zero. A reserva antiga ainda não foi automaticamente ajustada quando Marta mudou de atividade; Caio precisa mostrar em reais o efeito da nova exposição sobre a meta. A mudança ocorreu antes de ela recompor a reserva. Calcule a meta anterior, a nova meta e a diferença que o plano precisa cobrir.</p>",
+     "alternativas": {
+      "a": "A meta passa de R$ 25.200 para R$ 37.800, mas a mudança de renda exige manter o valor novo como regra fixa por profissão.",
+      "b": "A meta passa de R$ 25.200 para R$ 37.800, aumento que deve ser atribuído ao reajuste salarial recebido no período.",
+      "c": "A meta passa de R$ 25.200 para R$ 29.400, pois os três meses adicionais se aplicam ao saldo mensal após despesas.",
+      "d": "A meta passa de R$ 25.200 para R$ 37.800, aumento de R$ 12.600 ligado aos três meses adicionais de despesas essenciais."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-04-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A reserva deve estar disponível quando a despesa ocorrer, com baixa probabilidade de perda; camadas são possíveis se o conjunto mantiver proteção compatível.</p><p>A alternativa A aceita o rótulo de liquidez sem verificar o crédito a tempo. A alternativa C transforma uma solução operacional em obrigação e desconsidera custo e perda. A alternativa B substitui caixa próprio por crédito e coloca retorno antes da função de proteção.</p><p>Regra de bolso: liquidez útil é dinheiro acessível no momento do choque, após conferir regras e riscos reais.</p>",
+     "enunciado": "<p>Denise, profissional com renda por projetos e dois dependentes, leva sua reserva à assessora Patrícia em Manaus. A meta de reserva foi definida para suportar despesas essenciais se um contrato importante terminar sem aviso. Denise encontrou uma aplicação anunciada como de liquidez diária, com remuneração atraente e resgate submetido a horário de solicitação, dias de funcionamento e prazo efetivo de crédito. Parte das despesas pode vencer na manhã seguinte à perda do contrato. Uma segunda alternativa permite acesso imediato a uma parcela e prazo curto para o restante. Denise insiste na primeira opção porque o rótulo de liquidez diária lhe parece suficiente. Patrícia precisa examinar acesso real, carência, oscilação, risco de perda e custo de saída, sem impor camadas como regra universal. Patrícia pede uma resposta útil para o dia em que o contrato falhar: a aplicação precisa entregar dinheiro no prazo das contas, pelo valor que poderá ser usado. Analise o caso e indique o critério de alocação da reserva.</p>",
+     "alternativas": {
+      "a": "Escolher o produto de liquidez diária anunciada e aceitar crédito posterior, pois o nome da condição resolve a necessidade imediata.",
+      "b": "Priorizar remuneração do produto e reservar limite de cartão para o intervalo entre pedido de resgate e crédito efetivo.",
+      "c": "Dividir em duas camadas mesmo se a primeira já cobrir os vencimentos e o segundo prazo trouxer perda relevante na saída.",
+      "d": "Verificar horário, crédito, carência, custo e risco; usar acesso imediato para a parcela necessária e prazo curto apenas se o conjunto cobrir o choque."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-04-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A reserva atende choques e gastos imediatos; eventos de efeito prolongado ou severo podem exceder um caixa razoável e pedir outro mecanismo de proteção.</p><p>A alternativa A desloca eventos prolongados para a reserva e confunde seguro com provisão anual. A alternativa C reconhece o primeiro papel da reserva, mas conclui indevidamente que ele cobre perdas superiores ao saldo. A alternativa D elimina o caixa imediato e pressupõe pagamento instantâneo para qualquer despesa.</p><p>Regra de bolso: reserve para o choque e use proteções próprias quando o impacto puder superar o caixa razoável.</p>",
+     "enunciado": "<p>Em Curitiba, o especialista Yuri conversa com Rosa, que já separou recursos líquidos para enfrentar perda temporária de renda e despesas inesperadas. Rosa decide cancelar coberturas contratadas para invalidez prolongada e responsabilidade civil, argumentando que a reserva está disponível e que pagar seguro reduz a capacidade de poupança. Yuri observa que uma dessas ocorrências pode produzir despesas por período extenso ou perda patrimonial severa, além do montante razoável mantido em caixa. Rosa pede que ele explique o papel de cada proteção antes de mudar o orçamento. O profissional precisa evitar tanto duplicação inútil quanto a promessa de que uma única reserva resolve qualquer evento. A cliente compara uma perda de renda por alguns meses com eventos cuja duração e custo podem ultrapassar várias vezes as despesas habituais da família. A escolha também afeta o espaço disponível no orçamento familiar. Compare as funções da reserva e das outras proteções no caso.</p>",
+     "alternativas": {
+      "a": "A reserva deve financiar os eventos prolongados, enquanto seguros servem apenas para compromissos anuais de valor previsível.",
+      "b": "A reserva pode cobrir franquias, intervalos e despesas imediatas; riscos de impacto prolongado podem pedir seguro ou outra proteção.",
+      "c": "A reserva cobre os primeiros gastos e, por isso, permite cancelar proteções para perdas superiores ao caixa reunido.",
+      "d": "Seguros substituem a parcela líquida da reserva, pois a contratação garante crédito no instante em que surgir qualquer despesa."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-04-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. A reserva cumpriu sua função, mas precisa ser recomposta; a retomada da renda e a nova despesa rígida exigem atualizar o diagnóstico antes de fixar a meta, e resgates posteriores não formam saldo disponível.</p><p>A alternativa B prioriza transferências brutas e adia a análise de uma obrigação já existente. A alternativa C reconhece a mudança de renda, mas inclui resgates como se fossem poupança efetiva. A alternativa D presume que a volta dos contratos elimina a vulnerabilidade apesar da nova despesa.</p><p>Regra de bolso: após usar a reserva, revise a exposição e recomponha o saldo líquido necessário.</p>",
+     "enunciado": "<p>Depois de usar a reserva por três meses de queda inesperada da renda, Jonas, profissional autônomo, procura a consultora Camila em Belém. Os pagamentos evitam o uso de dívida onerosa e preservam os investimentos de prazo longo, mas deixam a reserva abaixo da meta definida no último diagnóstico. Ao mesmo tempo, o principal cliente de Jonas retoma os contratos e surge uma nova despesa mensal rígida ligada à moradia. Jonas propõe manter a meta antiga e registrar as transferências futuras para a aplicação como recomposição suficiente, mesmo que alguns valores sejam resgatados para pagar a nova despesa. Camila precisa separar uso legítimo, contribuição líquida e revisão da vulnerabilidade; também precisa escolher uma ordem de ação antes de surgir outra emergência. A nova despesa de moradia reduz a folga para recompor o caixa; a sequência de aportes e resgates, isoladamente, pode aparentar progresso sem recuperar a proteção. Avalie a situação e indique a decisão que sustenta a proteção daqui em diante.</p>",
+     "alternativas": {
+      "a": "Reconhecer o uso legítimo, rever renda e despesa rígida, definir a meta atual e recompor com recursos que permaneçam disponíveis.",
+      "b": "Recompor a meta antiga com transferências brutas e rever a despesa de moradia depois que o saldo voltar ao valor anterior.",
+      "c": "Rever a renda retomada e aumentar a meta por prudência, contando os resgates mensais como parte do aporte planejado.",
+      "d": "Suspender a recomposição porque os contratos voltaram, embora a nova obrigação mensal altere as necessidades de caixa."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-04-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. A nova renda pode diminuir a vulnerabilidade, mas a revisão depende de sua estabilidade, do compromisso de divisão e dos riscos ainda presentes; só uma meta sustentada pelo diagnóstico libera excedente para outro objetivo.</p><p>A alternativa A calcula R$ 30.000, mas transforma o primeiro recebimento em prova de estabilidade e seis meses em regra. A alternativa B trata dez meses como limite normativo e ignora a nova condição do domicílio. A alternativa D antecipa liberação do excedente e usa crédito, que não é reserva própria.</p><p>Regra de bolso: mudança de renda abre revisão da meta; o excedente só existe depois de confirmar a proteção necessária.</p>",
+     "enunciado": "<p>Com a entrada de uma segunda renda independente e previsível no domicílio, Denise volta à planejadora Luana em Porto Alegre. A nova pessoa assume parte das despesas essenciais, enquanto Denise continua trabalhando por projetos e sustentando dois dependentes. Denise tinha escolhido uma meta de dez meses sobre despesas essenciais de R$ 5.000, ou R$ 50.000, e pede redução imediata para seis meses a fim de investir o excedente em objetivo de prazo longo. Luana confirma que a segunda renda chegou recentemente, mas ainda precisa verificar estabilidade, compromisso real de divisão das despesas e demais exposições, inclusive cobertura de seguros. Ela quer mostrar que a mudança pode reduzir a vulnerabilidade sem fazer do número de meses uma tabela fixa por profissão ou composição familiar. Antes de deslocar dinheiro para o objetivo distante, Denise precisa saber se a renda adicional suporta suas próprias obrigações e se a divisão de custos será estável. Avalie o pedido de Denise e indique o procedimento coerente com a revisão da reserva.</p>",
+     "alternativas": {
+      "a": "Reduzir de R$ 50.000 para R$ 30.000 após o primeiro recebimento, pois a presença de outra renda define seis meses para essa família.",
+      "b": "Conservar R$ 50.000 como limite normativo do trabalho por projetos, apesar da nova renda e da divisão das despesas.",
+      "c": "Confirmar estabilidade e divisão das despesas, rever as demais exposições e só então decidir a meta e o possível destino do excedente.",
+      "d": "Direcionar R$ 20.000 ao objetivo longo e usar limite de crédito como substituto para choques até a segunda renda se estabilizar."
+     },
+     "gabarito": "c"
+    }
+   ],
+   "Balanço patrimonial: ativos de uso, investimento e patrimônio líquido": [
+    {
+     "id": "cpror-cli-05-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O balanço reúne bens e direitos nos ativos, dívidas e obrigações nos passivos e calcula o patrimônio líquido pela subtração dos passivos do total de ativos em uma data.</p><p>A alternativa B descreve fluxos mensais, que não são a fotografia patrimonial. A alternativa C exclui bens de uso do patrimônio e ainda os transforma em dívida. A alternativa D mistura valores históricos e fluxos, sem representar as posições existentes na data.</p><p>Regra de bolso: balanço mostra posições em uma data; renda e despesa mostram fluxos ao longo do tempo.</p>",
+     "enunciado": "<p>Em uma reunião, uma cliente entrega a lista de bens, direitos e dívidas existentes em uma data e pede ao planejador que organize seu balanço patrimonial pessoal. Identifique a estrutura e o resultado que esse documento permite calcular.</p>",
+     "alternativas": {
+      "a": "Registrar bens e direitos como ativos, obrigações como passivos e obter o patrimônio líquido pela diferença entre ambos.",
+      "b": "Registrar recebimentos como ativos, gastos como passivos e obter o patrimônio líquido pela sobra mensal de renda.",
+      "c": "Registrar bens de uso como passivos, aplicações como ativos e obter o patrimônio líquido apenas com os investimentos.",
+      "d": "Registrar o valor de compra dos bens como renda, o saldo original das dívidas como gasto e apurar a poupança do mês."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-05-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Moradia e instrumento de trabalho sustentam a rotina do cliente; o terreno ocioso é de não uso. Isso não o transforma em caixa imediato.</p><p>A alternativa B confunde custo de manutenção com dívida e ignora a função profissional da motocicleta. A alternativa C troca a função atual pela possibilidade abstrata de uso futuro. A alternativa A reconhece a residência, mas confunde potencial de venda com liquidez e desconsidera a motocicleta usada no trabalho.</p><p>Regra de bolso: classifique pela função do bem para o cliente e analise a liquidez em separado.</p>",
+     "enunciado": "<p>Um cliente mora no imóvel principal, usa uma motocicleta para trabalhar e mantém um terreno desocupado. A analista deve separar os ativos segundo a função de cada bem. Classifique os três bens para o diagnóstico patrimonial.</p>",
+     "alternativas": {
+      "a": "A residência é ativo de uso; a motocicleta e o terreno são ativos líquidos por poderem ser convertidos em dinheiro.",
+      "b": "A residência é passivo por exigir manutenção; a motocicleta e o terreno são ativos de investimento por terem valor de venda.",
+      "c": "Os três bens são de uso, pois qualquer proprietário pode utilizá-los ou vendê-los em momento futuro.",
+      "d": "A residência e a motocicleta são ativos de uso; o terreno é ativo de não uso, embora sua venda possa demorar."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-05-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Os ativos somam R$ 1.000.000 e os passivos R$ 360.000; R$ 1.000.000 menos R$ 360.000 resulta em R$ 640.000. As aplicações somam R$ 70.000, enquanto os demais bens têm condições próprias de realização.</p><p>A alternativa B acerta a conta, mas confunde patrimônio positivo com caixa disponível. A alternativa C exclui aplicações, que são ativos, da apuração patrimonial. A alternativa A omite o empréstimo pessoal de R$ 40.000, que também é passivo existente na data.</p><p>Regra de bolso: calcule ativos menos passivos e, em uma segunda análise, pergunte quanto pode virar caixa a tempo e a que custo.</p>",
+     "enunciado": "<p>Patrícia entrega à planejadora Helena, em Campo Grande, os dados para organizar o balanço na data da reunião. A residência principal vale R$ 600.000, o veículo usado no trabalho vale R$ 80.000, um imóvel desocupado vale R$ 250.000 e as aplicações somam R$ 70.000. Na mesma data, o saldo devedor do financiamento da residência é R$ 320.000 e o empréstimo pessoal em aberto é R$ 40.000. Patrícia quer saber quanto possui de patrimônio líquido e propõe tratar esse resultado como dinheiro imediatamente disponível para uma emergência. Helena precisa fazer a conta usando a mesma referência temporal e distinguir o resultado contábil da liquidez, já que imóveis e veículo podem exigir tempo, custos ou substituição para serem vendidos. A cliente precisa manter moradia e transporte enquanto organiza suas finanças, de modo que a mera presença desses bens no balanço não resolve uma conta com vencimento imediato. Calcule o patrimônio líquido e interprete sua disponibilidade.</p>",
+     "alternativas": {
+      "a": "R$ 680.000 de patrimônio líquido; apenas o financiamento da residência reduz o valor dos bens registrados.",
+      "b": "R$ 640.000 de patrimônio líquido; o montante completo pode financiar uma emergência sem venda de bens ou dívida.",
+      "c": "R$ 570.000 de patrimônio líquido; as aplicações devem ser retiradas dos ativos para evitar confundir riqueza com liquidez.",
+      "d": "R$ 640.000 de patrimônio líquido; desse valor, R$ 70.000 estão em aplicações e o restante exige análise de realização."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-05-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Na primeira data, R$ 400.000 mais R$ 50.000 menos R$ 200.000 são R$ 250.000. Na segunda, R$ 440.000 mais R$ 50.000 menos R$ 170.000 são R$ 320.000. A variação de R$ 70.000 reúne R$ 40.000 de valorização estimada e R$ 30.000 de redução da dívida, sem provar quanto veio de poupança mensal.</p><p>A alternativa B acerta os saldos, mas atribui toda a diferença à poupança da renda sem observar o fluxo. A alternativa C ignora os passivos existentes nas datas. A alternativa D congela indevidamente o saldo devedor antigo e perde a amortização ocorrida.</p><p>Regra de bolso: compare posições da mesma data e decomponha a variação antes de atribuí-la à poupança.</p>",
+     "enunciado": "<p>Em Belo Horizonte, o consultor Raul compara dois balanços de Beatriz. Na primeira data, ela possuía uma casa estimada em R$ 400.000, aplicações de R$ 50.000 e saldo devedor de R$ 200.000. Um ano depois, uma estimativa coerente atribui R$ 440.000 à casa, as aplicações continuam em R$ 50.000 e a dívida cai para R$ 170.000 após pagamentos. Beatriz conclui que poupou da renda mensal o equivalente à variação integral do patrimônio líquido, mas apresentou apenas os balanços. Raul precisa quantificar a mudança e separar a valorização estimada do imóvel da redução do saldo devedor. Beatriz pretende usar a variação do patrimônio para fixar um aporte mensal, mas os balanços não mostram entradas de renda, despesas nem depósitos realizados entre as duas datas. Parte da mudança pode ter ocorrido sem entrada de dinheiro novo. Raul precisa separar a evolução dos estoques da capacidade de poupar regularmente. Calcule o patrimônio líquido nas duas datas e explique o que essa comparação permite afirmar.</p>",
+     "alternativas": {
+      "a": "R$ 250.000 e R$ 320.000; o aumento de R$ 70.000 combina R$ 40.000 de valorização estimada e R$ 30.000 de redução da dívida.",
+      "b": "R$ 250.000 e R$ 320.000; o aumento de R$ 70.000 comprova poupança mensal da renda nesse valor.",
+      "c": "R$ 450.000 e R$ 490.000; os saldos de dívida servem apenas ao fluxo de caixa e ficam fora da fotografia.",
+      "d": "R$ 250.000 e R$ 290.000; a comparação conserva o saldo devedor original para evitar que amortizações alterem o balanço."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-05-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. O diagnóstico usa estimativas atuais coerentes para o ativo e saldo devedor atual para a obrigação; se a decisão envolve venda, custos de realização também entram na avaliação do dinheiro obtido.</p><p>A alternativa B mistura preço desejado e dívida original, que não retratam a posição econômica atual. A alternativa A atualiza o imóvel, mas mantém um saldo de dívida já superado. A alternativa D usa o preço pedido como se fosse valor realizável e ignora custos relevantes da venda.</p><p>Regra de bolso: avalie ativo e passivo na mesma data; para vender, estime também o valor líquido realizável.</p>",
+     "enunciado": "<p>Sérgio leva à assessora Joana, em Salvador, uma planilha que mistura referências. O apartamento aparece pelo preço pedido em anúncio recente, R$ 900.000, embora vendas comparáveis indiquem estimativa atual próxima de R$ 760.000. O financiamento entrou pelo valor contratado anos atrás, R$ 500.000, mesmo com saldo devedor atual de R$ 280.000. Sérgio insiste em apresentar os dois números mais altos porque são documentos fáceis de localizar e deseja usar o patrimônio líquido resultante para decidir se vende o imóvel. Joana observa que a venda também pode gerar custos e que a estimativa precisa ser tratada como tal. Ela quer preservar um critério comum de avaliação para a fotografia da data, sem confundir valor patrimonial com dinheiro líquido de venda. A negociação ainda não ocorreu, e o preço anunciado representa uma intenção do vendedor, enquanto as vendas comparáveis oferecem referência para a estimativa da data. Indique como Joana deve registrar esses itens para o diagnóstico.</p>",
+     "alternativas": {
+      "a": "Usar R$ 760.000 para o apartamento e R$ 500.000 para a dívida, pois conservar o contrato evita superestimar a riqueza.",
+      "b": "Usar R$ 900.000 para o apartamento e R$ 500.000 para o financiamento, pois ambos são valores documentados pelo cliente.",
+      "c": "Usar estimativa atual coerente de R$ 760.000 para o apartamento e saldo devedor atual de R$ 280.000, considerando custos de venda na decisão.",
+      "d": "Usar R$ 900.000 para o apartamento e R$ 280.000 para a dívida, deixando custos de venda fora da decisão de conversão em caixa."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-05-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Ambos os bens têm valor patrimonial; a residência sustenta a moradia e o terreno não atende a rotina, mas a eventual demora e desconto de venda separam o terreno de caixa disponível.</p><p>A alternativa B exclui indevidamente o imóvel de uso e presume liquidez do terreno. A alternativa A classifica pela possibilidade de venda em vez da função atual e trata aplicações como renda. A alternativa D acerta a classificação, mas usa valor estimado como dinheiro certo na data da despesa.</p><p>Regra de bolso: uso e liquidez respondem perguntas diferentes; um bem ocioso pode continuar difícil de vender.</p>",
+     "enunciado": "<p>Em Florianópolis, o especialista Davi acompanha Lívia, que mora em sua residência principal, mantém um terreno sem utilização e possui aplicações de acesso rápido. A maior parcela de seu patrimônio líquido está concentrada no imóvel onde vive e no terreno. Lívia planeja usar uma parte do patrimônio para uma despesa com data próxima e diz que o terreno, por estar ocioso, pode ser considerado tão disponível quanto as aplicações. Davi verifica que vender o terreno pode levar meses e exigir desconto, enquanto vender a residência pediria outra solução de moradia. O terreno pode ter função patrimonial, mas sua condição atual de ativo ocioso descreve o uso e deixa em aberto o prazo de conversão em caixa. Lívia pede que Davi indique qual parcela serviria ao pagamento na data pretendida sem pressupor comprador para o terreno nem saída da residência. A decisão tem data, mas o terreno ainda não tem comprador. Compare as funções e a liquidez desses ativos para a decisão.</p>",
+     "alternativas": {
+      "a": "Residência e terreno entram como ativos de não uso porque podem ser vendidos, e as aplicações definem somente a renda mensal.",
+      "b": "A residência fica fora do patrimônio por sustentar moradia; o terreno de não uso fica disponível na mesma data da necessidade.",
+      "c": "A residência compõe o patrimônio como ativo de uso; o terreno é de não uso, mas sua baixa liquidez impede tratá-lo como caixa imediato.",
+      "d": "O terreno é de não uso e pode financiar a despesa próxima pelo valor estimado, desde que a residência permaneça classificada como uso."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-05-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. O balanço mostra riqueza líquida em uma data, mas os R$ 15.000 de aplicações, a renda insuficiente, os gastos e a dívida vencida revelam um problema de fluxo e liquidez que o patrimônio positivo isolado não resolve.</p><p>A alternativa A trata valor estimado de participação como caixa certo e ignora o déficit recorrente. A alternativa C supõe que registrar o passivo muda a capacidade de pagar, quando apenas melhora a fotografia. A alternativa D reconhece uma fonte eventual de caixa, mas a confunde com correção do desequilíbrio mensal.</p><p>Regra de bolso: patrimônio mostra posição; renda menos despesas e liquidez mostram capacidade de atravessar o mês.</p>",
+     "enunciado": "<p>O balanço de Tomás chega à planejadora Nara, em Belém, com patrimônio líquido positivo de R$ 720.000, concentrado na residência e em uma participação empresarial de avaliação estimada. Suas aplicações com acesso rápido somam R$ 15.000. Nos últimos meses, a renda recebida ficou abaixo das despesas recorrentes, e uma parcela do cartão venceu sem pagamento integral. Tomás resiste a revisar o orçamento e afirma que o patrimônio positivo prova capacidade para manter o padrão de gastos; sugere vender parte da participação caso a insuficiência mensal continue. Nara precisa explicar a diferença entre posição patrimonial, disponibilidade para pagar contas e capacidade de poupança. A venda eventual teria prazo e valor incertos e poderia até resolver uma falta pontual, enquanto o fluxo mensal continuaria dependente de revisão. O cartão com pagamento incompleto mostra pressão de caixa já ocorrida, ao passo que o valor da participação empresarial permanece apenas estimado no balanço. Avalie a conclusão de Tomás e indique a análise necessária.</p>",
+     "alternativas": {
+      "a": "A participação empresarial cobre o déficit mensal por seu valor estimado, permitindo conservar o orçamento até a venda.",
+      "b": "O patrimônio líquido positivo informa a posição de riqueza, mas a insuficiência mensal exige examinar renda, despesas, liquidez e dívida vencida.",
+      "c": "O patrimônio líquido positivo permite manter o padrão atual se a dívida do cartão for registrada no próximo balanço.",
+      "d": "A venda parcial pode reforçar o caixa e, por isso, dispensa examinar a diferença recorrente entre renda e despesas."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-05-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A locação acrescenta uma função de renda a um ativo que segue de não uso pessoal, sem alterar automaticamente seu valor estimado. Se o aluguel líquido financiar pagamentos, a dívida só diminui quando houver amortização efetiva; isso poderá aparecer em um balanço posterior.</p><p>A alternativa A confunde função de renda com uso cotidiano e capitaliza aluguéis futuros sem base na aula. A alternativa C antecipa a queda da dívida antes do pagamento. A alternativa D toma geração de renda como prova de liquidez imediata, embora a venda ainda possa demorar.</p><p>Regra de bolso: aluguel é fluxo; valor do imóvel e saldo devedor são posições que se observam na data do balanço.</p>",
+     "enunciado": "<p>Depois que o imóvel antes desocupado passou a gerar aluguel líquido, Patrícia pede à consultora Inês, em Porto Alegre, que revise seu balanço. O imóvel continua fora da rotina de moradia e trabalho, e sua estimativa de valor patrimonial permaneceu igual à da última fotografia. Parte do aluguel será usada para pagar prestações do empréstimo pessoal; as aplicações continuam sendo o recurso de acesso mais rápido. Patrícia conclui que o imóvel virou um ativo financeiro líquido e que a entrada de aluguel já elevou automaticamente o patrimônio líquido no instante da locação. Inês precisa distinguir função do bem, fluxo de renda, saldo da dívida e valor estimado do ativo. Ela também deve explicar em que momento uma amortização pode aparecer na comparação dos balanços e como o aluguel difere da venda imediata do imóvel. O aluguel altera o fluxo a partir do recebimento, enquanto a dívida só muda de saldo quando ocorrer o pagamento correspondente e a avaliação do imóvel exige nova evidência. Analise a mudança e indique sua leitura patrimonial e financeira.</p>",
+     "alternativas": {
+      "a": "O imóvel passa a ser ativo de uso porque produz renda; seu valor patrimonial sobe pelo total dos aluguéis futuros contratados.",
+      "b": "O imóvel continua ativo de não uso pessoal e agora gera renda; o patrimônio pode mudar com a redução efetiva da dívida, sem ganho automático na locação.",
+      "c": "O imóvel mantém valor e função, mas a entrada de aluguel já reduz o saldo devedor antes do pagamento das prestações.",
+      "d": "O imóvel gera renda e por isso passa a ter liquidez equivalente à das aplicações, mesmo se a venda exigir prazo e desconto."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Cobertura de despesas mensais e autonomia financeira": [
+    {
+     "id": "cpror-cli-06-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A cobertura divide os ativos líquidos de curto prazo pela despesa de um mês; o quociente informa quantos meses essa base de gastos poderia ser sustentada nas premissas simplificadas.</p><p>A alternativa B inverte a razão e troca a unidade. A alternativa A mistura uma despesa mensal com o patrimônio líquido total e usa subtração. A alternativa D usa renda no denominador e percentual como unidade, respondendo outra pergunta.</p><p>Regra de bolso: valor disponível dividido por gasto de um mês resulta em meses de cobertura.</p>",
+     "enunciado": "<p>Uma assessora dispõe do valor dos ativos líquidos de curto prazo e das despesas mensais de um cliente. Identifique o cálculo e a unidade do índice de cobertura de despesas.</p>",
+     "alternativas": {
+      "a": "Subtrair as despesas mensais do patrimônio líquido total e expressar o resultado em meses.",
+      "b": "Dividir as despesas mensais pelos ativos líquidos de curto prazo e expressar o resultado em percentual.",
+      "c": "Dividir os ativos líquidos de curto prazo pelas despesas mensais e expressar o resultado em meses.",
+      "d": "Dividir o patrimônio líquido total pela renda mensal e expressar o resultado em percentual."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-06-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Acesso rápido e duração do saldo são dimensões distintas: uma carteira pode ser líquida e pequena, cobrindo pouco tempo.</p><p>A alternativa B transforma acesso rápido em quantidade de recursos. A alternativa C troca as perguntas respondidas pelas duas medidas e ainda recorre ao patrimônio total. A alternativa A confunde liquidez com renda e cobertura temporária com autonomia permanente.</p><p>Regra de bolso: liquidez responde quando o dinheiro chega; cobertura responde por quantos meses ele dura.</p>",
+     "enunciado": "<p>Uma cliente tem investimentos disponíveis para resgate rápido, mas o saldo cobre apenas dois meses de gastos. O profissional precisa explicar o que cada medida informa. Compare liquidez e cobertura de despesas.</p>",
+     "alternativas": {
+      "a": "Liquidez informa a renda futura esperada; cobertura equivale à autonomia permanente quando os ativos são resgatáveis.",
+      "b": "Liquidez e cobertura indicam o mesmo prazo, pois resgate rápido significa capacidade de pagar gastos por muitos meses.",
+      "c": "Liquidez mede a duração do patrimônio total; cobertura mede somente a data em que cada ativo pode ser vendido.",
+      "d": "Liquidez indica a rapidez do acesso ao recurso; cobertura indica por quanto tempo o valor disponível sustenta a despesa escolhida."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-06-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. R$ 240.000 divididos por R$ 8.000 dão 30 meses para o padrão total; R$ 240.000 divididos por R$ 5.000 dão 48 meses para despesas essenciais. O imóvel de uso fica fora da cobertura líquida de curto prazo.</p><p>A alternativa B troca os denominadores, atribuindo duração maior à despesa mensal maior. A alternativa A apresenta os quocientes corretos, mas declara um numerador incompatível com eles e com a disponibilidade do imóvel. A alternativa D inclui a residência como dinheiro imediato, embora sua venda possa exigir prazo e substituição.</p><p>Regra de bolso: declare a base de gastos e inclua no numerador apenas recursos disponíveis no horizonte analisado.</p>",
+     "enunciado": "<p>Sérgio apresenta à planejadora Eva, em Goiânia, R$ 240.000 em aplicações líquidas de curto prazo. O gasto total da família é R$ 8.000 por mês; desse total, R$ 5.000 correspondem às necessidades essenciais. Sérgio também mora em imóvel próprio avaliado em R$ 900.000 e pede que Eva o some às aplicações para demonstrar cobertura elevada. Ela explica que o imóvel sustenta a moradia, pode demorar a ser vendido e exigiria solução para a residência se fosse alienado. Para mostrar a diferença entre manter o padrão integral e atender apenas o essencial, Eva calcula os dois índices usando exclusivamente os ativos líquidos de curto prazo, sem nova renda ou rendimento. Sérgio quer comparar as duas medidas para decidir se consegue atravessar um período sem renda, mantendo separadas as necessidades básicas e o consumo atual. No primeiro cenário, Sérgio manteria todas as despesas do padrão atual; no segundo, suspenderia gastos que não fossem essenciais enquanto procura nova renda. As duas contas partem da mesma carteira líquida, mas respondem a necessidades diferentes. Calcule as duas coberturas e indique a base de cada resultado.</p>",
+     "alternativas": {
+      "a": "30 meses pelo gasto total e 48 pelo essencial, incluindo o imóvel de uso no numerador de ambos os índices.",
+      "b": "48 meses pelo gasto total e 30 pelo essencial, com as aplicações de R$ 240.000 no numerador.",
+      "c": "30 meses pelo gasto total e 48 meses pelo gasto essencial, com as aplicações de R$ 240.000 no numerador.",
+      "d": "142,5 meses pelo gasto total e 228 pelo essencial, somando imóvel e aplicações como caixa de curto prazo."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-06-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. R$ 240.000 menos R$ 80.000 deixam R$ 160.000 acessíveis; R$ 160.000 divididos por R$ 8.000 resultam em 20 meses. A queda de 30 para 20 meses decorre da disponibilidade, sem exigir perda do valor nominal.</p><p>A alternativa B usa um ativo bloqueado para uma necessidade imediata. A alternativa C divide somente a parcela indisponível. A alternativa D acerta o prazo, mas confunde carência com perda patrimonial.</p><p>Regra de bolso: cobertura de curto prazo muda quando o acesso muda, mesmo que o patrimônio nominal continue igual.</p>",
+     "enunciado": "<p>Em Recife, a consultora Bruna revisa a cobertura do padrão de vida de Sérgio. Na medição anterior, os R$ 240.000 de aplicações podiam ser acessados no curto prazo e as despesas totais eram R$ 8.000 por mês, produzindo 30 meses. Agora R$ 80.000 das aplicações estão sujeitos a carência incompatível com a necessidade imediata; o valor nominal do patrimônio financeiro permanece R$ 240.000. Sérgio argumenta que o índice deve ficar em 30 meses porque ainda é dono da parcela bloqueada. Bruna precisa medir a proteção disponível no horizonte da pergunta, com despesas constantes e sem considerar renda ou rendimento durante o período. A parcela em carência volta a ter utilidade em outro horizonte, mas não paga as despesas consideradas nesta medição; Bruna precisa declarar qual dinheiro entra no numerador. O impedimento decorre do contrato, não de queda no preço do ativo. Calcule a cobertura imediata do padrão atual e explique a diferença diante da medição anterior.</p>",
+     "alternativas": {
+      "a": "20 meses; os R$ 160.000 acessíveis cobrem R$ 8.000 mensais, embora o saldo financeiro nominal permaneça R$ 240.000.",
+      "b": "30 meses; a propriedade dos R$ 80.000 bloqueados mantém a cobertura, mesmo com carência no horizonte da análise.",
+      "c": "10 meses; o valor sujeito a carência deve ser dividido pela despesa para medir a cobertura imediatamente acessível.",
+      "d": "20 meses; a redução comprova perda patrimonial de R$ 80.000, que deve sair também do balanço do cliente."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-06-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O numerador da cobertura imediata deve refletir recursos que chegam no horizonte necessário e seu valor líquido efetivo, considerando bloqueios, riscos e custos pertinentes.</p><p>A alternativa B muda a despesa, mas conserva ativos possivelmente indisponíveis no numerador. A alternativa C trata bens de uso como caixa imediato e adia custos que afetam a decisão. A alternativa D retira a garantia, porém mantém carência e incerteza de resgate incompatíveis com a proteção imediata.</p><p>Regra de bolso: valor no extrato é ponto de partida; cobertura útil depende do valor líquido acessível a tempo.</p>",
+     "enunciado": "<p>O extrato de Alice chega ao especialista Ravi, em Curitiba, para estimar a cobertura imediata. Ela informa saldo nominal de R$ 210.000 em investimentos, mas uma parte tem resgate sujeito a prazo e outra foi dada em garantia de obrigação. O resgate de uma terceira posição pode sofrer oscilação de preço, tributos e custos, alterando o dinheiro efetivamente recebido. Alice quer usar o saldo nominal integral como numerador porque os ativos aparecem em seu extrato e a soma produz um índice atraente. Sua residência e o carro necessário ao trabalho também têm valor de mercado, mas sua venda demandaria tempo ou substituição. Ravi precisa construir um indicador que responda quanto ela poderia usar para pagar gastos no horizonte analisado, deixando explícitas as premissas de disponibilidade. Ravi não recebeu valores líquidos detalhados para calcular um índice numérico; sua tarefa é estabelecer que recursos contam antes de aplicar qualquer divisão. Indique como ele deve compor o numerador.</p>",
+     "alternativas": {
+      "a": "Considerar o valor acessível no prazo da necessidade, após examinar carência, garantia, oscilação, tributos e custos de resgate.",
+      "b": "Considerar o saldo nominal integral dos investimentos e ajustar apenas o denominador para refletir despesas essenciais.",
+      "c": "Considerar o valor de mercado da residência e do carro junto ao extrato, descontando custos de venda somente depois da emergência.",
+      "d": "Considerar o saldo nominal menos a posição dada em garantia, preservando as parcelas com carência e resgate incerto como caixa imediato."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-06-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A base essencial responde à manutenção das necessidades básicas; a base total responde ao padrão atual. Gastos anuais e fim da parcela exigem tratamento declarado para que os meses calculados tenham significado.</p><p>A alternativa A apaga a pergunta sobre o padrão atual. A alternativa C apaga a pergunta sobre o essencial e mantém uma obrigação temporária por prazo indefinido. A alternativa D usa as duas bases, mas exclui gastos anuais que também pressionam os recursos, sem provisão ou equivalente mensal.</p><p>Regra de bolso: o denominador depende da pergunta e deve representar os gastos relevantes no horizonte escolhido.</p>",
+     "enunciado": "<p>Em Manaus, a planejadora Cíntia conversa com Marcos, que quer medir por quantos meses manteria as necessidades básicas e por quantos preservaria o padrão atual caso sua renda cessasse. As despesas essenciais correntes são R$ 4.500 mensais e as despesas totais, R$ 7.000. Uma parcela incluída no total termina em quatro meses. Marcos também paga despesas anuais concentradas e sugere ignorá-las, pois aparecem em poucos meses. Cíntia observa que a finalidade de cada indicador determina a base e que a duração da parcela pode mudar a projeção ao longo do tempo. Ela pode transformar gastos sazonais em equivalente mensal ou mantê-los em provisão separada, mas precisa declarar a escolha. Marcos quer usar os resultados para planejar uma interrupção de renda, e não apenas comparar saldos; despesas com vencimentos distintos podem afetar a projeção. O denominador precisa corresponder ao padrão que cada razão pretende cobrir. Analise a composição do denominador para as duas perguntas de Marcos.</p>",
+     "alternativas": {
+      "a": "Usar R$ 4.500 nas duas medidas, porque a cobertura considera apenas a despesa indispensável, qualquer que seja a pergunta.",
+      "b": "Usar R$ 4.500 para necessidades básicas e R$ 7.000 para o padrão atual, explicando o tratamento dos gastos anuais e da parcela que termina.",
+      "c": "Usar R$ 7.000 nas duas medidas e prolongar a parcela temporária pelo horizonte projetado, preservando uma base única.",
+      "d": "Usar R$ 4.500 e R$ 7.000, deixando os gastos anuais fora da análise mesmo quando consomem os recursos disponíveis."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-06-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. O índice dá uma duração hipotética sob premissas estáticas, mas viver da carteira envolve retiradas, inflação, retornos variáveis, impostos e despesas que mudam no tempo.</p><p>A alternativa A confunde liquidez com sustentabilidade das retiradas. A alternativa C transforma meses de cobertura em taxa segura sem projetar a evolução da carteira. A alternativa D elimina um diagnóstico útil e substitui a análise de fluxos por outra fotografia estática.</p><p>Regra de bolso: muitos meses de cobertura oferecem fôlego; autonomia permanente requer projeção dinâmica.</p>",
+     "enunciado": "<p>Helena pede ao assessor Tiago, em Porto Alegre, que avalie sua carteira líquida, capaz de cobrir 84 meses de despesas atuais pela divisão simples. Ela pretende parar de trabalhar por tempo indeterminado e insiste que sete anos de cobertura provam autonomia financeira vitalícia. O cálculo supõe despesas estáveis, nenhuma nova renda e nenhum rendimento; também deixa fora inflação, impostos futuros, gastos extraordinários e a sequência de retornos da carteira. Helena pede uma taxa mensal de retirada baseada apenas na divisão do saldo pelos meses encontrados. Tiago precisa reconhecer o fôlego indicado pelo índice e explicar por que uma decisão permanente exige uma projeção de fluxos ao longo do tempo, com prazo de vida, mudanças de consumo e resultados líquidos incertos. A cliente quer converter um retrato estático de cobertura em decisão de retirada duradoura, mas o prazo dessa decisão supera o período observado no índice simples. Avalie a inferência de Helena e indique a próxima análise.</p>",
+     "alternativas": {
+      "a": "Os 84 meses garantem autonomia permanente se a carteira permanecer líquida, pois acesso rápido preserva o capital retirado.",
+      "b": "Os 84 meses medem fôlego nas premissas atuais; a autonomia exige projetar fluxos, inflação, retorno líquido, riscos e mudanças de gasto.",
+      "c": "Os 84 meses constituem uma taxa segura de retirada; basta dividir o saldo por 84 e repetir o saque ao longo da vida.",
+      "d": "A cobertura deve ser descartada porque usa uma hipótese sem rendimento, restando o patrimônio líquido total como medida definitiva."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-06-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Antes, R$ 180.000 divididos por R$ 6.000 davam 30 meses. Depois, R$ 180.000 menos R$ 60.000 deixam R$ 120.000 acessíveis; R$ 120.000 divididos por R$ 8.000 dão 15 meses. Mudaram numerador disponível e denominador.</p><p>A alternativa B atualiza só a despesa e inclui os recursos em carência. A alternativa C atualiza só o valor disponível e mantém o gasto superado. A alternativa A chega aos meses certos, mas confunde bloqueio temporário com perda definitiva de patrimônio.</p><p>Regra de bolso: recalcule cobertura quando acesso ao dinheiro ou base de despesas mudar, mesmo que o saldo nominal siga igual.</p>",
+     "enunciado": "<p>João volta à consultora Lara, em Belém, com cobertura do padrão atual calculada sobre R$ 180.000 em aplicações disponíveis e despesa de R$ 6.000 por mês. João assume uma nova obrigação e o gasto mensal sobe para R$ 8.000; simultaneamente, R$ 60.000 das aplicações entram em carência incompatível com o horizonte imediato. Ele observa que o valor nominal da carteira continua R$ 180.000 e atribui qualquer redução do índice apenas à despesa adicional. Lara quer mostrar os dois efeitos, mantendo a hipótese de ausência de renda e rendimento e deixando claro que a carência reduz disponibilidade sem representar perda patrimonial. Ela precisa comparar os meses anteriores e atuais e explicar por que ambos os componentes da fórmula alteram a resposta. João pede que Lara mostre o índice em cada data com uma base consistente, pois reduzir apenas o numerador ou ampliar apenas o denominador ocultaria parte da mudança. Calcule os índices e interprete a mudança.</p>",
+     "alternativas": {
+      "a": "A cobertura cai de 30 para 15 meses: a redução decorre de perda definitiva de R$ 60.000 do patrimônio financeiro.",
+      "b": "A cobertura cai de 30 para 22,5 meses: a despesa sobe, mas a carência conserva R$ 180.000 disponíveis no curto prazo.",
+      "c": "A cobertura cai de 30 para 20 meses: o valor acessível diminui, mas o cálculo mantém a despesa antiga de R$ 6.000.",
+      "d": "A cobertura cai de 30 para 15 meses: o numerador acessível passa a R$ 120.000 e o gasto mensal sobe a R$ 8.000."
+     },
+     "gabarito": "d"
+    }
+   ],
+   "Índice de poupança: cálculo, interpretação e metas": [
+    {
+     "id": "cpror-cli-07-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O índice de poupança é o valor disponível para investir dividido pela renda considerada no mesmo período, vezes 100; expressa a parcela da renda reservável.</p><p>A alternativa B usa patrimônio como base e mede outra relação. A alternativa C troca a razão e confunde poupança com retorno. A alternativa D mistura a sobra da renda com o estoque aplicado, sem calcular o índice nem a meta.</p><p>Regra de bolso: índice de poupança compara poupança da renda com a própria renda, em percentual.</p>",
+     "enunciado": "<p>Uma planejadora apurou a parte da renda mensal que o cliente poderia reservar depois de seus desembolsos. Identifique a fórmula e a unidade do índice de poupança desse período.</p>",
+     "alternativas": {
+      "a": "Dividir o valor disponível para investir pela renda do mesmo período e multiplicar por 100; o resultado é percentual.",
+      "b": "Dividir o valor disponível para investir pelo patrimônio acumulado e multiplicar por 100; o resultado é percentual.",
+      "c": "Dividir a renda mensal pelos desembolsos do mês e multiplicar por 100; o resultado mede retorno da carteira.",
+      "d": "Subtrair as despesas da renda e dividir pelo total investido anteriormente; o resultado é o aporte mensal necessário."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-07-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Transferir no início do mês não basta para confirmar poupança: o realizado depende do que restou após as entradas, despesas e resgates do período.</p><p>A alternativa A ignora a parte resgatada para pagar contas. A alternativa C classifica o principal retirado como retorno e renda nova. A alternativa D congela o plano como resultado e desloca artificialmente o efeito do resgate.</p><p>Regra de bolso: aporte programado é intenção; poupança realizada exige sobra efetiva da renda no período.</p>",
+     "enunciado": "<p>Uma cliente programou transferir R$ 2.000 para investimentos no começo do mês, mas resgatou R$ 800 dessa aplicação para completar as despesas do próprio mês. A assessora precisa distinguir a capacidade prevista no orçamento do resultado efetivo. Identifique a conclusão sobre o aporte e o índice realizado.</p>",
+     "alternativas": {
+      "a": "Os R$ 2.000 constituem poupança realizada porque a aplicação recebeu o depósito, ainda que tenha ocorrido resgate para despesas.",
+      "b": "O resultado realizado depende do fluxo líquido efetivo do mês; a transferência inicial de R$ 2.000, isoladamente, não prova poupança.",
+      "c": "Os R$ 800 resgatados representam retorno da aplicação e devem elevar a renda usada como base do índice realizado.",
+      "d": "O índice planejado vira resultado realizado quando a transferência inicial ocorre, e o resgate afeta apenas o mês seguinte."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-07-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. R$ 9.000 menos R$ 7.200 deixam R$ 1.800; R$ 1.800 divididos por R$ 9.000 são 20%. A meta pede R$ 30.000 divididos por vinte meses, ou R$ 1.500 mensais, deixando margem de R$ 300 sem rendimento.</p><p>A alternativa A confunde a capacidade com o aporte exigido pela meta. A alternativa C aplica os 16,67% necessários à poupança prevista e inverte a margem. A alternativa D calcula os valores iniciais, mas trata a sobra de R$ 300 como falta e exige risco sem necessidade.</p><p>Regra de bolso: compare a sobra prevista com o aporte da meta antes de discutir retorno ou risco.</p>",
+     "enunciado": "<p>Rafael procura a consultora Clara, em Goiânia, com renda líquida de R$ 9.000 e previsão de R$ 7.200 em despesas e compromissos mensais. Ele quer formar R$ 30.000 em vinte meses, partindo de zero, com aportes mensais iguais e sem considerar rendimento. Rafael recebeu uma sugestão de elevar o risco da carteira para alcançar a meta e pede que Clara verifique primeiro quanto o orçamento já permite investir. Ela deve calcular a sobra, o índice de poupança previsto, o aporte exigido pela meta e a diferença mensal entre capacidade e necessidade. O índice deve usar a renda líquida mensal informada, na mesma referência temporal das despesas. O cliente pretende registrar uma meta mensal verificável no orçamento; Clara precisa separar o que pode ser poupado hoje do valor exigido pelo objetivo. Clara usará rendimento zero apenas para testar a viabilidade dos aportes. Calcule esses valores e indique se a meta depende de retorno para fechar a conta simplificada.</p>",
+     "alternativas": {
+      "a": "Sobra de R$ 1.800, índice de 20%, aporte exigido de R$ 1.800 e margem zero, com a meta definida pelo índice atual.",
+      "b": "Sobra de R$ 1.800, índice de 20%, aporte exigido de R$ 1.500 e margem de R$ 300 por mês, sem depender de retorno na conta.",
+      "c": "Sobra de R$ 1.800, índice de 16,67%, aporte exigido de R$ 1.500 e necessidade de retorno para cobrir R$ 300 por mês.",
+      "d": "Sobra de R$ 1.800, índice de 20%, aporte exigido de R$ 1.500 e falta de R$ 300, a compensar com risco adicional."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-07-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. As despesas efetivas foram R$ 7.800, logo a sobra caiu para R$ 1.200. R$ 1.200 divididos por R$ 9.000 equivalem a cerca de 13,33%; diante do aporte exigido de R$ 1.500, faltaram R$ 300 naquele mês.</p><p>A alternativa B trata a transferência inicial como poupança final e ignora o resgate. A alternativa C troca o índice realizado pelo índice aproximado exigido pela meta. A alternativa D acerta sobra e percentual, mas inverte o sentido da diferença para o aporte necessário.</p><p>Regra de bolso: compare o realizado líquido ao aporte exigido, e investigue a causa de qualquer desvio.</p>",
+     "enunciado": "<p>Em Fortaleza, o planejador Nilo revisa o primeiro mês do plano de Rafael. O orçamento previa renda líquida de R$ 9.000, despesas de R$ 7.200 e poupança de R$ 1.800, enquanto a meta de R$ 30.000 em vinte meses exigia aporte mensal de R$ 1.500, sem rendimento. Na execução, surgiu uma despesa de R$ 600 além do orçamento, paga com a renda do mês. Rafael registrou no aplicativo o índice previsto de 20% e afirma que uma transferência inicial de R$ 1.800 para a aplicação basta para manter a meta em dia, embora tenha retirado parte para pagar o gasto. Nilo precisa mostrar a sobra realizada, seu percentual sobre a renda e a diferença para o aporte necessário, antes de investigar se a despesa foi excepcional ou recorrente. No extrato, o dinheiro retirado voltou para pagar a despesa inesperada; Nilo examina o valor líquido que permaneceu aplicado, em vez de aceitar a transferência inicial. O aporte inicial e o saldo final do investimento são medidas distintas. Calcule os três resultados.</p>",
+     "alternativas": {
+      "a": "Poupança realizada de R$ 1.200, índice aproximado de 13,33% e falta de R$ 300 diante do aporte mensal da meta.",
+      "b": "Poupança realizada de R$ 1.800, índice de 20% e margem de R$ 300, pois a transferência inicial concluiu o aporte.",
+      "c": "Poupança realizada de R$ 1.200, índice aproximado de 16,67% e falta de R$ 300, usando o índice da meta como realizado.",
+      "d": "Poupança realizada de R$ 1.200, índice aproximado de 13,33% e margem de R$ 300, pois a diferença é positiva."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-07-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. R$ 120.000 menos R$ 90.000 deixam R$ 30.000 no ano; R$ 30.000 divididos por R$ 120.000, vezes 100, resultam em 25%, com períodos e base coerentes.</p><p>A alternativa B mistura poupança anual com renda mensal. A alternativa C usa desembolsos como se fossem a sobra. A alternativa A chega ao número por outra conta, mas condiciona o índice a somar valorização patrimonial à renda do período.</p><p>Regra de bolso: poupança e renda do índice devem se referir ao mesmo intervalo e à mesma base declarada.</p>",
+     "enunciado": "<p>Um resumo anual chega à assessora Malu, em Curitiba, com R$ 120.000 de renda líquida de Patrícia e R$ 90.000 de desembolsos nos doze meses. Patrícia também informa que sua renda líquida média foi R$ 10.000 por mês e pede que Malu divida a sobra anual pela renda de um único mês, pois o sistema exibe ambos os números lado a lado. A assessora precisa preservar a mesma base e o mesmo período para o numerador e o denominador. A diferença entre receitas e despesas anuais representa o valor disponível para investir no ano, sem considerar valorização de aplicações já existentes. Patrícia quer o índice do conjunto de doze meses, em vez de uma taxa mensal isolada. Ao longo do ano, Patrícia teve meses sem sobra e meses com aportes altos. Uma taxa retirada de um único mês não representa a proporção de renda poupada nos doze meses; Malu dispõe dos totais consolidados de receitas e desembolsos, medidos no mesmo período, para responder à pergunta anual. Calcule a poupança anual e o índice correspondente.</p>",
+     "alternativas": {
+      "a": "Poupança anual de R$ 30.000 e índice de 25%, desde que a valorização da carteira seja somada à renda anual.",
+      "b": "Poupança anual de R$ 30.000 e índice de 300%, dividindo a sobra do ano pela renda líquida de um mês.",
+      "c": "Poupança anual de R$ 90.000 e índice de 75%, tratando os desembolsos como valor disponível para investir.",
+      "d": "Poupança anual de R$ 30.000 e índice anual de 25%, dividindo a sobra pela renda líquida anual."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-07-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A renda líquida de R$ 8.000 menos R$ 7.000 de gastos deixa R$ 1.000 de poupança nova; R$ 1.000 divididos por R$ 8.000 equivalem a 12,5%. Transferência de principal e valorização são movimentos distintos.</p><p>A alternativa B trata transferência e rentabilidade como economia da renda. A alternativa C soma estoque movimentado à sobra do mês. A alternativa A menciona o percentual certo, mas propõe incluir a valorização na renda base, o que mudaria a razão calculada.</p><p>Regra de bolso: poupança da renda nasce do fluxo entre recebimentos e desembolsos, não da troca ou valorização de ativos.</p>",
+     "enunciado": "<p>Em Manaus, a especialista Jéssica analisa o extrato de Otávio, que transferiu R$ 5.000 de uma aplicação antiga para outra e viu o valor de uma posição subir R$ 400 durante o mês. No mesmo período, recebeu R$ 8.000 de renda líquida e pagou R$ 7.000 em despesas. O aplicativo destaca R$ 5.400 de crescimento e movimentação dos investimentos; Otávio interpreta esse número como poupança nova da renda e quer apresentá-lo como índice do mês. Jéssica precisa separar estoque patrimonial, rentabilidade e economia dos recebimentos recentes. A transferência conserva o principal já existente e a valorização altera o patrimônio sem ser desembolso evitado. Ela também precisa usar a renda do próprio mês como base do índice. Otávio quer usar a movimentação que vê na tela como prova de disciplina financeira, embora parte dela apenas troque o lugar de um patrimônio que já possuía. A conta deve partir do fluxo novo entre recebimento e desembolso. Calcule a poupança nova e o percentual de Otávio.</p>",
+     "alternativas": {
+      "a": "R$ 1.000 de poupança da renda, equivalente a 12,5%; os R$ 400 de valorização também entram na renda base.",
+      "b": "R$ 5.400 de poupança da renda, equivalente a 67,5%; transferência e valorização são entradas novas para o índice.",
+      "c": "R$ 6.400 de poupança da renda, equivalente a 80%; a sobra de caixa soma-se à movimentação patrimonial.",
+      "d": "R$ 1.000 de poupança da renda, equivalente a 12,5% da renda líquida mensal; transferência e valorização ficam fora dessa sobra."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-07-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. As poupanças somam R$ 400 mais R$ 3.600, ou R$ 4.000; as rendas somam R$ 4.000 mais R$ 12.000, ou R$ 16.000. R$ 4.000 divididos por R$ 16.000 resultam em 25%.</p><p>A alternativa B usa média simples apesar da diferença das bases de renda. A alternativa A escolhe apenas o mês maior e ignora o outro fluxo. A alternativa D apresenta o percentual certo, mas atribui o resultado a uma média simples que seria 20% e altera a fórmula sem base.</p><p>Regra de bolso: para vários períodos, some as poupanças e as rendas antes de dividir.</p>",
+     "enunciado": "<p>A renda variável de Lúcio leva a consultora Bia, em Recife, a comparar os dois meses do seu plano. No primeiro mês ele recebeu R$ 4.000 e poupou R$ 400; no segundo, recebeu R$ 12.000 e poupou R$ 3.600. Os índices individuais são 10% e 30%. Lúcio quer registrar 20% como índice do bimestre por ser a média simples dos percentuais e diz que cada mês deve ter o mesmo peso no relatório. Bia explica que o segundo mês contém três vezes a renda do primeiro e, portanto, representa parcela maior do fluxo agregado. A pergunta do relatório é quanto da renda total dos dois meses foi poupada, com receitas e poupanças consideradas no mesmo intervalo. Ela precisa confrontar a média proposta com a agregação dos valores em reais e mostrar por que os dois resultados divergem. Se cada mês recebesse peso igual, o relatório trataria R$ 4.000 e R$ 12.000 de receita como bases equivalentes, apesar de sua contribuição distinta para o total. Os dois meses entram juntos na mesma conta. Calcule o índice bimestral correto.</p>",
+     "alternativas": {
+      "a": "30%, pois o mês de renda elevada representa o fluxo predominante e pode substituir a apuração conjunta.",
+      "b": "20%, pois a média de 10% e 30% mantém o mesmo peso para meses com rendas distintas.",
+      "c": "25%, pois R$ 4.000 poupados no bimestre divididos por R$ 16.000 de renda agregada medem a parcela conjunta.",
+      "d": "25%, calculados pela média simples de 10% e 30%, após acrescentar a diferença de rendas ao numerador."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-07-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. Antes, R$ 2.000 sobre R$ 10.000 davam 20%. Agora, R$ 8.000 menos R$ 7.000 deixam R$ 1.000, ou 12,5%. A meta pede R$ 30.000 divididos por vinte, ou R$ 1.500 mensais; o aporte atual fica R$ 500 abaixo, exigindo revisão de gasto, prazo ou contribuição.</p><p>A alternativa B ignora que a sobra e a base de renda mudaram em proporções distintas. A alternativa A inverte a diferença entre R$ 1.000 e R$ 1.500. A alternativa D chama índice de poupança de rentabilidade e trata retorno incerto como solução garantida.</p><p>Regra de bolso: recalcule a sobra e o índice quando renda ou despesa mudar; se a capacidade ficar abaixo do aporte da meta, revise o plano antes de contar com retorno.</p>",
+     "enunciado": "<p>Marina pede à planejadora Iris, em Belém, que revise a meta de R$ 30.000 em vinte meses a partir de zero, com aportes iguais e sem rendimento. Quando tinha renda líquida de R$ 10.000 e gastos de R$ 8.000, Marina poderia poupar R$ 2.000 por mês. Após uma redução de contratos, a renda mensal caiu para R$ 8.000 e os gastos passaram a R$ 7.000. Marina insiste em manter o prazo e sugere investir a sobra atual em produto de risco elevado para substituir a diferença de aporte. Iris deve medir a capacidade atual, comparar seu percentual e valor em reais com os anteriores e com os R$ 1.500 mensais exigidos pela meta. Como o retorno futuro é incerto, ela precisa indicar que ponto do plano requer revisão antes de usar risco como resposta. Marina precisa decidir o que pode ajustar no orçamento ou no prazo; a alocação de risco não altera os R$ 1.000 que restam da renda neste mês. A meta preserva valor e prazo até que Iris proponha uma revisão. Analise a mudança e proponha a decisão.</p>",
+     "alternativas": {
+      "a": "A sobra cai para R$ 1.000 e fica R$ 500 acima do aporte necessário; mantenha o prazo sem rever o orçamento.",
+      "b": "A sobra cai para R$ 1.000, mas o índice fica em 20% porque a redução das despesas compensa a queda da renda.",
+      "c": "A sobra cai de R$ 2.000 para R$ 1.000, o índice de 20% para 12,5%, e faltam R$ 500 mensais frente à meta; revise o plano.",
+      "d": "O índice atual de 12,5% indica rentabilidade insuficiente da carteira; eleve o risco para assegurar os R$ 500 faltantes."
+     },
+     "gabarito": "c"
+    }
+   ],
+   "Liquidez: prazo, negociabilidade e custo de saída": [
+    {
+     "id": "cpror-cli-08-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Liquidez reúne o tempo até receber os recursos, o preço compatível na saída e a capacidade de negociar a quantidade necessária sem mover muito esse preço.</p><p>A alternativa B usa retorno e vencimento sem verificar o acesso efetivo. A alternativa A trata o saldo de extrato como dinheiro já disponível e confunde crédito com liquidez. A alternativa D olha a frequência de negócios, mas deixa de examinar o preço e o volume da saída.</p><p>Regra de bolso: liquidez é conseguir dinheiro a tempo, na quantidade necessária e por preço compatível.</p>",
+     "enunciado": "<p>Uma cliente pergunta ao assessor o que significa dizer que um investimento tem liquidez para uma despesa futura. Identifique as dimensões que ele precisa examinar na conversão do ativo em dinheiro.</p>",
+     "alternativas": {
+      "a": "Saldo nominal, prazo contratual e risco de crédito, convertendo o valor de extrato em caixa disponível.",
+      "b": "Rentabilidade esperada, valor de compra e data de vencimento, suficientes para medir a disponibilidade do ativo.",
+      "c": "Prazo até o dinheiro chegar, preço obtido na saída e quantidade que pode ser negociada sem grande impacto no preço.",
+      "d": "Frequência de negociação, histórico de retorno e garantia do emissor, dispensando observar o valor recebido na saída."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-08-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Vencimento, carência e liquidação descrevem etapas diferentes; vender antes do vencimento pode ser possível, e o dinheiro só fica disponível após a entrega financeira.</p><p>A alternativa B transforma vencimento em proibição de venda e reduz carência a cálculo de rendimento. A alternativa C troca carência e liquidação entre si. A alternativa D confunde permissão de venda ou pedido de resgate com preço preservado e crédito imediato.</p><p>Regra de bolso: verifique as regras de saída e a data do dinheiro na conta, além da data de vencimento.</p>",
+     "enunciado": "<p>Um investidor possui título com vencimento em dois anos e possibilidade de venda antecipada; outra aplicação permite pedir resgate depois da carência e informa data posterior para o crédito. Compare vencimento, carência e liquidação para a análise de liquidez.</p>",
+     "alternativas": {
+      "a": "Vencimento é o término previsto; carência pode restringir a saída; liquidação marca a entrega financeira após solicitação ou venda.",
+      "b": "Vencimento impede negociação antes da data final, enquanto carência determina apenas o dia de cálculo do rendimento.",
+      "c": "Carência é o intervalo entre a venda e o crédito em conta, enquanto liquidação é a data final do contrato.",
+      "d": "Possibilidade de venda antecipada garante o valor do título, e pedido de resgate garante crédito na mesma data."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-08-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A despesa tem data próxima e valor definido; a opção A combina prazo de crédito curto com menor incerteza de saída no cenário. A venda antecipada de B depende de comprador e preço, apesar do retorno esperado.</p><p>A alternativa B transforma mercado secundário em liquidação e preço garantidos. A alternativa C presume que rendimento esperado compensa uma perda possível em data obrigatória. A alternativa D confunde vencimento contratual com prazo efetivo de resgate e crédito.</p><p>Regra de bolso: dinheiro com data marcada pede disponibilidade e valor compatíveis com essa data.</p>",
+     "enunciado": "<p>Aline procura a especialista Elisa, em Goiânia, porque precisa pagar R$ 40.000 por uma reforma em quarenta e cinco dias. A opção A aceita solicitação de resgate em dia útil, credita o dinheiro no dia útil seguinte e apresenta baixa oscilação no cenário examinado. A opção B vence em dois anos e pode ser negociada antes em mercado secundário, mas o preço depende das condições de mercado e da existência de comprador. Aline prefere B por causa do retorno esperado maior e diz que a possibilidade de venda antecipada resolve o compromisso com data marcada. Elisa precisa comparar a disponibilidade efetiva e o valor provável no dia do pagamento, preservando o dinheiro da reforma. Ela também deve explicar que prazo de vencimento e possibilidade de negociação deixam incerto o preço na saída. Aline precisa ter o valor disponível antes do vencimento da reforma, e não somente possuir um título que alguém possa aceitar negociar na data desejada. Indique a decisão para o valor da reforma.</p>",
+     "alternativas": {
+      "a": "Usar A para a obrigação próxima, pois o crédito curto e a baixa oscilação reduzem a incerteza de acesso e valor.",
+      "b": "Usar B para a obrigação próxima, pois a existência de mercado secundário equivale a crédito certo no prazo de pagamento.",
+      "c": "Usar B para a obrigação próxima, pois o retorno esperado maior cobre eventual desconto exigido por uma venda urgente.",
+      "d": "Usar A apenas se o vencimento contratual ocorrer em quarenta e cinco dias, mesmo com crédito no dia útil após resgate."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-08-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Frequência diária de negociação não resolve a profundidade do mercado: o lote grande pode exigir preço menor para encontrar compradores no prazo da cliente.</p><p>A alternativa A transforma o último preço em garantia de execução para o lote completo. A alternativa C ignora que a diferença entre ofertas e a quantidade disponível afetam o custo de saída. A alternativa D extrapola a execução de ordens pequenas para um volume expressivo.</p><p>Regra de bolso: pergunte se o mercado absorve o volume do cliente no prazo desejado e a que preço.</p>",
+     "enunciado": "<p>Em Curitiba, o assessor Danilo acompanha uma cliente que possui quantidade expressiva de um ativo negociado diariamente. Ela quer vender a posição inteira em uma única sessão para financiar um compromisso próximo. O histórico recente mostra poucos compradores para o volume que pretende oferecer e uma diferença relevante entre o preço pedido por vendedores e o aceito por compradores. A cliente entende que a negociação diária basta para assegurar saída pelo último preço exibido. Danilo observa que ordens pequenas conseguem contrapartes, mas uma ordem maior pode consumir ofertas disponíveis e exigir desconto para ser executada com urgência. A decisão envolve tempo, preço e quantidade, além da distinção entre existir negociação e conseguir vender o lote desejado sem mover o mercado. A cliente pergunta se conseguirá vender toda a posição pelo preço visto na tela, embora esse preço tenha surgido de negócio de tamanho muito menor. Analise a liquidez da posição para essa venda.</p>",
+     "alternativas": {
+      "a": "A negociação diária garante saída integral pelo último preço exibido, ainda que o livro tenha poucos compradores.",
+      "b": "A posição tem risco de liquidez para o volume pretendido: vender rápido pode exigir desconto ou deslocar o preço.",
+      "c": "A diferença entre compra e venda indica apenas oscilação de mercado, dispensando análise do volume disponível.",
+      "d": "A posição permanece líquida para qualquer tamanho de ordem se uma parte pequena dela encontra contraparte diariamente."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-08-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A oferta executável é R$ 43.000; depois de R$ 1.000 de taxa e R$ 3.000 de tributos, o crédito líquido é R$ 39.000, abaixo dos R$ 40.000 exigidos.</p><p>A alternativa B ignora deduções explicitadas além do desconto no preço. A alternativa A confunde o preço desejado com o oferecido por comprador. A alternativa D acerta o líquido, mas inverte a diferença e conclui que R$ 39.000 pagam R$ 40.000.</p><p>Regra de bolso: para pagar compromisso, compare o valor líquido realizável na data com a obrigação, não o preço anunciado.</p>",
+     "enunciado": "<p>Rodrigo pede à planejadora Joana, em Salvador, que estime o dinheiro da venda de uma posição para pagar R$ 40.000 dentro de poucas semanas. A oferta disponível por seu lote é de R$ 43.000, já refletindo um desconto de urgência em relação ao preço pedido por ele. Sobre a execução incidirão R$ 1.000 de taxa contratual e R$ 3.000 de tributos informados no caso; os demais custos e a nova oscilação valem zero nesta conta. Rodrigo cita o preço pedido original de R$ 47.000 e sustenta que a venda cobrirá a despesa com ampla folga. Joana precisa separar preço desejado, preço executável e deduções até o crédito líquido, sem tratar retorno passado como caixa. Rodrigo precisa saber o crédito que poderá usar após a liquidação, pois o compromisso vence independentemente da cotação que ele gostaria de obter. Rodrigo pergunta se o desconto de urgência entre o preço pedido e a oferta de R$ 43.000 deve ser abatido outra vez como se fosse uma taxa. Joana evita essa dupla dedução e compara apenas o crédito após os custos informados com a despesa que vence. Calcule o valor líquido da saída e avalie se ele cobre a obrigação de R$ 40.000.</p>",
+     "alternativas": {
+      "a": "R$ 47.000 líquidos; o preço pedido define o caixa e a oferta de R$ 43.000 é apenas referência de mercado.",
+      "b": "R$ 43.000 líquidos; o desconto de urgência já absorve taxa e tributos, deixando R$ 3.000 de folga.",
+      "c": "R$ 39.000 líquidos; após taxa e tributos sobre a oferta de R$ 43.000, faltam R$ 1.000 para a obrigação.",
+      "d": "R$ 39.000 líquidos; a diferença de R$ 1.000 é um ganho de liquidez que permite pagar os R$ 40.000."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-08-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Liquidez trata da conversão em dinheiro no tempo, volume e preço necessários; oscilação de mercado e capacidade do emissor de pagar são riscos distintos que também afetam a decisão.</p><p>A alternativa A transforma acesso rápido em proteção contra preço e inadimplemento. A alternativa C interpreta estabilidade aparente como acesso durante uma carência que restringe o resgate. A alternativa D junta causas diferentes apenas porque ambas podem diminuir o valor obtido.</p><p>Regra de bolso: avalie acesso, mercado e crédito separadamente, mesmo quando seus efeitos financeiros se encontram.</p>",
+     "enunciado": "<p>Em Recife, a assessora Paula examina um investimento com resgate operacional rápido e mercado ativo, cujo preço pode oscilar antes da venda. O emissor também apresenta risco de deixar de honrar sua obrigação. Outro investimento, de preço aparentemente estável no extrato, impõe carência longa. O cliente afirma que o primeiro é seguro porque pode ser vendido a qualquer momento e que o segundo é isento de risco porque o valor mostrado varia pouco. Paula precisa separar a rapidez e o custo de converter cada posição em dinheiro dos riscos de oscilação de mercado e de inadimplemento do emissor. A carência do segundo produto pode impedir o uso em uma necessidade próxima, enquanto a boa negociabilidade do primeiro conserva a exposição a perdas de preço ou crédito. O cliente pretende usar a primeira posição em uma necessidade próxima e quer interpretar o preço da segunda como prova de proteção patrimonial. Compare essas dimensões para orientar a leitura do cliente.</p>",
+     "alternativas": {
+      "a": "Resgate operacional rápido elimina o risco de crédito e estabiliza o preço do primeiro investimento até a venda.",
+      "b": "Liquidez descreve a possibilidade de saída a tempo e por preço compatível; risco de mercado e de crédito exigem avaliação própria.",
+      "c": "Preço estável no extrato torna o segundo investimento líquido, mesmo com carência incompatível com a necessidade.",
+      "d": "Oscilação de mercado e falta de comprador são o mesmo risco, pois ambas podem reduzir o dinheiro recebido na saída."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-08-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A obrigação distante e a reserva separada reduzem a exigência de liquidez imediata para o valor da reforma, permitindo examinar B conforme prazo e demais riscos, sem torná-la escolha automática.</p><p>A alternativa B trata retorno esperado como obrigação de escolha e apaga riscos que continuam presentes. A alternativa C conserva a conclusão de um cenário com prazo distinto. A alternativa A mistura o dinheiro da reforma com proteção de emergências, embora a reserva já esteja separada.</p><p>Regra de bolso: mudança no prazo do objetivo pode ampliar opções, mas exige nova análise de acesso, preço e riscos.</p>",
+     "enunciado": "<p>Com a reforma de R$ 40.000 adiada para três anos e recursos de emergência separados, Aline volta ao especialista Bruno em Florianópolis. A opção A continua com resgate rápido e baixa oscilação no cenário; a opção B tem vencimento em dois anos e possibilidade de venda antecipada, com preço sujeito ao mercado. Aline conclui que a mudança de prazo obriga a escolher B porque o retorno esperado é superior. Bruno observa que o dinheiro deixou de precisar de acesso em quarenta e cinco dias, de modo que B pode ser examinada, mas o objetivo ainda pede uma avaliação de vencimento, preço, crédito e condições de saída. Uma decisão pode mudar quando mudam a data da obrigação e a proteção para imprevistos, mesmo que as características dos produtos permaneçam iguais. Bruno examina o prazo entre o vencimento da opção B e a data prevista da obra, além das condições sob as quais o recurso seria recuperado antes. A reserva separada continua destinada aos imprevistos da família. Avalie a nova possibilidade para o recurso da reforma.</p>",
+     "alternativas": {
+      "a": "B pode substituir a reserva de emergência, já que a reforma distante libera liquidez para os imprevistos da cliente.",
+      "b": "B passa a ser obrigatória pelo retorno esperado maior, pois adiar a reforma elimina riscos de mercado e de crédito.",
+      "c": "A continua como única opção viável para reforma, porque a decisão tomada para quarenta e cinco dias permanece fixa.",
+      "d": "B pode entrar na análise com horizonte ampliado e reserva separada, após conferir vencimento, mercado, crédito e saída para a nova data."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-08-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. O volume elevado e as ofertas atuais indicam possível desconto; além de verificar o preço líquido após custos, Marina deve conferir se a venda liquida antes da obrigação. Negociação diária e emissor adimplente não resolvem essas perguntas.</p><p>A alternativa B transforma um último negócio em execução garantida para lote maior. A alternativa C usa a oferta antes de taxas e tributos como crédito certo e deixa o prazo sem verificação. A alternativa A confunde adimplência do emissor com liquidez e estabilidade do preço de venda.</p><p>Regra de bolso: para uma obrigação próxima, confirme lote executável, valor líquido e data do crédito antes de contar o ativo como caixa.</p>",
+     "enunciado": "<p>Uma obrigação em dez dias úteis leva Davi à consultora Marina, em Belém; ele pretende pagar com a venda de um título negociado diariamente. Ele detém lote muito superior ao volume que costuma ser comprado em uma sessão. A tela mostra o último negócio em R$ 55.000, mas as ofertas atuais para absorver o lote inteiro equivalem a R$ 49.000 antes de taxas e tributos. O título ainda tem risco de oscilação de mercado, embora seu emissor permaneça adimplente no cenário. Davi insiste que a etiqueta de negociação diária garante R$ 55.000 na conta a tempo e que o preço anterior elimina o custo de urgência. Marina precisa testar quantidade, preço líquido e prazo de liquidação, distinguindo profundidade de mercado de risco de crédito. Davi precisa confirmar também em que dia o produto da venda entraria na conta, porque executar a ordem dentro de dez dias não equivale necessariamente a receber no prazo. Indique a providência antes de contar com esse título para a obrigação.</p>",
+     "alternativas": {
+      "a": "Examinar apenas o crédito do emissor, pois a adimplência descrita elimina desconto de urgência e risco de preço.",
+      "b": "Registrar R$ 55.000 como caixa de dez dias, pois negociação diária prova execução do lote pelo último preço observado.",
+      "c": "Registrar R$ 49.000 como caixa certo, pois as ofertas atuais já incorporam taxas, tributos e prazo de liquidação.",
+      "d": "Confirmar liquidação dentro do prazo e valor líquido executável para o lote; usar as ofertas atuais, não o último negócio, como referência."
+     },
+     "gabarito": "d"
+    }
+   ],
+   "Liquidez e rentabilidade na composição da reserva": [
+    {
+     "id": "cpror-cli-09-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A reserva existe para cobrir perda inesperada de renda ou despesa relevante sem previsão; por isso, precisa estar disponível no prazo da conta e preservar valor suficiente.</p><p>A alternativa A confunde possibilidade de pedir resgate com crédito a tempo. A alternativa C assume que o cliente poderá esperar uma recuperação mesmo diante de vencimento incerto. A alternativa D troca reserva própria por crédito e prende o dinheiro durante a necessidade.</p><p>Regra de bolso: a função de proteção define o limite da busca de retorno.</p>",
+     "enunciado": "<p>Ao explicar a reserva de emergência a uma cliente, uma assessora precisa ordenar disponibilidade, preservação e retorno conforme a função do dinheiro. Identifique a prioridade para uma despesa inesperada com data incerta.</p>",
+     "alternativas": {
+      "a": "Escolher o retorno esperado superior, desde que o produto permita solicitar resgate em algum momento anterior ao vencimento.",
+      "b": "Manter parcela suficiente acessível quando a conta vencer e com baixo risco de perda, antes de buscar retorno adicional.",
+      "c": "Concentrar a reserva em ativos com maior oscilação, pois o horizonte desconhecido permite esperar a recuperação do preço.",
+      "d": "Usar limite de crédito como primeira camada e deixar os recursos próprios sujeitos a carência para elevar a remuneração."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-09-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Liquidez útil é a disponibilidade efetiva na data e no valor exigidos pelo cliente, em canal capaz de pagar a conta; a solicitação de resgate é apenas uma etapa.</p><p>A alternativa B confunde pedido com recebimento. A alternativa A troca liquidez por rentabilidade. A alternativa D usa vencimento contratual para dispensar a análise operacional do resgate.</p><p>Regra de bolso: resgate permitido hoje só protege a conta se o dinheiro chegar a tempo.</p>",
+     "enunciado": "<p>Uma aplicação permite pedir resgate em cada dia útil, mas informa horário de corte e crédito posterior. O cliente chama essa condição de liquidez instantânea. Identifique o dado que define a utilidade da aplicação para uma emergência.</p>",
+     "alternativas": {
+      "a": "A taxa anunciada para o período, pois retorno maior transforma o saldo em dinheiro antes da liquidação.",
+      "b": "A existência de um botão de resgate diário, mesmo quando o crédito ocorre depois do vencimento da conta.",
+      "c": "A data, o valor líquido e o canal pelos quais o dinheiro poderá ser usado para pagar a despesa.",
+      "d": "A data de vencimento do contrato, que substitui a análise de corte, cotização e prazo de crédito."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-09-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Os R$ 24.000 em A atendem às necessidades urgentes identificadas. Os R$ 12.000 restantes podem ser avaliados para prazo curto, mas B bloquearia essa parcela por cento e oitenta dias, e seu retorno adicional é incerto.</p><p>A alternativa A torna a reserva indisponível no intervalo em que pode ser necessária. A alternativa C conserva a primeira camada, mas transforma números individuais em regra fixa e põe a segunda em carência sem checagem. A alternativa D deixa apenas R$ 12.000 imediatos, abaixo dos R$ 24.000 necessários no diagnóstico.</p><p>Regra de bolso: dimensione a camada imediata pelas contas urgentes do cliente e só então avalie o restante.</p>",
+     "enunciado": "<p>Joana procura a planejadora Elisa, em Goiânia, para avaliar os R$ 36.000 que definiu como reserva, sua fonte própria de caixa em emergências. A aplicação A apresenta baixa oscilação e crédito no mesmo dia útil; B promete retorno esperado superior, mas impede resgates por cento e oitenta dias. Joana quer investir os R$ 36.000 em B, alegando que a diferença de rendimento pagaria um imprevisto antes do desbloqueio. No diagnóstico, Elisa apurou que R$ 24.000 em A cobrem as necessidades urgentes identificadas, enquanto os R$ 12.000 restantes poderiam ser examinados para acesso em prazo curto, após verificar as condições concretas. A profissional precisa mostrar o efeito da carência sobre a função da reserva e evitar transformar a divisão do exemplo em percentual universal. Elisa pergunta qual parte realmente poderia pagar uma conta antes de cento e oitenta dias, já que retorno acumulado em um saldo bloqueado não quita uma obrigação nesse intervalo. Indique a composição coerente com esses dados.</p>",
+     "alternativas": {
+      "a": "Aplicar R$ 36.000 em B, pois o retorno esperado maior compensa o intervalo de cento e oitenta dias antes de qualquer resgate.",
+      "b": "Conservar R$ 24.000 em A para urgências e avaliar R$ 12.000 em acesso de prazo curto; retorno esperado de B não libera caixa na carência.",
+      "c": "Aplicar R$ 24.000 em A e R$ 12.000 em B como proporção fixa para clientes com reserva de emergência semelhante.",
+      "d": "Aplicar R$ 12.000 em A e R$ 24.000 em B, mantendo o valor imediato menor porque o saldo total ainda é R$ 36.000."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-09-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O vencimento ocorre antes do processamento e da liquidação possíveis na primeira aplicação. A parcela já acessível protege a despesa imediata, enquanto outra camada pode receber recursos com crédito posterior compatível.</p><p>A alternativa B confunde envio da ordem com dinheiro em conta. A alternativa C tenta compensar atraso operacional com retorno, embora a conta tenha data. A alternativa A supõe que o canal eletrônico elimina regras de corte e liquidação.</p><p>Regra de bolso: para a primeira conta, confirme o momento em que o valor líquido pode ser usado, não apenas solicitado.</p>",
+     "enunciado": "<p>Em Recife, o assessor Caio examina a reserva de Marta, cujas contas emergenciais podem vencer na manhã seguinte à perda de um contrato de trabalho. Uma aplicação aceita pedido de resgate em dias úteis, mas solicitações feitas depois do horário de corte são processadas no dia útil seguinte e o crédito ocorre apenas após a liquidação. Outra parcela está em conta acessível no momento do pagamento. Marta lê a expressão resgate diário e insiste que o primeiro produto substitui o dinheiro acessível de imediato, pois conseguiria enviar a solicitação pelo aplicativo a qualquer hora. Caio precisa explicar a diferença entre enviar uma ordem, apurar o valor de saída e receber recursos utilizáveis, considerando dias de funcionamento, carência e eventual saldo mínimo. A cliente precisa saber o que receberia caso o pedido fosse feito após o fechamento do expediente, justamente no dia anterior ao vencimento da conta. Analise qual parcela sustenta a primeira necessidade.</p>",
+     "alternativas": {
+      "a": "A parcela acessível pode ser deslocada para prazo maior porque a solicitação eletrônica elimina horário de corte e dias de funcionamento.",
+      "b": "A aplicação de resgate diário sustenta a primeira conta, pois enviar a ordem pelo aplicativo equivale a receber dinheiro no mesmo instante.",
+      "c": "A aplicação de resgate diário sustenta a primeira conta se a rentabilidade acumulada superar o custo de esperar a liquidação.",
+      "d": "A parcela já acessível sustenta a conta imediata; a aplicação de resgate diário pode compor camada posterior após conferir o crédito efetivo."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-09-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A reserva precisa chegar em tempo e por valor compatível; a posição negociada pode sofrer desconto, tributos e custos, de modo que o retorno nominal não equivale ao dinheiro líquido da emergência.</p><p>A alternativa B transforma possibilidade de venda em preço garantido. A alternativa A adia custos que reduzem o caixa disponível na data. A alternativa D confunde custo de oportunidade com perda certa e coloca retorno acima da proteção.</p><p>Regra de bolso: retorno maior é possibilidade; a conta do imprevisto exige valor líquido disponível.</p>",
+     "enunciado": "<p>Ao receber duas propostas para a reserva de um cliente em Salvador, a consultora Bia compara as posições. A primeira pode ser resgatada em prazo curto com baixa oscilação; a segunda é negociada antes do vencimento em mercado secundário e mostra rentabilidade acumulada atraente no extrato. Se surgir uma emergência, a venda rápida da segunda dependerá de compradores e poderá ocorrer com desconto, além de tributos e custos de saída. O cliente considera a rentabilidade nominal já exibida como valor garantido em caixa e propõe concentrar a reserva nessa posição. Bia deve explicar o custo de oportunidade de manter parte em ativo líquido e o custo potencial de buscar retorno superior na parcela destinada à proteção. Ela precisa separar retorno esperado, preço executável e crédito líquido na data da despesa. O cliente também pergunta se o ganho que aparece no extrato seria preservado caso a venda ocorresse sob pressão de prazo e baixa demanda pelo título. Avalie a proposta.</p>",
+     "alternativas": {
+      "a": "Concentrar a reserva na posição negociável e descontar tributos depois da emergência, mantendo o retorno bruto como caixa planejado.",
+      "b": "Concentrar a reserva na posição de retorno acumulado superior, pois a negociação antecipada preserva o preço visto no extrato.",
+      "c": "Preservar recursos de acesso compatível com a emergência e avaliar o valor líquido de saída; ganho exibido não assegura crédito sem desconto.",
+      "d": "Manter parcela líquida apenas se sua rentabilidade superar a da posição negociável, tratando a diferença como perda certa."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-09-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Camadas podem combinar acesso imediato e prazo curto quando a primeira sustenta as contas urgentes e a seguinte preserva disponibilidade e valor para as demais necessidades.</p><p>A alternativa B transforma solução individual em proporção universal. A alternativa C troca recurso próprio por crédito e prende o dinheiro necessário às urgências. A alternativa D exige a mesma liquidez de cada parcela, apesar de o caso apresentar prazos diferentes.</p><p>Regra de bolso: componha camadas segundo quando e quanto o cliente pode precisar, sem porcentagem automática.</p>",
+     "enunciado": "<p>Em Porto Alegre, a especialista Renata revê a reserva de Hugo, que tem despesas que podem vencer no próprio dia da emergência e outras que permitem curto intervalo de pagamento. Ele mantém uma parcela com acesso imediato, suficiente para as primeiras contas, e considera alocar outra parte em produto com crédito em prazo curto e baixa oscilação. Um colega afirma que a reserva deve ficar inteira no mesmo produto, porque dividir o saldo reduziria a simplicidade. Outro propõe usar o limite de crédito para as contas urgentes e aplicar a parcela imediata em ativo com carência. Renata precisa julgar a composição a partir dos prazos reais das obrigações, do valor disponível em cada camada e do custo de saída, sem apresentar o desenho como padrão obrigatório para outros clientes. Para decidir, Renata organiza as obrigações por data e confronta cada uma com o dia em que os recursos das duas parcelas estariam utilizáveis. Analise a divisão proposta por Hugo.</p>",
+     "alternativas": {
+      "a": "A divisão pode funcionar se a parcela imediata cobrir as urgências e a outra chegar a tempo das despesas seguintes sem perda incompatível.",
+      "b": "A divisão deve usar percentuais fixos entre acesso imediato e prazo curto, independentemente das datas das contas do cliente.",
+      "c": "A divisão é desnecessária porque o limite de crédito substitui a primeira camada enquanto a parcela com carência rende mais.",
+      "d": "A divisão deve ser descartada porque uma reserva só preserva sua função quando cada parcela oferece crédito no mesmo instante."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-09-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. A nova renda e outra reserva podem reduzir a necessidade de liquidez nesta carteira, mas é preciso confirmar proteção efetiva e obrigações urgentes antes de decidir quanto excede; a carência continua relevante para o valor destinado a B.</p><p>A alternativa B presume proteção suficiente para prender a carteira inteira. A alternativa C transforma a alocação antiga em regra imutável. A alternativa D usa saldo nominal de outra reserva como acesso equivalente sem verificar disponibilidade concreta.</p><p>Regra de bolso: mudança de renda abre revisão da quantidade líquida, não apaga o prazo de carência.</p>",
+     "enunciado": "<p>Joana retorna ao atendimento da planejadora Luana, em Belém, depois que uma segunda renda familiar independente se estabilizou e ela formou outra reserva individual. Antes, os R$ 36.000 da carteira examinada eram sua única fonte de caixa para emergências, com R$ 24.000 mantidos em acesso imediato. Agora a necessidade de acesso imediato dentro dessa carteira pode diminuir. Joana pede para migrar imediatamente os R$ 36.000 a uma alternativa de retorno esperado maior e carência de cento e oitenta dias, argumentando que a nova renda torna a carência irrelevante. Luana precisa reconhecer a mudança de vulnerabilidade sem presumir que a outra reserva ou a renda resolvam qualquer imprevisto. Ela deve conferir o valor e o canal da nova liquidez, as despesas urgentes remanescentes e a compatibilidade da parcela excedente com o prazo e o risco da alternativa. Joana quer uma decisão sobre a parcela desta carteira que ainda terá função de emergência, sem somar automaticamente todos os saldos da família como se fossem um só. Avalie o pedido de Joana.</p>",
+     "alternativas": {
+      "a": "Rever a camada imediata após confirmar a nova proteção e as necessidades urgentes; examinar carência e risco apenas para eventual excedente.",
+      "b": "Transferir R$ 36.000 para a alternativa com carência, pois a segunda renda elimina a função de acesso imediato dessa carteira.",
+      "c": "Manter exatamente R$ 24.000 em acesso imediato, porque a composição anterior permanece válida após qualquer mudança familiar.",
+      "d": "Reduzir a camada imediata pelo valor nominal da outra reserva, presumindo acesso equivalente sem conferir prazo e canal."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-09-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A primeira camada existe para a urgência que vence antes do crédito da segunda. Depois do uso e da perda de contrato, a vulnerabilidade mudou; Davi deve verificar a liquidez restante e planejar recomposição e ajuste da reserva.</p><p>A alternativa B substitui dinheiro próprio acessível por dívida apoiada em retorno incerto. A alternativa C confunde pedido com crédito efetivo após o corte. A alternativa A paga a conta, mas presume que a composição antiga continua suficiente apesar da perda de renda e da redução do saldo.</p><p>Regra de bolso: use a camada que chega a tempo e reavalie a proteção quando renda ou saldo mudar.</p>",
+     "enunciado": "<p>Teresa, profissional com renda por projetos, duas pessoas dependentes e reserva dividida entre acesso imediato e prazo curto, procura o assessor Davi em Manaus. Um contrato importante terminou, e uma despesa de saúde inesperada vence na manhã seguinte. O saldo imediato cobre essa primeira conta, mas Teresa percebe que o restante da reserva está em ativo anunciado como de resgate diário cujo pedido feito após o horário de corte só será processado no próximo dia útil. Ela quer tomar crédito para preservar a rentabilidade da primeira camada e manter a alocação para futuras emergências. Davi precisa tratar o gasto atual e a proteção que restará após a saída, considerando a instabilidade da renda, os dependentes e o crédito efetivo da segunda camada. A prioridade é evitar que a reserva perca sua função justamente após ser usada. Como o contrato encerrado pode afetar os meses seguintes, Davi examina se a saída imediata deixará recursos acessíveis para uma nova conta antes de recompor a reserva. Indique a sequência de decisão.</p>",
+     "alternativas": {
+      "a": "Usar a parcela imediata para a conta urgente e manter a composição original, pois o resgate posterior restaura a proteção automaticamente.",
+      "b": "Tomar crédito para a conta urgente, preservar a primeira camada e esperar o retorno da segunda compensar o custo da dívida.",
+      "c": "Solicitar o resgate diário da segunda camada e tratar a ordem como dinheiro disponível na manhã seguinte, preservando a primeira.",
+      "d": "Usar a parcela já acessível para a conta urgente, conferir o crédito da outra camada e rever a composição e recomposição após a perda de renda."
+     },
+     "gabarito": "d"
+    }
+   ],
+   "Liquidez corrente: cálculo e diagnóstico do cliente": [
+    {
+     "id": "cpror-cli-10-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A liquidez corrente é a razão entre ativos realizáveis e obrigações exigíveis no mesmo horizonte; um resultado de 1,40 indica R$ 1,40 de ativos para R$ 1,00 de passivos.</p><p>A alternativa B calcula folga em reais por subtração, que é outra medida. A alternativa C usa patrimônio total e despesa, sem selecionar ativos e passivos do período. A alternativa A troca as bases da fórmula e impõe percentual como unidade.</p><p>Regra de bolso: índice divide e indica proporção; folga subtrai e indica reais.</p>",
+     "enunciado": "<p>Um assessor organiza os recursos realizáveis e as obrigações exigíveis de uma cliente para o mesmo trimestre. Identifique a fórmula e a unidade de leitura da liquidez corrente.</p>",
+     "alternativas": {
+      "a": "Dividir renda mensal pelas dívidas contratadas; o resultado é o percentual de liquidez corrente.",
+      "b": "Subtrair passivos de curto prazo dos ativos do período; o resultado é a liquidez corrente em reais.",
+      "c": "Dividir o patrimônio líquido total pelas despesas do trimestre; o resultado é uma razão de cobertura.",
+      "d": "Dividir ativos de curto prazo por passivos do mesmo prazo; o resultado é uma razão de cobertura."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-10-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O indicador compara recursos que podem ser realizados com obrigações que vencem no mesmo horizonte, verificando a probabilidade e o prazo de recebimento.</p><p>A alternativa A soma valores históricos e dívidas futuras fora do trimestre. A alternativa C transforma cautela com recebíveis em exclusão automática, apesar da data confiável informada. A alternativa D usa patrimônio total e omite obrigações ainda a vencer dentro do período.</p><p>Regra de bolso: recorte ativo e passivo pelo mesmo calendário antes de calcular a razão.</p>",
+     "enunciado": "<p>Ao conferir uma liquidez corrente pessoal, uma planejadora encontra caixa, aplicação resgatável no trimestre, recebível com data compatível e parcelas de dívida que vencem depois do trimestre. Identifique o critério para escolher numerador e denominador.</p>",
+     "alternativas": {
+      "a": "Incluir o valor de compra de cada ativo e o saldo contratado inteiro das dívidas, para manter as bases originais.",
+      "b": "Incluir ativos realizáveis no trimestre e obrigações exigíveis nesse intervalo, observando data e qualidade da conversão.",
+      "c": "Incluir caixa e aplicações, mas excluir recebíveis com data confiável apenas por serem direitos em vez de dinheiro.",
+      "d": "Incluir o patrimônio total e somente as faturas vencidas, pois o objetivo do índice é comparar riqueza com atraso."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-10-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Os ativos somam R$ 18.000 mais R$ 12.000 mais R$ 6.000, ou R$ 36.000. R$ 36.000 divididos por R$ 24.000 são 1,50; por subtração, a folga teórica é R$ 12.000. O indicador agregado ainda pede conferência do calendário.</p><p>A alternativa B usa a razão como se fosse sobra em reais. A alternativa A exclui um recebível que a cena descreve como confiável e compatível com o trimestre. A alternativa D chama o numerador inteiro de folga, ignorando obrigações de R$ 24.000.</p><p>Regra de bolso: calcule a razão por divisão e a folga por subtração; depois confira as datas.</p>",
+     "enunciado": "<p>Marcos pede à assessora Luana, em Recife, que revise seus números do trimestre. Ele apresenta R$ 18.000 em caixa, R$ 12.000 em aplicação resgatável dentro do período e R$ 6.000 a receber de fonte confiável em data compatível. As obrigações que vencem no mesmo trimestre somam R$ 24.000; outras parcelas do contrato vencem apenas depois. Marcos soma os três ativos, vê que superam as dívidas e afirma ter R$ 1,50 de dinheiro livre para cada real de obrigação, pronto para um aporte de longo prazo. Luana precisa separar a razão de cobertura da sobra em reais e lembrar que a disponibilidade nas datas de pagamento ainda será conferida. O recebível entra por premissa porque valor e data são confiáveis neste caso; Luana deve explicar o que mudaria caso essa condição deixasse de valer. Ela apresentará separadamente a sobra em reais, que não é o número do índice. Calcule o total de ativos, a liquidez corrente e a folga em reais para o trimestre, conforme as premissas informadas.</p>",
+     "alternativas": {
+      "a": "R$ 30.000 de ativos, liquidez corrente de 1,25 e folga de R$ 6.000, excluindo o recebível confiável.",
+      "b": "R$ 36.000 de ativos, liquidez corrente de 1,50 e folga de R$ 1,50 em caixa para novo investimento.",
+      "c": "R$ 36.000 de ativos, liquidez corrente de 1,50 e folga teórica de R$ 12.000 antes da conferência das datas.",
+      "d": "R$ 36.000 de ativos, liquidez corrente de 1,50 e folga de R$ 36.000, pois a razão já inclui as dívidas."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-10-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Sem o recebível contestado, os ativos considerados são R$ 18.000 mais R$ 12.000, ou R$ 30.000. R$ 30.000 divididos por R$ 24.000 resultam em 1,25, e a diferença é R$ 6.000.</p><p>A alternativa B mantém um recebimento cuja realização se tornou incerta. A alternativa A acerta a razão, mas chama todo o ativo de folga e desconsidera o passivo. A alternativa D altera o denominador sem justificativa e ainda não corresponde à conta descrita.</p><p>Regra de bolso: quando um ativo perde qualidade, atualize o numerador; as dívidas mantêm seus vencimentos.</p>",
+     "enunciado": "<p>Na revisão seguinte, o planejador Raul, em Goiânia, retoma o cálculo de Marcos para o mesmo trimestre. A primeira fotografia incluía R$ 18.000 em caixa, R$ 12.000 em aplicação resgatável e R$ 6.000 a receber, diante de R$ 24.000 de obrigações; a liquidez corrente era 1,50. O pagamento dos R$ 6.000 passou a ser contestado, e Raul prepara uma base prudencial que deixa esse recebível fora do numerador, enquanto as datas e os valores das dívidas permanecem iguais. Marcos argumenta que o direito ainda aparece no balanço e, por isso, o índice deveria continuar 1,50. Raul precisa explicar a diferença entre valor patrimonial do direito e qualidade de sua realização no horizonte, sem alterar o passivo para obter resultado favorável. Marcos precisa de uma conta referida ao trimestre, e não de uma avaliação abstrata do valor econômico do direito de receber em algum momento futuro. A revisão não implica afirmar que o crédito deixou de existir. Calcule o índice ajustado e a folga em reais da base prudencial.</p>",
+     "alternativas": {
+      "a": "Liquidez corrente ajustada de 1,25 e folga de R$ 30.000, pois o numerador representa o capital líquido disponível.",
+      "b": "Liquidez corrente ajustada de 1,50 e folga de R$ 12.000, porque o valor contratual conserva a realização no trimestre.",
+      "c": "Liquidez corrente ajustada de 1,25 e folga de R$ 6.000, após comparar R$ 30.000 com R$ 24.000.",
+      "d": "Liquidez corrente ajustada de 1,00 e folga zero, retirando os R$ 6.000 também das obrigações do período."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-10-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. No horizonte escolhido, o caixa de R$ 12.000 está acessível e R$ 9.000 vencem. A aplicação só desbloqueia depois e a residência de uso não vira dinheiro automaticamente; prestações posteriores pertencem a outro período.</p><p>A alternativa B inclui um saldo em carência incompatível com a data. A alternativa C usa a moradia como caixa e agrega dívida futura ao passivo atual. A alternativa D acerta o ativo disponível, mas mistura obrigações de prazos diferentes.</p><p>Regra de bolso: escolha o prazo primeiro, depois selecione recursos realizáveis e dívidas exigíveis nele.</p>",
+     "enunciado": "<p>Ana leva à consultora Inês, em Curitiba, R$ 9.000 em parcelas e faturas dos próximos dois meses e R$ 25.000 em prestações posteriores. Ana possui R$ 12.000 em caixa, R$ 5.000 em aplicação com carência que termina depois dos dois meses e uma residência usada pela família. Ela propõe somar os R$ 17.000 de saldos financeiros e o valor estimado da casa ao numerador, dividindo tudo pelo saldo contratado de R$ 34.000. Inês precisa escolher o horizonte de dois meses e explicar por que saldo bloqueado e ativo de uso têm disponibilidade distinta do caixa, enquanto prestações futuras ficam fora do passivo dessa fotografia. Ana quer avaliar a possibilidade de pagar as contas que chegam primeiro, e não classificar sua riqueza total. A casa continua útil à moradia da família. O horizonte é a data em que as parcelas e faturas precisarão ser quitadas; nem o encerramento futuro da carência nem a eventual venda da moradia fornece dinheiro para esses vencimentos. Analise quais valores entram no cálculo de curto prazo dessa situação.</p>",
+     "alternativas": {
+      "a": "Usar R$ 12.000 de caixa contra R$ 9.000 exigíveis em dois meses; carência e prestações posteriores ficam fora desse horizonte.",
+      "b": "Usar R$ 17.000 de saldos contra R$ 9.000 exigíveis; a carência preserva o valor, então o resgate conta no período.",
+      "c": "Usar caixa e residência contra R$ 34.000 contratados; o valor patrimonial da moradia cobre as parcelas futuras.",
+      "d": "Usar R$ 12.000 de caixa contra R$ 34.000 contratados; a soma de dívidas futuras evita depender do calendário."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-10-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Razões acima, iguais e abaixo de uma unidade representam, respectivamente, superioridade, equivalência e insuficiência dos ativos selecionados diante dos passivos do mesmo horizonte. A leitura ainda depende das datas e da qualidade dos itens.</p><p>A alternativa B trata índice superior a um como garantia e confunde as demais razões com margem e retorno. A alternativa C transforma proporções sem unidade monetária em reais ou prazo mensal. A alternativa A apaga a diferença entre folga e equivalência e condiciona uma insuficiência presente à renda futura.</p><p>Regra de bolso: a razão classifica a cobertura agregada; pagamento efetivo exige olhar datas e realização.</p>",
+     "enunciado": "<p>Para explicar a liquidez corrente a uma cliente, o assessor Miguel reúne, em Salvador, três fotografias do mesmo horizonte: 1,30, 1,00 e 0,75. Ela pede uma leitura imediata dos números e pergunta se o resultado de 1,30 assegura pagamento de cada conta na data certa. Miguel sabe que a razão é agregada, que ativos podem oscilar ou demorar a ser recebidos e que despesas correntes podem ficar fora dos passivos levantados. Ele precisa diferenciar folga teórica, equivalência e insuficiência, sem transformar uma razão acima da unidade em garantia de caixa. Também deve explicar por que uma mesma razão pode exigir diagnósticos diferentes conforme calendário e qualidade dos ativos. A cliente deseja usar os três resultados para decidir se pode assumir nova obrigação; Miguel separa essa decisão da simples leitura aritmética das razões. A cliente quer decidir sobre uma obrigação nova, e Miguel deve exigir a conferência dos dias de recebimento e pagamento, mesmo quando há folga no total apurado. Analise os três resultados e o alcance da leitura.</p>",
+     "alternativas": {
+      "a": "1,30 e 1,00 indicam a mesma margem porque ambos cobrem dívidas, enquanto 0,75 só importa se faltar renda futura.",
+      "b": "1,30 garante pagamento em cada data, 1,00 cria margem em reais e 0,75 mede retorno insuficiente das aplicações.",
+      "c": "1,30 indica folga em reais de R$ 1,30, 1,00 caixa imediato e 0,75 dívida de R$ 0,75 por mês.",
+      "d": "1,30 indica ativos superiores aos passivos, 1,00 equivalência e 0,75 insuficiência na comparação, sujeitos a calendário e qualidade."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-10-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. R$ 20.000 mais R$ 16.000 mais R$ 6.000 são R$ 42.000; divididos por R$ 28.000, dão 1,50. Sem os R$ 6.000 incertos, R$ 36.000 por R$ 28.000 dão cerca de 1,29. Como R$ 18.000 vencem antes dos demais créditos, o caixa precisa sustentar esse pagamento antes de um aporte longo.</p><p>A alternativa B confunde folga agregada de R$ 14.000 com caixa livre imediato e propõe retirar R$ 20.000 das contas próximas. A alternativa C transforma prudência em exclusão automática do recebível. A alternativa D reconhece a incerteza, mas usa índices acima da unidade para ignorar o calendário.</p><p>Regra de bolso: índice mede proporção, calendário mede pagamento; um diagnóstico precisa dos dois.</p>",
+     "enunciado": "<p>Lúcia, profissional autônoma, procura a planejadora Bia em Belém para decidir um novo aporte de longo prazo. No trimestre, Lúcia tem R$ 20.000 em conta, R$ 16.000 em aplicação resgatável no período e R$ 6.000 a receber de um cliente com histórico recente de atraso. As obrigações do mesmo trimestre somam R$ 28.000, dos quais R$ 18.000 vencem em dois dias, antes do crédito da aplicação e do recebível. Lúcia calcula uma razão acima da unidade e insiste em investir o saldo inteiro em conta agora, porque entende que os outros dois ativos compensarão as contas futuras. Bia precisa conferir a razão com os três ativos, testar uma leitura prudencial sem o recebível e verificar o caixa nas datas das obrigações. A aplicação só estará disponível depois dos vencimentos mais próximos; por isso o total do trimestre e o caixa dos próximos dois dias respondem a perguntas distintas. Bia confrontará o saldo disponível hoje com os R$ 18.000 exigidos em dois dias. Analise os números e indique o diagnóstico que sustenta a orientação.</p>",
+     "alternativas": {
+      "a": "A razão é 1,50, cai para cerca de 1,29 sem o recebível e exige conservar caixa para as contas antes dos demais créditos.",
+      "b": "A razão é 1,50 e garante folga imediata de R$ 14.000, permitindo investir os R$ 20.000 em conta agora.",
+      "c": "A razão é cerca de 1,29 desde o início, pois recebíveis com risco de atraso ficam automaticamente fora da liquidez corrente.",
+      "d": "A razão é 1,50, cai para cerca de 1,29 sem o recebível e dispensa conferir as datas porque ambas superam uma unidade."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-10-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A liquidez corrente compara posições do trimestre, mas a data e o valor realizável podem alterar a capacidade de pagamento. Calendário e teste seco mostram desencontro temporal e dependência de venda incerta; renda e poupança vêm da análise dos fluxos.</p><p>A alternativa A deduz estabilidade e sobra mensal de uma fotografia patrimonial. A alternativa C descarta recursos potencialmente disponíveis e atribui ao teste seco outra finalidade. A alternativa D trata preço anunciado e prazo de venda como caixa certo e ignora o vencimento das contas.</p><p>Regra de bolso: razão corrente, calendário, qualidade dos ativos e fluxo de caixa respondem perguntas complementares.</p>",
+     "enunciado": "<p>Denise leva o resumo do trimestre financeiro ao consultor Yuri, em Manaus. A liquidez corrente apurada supera uma unidade porque inclui um veículo adicional cuja venda foi planejada para o período e uma aplicação cujo valor oscila até o resgate. Denise quer usar a razão favorável como prova de estabilidade do emprego, capacidade de poupança e caixa certo para compromissos que vencem antes da venda do veículo. Yuri distingue esses três temas: o indicador é fotografia dos ativos e passivos de curto prazo, o fluxo mensal depende de renda e despesas, e o teste seco pode revelar a dependência de um item de conversão incerta. Ele precisa verificar o preço de saída da aplicação, o calendário das contas e a realização do veículo, considerando que o valor recebido pode diferir do saldo registrado. Denise também precisa informar quando a venda seria concluída e que quantia líquida sobraria após eventual diferença de preço, antes de programar os pagamentos. Avalie a conclusão de Denise e indique a combinação de análises apropriada.</p>",
+     "alternativas": {
+      "a": "Usar a razão corrente como prova de renda estável e poupança, pois ativos acima das dívidas implicam sobra mensal.",
+      "b": "Usar liquidez corrente com calendário de caixa e teste seco, avaliando realização e preço dos ativos; renda e poupança exigem fluxo próprio.",
+      "c": "Usar apenas a liquidez seca e excluir também caixa e aplicação, para transformar o indicador em medida de patrimônio total.",
+      "d": "Usar a razão corrente e antecipar a venda do veículo pelo preço anunciado, preservando a leitura favorável sem calendário."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Liquidez seca: composição, cálculo e limitações": [
+    {
+     "id": "cpror-cli-11-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A liquidez seca mantém as obrigações do período e testa sua cobertura após retirar do numerador ativos de conversão mais lenta ou incerta.</p><p>A alternativa A troca capacidade de pagamento por rentabilidade. A alternativa C muda o denominador e transforma fotografia em previsão de renda. A alternativa D confunde exclusão prudencial do teste com perda de valor patrimonial.</p><p>Regra de bolso: a liquidez seca pergunta quanto da dívida próxima pode ser coberto sem depender de venda ou recebimento incerto.</p>",
+     "enunciado": "<p>Um planejador compara a liquidez corrente de uma cliente com uma medida que deixa de contar ativos cuja venda ou recebimento é incerto. Identifique a finalidade da liquidez seca nesse diagnóstico.</p>",
+     "alternativas": {
+      "a": "Medir a rentabilidade dos ativos negociados antes de decidir se as dívidas de curto prazo podem ser quitadas.",
+      "b": "Testar o pagamento das obrigações próximas com ativos de curto prazo cuja conversão em dinheiro é mais segura.",
+      "c": "Medir a renda futura do cliente, retirando obrigações cuja data de pagamento ainda pode ser renegociada.",
+      "d": "Atribuir valor econômico zero a cada bem retirado do numerador e recalcular o patrimônio líquido total."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-11-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Com o mesmo denominador, retirar itens do numerador reduz ou mantém a razão; se os ativos correntes já têm conversão segura, os índices podem coincidir.</p><p>A alternativa A usa preço anunciado para inverter a relação matemática. A alternativa C impõe uma condição de suficiência que não determina a igualdade dos índices. A alternativa D afirma aumento da razão após diminuir seu numerador.</p><p>Regra de bolso: mantendo as dívidas, a razão seca não ultrapassa a corrente quando apenas ativos são excluídos.</p>",
+     "enunciado": "<p>Em uma análise pessoal, a especialista mantém o mesmo total de passivos de curto prazo para calcular liquidez corrente e seca. No segundo cálculo, retira apenas ativos de conversão incerta. Compare os resultados possíveis dos dois índices.</p>",
+     "alternativas": {
+      "a": "A liquidez seca fica acima da corrente quando o ativo retirado tem preço de venda anunciado pelo proprietário.",
+      "b": "A liquidez seca fica igual ou abaixo da corrente; os índices coincidem se nenhum ativo corrente precisar ser retirado.",
+      "c": "A liquidez seca fica igual à corrente apenas se os passivos forem menores que o dinheiro disponível em conta.",
+      "d": "A liquidez seca supera a corrente quando o teste conserva aplicações e exclui um bem sujeito a venda."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-11-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Os ativos correntes somam R$ 60.000, divididos por R$ 30.000 de passivos, ou 2,00. Sem o veículo, restam R$ 32.000; R$ 32.000 divididos por R$ 30.000 dão cerca de 1,07. A diferença mostra dependência da venda para a folga ampla sugerida pela razão corrente.</p><p>A alternativa B retira também um recebível cuja data foi confirmada no cenário. A alternativa C inverte os resultados ao tratar a exclusão como aumento do numerador. A alternativa D acerta as contas, mas confunde exclusão prudencial com perda de valor econômico do veículo.</p><p>Regra de bolso: subtraia os itens de conversão incerta antes de dividir pelo mesmo passivo do período.</p>",
+     "enunciado": "<p>Elisa entrega ao assessor Caio, em Recife, o levantamento de seus recursos para o próximo trimestre. Ela possui R$ 14.000 em caixa, R$ 10.000 em aplicação resgatável no horizonte, R$ 8.000 a receber com data confirmada e um veículo adicional anunciado por R$ 28.000. As obrigações do trimestre somam R$ 30.000. O veículo poderia entrar na liquidez corrente porque Elisa pretende vendê-lo no período, mas ainda faltam comprador e preço firme; por isso Caio o retira no teste seco e conserva os demais itens. Elisa observa uma razão corrente elevada e quer usar esse número como prova de que já tem caixa para pagar as obrigações. Caio precisa calcular as duas razões e explicar o efeito da venda incerta, sem atribuir valor patrimonial zero ao veículo. O anúncio do veículo informa uma intenção de venda, mas ainda não comprova que os R$ 28.000 poderão quitar uma dívida quando ela vencer. Caio manterá a mesma base de passivos nos dois testes. Calcule a liquidez corrente e a seca nas premissas descritas.</p>",
+     "alternativas": {
+      "a": "Liquidez corrente de 2,00 e seca de cerca de 1,07; a diferença decorre dos R$ 28.000 do veículo excluídos do teste seco.",
+      "b": "Liquidez corrente de 2,00 e seca de 0,80; o teste seco exige retirar veículo e recebível confirmado pela mesma razão.",
+      "c": "Liquidez corrente de cerca de 1,07 e seca de 2,00; retirar o veículo eleva a proporção de ativos confiáveis.",
+      "d": "Liquidez corrente de 2,00 e seca de cerca de 1,07; a exclusão do veículo prova perda econômica de R$ 28.000."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-11-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Após excluir R$ 28.000 do veículo e R$ 8.000 do recebível incerto, ficam R$ 24.000 em caixa e aplicação; R$ 24.000 divididos por R$ 30.000 equivalem a 0,80. O teste aponta insuficiência com esses recursos para pagar todas as obrigações do horizonte.</p><p>A alternativa B conserva no numerador um recebível cuja data se tornou incerta. A alternativa A confunde retirada do indicador com perda de valor patrimonial. A alternativa D altera indevidamente os passivos, que continuam R$ 30.000.</p><p>Regra de bolso: quando a qualidade do recebível piora, refaça o numerador e mantenha as obrigações do horizonte.</p>",
+     "enunciado": "<p>A revisão do teste seco leva Elisa de volta à planejadora Nara, em Belo Horizonte, com seus números: R$ 14.000 em caixa, R$ 10.000 em aplicação disponível, R$ 8.000 a receber e R$ 28.000 relativos a veículo anunciado. As obrigações de curto prazo continuam em R$ 30.000. Na primeira análise seca, o veículo saiu do numerador pela ausência de comprador e preço firme, deixando R$ 32.000 e índice próximo de 1,07. Agora a data dos R$ 8.000 a receber também se tornou incerta. Elisa quer conservar o índice anterior porque o valor ainda consta como direito no balanço. Nara precisa distinguir o valor econômico do recebível de sua utilidade para quitar dívidas no horizonte e recalcular o teste com as duas exclusões. Nara preserva R$ 30.000 no denominador das duas contas. O direito de receber continua registrado, porém a nova incerteza exige outra pergunta: que parte do numerador pode ser convertida em pagamento no período? Calcule a liquidez seca ajustada e interprete o resultado.</p>",
+     "alternativas": {
+      "a": "A razão cai para 0,80 e significa que veículo e recebível perderam seu valor patrimonial na mesma data.",
+      "b": "A razão permanece em cerca de 1,07, pois a existência do direito basta para contar os R$ 8.000 como dinheiro do período.",
+      "c": "A razão cai para 0,80: R$ 24.000 de conversão mais segura cobrem apenas parte dos R$ 30.000 de obrigações.",
+      "d": "A razão sobe para 1,33, pois retirar o recebível incerto reduz o denominador junto com o numerador."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-11-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Caixa e aplicação com resgate compatível têm conversão mais segura; carro sem venda firme, recebível adiado e aplicação bloqueada dependem de condições incertas ou posteriores ao vencimento das obrigações.</p><p>A alternativa B confunde saldo registrado com acesso durante a carência. A alternativa A usa o contrato para dispensar a incerteza demonstrada pelos adiamentos. A alternativa D retira os recursos de conversão mais segura e preserva o tipo de ativo cuja venda exige cautela.</p><p>Regra de bolso: no teste seco, classifique cada item pela conversão real no horizonte, não pelo nome contábil.</p>",
+     "enunciado": "<p>Um cliente apresenta à consultora Iara, em Salvador, dinheiro em conta, aplicação resgatável no prazo, um carro adicional anunciado para venda e uma posição com carência além da data das obrigações. Um recebível de cliente comercial tem valor contratual definido, mas o pagamento já sofreu adiamentos. O cliente pede que Iara retire apenas o carro do teste seco, pois considera o contrato do recebível e o saldo de extrato da aplicação em carência provas suficientes de disponibilidade. Iara precisa avaliar negociabilidade, data de crédito e incerteza de conversão de cada item, mantendo no indicador recursos capazes de quitar passivos próximos. A exclusão de um ativo dessa conta serve como teste de pagamento, sem apagar o bem ou o direito do balanço patrimonial. A consulta serve para decidir se o cliente consegue atravessar os próximos vencimentos sem contar com venda incerta ou resgate contratualmente impedido. Indique a composição coerente do numerador seco.</p>",
+     "alternativas": {
+      "a": "Conservar dinheiro, aplicação acessível e recebível adiado, pois o contrato garante data de pagamento útil para a obrigação.",
+      "b": "Conservar dinheiro, aplicação acessível e posição em carência, pois o extrato confirma o valor mesmo sem crédito no período.",
+      "c": "Conservar dinheiro e aplicação acessível; testar a exclusão de carro, recebível adiado e posição em carência pelo prazo e incerteza.",
+      "d": "Retirar dinheiro e aplicação acessível junto aos bens sujeitos a venda, para deixar somente ativos físicos no indicador."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-11-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Na adaptação pessoal, a aula pede classificar bens e direitos pela capacidade concreta de conversão, observando prazo, preço e qualidade do recebimento; a etiqueta estoque não decide por si.</p><p>A alternativa B usa o rótulo físico como exclusão automática e ignora atraso de recebível. A alternativa C trata preço anunciado como caixa firme e retira aplicação disponível. A alternativa D transfere composição empresarial ao patrimônio pessoal sem olhar os fatos do caso.</p><p>Regra de bolso: liquidez seca pessoal é um teste da qualidade da conversão, não uma lista de nomes de ativos.</p>",
+     "enunciado": "<p>Marina entrega à assessora Luana, em Curitiba, a lista de seu patrimônio pessoal: dinheiro, aplicações, valores a receber e um veículo adicional ofertado para venda. Marina ouviu que liquidez seca de empresas exclui estoques e pede que o indicador pessoal aplique a mesma palavra a qualquer bem físico, sem investigar se ele poderia ser convertido em dinheiro no trimestre analisado. Ao mesmo tempo, ela deseja classificar os recebíveis como seguros apenas porque têm valor indicado em contrato. Luana deve adaptar o teste à situação pessoal: prazo, negociabilidade, certeza de recebimento e preço provável são dados relevantes. O índice pretende examinar cobertura das obrigações próximas, sem criar uma regra automática de exclusão pelo rótulo empresarial ou garantir caixa pelo valor declarado. Marina pede que Luana explique por que dois bens físicos podem ter prazos de conversão diferentes e por que contrato não equivale a crédito recebido. Analise o critério de seleção dos ativos.</p>",
+     "alternativas": {
+      "a": "Avaliar a conversão real de cada bem e direito no horizonte, retirando os itens incertos sem aplicar uma regra empresarial automática.",
+      "b": "Excluir bens físicos por analogia com estoques, mas conservar recebíveis contratuais mesmo quando a data de crédito é incerta.",
+      "c": "Conservar o veículo pelo preço anunciado e retirar aplicações disponíveis, pois bem físico é referência estável no patrimônio pessoal.",
+      "d": "Aplicar a lista empresarial de exclusões, pois o nome liquidez seca determina a mesma composição para qualquer cliente."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-11-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A razão de R$ 32.000 por R$ 30.000 é cerca de 1,07 no horizonte agregado. Amanhã, porém, só R$ 14.000 estão em conta para R$ 19.000 de contas, faltando R$ 5.000; o índice isolado não resolve o desencontro de datas.</p><p>A alternativa B toma cobertura agregada como caixa imediato. A alternativa C retira uma obrigação real do denominador justamente quando ela vence. A alternativa A ignora que recebível e resgate chegam após o primeiro pagamento.</p><p>Regra de bolso: índice mostra proporção no horizonte; calendário mostra se o dinheiro chega antes da conta.</p>",
+     "enunciado": "<p>Depois de calcular liquidez seca de cerca de 1,07, o especialista Bruno apresenta os números a Elisa, em Belém: R$ 14.000 em caixa, R$ 10.000 em aplicação disponível e R$ 8.000 a receber com data confirmada, diante de R$ 30.000 de obrigações no trimestre. Desse passivo, R$ 19.000 vencem na manhã seguinte; a aplicação só credita em três dias úteis e os R$ 8.000 chegarão semanas depois. Elisa insiste que uma razão superior a uma unidade autoriza investir de imediato o caixa em compromisso de longo prazo. Bruno precisa explicar que o indicador compara montantes do trimestre, enquanto o pagamento depende de datas dentro do trimestre. A fotografia seca também deixa de fora renda futura, capacidade de poupança e mudanças no preço de saída. Ele deve confrontar o valor em conta amanhã com a obrigação dessa data e usar calendário de caixa antes de recomendar qualquer novo aporte. Mesmo que o recebível entre legitimamente no numerador do trimestre, sua chegada depois do vencimento imediato torna o extrato diário indispensável. Analise a conclusão de Elisa.</p>",
+     "alternativas": {
+      "a": "O calendário é dispensável se o recebível tem data confirmada e a aplicação está disponível dentro do trimestre.",
+      "b": "O índice de cerca de 1,07 autoriza o aporte longo, pois R$ 32.000 no numerador cobrem R$ 30.000 no trimestre.",
+      "c": "A falta de caixa amanhã altera a fórmula para retirar os R$ 19.000 do passivo, preservando a razão favorável.",
+      "d": "O índice de cerca de 1,07 convive com falta de caixa amanhã: R$ 14.000 em conta ficam R$ 5.000 abaixo dos R$ 19.000 exigidos."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-11-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A diferença entre os índices revela dependência de venda e recebimento incertos, não perda automática de valor. Com razão seca inferior a uma unidade, Tânia precisa conferir o calendário e as fontes concretas de caixa antes de ajustar o plano de pagamentos.</p><p>A alternativa B confunde exclusão do teste com baixa patrimonial e presume saída pelo valor registrado. A alternativa C usa o índice corrente para ignorar a qualidade dos ativos e as datas das obrigações. A alternativa A atribui ao teste uma previsão de retorno que ele não fornece.</p><p>Regra de bolso: índice seco aponta a dependência de ativos incertos; calendário e fluxo completam o diagnóstico.</p>",
+     "enunciado": "<p>Rosa leva seu diagnóstico à planejadora Tânia, em Manaus. A liquidez corrente é alta porque inclui um veículo anunciado e recebíveis de pagamento esperado no trimestre, mas o teste seco retira o veículo por falta de comprador e parte dos recebíveis por adiamentos. O resultado seco fica abaixo de uma unidade. Rosa interpreta a diferença como prova de que seus ativos perderam valor e pede que Tânia recomende vender qualquer investimento para elevar o índice no mesmo dia. Tânia precisa separar valor patrimonial de conversão no horizonte, verificar quais dívidas vencem primeiro e quais fontes de renda efetivamente entrarão, além de revisar despesas ou obrigações se faltar caixa. O indicador é uma fotografia; rentabilidade e capacidade mensal de poupança exigem outras medidas. Rosa quer entender se uma venda acelerada resolveria a falta de caixa ou apenas trocaria um ativo por dinheiro depois do primeiro vencimento. Avalie a inferência de Rosa e indique os próximos passos do diagnóstico.</p>",
+     "alternativas": {
+      "a": "Usar a liquidez seca baixa como medida da rentabilidade futura e compensá-la com ativos de retorno esperado superior.",
+      "b": "Tratar veículo e recebíveis excluídos como perda patrimonial e vender investimentos pelo valor registrado para recuperar o índice.",
+      "c": "Usar a liquidez corrente alta como prova de pagamento e manter a agenda de dívidas sem análise adicional das datas.",
+      "d": "Reconhecer dependência dos itens excluídos, conferir calendário e recebimentos e ajustar caixa, despesas ou dívidas conforme o déficit."
+     },
+     "gabarito": "d"
+    }
+   ],
+   "Comprometimento de renda e sinais de fragilidade financeira": [
+    {
+     "id": "cpror-cli-12-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Comprometimento de renda compara pagamentos periódicos de dívidas com a renda do mesmo período e expressa a proporção em percentual.</p><p>A alternativa B usa o estoque de dívidas e o patrimônio, medindo outra relação. A alternativa C mistura bases e não identifica pagamentos periódicos. A alternativa D troca as bases e chama o resultado de inadimplência, que se refere ao atraso no pagamento.</p><p>Regra de bolso: comprometimento é parcela da renda ocupada por prestações, não tamanho do saldo devedor.</p>",
+     "enunciado": "<p>Uma assessora quer medir a parte da renda mensal já destinada ao pagamento de dívidas de um cliente. Identifique o cálculo do comprometimento de renda e sua unidade.</p>",
+     "alternativas": {
+      "a": "Dividir os pagamentos mensais das dívidas pela renda mensal da mesma base e multiplicar por 100, obtendo um percentual.",
+      "b": "Dividir o saldo total contratado das dívidas pelo patrimônio líquido e multiplicar por 100, obtendo a prestação mensal.",
+      "c": "Subtrair despesas essenciais da renda bruta e dividir pelo saldo total das dívidas, obtendo atraso em percentual.",
+      "d": "Dividir o valor das despesas de consumo pelo total de ativos e multiplicar por 100, obtendo inadimplência."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-12-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. As três medidas respondem perguntas diferentes: peso periódico das parcelas, estoque total de dívidas e cumprimento do prazo de pagamento.</p><p>A alternativa B troca os conceitos entre si. A alternativa A transforma dívida alta em atraso apesar de pagamentos em dia. A alternativa D iguala endividamento a inadimplência e desloca comprometimento para retorno patrimonial.</p><p>Regra de bolso: dívida existente é estoque, prestação é fluxo e inadimplência é atraso.</p>",
+     "enunciado": "<p>Um cliente tem saldo de dívida elevado, prestações mensais distribuídas em prazo longo e pagamentos em dia. A consultora precisa distinguir os três termos usados na conversa. Compare comprometimento, endividamento e inadimplência.</p>",
+     "alternativas": {
+      "a": "Comprometimento e inadimplência aparecem quando o estoque da dívida supera a renda anual, mesmo com prestações pagas.",
+      "b": "Comprometimento trata do saldo integral, endividamento do atraso e inadimplência do percentual das prestações na renda.",
+      "c": "Comprometimento trata das prestações frente à renda, endividamento do estoque de dívida e inadimplência do pagamento fora do prazo.",
+      "d": "Endividamento e inadimplência significam a mesma condição, enquanto comprometimento mede a valorização dos ativos."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-12-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. R$ 2.250 divididos por R$ 7.500 são 30%. Depois de R$ 2.250 em prestações e R$ 4.900 em despesas essenciais, restam R$ 350 antes de outros gastos; sem reserva, essa margem é estreita para absorver imprevistos.</p><p>A alternativa B calcula o saldo depois das prestações, mas ignora R$ 4.900 de despesas essenciais. A alternativa C inclui consumo no numerador de pagamentos de dívida e muda a definição do índice. A alternativa D acerta os números, mas usa o percentual isolado para validar um investimento com carência.</p><p>Regra de bolso: calcule o índice e depois examine o que sobra para viver e enfrentar imprevistos.</p>",
+     "enunciado": "<p>André procura a planejadora Lídia, em Recife, para rever seu orçamento: recebe R$ 7.500 líquidos por mês e paga R$ 2.250 em prestações de dívidas no mesmo período. Suas despesas essenciais somam R$ 4.900, e ele ainda precisa lidar com outros gastos correntes. André ouviu que 30% seria uma fronteira suficiente para decidir se pode assumir um investimento de longo prazo com carência e pede que Lídia aplique esse número sem olhar o orçamento. Ela precisa calcular a participação das prestações na renda líquida e mostrar o valor restante depois das dívidas e despesas essenciais. André está em dia com os pagamentos, mas está sem reserva para imprevistos. A decisão depende da folga real e da vulnerabilidade, além do percentual isolado. O próximo desembolso de André terá de sair da renda que sobra depois das parcelas e dos gastos essenciais, sem considerar um percentual isolado como autorização automática. Calcule os dois resultados e interprete a margem.</p>",
+     "alternativas": {
+      "a": "Comprometimento de 30% e margem de R$ 350 após prestações e despesas essenciais, insuficiente para presumir folga estável.",
+      "b": "Comprometimento de 30% e margem de R$ 5.250 para investir, pois despesas essenciais ficam fora do cálculo da prestação.",
+      "c": "Comprometimento de 95,33% e margem de R$ 350, somando despesas essenciais às prestações no numerador da razão.",
+      "d": "Comprometimento de 30% e margem de R$ 350, que autoriza carência porque o percentual revela ausência de fragilidade."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-12-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. R$ 2.250 divididos por R$ 9.000 resultam em 25%, abaixo dos 30% apurados sobre R$ 7.500. A melhora é projetada enquanto a renda adicional não estiver comprovada como recorrente e o restante do orçamento não for revisto.</p><p>A alternativa B conserva a razão anterior apesar de mudar o denominador. A alternativa C usa a projeção como prova de renda estável e dispensa o diagnóstico. A alternativa A subtrai renda nova da prestação, em vez de dividir pagamentos pela renda do mesmo período.</p><p>Regra de bolso: uma renda prevista muda a conta projetada, mas o realizado mostra se a folga se consolidou.</p>",
+     "enunciado": "<p>Uma nova projeção de renda leva André de volta ao assessor Rafael, em Goiânia. Sua renda líquida mensal realizada era R$ 7.500, as prestações de dívida somavam R$ 2.250 e o comprometimento calculado nessa base era 30%. André iniciou trabalho adicional e projeta R$ 9.000 líquidos no próximo mês, mantendo a mesma prestação. O novo contrato está em fase inicial, com recorrência ainda incerta. André propõe registrar o percentual projetado como melhora permanente e usar a diferença para assumir compromisso novo, sem verificar se as despesas cresceram. Rafael precisa refazer a razão com a renda projetada e separar projeção de histórico realizado. Também deve examinar dependência dessa fonte de renda e o orçamento completo antes de concluir que o cliente ganhou capacidade duradoura. A oferta de trabalho ainda pode produzir receitas irregulares; Rafael distingue o mês projetado do valor que André poderia comprometer repetidamente. Calcule o percentual projetado e avalie sua interpretação.</p>",
+     "alternativas": {
+      "a": "O índice projetado é 8,33%; a diferença de R$ 1.500 na renda deve ser subtraída diretamente dos R$ 2.250 em prestações.",
+      "b": "O índice projetado é 30%; a prestação permanece igual, de modo que a renda maior não altera a razão calculada.",
+      "c": "O índice projetado é 25%; a estimativa basta para comprovar capacidade recorrente e assumir nova parcela de dívida.",
+      "d": "O índice projetado é 25%; a queda de 30% depende da renda adicional se realizar e pede acompanhamento das despesas e recebimentos."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-12-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. R$ 2.000 por R$ 10.000 são 20% sobre a renda bruta; R$ 2.000 por R$ 8.000 são 25% sobre a renda líquida. Para a pergunta sobre o dinheiro disponível após o recebimento, a base líquida torna o peso das prestações mais visível.</p><p>A alternativa A inverte os percentuais e a relação entre base e quociente. A alternativa C ignora que o denominador mudou. A alternativa D acerta as duas razões, mas usa a base bruta como prova de caixa que Valéria não recebe integralmente.</p><p>Regra de bolso: declare a base; a mesma prestação pesa mais quando a renda usada no denominador é menor.</p>",
+     "enunciado": "<p>Valéria apresenta à especialista Camila, em Curitiba, renda mensal de R$ 10.000 brutos e R$ 8.000 líquidos e prestações de dívidas de R$ 2.000 no mês. Um relatório usa renda bruta como base, enquanto Valéria quer saber quanto as parcelas ocupam do dinheiro que efetivamente entra na conta. Um colega apresenta apenas 20% e chama essa razão de comprometimento líquido. Camila precisa deixar a metodologia explícita, calcular as duas razões e usar a base compatível com a pergunta do orçamento disponível. As despesas essenciais serão examinadas depois, sem entrar automaticamente no numerador das dívidas. O mesmo pagamento mensal pode produzir percentuais diferentes sem que uma conta esteja aritmeticamente errada. Valéria quer usar a razão para planejar gastos depois dos descontos obrigatórios, e por isso pede que Camila identifique claramente o denominador de cada percentual. Calcule o comprometimento nas duas bases e indique qual responde à pergunta de Valéria.</p>",
+     "alternativas": {
+      "a": "25% sobre a renda bruta e 20% sobre a líquida; a base maior produz percentual maior para a mesma prestação.",
+      "b": "20% sobre a renda bruta e 25% sobre a líquida; a razão líquida responde à parcela do dinheiro recebido ocupada pelas dívidas.",
+      "c": "20% nas duas bases; a diferença entre bruto e líquido altera despesas, mas não o denominador do comprometimento.",
+      "d": "20% sobre a renda bruta e 25% sobre a líquida; o relatório bruto prova que sobra mais caixa do que a base líquida indica."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-12-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Crédito recorrente para necessidades, pagamento mínimo, renegociações, desencontro de datas e desconhecimento das dívidas apontam vulnerabilidade mesmo com prestações ainda pagas no prazo.</p><p>A alternativa A toma pontualidade como proteção suficiente e minimiza o pagamento mínimo. A alternativa C supõe que parcela menor reduza também o custo total, embora a aula destaque a possibilidade contrária. A alternativa D adia a análise de sinais que surgem antes do atraso.</p><p>Regra de bolso: fragilidade pode aparecer no comportamento do caixa antes de virar inadimplência.</p>",
+     "enunciado": "<p>Ivo procura a consultora Joana, em Salvador, com prestações em dia e comprometimento aparentemente moderado. O extrato mostra uso recorrente de crédito para alimentação, pagamento mínimo de faturas e sucessivas renegociações. Parte dos vencimentos ocorre antes de sua renda variável entrar na conta, e ele desconhece o saldo total, as taxas e o prazo das dívidas. Ivo afirma que a ausência de atraso formal basta para descartar fragilidade financeira. Joana precisa separar pontualidade de capacidade de absorver imprevistos e reconhecer sinais que podem anteceder inadimplência. Uma renegociação pode reduzir uma parcela do mês sem resolver o custo total, e o percentual do indicador pode esconder pressão de despesas básicas. O fato de Ivo manter os pagamentos formalmente em dia pode depender do próprio crédito que ele usa para despesas básicas, o que muda a leitura da pontualidade. Se o limite de crédito diminuir, Ivo poderá perder a fonte usada para completar as compras básicas antes da próxima entrada de renda. Avalie os sinais do caso e indique o foco do diagnóstico.</p>",
+     "alternativas": {
+      "a": "As parcelas em dia afastam fragilidade, e o pagamento mínimo de faturas indica apenas preferência por liquidez.",
+      "b": "Há sinais de fragilidade antes de atraso formal; revisar fluxo, calendário, reserva e condições das dívidas complementa o percentual.",
+      "c": "Renegociações reduzem o peso mensal e, por isso, comprovam queda do custo total das dívidas contratadas.",
+      "d": "Uso de crédito para despesas básicas mede endividamento, mas só deve ser investigado após inadimplência registrada."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-12-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. Depois das prestações restam R$ 5.250 em cada caso; subtraídas as despesas essenciais, sobram R$ 350 na primeira família e R$ 2.250 na segunda. Dependentes e reserva também mudam a capacidade de absorver um choque, apesar do índice igual.</p><p>A alternativa B para na primeira subtração e ignora consumo essencial. A alternativa A transforma percentual idêntico em orientação idêntica sem examinar vulnerabilidade. A alternativa D altera a fórmula do comprometimento por dependentes, que pertencem à interpretação do caso, não ao numerador.</p><p>Regra de bolso: percentual igual pode esconder folgas e riscos muito diferentes.</p>",
+     "enunciado": "<p>Duas famílias chegam ao planejador Nilo, em Belém, com renda líquida mensal de R$ 7.500 e prestações de dívidas de R$ 2.250, portanto com comprometimento de 30% em ambas. Na primeira, as despesas essenciais são R$ 4.900, há dois dependentes e falta reserva; na segunda, as despesas essenciais são R$ 3.000, a família vive sem dependentes e existe reserva para imprevistos. Uma colega propõe a mesma orientação de investimento para as duas por causa do percentual idêntico. Nilo observa que as prestações deixam R$ 5.250 antes das despesas essenciais em cada família, mas a folga após essas despesas e a capacidade de resistir a choques diferem. Ele precisa mostrar que um limiar universal é insuficiente para analisar orçamento e vulnerabilidade. A recomendação exigirá saber também se uma despesa inesperada caberia no orçamento de cada família sem produzir nova dívida ou resgate prejudicial. Compare as duas situações e indique a conclusão coerente.</p>",
+     "alternativas": {
+      "a": "O índice de 30% classifica ambas como aptas ao mesmo aporte, já que prestações iguais produzem risco financeiro igual.",
+      "b": "As duas famílias têm margem de R$ 5.250, pois despesas essenciais ficam fora da fórmula e do diagnóstico posterior.",
+      "c": "O mesmo índice convive com folgas de R$ 350 e R$ 2.250; despesas, dependentes e reserva levam a diagnósticos distintos.",
+      "d": "A primeira família tem comprometimento maior devido aos dependentes, mesmo com pagamentos e renda iguais aos da segunda."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-12-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. R$ 1.800 por R$ 6.000 são 30%, e R$ 6.000 menos R$ 1.800 e R$ 3.800 deixam R$ 400 antes de imprevistos. O projeto isolado pode melhorar o mês em que for recebido, mas não demonstra renda repetível; dependentes e ausência de reserva reforçam a cautela com carência.</p><p>A alternativa B transforma expectativa eventual em capacidade permanente. A alternativa C usa o percentual isolado para prender uma folga estreita. A alternativa A trata receita extra como pagamento de dívida e deixa de observar o fluxo real.</p><p>Regra de bolso: renda variável pede separar cenário, realizado e recorrência antes de comprometer a sobra.</p>",
+     "enunciado": "<p>Camila procura a assessora Tânia, em Manaus, para rever as contas da família: renda líquida recorrente de R$ 6.000, prestações mensais de R$ 1.800 e despesas essenciais de R$ 3.800 para si e dois dependentes. Ela está sem reserva e depende de trabalhos extras incertos para fechar meses com gasto inesperado. Neste mês, espera receber R$ 3.000 adicionais por um projeto isolado e pede que Tânia use R$ 9.000 como nova renda permanente para justificar investimento com carência. Sem o extra, as prestações já ocupam 30% da renda recorrente e restam R$ 400 após dívidas e despesas essenciais. Com o extra recebido, a razão daquele mês seria menor, mas a repetição dessa mudança no mês seguinte seria incerta. Camila insiste em aplicar os R$ 400 de margem recorrente antes de rever o orçamento. Tânia precisa separar a entrada eventual do projeto dos recebimentos com que Camila paga as obrigações mês após mês, preservando o horizonte da decisão. Avalie a proposta e indique o diagnóstico de capacidade.</p>",
+     "alternativas": {
+      "a": "Somar os R$ 3.000 eventuais às prestações, elevando o comprometimento e dispensando análise do orçamento completo.",
+      "b": "Usar R$ 9.000 como renda permanente, pois o pagamento esperado reduz a razão do mês e comprova nova capacidade recorrente.",
+      "c": "Investir os R$ 400 com carência, pois a razão de 30% por si demonstra margem estável para os próximos meses.",
+      "d": "Separar renda recorrente de extra eventual, acompanhar o realizado e priorizar fluxo, dívidas e proteção antes de prender a margem estreita."
+     },
+     "gabarito": "d"
+    }
+   ],
+   "Endividamento: cálculo e impacto na saúde financeira": [
+    {
+     "id": "cpror-cli-13-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O nível de endividamento patrimonial divide o saldo total das obrigações pelo valor total dos ativos e expressa a relação em percentual.</p><p>A alternativa B descreve a fórmula do comprometimento de renda, que compara fluxos mensais. A alternativa C mistura estoque de dívida com renda mensal e não produz a medida pedida. A alternativa A mistura patrimônio e prestação para inferir um prazo que a fórmula não fornece.</p><p>Regra de bolso: endividamento patrimonial compara estoques; comprometimento de renda compara fluxos.</p>",
+     "enunciado": "<p>Uma cliente leva ao gerente o total de seus bens e o saldo ainda devido em financiamentos e empréstimos. Ele quer calcular o nível de endividamento patrimonial. Identifique a relação usada nesse indicador.</p>",
+     "alternativas": {
+      "a": "Ativos totais divididos pelas prestações mensais, para medir o prazo necessário para quitar a dívida.",
+      "b": "Prestações mensais divididas por renda líquida mensal, multiplicadas por 100, para medir o estoque patrimonial.",
+      "c": "Passivos totais subtraídos da renda mensal, para medir o valor que pode ser poupado a cada período.",
+      "d": "Passivos totais divididos por ativos totais, multiplicados por 100, para medir a parcela dos ativos equivalente às dívidas."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-13-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Saldo, peso mensal e pontualidade são dimensões distintas; uma dívida alta pode conviver com prestação administrável e pagamentos em dia.</p><p>A alternativa A troca os conceitos. A alternativa C confunde estoque alto com atraso. A alternativa D ignora que prazo longo prolonga a obrigação e pode elevar o custo total ou manter risco futuro.</p><p>Regra de bolso: dívida existente não é prestação mensal, e dívida em dia não é dívida pequena.</p>",
+     "enunciado": "<p>Ao entrevistar um cliente, a assessora encontra saldo de dívida elevado, parcelas mensais pequenas pelo prazo longo e pagamentos em dia. Compare o que endividamento, comprometimento de renda e inadimplência dizem sobre esse caso.</p>",
+     "alternativas": {
+      "a": "Endividamento trata das parcelas mensais, comprometimento do atraso e inadimplência do saldo devido acumulado.",
+      "b": "Endividamento trata do saldo devido, comprometimento do peso das parcelas na renda e inadimplência de atraso no vencimento.",
+      "c": "O saldo elevado demonstra inadimplência, enquanto parcelas pequenas afastam a necessidade de medir endividamento.",
+      "d": "As parcelas pequenas tornam o saldo irrelevante, pois prazo longo elimina o custo e o risco de refinanciamento."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-13-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. R$ 180.000 divididos por R$ 480.000, vezes 100, resultam em 37,5%. A razão mede dívida em relação aos ativos, sem informar o fluxo mensal nem quanto desses ativos pode virar caixa para as parcelas.</p><p>A alternativa B usa a parcela patrimonial líquida, de 62,5%, no lugar da razão de dívida e ainda presume liquidez. A alternativa C acerta a conta, mas transforma patrimônio positivo em prova de pagamento. A alternativa A inverte a divisão e atribui à razão uma capacidade de assumir parcelas que ela não mede.</p><p>Regra de bolso: calcule passivos por ativos e só depois avalie prestação, renda, custo e liquidez.</p>",
+     "enunciado": "<p>Larissa entrega ao planejador Daniel, em Curitiba, um balanço com R$ 480.000 em ativos totais e R$ 180.000 em saldos de dívidas. O imóvel em que mora representa parte relevante dos ativos, e as prestações ainda serão conferidas com sua renda líquida mensal. Larissa afirma que ter ativos acima das dívidas já prova saúde financeira e pede que Daniel informe um percentual único para encerrar o diagnóstico. Ele precisa calcular o nível patrimonial pela base correta, explicar que a razão descreve o estoque registrado e separar essa fotografia da capacidade de pagar as prestações. A liquidez dos bens, as taxas e a estabilidade da renda podem mudar a conclusão prática mesmo com patrimônio líquido positivo. O imóvel em que Larissa vive teria de ser substituído se vendido; o percentual do balanço não mostra quanto dinheiro estará disponível nos vencimentos. Daniel ainda solicitará o calendário das prestações e das receitas da cliente. Calcule o indicador e interprete seu alcance.</p>",
+     "alternativas": {
+      "a": "266,67%: dividir ativos por passivos mede o mesmo indicador e mostra quantas prestações a cliente pode assumir.",
+      "b": "62,5%: a diferença entre ativos e dívidas é o nível de endividamento, e o resultado comprova caixa para as parcelas.",
+      "c": "37,5%: o percentual confirma capacidade de pagamento, pois os ativos superam os passivos na fotografia patrimonial.",
+      "d": "37,5%: os passivos equivalem a essa fração dos ativos, mas o pagamento mensal ainda depende de renda, prestações e liquidez."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-13-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Antes, R$ 180.000 por R$ 480.000 dão 37,5%. Depois, os ativos são R$ 400.000 e as dívidas R$ 100.000; R$ 100.000 por R$ 400.000 dão 25%. A razão cai, mas a decisão exige examinar o que foi vendido e o benefício da amortização.</p><p>A alternativa B reduz o passivo sem reconhecer a saída do ativo usado para pagá-lo. A alternativa A acerta as razões, mas toma a redução numérica como aprovação automática da operação. A alternativa D calcula 45% com a dívida antiga, ignorando a amortização feita com o valor da venda.</p><p>Regra de bolso: uma amortização com venda reduz os dois lados do balanço; razão menor ainda pede análise de liquidez e objetivos.</p>",
+     "enunciado": "<p>A gerente Helena recebe Larissa após a venda de um ativo ocioso por R$ 80.000. Larissa aplicou o valor inteiro na amortização de uma dívida e quer comparar os balanços antes e depois da operação. Antes, eram R$ 480.000 em ativos e R$ 180.000 em passivos. Para este exercício, o preço obtido equivale ao valor registrado do ativo, e custos de venda e diferenças de avaliação valem zero. A operação reduz simultaneamente ativo e passivo em R$ 80.000. Larissa conclui que a queda do saldo devedor basta para chamar a decisão de boa, embora o dinheiro do ativo pudesse atender outro objetivo. Helena deve calcular a nova razão e explicar que a conveniência também depende de custo, risco, liquidez remanescente e finalidade do bem vendido. A cliente pretende saber quanto mudam os dois lados do balanço e se a queda da dívida, sozinha, preserva o dinheiro necessário aos objetivos próximos. Helena não recebeu informação suficiente para medir a economia de juros da amortização. Calcule o nível antes e depois.</p>",
+     "alternativas": {
+      "a": "De 37,5% para 25%, o que comprova por si a conveniência da venda independentemente da liquidez restante.",
+      "b": "De 37,5% para cerca de 20,83%, pois os R$ 80.000 amortizados reduzem só a dívida e preservam R$ 480.000 em ativos.",
+      "c": "De 37,5% para 25%, com R$ 400.000 de ativos e R$ 100.000 de dívidas depois da venda e amortização.",
+      "d": "De 37,5% para 45%, pois os ativos caem para R$ 400.000 e a dívida continua registrada em R$ 180.000."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-13-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. R$ 180.000 divididos por R$ 600.000 resultam em 30% de endividamento patrimonial. R$ 2.800 divididos por R$ 7.000 resultam em 40% de comprometimento da renda líquida do mês.</p><p>A alternativa B troca as duas respostas e mistura prestação com ativos. A alternativa A iguala percentuais obtidos de bases diferentes. A alternativa D divide estoque de dívida por renda mensal e obtém 25,71, uma relação inadequada para os dois indicadores pedidos.</p><p>Regra de bolso: saldo devido vai com total de ativos; prestações do mês vão com renda líquida do mês.</p>",
+     "enunciado": "<p>Para orientar um novo plano, a assessora Júlia reúne dois retratos de Sérgio em Fortaleza. O balanço traz ativos totais de R$ 600.000 e passivos totais de R$ 180.000. No mês, ele recebe R$ 7.000 líquidos e paga R$ 2.800 em prestações e parcelamentos; ainda existem despesas essenciais e uma reserva pequena. Sérgio divide R$ 180.000 por R$ 7.000 e chama o resultado de comprometimento de renda, pois ambos os números constam do seu relatório. Júlia precisa usar estoques com estoques e fluxos com fluxos antes de discutir se as parcelas limitam poupança e liquidez. Os dois indicadores podem apontar pressões diferentes, e nenhum deles, isolado, informa atraso, taxa ou estabilidade da renda. Júlia quer mostrar em um mesmo atendimento a proporção das dívidas no patrimônio e o peso das prestações na renda que entra a cada mês. O balanço e o orçamento usam períodos distintos e respondem a perguntas diferentes. Calcule endividamento patrimonial e comprometimento mensal conforme as bases da aula.</p>",
+     "alternativas": {
+      "a": "30% em ambas as medidas; saldo de dívida e prestação mensal representam a mesma obrigação em escalas distintas.",
+      "b": "40% de endividamento patrimonial e 30% de comprometimento mensal; a prestação deve ser ligada aos ativos totais.",
+      "c": "30% de endividamento patrimonial e 40% de comprometimento mensal; as razões usam bases e períodos distintos.",
+      "d": "R$ 25,71 de comprometimento mensal por real de renda; dividir a dívida total pela renda do mês substitui as duas razões."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-13-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Alongar o prazo pode aliviar a parcela mensal, mas também prolongar a exposição e elevar o custo total; taxa, amortização e fluxo do cliente determinam o efeito concreto.</p><p>A alternativa A confunde prestação com custo acumulado. A alternativa C toma pontualidade como proteção contra renda variável e desconsidera novas pressões do orçamento. A alternativa D altera o indicador patrimonial sem reduzir o saldo das dívidas.</p><p>Regra de bolso: parcela menor melhora o mês, mas preço e duração da dívida precisam ser examinados separadamente.</p>",
+     "enunciado": "<p>Uma proposta de renegociação chega ao gerente Caio, em Recife. O cliente mantém o mesmo saldo inicial de dívida e recebe oferta de prazo maior, com prestação mensal menor. Ele conclui que a operação ficará necessariamente mais barata e que uma prestação mais leve elimina o risco de novas dívidas. Caio precisa comparar taxa, prazo, amortização, garantias e concentração dos vencimentos, além de verificar o custo total informado para cada alternativa. Parte da renda do cliente é variável, e uma obrigação longa pode atravessar períodos de receita menor. A nova prestação pode abrir caixa no mês, mas prolongar pagamentos ou elevar custo total sob as condições do caso. O gerente também precisa avaliar se essa folga será usada para recompor liquidez ou assumida por outro gasto, antes de medir a saúde financeira. O cliente pretende usar a prestação reduzida como prova de melhora financeira, embora ainda não tenha comparado o montante que pagará até o fim. Analise a conclusão do cliente.</p>",
+     "alternativas": {
+      "a": "Prestação menor prova dívida mais barata, pois o saldo inicial permanece igual nas duas alternativas.",
+      "b": "Prazo maior pode reduzir a prestação e prolongar a obrigação ou elevar o custo total; compare as condições e o fluxo.",
+      "c": "Prazo maior resolve o risco de caixa se o cliente mantiver pagamentos em dia, dispensando análise da renda variável.",
+      "d": "A renegociação reduz o nível patrimonial de endividamento pela queda da prestação, mesmo com saldo devido igual."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-13-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Reduzir o índice pode ser positivo, mas usar o valor inteiro ameaça uma obrigação próxima se o caixa restante for insuficiente. A decisão depende do benefício em custo e risco da dívida, da finalidade do ativo e da liquidez preservada.</p><p>A alternativa B presume que razão menor paga uma conta com data marcada. A alternativa C transforma a necessidade de análise em proibição automática da amortização. A alternativa D usa ativos ilíquidos como dinheiro certo para justificar consumir o recurso disponível.</p><p>Regra de bolso: índice patrimonial melhor não substitui caixa para objetivos prioritários.</p>",
+     "enunciado": "<p>Depois de vender um ativo ocioso por R$ 80.000, Larissa pede à consultora Bruna, em Belém, que destine o valor inteiro à amortização. A operação reduziria seu nível patrimonial de endividamento de 37,5% para 25% nas hipóteses do cálculo anterior. Ao conferir o plano, Bruna descobre que a venda também era a fonte prevista para uma despesa prioritária com data próxima. Larissa ainda possui ativos valiosos, mas pouco caixa livre, e suas prestações mensais continuarão vencendo antes da entrada de parte da renda. Ela insiste que a queda do percentual basta para autorizar a amortização total porque prefere mostrar dívida menor no balanço. Bruna deve separar a melhora do índice da disponibilidade para a despesa e do efeito real sobre custo e risco da dívida. A despesa prioritária não pode ser adiada sem consequência para o plano, e Bruna precisa reservar a quantia exigida antes de decidir a amortização. Analise a decisão que preserva a saúde financeira do plano.</p>",
+     "alternativas": {
+      "a": "Confirmar a obrigação próxima, o caixa remanescente e o benefício da amortização antes de definir quanto do valor pode abater a dívida.",
+      "b": "Amortizar R$ 80.000 de imediato, pois reduzir a razão patrimonial assegura recursos para a despesa prioritária.",
+      "c": "Manter a dívida pelo saldo atual sem comparar custos, pois a existência de uma despesa futura torna qualquer amortização inadequada.",
+      "d": "Amortizar R$ 80.000 e contar os ativos de baixa liquidez pelo valor registrado como caixa para a despesa próxima."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-13-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Finalidade e garantia importam, mas nenhuma categoria dispensa olhar custo, prazo, fluxo, liquidez e vulnerabilidade a renda ou taxa variável. O refinanciamento é possibilidade sujeita a condições futuras, não caixa já disponível.</p><p>A alternativa B transforma finalidade patrimonial em aprovação automática. A alternativa C usa pontualidade presente para ignorar riscos que podem surgir antes do atraso. A alternativa D limita o diagnóstico ao estoque e presume solução futura para vencimentos concentrados.</p><p>Regra de bolso: dívida sustentável depende da combinação entre saldo, custo, calendário e capacidade de suportar choques.</p>",
+     "enunciado": "<p>Na revisão anual do plano, a especialista Renata conversa com Lúcio, que mantém dívida associada a um ativo útil e outra assumida para consumo. Ambas estão adimplentes. A primeira tem prazo longo e garantia; a segunda concentra vencimentos nos meses de renda mais baixa. Parte das prestações da família está vinculada a taxa variável, e Lúcio considera refinanciar o saldo se a renda cair. Ele afirma que a dívida ligada a patrimônio é saudável por definição e que estar em dia torna a outra irrelevante para o investimento programado. Renata observa que o nível patrimonial de endividamento resume saldos, enquanto o comprometimento mensal, o calendário, o custo e a liquidez mostram a capacidade de sustentar essas obrigações. Queda de renda, taxa variável e refinanciamento potencial podem pressionar a poupança e causar venda forçada. Renata pede a Lúcio que considere o que aconteceria com os pagamentos se a receita caísse no mesmo período em que a taxa variável elevasse parcelas. Avalie a leitura de Lúcio e indique o diagnóstico integrado.</p>",
+     "alternativas": {
+      "a": "Examinar finalidade, saldo, prestação, custo, vencimentos, liquidez e exposição a mudanças da renda e da taxa antes de manter aportes.",
+      "b": "Tratar a dívida ligada ao ativo como saudável por categoria e analisar somente a dívida de consumo nos meses de renda baixa.",
+      "c": "Usar a adimplência atual como prova de capacidade futura, pois atraso é o primeiro sinal possível de pressão financeira.",
+      "d": "Comparar apenas os saldos com os ativos e contar com refinanciamento futuro para cobrir a concentração de parcelas."
+     },
+     "gabarito": "a"
+    }
+   ],
+   "Dívidas: comparação de taxas, modalidades e prazos": [
+    {
+     "id": "cpror-cli-14-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A comparação começa com uma ficha atual de cada contrato, incluindo saldo, fluxos, custos, prazo e riscos ligados a garantias e atraso.</p><p>A alternativa B limita a análise à taxa anunciada e parcela, omitindo encargos. A alternativa A usa valor histórico e deixa fora riscos e condição de saída. A alternativa D descreve recursos do cliente, mas não permite conhecer o custo e o calendário contratual.</p><p>Regra de bolso: reúna saldo, fluxos e condições de cada dívida antes de ordenar pagamentos.</p>",
+     "enunciado": "<p>Uma gerente recebe duas propostas de crédito e precisa montar a ficha de cada dívida antes de orientar o cliente. Identifique as informações necessárias para comparar custo, prazo e risco.</p>",
+     "alternativas": {
+      "a": "Saldo original e prazo contratado, mantendo fora da ficha a garantia e o custo de liquidação antecipada.",
+      "b": "Taxa divulgada e valor da parcela, pois os demais encargos podem ser verificados apenas depois da contratação.",
+      "c": "Saldo atualizado, prestações e datas, taxa, CET, prazo, amortização, garantia, atraso e condição de quitação antecipada.",
+      "d": "Renda do cliente e valor dos bens, suficientes para inferir o custo total de cada dívida sem os contratos."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-14-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O CET amplia a comparação ao incorporar custos vinculados além dos juros, embora valor, prazo e forma de pagamento também precisem ser examinados.</p><p>A alternativa A atribui todos os custos à taxa divulgada e reduz indevidamente o CET. A alternativa C confunde custo da operação com saldo e dispensa os fluxos. A alternativa D restringe o CET a atraso e trata a taxa anunciada como custo completo.</p><p>Regra de bolso: compare o CET na base compatível e confira o fluxo contratual, não só a taxa de vitrine.</p>",
+     "enunciado": "<p>Ao comparar dois empréstimos, uma cliente observa a taxa de juros divulgada e pergunta por que o custo efetivo total também aparece no demonstrativo. Explique a diferença entre os dois dados.</p>",
+     "alternativas": {
+      "a": "A taxa divulgada já reúne encargos e garantias; o CET considera apenas a remuneração do agente financeiro ao final.",
+      "b": "A taxa divulgada pode deixar custos vinculados fora do destaque; o CET reúne juros, tarifas, tributos, seguros e outras despesas da operação.",
+      "c": "O CET indica o saldo devedor original e substitui a análise do prazo e do total de pagamentos futuros.",
+      "d": "O CET representa apenas a multa por atraso, enquanto a taxa divulgada determina o custo completo da operação."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-14-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Doze vezes R$ 1.100 são R$ 13.200; menos R$ 12.000 de saldo, restam R$ 1.200. Vinte vezes R$ 1.080 são R$ 21.600; menos R$ 20.000, restam R$ 1.600. A parcela menor de B convive com total e custo restante simplificado maiores.</p><p>A alternativa B substitui o custo restante de B pela parcela de um mês. A alternativa A trata os saldos como total de pagamentos e ignora a soma das prestações. A alternativa D acerta as contas, mas infere CET inferior a partir de uma parcela menor, sem comparar os fluxos e custos vinculados.</p><p>Regra de bolso: multiplique parcelas pelo prazo restante e separe o total do saldo, sem confundir a conta simplificada com CET.</p>",
+     "enunciado": "<p>Paulo procura a assessora Camila, em Recife, com os saldos e parcelas restantes de duas dívidas. A dívida A tem saldo devedor atualizado de R$ 12.000 e doze parcelas de R$ 1.100. A dívida B tem saldo de R$ 20.000 e vinte parcelas de R$ 1.080. Para uma comparação simplificada, o caso desconsidera mudanças por atraso e trata a soma das parcelas restantes como total a pagar. Paulo afirma que B custa menos porque sua parcela é R$ 20 menor, apesar de durar mais meses. Camila precisa distinguir prestação, total de pagamentos e diferença entre o total e o saldo devedor, antes de investigar CET e condições de cada contrato. Ela quer mostrar que esse custo restante simplificado depende também do número de parcelas. A diferença de R$ 20 entre as parcelas não informa quanto Paulo desembolsará ao longo dos contratos nem quanto pagará além do saldo de cada um. A taxa contratada e os encargos ainda precisarão ser conferidos. Calcule o total e o custo restante simplificado de cada dívida.</p>",
+     "alternativas": {
+      "a": "A totaliza R$ 12.000 e custa R$ 1.200; B totaliza R$ 20.000 e custa R$ 1.600, pois saldo e pagamentos coincidem.",
+      "b": "A totaliza R$ 13.200 e custa R$ 1.200; B totaliza R$ 21.600 e custa R$ 1.080, igual à parcela mensal.",
+      "c": "A totaliza R$ 13.200 e custa R$ 1.200 além do saldo; B totaliza R$ 21.600 e custa R$ 1.600 além do saldo.",
+      "d": "A totaliza R$ 13.200 e custa R$ 1.200; B totaliza R$ 21.600 e custa R$ 1.600, logo B tem CET inferior pela parcela menor."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-14-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Doze vezes R$ 1.100 totalizam R$ 13.200; vinte e quatro vezes R$ 600 totalizam R$ 14.400. A troca alivia R$ 500 por mês, mas acrescenta R$ 1.200 ao total simplificado e prolonga a obrigação.</p><p>A alternativa A confunde o saldo refinanciado com a soma das novas parcelas. A alternativa C calcula os valores, mas transforma custo maior em certeza de atraso, que depende do fluxo futuro. A alternativa D inverte o sinal da diferença e chama gasto adicional de economia.</p><p>Regra de bolso: parcela menor pode aliviar o mês e aumentar o total pago quando o prazo se alonga.</p>",
+     "enunciado": "<p>Ao abrir uma proposta de troca de dívida, Paulo encontra oferta para substituir a dívida A, cujo saldo é R$ 12.000 e cujo pagamento restante seria de doze parcelas de R$ 1.100. A nova operação prevê vinte e quatro parcelas de R$ 600; para esta conta, os totais informados incluem os pagamentos considerados e os custos adicionais valem zero. Paulo valoriza a queda de R$ 500 na prestação e conclui que a troca também reduz o total devido. Sua renda ainda comporta a parcela atual, mas ele quer guardar margem para imprevistos. A gerente Beatriz deve calcular o total restante em cada alternativa, explicar a diferença e separar alívio de caixa de economia total. Depois, poderá examinar CET, garantias, prazo e risco de atraso para decidir se a troca serve ao orçamento. A prestação menor pode evitar aperto no mês, mas a nova sequência de pagamentos ocupa o orçamento por mais tempo; Beatriz mede ambos os efeitos. Paulo quer distinguir a conta simplificada da análise contratual posterior, porque CET e condições de antecipação não estão representados pela soma das parcelas. Calcule os totais e a diferença simplificada.</p>",
+     "alternativas": {
+      "a": "A dívida atual soma R$ 13.200 e a troca R$ 12.000; a parcela cai e o total diminui pelo saldo refinanciado.",
+      "b": "A dívida atual soma R$ 13.200 e a troca R$ 14.400; a parcela cai, mas o total da troca aumenta R$ 1.200.",
+      "c": "A dívida atual soma R$ 13.200 e a troca R$ 14.400; os R$ 1.200 adicionais provam atraso futuro do cliente.",
+      "d": "A dívida atual soma R$ 13.200 e a troca R$ 14.400; a diferença de R$ 1.200 representa economia pelo prazo maior."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-14-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Taxas precisam estar na mesma unidade efetiva, ou os fluxos completos e o CET devem ser cotejados com prazo, valor, encargos e calendário; percentuais mensais e anuais impressos lado a lado não bastam.</p><p>A alternativa B compara bases temporais diferentes. A alternativa C usa multiplicação simples que pode falhar com capitalização e omite custos contratuais. A alternativa D adia a análise de custos que pode mudar a escolha.</p><p>Regra de bolso: iguale período e base antes de comparar taxa; confira o custo completo antes de contratar.</p>",
+     "enunciado": "<p>Uma tabela de ofertas chega ao consultor Yuri, em Salvador. A primeira operação informa uma taxa efetiva mensal; a segunda anuncia uma taxa efetiva anual e duração contratual diferente. O cliente lê os números impressos, percebe que o algarismo da taxa anual é maior e propõe escolher a oferta mensal sem olhar valor liberado, prestações ou encargos. Yuri observa que comparar percentuais de unidades temporais distintas diretamente cria uma conclusão falsa e que multiplicar a taxa mensal por doze pode ignorar a capitalização. Mesmo depois de colocadas na mesma base, as operações podem ter tarifas, seguros, garantias e calendários de pagamento diferentes. Ele precisa explicar o método de comparação antes de apontar uma opção. O cliente precisa comparar obrigações de crédito que consomem a mesma renda, de modo que Yuri exige período de referência comum antes de examinar os demais encargos. Indique como as taxas e os fluxos devem ser cotejados.</p>",
+     "alternativas": {
+      "a": "Colocar taxas efetivas na mesma unidade temporal ou comparar fluxos completos e CET, preservando prazo e custos de cada oferta.",
+      "b": "Comparar os números impressos como estão, pois taxa anual numericamente maior implica custo contratual superior.",
+      "c": "Multiplicar a taxa mensal por doze e escolher uma taxa numericamente inferior, dispensando CET, garantias e forma de amortização.",
+      "d": "Escolher pela taxa anunciada menor na unidade original e conferir custos vinculados apenas após a contratação."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-14-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O rotativo pode ser reutilizado, o parcelado segue pagamentos previstos, e a garantia pode baixar custo enquanto expõe patrimônio; desconto automático da renda reduz flexibilidade de caixa.</p><p>A alternativa B ignora a reutilização do rotativo. A alternativa C confunde proteção do credor com proteção do cliente e despreza pressão orçamentária. A alternativa D trata modalidade e taxa anunciada como substitutos das condições concretas do contrato.</p><p>Regra de bolso: modalidade define mecanismo e risco, mas contrato e fluxo determinam o custo para o cliente.</p>",
+     "enunciado": "<p>Na revisão do orçamento, a gerente Helena encontra três obrigações de Lúcia: saldo reutilizado de limite rotativo, empréstimo parcelado com prestações definidas e financiamento respaldado por bem usado pela família. Parte do crédito garantido tem taxa menor que a do rotativo, mas coloca patrimônio em risco; o empréstimo parcelado reduz o saldo conforme os pagamentos, enquanto Lúcia volta a usar o limite depois de amortizá-lo. Ela propõe classificar as três dívidas só pela taxa anunciada e afirma que o desconto automático da prestação garantida prova ausência de risco no orçamento. Helena precisa diferenciar mecanismo de cada modalidade, custo efetivo, garantia e flexibilidade da renda, sem pressupor que a mesma categoria tenha taxa idêntica em contratos distintos. Lúcia quer decidir qual saldo reduzir primeiro, mas o efeito de cada pagamento depende de como o contrato amortiza a dívida e do que permanece garantido. Compare os riscos relevantes para a decisão.</p>",
+     "alternativas": {
+      "a": "Distinguir limite rotativo reutilizável, saldo parcelado em amortização e dívida garantida que expõe o bem e reduz flexibilidade.",
+      "b": "Tratar limite rotativo e dívida parcelada como saldo que cai definitivamente a cada pagamento, pois ambos têm prestações.",
+      "c": "Priorizar o financiamento garantido pela taxa menor, pois a garantia protege o cliente e o débito automático elimina pressão de caixa.",
+      "d": "Comparar somente a taxa de vitrine das três modalidades, já que o tipo de crédito determina os custos e prazos de cada contrato."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-14-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Priorizar custo pode reduzir gasto financeiro, mas atraso e garantia próxima trazem consequências adicionais. Nilo deve verificar calendário e caixa mínimo antes de aplicar o valor disponível à sequência de pagamentos.</p><p>A alternativa B transforma maior taxa em regra única e deixa riscos imediatos descobertos. A alternativa C transforma garantia em prioridade exclusiva e desconsidera custo elevado. A alternativa A usa proporção de saldos sem analisar taxa, vencimento ou consequências do atraso.</p><p>Regra de bolso: ordene dívidas por custo e risco de cada vencimento, depois de proteger o caixa indispensável.</p>",
+     "enunciado": "<p>Uma cobrança vencida leva Denise ao assessor Nilo, em Belém. Ela possui um limite rotativo de custo elevado, parcelas de empréstimo de custo menor e uma obrigação garantida que vencerá em breve; o bem dado em garantia participa da rotina da família. Denise dispõe de caixa limitado para amortizar dívidas e quer direcionar o valor inteiro ao rotativo porque ouviu que a taxa superior deve definir a ordem sem exceção. Nilo confirma que atacar custo elevado pode ser eficiente, mas verifica os encargos do atraso já ocorrido, o vencimento da dívida garantida e a possibilidade de perder flexibilidade ou o bem se as próximas prestações falharem. Ele também precisa manter recursos para despesas essenciais antes da entrada de renda. A decisão deve combinar custo, urgência, garantia e calendário, sem ignorar a vantagem potencial de reduzir o rotativo. O caixa disponível não basta para liquidar simultaneamente todas as obrigações; Nilo precisa preservar o pagamento essencial enquanto avalia cada consequência. Analise a prioridade no caso.</p>",
+     "alternativas": {
+      "a": "Distribuir o caixa proporcionalmente aos saldos de cada contrato, pois o saldo determina sozinho custo e urgência.",
+      "b": "Usar o caixa disponível inteiro no rotativo, pois a taxa maior elimina a relevância de vencimento próximo e de bem em garantia.",
+      "c": "Pagar apenas a obrigação garantida, pois o bem ligado à família torna o custo do rotativo irrelevante para a decisão.",
+      "d": "Mapear custo e consequências imediatas do atraso e da garantia, preservar caixa essencial e então alocar a amortização disponível."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-14-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Se a prestação atual gera déficit, alongar pode evitar inadimplência mesmo com R$ 1.200 a mais no total simplificado, desde que as condições sejam comparadas e a nova margem sobreviva ao orçamento ajustado.</p><p>A alternativa B usa custo total como veto automático e ignora o risco de atraso já presente. A alternativa C trata limite reutilizado como folga, quando novos gastos podem recriar a dívida. A alternativa A aprova prazo maior sem conferir componentes que determinam o custo real da troca.</p><p>Regra de bolso: renegociação útil resolve o caixa sem reproduzir o déficit e precisa ser comparada pelo custo completo.</p>",
+     "enunciado": "<p>Após redução de renda, Paulo procura a consultora Marina, em Manaus, para renegociar a dívida A. As doze parcelas de R$ 1.100 deixam seu orçamento mensal deficitário; a oferta de vinte e quatro parcelas de R$ 600 reduz a saída imediata, embora o total simplificado suba de R$ 13.200 para R$ 14.400. Ele considera a troca aceitável se evitar atrasos e alternativas de custo inferior estiverem indisponíveis, mas planeja voltar a usar o limite rotativo para manter gastos incompatíveis com a nova renda. Marina precisa diferenciar a decisão de emergência de uma aprovação incondicional: conferir CET, saldo liquidado, novo valor recebido, garantias, custo de contratação e fluxo real após a troca. Mesmo que a operação alivie o mês, reocupar o limite pode recriar o déficit e ampliar o risco de refinanciamento. Paulo não dispõe de renda para sustentar a prestação original; a troca só cria espaço útil se o novo plano de gastos deixar de depender do rotativo. Avalie a proposta e indique a condição para a renegociação sustentar o plano.</p>",
+     "alternativas": {
+      "a": "A troca fica vantajosa pelo prazo maior, dispensando examinar CET, custos e valor liquidado do contrato antigo.",
+      "b": "A troca deve ser recusada pelo total maior, ainda que a prestação atual gere déficit e atrasos iminentes.",
+      "c": "A troca pode ser aceita pela parcela menor, e reusar o rotativo preserva a folga porque o limite não é dívida até vencer.",
+      "d": "A troca pode evitar atraso apesar do total maior, após comparar condições e ajustar o orçamento para manter a folga criada."
+     },
+     "gabarito": "d"
+    }
+   ],
+   "Coleta de informações para análise do perfil": [
+    {
+     "id": "cpror-cli-15-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A coleta precisa dar base às dimensões de objetivos, situação financeira e conhecimento para compreender riscos antes da recomendação abrangida pela norma.</p><p>A alternativa B usa inferências superficiais no lugar de dados. A alternativa C seleciona respostas insuficientes e uma categoria desejada, sem avaliar capacidade e compreensão. A alternativa D se concentra na oferta e no histórico comercial, não na realidade do investidor.</p><p>Regra de bolso: finalidade, capacidade financeira e compreensão de riscos formam o núcleo da coleta.</p>",
+     "enunciado": "<p>Uma gerente inicia a coleta de dados antes de indicar um investimento. Identifique as três dimensões que a análise de perfil deve examinar conforme a aula.</p>",
+     "alternativas": {
+      "a": "Objetivos de investimento, situação financeira e conhecimento necessário para compreender riscos.",
+      "b": "Idade, profissão e aparência financeira observada durante a conversa com o cliente.",
+      "c": "Rentabilidade desejada, valor disponível hoje e categoria que o cliente prefere receber.",
+      "d": "Produtos já oferecidos pela instituição, prazo comercial e histórico de atendimento da agência."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-15-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A dimensão de objetivos inclui finalidade, horizonte, preferência de risco e necessidade futura de recursos; perguntar sobre a compra revela prazo e quantia com uso definido.</p><p>A alternativa B troca finalidade por familiaridade com produto e categoria pretendida. A alternativa A usa retorno passado para inferir uma obrigação futura que precisa ser perguntada. A alternativa D substitui as informações da cliente por inferências demográficas.</p><p>Regra de bolso: antes de discutir produto, pergunte para que, quando e quanto dinheiro o cliente precisará.</p>",
+     "enunciado": "<p>Uma cliente informa que busca crescimento para a carteira, mas também prevê usar parte do dinheiro em uma compra futura. A assessora precisa completar a dimensão dos objetivos antes de classificar o recurso. Indique o que perguntar.</p>",
+     "alternativas": {
+      "a": "Quanto a carteira rendeu antes da compra, pois o retorno passado determina a data e o valor futuros da necessidade.",
+      "b": "Qual produto a cliente reconhece pelo nome e se aceitaria uma categoria de perfil que libera acesso a ele.",
+      "c": "Qual é a finalidade da compra, quando o valor será necessário, qual parcela será usada e que oscilação a cliente aceita nesse intervalo.",
+      "d": "Qual é a profissão da cliente e sua idade, dados suficientes para presumir o prazo e a preferência por risco."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-15-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Valor agregado não mostra quando o dinheiro chega ou que parte dos bens sustenta moradia e trabalho. A análise financeira requer origem e regularidade da renda, patrimônio por função e liquidez, dívidas e necessidades futuras de caixa.</p><p>A alternativa B trata patrimônio como caixa imediato. A alternativa C reconhece obrigações, mas dispensa avaliação de prazo e uso dos ativos. A alternativa D separa bens, porém infere estabilidade de renda sem investigar a concentração de contratos e pagamentos variáveis.</p><p>Regra de bolso: situação financeira é renda qualificada, patrimônio disponível e obrigações, não um saldo isolado.</p>",
+     "enunciado": "<p>Um gerente recebe de Elisa, em Recife, a informação de que ela possui patrimônio de R$ 700.000 e renda anual elevada. Parte dos bens é sua residência e equipamento usado no trabalho; outra parte está aplicada, mas tem prazo de resgate. A renda depende de poucos contratos e alguns pagamentos variam de mês para mês. Elisa pede que o valor patrimonial seja usado como prova de ampla capacidade para investir, pois considera desnecessário detalhar a origem do dinheiro e as obrigações futuras. O gerente precisa qualificar receitas por valor, frequência, estabilidade e origem, separar bens por função e liquidez e levantar necessidades futuras de caixa e dívidas. O montante agregado pode esconder dificuldade de atender um compromisso próximo sem vender bem de uso ou resgatar posição em condição desfavorável. A cliente pretende assumir um compromisso de investimento, e o gerente precisa identificar quais recursos estariam livres depois dos pagamentos já previstos. Analise a coleta financeira que falta.</p>",
+     "alternativas": {
+      "a": "Detalhar estabilidade e origem da renda, função e liquidez dos bens e obrigações futuras antes de concluir a capacidade financeira.",
+      "b": "Usar os R$ 700.000 como caixa disponível, desde que a renda anual também seja elevada e os bens constem no balanço.",
+      "c": "Verificar apenas as dívidas do mês e a renda anual, pois o patrimônio total já incorpora prazo de resgate e função dos bens.",
+      "d": "Separar bens de uso dos demais, mas presumir renda estável porque Elisa mantém contratos e possui patrimônio expressivo."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-15-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A coleta de conhecimento exige experiência concreta e entendimento dos riscos; profissão e familiaridade com o nome ajudam a formular perguntas, mas não substituem operações e compreensão demonstradas.</p><p>A alternativa B transforma cargo e evento antigo de pequeno valor em domínio atual. A alternativa C considera formação, porém dispensa natureza e frequência das operações e não pergunta sobre riscos. A alternativa A elimina uma dimensão necessária por declaração e profissão.</p><p>Regra de bolso: conhecer o nome do produto é diferente de ter operado e compreender suas perdas possíveis.</p>",
+     "enunciado": "<p>Ao revisar o cadastro de Mauro, a assessora Janaína, em Curitiba, descobre que ele reconhece o nome de uma estratégia volátil e diz ter visto colegas comentarem seus resultados. O formulário marcou experiência elevada, mas o histórico documentado mostra uma única compra de valor pequeno anos atrás, sem operação comparável desde então. Mauro quer manter a marcação porque trabalha em uma empresa do setor financeiro e considera a profissão prova de domínio técnico. Janaína precisa separar familiaridade verbal de compreensão do mecanismo, das perdas possíveis e da reação do cliente quando o preço oscila. Ela também deve apurar natureza, volume, frequência e período das operações, além de formação e experiência profissional quando pertinentes, sem presumir que o cargo substitui essas respostas. Janaína pede exemplos concretos do que Mauro fez quando uma posição perdeu valor, para verificar se ele entende o risco que afirma conhecer. Indique como completar a dimensão de conhecimento.</p>",
+     "alternativas": {
+      "a": "Retirar a dimensão de conhecimento quando o cliente trabalha no setor financeiro e declara aceitar perdas em estratégias voláteis.",
+      "b": "Manter experiência elevada pelo cargo e pelo reconhecimento do nome, pois uma compra anterior confirma a prática recente.",
+      "c": "Registrar experiência com base na formação e perguntar apenas a rentabilidade esperada, pois o risco decorre do resultado.",
+      "d": "Investigar operações concretas, volume, frequência, período e compreensão dos riscos, usando profissão como dado adicional."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-15-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Profissão e aparência patrimonial não preenchem lacunas sobre objetivo, situação financeira e conhecimento; respostas devem retratar a realidade, com perguntas abertas e confirmação dos dados, sem condução para uma categoria desejada.</p><p>A alternativa A usa dados demográficos como conclusão e ignora a necessidade próxima. A alternativa C induz confirmação formal em vez de apurar o conflito. A alternativa D reconhece a parcela com data, mas presume adequação de risco para o restante sem examinar capacidade e compreensão.</p><p>Regra de bolso: investigue o cliente real, não ajuste respostas para sustentar um rótulo prévio.</p>",
+     "enunciado": "<p>Uma proposta de carteira chega ao consultor Rafael, em Goiânia, acompanhada de um perfil preenchido pela equipe. A cliente é médica, tem renda alta e está perto da aposentadoria. O atendente anterior marcou tolerância elevada à volatilidade porque associou profissão e patrimônio a preparo financeiro; no encontro, a cliente diz que pretende usar parte dos recursos em breve e que uma queda relevante a faria interromper o plano. Rafael ainda desconhece a reserva disponível, a regularidade da renda e a experiência dela com oscilações. Um colega sugere perguntar de maneira que ela confirme a classificação já lançada, para evitar retrabalho. Rafael precisa obter respostas fiéis, combinando perguntas abertas sobre objetivos e reação a perdas com perguntas fechadas para confirmar números e prazos. A classificação anterior foi inferida por terceiros, sem confirmar a finalidade dos recursos com a própria cliente; Rafael deve reconstruir essa etapa. Avalie o procedimento para corrigir a coleta.</p>",
+     "alternativas": {
+      "a": "Conservar a categoria porque profissão e renda indicam capacidade, ajustando apenas a data de aposentadoria no formulário.",
+      "b": "Reabrir as perguntas sobre finalidade, prazo, caixa, renda e experiência, registrando as respostas da cliente sem induzir a categoria.",
+      "c": "Perguntar se ela aceita o perfil já marcado e interpretar a confirmação como prova de tolerância, conhecimento e liquidez.",
+      "d": "Manter o perfil e separar a parcela de uso próximo, presumindo que o restante pode seguir risco elevado pelo patrimônio."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-15-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Respostas incompatíveis exigem esclarecimento; o pedido de produto e a declaração de aversão a perdas precisam ser reconciliados com finalidade, data da despesa e conhecimento antes de uma indicação.</p><p>A alternativa A seleciona a resposta favorável ao produto e ignora a aversão relatada. A alternativa C seleciona a resposta oposta e deixa de entender o pedido. A alternativa D usa a existência formal de um formulário para esconder a inconsistência.</p><p>Regra de bolso: contradição na coleta pede pergunta nova, não escolha conveniente entre duas frases.</p>",
+     "enunciado": "<p>Durante o atendimento, Luana informa à gerente Beatriz, em Salvador, que deseja uma estratégia de alta volatilidade e, no mesmo formulário, registra aversão a queda temporária do valor aplicado. O cadastro foi preenchido recentemente, mas a equipe considera as duas respostas suficientes para recomendar o produto porque uma delas demonstra interesse explícito. Luana também tem uma despesa com data definida e tem experiência com ativos oscilantes ainda desconhecida pela gerente. Beatriz precisa entender se a cliente diferencia perda temporária, perda permanente e necessidade de resgate; escolher apenas a frase favorável à indicação esconderia a contradição. O processo exige esclarecer finalidade, horizonte, conhecimento e consequência de perdas antes de concluir sobre adequação. Beatriz registra as duas respostas e pergunta como Luana reagiria a uma perda pouco antes da despesa prevista, em vez de selecionar a frase que liberaria a estratégia desejada. Analise o tratamento das respostas contraditórias.</p>",
+     "alternativas": {
+      "a": "Dar prioridade ao pedido de alta volatilidade, pois foi manifestado diretamente e prevalece sobre o formulário.",
+      "b": "Esclarecer a contradição com Luana, a necessidade de caixa e a compreensão das perdas antes de avaliar a estratégia.",
+      "c": "Dar prioridade à aversão a perdas e fixar a categoria definitiva sem investigar por que ela solicitou a estratégia.",
+      "d": "Considerar o formulário recente suficiente e escolher a resposta que permita oferecer a estratégia desejada."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-15-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Os R$ 100.000 têm data e finalidade rígidas; os R$ 20.000 restantes ainda exigem investigação de objetivo, situação financeira e conhecimento. Sem reserva e sem experiência em oscilação, a frase sobre aceitar queda de 25% é insuficiente.</p><p>A alternativa B confunde disposição declarada com capacidade de perder antes da quitação. A alternativa C protege o pagamento do imóvel, mas aprova o restante sem avaliar experiência e função do recurso. A alternativa A usa volume e imóvel como substitutos da análise e promete absorção de perdas sem base.</p><p>Regra de bolso: separação por objetivo vem antes da indicação; tolerância declarada é só uma parte do perfil.</p>",
+     "enunciado": "<p>Renato procura o assessor Ícaro, em Belém, para aplicar R$ 120.000 em estratégia volátil e declara aceitar queda de 25%. Na conversa, revela que R$ 100.000 pagarão a quitação de um imóvel em nove meses, está sem reserva e carece de experiência com ativos de oscilação semelhante. Renato insiste que sua declaração de tolerância resolve a análise e pede que Ícaro trate o valor inteiro como disponível para risco, pois teme perder uma oportunidade de retorno. Ícaro precisa preservar a obrigação com data, investigar a função dos R$ 20.000 restantes e apurar o conhecimento real do cliente, sem converter coragem declarada em capacidade financeira ou domínio do produto. Uma indicação depende da combinação entre objetivo, caixa e compreensão, além da declaração isolada. O cliente deseja que o atendimento avance direto para a ordem de aplicação, embora o assessor ainda não tenha identificado recursos livres após quitar o imóvel. Avalie o caso e indique a conclusão sobre a coleta necessária.</p>",
+     "alternativas": {
+      "a": "Marcar perfil agressivo pelo valor total e confirmar o imóvel como ativo suficiente para absorver uma queda de 25%.",
+      "b": "Aplicar R$ 120.000 na estratégia porque a declaração de aceitar 25% de queda cobre a necessidade de caixa próxima.",
+      "c": "Separar os R$ 100.000 da quitação e aplicar os R$ 20.000 restantes pela tolerância declarada, dispensando experiência.",
+      "d": "Separar os R$ 100.000 da quitação, investigar o destino dos R$ 20.000 e testar capacidade e compreensão antes de indicar."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-15-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. Nova fonte para o imóvel, reserva e horizonte longo mudam objetivo e capacidade, mas conhecimento segue como dimensão própria. A coleta precisa refletir a situação atual antes da indicação, mesmo com formulário formalmente vigente.</p><p>A alternativa B toma validade formal como prova de que os dados econômicos continuam atuais. A alternativa A confunde capacidade e prazo com compreensão de riscos. A alternativa D registra uma mudança, mas presume experiência que o caso ainda não esclareceu.</p><p>Regra de bolso: mudança relevante abre nova análise; melhorar prazo e caixa não preenche lacuna de conhecimento.</p>",
+     "enunciado": "<p>Uma revisão de cadastro leva Renato de volta à gerente Júlia, em Porto Alegre. Desde a análise anterior, ele obteve outra fonte segura para pagar o imóvel, formou uma reserva suficiente e passou a destinar R$ 120.000 a objetivo com horizonte de dez anos. O formulário antigo ainda existe e está dentro do prazo formal de atualização, mas descreve a obrigação de nove meses e a ausência de reserva. Renato conclui que as mudanças já autorizam a estratégia volátil, pois retiraram o conflito de prazo, e pede apenas que Júlia confirme o cadastro anterior. Ela reconhece que a capacidade de assumir oscilação pode ter mudado, mas a experiência de Renato com ativos voláteis continua desconhecida. É necessário atualizar os fatos econômicos, esclarecer conhecimento e compreensão dos riscos e então reavaliar a adequação sem orientar respostas. A nova finalidade retira uma restrição anterior, mas Júlia ainda precisa completar a parte do perfil que nunca foi verificada na primeira conversa. Analise o efeito das mudanças no processo.</p>",
+     "alternativas": {
+      "a": "Indicar a estratégia pela reserva e pelo horizonte de dez anos, pois esses dois dados comprovam compreensão de volatilidade.",
+      "b": "Usar o formulário antigo até o prazo formal vencer, porque mudanças favoráveis dispensam nova análise econômica.",
+      "c": "Atualizar objetivo e situação financeira, apurar conhecimento ainda ausente e só depois reavaliar alternativas para os R$ 120.000.",
+      "d": "Atualizar somente o prazo do objetivo e manter a classificação anterior de conhecimento, apesar da experiência desconhecida."
+     },
+     "gabarito": "c"
+    }
+   ],
+   "Tolerância ao risco e capacidade financeira de suportar perdas": [
+    {
+     "id": "cpror-cli-17-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Tolerância descreve a disposição subjetiva diante de oscilações e perdas; capacidade examina se a situação financeira permite absorvê-las sem comprometer despesas, reservas e objetivos.</p><p>A alternativa A troca as dimensões de lugar. A alternativa B apaga a análise objetiva mesmo após uma entrevista. A alternativa D confunde tolerância com necessidade de retorno e reduz a capacidade ao patrimônio bruto.</p><p>Regra de bolso: pergunte se o cliente aceita o risco e se consegue arcar com suas consequências.</p>",
+     "enunciado": "<p>Uma cliente afirma que suportaria ver a carteira oscilar. Seu assessor ainda precisa avaliar o efeito de uma perda sobre as contas e os objetivos dela. Compare tolerância ao risco e capacidade financeira para suportá-lo.</p>",
+     "alternativas": {
+      "a": "Tolerância descreve os recursos disponíveis, enquanto capacidade é a disposição declarada diante de uma queda de preço.",
+      "b": "As duas dimensões representam a mesma resposta do questionário, desde que a cliente confirme a disposição em uma entrevista.",
+      "c": "Tolerância é a disposição diante da incerteza; capacidade é a condição de absorver perdas sem romper obrigações e objetivos.",
+      "d": "Tolerância depende do retorno exigido pela meta, enquanto capacidade depende somente do valor total dos bens da cliente."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-17-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Necessidade de risco relaciona meta, capital, aportes e prazo ao retorno que o plano parece exigir. Esse retorno necessário não prova tolerância nem capacidade financeira. Se houver incompatibilidade, o plano precisa ser revisto.</p><p>A alternativa B dispensa indevidamente a tolerância. A alternativa C converte uma exigência matemática em autorização para expor o cliente a perdas. A alternativa A troca a necessidade de retorno pela capacidade, que depende de recursos, obrigações e liquidez.</p><p>Regra de bolso: retorno necessário é uma informação do plano, não licença para arriscar.</p>",
+     "enunciado": "<p>Ao rever uma meta, uma planejadora conclui que o prazo e os aportes atuais exigiriam retorno elevado. O cliente entende esse resultado como permissão para assumir perdas maiores. Identifique o papel da necessidade de risco no diagnóstico.</p>",
+     "alternativas": {
+      "a": "Ela mede o patrimônio disponível para perdas, desde que o valor pretendido e o prazo tenham sido informados pelo cliente.",
+      "b": "Ela substitui a avaliação de tolerância quando a meta tem prazo definido e contribuições mensais registradas no orçamento.",
+      "c": "Ela demonstra que a carteira deve assumir o risco exigido pelo objetivo, mesmo quando o cliente rejeita oscilações relevantes.",
+      "d": "Ela revela o retorno que o plano parece exigir, mas não cria disposição ou capacidade para suportar a exposição necessária."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-17-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A reação declarada à perda é uma medida de tolerância, enquanto a capacidade depende da consequência financeira de perder antes de usar o recurso. Caio tem obrigação próxima, dependentes e renda menos previsível; Marina dispõe de outra reserva e horizonte longo para a parcela analisada. Ainda é preciso avaliar todo o perfil de ambos.</p><p>A alternativa A reconhece os prazos, mas deixa que a resposta subjetiva determine exposição igual. A alternativa D trata renda estável como dispensa de tolerância e usa uma característica isolada para Caio. A alternativa C transforma a necessidade de retorno em autorização para arriscar o valor do imóvel.</p><p>Regra de bolso: a mesma vontade de correr risco pode conviver com capacidades financeiras diferentes.</p>",
+     "enunciado": "<p>Durante uma revisão em Vitória, a assessora Lívia recebe dois clientes que declararam aceitar uma queda temporária de 25% no investimento. Caio sustenta dois dependentes, recebe por projetos, tem prestações mensais e pretende usar quase toda a aplicação na entrada de um imóvel dentro de doze meses. Marina dispõe de renda regular acima das despesas, mantém reserva separada e destinou a parcela examinada à aposentadoria em vinte anos. Caio afirma que a resposta idêntica no questionário exige carteiras idênticas, pois ambos demonstraram a mesma coragem. Lívia confirma a preferência declarada, mas precisa investigar o efeito de uma perda antes da entrada do imóvel, a estabilidade da renda de cada um e a função dos recursos. Uma posição vendida em momento desfavorável poderia romper o plano de Caio, ainda que ele se diga disposto a esperar. Analise como a assessora deve diferenciar a capacidade financeira dos dois clientes.</p>",
+     "alternativas": {
+      "a": "A resposta igual no cenário de queda autoriza exposição equivalente, desde que Lívia registre separadamente os prazos dos objetivos.",
+      "b": "A tolerância declarada coincide, mas renda, dependentes, reserva e data de uso podem restringir mais a parcela destinada ao imóvel.",
+      "c": "Caio pode compensar a data próxima do imóvel com risco maior, pois o objetivo exige crescimento da aplicação em prazo curto.",
+      "d": "A renda regular de Marina dispensa a avaliação de tolerância, enquanto a renda variável de Caio define sozinha a carteira dele."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-17-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A análise de adequação considera objetivos, situação financeira e conhecimento. O recurso com uso definido exige atenção ao prazo; patrimônio de moradia e participação ilíquida não substituem caixa; renda, obrigações e experiência precisam ser investigadas.</p><p>A alternativa A conserva apenas valores agregados e preferência, sem examinar as três dimensões. A alternativa B registra um objetivo, mas presume capacidade e conhecimento a partir de sinais insuficientes. A alternativa D inclui experiência e data, porém transforma um mês de renda variável em diagnóstico estável.</p><p>Regra de bolso: coragem declarada é dado da entrevista, não diagnóstico completo de adequação.</p>",
+     "enunciado": "<p>No atendimento de Bianca, em Curitiba, o gerente Roberto ouve que ela aceita oscilações acentuadas e prefere buscar retorno maior. Bianca possui patrimônio elevado, mas a maior parte corresponde à residência da família e a uma participação difícil de vender. Sua renda recebida varia entre meses, há prestações em aberto e parte dos recursos financeiros será usada para pagar um curso com data definida. Roberto dispõe de respostas sobre preferência por risco, mas ainda não verificou a liquidez dos bens, o calendário de despesas, a regularidade das receitas nem a experiência da cliente com a estratégia cogitada. Bianca insiste que o valor do patrimônio e sua declaração de coragem encerram a análise. Antes de decidir sobre a indicação, Roberto precisa cumprir as dimensões de objetivos, situação financeira e conhecimento previstas na Resolução CVM 30, sem tratar bens de uso como caixa disponível. Indique a coleta que completa o diagnóstico.</p>",
+     "alternativas": {
+      "a": "Registrar patrimônio total e preferência declarada, acrescentando apenas a taxa de retorno que Bianca deseja alcançar com a aplicação.",
+      "b": "Considerar o curso como objetivo, mas inferir capacidade a partir da residência e conhecimento a partir da aceitação verbal de perdas.",
+      "c": "Apurar prazo e finalidade do curso, receitas, obrigações, liquidez dos bens e conhecimento da estratégia antes de avaliar adequação.",
+      "d": "Investigar a experiência com o produto e a data do curso, usando a renda de um mês favorável como medida suficiente da situação financeira."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-17-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A capacidade de suportar perda varia conforme o destino do dinheiro. A reserva atende imprevistos; a reforma tem data próxima e ausência de fonte substituta; a aposentadoria permite horizonte maior, sujeito ainda à tolerância, à situação financeira e ao conhecimento da cliente.</p><p>A alternativa B preserva a exposição geral e trata prazo de resgate como correção suficiente para o risco de perda. A alternativa C confunde cobertura das despesas atuais com proteção de metas futuras. A alternativa D separa a reserva, mas iguala dois objetivos com horizontes distintos.</p><p>Regra de bolso: uma pessoa pode ter mais de uma capacidade de risco, conforme a parcela e seu uso.</p>",
+     "enunciado": "<p>Depois de receber uma indenização, Helena apresenta à planejadora Sara, em Belém, R$ 300.000 para organizar. Ela separou R$ 45.000 como reserva para uma eventual perda de renda, R$ 105.000 para reformar a moradia em onze meses e R$ 150.000 para complementar a aposentadoria daqui a vinte anos. A cliente mantém despesas mensais cobertas pela renda atual, mas não teria outra fonte imediata para pagar a reforma no prazo previsto. Helena afirma que aceita ver o patrimônio oscilar e pede uma única classificação agressiva para todo o valor, porque considera mais simples acompanhar apenas uma carteira. Sara precisa explicar por que a finalidade e a data de cada parcela alteram a consequência de uma perda, mesmo quando a pessoa apresenta uma disposição geral para assumir risco. A simplicidade operacional interessa à cliente, mas não pode apagar a necessidade de acesso da reserva e da obra. Avalie a forma de organizar o diagnóstico das parcelas.</p>",
+     "alternativas": {
+      "a": "Analisar reserva, reforma e aposentadoria por finalidade, prazo e perda absorvível, respeitando o limite mais restritivo de cada parcela.",
+      "b": "Aplicar a tolerância declarada aos R$ 300.000 e ajustar somente o prazo de resgate dos produtos destinados à reserva e à reforma.",
+      "c": "Tratar a indenização como recurso de longo prazo, pois a renda mensal atual cobre as despesas ordinárias da cliente.",
+      "d": "Separar a reserva, mas reunir reforma e aposentadoria numa parcela única porque ambas são metas patrimoniais da mesma pessoa."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-17-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Idade não substitui a análise de renda, obrigações, liquidez, reserva e prazo. A cliente jovem pode ter baixa capacidade na parcela com uso próximo; a aposentada pode ter condições objetivas de absorver oscilações na parcela discutida, mesmo que a tolerância dela precise ser apurada separadamente.</p><p>A alternativa C transforma fase de vida em classificação automática. A alternativa B mantém a idade como ponto determinante e reduz os demais dados a compensações de produto. A alternativa D afirma equivalência sem medir o efeito de perdas sobre os objetivos e o fluxo de cada cliente.</p><p>Regra de bolso: idade situa a conversa, mas não mede sozinha quanto o cliente pode perder.</p>",
+     "enunciado": "<p>Ao comparar duas entrevistas, o assessor Davi, em Porto Alegre, percebe que os rótulos demográficos apontam na direção contrária dos dados financeiros. Uma cliente de 29 anos sustenta dois dependentes, depende de contratos com receita irregular, ainda forma a reserva de emergência e precisará de parte da carteira em dois anos. Outra cliente, aposentada, recebe renda regular superior às despesas, mantém reserva e patrimônio líquido, e destina a parcela discutida a uma meta sem vencimento próximo. A primeira diz que a juventude lhe dá tempo para recuperar qualquer perda; a segunda teme que a palavra aposentada a exclua de uma análise individual de investimento. Davi deve avaliar a capacidade para a parcela de cada uma, considerando o que ocorreria se a renda cessasse ou se o investimento perdesse valor perto da data de uso. Analise o peso da idade diante dos demais dados.</p>",
+     "alternativas": {
+      "a": "Idade é dado contextual; renda, dependentes, reserva, liquidez e objetivo determinam a consequência financeira de uma perda.",
+      "b": "A idade define a capacidade inicial, mas o assessor pode compensá-la com patrimônio ou dependentes na escolha de um produto.",
+      "c": "A cliente jovem recebe capacidade elevada pelo prazo de vida, e a aposentada recebe capacidade baixa pela fase em que se encontra.",
+      "d": "As duas têm capacidade semelhante porque a diferença de idade se equilibra com o patrimônio e com a existência de renda regular."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-17-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A necessidade de retorno pode revelar uma meta incompatível com os recursos, aportes e prazo, mas não cria capacidade ou tolerância. Nara deve recalcular alternativas de objetivo, contribuição e data, preservando os limites reais do cliente.</p><p>A alternativa A usa retorno exigido como autorização para risco. A alternativa C considera a declaração subjetiva e retira obrigações e renda da análise financeira. A alternativa D revê o prazo, mas presume que ele sozinho resolve a capacidade e ignora a reação do cliente a perdas.</p><p>Regra de bolso: quando a conta exige risco excessivo, reveja a meta antes de elevar a exposição.</p>",
+     "enunciado": "<p>A meta de comprar um ponto comercial reúne André e a consultora Nara, em Recife. André já separou parte do capital e programa aportes mensais, mas pretende concluir a compra em três anos sem elevar a contribuição. Na projeção apresentada por ele, o valor desejado só seria alcançado se a parcela investida obtivesse retorno elevado; uma queda perto da data de compra comprometeria o pagamento. André aceita alguma oscilação na conversa, porém sua renda depende do próprio negócio, há prestações em aberto e a reserva cobre apenas as necessidades imediatas. Ele insiste que a necessidade de retorno justifica concentrar o dinheiro da compra em posições mais voláteis e que a compra seria impossível sem isso. Nara confirma que o retorno requerido é uma propriedade da combinação entre meta, capital, aportes e prazo, enquanto tolerância e capacidade exigem perguntas diferentes. André aceita estudar uma data posterior ou ajustar o valor pretendido, desde que veja o impacto dessas escolhas no plano. Avalie a resposta da consultora à incompatibilidade identificada.</p>",
+     "alternativas": {
+      "a": "Manter a data e concentrar o recurso em risco maior, porque o retorno necessário determina a exposição admissível para a meta.",
+      "b": "Recalcular a meta com outro prazo ou aporte e manter o recurso em risco compatível com a perda que André pode suportar.",
+      "c": "Usar somente a aceitação verbal de oscilações para autorizar o risco, enquanto renda e prestações ficam reservadas à análise de crédito.",
+      "d": "Adiar a compra sem investigar capacidade e tolerância, pois o aumento do prazo transforma por si só uma perda próxima em perda suportável."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-17-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. O prazo maior, a reserva e a renda mais estável podem elevar a capacidade de risco da parcela, mas o objetivo continua exigindo recursos em uma data e a tolerância e o conhecimento ainda precisam ser verificados. A recomendação depende da análise conjunta, com o fator mais restritivo limitando a exposição.</p><p>A alternativa A presume que prazo também eleva tolerância. A alternativa B trata uma declaração como diagnóstico completo e ignora a função do recurso. A alternativa C congela o perfil mesmo após mudança material nas circunstâncias da cliente.</p><p>Regra de bolso: mudança de prazo abre uma nova avaliação, não uma autorização automática para arriscar.</p>",
+     "enunciado": "<p>Uma mudança de planos leva Célia à assessora Íris, em Goiânia. Antes, Célia destinava R$ 90.000 à entrada de um imóvel em doze meses e tinha pouca reserva; agora adiou a compra para cinco anos, construiu reserva separada e passou a receber renda mais regular. Ela pede que Íris transfira imediatamente toda a parcela do imóvel para uma estratégia de forte oscilação. Célia argumenta que a mudança de prazo prova capacidade suficiente e diz aceitar qualquer queda, mas admite nunca ter acompanhado uma perda relevante em investimento semelhante. O valor da entrada continua sendo necessário e ela ainda não decidiu se poderá adiar novamente a compra caso o mercado esteja em baixa. Íris reconhece que a capacidade daquela parcela pode ter aumentado, porém precisa verificar o limite de perda compatível com a data, as fontes alternativas de caixa, a tolerância demonstrada e o conhecimento da cliente. A análise anterior não pode ser aplicada sem revisão, nem a melhora em uma dimensão resolve as demais. Avalie a decisão que Íris deve tomar antes de alterar a carteira.</p>",
+     "alternativas": {
+      "a": "A mudança para cinco anos autoriza a estratégia oscilante porque o novo prazo eleva capacidade e tolerância na mesma proporção.",
+      "b": "A declaração de aceitar quedas resolve a tolerância, e a reserva recém-formada dispensa verificar a finalidade da parcela do imóvel.",
+      "c": "A aplicação anterior deve continuar durante o novo prazo, pois a mudança de objetivo não altera a capacidade já registrada no perfil.",
+      "d": "Refazer a análise do perfil e, só depois, decidir se a parcela do imóvel admite mais oscilação."
+     },
+     "gabarito": "d"
+    }
+   ],
+   "Horizonte de investimento e necessidade futura de recursos": [
+    {
+     "id": "cpror-cli-18-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Horizonte é o tempo até o uso do recurso e pertence ao objetivo. Uma mesma pessoa pode ter metas próximas e distantes, cada uma exigindo análise própria.</p><p>A alternativa A transforma o investimento mais longo em rótulo para toda a carteira. A alternativa B usa idade e aposentadoria para apagar objetivos próximos. A alternativa C confunde a data de acompanhamento com a data em que a cliente precisará do dinheiro.</p><p>Regra de bolso: pergunte quando cada parcela será usada, antes de chamar o cliente de curto ou longo prazo.</p>",
+     "enunciado": "<p>Ao conhecer uma cliente que diz investir para o longo prazo, uma assessora identifica recursos destinados a objetivos com datas diferentes. Indique como definir o horizonte relevante para analisar cada parcela.</p>",
+     "alternativas": {
+      "a": "Pelo vencimento do investimento de prazo maior, que passa a representar a intenção financeira da cliente no conjunto.",
+      "b": "Pela idade da cliente e pela data de aposentadoria, que resumem o período disponível para seus recursos.",
+      "c": "Pela data em que a assessora pretende rever a carteira, ainda que o dinheiro tenha uso previsto antes da revisão.",
+      "d": "Pelo tempo até o uso do dinheiro em cada objetivo, considerando quando começa a necessidade correspondente."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-18-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A necessidade futura de recursos exige valor, início do uso, duração ou recorrência das retiradas e flexibilidade da data. Esses dados ajudam a comparar objetivo e disponibilidade do investimento.</p><p>A alternativa A se concentra em retorno e familiaridade, mas deixa o calendário incompleto. A alternativa B olha somente a data final. A alternativa D levanta o patrimônio, porém omite finalidade e momento em que o dinheiro será exigido.</p><p>Regra de bolso: necessidade futura tem quanto, quando começa, por quanto tempo e com que margem de adiamento.</p>",
+     "enunciado": "<p>Um gerente registra que parte da carteira financiará uma despesa futura. Antes de avaliar produtos, ele precisa completar as informações sobre o objetivo e a necessidade de recursos. Identifique o conjunto de perguntas útil nessa etapa.</p>",
+     "alternativas": {
+      "a": "Qual retorno o cliente deseja, qual produto conhece pelo nome e qual resultado obteve em investimentos anteriores.",
+      "b": "Qual é o prazo final da carteira, mesmo que o primeiro desembolso ocorra antes e tenha valor já contratado.",
+      "c": "Quanto será necessário, quando ocorrerá o primeiro uso, se haverá retiradas posteriores e quanto a data pode mudar.",
+      "d": "Quanto patrimônio o cliente possui e qual parte está aplicada, sem distinguir finalidade ou calendário dos pagamentos."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-18-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O dinheiro da pós-graduação tem necessidade próxima e data rígida; a parcela da aposentadoria admite outro horizonte, sujeito ao perfil e ao produto. Uma carência de dois anos é incompatível com o primeiro uso em dez meses para a parcela educacional.</p><p>A alternativa A registra a data de revisão, mas mantém exposto ao bloqueio o dinheiro da matrícula. A alternativa C usa retorno esperado para suprir recurso indisponível. A alternativa D protege a obrigação próxima, mas estende a mesma exigência de caixa à parcela de nove anos sem analisá-la.</p><p>Regra de bolso: classifique o prazo do dinheiro, não o prazo presumido da pessoa.</p>",
+     "enunciado": "<p>Ao atualizar o plano de Sérgio, em Belo Horizonte, a consultora Teresa encontra R$ 210.000 que ele chama de dinheiro para o futuro. R$ 55.000 pagarão a entrada de uma pós-graduação dentro de dez meses, com contrato cuja data ele não pretende mudar; os R$ 155.000 restantes complementam uma meta de aposentadoria prevista para daqui a nove anos. Sérgio pede que Teresa trate o valor inteiro como patrimônio de longo prazo e recomenda uma única aplicação com carência de dois anos, porque o retorno esperado supera o de posições acessíveis em prazo curto. Ele acredita que o nome da meta previdenciária define a carteira inteira e que poderá vender o investimento se a matrícula vencer antes da carência. Teresa precisa separar os destinos do dinheiro e verificar se existe resgate contratualmente disponível, além de considerar preço e prazo de eventual venda. Indique a decisão inicial que preserva os dois objetivos.</p>",
+     "alternativas": {
+      "a": "Aceitar o prazo da aposentadoria para os R$ 210.000, mas programar uma revisão da carteira na véspera da matrícula.",
+      "b": "Separar os R$ 55.000 da meta próxima e examinar para cada parcela prazo, acesso, risco de preço e finalidade antes da indicação.",
+      "c": "Aplicar o valor na opção com carência e reservar o retorno esperado para pagar a entrada antes do desbloqueio do capital.",
+      "d": "Manter os recursos em caixa até a pós-graduação, pois a meta próxima determina a liquidez da parcela previdenciária."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-18-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A necessidade começa com R$ 6.000 em nove meses e continua com onze retiradas de R$ 6.000. A organização por datas protege o primeiro pagamento e permite examinar horizontes progressivos para o restante, desde que o acesso e o valor sejam compatíveis.</p><p>A alternativa A escolhe a data final e deixa sem cobertura as parcelas anteriores. A alternativa B protege o primeiro pagamento, mas exige disponibilidade imediata para recursos que serão usados depois sem examinar opções compatíveis. A alternativa C depende de venda mensal e presume preço suficiente na saída.</p><p>Regra de bolso: em pagamentos parcelados, o primeiro vencimento abre uma sequência de horizontes.</p>",
+     "enunciado": "<p>A matrícula de um dependente leva Flávia ao planejador Yuri, em Recife. Ela reservou R$ 72.000 para pagar um curso que começará em nove meses e terá doze mensalidades de R$ 6.000, sem entrada adicional. A data de início está confirmada, mas apenas a primeira parcela vencerá naquele mês; as demais serão pagas em intervalos mensais. Flávia teme perder rendimento e sugere manter os R$ 72.000 em investimento com vencimento no fim do curso, porque considera essa a data relevante do objetivo. Um colega propõe deixar o montante inteiro em disponibilidade imediata desde hoje, sem distinguir o calendário das mensalidades. Yuri precisa proteger o primeiro pagamento e planejar acesso progressivo ao saldo, conferindo carência, resgate e liquidação de cada posição antes de contar com ela. Uma saída precipitada com perda poderia reduzir o valor destinado às parcelas seguintes. Indique a organização coerente com o fluxo informado.</p>",
+     "alternativas": {
+      "a": "Tratar o fim do curso como horizonte único e manter os R$ 72.000 bloqueados até essa data, pois os pagamentos são mensais.",
+      "b": "Deixar o valor inteiro em caixa desde hoje, já que a primeira mensalidade vence antes das demais e fixa o prazo das parcelas posteriores.",
+      "c": "Manter o saldo aplicado até a última mensalidade e vender uma fração a cada mês, tomando a possibilidade de venda como garantia de valor.",
+      "d": "Preparar R$ 6.000 para o primeiro vencimento e programar os R$ 66.000 restantes para as onze datas seguintes, com acesso compatível."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-18-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Vencimento perto da meta não garante crédito em tempo útil, e negociação frequente não garante preço estável nem dinheiro na conta na data necessária. É preciso examinar carência, resgate, liquidação, mercado e valor líquido.</p><p>A alternativa A ignora disponibilidade efetiva e preço. A alternativa C reconhece a carência, mas presume que o mês do vencimento e a etiqueta de liquidez bastam. A alternativa D observa a oscilação do ativo negociável, porém descarta o título sem verificar se seu fluxo contratado poderia atender a obrigação.</p><p>Regra de bolso: confira data de crédito e valor de saída, não apenas o vencimento ou o rótulo de liquidez.</p>",
+     "enunciado": "<p>No atendimento de Natália, em Salvador, o assessor Raul compara dois investimentos para um compromisso de R$ 40.000 com vencimento em quatorze meses. Um título vence exatamente na semana da obrigação, mas impõe carência para resgate anterior; o calendário contratual ainda exige conferir o dia de crédito após o vencimento. Outro ativo permite negociação frequente, porém seu preço pode oscilar e uma venda rápida depende de compradores dispostos a absorver o lote. Natália considera que o título está adequado apenas porque a data impressa coincide com a semana do pagamento. Para o segundo ativo, ela lê a expressão negociado diariamente e conclui que poderá receber R$ 40.000 sem risco de perda na data escolhida. Raul precisa verificar se o dinheiro estará utilizável até o vencimento da obrigação e se o valor líquido recebido será suficiente, incluindo prazo operacional e custo de saída. Analise as duas justificativas antes da escolha.</p>",
+     "alternativas": {
+      "a": "A coincidência entre vencimento e semana da despesa resolve o primeiro caso; no segundo basta confirmar que houve negócios recentes.",
+      "b": "O título exige conferir quando o crédito estará disponível; o ativo negociável exige avaliar preço, compradores, liquidação e valor líquido.",
+      "c": "A carência restringe a saída anterior, mas o vencimento no mesmo mês dispensa conferir o crédito; a liquidez diária resolve o outro caso.",
+      "d": "O risco de oscilação importa para o segundo ativo, enquanto o primeiro deve ser descartado pelo simples fato de possuir carência."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-18-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A mesma data inicial não cria a mesma capacidade de risco. Elisa depende do valor e do prazo para cumprir obrigação rígida; Bruno pode esperar, embora sua tolerância, situação financeira e condições de venda ainda precisem ser analisadas.</p><p>A alternativa A usa calendário igual e negociabilidade formal como prova de capacidade igual. A alternativa B reconhece a flexibilidade, mas dispensa outras dimensões do perfil e o preço de saída. A alternativa D diferencia os objetivos, porém conclui pela mesma escolha de produto sem testar suas condições para cada cliente.</p><p>Regra de bolso: a margem para adiar uma meta altera o custo de uma perda na data inicialmente prevista.</p>",
+     "enunciado": "<p>Duas necessidades com a mesma data aparecem no plano que a especialista Cíntia revisa em Manaus. Elisa precisa quitar uma obrigação contratual de R$ 35.000 em um ano; o atraso comprometeria o objetivo e ela não dispõe de outra fonte para completar o valor. Bruno planeja uma viagem estimada em R$ 35.000 para o mesmo mês, mas aceita adiá-la por até dois anos se o investimento estiver em fase desfavorável. Ambos se dizem confortáveis com alguma oscilação e receberam uma proposta de produto que admite venda antes do vencimento, com preço dependente das condições do mercado. Um colega recomenda a mesma exposição para os dois, usando o intervalo de doze meses como único critério. Cíntia precisa comparar o efeito de uma perda ou demora na venda sobre cada objetivo e distinguir possibilidade de negociação de disponibilidade de R$ 35.000 na data. Avalie como a flexibilidade modifica a análise das parcelas.</p>",
+     "alternativas": {
+      "a": "A data inicial igual impõe a mesma capacidade de suportar perdas, desde que a venda antes do vencimento esteja prevista.",
+      "b": "A viagem admite espera, mas essa flexibilidade torna irrelevantes a tolerância de Bruno e o preço que ele receberia na saída.",
+      "c": "A obrigação sem fonte alternativa reduz a margem para perda ou atraso; a viagem adiável pode admitir outra exposição, sujeita ao perfil.",
+      "d": "A obrigação rígida exige proteção do valor, enquanto a viagem permite mais prazo; por isso o mesmo produto pode ser usado para ambos."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-18-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. O contrato passou de uma necessidade parcelada iniciada em dezoito meses para uma obrigação integral em seis meses, sem margem de adiamento ou fonte substituta. Essa mudança reduz a capacidade da parcela de suportar carência, atraso e queda de valor, independentemente da aposentadoria.</p><p>A alternativa B usa o horizonte de outra meta para justificar a exposição do dinheiro do curso. A alternativa C melhora a atenção ao prazo operacional, mas presume valor garantido em uma venda. A alternativa D mantém o calendário antigo apesar da exigência de pagamento integral.</p><p>Regra de bolso: quando primeiro uso e forma de pagamento mudam, recalcule o horizonte daquela parcela.</p>",
+     "enunciado": "<p>Uma alteração no contrato do curso surpreende Otávio durante a reunião com a assessora Lara, em Belém. Ele havia reservado R$ 90.000 para estudos de uma filha, cujo início estava marcado para daqui a dezoito meses, com pagamentos distribuídos ao longo de dois anos. O contrato novo antecipa o início para seis meses e exige os R$ 90.000 de uma vez na matrícula; Otávio informa que a data não pode ser adiada e que não possui outra fonte para essa quantia. A parcela estava em uma carteira que admitia alguma oscilação porque o plano anterior permitia retiradas graduais. Otávio pede manter a estratégia, argumentando que sua aposentadoria ainda está distante e que o produto pode ser vendido no mercado se necessário. Lara precisa refazer a análise da parcela educacional diante do primeiro uso antecipado, do pagamento integral e do risco de receber menos na venda. O horizonte da aposentadoria continua diferente e não cobre a obrigação do curso. Indique o ajuste de diagnóstico que deve preceder a decisão sobre a carteira.</p>",
+     "alternativas": {
+      "a": "Tratar os R$ 90.000 como necessidade rígida em seis meses e conferir acesso e risco de perda antes de manter a posição.",
+      "b": "Conservar a exposição anterior e usar a aposentadoria distante como horizonte para compensar a antecipação do curso.",
+      "c": "Reduzir apenas o prazo de resgate da carteira, pois a venda no mercado assegura os R$ 90.000 na data da matrícula.",
+      "d": "Preservar a estrutura de retiradas graduais e reservar a primeira mensalidade, pois o valor total segue destinado ao curso."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-18-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. O prazo longo pode ampliar o conjunto de opções, mas não garante recuperação de perdas. A decisão ainda depende da tolerância de Clara, de sua capacidade financeira, do conhecimento e do calendário das retiradas futuras.</p><p>A alternativa B transforma tempo em promessa de recuperação. A alternativa C usa o desconforto para descartar uma análise individual das opções e dos limites de exposição. A alternativa D observa vencimento, mas adia indevidamente a avaliação da reação da cliente e do uso do recurso.</p><p>Regra de bolso: horizonte longo abre possibilidades; perfil e necessidade futura definem seus limites.</p>",
+     "enunciado": "<p>Clara procura o consultor Felipe, em Porto Alegre, para investir R$ 160.000 destinados a complementar a aposentadoria em dez anos. Ela possui reserva separada para imprevistos, renda regular e nenhuma retirada planejada dessa parcela nos próximos anos. Felipe explica que o horizonte distante amplia as alternativas que podem ser examinadas e talvez permita atravessar oscilações de curto prazo. Clara interpreta isso como garantia de que uma posição com queda de preço recuperará seu valor antes da aposentadoria e pede concentração em investimento volátil. Na entrevista, porém, relata desconforto com perdas relevantes e admite que poderia vender a posição caso a queda persistisse por alguns meses. Felipe precisa combinar prazo, reação provável da cliente, capacidade financeira, experiência e características do produto, sem converter tempo disponível em certeza de retorno. Mesmo a data de aposentadoria pode dar início a retiradas que exigirão planejamento próprio. Analise a orientação que sustenta a decisão sobre essa parcela.</p>",
+     "alternativas": {
+      "a": "Examinar opções de prazo maior, mantendo a exposição compatível com tolerância, capacidade e acesso exigido pelas futuras retiradas.",
+      "b": "Aceitar a concentração porque dez anos oferecem tempo suficiente para recuperar perdas antes do primeiro uso do patrimônio.",
+      "c": "Excluir investimentos com qualquer oscilação, pois o desconforto relatado impede avaliar alternativas de horizonte mais longo.",
+      "d": "Escolher o produto pela data de vencimento e reavaliar tolerância somente quando Clara começar a retirar recursos da carteira."
+     },
+     "gabarito": "a"
+    }
+   ],
+   "Experiência com investimentos e compreensão de riscos": [
+    {
+     "id": "cpror-cli-19-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Histórico é evidência de conhecimento quando as operações são comparáveis e o cliente demonstra entender mecanismo, perdas e consequências do produto avaliado.</p><p>A alternativa A transforma quantidade em compreensão apesar da diferença entre estruturas. A alternativa C troca conhecimento por patrimônio. A alternativa B usa tolerância declarada e formalidade do questionário como prova de entendimento.</p><p>Regra de bolso: experiência vale pelo que o cliente fez e entendeu, não pela contagem isolada de operações.</p>",
+     "enunciado": "<p>Uma cliente fez diversas aplicações em produtos simples e agora pergunta sobre uma estrutura que desconhece. Identifique o que torna o histórico anterior evidência relevante de conhecimento para a nova análise.</p>",
+     "alternativas": {
+      "a": "A quantidade de aplicações registradas, ainda que o mecanismo e as possibilidades de perda sejam diferentes.",
+      "b": "A declaração de que aceita oscilações, desde que tenha assinado o questionário antes de receber a proposta.",
+      "c": "O valor acumulado nas aplicações anteriores, pois a experiência cresce na mesma proporção do patrimônio.",
+      "d": "A comparabilidade das operações e a compreensão demonstrada do funcionamento e dos riscos da estrutura proposta."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-19-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A avaliação considera familiaridade com produtos, serviços e operações; natureza, volume, frequência e período do histórico; e, para pessoa natural, formação acadêmica e experiência profissional.</p><p>A alternativa A privilegia riqueza e categoria regulatória. A alternativa B reúne dados gerais e tolerância sem examinar operações e compreensão. A alternativa C aproveita parte do histórico, mas omite tipo e contexto das operações e reduz a formação a um substituto automático.</p><p>Regra de bolso: investigue familiaridade, histórico qualificado e formação ou trabalho pertinente.</p>",
+     "enunciado": "<p>Na coleta de informações de uma pessoa natural, um assessor precisa avaliar conhecimento e experiência conforme os pontos da Resolução CVM 30 apresentados na aula. Indique o conjunto de dados que deve investigar.</p>",
+     "alternativas": {
+      "a": "Patrimônio investido, categoria regulatória e retorno desejado, com registro do número de produtos oferecidos pela instituição.",
+      "b": "Idade, profissão e valor pretendido na operação, usando a declaração de aceitar perdas para completar a experiência.",
+      "c": "Apenas quantidade de operações e nível de escolaridade, porque esses dados resumem a familiaridade com os riscos.",
+      "d": "Tipos de produtos familiares, natureza, volume, frequência e período das operações, formação acadêmica e experiência profissional."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-19-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Volume e frequência são dados úteis, mas as operações anteriores não são comparáveis ao mecanismo proposto. Paulo deve esclarecer cenários, custos, saída e perdas, usar perguntas abertas e só então reavaliar se Luciana compreende o produto.</p><p>A alternativa B transforma repetição de produto simples em domínio da estrutura. A alternativa C adia a explicação de riscos decisivos para depois da indicação. A alternativa D inclui a explicação, mas registra conhecimento pela frequência anterior antes de confirmar se Luciana entendeu a estrutura.</p><p>Regra de bolso: histórico frequente só pesa para um produto novo quando é comparável e compreendido.</p>",
+     "enunciado": "<p>Ao revisar o cadastro de Luciana, em Recife, o assessor Paulo encontra quarenta aplicações em títulos bancários de liquidez diária durante os últimos cinco anos. Ela executou pessoalmente os aportes e sabe explicar o prazo de crédito desses produtos. Agora considera uma estrutura com cenários de remuneração, vencimento em cinco anos e possibilidade de perda se precisar sair antes. Luciana reconhece os nomes dos ativos usados como referência, mas, quando Paulo pergunta como cada cenário afeta o valor de resgate, ela responde apenas que o banco mostrará o rendimento no aplicativo. Ela pede que o número de operações anteriores seja usado para registrar experiência elevada com a estrutura e acelerar a contratação. Paulo precisa dar o devido peso ao histórico sem fingir que títulos de funcionamento simples comprovam compreensão de um mecanismo diferente. Ele também deve explicar custos, restrições e perda possível antes de testar novamente o entendimento. Indique a providência sustentada pela evidência disponível.</p>",
+     "alternativas": {
+      "a": "Registrar o histórico como experiência com os títulos já usados, explicar a nova estrutura e verificar a compreensão antes de reavaliar sua adequação.",
+      "b": "Classificar Luciana como experiente na estrutura porque quarenta aplicações demonstram prática suficiente em investimentos de renda fixa.",
+      "c": "Recomendar a estrutura após apresentar o prazo de cinco anos, mantendo a explicação dos cenários para uma revisão posterior do cadastro.",
+      "d": "Explicar os cenários à cliente, mas registrar experiência elevada pelo histórico anterior antes de testar a compreensão da nova estrutura."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-19-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A ausência de operações pessoais não encerra a avaliação. A experiência profissional relacionada e a explicação coerente dos mecanismos são evidências de conhecimento, a serem consideradas com os demais dados. Objetivos e situação financeira seguem necessários.</p><p>A alternativa A elimina evidência profissional relevante. A alternativa C transforma cargo em aprovação automática do perfil inteiro. A alternativa D admite formação, mas exclui indevidamente a experiência profissional e a compreensão demonstrada.</p><p>Regra de bolso: sem histórico pessoal, procure outras evidências pertinentes e peça ao cliente que explique o risco.</p>",
+     "enunciado": "<p>A planejadora Helena recebe Daniel, em Curitiba, para conversar sobre um produto com resultado ligado a cenários e saída antecipada sujeita a perda. O cadastro mostra que ele não realizou aplicações desse tipo em nome próprio. Daniel, porém, trabalhou durante seis anos analisando estruturas semelhantes, descreve de onde pode vir o retorno, diferencia uma perda na saída de uma perda no vencimento e explica os custos que afetariam o valor recebido. Um colega propõe encerrar a análise de conhecimento com resposta negativa porque o extrato pessoal não contém operações comparáveis; outro considera suficiente o cargo ocupado, sem ouvir as explicações de Daniel. Helena precisa avaliar formação e experiência profissional como evidências pertinentes para pessoa natural, confrontando-as com a compreensão que o cliente demonstra na conversa. Ela ainda terá de examinar objetivos e situação financeira antes de qualquer indicação. Analise como registrar a dimensão de conhecimento.</p>",
+     "alternativas": {
+      "a": "Reprovar a dimensão porque faltam operações pessoais, mesmo com trabalho relacionado e explicações coerentes sobre riscos e saída.",
+      "b": "Considerar o trabalho como evidência relevante e testar a explicação concreta de Daniel, sem dispensar as demais dimensões do perfil.",
+      "c": "Aprovar a adequação completa pelo cargo exercido, deixando objetivos e situação financeira para uma atualização depois da aplicação.",
+      "d": "Usar apenas a formação acadêmica declarada, pois a experiência profissional não serve quando o cliente não aplicou dinheiro próprio."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-19-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Perguntas abertas revelam se Márcio distingue risco de crédito, oscilação de preço e liquidez. Diante de lacunas, Elisa deve explicar as consequências e reavaliar o produto, sem orientar respostas para liberar a contratação.</p><p>A alternativa A confunde tolerância com conhecimento. A alternativa B induz respostas e transforma o questionário em formalidade. A alternativa D usa familiaridade com o nome e retorno esperado no lugar da compreensão de perdas e saída.</p><p>Regra de bolso: peça ao cliente que explique o que acontece em um cenário adverso.</p>",
+     "enunciado": "<p>Durante uma entrevista em Salvador, a assessora Elisa avalia se Márcio compreende um investimento com emissor próprio e venda antes do vencimento sujeita às condições de mercado. Márcio responde sim quando ouve as palavras risco e liquidez, mas não descreve o que receberia se o emissor deixasse de pagar, se uma mudança de taxa alterasse o preço ou se faltassem compradores na data em que precisasse sair. Ele diz que reconhece o nome do produto em notícias e pede que a assessora marque a opção conhecimento suficiente para concluir o cadastro. Elisa não pretende aplicar uma prova acadêmica; precisa descobrir se o cliente distingue eventos que afetam pagamento, preço e acesso ao dinheiro. Para isso, escolhe perguntas abertas e um cenário adverso próximo da necessidade futura de Márcio. A qualidade da explicação dele determinará se ela deve esclarecer lacunas e reconsiderar a solução. Indique a abordagem de entrevista apropriada.</p>",
+     "alternativas": {
+      "a": "Perguntar se Márcio aceita perder dinheiro e usar a resposta afirmativa como confirmação de que entendeu crédito, mercado e liquidez.",
+      "b": "Repetir perguntas fechadas até obter respostas consistentes com a categoria do produto, registrando a concordância como experiência.",
+      "c": "Pedir que Márcio explique, com suas palavras, o efeito de inadimplência, mudança de taxa e falta de comprador.",
+      "d": "Confirmar que o produto aparece no noticiário e explicar apenas a rentabilidade esperada, pois os riscos serão conhecidos na primeira operação."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-19-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Patrimônio, enquadramento regulatório e tolerância não provam compreensão de um produto complexo. Ícaro precisa examinar a comparabilidade do histórico e pedir que Renata explique mecanismo, perdas e saída, além de avaliar as demais dimensões.</p><p>A alternativa A transforma categoria e riqueza em prova de conhecimento. A alternativa B empresta experiência de produtos diferentes à estrutura proposta. A alternativa D reconhece uma parte da análise de saída, mas dispensa justamente a compreensão dos cenários de retorno e perda.</p><p>Regra de bolso: acesso regulatório, recursos disponíveis e coragem não ensinam o funcionamento do produto.</p>",
+     "enunciado": "<p>O patrimônio de Renata ultrapassa R$ 1 milhão, e ela mostra ao assessor Ícaro, em Fortaleza, um documento que a enquadra em uma categoria regulatória especial. Renata afirma que pode tolerar queda relevante e quer acessar um produto com estrutura complexa e pouca liquidez. Ela conhece a finalidade geral da aplicação, mas não consegue explicar como os cenários afetam o retorno nem como seria calculado o valor de uma saída antecipada. Em seu histórico predominam produtos simples, escolhidos por indicação de familiares. Renata pede que Ícaro use riqueza, categoria e disposição para perdas como substitutos das perguntas sobre mecanismo e riscos, argumentando que a formalidade atrasaria uma decisão que ela já tomou. Ícaro deve reconhecer que patrimônio pode integrar a análise financeira e que a declaração de aceitar perdas informa tolerância, enquanto conhecimento exige outras evidências. Avalie a conclusão sobre a compreensão de Renata.</p>",
+     "alternativas": {
+      "a": "A categoria especial comprova conhecimento da estrutura, enquanto o patrimônio confirma que Renata pode suportar a saída antecipada.",
+      "b": "A falta de explicação pode ser suprida pelo histórico de produtos simples, desde que Renata tenha realizado as aplicações em seu nome.",
+      "c": "Riqueza e tolerância são dados de outras dimensões; Ícaro precisa investigar operações comparáveis e testar a compreensão da estrutura.",
+      "d": "A declaração de aceitar perdas permite dispensar cenários de retorno, mas ainda exige conferir carência e prazo de liquidação."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-19-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. Uma operação isolada por indicação de terceiro é evidência fraca de compreensão autônoma. Lúcia deve esclarecer mecanismo e riscos, usar perguntas abertas e reavaliar a adequação sem conduzir o cliente a respostas que facilitem a venda.</p><p>A alternativa A posterga informação necessária para depois da decisão. A alternativa D induz respostas e confunde extrato com entendimento. A alternativa C inclui a explicação, mas confirma experiência pelo histórico fraco antes de ouvir se Mauro compreendeu o mecanismo.</p><p>Regra de bolso: uma assinatura passada não substitui a capacidade de explicar o investimento presente.</p>",
+     "enunciado": "<p>Uma oferta com prazo de quatro anos chega à gerente Lúcia durante o atendimento de Mauro, em Belém. O cadastro registra uma única operação em produto parecido, executada meses atrás depois de um amigo escolher a aplicação e explicar apenas o retorno anunciado. Mauro se apresenta como experiente porque já assinou a ordem e recebeu o extrato, mas não sabe dizer se poderia perder ao sair antes do prazo nem quais condições determinariam o valor recebido. O promotor da oferta pede que Lúcia marque experiência comprovada no questionário e dê a Mauro alternativas de resposta que permitam concluir a venda. Mauro teme perder o prazo comercial e insiste na contratação imediata. Lúcia precisa distinguir operação isolada de compreensão autônoma, evitar induzir respostas e examinar custos, carência, perda possível e cenários de resultado antes de reconsiderar a indicação. A decisão não deve depender de quem sugeriu a aplicação anterior nem de uma assinatura passada. Indique a conduta da gerente diante das informações obtidas.</p>",
+     "alternativas": {
+      "a": "Usar a assinatura anterior como experiência suficiente e esclarecer os riscos após a nova ordem, preservando o prazo comercial.",
+      "b": "Explicar riscos e condições da oferta, pedir a Mauro que os descreva com suas palavras e só depois reavaliar a adequação.",
+      "c": "Explicar o mecanismo e os riscos, mas registrar experiência comprovada pela operação isolada antes de ouvir a explicação de Mauro.",
+      "d": "Aplicar perguntas com respostas sugeridas, pois o extrato da operação anterior já demonstra familiaridade com o produto."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-19-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Formação, trabalho pertinente e explicação dos riscos sustentam a dimensão de conhecimento, mesmo com poucas operações pessoais. Isso não substitui objetivo, situação financeira nem tolerância, especialmente quando há recurso com data próxima e reserva limitada.</p><p>A alternativa B usa conhecimento para aprovar o perfil completo. A alternativa C descarta evidências relevantes por falta de histórico pessoal. A alternativa D adia indevidamente objetivos e capacidade e ainda ignora que Patrícia já explicou custos na entrevista.</p><p>Regra de bolso: entender o produto é necessário, mas não torna automaticamente adequado usá-lo com qualquer dinheiro.</p>",
+     "enunciado": "<p>Depois de uma nova entrevista, a especialista Nara revê o caso de Patrícia, em Porto Alegre. Patrícia trabalhou seis anos com análise de estruturas semelhantes ao investimento proposto e consegue explicar de onde viria o retorno, quando poderia ocorrer perda, quais custos incidem e o que uma saída antecipada mudaria. Seu histórico de aplicações pessoais é curto, mas a formação e o trabalho são pertinentes ao mecanismo discutido. Ao mesmo tempo, Patrícia precisará de parte relevante do dinheiro para uma obrigação com data próxima, relata desconforto com quedas temporárias e possui reserva limitada. Um colega sustenta que a explicação técnica encerra o exame de adequação; outro pretende descartar o produto porque ela tem poucas operações no extrato. Nara reconhece a evidência de conhecimento, mas precisa separar essa dimensão da finalidade do recurso, da situação financeira e da tolerância. Ela deve decidir o que ainda falta avaliar antes de recomendar qualquer exposição. Analise a conclusão que respeita as evidências do caso.</p>",
+     "alternativas": {
+      "a": "Registrar conhecimento apoiado no trabalho e na explicação demonstrada, mantendo a análise de objetivo, finanças e tolerância antes da indicação.",
+      "b": "Aprovar a indicação pela compreensão demonstrada, pois experiência pertinente substitui prazo, reserva e reação a perdas na decisão.",
+      "c": "Desconsiderar a explicação e a experiência profissional, classificando Patrícia como iniciante pelo número baixo de aplicações pessoais.",
+      "d": "Registrar conhecimento e adiar apenas a conferência de custos, já que objetivo e capacidade serão revelados quando surgir necessidade de resgate."
+     },
+     "gabarito": "a"
+    }
+   ]
+  },
   "Análise de portfólio e monitoramento da carteira": {
    "Política monetária: juros, moeda e expectativas na carteira": [
     {
@@ -589,7 +3183,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "revisao"
      ],
      "comentario": "<p>A alternativa A está correta. A valorização relativa aumentou o peso das ações sem alterar o cliente, de modo que o alvo permanece como referência e registra sobrepeso de mercado.</p><p>A alternativa B deduz mudança de perfil a partir do retorno. A alternativa C apaga o desvio ao adaptar a meta à carteira. A alternativa D atribui o movimento a fluxo e inverte o efeito da valorização.</p><p>Regra de bolso: mercado muda peso; informação do cliente muda estratégia.</p>",
-     "enunciado": "<p>Uma carteira começou alinhada ao alvo de 30% em ações. Essa classe se valorizou acima das demais e passou a representar 36%, enquanto objetivos, horizonte e capacidade da cliente permaneceram iguais. Identifique a causa e o diagnóstico.</p>",
+     "enunciado": "<p>Após começar alinhada ao alvo de 30% em ações, a carteira de uma cliente é revisada pelo assessor. Essa classe se valorizou acima das demais e passou a representar 36%, enquanto objetivos, horizonte e capacidade da cliente permaneceram iguais. Identifique a causa e o diagnóstico.</p>",
      "alternativas": {
       "a": "O mercado deslocou os pesos, produzindo sobrepeso frente ao alvo vigente sem mudança da estratégia da cliente.",
       "b": "O perfil mudou para arrojado porque a valorização elevou a tolerância e a capacidade financeira da cliente.",
@@ -625,7 +3219,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "revisao"
      ],
      "comentario": "<p>A alternativa C está correta. A obrigação próxima exige nova referência. Frente ao alvo atualizado, 8% menos 25% resulta em -17 pontos percentuais, e 36% menos 20% resulta em +16.</p><p>A alternativa A separa o objetivo da estratégia. A alternativa B usa apenas a causa de mercado e mantém meta vencida. A alternativa D ajusta o alvo à fotografia para esconder os desvios.</p><p>Regra de bolso: objetivo novo pede alvo novo antes da comparação.</p>",
-     "enunciado": "<p>Uma cliente com horizonte longo passa a precisar de R$ 250.000 em dezoito meses. Após revisão, o alvo muda de 10% para 25% em liquidez e de 30% para 20% em ações. A carteira atual mantém 8% e 36% nessas classes. Interprete os desvios.</p>",
+     "enunciado": "<p>A necessidade de R$ 250.000 em dezoito meses altera o plano de uma cliente antes voltado ao longo prazo. Após revisão, o alvo muda de 10% para 25% em liquidez e de 30% para 20% em ações. A carteira atual mantém 8% e 36% nessas classes. Interprete os desvios.</p>",
      "alternativas": {
       "a": "A meta antiga continua válida porque os valores de mercado permaneceram iguais durante a revisão do objetivo.",
       "b": "A valorização explica o caso inteiro, permitindo comparar a carteira apenas com 10% e 30%.",
@@ -1110,7 +3704,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "revisao"
      ],
      "comentario": "<p>A alternativa B está correta. A renda variável vale R$ 84.000 e deve chegar a R$ 72.000, enquanto a renda fixa passa de R$ 36.000 para R$ 48.000.</p><p>A alternativa A deixa os pesos acima e abaixo dos alvos. A alternativa C amplia o desvio. A alternativa D levaria a renda variável para R$ 60.000, abaixo do objetivo.</p><p>Regra de bolso: calcule os valores-alvo sobre o patrimônio e mova apenas a diferença.</p>",
-     "enunciado": "<p>Uma carteira de R$ 120.000 possui 70% em renda variável e 30% em renda fixa. Para retornar ao alvo de 60/40 sem aporte, qual movimentação é necessária?</p>",
+     "enunciado": "<p>Ao conferir os pesos da carteira de R$ 120.000, o assessor encontra 70% em renda variável e 30% em renda fixa. Para retornar ao alvo de 60/40 sem aporte, qual movimentação é necessária?</p>",
      "alternativas": {
       "a": "Transferir R$ 8.000 da renda variável para a renda fixa.",
       "b": "Transferir R$ 12.000 da renda variável para a renda fixa.",
@@ -1145,7 +3739,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "simulado"
      ],
      "comentario": "<p>A alternativa D está correta. A decisão precisa confrontar o risco de manter o desvio com custos, imposto, prazo do aporte e capacidade de correção de cada alternativa.</p><p>A alternativa A ignora o resultado líquido. A alternativa B presume que o aporte será suficiente e oportuno. A alternativa C deixa a tributação substituir o limite de risco.</p><p>Regra de bolso: escolha a execução depois de comparar o custo de agir com o risco de esperar.</p>",
-     "enunciado": "<p>Uma carteira fora da faixa possui ganho acumulado na classe a ser reduzida. O cliente fará novo aporte em breve. Qual análise integra risco, custo e tributação?</p>",
+     "enunciado": "<p>No dia de rebalancear, o assessor observa que a carteira está fora da faixa e há ganho acumulado na classe a ser reduzida. O cliente fará novo aporte em breve. Qual análise integra risco, custo e tributação?</p>",
      "alternativas": {
       "a": "Vender de imediato sem comparar o custo, pois o peso-alvo prevalece sobre os efeitos líquidos.",
       "b": "Aguardar o aporte sem avaliar a exposição atual, pois dinheiro novo corrige a concentração observada.",
@@ -1179,7 +3773,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "simulado"
      ],
      "comentario": "<p>A alternativa B está correta. Após o aporte, a renda fixa soma R$ 56.000 e o patrimônio chega a R$ 140.000. Os R$ 84.000 em renda variável representam 60%, e os R$ 56.000 representam 40%.</p><p>A alternativa A subestima o efeito do aporte. As alternativas C e D atribuem à renda fixa pesos acima daqueles produzidos pelos valores informados.</p><p>Regra de bolso: aporte dirigido pode recuperar o alvo sem vender a classe valorizada.</p>",
-     "enunciado": "<p>Uma carteira tem R$ 84.000 em renda variável e R$ 36.000 em renda fixa. O cliente aporta R$ 20.000 na renda fixa. Quais pesos resultam após o aporte?</p>",
+     "enunciado": "<p>Antes de um novo aporte, o extrato mostra R$ 84.000 em renda variável e R$ 36.000 em renda fixa. O cliente aporta R$ 20.000 na renda fixa. Quais pesos resultam após o aporte?</p>",
      "alternativas": {
       "a": "65% em renda variável e 35% em renda fixa.",
       "b": "60% em renda variável e 40% em renda fixa.",
@@ -1719,7 +4313,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "revisao"
      ],
      "comentario": "<p>A alternativa A está correta. O evento muda a estrutura financeira, de modo que a carteira deve ser analisada depois da revisão do planejamento.</p><p>A alternativa B movimenta recursos antes de definir função e titularidade. A alternativa C apaga diferenças individuais. A alternativa D ignora metas com prazos e prioridades distintos.</p><p>Regra de bolso: primeiro redesenhe o plano; depois avalie a carteira.</p>",
-     "enunciado": "<p>Um cliente comunica que iniciará vida financeira em casal. Qual deve ser a primeira etapa antes de alterar seus investimentos?</p>",
+     "enunciado": "<p>Ao comunicar que iniciará vida financeira em casal, um cliente pede orientação. Qual deve ser a primeira etapa antes de alterar seus investimentos?</p>",
      "alternativas": {
       "a": "Atualizar objetivos, horizontes, fluxos, patrimônio, responsabilidades e titularidades.",
       "b": "Unificar as carteiras em uma conta e definir depois a finalidade dos recursos.",
@@ -2168,7 +4762,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "revisao"
      ],
      "comentario": "<p>A alternativa C está correta. A maioridade do descendente não muda automaticamente a titularidade de um recurso mantido em nome do responsável.</p><p>A alternativa A presume transferência automática. A alternativa B confunde beneficiário e titular. A alternativa D cria cotitularidade sem ato correspondente.</p><p>Regra de bolso: intenção de uso e maioridade não substituem a titularidade registrada.</p>",
-     "enunciado": "<p>Uma reserva destinada ao descendente está em nome do responsável financeiro. O descendente completa dezoito anos. Qual efeito ocorre sobre a titularidade?</p>",
+     "enunciado": "<p>O responsável financeiro manteve em seu nome a reserva destinada ao descendente. O descendente completa dezoito anos. Qual efeito ocorre sobre a titularidade?</p>",
      "alternativas": {
       "a": "A instituição transfere o saldo ao descendente na data do aniversário.",
       "b": "O beneficiário indicado assume a conta por alcançar capacidade civil.",
@@ -3367,7 +5961,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "revisao"
      ],
      "comentario": "<p>A alternativa D está correta. A retirada reduz a classe excedente e evita vender uma classe que precisaria ser recomposta depois.</p><p>A alternativa A amplia o déficit. A alternativa B usa a data de compra sem analisar pesos. A alternativa C escolhe por histórico isolado.</p><p>Regra de bolso: necessidade de caixa deve sair primeiro do excesso compatível com a venda.</p>",
-     "enunciado": "<p>Uma retirada já programada pode apoiar o rebalanceamento quando é financiada por qual posição?</p>",
+     "enunciado": "<p>Para apoiar o rebalanceamento, uma retirada já programada deve ser financiada por qual posição?</p>",
      "alternativas": {
       "a": "Classe abaixo do alvo com função prioritária.",
       "b": "Ativo recém-comprado em qualquer classe.",
@@ -4298,7 +6892,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "revisao"
      ],
      "comentario": "<p>A alternativa B está correta. Com retorno excedente positivo e bases comparáveis, o Sharpe de 0,583 indica eficiência superior diante do risco total.</p><p>A alternativa A inverte a ordenação. A alternativa C conclui sobre medida ausente. A alternativa D transforma dado histórico em garantia.</p><p>Regra de bolso: Sharpe ordena carteiras pela eficiência diante da volatilidade total.</p>",
-     "enunciado": "<p>A carteira A tem Sharpe de 0,40 e a carteira B tem Sharpe de 0,583, calculados na mesma base. Qual leitura decorre do indicador?</p>",
+     "enunciado": "<p>Na comparação pela mesma base de cálculo, o Sharpe da carteira A é 0,40 e o da carteira B é 0,583. Qual leitura decorre do indicador?</p>",
      "alternativas": {
       "a": "A entrega relação superior entre retorno excedente e volatilidade.",
       "b": "B entrega relação superior entre retorno excedente e volatilidade.",
@@ -5126,7 +7720,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "revisao"
      ],
      "comentario": "<p>A alternativa B está correta. Cobertura contábil precisa ser acompanhada de qualidade, liquidez, custódia, segregação, transparência e direito de resgate, especialmente quando muitos titulares procuram saída.</p><p>A alternativa A reúne características técnicas sem medir a capacidade de pagamento. A alternativa C mistura stablecoin com NFT e entretenimento. A alternativa D atribui a emissão a mineração e energia, elementos que não explicam a reserva tradicional.</p><p>Regra de bolso: paridade resiste quando ativos líquidos e direitos de resgate sustentam a promessa.</p>",
-     "enunciado": "<p>Uma cliente pretende manter R$ 70 mil equivalentes em stablecoin referenciada ao dólar. O emissor informa que a emissão é coberta por reservas tradicionais mantidas fora da rede, compostas por depósitos e títulos. A cliente considera suficiente comparar o valor contábil da reserva com a quantidade de tokens. O profissional quer avaliar a capacidade de preservar a paridade durante pedidos simultâneos de saída. Analise os fatores que precisam ser acrescentados.</p>",
+     "enunciado": "<p>Durante o atendimento, uma cliente propõe manter R$ 70 mil equivalentes em stablecoin referenciada ao dólar. O emissor informa que a emissão é coberta por reservas tradicionais mantidas fora da rede, compostas por depósitos e títulos. A cliente considera suficiente comparar o valor contábil da reserva com a quantidade de tokens. O profissional quer avaliar a capacidade de preservar a paridade durante pedidos simultâneos de saída. Analise os fatores que precisam ser acrescentados.</p>",
      "alternativas": {
       "a": "Identificador do token, quantidade de casas decimais e custo histórico de criação das unidades digitais.",
       "b": "Qualidade e liquidez da reserva, custódia, segregação, transparência e condições efetivas de resgate.",
@@ -5161,7 +7755,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "simulado"
      ],
      "comentario": "<p>A alternativa A está correta. Quando a defesa depende de um token que também perde valor, vendas, emissão e queda podem se reforçar, enquanto falta de confiança e liquidez reduz a capacidade de recuperar a referência.</p><p>A alternativa B confunde emissão algorítmica com ativos tradicionais custodiados. A alternativa C transforma referência privada em obrigação soberana. A alternativa D presume que ajuste de oferta cria recursos externos e impede ruptura.</p><p>Regra de bolso: algoritmo coordena incentivos, mas não cria lastro econômico fora do próprio mecanismo.</p>",
-     "enunciado": "<p>Uma stablecoin algorítmica busca manter referência de R$ 1 por meio de emissão, retirada e troca com um segundo token. Após perda de confiança, titulares vendem a stablecoin, o protocolo amplia a oferta do token de suporte e o preço desse token também cai. A liquidez disponível deixa de absorver as trocas solicitadas, e a distância para a referência cresce. O cliente considera esse movimento apenas uma oscilação temporária. Analise o mecanismo econômico observado.</p>",
+     "enunciado": "<p>Ao avaliar uma stablecoin algorítmica, um cliente observa que a referência de R$ 1 depende de emissão, retirada e troca com um segundo token. Após perda de confiança, titulares vendem a stablecoin, o protocolo amplia a oferta do token de suporte e o preço desse token também cai. A liquidez disponível deixa de absorver as trocas solicitadas, e a distância para a referência cresce. O cliente considera esse movimento apenas uma oscilação temporária. Analise o mecanismo econômico observado.</p>",
      "alternativas": {
       "a": "A queda simultânea reduz a capacidade de defesa e pode criar uma espiral de venda, pois o mecanismo depende de confiança, liquidez e valor do token de suporte.",
       "b": "A expansão do token de suporte constitui reserva tradicional e cria direito de resgate contra depósitos mantidos por um custodiante.",
