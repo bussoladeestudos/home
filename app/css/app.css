@@ -2160,3 +2160,44 @@ button.md-patente:focus-visible,button.md-selo:focus-visible{outline:2px solid #
   color:var(--gray-500); cursor:pointer; padding:.3rem .55rem; border-radius:8px; transition:background .15s,color .15s }
 .dia-fechar:hover{ background:rgba(0,0,0,.05); color:var(--gray-700) }
 @media (max-width:768px){ .dia-fechar{ min-height:38px } }
+
+/* ══════════════════════════════════════════════════════════════════
+   EXERCICIOS: ESCOLHER, CONFIRMAR, E SO ENTAO CORRIGIR (19/09/2026)
+   Antes, tocar numa alternativa ja corrigia. Como a resposta e unica e nao
+   volta atras, um toque errado no celular queimava a questao. Agora o toque
+   escolhe, o botao Responder confirma, e a correcao ganha um efeito curto
+   para o aluno perceber o resultado sem precisar ler.
+   ══════════════════════════════════════════════════════════════════ */
+/* O escolhido precisa parecer escolhido, e nao certo: verde aqui faria o
+   aluno achar que ja respondeu e acertou, porque verde e a cor do acerto. */
+.ex-alt.escolhida, .ex-alt.escolhida:hover:not(:disabled) { border-color:var(--navy); background:#F4F6F5; box-shadow:0 0 0 2px rgba(23,62,44,.10); }
+.ex-alt.escolhida .ex-alt-letra { background:var(--navy); border-color:var(--navy); color:var(--white); }
+
+.ex-confirmar { display:flex; align-items:center; gap:.75rem; flex-wrap:wrap; margin-top:1rem; }
+.ex-btn-responder { min-height:44px; padding:11px 30px; }
+.ex-dica-sel { font-size:.78rem; color:var(--gray-500); }
+
+/* O efeito toca uma vez, na renderizacao logo depois de responder. Quem pede
+   menos movimento no sistema recebe so a cor, sem deslocamento. */
+@keyframes exAcerto   { 0%{transform:scale(1)} 35%{transform:scale(1.025)} 100%{transform:scale(1)} }
+@keyframes exErro     { 0%,100%{transform:translateX(0)} 20%{transform:translateX(-6px)} 40%{transform:translateX(5px)} 60%{transform:translateX(-3px)} 80%{transform:translateX(2px)} }
+@keyframes exRevela   { 0%{opacity:.35} 100%{opacity:1} }
+@keyframes exSobe     { 0%{opacity:0;transform:translateY(6px)} 100%{opacity:1;transform:none} }
+@keyframes exPulsoLetra { 0%{transform:scale(1)} 45%{transform:scale(1.28)} 100%{transform:scale(1)} }
+
+.ex-alt.anim-certa   { animation:exAcerto .42s ease-out both; }
+.ex-alt.anim-certa .ex-alt-letra { animation:exPulsoLetra .45s .06s ease-out both; }
+.ex-alt.anim-errada  { animation:exErro .40s ease-out both; }
+.ex-alt.anim-revela  { animation:exRevela .50s .18s ease-out both; }
+.ex-veredito.anim-veredito { animation:exSobe .34s .10s ease-out both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ex-alt.anim-certa, .ex-alt.anim-errada, .ex-alt.anim-revela,
+  .ex-alt.anim-certa .ex-alt-letra, .ex-veredito.anim-veredito { animation:none; }
+}
+
+@media (max-width:600px) {
+  .ex-confirmar { gap:.5rem }
+  .ex-btn-responder { flex:1 1 100%; }
+  .ex-dica-sel { flex:1 1 100%; text-align:center; }
+}
