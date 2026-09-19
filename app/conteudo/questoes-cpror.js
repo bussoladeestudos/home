@@ -1,5 +1,5 @@
 /* GERADO por outputs/questoes_para_js.py. NAO editar a mao.
-   Fonte: _conteudo/cpror/questoes/**.yaml  ·  516 questoes em 58 topicos
+   Fonte: _conteudo/cpror/questoes/**.yaml  ·  557 questoes em 63 topicos
    Para mudar uma questao, edite o YAML e rode o script de novo. */
 window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
  "cproRAnbima": {
@@ -8302,6 +8302,744 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "d": "Aplicar a condição de saída e retornar à referência, considerando custos, pois prazo e indicador invalidaram a tese documentada."
      },
      "gabarito": "d"
+    }
+   ],
+   "Classes de ativos e diversificação na construção da carteira": [
+    {
+     "id": "cpror-inv-03-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Classe agrupa características econômicas semelhantes, subclasse refina emissor, indexador, prazo, setor, região, crédito ou estratégia, e produto é o veículo contratado. O emissor pode concentrar uma fonte de risco.</p><p>A alternativa B troca agrupamento econômico por instrumento e atribui funções incorretas aos demais termos. A alternativa A trata classe e produto como sinônimos e reduz subclasse e emissor a nomes. A alternativa D organiza por distribuidor e desempenho observado, critérios que não definem a classe econômica.</p><p>Regra de bolso: classe organiza a exposição, subclasse a refina e produto a materializa.</p>",
+     "enunciado": "<p>Ao organizar o inventário de uma carteira, uma analista separa agrupamentos econômicos, refinamentos e instrumentos contratados. Identifique a relação entre classe, subclasse, produto e emissor.</p>",
+     "alternativas": {
+      "a": "Classe e produto descrevem a mesma exposição, enquanto subclasse e emissor servem apenas para distinguir nomes comerciais.",
+      "b": "Classe identifica o instrumento contratado, subclasse indica seu preço, produto define o setor e emissor representa o prazo da posição.",
+      "c": "Classe reúne exposições semelhantes, subclasse refina características, produto é o instrumento e emissor origina parte do risco.",
+      "d": "Classe agrupa produtos pela instituição distribuidora, e subclasse separa os instrumentos conforme a rentabilidade observada."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-03-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Diversificar combina exposições que não reagem da mesma forma e intensidade aos mesmos eventos, reduzindo a oscilação do conjunto e concentrações evitáveis.</p><p>A alternativa A promete eliminar oscilações e conta nomes em vez de riscos. A alternativa C transforma correlação histórica em garantia futura. A alternativa B presume que quantidade e peso financeiro revelam a contribuição de cada posição ao risco.</p><p>Regra de bolso: diversificação conta fontes de risco distintas, não a quantidade de produtos.</p>",
+     "enunciado": "<p>Um cliente pergunta qual resultado a diversificação busca produzir na carteira. Identifique a finalidade técnica dessa combinação de exposições.</p>",
+     "alternativas": {
+      "a": "Eliminar oscilações ao distribuir valores iguais entre produtos de instituições e nomes diferentes.",
+      "b": "Aumentar a quantidade de posições até que cada ativo tenha contribuição semelhante ao valor financeiro investido.",
+      "c": "Garantir proteção futura com base nas correlações históricas observadas entre as classes selecionadas.",
+      "d": "Reduzir concentrações evitáveis combinando fontes de risco e retorno que respondem de formas distintas aos eventos."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-03-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Correlação próxima de zero indica pouca relação linear e a negativa indica movimentos opostos, podendo favorecer a combinação. O histórico, porém, pode mudar e não garante proteção futura.</p><p>A alternativa A confunde movimento semelhante com diversificação. A alternativa C converte correlação negativa em eliminação do risco sistêmico. A alternativa D reconhece a natureza histórica, mas descarta uma medida útil para avaliar como retornos se associam.</p><p>Regra de bolso: correlação menor pode ajudar a combinação, mas nenhuma estimativa histórica promete proteção futura.</p>",
+     "enunciado": "<p>Em Florianópolis, o especialista Renato compara três pares de exposições para a carteira de Alice. O primeiro apresentou correlação histórica positiva próxima de uma unidade, o segundo ficou próximo de zero e o terceiro mostrou correlação negativa. Os dados foram calculados em período de mercado estável. Alice quer escolher o primeiro par porque os dois ativos subiram juntos e entende que desempenho semelhante produz proteção. Renato lembra que a associação histórica pode mudar e que o objetivo é combinar respostas distintas, dentro do perfil e do horizonte. Alice insiste em tratar o passado como garantia para a próxima crise. Analise o benefício potencial indicado pelas correlações e o limite dessa leitura.</p>",
+     "alternativas": {
+      "a": "O primeiro par tende a oferecer benefício elevado, pois movimentos semelhantes confirmam proteção quando os dois ativos sobem juntos.",
+      "b": "O segundo e o terceiro podem ampliar o benefício de combinação, mas a correlação histórica pode mudar e não garante proteção futura.",
+      "c": "O terceiro par elimina risco de mercado, pois movimentos opostos mantêm o valor da carteira durante eventos sistêmicos.",
+      "d": "Os três pares oferecem benefício equivalente, porque correlação mede retorno passado e não participa da avaliação do risco conjunto."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-03-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. R$ 315.000 divididos por sete resultam em R$ 45.000 por fundo. Sem as carteiras internas, não se calcula o valor exato por companhia, mas a exposição majoritária às mesmas empresas revela concentração no setor e no mercado local.</p><p>A alternativa A acerta a divisão, porém trata produtos de comportamento semelhante como riscos independentes. A alternativa C deixa de dividir o patrimônio e atribui R$ 315.000 a cada fundo. A alternativa D multiplica R$ 315.000 por sete, confundindo quantidade de veículos com patrimônio e exposição mensurável.</p><p>Regra de bolso: divida o valor para achar o peso dos produtos, mas abra as carteiras para contar as exposições.</p>",
+     "enunciado": "<p>Na agência de Goiânia, a assessora Flávia analisa R$ 315.000 de César distribuídos igualmente entre sete fundos. Os relatórios mostram que os fundos investem majoritariamente nas mesmas companhias de varejo brasileiras e reagem de forma muito semelhante às notícias do setor. Os prazos de resgate são compatíveis com os objetivos informados. César divide o patrimônio pelo número de fundos e afirma possuir sete diversificações independentes. Ele pede que Flávia calcule o valor em cada produto e confirme que a quantidade de nomes reduz a concentração. Os percentuais exatos das companhias variam entre os fundos e não foram apresentados no atendimento. Calcule a parcela por fundo e avalie o que pode ser concluído sobre a exposição econômica.</p>",
+     "alternativas": {
+      "a": "Cada fundo recebe R$ 45.000, e a divisão igual transforma cada produto em fonte independente de risco dentro da renda variável.",
+      "b": "Cada fundo recebe R$ 45.000, mas o valor exato por companhia é desconhecido e os sete produtos mantêm concentração setorial e local.",
+      "c": "Cada fundo recebe R$ 315.000, porque a exposição às mesmas empresas deve ser somada em cada veículo para medir concentração.",
+      "d": "Cada fundo recebe R$ 2,205 milhões, pois sete produtos multiplicam a exposição econômica mesmo sem conhecer as carteiras internas."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-03-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Há diversificação entre classes e dentro de cada classe. Dois rótulos não eliminam concentração em emissor, prazo ou setor, e novos produtos podem repetir as mesmas fontes de risco.</p><p>A alternativa A usa classes diferentes para ignorar concentrações internas. A alternativa B confunde contratos distintos com emissores distintos. A alternativa D coloca o retorno desejado acima da análise das exposições e dos objetivos.</p><p>Regra de bolso: diversifique entre classes e também dentro delas, olhando emissor, prazo, setor e fator.</p>",
+     "enunciado": "<p>Durante uma reunião em Salvador, o consultor Murilo revisa a carteira de Tânia. Ela mantém renda fixa e ações, mas a parcela de renda fixa está concentrada em um único emissor e prazo, enquanto as ações pertencem ao mesmo setor econômico. As duas parcelas possuem horizonte longo. Tânia afirma que duas classes bastam para diversificar e prefere acrescentar outro produto do mesmo emissor porque a taxa anunciada é atraente. Murilo apresenta a possibilidade de combinar classes compatíveis com os objetivos e, dentro delas, distribuir emissores, prazos, setores e fatores. Tânia aceita ampliar o número de posições, desde que isso não altere a taxa média desejada. Analise as dimensões de diversificação necessárias no diagnóstico.</p>",
+     "alternativas": {
+      "a": "A presença de renda fixa e ações encerra o diagnóstico, pois diversificação entre classes absorve concentrações internas de emissor e setor.",
+      "b": "A inclusão de outro produto do emissor amplia a diversificação interna, pois contratos diferentes separam o risco de crédito da instituição.",
+      "c": "A carteira pede análise entre classes e dentro delas, porque emissor, prazo e setor ainda concentram riscos apesar dos dois rótulos.",
+      "d": "A taxa média desejada define o número de posições, e a diversificação deve preservar esse retorno antes de considerar os fatores comuns."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-03-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Títulos podem variar por emissor e vencimento e, ainda assim, depender intensamente do mesmo fator de juros. A diversificação precisa examinar as fontes econômicas comuns.</p><p>A alternativa B presume que contratos distintos criam fatores distintos. A alternativa C apaga diferenças reais de emissor e prazo por causa do fator comum. A alternativa D limita a análise de fator ao emissor, embora ativos diferentes possam responder à mesma taxa.</p><p>Regra de bolso: nomes diferentes podem esconder a mesma dependência econômica.</p>",
+     "enunciado": "<p>A gerente Bianca atende Álvaro em Curitiba e encontra títulos com emissores, nomes e vencimentos diferentes. As posições integram uma parcela com horizonte longo. Apesar da variedade, os relatórios mostram que o preço dos títulos reage fortemente à mesma taxa de juros. Álvaro quer contar cada título como uma fonte autônoma de diversificação e acrescentar outro vencimento, argumentando que contratos distintos respondem a eventos distintos. Bianca separa risco do emissor, prazo e fator econômico e observa que a carteira pode estar distribuída em uma dimensão e concentrada em outra. Álvaro concorda em rever a estrutura se a dependência comum permanecer relevante para seus objetivos. Avalie a concentração por fator.</p>",
+     "alternativas": {
+      "a": "Os títulos podem diversificar emissor e prazo, mas continuar concentrados no mesmo fator de juros que dirige seus retornos.",
+      "b": "Emissores e vencimentos distintos garantem fatores distintos, de modo que outro prazo amplia a diversificação econômica da carteira.",
+      "c": "A dependência da taxa transforma os títulos em um único produto, impedindo distinguir risco de emissor e risco de vencimento.",
+      "d": "A concentração por fator importa apenas quando os títulos pertencem ao mesmo emissor, pois o crédito determina a reação aos juros."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-03-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. A obrigação de R$ 96.000 possui data próxima e exige exposição coerente com liquidez e horizonte. O saldo é R$ 420.000 menos R$ 96.000, ou R$ 324.000, e pode receber combinação mais ampla conforme objetivos e perfil.</p><p>A alternativa B mantém inadequação econômica apesar da separação contábil. A alternativa C presume compensação entre classes e ignora a necessidade de caixa na data. A alternativa D transforma correlação histórica negativa em garantia futura de disponibilidade.</p><p>Regra de bolso: diversificação não corrige prazo incompatível; primeiro separe a obrigação próxima.</p>",
+     "enunciado": "<p>Em Belém, o planejador André recebe Nádia, que possui R$ 420.000 e pretende usar R$ 96.000 na quitação de uma obrigação dentro de sete meses. O pagamento ocorrerá em parcela única. O restante tem horizonte superior a doze anos. Nádia quer distribuir os R$ 96.000 entre ações, imóveis e crédito de prazo longo para aumentar o número de classes e sustenta que a diversificação compensará qualquer dificuldade de venda na data. Ela aceita separar contabilmente a obrigação, mas insiste em manter os mesmos ativos da parcela longa porque várias classes parecem oferecer proteção. André registra a data, a necessidade de caixa e o comportamento que as posições podem apresentar em uma crise. Avalie como a função do dinheiro limita a diversificação proposta.</p>",
+     "alternativas": {
+      "a": "A parcela de R$ 96.000 deve ter exposição compatível com prazo e liquidez; a combinação ampla pode ser avaliada no saldo de R$ 324.000.",
+      "b": "As duas parcelas podem usar as mesmas classes, desde que R$ 96.000 permaneçam identificados e a venda seja iniciada antes do vencimento.",
+      "c": "A obrigação admite ativos de risco se distribuída entre três classes, porque perdas de uma exposição serão compensadas pelas demais.",
+      "d": "A parcela próxima deve ficar na classe com correlação histórica negativa às ações, pois esse dado garante valor disponível em sete meses."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-03-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Diversificação reduz concentrações evitáveis, mas crises podem elevar correlações e retirar liquidez de várias posições. Além disso, alavancagem ou responsabilidade adicional pode fazer uma posição pequena contribuir de forma desproporcional para o risco.</p><p>A alternativa A conta produtos e presume que valor aplicado limita a perda. A alternativa B transforma uma limitação em inutilidade da diversificação e iguala todas as exposições. A alternativa C separa alavancagem do risco e presume contribuição proporcional ao peso em dinheiro.</p><p>Regra de bolso: diversificação reduz concentração, mas não promete proteção completa em crises nem limita risco pelo peso nominal.</p>",
+     "enunciado": "<p>No monitoramento de uma família em Porto Alegre, a economista Cecília encontra doze produtos distribuídos entre renda fixa, ações e imóveis. Em um cenário de estresse, várias correlações aumentaram, a liquidez diminuiu em posições diferentes e uma aplicação de pequeno valor gerou perda desproporcional por possuir alavancagem. O cliente Raul afirma que três classes e doze produtos deveriam impedir queda relevante e pede aumento da posição alavancada, pois seu peso financeiro inicial era baixo. Cecília compara a contribuição de cada exposição ao risco e registra quais eventos afetam várias posições ao mesmo tempo. Raul aceita rever a carteira, mas ainda mede diversificação pela contagem de contratos. Analise os limites observados.</p>",
+     "alternativas": {
+      "a": "A quantidade de produtos preserva a diversificação, e a perda alavancada permanece pequena porque seu valor financeiro inicial era reduzido.",
+      "b": "A crise invalida a diversificação como técnica, pois correlações maiores demonstram que classes diferentes carregam o mesmo risco.",
+      "c": "A alavancagem amplia apenas o retorno esperado, enquanto a contribuição ao risco continua proporcional ao dinheiro aplicado na posição.",
+      "d": "A diversificação reduz concentrações, mas não elimina risco sistêmico; correlações e liquidez podem piorar, e peso pequeno pode gerar risco alto."
+     },
+     "gabarito": "d"
+    }
+   ],
+   "Renda fixa: remuneração, riscos e adequação ao cliente": [
+    {
+     "id": "cpror-inv-04-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Na prefixada, a taxa nominal é definida na contratação; na pós-fixada, o retorno acompanha um indexador; na híbrida, um índice de preços é composto com uma parcela fixa.</p><p>A alternativa A promete ganho real e ausência de risco, além de somar as parcelas híbridas. A alternativa C troca as características das formas de remuneração. A alternativa D reduz os riscos a um único fator e atribui à composição híbrida a eliminação de crédito e prazo.</p><p>Regra de bolso: prefixada fixa a taxa nominal, pós-fixada segue o índice e híbrida compõe inflação e taxa fixa.</p>",
+     "enunciado": "<p>Ao comparar emissões de renda fixa, uma analista identifica regras prefixada, pós-fixada e híbrida. Compare as três formas de remuneração.</p>",
+     "alternativas": {
+      "a": "A prefixada garante ganho real, a pós-fixada elimina variação de mercado e a híbrida soma inflação e taxa fixa sem capitalização.",
+      "b": "A prefixada trava taxa nominal, a pós-fixada acompanha um indexador e a híbrida compõe índice de preços com parcela fixa.",
+      "c": "A prefixada acompanha os juros futuros, a pós-fixada define o valor final na contratação e a híbrida fixa a inflação do período.",
+      "d": "A prefixada depende apenas do emissor, a pós-fixada depende apenas do prazo e a híbrida elimina os dois riscos pela composição."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-04-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Percentual do indexador e indexador mais spread são regras diferentes: 108% do CDI equivale a 1,08 vez o CDI, enquanto CDI mais 8% compõe o indexador com a taxa fixa.</p><p>A alternativa A trata multiplicação e spread como equivalentes. A alternativa C transforma uma referência futura em taxa fixada e apaga o indexador da segunda regra. A alternativa B classifica as duas ofertas em formas de remuneração que não correspondem à descrição.</p><p>Regra de bolso: percentual do CDI multiplica o índice; CDI mais taxa compõe duas parcelas.</p>",
+     "enunciado": "<p>Uma oferta paga 108% do CDI e outra paga CDI mais 8% ao ano. Identifique a diferença conceitual entre as duas regras, antes de comparar prazo, base e capitalização.</p>",
+     "alternativas": {
+      "a": "As duas pagam a variação do CDI acrescida de oito pontos percentuais, mudando apenas a forma de apresentação comercial.",
+      "b": "A primeira é híbrida por usar percentual, enquanto a segunda é prefixada por declarar uma taxa fixa após o indexador.",
+      "c": "A primeira fixa o CDI na contratação, enquanto a segunda acompanha apenas a parcela fixa durante o período da emissão.",
+      "d": "A primeira multiplica o CDI por 1,08, enquanto a segunda compõe o CDI com uma parcela fixa de 8% ao ano."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-04-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Na primeira oferta, 8% vezes 1,12 resultam em 8,96%. Na segunda, a composição é (1 + 0,08) vezes (1 + 0,04) menos 1, chegando a 12,32%.</p><p>A alternativa B soma 112 e 8 como percentuais e aplica apenas 4% sobre o CDI na segunda. A alternativa A trata regras distintas como equivalentes. A alternativa D converte os 12% adicionais do indexador em 0,12 ponto e soma CDI e spread sem composição.</p><p>Regra de bolso: transforme o percentual do índice em multiplicador e componha o spread em fator separado.</p>",
+     "enunciado": "<p>Em Fortaleza, o assessor Breno apresenta a Cláudia duas emissões anuais simplificadas, com mesma base, período e condições de capitalização. As duas aplicações partem do mesmo valor inicial e vencem na mesma data. A comparação exclui tributos e custos. A primeira remunera 112% do CDI; a segunda, CDI mais 4% ao ano. Para o cenário analisado, o CDI do período é 8%. Cláudia multiplica 8% por 1,12 para a primeira oferta, mas afirma que a segunda também entrega 8,96%, pois interpreta o número quatro como acréscimo de quatro por cento sobre o indexador. Ela pede que Breno confirme a equivalência antes de avaliar crédito, liquidez, custos e prazo. Calcule as duas remunerações brutas simplificadas e compare as regras.</p>",
+     "alternativas": {
+      "a": "As duas entregam 8,96%, porque 112% do CDI e CDI mais 4% representam o mesmo acréscimo proporcional sobre 8%.",
+      "b": "A primeira entrega 12% e a segunda 8,32%; os números 112 e 4 são somados ao CDI conforme a forma de divulgação.",
+      "c": "A primeira entrega 8,96% e a segunda 12,32%; percentual do índice e composição com spread produzem resultados diferentes.",
+      "d": "A primeira entrega 8,12% e a segunda 12%; o percentual do CDI é convertido em 0,12 ponto e o spread é somado ao índice."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-04-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A conta é (1 + 0,04) vezes (1 + 0,07) menos 1, que resulta em 11,28%. A soma direta produz 11%, diferença de 0,28 ponto percentual.</p><p>A alternativa B soma as parcelas e ignora a capitalização entre elas. A alternativa C calcula 7% mais 4% de 7%, chegando a 7,28%, mas deixa de atualizar o capital pelo IPCA. A alternativa D multiplica os percentuais como números inteiros e interpreta 28 como remuneração percentual.</p><p>Regra de bolso: em taxa híbrida, converta inflação e taxa fixa em fatores e multiplique antes de retirar a unidade.</p>",
+     "enunciado": "<p>Na revisão de carteira em Campinas, a planejadora Dalva analisa um título híbrido que remunera a variação do IPCA mais 7% no mesmo período anual simplificado. O cenário usado na conversa considera IPCA de 4%. Saulo não fez aportes nem retiradas durante o período, e as duas parcelas incidem sobre o mesmo capital. O cliente soma as parcelas, chega a 11% e afirma que esse será o resultado exato independentemente da forma de cálculo. O título será avaliado até o vencimento, mas Dalva ainda verificará emissor, custos e condições contratuais. Para isolar apenas a mecânica da taxa, ela usa a composição entre o índice e a parcela fixa. Calcule a remuneração bruta simplificada e identifique a diferença em relação à soma direta.</p>",
+     "alternativas": {
+      "a": "A composição resulta em 11,28%, ficando 0,28 ponto percentual acima dos 11% obtidos pela soma direta.",
+      "b": "A composição resulta em 11%, pois índice de preços e taxa fixa são parcelas independentes aplicadas sobre o mesmo capital.",
+      "c": "A composição resulta em 7,28%, pois os 4% do IPCA incidem apenas sobre a parcela fixa de 7% contratada.",
+      "d": "A composição resulta em 28%, pois a taxa real de 7% é multiplicada pelos 4% de inflação antes de ser somada ao capital."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-04-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O segundo título reúne emissor mais arriscado, carência incompatível e dependência de venda no mercado secundário. Garantias podem reduzir perdas, mas possuem condições e limites, e o perfil não altera esses riscos.</p><p>A alternativa B trata taxa e perfil como compensação automática para crédito e liquidez. A alternativa C usa a regra de remuneração para igualar riscos diferentes. A alternativa D transforma garantia em eliminação do crédito e reduz o segundo título à oscilação de mercado.</p><p>Regra de bolso: em renda fixa, compare emissor, garantia, carência e saída antes de comparar a taxa.</p>",
+     "enunciado": "<p>Em Recife, a gerente Olívia atende Jonas, que compara dois títulos com a mesma regra de remuneração. A meta vence em dezoito meses exatos. O primeiro é emitido por instituição com risco de crédito aceito no diagnóstico, permite resgate no prazo da meta e possui garantia cujas condições foram verificadas. O segundo oferece taxa maior, tem carência superior ao prazo do objetivo, depende de emissor mais arriscado e só permite saída antecipada por venda no mercado secundário. Jonas se considera conservador e afirma que a classificação como renda fixa torna as duas escolhas equivalentes em segurança. Olívia registra emissor, garantia, carência, prazo e forma de saída. Analise os riscos que diferenciam as ofertas.</p>",
+     "alternativas": {
+      "a": "O segundo combina risco de crédito e liquidez superiores; garantia e rótulo de renda fixa não apagam condições de saída e limites.",
+      "b": "A taxa maior compensa carência e crédito, pois o perfil conservador reduz a probabilidade de perda na venda antecipada.",
+      "c": "As ofertas têm o mesmo risco porque compartilham a remuneração, e emissor e mercado secundário afetam apenas o retorno líquido.",
+      "d": "O primeiro elimina risco de crédito pela garantia verificada, enquanto o segundo apresenta somente risco de oscilação antes do vencimento."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-04-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Quando as taxas exigidas pelo mercado sobem, o preço de um prefixado existente tende a cair, mantidos os fluxos. Prazo e sensibilidade maiores podem ampliar essa variação antes do vencimento.</p><p>A alternativa A inverte a relação entre taxa de mercado e preço do título antigo. A alternativa C confunde regra contratada no vencimento com preço de venda antecipada. A alternativa D condiciona a queda apenas à inflação e exclui a taxa exigida pelo mercado.</p><p>Regra de bolso: taxa contratada orienta o fluxo; taxa de mercado influencia o preço de saída antes do vencimento.</p>",
+     "enunciado": "<p>O consultor Mateus acompanha Helena em Brasília. Ela comprou um título prefixado de sete anos e, após dois anos, observou aumento das taxas exigidas pelo mercado para emissões semelhantes. Helena considera uma venda antecipada para financiar uma nova despesa familiar inesperada, embora a taxa nominal contratada continue registrada no título. A despesa será paga em parcela única. Ela sustenta que renda fixa mantém preço fixo e que a venda reconhecerá a remuneração acumulada pela taxa original. O título possui mercado secundário, e o emissor continua pagando as obrigações previstas. Mateus distingue o fluxo no vencimento do preço disponível antes dele. Avalie o efeito da alta das taxas e do prazo remanescente.</p>",
+     "alternativas": {
+      "a": "O preço tende a subir, pois a taxa antiga se torna mais valiosa quando o mercado exige remuneração superior para títulos semelhantes.",
+      "b": "O preço tende a cair, e o prazo ainda longo pode ampliar a variação, embora a regra contratada permaneça para quem mantiver as condições.",
+      "c": "O preço permanece fixo pela taxa contratada, e somente inadimplência pode produzir diferença entre venda e valor projetado no vencimento.",
+      "d": "O preço tende a cair apenas se a inflação superar a taxa nominal, porque juros de mercado não participam da venda antecipada."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-04-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. A remuneração líquida é R$ 14.400 menos R$ 2.880 menos R$ 720, ou R$ 10.800. Dividida pelos R$ 120.000 aplicados, resulta em 9%. Os 12% correspondem ao retorno bruto.</p><p>A alternativa B deduz apenas os tributos e afirma que os custos já estão incluídos, chegando a R$ 11.520 e 9,6%. A alternativa A deduz apenas R$ 720 de custos, resultando em R$ 13.680 e 11,4%. A alternativa D ignora as duas deduções e repete os valores brutos.</p><p>Regra de bolso: retorno realizado é o que sobra da remuneração depois de tributos e custos aplicáveis.</p>",
+     "enunciado": "<p>Em Manaus, a especialista Lorena revisa o resultado de um título levado ao vencimento por Artur. O principal aplicado foi de R$ 120.000 e a remuneração bruta creditada somou R$ 14.400. Não ocorreram aportes nem resgates durante o período. Sobre essa remuneração, os tributos totalizaram R$ 2.880, e os custos cobrados na operação foram de R$ 720. O emissor pagou conforme a regra contratada, mas Artur afirma que seu retorno realizado foi de 12%, pois divide R$ 14.400 pelo principal e desconsidera as deduções. Lorena separa taxa contratada, valor bruto e resultado líquido efetivamente disponível, sem avaliar inflação neste cálculo. Calcule a remuneração líquida e sua taxa sobre o principal e analise a afirmação de Artur.</p>",
+     "alternativas": {
+      "a": "A remuneração líquida é R$ 13.680 e a taxa líquida é 11,4%; apenas os custos reduzem a taxa contratada no vencimento.",
+      "b": "A remuneração líquida é R$ 11.520 e a taxa líquida é 9,6%; os custos já estão incluídos nos tributos informados.",
+      "c": "A remuneração líquida é R$ 10.800 e a taxa líquida é 9%; os 12% descrevem o resultado bruto antes de tributos e custos.",
+      "d": "A remuneração líquida é R$ 14.400 e a taxa líquida é 12%; pagamento no vencimento preserva o retorno contratado após deduções."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-04-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A obrigação possui data próxima e não tem outra fonte. A alternativa com liquidez compatível atende melhor à função, ainda sujeita à análise de emissor, custos e crédito; o prefixado longo pode realizar perda na venda antecipada.</p><p>A alternativa A usa perfil e taxa para ignorar o prazo incompatível. A alternativa C trata produtos de renda fixa como equivalentes e reduz a decisão à taxa e ao emissor. A alternativa B presume que a taxa contratada determina o preço de mercado antes do vencimento.</p><p>Regra de bolso: o prazo do objetivo limita a escolha antes que a taxa maior entre na comparação.</p>",
+     "enunciado": "<p>Na agência de Porto Alegre, a assessora Vânia atende Eduardo, que precisa de R$ 72.000 para quitar uma obrigação em nove meses exatos. Ele compara um título pós-fixado com liquidez compatível e baixa oscilação no cenário apresentado com um prefixado de três anos, taxa contratada superior e venda antecipada pelo preço de mercado. Eduardo possui perfil arrojado e pede o prefixado porque aceita oscilações e acredita que renda fixa permite recuperar qualquer perda até a data da obrigação. A quantia não possui outra fonte, e o vencimento do título longo ocorre depois do pagamento. Vânia verifica também emissor, custos e risco de crédito antes de indicar a função de cada alternativa. Avalie a adequação ao objetivo.</p>",
+     "alternativas": {
+      "a": "O prefixado atende porque o perfil arrojado permite suportar oscilação, e a taxa maior compensa o vencimento posterior à obrigação.",
+      "b": "O prefixado é coerente se Eduardo vender nove meses depois, pois a taxa nominal contratada determina o preço no mercado secundário.",
+      "c": "Os dois são equivalentes por serem renda fixa, e a decisão pode seguir a taxa superior depois da comparação dos emissores.",
+      "d": "O pós-fixado é coerente com a data e a liquidez do objetivo, após análise dos demais riscos; o prefixado expõe a venda a preço de mercado."
+     },
+     "gabarito": "d"
+    }
+   ],
+   "Marcação a mercado, duration e negociação de renda fixa": [
+    {
+     "id": "cpror-inv-05-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A marcação a mercado desconta os fluxos futuros pela taxa compatível com prazo e risco. Como a relação é inversa, taxa exigida maior reduz o valor presente e taxa menor o eleva.</p><p>A alternativa A ignora o desconto e inverte a relação. A alternativa C confunde registro de custódia com formação do preço. A alternativa B trata a taxa original como preço fixo em negociações anteriores ao vencimento.</p><p>Regra de bolso: o fluxo prometido pode permanecer igual, mas seu valor hoje cai quando a taxa exigida sobe.</p>",
+     "enunciado": "<p>Ao explicar a marcação a mercado, uma analista relaciona fluxos futuros, taxa de desconto e preço atual. Identifique como o preço de um título é obtido e como reage à taxa exigida.</p>",
+     "alternativas": {
+      "a": "O preço soma os fluxos sem desconto e aumenta quando a taxa de mercado sobe, porque o comprador exige remuneração superior.",
+      "b": "O preço acompanha a taxa contratada na emissão e permanece estável até o vencimento, inclusive no mercado secundário.",
+      "c": "O preço corresponde ao principal registrado na custódia e muda apenas quando o emissor altera os pagamentos prometidos.",
+      "d": "O preço é o valor presente dos fluxos; mantidas as demais condições, taxa maior reduz o preço e taxa menor o eleva."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-05-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. O mercado primário recebe a emissão e financia o emissor; o secundário transfere títulos já emitidos entre investidores; a custódia registra e guarda eletronicamente a posição.</p><p>A alternativa A troca os mercados e atribui à custódia a regra de remuneração. A alternativa B reúne emissão e negociação no primário e transforma custódia em garantia de comprador. A alternativa D coloca a emissão no secundário e atribui proteção de preço e crédito ao registro.</p><p>Regra de bolso: primário emite, secundário transfere e custódia registra.</p>",
+     "enunciado": "<p>Um cliente compra um título na emissão, negocia depois com outro investidor e mantém a posição registrada eletronicamente. Identifique mercado primário, mercado secundário e custódia nessa sequência.</p>",
+     "alternativas": {
+      "a": "A compra na emissão ocorre no secundário, a negociação posterior ocorre no primário e a custódia define a remuneração contratada.",
+      "b": "A compra e a negociação ocorrem no primário, enquanto a custódia funciona como compradora caso o investidor deseje sair.",
+      "c": "A compra na emissão capta para o emissor no primário, a negociação entre investidores ocorre no secundário e a custódia registra a posição.",
+      "d": "A compra e a negociação ocorrem no secundário, enquanto a custódia protege a posição contra queda de preço e inadimplência."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-05-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Com taxa de 10%, R$ 1.320 divididos por 1,10 resultam em R$ 1.200. Com taxa de 20%, R$ 1.320 divididos por 1,20 resultam em R$ 1.100. A alta da taxa reduz o valor presente.</p><p>A alternativa B troca os preços e inverte a relação. A alternativa C usa o fluxo futuro como preço atual e ignora o desconto. A alternativa D multiplica o pagamento pelas taxas, chegando a R$ 1.452 e R$ 1.584, em vez de descontá-lo.</p><p>Regra de bolso: para o mesmo fluxo futuro, divisor maior significa preço presente menor.</p>",
+     "enunciado": "<p>Em Belo Horizonte, o assessor Leandro avalia um título sem cupom que pagará R$ 1.320 daqui a um ano. Para simplificar a conversa, não há custos nem outros fluxos. O ativo está registrado em custódia, o emissor segue cumprindo as obrigações e a eventual venda ocorreria no mercado secundário. Quando a taxa exigida por compradores equivalentes era 10% no período, Marina estimou o preço dividindo o pagamento por 1,10. Depois, a taxa de mercado subiu para 20%, e ela afirmou que o preço deveria aumentar porque o novo comprador receberia remuneração superior. Leandro mantém o fluxo final de R$ 1.320 e recalcula apenas seu valor presente pelas duas taxas. Calcule os preços simplificados antes e depois da alta e avalie a conclusão de Marina.</p>",
+     "alternativas": {
+      "a": "O preço passa de R$ 1.200 para R$ 1.100; a taxa maior reduz o valor presente do mesmo fluxo prometido.",
+      "b": "O preço passa de R$ 1.100 para R$ 1.200; a taxa maior aumenta o valor atual para entregar o retorno exigido.",
+      "c": "O preço permanece em R$ 1.320, pois o emissor manteve o pagamento final e o título não possui cupons intermediários.",
+      "d": "O preço passa de R$ 1.452 para R$ 1.584, pois as taxas de 10% e 20% são acrescentadas ao pagamento futuro."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-05-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. R$ 2.100 divididos por 1,05 resultam em R$ 2.000. Com taxa de 10%, R$ 2.100 divididos por 1,10 resultam em aproximadamente R$ 1.909,09. O pagamento não mudou, mas seu valor presente caiu.</p><p>A alternativa A mantém o primeiro preço e ignora a taxa atual usada na venda. A alternativa C acrescenta as taxas ao fluxo, produzindo R$ 2.205 e R$ 2.310. A alternativa D troca a ordem dos preços e conclui valorização após a alta da taxa.</p><p>Regra de bolso: marcação recalcula hoje o valor dos fluxos antigos com a taxa exigida hoje.</p>",
+     "enunciado": "<p>Na mesa de renda fixa em São Paulo, a especialista Clarice acompanha um título sem cupom que pagará R$ 2.100 em um ano. A taxa compatível com prazo e risco era 5%, mas passou a 10% após uma mudança no mercado. O título está em custódia, possui comprador no secundário e seria vendido logo depois dessa alteração. O emissor não mudou o pagamento prometido, e a análise simplificada desconsidera custos. O cliente Fábio calcula o primeiro preço corretamente e sustenta que a nova taxa afeta apenas títulos emitidos depois, mantendo o valor do título antigo. Clarice desconta o mesmo fluxo pelas duas taxas para estimar a marcação antes de uma eventual venda. Calcule os preços aproximados e identifique o efeito da mudança.</p>",
+     "alternativas": {
+      "a": "O preço permanece em R$ 2.000, porque a taxa de 5% foi contratada antes da mudança observada no mercado.",
+      "b": "O preço passa de R$ 2.000 para aproximadamente R$ 1.909,09, porque a taxa de desconto subiu sobre o mesmo fluxo.",
+      "c": "O preço passa de R$ 2.205 para R$ 2.310, porque 5% e 10% são aplicados sobre o fluxo prometido no vencimento.",
+      "d": "O preço passa de R$ 1.909,09 para R$ 2.000, porque o aumento da taxa valoriza títulos antigos com pagamento fixado."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-05-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Duration resume o tempo médio ponderado dos fluxos. Como X devolve parte do valor antes por cupons, tende a ter duration menor e, em condições comparáveis, menor sensibilidade a pequenas mudanças de taxa.</p><p>A alternativa A iguala duration ao vencimento e atribui cupons ao crédito. A alternativa C reconhece o reinvestimento, mas conclui duration menor para o fluxo concentrado no final. A alternativa D reduz duration ao prazo final e transfere a sensibilidade apenas para liquidez.</p><p>Regra de bolso: vencimento olha o último fluxo; duration pondera quando cada fluxo chega.</p>",
+     "enunciado": "<p>Durante uma reunião em Goiânia, a consultora Denise compara dois títulos com o mesmo vencimento e risco de crédito semelhante. Os dois possuem liquidez comparável e serão avaliados antes da data final. O título X paga cupons periódicos e devolve o principal no final; o título Y concentra principal e remuneração no vencimento. O cliente Rodrigo considera os prazos finais iguais e conclui que os dois têm a mesma duration e a mesma reação a pequenas mudanças de taxa. Denise registra que X devolve parte dos fluxos antes, enquanto Y mantém o recebimento concentrado no final. Ela também informa que os cupons recebidos podem ser reinvestidos a taxas diferentes. Analise vencimento, duration e sensibilidade no caso.</p>",
+     "alternativas": {
+      "a": "Os vencimentos iguais tornam as durations iguais, e os cupons alteram apenas o risco de crédito do título X.",
+      "b": "O título X tende a ter duration menor que Y por antecipar fluxos e pode mostrar sensibilidade menor em condições comparáveis.",
+      "c": "O título Y tende a ter duration menor porque concentra o pagamento e evita o risco de reinvestimento dos cupons periódicos.",
+      "d": "A duration mede apenas o prazo final e não participa da sensibilidade, que depende exclusivamente da liquidez no secundário."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-05-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A atualização do indexador não impede oscilação da taxa real nem do ágio ou deságio. O mercado secundário permite negociação, mas não garante comprador, preço ou ausência de desconto.</p><p>A alternativa B transforma indexação e custódia em proteção de preço e liquidez. A alternativa C usa baixa negociação para suspender a avaliação econômica. A alternativa D atribui à custódia redução de riscos que o registro eletrônico não cobre.</p><p>Regra de bolso: indexação atualiza o fluxo, custódia registra a posição e mercado define a saída disponível.</p>",
+     "enunciado": "<p>A gerente Paula atende Sérgio em uma agência de Curitiba. Ele possui um título indexado à inflação com vencimento distante e pretende vendê-lo antes da data final. O objetivo original tem prazo de oito anos. Depois de observar atualização positiva do indexador, Sérgio afirma que o preço não pode cair e dispensa a análise da taxa real e do ágio ou deságio praticado no mercado. O ativo está registrado em custódia, mas apresenta poucas negociações recentes no secundário. Paula verifica a taxa exigida, a possibilidade de comprador, o preço disponível, os custos e o risco de crédito antes de responder. Sérgio insiste que indexação e custódia tornam a saída previsível. Avalie a marcação e a liquidez dessa posição.</p>",
+     "alternativas": {
+      "a": "O título indexado pode variar com taxa real e ágio ou deságio, e o secundário oferece saída possível sem garantir comprador ou preço.",
+      "b": "A atualização do indexador impede queda de preço, e a custódia assegura comprador pelo valor registrado antes do vencimento.",
+      "c": "A baixa negociação elimina a marcação a mercado, pois o título conserva o valor atualizado até surgir uma nova referência de venda.",
+      "d": "A custódia reduz o risco de mercado e de crédito, restando apenas o custo cobrado para transferir a posição no secundário."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-05-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Duration maior costuma sinalizar sensibilidade superior do preço a pequenas mudanças de taxa, quando as demais condições são comparáveis. O título que concentra fluxos no final tende a reagir mais.</p><p>A alternativa B inverte a interpretação da duration e dos fluxos. A alternativa C atribui aos cupons aumento da duration, embora recebimentos anteriores tendam a reduzi-la. A alternativa A usa vencimento e emissor para ignorar o desenho temporal dos pagamentos.</p><p>Regra de bolso: sob condições comparáveis, duration maior costuma significar variação de preço maior para a mesma mudança de taxa.</p>",
+     "enunciado": "<p>Em Salvador, o assessor Ítalo acompanha Vera, que possui dois títulos com mesmo emissor, vencimento e valor presente. Ambos são negociados no mesmo mercado. O primeiro concentra o pagamento no final e apresenta duration maior; o segundo distribui cupons e apresenta duration menor. Vera espera pequena alta nas taxas de mercado e quer vender uma das posições depois da mudança. Ela escolhe o primeiro por acreditar que duration maior representa recebimento antecipado e menor variação de preço. Ítalo lembra que a medida aproxima sensibilidade em condições comparáveis e não captura sozinha crédito, liquidez ou mudanças grandes na curva. Vera aceita manter os demais fatores constantes no exercício. Compare a reação esperada dos títulos.</p>",
+     "alternativas": {
+      "a": "Os dois tendem a oscilar igualmente, pois mesmo vencimento e emissor tornam irrelevante a distribuição temporal dos fluxos.",
+      "b": "O primeiro tende a oscilar menos, pois duration maior indica que os fluxos chegam antes e reduzem o prazo médio ponderado.",
+      "c": "O segundo tende a oscilar mais, pois os cupons aumentam sua duration e concentram o valor econômico no vencimento final.",
+      "d": "O primeiro tende a oscilar mais, pois duration maior indica sensibilidade superior para pequena alta da taxa."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-05-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. Vender realiza o preço vigente e pode acrescentar desconto e custos em mercado pouco líquido. Como a meta, a liquidez separada e os pagamentos permanecem, a decisão considera necessidade, crédito e alternativas, não apenas a oscilação exibida.</p><p>A alternativa A confunde retirada da tela com eliminação da perda, que seria realizada na venda. A alternativa B transforma manutenção e custódia em garantia contra crédito, inflação e custo de oportunidade. A alternativa D usa falta de compradores para negar o valor econômico e a dificuldade de saída.</p><p>Regra de bolso: oscilação observada pede análise; venda antecipada exige motivo econômico e aceita o preço disponível.</p>",
+     "enunciado": "<p>Em Porto Alegre, a planejadora Mônica revisa o título prefixado de Raul, comprado para uma meta em cinco anos e mantido em custódia regular. O saldo não recebeu novos aportes. Após um ano, as taxas de mercado subiram, o preço marcado caiu e Raul passou a acompanhar a oscilação diariamente. A meta continua na data original, ele possui liquidez separada e o emissor mantém os pagamentos previstos. Raul exige venda imediata apenas para deixar de ver a queda no aplicativo, embora o secundário apresente poucos compradores e desconto adicional para execução rápida. Mônica compara necessidade de caixa, crédito, alternativa, custos e condições de negociação antes de responder. Avalie a decisão de venda antecipada.</p>",
+     "alternativas": {
+      "a": "Vender imediatamente evita o risco, porque a perda exibida desaparece quando o título sai da custódia e o dinheiro retorna à conta.",
+      "b": "Manter até o vencimento garante resultado, pois custódia regular e pagamentos em dia eliminam crédito, inflação e custo de oportunidade.",
+      "c": "A queda isolada não determina a venda; sem necessidade de caixa, devem ser avaliados crédito, alternativa, custos e desconto do secundário.",
+      "d": "A baixa liquidez protege Raul da marcação, porque poucos compradores impedem que a taxa de mercado altere o valor econômico do título."
+     },
+     "gabarito": "c"
+    }
+   ],
+   "Títulos públicos: indexadores, dívida pública e indicação": [
+    {
+     "id": "cpror-inv-06-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O Tesouro Prefixado define taxa nominal, o Tesouro Selic acompanha a taxa Selic e o Tesouro IPCA+ combina atualização pela inflação medida com uma taxa real contratada.</p><p>A alternativa A troca as regras e retira a taxa real do IPCA+. A alternativa C atribui inflação ao prefixado, poder de compra ao Selic e juros curtos ao IPCA+. A alternativa B presume valor final conhecido no Selic e estabilidade de preço no IPCA+.</p><p>Regra de bolso: prefixado fixa taxa nominal, Selic segue juros curtos e IPCA+ combina inflação e taxa real.</p>",
+     "enunciado": "<p>Ao apresentar os principais grupos de títulos públicos federais, uma especialista relaciona cada papel à sua regra de remuneração. Identifique a associação correta.</p>",
+     "alternativas": {
+      "a": "Tesouro Prefixado acompanha a Selic, Tesouro Selic fixa taxa nominal e Tesouro IPCA+ remunera apenas pela inflação medida.",
+      "b": "Tesouro Prefixado e Tesouro Selic fixam o valor final, enquanto Tesouro IPCA+ mantém preço estável antes do vencimento.",
+      "c": "Tesouro Prefixado combina inflação e taxa real, Tesouro Selic fixa poder de compra e Tesouro IPCA+ acompanha juros curtos.",
+      "d": "Tesouro Prefixado fixa taxa nominal, Tesouro Selic acompanha juros curtos e Tesouro IPCA+ combina inflação com taxa real."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-06-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Ao comprar um título público, o investidor financia o governo e recebe a promessa dos fluxos previstos. O Tesouro Direto é a plataforma de varejo que permite às famílias acessar esses títulos.</p><p>A alternativa B transforma crédito em participação e atribui garantia de preço ao canal. A alternativa C coloca a plataforma como devedora e criadora dos fluxos. A alternativa A descreve financiamento de investidores e atribui ao canal eliminação de riscos do papel e da operação.</p><p>Regra de bolso: o governo emite e promete os fluxos; o Tesouro Direto é o canal de acesso.</p>",
+     "enunciado": "<p>Uma investidora acessa títulos federais pelo Tesouro Direto e pergunta qual papel assume na operação. Explique a relação entre investidor, governo e plataforma.</p>",
+     "alternativas": {
+      "a": "A investidora financia outros compradores no secundário, e o Tesouro Direto elimina os riscos de prazo e de operação.",
+      "b": "A investidora compra participação no governo, e o Tesouro Direto garante preço de recompra conforme o indexador escolhido.",
+      "c": "A investidora empresta à plataforma, que assume o risco do governo e define os fluxos pagos por cada título adquirido.",
+      "d": "A investidora se torna credora do governo, e o Tesouro Direto funciona como canal de varejo para acesso aos títulos federais."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-06-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Cupons antecipam parte dos recebimentos, não criam retorno gratuito. Eles podem cumprir necessidade de renda, mas também exigem reinvestimento e podem antecipar tributação quando o cliente não usa o fluxo.</p><p>A alternativa A trata cupom como ganho adicional ao retorno do título. A alternativa C troca as estruturas de pagamento. A alternativa D ignora que o desenho temporal dos fluxos altera reinvestimento, tributação e adequação.</p><p>Regra de bolso: cupom é retorno antecipado, não retorno adicional; sua utilidade depende do fluxo necessário.</p>",
+     "enunciado": "<p>Em João Pessoa, a assessora Lígia compara para Roberto dois títulos públicos com indexador e vencimento semelhantes. Os títulos foram adquiridos pelo mesmo valor e permanecem em custódia, sem necessidade de venda antecipada. O título X concentra os pagamentos na data final. O título Y distribui juros periódicos e devolve o principal no vencimento. Roberto ainda trabalha, cobre as despesas com salário e não precisa de renda intermediária; ele reinvestiria cada cupom recebido. Mesmo assim, pede Y porque acredita que os cupons representam retorno adicional gratuito sobre a mesma remuneração. Lígia registra custos, regras e o risco de reinvestir os pagamentos a taxas futuras diferentes. Avalie como a estrutura dos fluxos afeta a comparação.</p>",
+     "alternativas": {
+      "a": "O título Y acrescenta retorno ao indexador, pois cada cupom recebido se soma à remuneração preservada até o vencimento.",
+      "b": "Os cupons antecipam fluxos, podem exigir reinvestimento e antecipar tributação; só ajudam se cumprirem função do cliente.",
+      "c": "O título X exige reinvestimento periódico, enquanto Y concentra a remuneração e evita decisões antes do vencimento.",
+      "d": "Os títulos são equivalentes porque indexador e vencimento semelhantes tornam irrelevante a distribuição temporal dos pagamentos."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-06-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. R$ 5.400 divididos por 1,08 resultam em R$ 5.000. Depois da alta, R$ 5.400 divididos por 1,20 resultam em R$ 4.500. O fluxo futuro permanece, mas seu valor presente diminui.</p><p>A alternativa B fixa o preço pela taxa antiga e ignora a venda a mercado. A alternativa C multiplica o fluxo por 1,08 e 1,20, gerando R$ 5.832 e R$ 6.480, em vez de descontá-lo. A alternativa D troca os preços e atribui a taxa nova ao contrato antigo.</p><p>Regra de bolso: antes do vencimento, taxa de mercado maior tende a significar preço menor para o mesmo fluxo.</p>",
+     "enunciado": "<p>Na mesa de atendimento em Ribeirão Preto, o especialista Hugo avalia um título público sem pagamentos intermediários que entregará R$ 5.400 em um ano. O papel foi adquirido no mercado primário, permanece custodiado e possui comprador disponível no secundário. Em um exercício simplificado, a taxa exigida para prazo e risco era 8%, e depois subiu para 20%. O emissor mantém o fluxo prometido, não há custos no cálculo e a venda ocorreria antes do vencimento. A cliente Márcia afirma que o preço permanece R$ 5.000 porque esse era o valor compatível com a taxa antiga e o título público conserva a remuneração contratada. Hugo desconta o mesmo fluxo pelas duas taxas para mostrar a marcação. Calcule os preços e avalie a conclusão.</p>",
+     "alternativas": {
+      "a": "O preço passa de R$ 5.000 para R$ 4.500; a alta da taxa reduz o valor presente do fluxo mantido em R$ 5.400.",
+      "b": "O preço permanece em R$ 5.000; a taxa posterior altera apenas emissões novas do governo com o mesmo vencimento.",
+      "c": "O preço passa de R$ 5.832 para R$ 6.480; a taxa exigida é acrescentada ao pagamento prometido pelo título.",
+      "d": "O preço passa de R$ 4.500 para R$ 5.000; a taxa superior valoriza o papel antigo por elevar sua remuneração contratada."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-06-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O estoque muda por emissões, resgates, juros e outros ajustes e precisa ser interpretado junto com composição, concentração de vencimentos, prazo médio, custo, detentores e necessidade de financiamento.</p><p>A alternativa B transforma volume isolado em diagnóstico. A alternativa C troca uma leitura multidimensional por um único indicador e ainda a estende ao risco de cada papel. A alternativa D usa prazo médio como medida suficiente e ignora custos e concentração.</p><p>Regra de bolso: volume é uma parte da trajetória da dívida, não uma conclusão isolada nem uma recomendação pronta.</p>",
+     "enunciado": "<p>Durante uma reunião em Brasília, o economista Raul apresenta a Fernanda dados sobre aumento do estoque da Dívida Pública Federal no último período. Fernanda possui objetivo de longo prazo e não necessita vender sua posição no momento. Ela conclui que o crescimento isolado comprova piora de solvência e decide evitar qualquer título público. O relatório também mostra mudanças na composição por indexador, no prazo médio, no custo, na base de detentores e na concentração de vencimentos, além de emissões e resgates ocorridos. Raul diferencia a leitura da trajetória da dívida da análise de um título específico e do objetivo da cliente. Fernanda insiste em transformar um único número em recomendação automática. Avalie a interpretação dos dados.</p>",
+     "alternativas": {
+      "a": "O estoque precisa ser lido com composição, vencimentos, prazo, custo, detentores e financiamento, sem gerar indicação automática.",
+      "b": "O estoque crescente basta para concluir deterioração, pois emissões e juros aumentam a dívida sem depender de prazo ou composição.",
+      "c": "A composição por indexador substitui o volume, porque revela sozinha a capacidade de pagamento e o risco de cada título público.",
+      "d": "O prazo médio define a solvência, e seu alongamento torna secundários o custo, a base de detentores e os vencimentos próximos."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-06-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Concentração de vencimentos próximos aumenta a necessidade de refinanciamento em pouco tempo. A composição por indexador muda a sensibilidade do custo e do estoque a juros, inflação e câmbio.</p><p>A alternativa B transforma alongamento em eliminação de financiamento e restringe indexadores ao investidor. A alternativa A trata concentração temporal como redução de risco. A alternativa D troca a função do Plano Anual com a dos relatórios de execução e trajetória.</p><p>Regra de bolso: vencimentos concentrados pressionam refinanciamento; indexadores definem a quais variáveis a dívida responde.</p>",
+     "enunciado": "<p>Em um curso para investidores em Belo Horizonte, a professora Cecília mostra uma dívida com grande concentração de vencimentos no próximo ano e parcela relevante vinculada a indexadores sensíveis a juros e inflação. O prazo médio atual é curto, e a base de detentores também apresenta concentração. Um aluno afirma que alongar o prazo resolve o problema sem contrapartidas e que a composição não altera custo nem estoque. Cecília apresenta o Plano Anual de Financiamento como documento de estratégia e limites e os relatórios mensal e anual como registros da execução e da trajetória. Ela também lembra que condições de mercado e custo participam das escolhas do gestor. Analise os riscos de refinanciamento e indexação descritos.</p>",
+     "alternativas": {
+      "a": "A concentração de vencimentos reduz o risco, pois permite substituir os títulos em um único momento de mercado e comparar taxas.",
+      "b": "Alongar prazos elimina a necessidade de financiamento, e a composição afeta apenas a rentabilidade recebida pelo investidor no varejo.",
+      "c": "Vencimentos próximos elevam o refinanciamento, e os indexadores alteram a sensibilidade do custo e do estoque.",
+      "d": "O Plano Anual registra apenas a execução passada, enquanto os relatórios mensal e anual definem antecipadamente estratégia e limites."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-06-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. R$ 56.000 divididos por R$ 160.000 resultam em 35%. O saldo é R$ 104.000, ou 65%. A obrigação em dez meses pede prazo e disponibilidade compatíveis; o IPCA+ longo pode oscilar antes do vencimento.</p><p>A alternativa A troca os percentuais e usa o indexador para apagar a diferença de horizonte. A alternativa C converte os valores em percentuais sem dividi-los pelo total. A alternativa D transforma os números dos prazos em pesos e ignora os valores de cada objetivo.</p><p>Regra de bolso: separe primeiro o dinheiro com data próxima e avalie o título longo apenas na parcela de horizonte compatível.</p>",
+     "enunciado": "<p>Em Campo Grande, a planejadora Aline atende Silvio, que possui R$ 160.000. Ele usará R$ 56.000 na entrada de um imóvel dentro de dez meses e destina o saldo à aposentadoria em dezoito anos. Silvio quer aplicar o valor inteiro em Tesouro IPCA+ longo porque a atualização pela inflação combina com a aposentadoria e, na visão dele, também protege o preço da parcela imobiliária. A entrada não possui outra fonte, e a data tem baixa flexibilidade. Aline considera para a parcela próxima uma alternativa ligada à Selic, com disponibilidade compatível, depois de verificar regras, custos e crédito. Para a parcela longa, ela ainda avaliará vencimento, fluxo e perfil. Calcule os percentuais das duas finalidades e analise a separação.</p>",
+     "alternativas": {
+      "a": "A entrada representa 65% e a aposentadoria 35%; o IPCA+ atende às duas porque a inflação é relevante nos dois horizontes.",
+      "b": "A entrada é 35% e a aposentadoria 65%; prazo e liquidez pedem separar a parcela próxima antes do IPCA+ longo.",
+      "c": "A entrada representa 56% e a aposentadoria 44%; a divisão acompanha os valores nominais informados sem considerar o total.",
+      "d": "A entrada representa 10% e a aposentadoria 90%; os horizontes em meses e anos determinam diretamente os pesos da carteira."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-06-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. Quando a cliente passa a precisar de renda intermediária, cupons podem cumprir uma função. Antes do início desse uso, porém, os pagamentos exigem reinvestimento e devem ser comparados com datas, custos, preços e regras.</p><p>A alternativa A escolhe pela taxa e ignora o desenho dos fluxos. A alternativa B declara incompatibilidade do título sem cupons sem examinar o calendário da meta. A alternativa D transforma o nome do RendA+ em dispensa da análise do papel e da necessidade de saída.</p><p>Regra de bolso: indexador explica a remuneração; calendário e forma dos fluxos determinam se o título serve ao objetivo.</p>",
+     "enunciado": "<p>Aos 63 anos, Patrícia procura o assessor Darlan em Curitiba para revisar a parcela previdenciária da carteira. Ela começará a complementar a renda dentro de quatro anos e deseja recebimentos intermediários depois dessa data. A parcela não será usada antes do início da complementação. Patrícia compara um título que concentra o pagamento no vencimento com uma versão de juros periódicos e também considera Tesouro RendA+ para organizar fluxos ligados à aposentadoria. Ela insiste que o nome do indexador basta para escolher e pede o papel com taxa indicada superior, sem comparar datas, preços ou regras. Darlan registra o calendário de renda, a necessidade de saída, o reinvestimento antes do uso e a tolerância a oscilações. Avalie a indicação.</p>",
+     "alternativas": {
+      "a": "A taxa indicada superior define a escolha, pois títulos públicos com o mesmo indexador diferem apenas na forma de divulgação dos fluxos.",
+      "b": "O título sem cupons é incompatível com aposentadoria, pois concentrar o pagamento impede organizar renda em qualquer etapa do objetivo.",
+      "c": "A versão com cupons entra na comparação se os pagamentos cumprirem a necessidade; antes disso, podem criar reinvestimento desnecessário.",
+      "d": "O Tesouro RendA+ elimina a análise de preço e saída, porque seu nome vincula automaticamente os fluxos à aposentadoria da cliente."
+     },
+     "gabarito": "c"
+    }
+   ],
+   "Títulos bancários, imobiliários e do agronegócio: emissores e estruturas": [
+    {
+     "id": "cpror-inv-07-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. CDB e RDB são depósitos a prazo emitidos pelas instituições previstas, RDC é depósito cooperativo destinado aos associados, e DPGE é depósito a prazo com garantia especial do FGC sem emissão de certificado.</p><p>A alternativa B transforma depósitos em securitização e atribui o RDC a banco comercial. A alternativa A classifica RDB e RDC como letras negociáveis e cria securitizadora para o DPGE. A alternativa D desloca CDB e DPGE para o agronegócio, RDB para crédito imobiliário e RDC para a categoria de letra.</p><p>Regra de bolso: antes da sigla, identifique se a estrutura é depósito e quem pode emiti-la.</p>",
+     "enunciado": "<p>Ao classificar depósitos a prazo, uma analista compara CDB, RDB, RDC e DPGE. Identifique a associação correta entre instrumento e estrutura essencial.</p>",
+     "alternativas": {
+      "a": "CDB é depósito bancário; RDB e RDC são letras negociáveis; DPGE é certificado emitido pela securitizadora do banco.",
+      "b": "CDB e RDB são certificados de securitização; RDC é emitido por banco comercial; DPGE representa crédito imobiliário com garantia vinculada aos recebíveis.",
+      "c": "CDB e RDB são depósitos de instituições previstas; RDC é depósito cooperativo para associados; DPGE possui garantia especial sem certificado.",
+      "d": "CDB e DPGE são títulos do agronegócio; RDB representa crédito imobiliário; RDC é letra emitida por cooperativa aos associados."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-07-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. LCI vincula-se a créditos imobiliários, LCA a direitos creditórios do agronegócio, LCD é emitida por bancos de desenvolvimento e BNDES, e LC é usada por sociedades de crédito, financiamento e investimento. LF e LH também possuem emissores e condições próprias.</p><p>A alternativa B confunde letras com representação de crédito, securitização e depósito cooperativo. A alternativa A presume liquidez pela sigla e atribui emissores e bases incorretos a LC e LH. A alternativa D trata letras como certificados de recebíveis ou depósitos idênticos.</p><p>Regra de bolso: letras podem parecer semelhantes, mas emissor, base de crédito e regras continuam diferentes.</p>",
+     "enunciado": "<p>Uma gerente organiza LCI, LCA, LCD, LF, LC e LH pela origem da emissão e pela vinculação econômica. Identifique a descrição correta desses instrumentos.</p>",
+     "alternativas": {
+      "a": "LF possui liquidez diária pela sigla, LC é emitida por securitizadora e LH representa direitos creditórios do agronegócio.",
+      "b": "LCI e LH representam créditos emitidos pelo devedor, LCA nasce de securitização e LCD é depósito cooperativo para associados.",
+      "c": "LCI liga-se a créditos imobiliários, LCA ao agronegócio, LCD a bancos de desenvolvimento e BNDES, e LC é típica de financeira.",
+      "d": "LCD e LF são certificados de recebíveis, enquanto LCI, LCA e LC são depósitos a prazo com o mesmo lastro e emissor."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-07-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. CRI e CRA são certificados emitidos em securitização e lastreados, respectivamente, em créditos imobiliários e direitos creditórios do agronegócio. A securitizadora estrutura a emissão, mas isso não equivale a garantia bancária.</p><p>A alternativa B classifica os certificados como depósitos e torna a securitizadora garantidora automática. A alternativa C confunde CRI com representação direta do crédito e CRA com letra bancária. A alternativa D reduz diferenças estruturais ao indexador e ignora devedores, garantias, fluxos e documentos.</p><p>Regra de bolso: CRI e CRA nascem da securitização; analise a estrutura e os créditos, não apenas a sigla.</p>",
+     "enunciado": "<p>Em Recife, o assessor Gustavo atende Marlene, que compara um CRI e um CRA com vencimentos próximos. O primeiro foi emitido em uma securitização de créditos imobiliários; o segundo, em uma securitização de direitos creditórios do agronegócio. Marlene chama ambos de depósitos bancários e afirma que a securitizadora garante os pagamentos como um banco. Os documentos apresentam devedores, garantias e fluxos diferentes, além de condições próprias de subordinação e regime fiduciário. Uma das operações reúne créditos pulverizados, enquanto a outra concentra parte relevante do fluxo em poucos devedores. Gustavo separa o papel da securitizadora da análise dos créditos e das demais partes. Compare as estruturas de CRI e CRA e indique o erro de Marlene.</p>",
+     "alternativas": {
+      "a": "CRI e CRA são certificados de securitização lastreados em créditos setoriais, e a securitizadora não equivale a banco garantindo os papéis.",
+      "b": "CRI e CRA são depósitos bancários vinculados a setores diferentes, e a securitizadora assume a obrigação principal perante o investidor ao longo da emissão.",
+      "c": "CRI representa diretamente o crédito imobiliário, enquanto CRA é letra bancária vinculada a recebíveis originados no agronegócio.",
+      "d": "CRI e CRA diferem apenas pelo indexador, pois vencimento próximo e securitizadora comum igualam devedores, garantias e fluxos."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-07-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. CCI representa crédito imobiliário e é emitida pelo credor desse crédito. CDCA representa direitos creditórios do agronegócio e possui emissores ligados à cadeia previstos em lei. Nenhum deles deve ser chamado de depósito bancário.</p><p>A alternativa B transforma CCI em CRI e CDCA em depósito bancário. A alternativa C classifica os dois como letras de instituições financeiras. A alternativa D converte representação de créditos em depósitos e usa remuneração semelhante para igualar obrigações distintas.</p><p>Regra de bolso: CCI e CDCA representam créditos; CRI e CRA são certificados de securitização.</p>",
+     "enunciado": "<p>Durante uma reunião em Goiânia, a consultora Elisa recebe Paulo, que encontrou uma CCI e um CDCA com remunerações semelhantes. A CCI foi emitida pelo credor de um crédito imobiliário; o CDCA representa direitos creditórios do agronegócio e tem emissor ligado à cadeia nas condições previstas. Paulo acredita que ambos são certificados de securitização emitidos por bancos e dispensa a identificação de quem deve pagar. Os documentos apontam emissores, devedores e garantias diferentes, e nenhuma das posições será usada no curto prazo. O cliente também pretende comparar os papéis apenas pela taxa anunciada e pelo vencimento. Elisa organiza os papéis pela natureza antes de comparar crédito e liquidez. Analise a classificação de CCI e CDCA.</p>",
+     "alternativas": {
+      "a": "CCI representa crédito imobiliário e CDCA representa direitos creditórios do agronegócio; eles não são depósitos bancários por essa natureza.",
+      "b": "CCI é certificado de securitização imobiliária, e CDCA é depósito bancário destinado a financiar instituições ligadas ao agronegócio durante o prazo contratado.",
+      "c": "CCI e CDCA são letras emitidas por instituições financeiras, diferenciadas apenas pelo setor ao qual os recursos são destinados.",
+      "d": "CCI e CDCA são depósitos a prazo com lastros setoriais, e a remuneração semelhante permite tratá-los como obrigações equivalentes."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-07-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Lastro descreve a origem ou vinculação dos créditos, mas não garante pagamento por si só. Devedores, fluxos, garantias, subordinação, regime e demais partes precisam ser avaliados conforme a emissão.</p><p>A alternativa B transforma lastro, regime fiduciário e subordinação em garantia integral. A alternativa C atribui à classe subordinada proteção sem limite ou condição. A alternativa A usa garantias para dispensar a análise do emissor e dos créditos.</p><p>Regra de bolso: lastro explica de onde vem o crédito; documentos mostram quem paga e como as proteções funcionam.</p>",
+     "enunciado": "<p>Na revisão de carteira em Belo Horizonte, o especialista André avalia uma emissão lastreada em recebíveis de várias empresas. A cliente Sônia observa garantias e regime fiduciário nos documentos e conclui que o lastro assegura o pagamento integral mesmo se os devedores deixarem de cumprir os créditos. A estrutura também possui classe subordinada, mas as condições e a suficiência dessa proteção dependem da emissão. O relatório registra concentração em determinados sacados e prazos distintos entre os recebíveis. André registra risco dos devedores, fluxo esperado, partes envolvidas, garantias e posição da cliente na estrutura. Sônia insiste que a palavra lastro dispensa a análise de crédito subjacente. Avalie a relação entre lastro, obrigação e proteção.</p>",
+     "alternativas": {
+      "a": "As garantias substituem a análise do emissor e do crédito subjacente, pois sua presença determina o fluxo disponível ao investidor.",
+      "b": "O lastro transfere a obrigação aos recebíveis e assegura pagamento integral, desde que a emissão mencione regime fiduciário, subordinação e separação dos fluxos.",
+      "c": "A classe subordinada elimina o risco dos devedores para as demais posições, independentemente do tamanho e das regras da proteção.",
+      "d": "O lastro explica a origem ou vinculação dos créditos, mas pagamento e proteção dependem da estrutura, dos devedores e das condições das garantias."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-07-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O CDB representa obrigação decorrente do depósito contra o banco. O CRA exige examinar securitização, créditos, devedores, garantias e fluxo. Mesmo prazo e indexador não igualam crédito, liquidez ou cobertura.</p><p>A alternativa B atribui risco e saída apenas à remuneração. A alternativa C transforma distribuição em risco bancário e apaga o emissor do CDB. A alternativa A reduz as diferenças à tributação e ignora elementos centrais de cada obrigação.</p><p>Regra de bolso: indexador diz como remunerar; emissor e estrutura dizem de onde vem o risco de pagamento.</p>",
+     "enunciado": "<p>Em Salvador, a gerente Talita compara para Henrique um CDB emitido por um banco e um CRA emitido por uma securitizadora. Os dois vencem em quatro anos e prometem remuneração ligada ao mesmo indexador. Henrique afirma que prazo e indexador iguais tornam os papéis equivalentes e quer decidir apenas pela taxa indicada. No CDB, a obrigação decorre do depósito contra o banco. No CRA, os documentos apresentam créditos do agronegócio, devedores, garantias, fluxo e condições da securitização. A liquidez no mercado secundário também difere. Henrique já possui outros créditos contra o mesmo banco e exposição ao setor do CRA. Talita pede que ele considere emissor, estrutura e concentração antes de escolher. Compare os riscos dos dois papéis.</p>",
+     "alternativas": {
+      "a": "O CDB e o CRA diferem apenas na tributação, pois emissor, devedores e liquidez deixam de importar quando os vencimentos coincidem.",
+      "b": "Os papéis são equivalentes porque a regra de remuneração determina o risco de crédito e o valor disponível na saída antecipada.",
+      "c": "O CRA possui risco bancário por ser distribuído no mercado financeiro, enquanto o CDB depende apenas do indexador contratado.",
+      "d": "O CDB depende do banco, enquanto o CRA exige análise da securitização e dos créditos; prazo e indexador iguais não uniformizam os riscos."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-07-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O RDC pertence ao cooperativismo de crédito e sua proteção é administrada pelo FGCoop dentro das condições desse fundo. Por isso, não se soma automaticamente ao conjunto de créditos bancários para calcular cobertura do FGC.</p><p>A alternativa A usa a natureza de depósito para trocar o garantidor. A alternativa C cria dupla cobertura sem apoio na estrutura apresentada. A alternativa D ignora a proteção administrada pelo FGCoop.</p><p>Regra de bolso: RDC é depósito cooperativo e segue o FGCoop; depósitos bancários e suas coberturas são analisados separadamente.</p>",
+     "enunciado": "<p>Em Porto Alegre, a assessora Bianca atende Marcos, associado de uma cooperativa de crédito, que mantém um RDC e também possui depósitos bancários. Ele pretende somar o RDC aos créditos contra bancos para calcular uma única cobertura do FGC, pois entende que as posições são depósitos a prazo. Bianca confirma a natureza de depósito do RDC, mas verifica que ele foi emitido pela cooperativa para seus associados e que sua proteção é administrada pelo FGCoop nas condições desse fundo. O extrato separa o valor mantido na cooperativa dos saldos em duas instituições bancárias, e os documentos identificam garantidores distintos. Marcos insiste que a semelhança das siglas permite usar o mesmo garantidor. Analise o tratamento da proteção do RDC no diagnóstico.</p>",
+     "alternativas": {
+      "a": "O RDC entra na cobertura do FGC por ser depósito a prazo, e a cooperativa funciona como banco para fins de soma dos créditos.",
+      "b": "O RDC permanece no FGCoop conforme suas condições e não deve ser somado automaticamente aos créditos bancários na cobertura do FGC.",
+      "c": "O RDC possui duas coberturas simultâneas, pois a natureza cooperativa aciona o FGCoop e a estrutura de depósito aciona o FGC.",
+      "d": "O RDC fica sem proteção de fundo, porque depósitos emitidos por cooperativas para associados não participam de garantia administrada."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-07-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A necessidade em oito meses torna prazo, carência e liquidez condições da indicação. Emissor, garantia, remuneração e mercado secundário também precisam ser avaliados; taxa superior não corrige indisponibilidade.</p><p>A alternativa A trata o secundário como garantia de venda e preço. A alternativa C usa o lastro imobiliário para apagar a carência. A alternativa D transforma o prazo regulado da LF em neutralização de emissor e liquidez.</p><p>Regra de bolso: se o dinheiro tem data, confirme a saída antes de comparar a taxa.</p>",
+     "enunciado": "<p>Em Manaus, o planejador Caetano revisa quatro ofertas apresentadas a Larissa: uma LF com carência longa, uma LCI vinculada a créditos imobiliários, uma LC emitida por financeira e um CRA negociado no secundário. As taxas são prefixadas ou pós-fixadas conforme cada documento, e os vencimentos ficam entre dois e cinco anos. Larissa pode precisar de R$ 85.000 dentro de oito meses e pede o papel com remuneração indicada superior, afirmando que a sigla de renda fixa assegura resgate quando necessário. As ofertas apresentam emissores, garantias, carências e volumes de negociação diferentes. A despesa tem data definida em contrato e admite pouca postergação. Caetano não encontra outra fonte para o pagamento. Avalie o procedimento de indicação.</p>",
+     "alternativas": {
+      "a": "Escolher a taxa indicada superior e registrar a carência, pois o mercado secundário permite converter qualquer título em caixa na data desejada, pelo valor projetado.",
+      "b": "Verificar disponibilidade em oito meses, emissor, garantia, remuneração e saída; se as ofertas falharem na liquidez, buscar alternativa compatível.",
+      "c": "Selecionar a LCI pela vinculação imobiliária, porque o lastro torna a saída previsível mesmo quando a carência supera oito meses.",
+      "d": "Escolher a LF por possuir prazo regulado, pois a estrutura da letra neutraliza diferenças de emissor e negociação no secundário."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-07-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. CDB, LCA, CDCA e CRI têm naturezas e emissores diferentes. Pesos iguais e siglas distintas não demonstram exposições independentes; é preciso mapear devedores, lastros, garantias, fatores e concentração.</p><p>A alternativa D chama as quatro posições de depósitos bancários. A alternativa B usa peso financeiro para dispensar a análise das estruturas e de riscos comuns. A alternativa C transforma depósitos, letras, representação de créditos e securitização em uma única categoria.</p><p>Regra de bolso: diversifique exposições econômicas depois de identificar quem emite, quem deve e qual crédito sustenta cada papel.</p>",
+     "enunciado": "<p>A empresária Renata procura o assessor Samuel em Florianópolis com R$ 300.000 para uma meta em seis anos. Ela recebe propostas de CDB, LCA, CDCA e CRI com regras de remuneração parecidas e quer dividir R$ 75.000 em cada uma, supondo que quatro siglas garantem diversificação entre quatro bancos. Os documentos mostram banco como emissor do CDB, instituição autorizada na LCA, emissor ligado à cadeia no CDCA e securitização de créditos imobiliários no CRI. Algumas exposições dependem dos mesmos devedores e fatores econômicos, e as garantias possuem condições próprias. Parte dos fluxos reage ao mesmo segmento regional. Renata conhece os prazos, mas resiste a examinar os documentos porque os valores são iguais. Avalie a construção da carteira.</p>",
+     "alternativas": {
+      "a": "A análise deve mapear emissores, devedores, lastros, garantias e fatores comuns, pois siglas e pesos iguais não provam diversificação.",
+      "b": "Os valores iguais dispensam análise de concentração, porque o peso de 25% limita a perda de cada estrutura ao capital aplicado.",
+      "c": "As quatro posições devem ser tratadas como letras, e a diversificação depende apenas de comparar indexadores e vencimentos.",
+      "d": "A divisão igual garante quatro riscos bancários independentes, pois cada sigla representa depósito emitido por instituição diferente e sem exposição comum."
+     },
+     "gabarito": "a"
     }
    ],
    "VGBL: acumulação, aposentadoria e planejamento patrimonial": [
