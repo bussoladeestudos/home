@@ -1,5 +1,5 @@
 /* GERADO por outputs/questoes_para_js.py. NAO editar a mao.
-   Fonte: _conteudo/cpror/questoes/**.yaml  ·  557 questoes em 63 topicos
+   Fonte: _conteudo/cpror/questoes/**.yaml  ·  565 questoes em 64 topicos
    Para mudar uma questao, edite o YAML e rode o script de novo. */
 window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
  "cproRAnbima": {
@@ -9040,6 +9040,150 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "d": "A divisão igual garante quatro riscos bancários independentes, pois cada sigla representa depósito emitido por instituição diferente e sem exposição comum."
      },
      "gabarito": "a"
+    }
+   ],
+   "FGC: cobertura, limites e concentração por emissor": [
+    {
+     "id": "cpror-inv-08-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Depósitos à vista, poupança, CDB, RDB, LC, LH, LCI, LCA e LCD estão entre os objetos da garantia ordinária descritos na aula. Fundos, ações, debêntures, CRI e CRA não ganham essa cobertura por terem sido distribuídos por banco.</p><p>A alternativa B usa a instituição distribuidora para incluir fundo e debênture. A alternativa C confunde lastro setorial com enquadramento na garantia e inclui CRI e CRA. A alternativa D transforma custódia na instituição associada em critério suficiente para cobrir ação, debênture e fundo.</p><p>Regra de bolso: confirme o instrumento coberto; o canal de distribuição não muda a natureza do ativo.</p>",
+     "enunciado": "<p>Uma assessora separa os investimentos de um cliente entre créditos que podem integrar a garantia ordinária do FGC e ativos que ficam fora dela. Identifique a classificação compatível com a natureza dos instrumentos.</p>",
+     "alternativas": {
+      "a": "CDB, RDB, LCI e LCA podem integrar a garantia; fundo, ação, debênture, CRI e CRA ficam fora apenas pela distribuição bancária.",
+      "b": "CDB, fundo de renda fixa e debênture podem integrar a garantia quando o banco distribuidor aparece como responsável pela oferta.",
+      "c": "CRI, CRA, LCI e LCA podem integrar a garantia por possuírem crédito imobiliário ou do agronegócio na origem da estrutura.",
+      "d": "Ação, debênture e fundo podem integrar a garantia quando o investidor os mantém na mesma instituição associada de seus depósitos."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-08-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O DPGE segue garantia especial, com limite de R$ 40 milhões contra a mesma instituição ou conglomerado para titulares que não sejam instituições associadas, além de regras próprias como titular único e restrição a resgate antecipado. O CDB comum permanece na garantia ordinária.</p><p>A alternativa A estende o limite especial ao CDB. A alternativa C troca os regimes e cria limite ordinário por produto. A alternativa D reduz a diferença à remuneração e apaga as regras próprias do DPGE.</p><p>Regra de bolso: DPGE tem regime especial; a sigla CDB não herda esse limite.</p>",
+     "enunciado": "<p>Ao explicar a diferença entre um CDB comum e um DPGE, um gerente precisa distinguir a garantia ordinária da garantia especial. Identifique a afirmação compatível com os dois regimes apresentados na aula.</p>",
+     "alternativas": {
+      "a": "CDB e DPGE usam o limite especial de R$ 40 milhões quando o titular concentra os depósitos na mesma instituição ou conglomerado.",
+      "b": "O DPGE possui regime especial, limite de R$ 40 milhões para titular elegível e regras próprias; o CDB comum segue a garantia ordinária.",
+      "c": "O DPGE segue o teto ordinário de R$ 250 mil por produto, enquanto o CDB pode receber o limite especial mediante carência contratual.",
+      "d": "O CDB comum e o DPGE diferem pela remuneração, mas compartilham limite, possibilidade de resgate e tratamento do titular."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-08-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O CDB soma R$ 185.000 e a LCI soma R$ 96.000. Os créditos do mesmo conglomerado totalizam R$ 281.000; aplicado o limite ordinário de R$ 250.000, a parcela excedente é de R$ 31.000.</p><p>A alternativa C soma apenas os principais, que dão R$ 268.000, aplica R$ 250.000 e chega aos R$ 18.000, mas exclui remunerações abrangidas pela regra. A alternativa B cobre apenas os R$ 185.000 do CDB e deixa a LCI fora sem fundamento. A alternativa D soma corretamente R$ 281.000, porém cria limites separados por produto dentro do mesmo conglomerado.</p><p>Regra de bolso: some principal e remuneração de créditos elegíveis por titular e conglomerado antes de aplicar R$ 250.000.</p>",
+     "enunciado": "<p>Em Campinas, a empresária Joana mantém um CDB no banco Horizonte com R$ 176.000 de principal e R$ 9.000 de remuneração reconhecida até a data do evento. Ela possui também uma LCI no banco Aurora, com R$ 92.000 de principal e R$ 4.000 de remuneração na mesma data. Os dois bancos pertencem ao mesmo conglomerado financeiro e são instituições associadas. Joana acredita que cada produto abre um limite de R$ 250.000 e pede ao assessor que desconsidere os rendimentos porque eles ainda não foram sacados. Os extratos identificam o mesmo CPF como titular e discriminam principal e remuneração em cada posição. Não há outros créditos dela no conglomerado nem pagamentos anteriores dentro do teto global. Calcule a cobertura ordinária e a parcela excedente.</p>",
+     "alternativas": {
+      "a": "A cobertura é de R$ 250.000 e o excedente é de R$ 31.000, após somar principal e remuneração dos créditos no conglomerado.",
+      "b": "A cobertura é de R$ 185.000 e o excedente é de R$ 96.000, pois apenas o CDB entra na garantia quando há produtos diferentes.",
+      "c": "A cobertura é de R$ 250.000 e o excedente é de R$ 18.000, pois a soma considera apenas os principais e deixa a remuneração fora do limite.",
+      "d": "A cobertura é de R$ 281.000 e não há excedente, pois CDB e LCI recebem limites separados mesmo dentro do conglomerado."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-08-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Cada crédito cabe no limite de R$ 250.000 de sua instituição independente, mas os pagamentos anteriores consumiram R$ 620.000 do teto global. Restam R$ 380.000 de R$ 1.000.000 dentro do período móvel, deixando R$ 90.000 dos novos R$ 470.000 além desse teto.</p><p>A alternativa A calcula os créditos das duas instituições, mas reinicia indevidamente o teto global. A alternativa B aplica R$ 250.000 como se instituições independentes fossem um conglomerado. A alternativa C escolhe o primeiro crédito e trata o teto global como autorização para apenas uma liquidação.</p><p>Regra de bolso: primeiro aplique o limite por instituição ou conglomerado; depois desconte do teto global o que já foi pago em quatro anos.</p>",
+     "enunciado": "<p>A médica Patrícia procura seu gerente em Campo Grande depois de receber R$ 620.000 em garantias ordinárias relativas a liquidações ocorridas dentro dos últimos quatro anos. Agora, duas instituições associadas de conglomerados independentes entram no evento previsto pelo FGC. Os créditos elegíveis, já acrescidos da remuneração reconhecida, são de R$ 230.000 na instituição Alfa e R$ 240.000 na instituição Beta. Patrícia argumenta que poderá receber R$ 470.000 porque cada posição está abaixo do limite por instituição. O relatório do fundo registra as datas e os valores dos pagamentos anteriores. Não existem outros créditos nas duas instituições, e esses pagamentos permanecem dentro do período móvel. Calcule o pagamento disponível diante dos dois limites.</p>",
+     "alternativas": {
+      "a": "O pagamento disponível é de R$ 470.000, pois os dois créditos respeitam limites individuais e o teto global reinicia em cada instituição.",
+      "b": "O pagamento disponível é de R$ 250.000, pois créditos de instituições independentes são agregados como se formassem um conglomerado.",
+      "c": "O pagamento disponível é de R$ 230.000, pois o teto global permite liquidar apenas a primeira instituição atingida no período móvel.",
+      "d": "O pagamento disponível é de R$ 380.000, pois os R$ 620.000 anteriores deixam esse saldo no teto global de R$ 1 milhão."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-08-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Para a conta conjunta, considera-se R$ 250.000 ou o saldo, o que for menor. Como o saldo é R$ 360.000, a cobertura da conta fica em R$ 250.000 e é dividida em partes iguais, resultando em aproximadamente R$ 83.333,33 por cotitular.</p><p>A alternativa A divide o saldo de R$ 360.000 antes de aplicar o limite da conta. A alternativa B usa a ordem cadastral para atribuir R$ 250.000 ao primeiro e repartir os R$ 110.000 restantes, mas a regra exige partes iguais. A alternativa D parte de R$ 120.000 por titular e aplica outra divisão, produzindo R$ 40.000 sem apoio na regra.</p><p>Regra de bolso: na conta conjunta, limite primeiro a conta e depois divida a cobertura igualmente entre os titulares.</p>",
+     "enunciado": "<p>Três irmãos, Caio, Lúcia e Marina, possuem uma conta conjunta com saldo de R$ 360.000 em uma instituição associada que entrou em liquidação. O valor já considera a remuneração reconhecida na data do evento. Eles não mantêm outros créditos contra a instituição e não receberam pagamentos de garantia ordinária no período móvel. Caio afirma que cada cotitular pode pedir R$ 250.000 porque há três CPFs no cadastro. Lúcia entende que o saldo inteiro deve ser dividido em três antes de aplicar qualquer limite. O contrato identifica os três como titulares da mesma conta, em partes iguais, e o extrato apresenta um único saldo para a conta. A ordem dos nomes no cadastro é Caio, Lúcia e Marina. Calcule o valor coberto da conta e o crédito atribuído a cada irmão.</p>",
+     "alternativas": {
+      "a": "A conta recebe cobertura de R$ 360.000, dividida em R$ 120.000 para cada titular, pois o saldo individual fica abaixo do limite.",
+      "b": "A conta recebe R$ 360.000: R$ 250.000 para o primeiro titular e R$ 55.000 para cada um dos demais, seguindo a ordem cadastral.",
+      "c": "A conta recebe cobertura de R$ 250.000, dividida igualmente em cerca de R$ 83.333,33 para cada um dos três titulares.",
+      "d": "A conta recebe cobertura de R$ 120.000, dividida em R$ 40.000 por titular, pois o limite é aplicado após repartir o saldo conjunto."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-08-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A garantia protege determinados créditos quando ocorre o evento previsto e conforme os procedimentos do FGC. Ela não altera o vencimento nem cria resgate antecipado. Como a despesa tem data anterior ao vencimento, a indicação precisa preservar disponibilidade em seis meses.</p><p>A alternativa A trata cobertura como liquidez contratual. A alternativa B presume acionamento do FGC enquanto a instituição funciona e sem evento de garantia. A alternativa D reduz o valor aplicado, mas cria resgate proporcional que o contrato não oferece.</p><p>Regra de bolso: FGC trata do risco de crédito em evento previsto; liquidez depende das condições de saída do investimento.</p>",
+     "enunciado": "<p>No atendimento por vídeo, o gerente Raul conversa com Beatriz, que pretende pagar uma cirurgia programada em seis meses. Ela dispõe de R$ 140.000 e considera um CDB de instituição associada, com vencimento em dezoito meses e sem possibilidade contratual de resgate antecipado. O valor, somado aos demais créditos elegíveis dela na instituição, permanece abaixo de R$ 250.000. Beatriz insiste na aplicação porque viu a identificação do FGC e entende que poderá solicitar o dinheiro ao fundo na data da cirurgia. O contrato mantém o capital indisponível até o vencimento, e a cliente não possui outra reserva para a despesa. Raul confirma que a instituição permanece em funcionamento e que nenhum evento de garantia ocorreu. Avalie a indicação diante da cobertura e da necessidade de liquidez.</p>",
+     "alternativas": {
+      "a": "Indicar o CDB porque a cobertura transforma o prazo de dezoito meses em disponibilidade na data da despesa programada.",
+      "b": "Indicar o CDB e registrar o prazo, pois a instituição associada permite acionar a garantia antes do evento previsto no regulamento.",
+      "c": "Separar cobertura de liquidez e buscar alternativa disponível em seis meses, pois o FGC depende de evento e procedimento próprios.",
+      "d": "Indicar metade no CDB e manter metade em conta, pois a divisão cria resgate antecipado proporcional sobre a parcela coberta."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-08-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. CDB e LCA são créditos elegíveis que somam R$ 300.000 no mesmo conglomerado. A garantia ordinária limita-se a R$ 250.000, deixando R$ 50.000 excedentes. O fundo e o CRI não entram por terem sido distribuídos ou custodiados na plataforma.</p><p>A alternativa A inclui fundo e CRI e cria rateio pela plataforma. A alternativa C soma CDB e LCA, mas concede limites separados a marcas do mesmo conglomerado. A alternativa D acerta R$ 250.000 por coincidência, porém permite escolher ativos excluídos para compor a cobertura.</p><p>Regra de bolso: some os créditos elegíveis do conglomerado e mantenha ativos excluídos fora da conta do FGC.</p>",
+     "enunciado": "<p>Em Natal, o arquiteto Vinícius apresenta à planejadora Denise quatro posições mantidas na mesma plataforma: R$ 190.000 em CDB do banco Leste, R$ 110.000 em LCA do banco Costa, R$ 80.000 em fundo de renda fixa distribuído pelo banco Leste e R$ 70.000 em CRI adquirido na oferta da plataforma. Os valores do CDB e da LCA já incluem as remunerações reconhecidas. Leste e Costa pertencem ao mesmo conglomerado associado. O extrato exibe cada posição em uma linha separada. Vinícius sustenta que as quatro posições têm FGC, pois aparecem no extrato da plataforma, e que as duas marcas bancárias oferecem limites separados. Não houve pagamento anterior no período móvel. Determine a parcela abrangida pela garantia ordinária e os riscos que permanecem fora dela.</p>",
+     "alternativas": {
+      "a": "A garantia alcança R$ 450.000, pois a plataforma reúne os instrumentos e distribui o limite entre as quatro posições conforme o valor.",
+      "b": "A garantia alcança R$ 250.000 dos R$ 300.000 em CDB e LCA; R$ 50.000 excedem o limite e fundo e CRI ficam fora pela natureza.",
+      "c": "A garantia alcança R$ 300.000 em CDB e LCA, pois as marcas bancárias separam os limites; fundo e CRI ficam sujeitos à análise própria.",
+      "d": "A garantia alcança R$ 250.000 escolhidos entre as quatro posições, pois custódia na plataforma permite incluir fundo e CRI no conglomerado."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-08-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Os R$ 880.000 recebidos antes deixam R$ 120.000 no teto global ordinário de R$ 1.000.000, ainda que o CDB tenha R$ 190.000. O DPGE segue regime especial separado e, nas condições apresentadas, seus R$ 10.000.000 ficam abaixo do limite de R$ 40.000.000.</p><p>A alternativa B estende o regime especial ao CDB. A alternativa C ignora o saldo do teto global para pagar R$ 190.000 e usa pagamentos ordinários para eliminar a garantia especial. A alternativa A funde os dois regimes no limite ordinário de R$ 250.000.</p><p>Regra de bolso: aplique ao CDB os limites ordinários e trate o DPGE pelas regras e pelo limite especial.</p>",
+     "enunciado": "<p>Uma empresa de serviços mantém R$ 190.000 em CDB comum e R$ 10.000.000 em DPGE na instituição Prisma, valores já acrescidos da remuneração reconhecida. O titular não é instituição associada, o DPGE possui titular único e segue as condições especiais descritas nos documentos. Nos quatro anos anteriores, a empresa recebeu R$ 880.000 de garantias ordinárias por eventos envolvendo outros conglomerados. Agora, a Prisma entra no evento previsto pelo FGC. Os demonstrativos separam o depósito comum do depósito sujeito à garantia especial. O diretor quer somar CDB e DPGE sob o limite especial e também entende que os pagamentos antigos não afetam a nova ocorrência. Não há outros créditos contra a Prisma. Analise a aplicação dos regimes e dos limites apresentados.</p>",
+     "alternativas": {
+      "a": "CDB e DPGE dividem R$ 250.000, pois o evento na mesma instituição reúne garantia ordinária e especial em um limite por titular.",
+      "b": "CDB e DPGE somam R$ 10,19 milhões sob a garantia especial, pois pertencem ao mesmo titular e ficam abaixo de R$ 40 milhões.",
+      "c": "O CDB recebe R$ 190.000 pela garantia ordinária, e o DPGE perde a especial porque houve pagamentos ordinários em outros conglomerados.",
+      "d": "O CDB usa o saldo de R$ 120.000 do teto ordinário; o DPGE é analisado no regime especial e pode abranger os R$ 10 milhões nas condições dadas."
+     },
+     "gabarito": "d"
     }
    ],
    "VGBL: acumulação, aposentadoria e planejamento patrimonial": [
