@@ -142,6 +142,7 @@ const ACTIONS={
   rgIniciarQuestoes:d=>rgIniciarQuestoes(d.key),
   exApagarHistorico:d=>exApagarHistorico(d.periodo),
   exSair:()=>exSair(),
+  exSelecionar:d=>exSelecionar(d.op),
   exResponder:d=>exResponder(d.id,d.op),
   exVerComentario:()=>exVerComentario(),
   exProxima:()=>exProxima(),
@@ -4258,12 +4259,26 @@ function exSair(){
 }
 
 /* ── Runner ── */
+/* Clicar na alternativa passou a SELECIONAR, e a correcao so acontece no
+   botao Responder. Pedido do dono em 19/09/2026: no celular o toque errado
+   queimava a questao, porque a resposta e unica e nao volta atras. A selecao
+   vive em _exSessao.selecao e morre a cada questao. */
+function exSelecionar(op){
+  if(!_exSessao) return;
+  const item=_exSessao.itens[_exSessao.i];
+  if(!item||_exSessao.respostas[item.q.id]!==undefined) return;
+  _exSessao.selecao=(_exSessao.selecao===op)?null:op;
+  renderExercicioRun();
+}
 function exResponder(id,opcao){
   if(!_exSessao||_exSessao.respostas[id]!==undefined) return;   // resposta é única
+  if(!opcao) return;
   const item=_exSessao.itens[_exSessao.i];
   if(!item||item.q.id!==id) return;
   const acertou=(opcao===item.q.gabarito);
   _exSessao.respostas[id]=opcao;
+  _exSessao.selecao=null;
+  _exSessao.animar=true;   // so a renderizacao logo apos responder anima
   registrarResposta(id,opcao,acertou);
   revSalvarResultado(_exSessao);
   _carimbarRegistro&&_carimbarRegistro(fmt(new Date()));
@@ -4273,7 +4288,7 @@ function exResponder(id,opcao){
 function exVerComentario(){ _exSessao.verComentario=true; renderExercicioRun(); }
 function exProxima(){
   if(!_exSessao) return;
-  _exSessao.i++; _exSessao.verComentario=false;
+  _exSessao.i++; _exSessao.verComentario=false; _exSessao.selecao=null;
   renderExercicioRun(); window.scrollTo(0,0);
 }
 function exRefazerErradas(){
@@ -4296,6 +4311,9 @@ function renderExercicioRun(){
   const item=S.itens[S.i], q=item.q;
   const dada=S.respostas[q.id];
   const respondida=dada!==undefined;
+  /* A animacao vale uma renderizacao so. Sem isto, abrir o comentario
+     redesenha a tela e o efeito toca de novo, o que cansa. */
+  const anim=!!S.animar; S.animar=false;
   const acertou=respondida&&dada===q.gabarito;
   const letras=Object.keys(q.alternativas);
   const pct=Math.round((S.i/S.itens.length)*100);
@@ -4303,20 +4321,28 @@ function renderExercicioRun(){
   const alts=letras.map(k=>{
     let cls="ex-alt";
     if(respondida){
-      if(k===q.gabarito) cls+=" certa";
-      else if(k===dada)  cls+=" errada";
+      if(k===q.gabarito) cls+=" certa"+(anim?(dada===q.gabarito?" anim-certa":" anim-revela"):"");
+      else if(k===dada)  cls+=" errada"+(anim?" anim-errada":"");
       else               cls+=" apagada";
-    }
+    } else if(S.selecao===k) cls+=" escolhida";
     const fb=(respondida&&k===dada&&!acertou&&q.feedback&&q.feedback[k])
       ?`<div class="ex-alt-fb">${q.feedback[k]}</div>`:"";
-    return `<button type="button" class="${cls}" data-action="exResponder" data-id="${esc(q.id)}" data-op="${esc(k)}"${respondida?" disabled":""}>
+    return `<button type="button" class="${cls}" data-action="exSelecionar" data-op="${esc(k)}" aria-pressed="${S.selecao===k}"${respondida?" disabled":""}>
       <span class="ex-alt-letra">${k.toUpperCase()}</span>
       <span class="ex-alt-txt">${q.alternativas[k]}${fb}</span>
     </button>`;
   }).join("");
 
   const veredito=!respondida?"":
-    `<div class="ex-veredito ${acertou?"ok":"nao"}">${acertou?"✅ Você acertou":"❌ Resposta certa: "+q.gabarito.toUpperCase()}</div>`;
+    `<div class="ex-veredito ${acertou?"ok":"nao"}${anim?" anim-veredito":""}">${acertou?"✅ Você acertou":"❌ Resposta certa: "+q.gabarito.toUpperCase()}</div>`;
+
+  /* Antes de responder, a unica acao e confirmar. O botao nasce desabilitado
+     e so acende quando existe alternativa escolhida. */
+  const confirmar=respondida?"":
+    `<div class="ex-confirmar">
+       <button type="button" class="ex-btn ex-btn-responder" data-action="exResponder" data-id="${esc(q.id)}" data-op="${esc(S.selecao||"")}"${S.selecao?"":" disabled"}>Responder</button>
+       <span class="ex-dica-sel">${S.selecao?"Alternativa "+S.selecao.toUpperCase()+" escolhida":"Escolha uma alternativa"}</span>
+     </div>`;
 
   const acoes=!respondida?"":
     `<div class="ex-acoes">
@@ -4338,7 +4364,7 @@ function renderExercicioRun(){
       <div class="ex-migalha">${esc(item.mat)} · ${esc(item.top)} <span class="ex-nivel n${q.nivel}">${_exNivelLabel(q.nivel)}</span></div>
       <div class="ex-enunciado">${q.enunciado}</div>
       <div class="ex-alts">${alts}</div>
-      ${veredito}${comentario}${acoes}
+      ${confirmar}${veredito}${comentario}${acoes}
     </div>`;
 }
 
