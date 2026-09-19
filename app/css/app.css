@@ -1531,14 +1531,18 @@ body.aguardando-auth > *:not(#loginScreen) { visibility:hidden !important; point
 .ex-btn-sec:hover { border-color:var(--green); color:var(--green); }
 .ex-vazio { background:var(--gray-50); border:1px dashed var(--gray-300); border-radius:var(--radius-lg); padding:2rem 1.2rem; text-align:center; color:var(--gray-500); font-size:.85rem; margin-bottom:1.1rem; }
 
-.ex-resumo-titulo { font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--gray-400); margin:1.3rem 0 .6rem; }
-.ex-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:.7rem; }
-.ex-card { background:var(--white); border:1px solid var(--gray-200); border-radius:var(--radius-md); padding:.9rem 1rem; }
-.ex-card.off { opacity:.55; }
-.ex-card-nome { font-size:.76rem; font-weight:700; color:var(--navy); line-height:1.35; min-height:2.1em; }
-.ex-card-n { font-family:'Bricolage Grotesque',sans-serif; font-size:1.7rem; font-weight:800; color:var(--green); line-height:1.1; margin-top:.3rem; }
-.ex-card.off .ex-card-n { color:var(--gray-300); }
-.ex-card-sub { font-size:.7rem; color:var(--gray-400); }
+/* Banco disponível: resumo compacto no topo do menu de Exercícios.
+   Antes era um grid de cartões no rodapé, depois do histórico, e ficava
+   escondido. Pastilha pequena informa o mesmo sem roubar a tela do filtro. */
+.ex-banco { display:flex; flex-wrap:wrap; align-items:center; gap:.3rem .45rem; margin:0 0 .85rem; padding:.5rem .65rem; background:var(--gray-50); border:1px solid var(--gray-200); border-radius:var(--radius-md); }
+.ex-banco-tit { font-size:.64rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--gray-400); }
+.ex-banco-tot { font-size:.68rem; font-weight:700; color:var(--navy); margin-right:.2rem; }
+.ex-banco-lista { display:contents; }
+.ex-banco-item { display:inline-flex; align-items:center; gap:.3rem; max-width:100%; padding:.2rem .45rem; font-size:.66rem; line-height:1.25; background:var(--white); border:1px solid var(--gray-200); border-radius:999px; color:var(--gray-600); }
+.ex-banco-item b { font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:15rem; }
+.ex-banco-item i { font-style:normal; font-weight:800; color:var(--green); }
+.ex-banco-item.off { opacity:.6; }
+.ex-banco-item.off i { color:var(--gray-300); }
 
 /* RUNNER */
 .ex-run { background:var(--white); border:1px solid var(--gray-200); border-radius:var(--radius-lg); padding:1.3rem 1.5rem 1.5rem; }
