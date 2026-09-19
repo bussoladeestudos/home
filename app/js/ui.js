@@ -147,6 +147,7 @@ const ACTIONS={
   exVerComentario:()=>exVerComentario(),
   exProxima:()=>exProxima(),
   exRefazerErradas:()=>exRefazerErradas(),
+  exRefazerAtividade:()=>exRefazerAtividade(),
 };
 
 /* ── Dispatcher (event delegation) ── */
@@ -4291,6 +4292,20 @@ function exProxima(){
   _exSessao.i++; _exSessao.verComentario=false; _exSessao.selecao=null;
   renderExercicioRun(); window.scrollTo(0,0);
 }
+/* Refazer a revisão ou o simulado inteiro, do fim da sessão. Reaproveita a
+   quantidade por tópico que o aluno escolheu, porque o campo que a informa
+   vive na página de Revisões e não existe aqui. */
+function exRefazerAtividade(){
+  const r=_exSessao&&_exSessao.revisao;
+  if(!r) return;
+  const qtd=r.qtd;
+  _exSessao=null;
+  if(r.tipo==="mini") return iniciarSimulado(miniBloco(r.key));
+  if(r.tipo==="geral") return iniciarSimulado(rgBloco(r.key));
+  const bloco=buildBlocosRevisao().find(b=>b.num===r.num);
+  if(!bloco) return navTo("revisoes");
+  iniciarBlocoQuestoes(bloco,qtd);
+}
 function exRefazerErradas(){
   const erradas=_exSessao.itens.filter(it=>{
     const op=_exSessao.respostas[it.q.id];
@@ -4426,11 +4441,12 @@ function renderExercicioFim(){
       ${S.revisao?`<h3>Resultado da ${S.revisao.tipo==="mini"?"Mini Simulado":"Revisão"} ${esc(S.revisao.num)}</h3><p>Nota final: ${esc((10*acertos/total).toFixed(1))} / 10</p>`:""}
       <div class="ex-fim-nota" style="color:${cor}">${pct}%</div>
       <div class="ex-fim-sub">${acertos} de ${total} ${total===1?"questão":"questões"}</div>
-      <div class="ex-fim-recado">${S.revisao?"Resultado salvo. A nota considera todas as questões respondidas.":recado}</div>
+      <div class="ex-fim-recado">${S.revisao?(S.revisao.tipo==="geral"?"Resultado salvo e registrado no cronograma.":"Resultado salvo. Os tópicos desta atividade já foram marcados como revisados e o dia entrou no histórico do cronograma."):recado}</div>
       ${S.revisao?revResultadoHtml((STATE.revisoesResultados||{})[S.revisao.id]):""}
       ${_exResumoPorTopico(porTopico)}
       <div class="ex-acoes" style="justify-content:center">
         ${erradas&&!S.revisao?`<button type="button" class="ex-btn-sec" data-action="exRefazerErradas">↻ Refazer as ${erradas} que errei</button>`:""}
+        ${S.revisao?`<button type="button" class="ex-btn-sec" data-action="exRefazerAtividade">↻ Refazer ${S.revisao.tipo==="mini"?"o Mini Simulado":S.revisao.tipo==="geral"?"a Revisão Geral":"a revisão"}</button>`:""}
         <button type="button" class="ex-btn" data-action="exSair">${S.revisao?(S.revisao.tipo==="mini"?"Voltar aos Mini Simulados":"Voltar às revisões"):"Voltar aos exercícios"}</button>
       </div>
     </div>`;
@@ -5075,6 +5091,10 @@ function renderExerciciosSection(){
                 estado==="disponivel"?`<span class="rcc-badge b-disponivel">📋 Disponível</span>`:
                 `<span class="rcc-badge b-futura">🔒 Aguardando conteúdo</span>`;
     const counter=total>0?`<span class="rcc-counter">${feitos}/${total}</span>`:"";
+    /* A nota da revisão só existia dentro do cartão aberto. Agora aparece na
+       tarja, que é onde o aluno bate o olho ao percorrer a lista. */
+    const notaRev=(STATE.revisoesResultados||{})[revResultadoId(bloco)];
+    const notaBadge=notaRev?`<span class="rcc-nota" title="Nota da última tentativa, em ${esc(notaRev.dia)}">${esc(notaRev.nota)} / 10</span>`:"";
     const chevron=`<span class="rcc-chevron${isOpen?" open":""}">▼</span>`;
     html+=`<div class="rev-ciclo-card rc-${estado}" id="rc-card-${num}">
       <div class="rcc-header" data-action="toggleRevCiclo" data-num="${num}">
@@ -5082,7 +5102,7 @@ function renderExerciciosSection(){
           <span class="rcc-num">📝 Revisão ${num}</span>
           <span class="rcc-date">${dataStr}</span>
         </div>
-        <div class="rcc-right">${badge}${counter}${chevron}</div>
+        <div class="rcc-right">${notaBadge}${badge}${counter}${chevron}</div>
       </div>`;
     if(isOpen){
       html+=`<div class="rcc-body">`;
@@ -5468,8 +5488,8 @@ function revConfiguracaoHtml(bloco){
     <div class="rev-quantidade"><label for="rev-q-${esc(bloco.num)}">Quantas questões por tópico?<small>O número informado vale para cada tópico com questões disponíveis. Exemplo: 2 em três tópicos gera 6 questões.</small></label>
       <input class="form-input" id="rev-q-${esc(bloco.num)}" type="number" min="1" step="1" placeholder="Ex.: 1"${tem?"":" disabled"}></div>
     <p>Tópicos desta revisão:</p><ul class="rev-disponibilidade">${materias.map(m=>`<li>${esc(m.top)} <small>(${esc(m.mat)})</small>: ${esc(m.itens.length)} questões disponíveis${m.itens.length?"":" (não entra na sessão)"}</li>`).join("")}</ul>
-    <button class="ex-btn" type="button" data-action="revIniciarQuestoes" data-num="${esc(bloco.num)}"${tem?"":" disabled"}>Gerar revisão</button>
-    <p class="rev-ajuda">${tem?"Questões embaralhadas, sem repetição na sessão. A nota é salva ao responder todas. As marcações de tópicos abaixo continuam sob seu controle. Um novo resultado substitui a nota anterior deste bloco.":"Ainda não há questões publicadas para os tópicos desta revisão. Você pode continuar usando seu material."}</p>
+    <button class="ex-btn" type="button" data-action="revIniciarQuestoes" data-num="${esc(bloco.num)}"${tem?"":" disabled"}>${resultado?"↻ Refazer a revisão":"Gerar revisão"}</button>
+    <p class="rev-ajuda">${tem?"Questões embaralhadas, sem repetição na sessão. Ao responder todas, a nota é salva, os tópicos abaixo são marcados como revisados e o dia entra no histórico do cronograma. Você pode marcar ou desmarcar um tópico à mão quando quiser. Refazer substitui a nota anterior.":"Ainda não há questões publicadas para os tópicos desta revisão. Você pode continuar usando seu material e marcar os tópicos à mão."}</p>
   </section>`;
 }
 function revIniciarQuestoes(num){
@@ -5477,11 +5497,13 @@ function revIniciarQuestoes(num){
   if(!bloco||bloco.isFutura) return;
   iniciarBlocoQuestoes(bloco);
 }
-function iniciarBlocoQuestoes(bloco){
+function iniciarBlocoQuestoes(bloco,qtd){
   const num=bloco.num;
   const materias=revTopicos(bloco),itens=[],vistos=new Set();
-  const campo=document.getElementById("rev-q-"+num),n=Number(campo?campo.value:0);
+  const campo=document.getElementById("rev-q-"+num);
+  const n=Number(qtd!=null?qtd:(campo?campo.value:0));
   if(!Number.isSafeInteger(n)||n<1){showToast("Informe quantas questões por tópico: um número inteiro maior que zero.");if(campo) campo.focus();return;}
+  if(!_confirmarRefazer(bloco)) return;
   for(const m of materias){
     if(!m.itens.length) continue;
     if(n>m.itens.length){
@@ -5493,9 +5515,30 @@ function iniciarBlocoQuestoes(bloco){
   }
   if(!itens.length){showToast("Não há questões disponíveis para esta revisão.");return;}
   if(_exSessao&&!confirm("Iniciar esta atividade substituirá a sessão de exercícios em andamento. Continuar?")) return;
-  _exSessao={itens:_embaralhar(itens),i:0,respostas:{},verComentario:false,revisao:{id:revResultadoId(bloco),num:bloco.num,tipo:bloco.tipo||"revisao",key:bloco.key}};
+  _exSessao={itens:_embaralhar(itens),i:0,respostas:{},verComentario:false,
+    revisao:{id:revResultadoId(bloco),num:bloco.num,tipo:bloco.tipo||"revisao",key:bloco.key,
+             topKeys:_topKeysDoBloco(bloco),qtd:n}};
   navTo("exercicios"); window.scrollTo(0,0);
 }
+
+/* Chaves de DIA dos tópicos que o bloco cobre. É o que permite marcar a
+   revisão sozinha no fim da sessão, sem o aluno ter de clicar tópico a
+   tópico. A Revisão Geral fica de fora de propósito: ela sorteia do edital
+   inteiro, inclusive de assunto que o aluno ainda não estudou, e marcar ali
+   diria que ele revisou o que nunca viu. */
+function _topKeysDoBloco(bloco){
+  return [...new Set(((bloco&&bloco.topicos)||[]).map(t=>t.key).filter(Boolean))];
+}
+
+/* Refazer substitui a nota. O aviso existe porque a troca é definitiva e o
+   aluno costuma descobrir isso depois de já ter perdido o resultado bom. */
+function _confirmarRefazer(bloco){
+  const r=(STATE.revisoesResultados||{})[revResultadoId(bloco)];
+  if(!r) return true;
+  return confirm("Você já tem um resultado aqui: "+r.nota+" / 10 ("+r.pct+"%).\n\n"
+    +"Ao concluir esta nova tentativa, a nota anterior é substituída pela nova. Continuar?");
+}
+
 function revSalvarResultado(sessao){
   if(!sessao||!sessao.revisao||sessao.resultadoSalvo||!sessao.itens.length) return false;
   if(sessao.itens.some(it=>sessao.respostas[it.q.id]===undefined)) return false;
@@ -5508,20 +5551,35 @@ function revSalvarResultado(sessao){
   const total=sessao.itens.length,pct=Math.round(100*acertos/total);
   if(!STATE.revisoesResultados) STATE.revisoesResultados={};
   STATE.revisoesResultados[sessao.revisao.id]={dia:fmt(new Date()),total,acertos,pct,nota:(10*acertos/total).toFixed(1),materias};
+  const key=sessao.revisao.key;
+  if(sessao.revisao.tipo==="revisao"){
+    /* A revisão comum não gravava nada no dia: a nota ficava só em
+       revisoesResultados e o cronograma nem sabia que ela aconteceu. */
+    if(!STATE.dias[key]) STATE.dias[key]={};
+    STATE.dias[key].revisaoFeita=true;
+    STATE.dias[key].revisaoScore=pct;
+    STATE.dias[key].revisaoResultadoId=sessao.revisao.id;
+  }
   if(sessao.revisao.tipo==="mini"){
-    const key=sessao.revisao.key;
     if(!STATE.dias[key]) STATE.dias[key]={};
     STATE.dias[key].simuladoFeito=true;
     STATE.dias[key].simuladoScore=pct;
     STATE.dias[key].simuladoResultadoId=sessao.revisao.id;
   }
+  /* Marca os tópicos cobertos como revisados. Era trabalho manual, tópico a
+     tópico, depois de já ter respondido as questões deles. */
+  if(sessao.revisao.tipo!=="geral"){
+    (sessao.revisao.topKeys||[]).forEach(k=>{
+      if(!STATE.dias[k]) STATE.dias[k]={};
+      STATE.dias[k].exRevisao=true;
+    });
+  }
+  if(key&&typeof _carimbarRegistro==="function") _carimbarRegistro(key);
   if(sessao.revisao.tipo==="geral"){
-    const key=sessao.revisao.key;
     if(!STATE.dias[key]) STATE.dias[key]={};
     STATE.dias[key].revisaoGeralFeita=true;
     STATE.dias[key].revisaoGeralScore=pct;
     STATE.dias[key].revisaoGeralResultadoId=sessao.revisao.id;
-    if(typeof _carimbarRegistro==="function") _carimbarRegistro(key);
   }
   sessao.resultadoSalvo=true;return true;
 }
@@ -5665,8 +5723,8 @@ function simConfiguracaoHtml(bloco,cfg){
     <h3>${esc(cfg.titulo)}</h3>
     ${formato}${ritmo}
     <p>${esc(cfg.lista)} (<strong>${esc(p.grupos.length)}</strong>):</p>${_simListaTopicos(p.grupos)}
-    <button class="ex-btn" type="button" data-action="${esc(cfg.acao)}" data-key="${esc(bloco.key)}"${tem?"":" disabled"}>${esc(cfg.rotulo)}</button>
-    <p class="rev-ajuda">${tem?"Questões embaralhadas, sem repetição na mesma prova. A nota é salva quando você responde todas, e uma nova tentativa substitui a nota anterior.":"Ainda não há questões publicadas para estes tópicos. Você pode fazer o simulado no seu material e registrar o resultado pelo botão do cartão."}</p>
+    <button class="ex-btn" type="button" data-action="${esc(cfg.acao)}" data-key="${esc(bloco.key)}"${tem?"":" disabled"}>${resultado?"↻ "+esc(cfg.refazer||cfg.rotulo):esc(cfg.rotulo)}</button>
+    <p class="rev-ajuda">${tem?"Questões embaralhadas, sem repetição na mesma prova. Ao responder todas, a nota é salva e o dia entra no histórico do cronograma. Refazer substitui a nota anterior.":"Ainda não há questões publicadas para estes tópicos. Você pode fazer o simulado no seu material e registrar o resultado pelo botão do cartão."}</p>
   </section>`;
 }
 function iniciarSimulado(bloco){
@@ -5675,7 +5733,9 @@ function iniciarSimulado(bloco){
   const itens=p.total?_simSortear(p.grupos,p.limite):[];
   if(!itens.length){ showToast("Ainda não há questões publicadas para este simulado."); return; }
   if(_exSessao&&!confirm("Iniciar esta atividade substituirá a sessão de exercícios em andamento. Continuar?")) return;
-  _exSessao={itens,i:0,respostas:{},verComentario:false,revisao:{id:revResultadoId(bloco),num:bloco.num,tipo:bloco.tipo,key:bloco.key}};
+  if(!_confirmarRefazer(bloco)) return;
+  _exSessao={itens,i:0,respostas:{},verComentario:false,
+    revisao:{id:revResultadoId(bloco),num:bloco.num,tipo:bloco.tipo,key:bloco.key,topKeys:_topKeysDoBloco(bloco)}};
   navTo("exercicios"); window.scrollTo(0,0);
 }
 
@@ -5687,7 +5747,8 @@ function miniConfiguracaoHtml(key){
     vazio:"Nenhum tópico deste simulado foi estudado e avaliado até agora. A prova é montada aqui assim que você concluir e dar sua nota de confiança aos tópicos das revisões que ele cobre.",
     lista:"Conteúdos que você estudou nestas revisões e entram no sorteio",
     acao:"miniIniciarQuestoes",
-    rotulo:"Começar o Mini Simulado"
+    rotulo:"Começar o Mini Simulado",
+    refazer:"Refazer o Mini Simulado"
   });
 }
 function miniIniciarQuestoes(key){ iniciarSimulado(miniBloco(key)); }
@@ -5713,7 +5774,8 @@ function rgConfiguracaoHtml(key){
     vazio:"Nenhum tópico do edital foi estudado e avaliado até agora. A prova completa é montada aqui conforme você avança no cronograma.",
     lista:"Conteúdos que você já estudou e entram no sorteio",
     acao:"rgIniciarQuestoes",
-    rotulo:"Começar a Revisão Geral"
+    rotulo:"Começar a Revisão Geral",
+    refazer:"Refazer a Revisão Geral"
   });
 }
 function rgIniciarQuestoes(key){ iniciarSimulado(rgBloco(key)); }

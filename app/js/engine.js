@@ -667,12 +667,14 @@ function _diaPrevisto(dateKey){
   return !isDiaLivre(parseDate(dateKey).getDay());
 }
 /* Um dia do plano é CUMPRIDO por qualquer entrega prevista para ele:
-   conteúdo novo (percepcao), Retorno Técnico (rtFeito), mini simulado
-   (simuladoFeito) ou Revisão Geral (revisaoGeralFeita). Sem isso, sábados
-   de RT e dias de simulado apareciam como falha mesmo tendo sido feitos. */
+   conteúdo novo (percepcao), Retorno Técnico (rtFeito), revisão com questões
+   (revisaoFeita), mini simulado (simuladoFeito) ou Revisão Geral
+   (revisaoGeralFeita). Sem isso, sábados de RT e dias de simulado apareciam
+   como falha mesmo tendo sido feitos. O revisaoFeita entrou em 19/09/2026,
+   quando a revisão passou a se registrar sozinha ao fim das questões. */
 function _diaFeito(dateKey){
   const e=(STATE.dias||{})[dateKey]||{};
-  return !!(e.percepcao||e.rtFeito||e.simuladoFeito||e.revisaoGeralFeita);
+  return !!(e.percepcao||e.rtFeito||e.revisaoFeita||e.simuladoFeito||e.revisaoGeralFeita);
 }
 
 /* Sequência atual, recorde e ESCUDO DE SEQUÊNCIA: uma falha por mês é
