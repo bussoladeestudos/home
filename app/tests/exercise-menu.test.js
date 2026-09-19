@@ -28,3 +28,60 @@ test('quantidade maior que banco usa disponíveis e combina tópicos',()=>{const
 
 test('quantidade vazia ou inválida não inicia sessão',()=>{for(const v of ['',0,-1,1.5]){const c=menu();c.valor=v;vm.runInContext('_exQuantidade=valor;exComecar()',c);assert.equal(vm.runInContext('_exSessao',c),null);}});
 test('voltar à opção vazia limpa os tópicos anteriores',()=>{const c=menu();vm.runInContext('let _exBuscaTop="busca";',c);vm.runInContext(ui.match(/function exSetMateria\([^]*?^}/m)[0],c);vm.runInContext('_exFiltro.topicos=[{mat:"A",top:"a"}];exSetMateria("")',c);assert.equal(vm.runInContext('_exListar().length',c),0);assert.equal(vm.runInContext('_exFiltro.topicos.length',c),0);});
+
+/* ── Filtro "Ainda não respondi" (19/09/2026) ──
+   O engine já sabia filtrar por soNaoRespondidas desde que o menu nasceu;
+   faltava a tela oferecer. Estes testes cobrem os dois lados. */
+function bancoDemo(){
+ /* Semeia QUESTOES, nao getQuestoes: o engine define a propria funcao
+    getQuestoes e ela sobrescreve qualquer coisa passada no contexto. */
+ const c=vm.createContext({STATE:{questoes:{}},
+   EDITAIS:{demo:{topicos:{Mat:['Top']}}},
+   QUESTOES:{demo:{Mat:{Top:[{id:'q1',nivel:1},{id:'q2',nivel:1},{id:'q3',nivel:1}]}}}});
+ vm.runInContext(engine,c);
+ return {c,run:s=>vm.runInContext(s,c)};
+}
+
+test('só as que ainda não respondi devolve o que nunca teve resposta',()=>{
+ const h=bancoDemo();
+ h.run('registrarResposta("q1","a",true,"2026-09-09")');
+ h.run('registrarResposta("q2","b",false,"2026-09-09")');
+ assert.equal(h.run('listarQuestoes("demo",{soNaoRespondidas:true}).map(x=>x.q.id).join(",")'),'q3');
+ assert.equal(h.run('listarQuestoes("demo",{soErradas:true}).map(x=>x.q.id).join(",")'),'q2');
+ assert.equal(h.run('listarQuestoes("demo",{}).length'),3);
+});
+
+test('responder uma questão a tira do filtro de não respondidas',()=>{
+ const h=bancoDemo();
+ assert.equal(h.run('listarQuestoes("demo",{soNaoRespondidas:true}).length'),3);
+ h.run('registrarResposta("q3","a",true,"2026-09-09")');
+ assert.equal(h.run('listarQuestoes("demo",{soNaoRespondidas:true}).length'),2);
+});
+
+function chips(){
+ const c=vm.createContext({renderExercicios(){}});
+ vm.runInContext('let _exFiltro={materia:"*",topicos:[],niveis:[],soErradas:false,soNaoRespondidas:false};',c);
+ for(const n of ['exToggleErradas','exToggleNovas'])
+   vm.runInContext(ui.match(new RegExp('function '+n+'\\([^]*?^}','m'))[0],c);
+ return c;
+}
+
+test('os dois filtros de histórico se excluem, porque juntos devolveriam zero',()=>{
+ const c=chips();
+ vm.runInContext('exToggleErradas()',c);
+ assert.equal(vm.runInContext('_exFiltro.soErradas',c),true);
+ vm.runInContext('exToggleNovas()',c);
+ assert.equal(vm.runInContext('_exFiltro.soNaoRespondidas',c),true);
+ assert.equal(vm.runInContext('_exFiltro.soErradas',c),false);
+ vm.runInContext('exToggleErradas()',c);
+ assert.equal(vm.runInContext('_exFiltro.soNaoRespondidas',c),false);
+ vm.runInContext('exToggleErradas()',c);
+ assert.equal(vm.runInContext('_exFiltro.soErradas',c),false);
+ assert.equal(vm.runInContext('_exFiltro.soNaoRespondidas',c),false);
+});
+
+test('o filtro novo chega ao engine pela listagem da tela',()=>{
+ const c=menu();
+ vm.runInContext('_exFiltro.soNaoRespondidas=true;_exListar()',c);
+ assert.equal(c.filtro.soNaoRespondidas,true);
+});
