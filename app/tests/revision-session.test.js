@@ -149,3 +149,65 @@ test('a revisão geral também só usa o que foi estudado',()=>{
  assert.equal(h.run('_exSessao.itens.length'),6);
  assert.equal(h.run('_exSessao.itens.some(x=>x.mat==="C")'),false);
 });
+/* ── Registro automático ao fim da revisão e do simulado (19/09/2026) ──
+   Antes, terminar as questões salvava só a nota: o aluno ainda tinha de
+   marcar tópico a tópico que havia revisado, e o dia não entrava no
+   histórico do cronograma. */
+function setupComChaves(){
+ const h=setup();
+ h.bloco.topicos=[{mat:'A',top:'a',key:'2026-09-02'},{mat:'B',top:'b',key:'2026-09-03'}];
+ return h;
+}
+
+test('revisão concluída grava o dia no cronograma e marca os tópicos como revisados',()=>{
+ const h=setupComChaves();
+ h.run('revIniciarQuestoes(1)');
+ h.run('_exSessao.itens.forEach(it=>_exSessao.respostas[it.q.id]="a");revSalvarResultado(_exSessao)');
+ const dia=h.c.STATE.dias['2026-09-09'];
+ assert.equal(dia.revisaoFeita,true);
+ assert.equal(dia.revisaoScore,100);
+ assert.ok(dia.revisaoResultadoId);
+ assert.equal(h.c.STATE.dias['2026-09-02'].exRevisao,true);
+ assert.equal(h.c.STATE.dias['2026-09-03'].exRevisao,true);
+});
+
+test('a sessão carrega as chaves de dia dos tópicos do bloco, sem repetir',()=>{
+ const h=setupComChaves();
+ h.bloco.topicos.push({mat:'A',top:'a',key:'2026-09-02'});
+ h.run('revIniciarQuestoes(1)');
+ assert.equal(h.run('_exSessao.revisao.topKeys.join(",")'),'2026-09-02,2026-09-03');
+ assert.equal(h.run('_exSessao.revisao.qtd'),2);
+});
+
+test('a Revisão Geral não marca tópico como revisado, porque sorteia do edital inteiro',()=>{
+ const h=setupComChaves();
+ h.run(`_exSessao={itens:[{mat:'A',top:'a',q:{id:'x',gabarito:'a'}}],i:0,respostas:{x:'a'},
+   revisao:{id:'geral:1',num:1,tipo:'geral',key:'2026-09-09',topKeys:['2026-09-02']}};
+   revSalvarResultado(_exSessao)`);
+ assert.equal(h.c.STATE.dias['2026-09-09'].revisaoGeralFeita,true);
+ assert.equal((h.c.STATE.dias['2026-09-02']||{}).exRevisao,undefined);
+});
+
+test('refazer substitui a nota anterior e mantém o mesmo id de resultado',()=>{
+ const h=setupComChaves();
+ h.run('revIniciarQuestoes(1)');
+ h.run('_exSessao.itens.forEach(it=>_exSessao.respostas[it.q.id]="a");revSalvarResultado(_exSessao)');
+ const id=Object.keys(h.c.STATE.revisoesResultados)[0];
+ assert.equal(h.c.STATE.revisoesResultados[id].pct,100);
+ h.run('_exSessao=null;revIniciarQuestoes(1)');
+ h.run('_exSessao.itens.forEach((it,i)=>_exSessao.respostas[it.q.id]=i?"z":"a");revSalvarResultado(_exSessao)');
+ assert.equal(Object.keys(h.c.STATE.revisoesResultados).length,1);
+ assert.equal(h.c.STATE.revisoesResultados[id].pct,25);
+});
+
+test('com resultado salvo, o botão vira Refazer e a nota fica disponível para a tarja',()=>{
+ const h=setupComChaves();
+ h.run('revIniciarQuestoes(1)');
+ h.run('_exSessao.itens.forEach(it=>_exSessao.respostas[it.q.id]="a");revSalvarResultado(_exSessao)');
+ const r=Object.values(h.c.STATE.revisoesResultados)[0];
+ assert.equal(r.nota,'10.0');
+ const html=h.run('revConfiguracaoHtml(buildBlocosRevisao()[0])');
+ assert.ok(html.includes('Refazer a revisão'));
+ assert.ok(!html.includes('>Gerar revisão<'));
+ assert.ok(html.includes('Último resultado'));
+});
