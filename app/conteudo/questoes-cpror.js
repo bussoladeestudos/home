@@ -1,5 +1,5 @@
 /* GERADO por outputs/questoes_para_js.py. NAO editar a mao.
-   Fonte: _conteudo/cpror/questoes/**.yaml  ·  444 questoes em 49 topicos
+   Fonte: _conteudo/cpror/questoes/**.yaml  ·  516 questoes em 58 topicos
    Para mudar uma questao, edite o YAML e rode o script de novo. */
 window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
  "cproRAnbima": {
@@ -2164,6 +2164,150 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "gabarito": "c"
     }
    ],
+   "Objetivos financeiros: prioridades e compatibilidade entre metas": [
+    {
+     "id": "cpror-cli-16-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Um objetivo só orienta decisão quando informa valor estimado, data ou horizonte, prioridade e margem de ajuste, e ainda indica os recursos já separados e a capacidade de aporte.</p><p>A alternativa B descreve o perfil de risco, que é outra dimensão da análise e não diz quanto a cliente precisa juntar nem até quando. A alternativa C parte de características dos produtos, que entram depois de a meta existir. A alternativa D reúne dados cadastrais, úteis para conhecer a cliente e insuficientes para calcular esforço.</p><p>Regra de bolso: sem valor e sem prazo não há aporte a calcular.</p>",
+     "enunciado": "<p>Uma cliente diz que quer juntar dinheiro para o futuro e pergunta qual valor aplicar por mês. Identifique as informações que transformam esse desejo em uma meta capaz de orientar o cálculo do aporte.</p>",
+     "alternativas": {
+      "a": "Valor estimado, data ou horizonte, prioridade diante das outras metas e margem de ajuste.",
+      "b": "Perfil de risco declarado, experiência com produtos e preferência entre renda fixa e variável.",
+      "c": "Rentabilidade projetada da carteira, prazo de carência dos produtos e tributação na saída.",
+      "d": "Renda bruta anual, idade na data da contratação e patrimônio total registrado no cadastro."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-16-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Sem esclarecer para que o dinheiro servirá não é possível definir liquidez, risco ou contribuição: quem vai viver da reserva precisa de um valor acumulado e de uma previsibilidade de retirada diferentes de quem apenas complementa renda por um período.</p><p>A alternativa A reduz a finalidade à escolha de um produto, quando ela antecede essa escolha. A alternativa B trata a finalidade como assunto de conversa, e ela é dado de cálculo. A alternativa D usa o horizonte para apagar a diferença, embora duas metas longas possam exigir valores e liquidez distintos.</p><p>Regra de bolso: a finalidade vem antes do prazo, porque é ela que diz quanto e com qual disponibilidade.</p>",
+     "enunciado": "<p>Dois clientes escrevem aposentadoria como objetivo. Um pretende deixar o trabalho e viver da reserva acumulada, o outro quer complementar a renda durante uma fase específica. Explique por que a finalidade declarada muda a orientação de cada caso.</p>",
+     "alternativas": {
+      "a": "A finalidade altera o nome do produto contratado, já que o horizonte longo vale para os dois casos.",
+      "b": "A finalidade importa na conversa com o cliente e deixa de influenciar o cálculo depois de definido o prazo.",
+      "c": "A finalidade define o valor a acumular, a liquidez necessária e o risco aceitável, que diferem nos dois casos.",
+      "d": "A finalidade separa metas de curto e de longo prazo, e a orientação fica igual quando as duas são longas."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-16-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A reserva pede R$ 9.000 divididos por doze meses, ou R$ 750. O intercâmbio, R$ 21.000 por vinte e um meses, ou R$ 1.000. O carro, R$ 16.000 por dezesseis meses, ou R$ 1.000. A soma é R$ 2.750 contra R$ 1.800 de capacidade, e faltam R$ 950 por mês.</p><p>A alternativa A acerta os aportes e conclui pela compatibilidade apoiada nas datas distintas, quando o que pesa é a soma dos aportes no mesmo mês. A alternativa B transfere a diferença para o rendimento, e nenhuma taxa projetada pode ser tratada como garantia. A alternativa D aplica o prazo mais longo às três metas e desmancha a data própria de cada uma.</p><p>Regra de bolso: some os aportes do mesmo período e compare com a poupança real antes de discutir produto.</p>",
+     "enunciado": "<p>Em Natal, o assessor Elias atende Marcela, analista de laboratório, que separa R$ 1.800 por mês e confirma no extrato que ainda não tem nada aplicado. Ela lista três metas: R$ 9.000 de reserva de emergência em doze meses, R$ 21.000 para um intercâmbio em vinte e um meses e R$ 16.000 para a troca do carro em dezesseis meses. A secretaria do intercâmbio já enviou o cronograma de pagamentos e a data não muda. O carro atual roda sem problema e a troca pode esperar, enquanto a reserva Marcela considera inegociável, porque a renda dela vem de contrato anual renovável. Marcela pediu que o cálculo ignorasse rendimento e inflação, para enxergar só o esforço mensal de cada meta. Calcule o aporte de cada uma e indique o diagnóstico de compatibilidade.</p>",
+     "alternativas": {
+      "a": "R$ 750, R$ 1.000 e R$ 1.000, somando R$ 2.750, valor compatível porque as três metas vencem em datas diferentes.",
+      "b": "R$ 750, R$ 1.000 e R$ 1.000, somando R$ 2.750, e a diferença pode ser coberta pelo rendimento da carteira no período.",
+      "c": "R$ 750, R$ 1.000 e R$ 1.000, somando R$ 2.750, acima dos R$ 1.800 disponíveis, com R$ 950 por mês sem cobertura.",
+      "d": "R$ 429, R$ 1.000 e R$ 1.000, somando R$ 2.429, porque o prazo mais longo da lista serve de referência às três."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-16-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O mesmo patrimônio não deve ser contado integralmente para metas incompatíveis: os R$ 30.000 ou cumprem a função de reserva ou entram na entrada, e usá-los na compra deixa a família sem cobertura para imprevistos logo depois.</p><p>A alternativa A discute o produto, decisão posterior à definição da função de cada parcela. A alternativa C trata da variação do preço do imóvel, assunto real que não corrige a dupla contagem. A alternativa D transfere a prioridade para a especialista, quando ela pertence ao cliente e se testa pelas consequências de adiar cada meta.</p><p>Regra de bolso: cada parcela do patrimônio tem uma função só.</p>",
+     "enunciado": "<p>Em Uberlândia, a especialista Joana revisa o plano de Caio, professor, casado e com uma filha. A família tem renda líquida de R$ 11.000 e despesas essenciais de R$ 6.000 por mês. Caio mantém R$ 30.000 em um fundo de liquidez diária, aberto há dois anos, e nenhuma outra aplicação. O saldo veio de uma rescisão e ficou parado desde então. Na mesma conversa, ele apresenta esse valor como a reserva de emergência da família e como parte da entrada de um apartamento na planta, com assinatura marcada para daqui a quatorze meses. O lançamento prevê correção do saldo pelo INCC. A entrada exigirá R$ 45.000, e Caio conclui que só terá de juntar os R$ 15.000 restantes, porque os R$ 30.000 já estão separados. Analise a apresentação de Caio e indique o que ela deixa de considerar.</p>",
+     "alternativas": {
+      "a": "O fundo de liquidez diária atende mal os dois objetivos, porque a entrada tem data e pede horizonte compatível.",
+      "b": "O mesmo valor aparece duas vezes: se os R$ 30.000 forem para a entrada, a família fica sem reserva na data da compra.",
+      "c": "A entrada precisa ser recalculada, porque o preço do imóvel muda até a data e o aporte acompanha essa variação.",
+      "d": "A prioridade das duas metas cabe à especialista, porque metas simultâneas exigem uma ordem técnica de atendimento."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-16-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Quando a conta não fecha, as alternativas são revisar valor, prazo, prioridade, despesas ou renda. Buscar retorno acima do projetado acrescenta risco e não substitui essa decisão.</p><p>A alternativa A adia a revisão e aposta o plano no desempenho de um ano. A alternativa B coloca a parcela de data rígida na posição de oscilação alta, que é onde uma perda faz estrago justamente na véspera do uso. A alternativa C condiciona a análise à existência de patrimônio prévio, quando a matriz de valor, prazo, prioridade e flexibilidade pode ser montada a partir de zero.</p><p>Regra de bolso: incompatibilidade nasce dos aportes e se resolve nos aportes.</p>",
+     "enunciado": "<p>Em Campinas, o planejador Sérgio fecha a matriz de metas de Rúbia, dentista autônoma com capacidade de poupança de R$ 2.400 por mês. São três objetivos: R$ 12.000 de reserva em doze meses, R$ 20.000 para a entrada de uma sala comercial com contrato assinado para daqui a vinte meses, e R$ 24.000 para a formatura da filha em vinte e quatro meses, data fixada pela faculdade. A soma dos aportes chega a R$ 3.000 e passa da capacidade em R$ 600. Ela não tem valores já aplicados e o consultório está com a agenda cheia há seis meses. Rúbia responde que viu um vídeo sobre uma carteira de desempenho forte no ano passado e propõe aplicar tudo nela para cobrir a diferença, conservando valor, prazo e prioridade das três metas como estão. Indique a orientação correta diante da incompatibilidade apurada.</p>",
+     "alternativas": {
+      "a": "Aplicar na carteira indicada por Rúbia e reavaliar as metas caso o desempenho do primeiro ano fique abaixo do projetado.",
+      "b": "Conservar as três metas e alocar a parcela de data rígida em ativos voláteis, deixando a meta flexível na aplicação líquida.",
+      "c": "Adiar a análise até Rúbia formar reserva, já que metas simultâneas exigem patrimônio prévio para serem comparadas.",
+      "d": "Revisar valor, prazo, prioridade, despesas ou renda até os aportes caberem na capacidade."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-16-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Objetivo com data rígida exige previsibilidade de disponibilidade no momento do uso, enquanto meta flexível tolera adiamento. O resgate em trinta dias pode servir à entrada se o calendário for respeitado, e a reforma aceita aplicações de liquidez menor.</p><p>A alternativa A iguala as duas metas pelo produto e apaga a diferença de exigência. A alternativa B inverte os papéis e trata a meta flexível como a mais exigente. A alternativa C usa dez meses como prazo bastante para absorver oscilação, quando a data é rígida e uma queda na véspera compromete a assinatura.</p><p>Regra de bolso: quem manda na liquidez é a data de uso, não o tamanho do horizonte.</p>",
+     "enunciado": "<p>Em Santa Maria, a assessora Iara organiza duas metas de Otávio, que tem R$ 80.000 aplicados e aporta R$ 1.200 por mês. A primeira meta é a entrada de um imóvel: R$ 60.000, com o contrato marcando a assinatura para daqui a dez meses e multa prevista em caso de atraso. A segunda é uma reforma da cozinha, orçada em R$ 20.000, que Otávio pretende fazer em algum momento dos próximos cinco anos e que pode ser antecipada ou postergada conforme o orçamento da família. Dos R$ 80.000 aplicados, R$ 45.000 já estão reservados para a entrada e R$ 8.000 para a reforma. Ele quer aplicar as duas parcelas no mesmo produto, com resgate creditado em trinta dias corridos, para simplificar o controle em um extrato só. Compare as duas metas quanto à exigência de disponibilidade dos recursos.</p>",
+     "alternativas": {
+      "a": "As duas admitem o mesmo produto, porque um resgate em trinta dias cabe nos dois horizontes apresentados.",
+      "b": "A reforma exige previsibilidade maior, porque o horizonte de cinco anos amplia a chance de uso antes do previsto.",
+      "c": "A entrada aceita ativos de oscilação relevante, já que dez meses bastam para recuperar quedas temporárias.",
+      "d": "A entrada tem data rígida e pede disponibilidade na semana da assinatura; a reforma tolera adiamento e admite menos liquidez."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-16-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Com a bolsa, o curso exige R$ 7.700 divididos pelos vinte e dois meses que restam, ou R$ 350. A reserva continua pedindo R$ 4.000 em quatro meses, ou R$ 1.000. A soma cai para R$ 1.350, enquanto a capacidade sobe para R$ 1.800 com a divisão do aluguel, deixando R$ 450 de margem.</p><p>A alternativa B conserva o esforço antigo e desconsidera que mudança de custo exige recalcular o plano. A alternativa C reduz o aporte da reserva sem que o prazo ou o valor dela tenham mudado. A alternativa D divide o novo custo pelo prazo original, e não pelos meses que ainda restam.</p><p>Regra de bolso: informação nova pede conta nova, e a conta usa o que falta, não o que foi combinado.</p>",
+     "enunciado": "<p>Em Teresina, a consultora Bruna revê o plano de Danilo, servidor com renda estável, que separa R$ 1.500 por mês e pediu que o cálculo ignorasse rendimento. Restam vinte e dois meses para o curso de especialização, orçado em R$ 15.400, e quatro meses para completar a reserva, da qual faltam R$ 4.000. O plano original previa vinte e oito meses para o curso. Nesta semana Danilo recebeu a confirmação de uma bolsa que derruba o custo do curso para R$ 7.700, mantida a mesma data de início, e passou a dividir o aluguel com o irmão, o que liberou R$ 300 por mês no orçamento. A bolsa cobre metade da mensalidade e foi confirmada por escrito pela instituição. Ele pergunta se pode conservar os aportes como estavam e guardar a folga em conta corrente. Analise o efeito da nova informação sobre o plano.</p>",
+     "alternativas": {
+      "a": "O curso passa a R$ 350 e a reserva segue em R$ 1.000: a necessidade cai a R$ 1.350 contra R$ 1.800, sobrando R$ 450.",
+      "b": "Os aportes seguem em R$ 1.700 por mês, porque a bolsa reduz o valor final e não altera o esforço já combinado.",
+      "c": "O curso passa a R$ 350 e a reserva a R$ 500, porque o prazo dela acompanha a folga criada pela divisão do aluguel.",
+      "d": "O curso passa a R$ 275 por mês, porque o novo custo se divide pelos vinte e oito meses do plano original."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-16-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. Objetivos podem ter dependência entre si, e quitar uma dívida cara libera poupança para a meta seguinte. Enquanto R$ 400 dos R$ 900 sustentam o mínimo de um saldo que cresce, a capacidade de aporte de Cristina fica presa e o carro demora mais do que ela imagina.</p><p>A alternativa A aplica a prioridade declarada sem testá-la pelas consequências de adiar cada meta, que é o teste que a ordem exige. A alternativa C acerta ao valorizar a proteção, mas transforma uma possibilidade em regra fixa e deixa a dívida cara correndo enquanto a reserva se forma. A alternativa D repete a sugestão do colega e troca uma despesa certa de juros por um retorno incerto.</p><p>Regra de bolso: a ordem das metas se justifica pelo efeito de cada uma sobre as outras.</p>",
+     "enunciado": "<p>Em Niterói, o assessor Paulo atende Cristina, vendedora com renda fixa mais comissão, que separa R$ 900 por mês. Desse valor, R$ 400 sustentam o pagamento mínimo de uma dívida de cartão de R$ 9.000, contratada há oito meses, cujo saldo segue crescendo mês a mês. Cristina ainda não formou reserva, tem despesas essenciais de R$ 3.200 e quer comprar um carro de R$ 40.000 em três anos, prioridade que declara sem hesitar. Nos oito meses de cartão, o saldo subiu de R$ 6.500 para os R$ 9.000 atuais, mesmo com os pagamentos em dia. Ela pede para direcionar ao carro os R$ 500 que sobram e conservar o mínimo do cartão, porque considera a dívida sob controle, e conta que um colega sugeriu aplicar essa parcela em algo de retorno alto para quitar o cartão com o lucro. Analise a ordem dos objetivos e indique a orientação coerente.</p>",
+     "alternativas": {
+      "a": "Conservar o plano de Cristina, porque a prioridade declarada pelo cliente define a ordem de atendimento das metas.",
+      "b": "Quitar antes a dívida cara, porque ela consome a capacidade mensal e liberá-la amplia o aporte disponível ao carro.",
+      "c": "Formar a reserva completa antes de qualquer outro passo, adiando dívida e carro até a proteção estar concluída.",
+      "d": "Aplicar a parcela livre em ativos de retorno alto e usar o resultado para abater o cartão, preservando a data do carro."
+     },
+     "gabarito": "b"
+    }
+   ],
    "Tolerância ao risco e capacidade financeira de suportar perdas": [
     {
      "id": "cpror-cli-17-q1",
@@ -2594,6 +2738,870 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "d": "Registrar conhecimento e adiar apenas a conferência de custos, já que objetivo e capacidade serão revelados quando surgir necessidade de resgate."
      },
      "gabarito": "a"
+    }
+   ],
+   "Perfis conservador, moderado e arrojado: análise aplicada": [
+    {
+     "id": "cpror-cli-20-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Os nomes resumem tendências de disposição e capacidade: preservar com pouca oscilação, aceitar algum risco ou tolerar perdas maiores em busca de retorno. A aplicação ainda depende de objetivo, situação financeira e conhecimento.</p><p>A alternativa A promete risco zero, composição fixa e dispensa de liquidez. A alternativa C substitui o diagnóstico por dados isolados. A alternativa D deixa o produto definir a pessoa, invertendo a análise de adequação.</p><p>Regra de bolso: perfil resume preferências e limites, mas não entrega uma carteira automática.</p>",
+     "enunciado": "<p>Ao explicar os perfis de risco a um cliente, uma assessora precisa distinguir tendências de comportamento sem prometer uma carteira pronta. Identifique a leitura funcional de conservador, moderado e arrojado.</p>",
+     "alternativas": {
+      "a": "Conservador busca risco zero, moderado reparte os recursos em partes iguais e arrojado dispensa análise de liquidez.",
+      "b": "Conservador prioriza preservação, moderado admite alguma oscilação e arrojado aceita perdas maiores em busca de retorno.",
+      "c": "Conservador é definido pela idade, moderado pela renda mensal e arrojado pelo volume total de operações anteriores.",
+      "d": "Os três perfis dependem do produto escolhido; a preferência comercial da instituição determina como o cliente será classificado."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-20-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O artigo 4º da Resolução CVM 30 exige categorias de perfil de risco previamente estabelecidas. Conservador, moderado e arrojado são nomes comuns, mas a norma não impõe esses rótulos nem uma carteira padrão para cada um.</p><p>A alternativa A atribui à norma nomes e proporções que ela não estabelece. A alternativa D elimina a classificação exigida. A alternativa C faz a compra definir o perfil, em vez de aplicar critérios anteriores e coerentes.</p><p>Regra de bolso: a categoria é exigida; o nome comercial e a carteira pronta não são impostos pela norma.</p>",
+     "enunciado": "<p>Uma equipe prepara as categorias de perfil usadas no atendimento e pergunta se a Resolução CVM 30 obriga a empregar os nomes conservador, moderado e arrojado. Indique a exigência descrita na aula.</p>",
+     "alternativas": {
+      "a": "A norma fixa esses três nomes e determina uma proporção uniforme de cada classe de ativo para as respectivas categorias.",
+      "b": "A instituição adota categorias de risco previamente estabelecidas e aplica critérios coerentes; esses nomes são usuais.",
+      "c": "A norma deixa a classificação para o produto adquirido, de modo que o perfil do cliente resulta da primeira operação.",
+      "d": "A norma dispensa categorias quando o cliente informa finalidade e prazo da aplicação em entrevista individual."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-20-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A classificação arrojada não autoriza risco elevado para dinheiro destinado a mensalidades próximas nem substitui a reserva. A proteção dessas necessidades reduz a chance de venda forçada em queda; eventual parcela livre pode ser analisada separadamente.</p><p>A alternativa A usa o rótulo para ignorar a data dos pagamentos. A alternativa B reconhece a reserva, mas a condiciona a ganhos incertos e expõe as mensalidades. A alternativa D protege a meta, porém converte uma restrição de parcela em mudança automática do perfil global.</p><p>Regra de bolso: arrojado não transforma obrigação próxima em dinheiro disponível para perder.</p>",
+     "enunciado": "<p>Na revisão de José, em Recife, a gerente Lívia encontra classificação arrojada no cadastro e R$ 180.000 disponíveis para investimento. José ainda forma sua reserva de emergência e terá de pagar R$ 72.000 em mensalidades de um curso profissional nos próximos doze meses. A renda atual cobre as despesas comuns, mas deixaria pouca folga se uma contratação da empresa atrasasse. José recebeu ganho recente em uma posição volátil e pede que o dinheiro inteiro siga a mesma estratégia, afirmando que seu perfil permite suportar uma queda temporária. Ele espera financiar as mensalidades com resgates mensais da carteira e não indica outra fonte para completar os pagamentos se o preço cair. Ao perguntar como pagaria o curso durante uma queda, Lívia ouve que José aguardaria a recuperação, embora as mensalidades tenham vencimentos fixos. Indique a orientação para a alocação inicial.</p>",
+     "alternativas": {
+      "a": "Aplicar os R$ 180.000 na estratégia pedida e agendar vendas mensais, pois o cadastro arrojado já incorpora o risco do curso.",
+      "b": "Manter o plano volátil para o curso, mas formar a reserva apenas com ganhos que excederem as mensalidades ao longo do ano.",
+      "c": "Proteger a reserva e os pagamentos próximos antes de avaliar risco maior para eventual parcela sem uso previsto no curto prazo.",
+      "d": "Descartar exposição a oscilações para os R$ 180.000, pois uma meta próxima torna o perfil global de José conservador."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-20-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O objetivo distante não elimina a tolerância baixa, e conservador não significa risco inexistente. A recomendação precisa confrontar prazo, liquidez, riscos e possível custo de escolher proteção maior em vez de retorno potencial.</p><p>A alternativa B usa horizonte longo para impor uma exposição que Marta talvez não consiga manter. A alternativa C preserva baixa oscilação, mas transforma o nome do perfil em veto automático ao prazo do objetivo. A alternativa A promete ausência de riscos e abandona a avaliação do produto.</p><p>Regra de bolso: horizonte longo abre análise, mas não reclassifica a disposição do cliente por decreto.</p>",
+     "enunciado": "<p>Uma meta de aposentadoria em quinze anos leva Marta à consultora Camila, em Curitiba. Marta dispõe de renda regular, reserva separada e recursos para a meta sem necessidade de resgate próximo. No questionário, relata desconforto com quedas relevantes e diz que provavelmente venderia uma aplicação se o saldo recuasse por vários meses. A equipe a classificou como conservadora depois de conferir situação financeira e conhecimento. Um colega propõe elevar automaticamente sua exposição a ativos voláteis porque o prazo longo permitiria esperar uma recuperação; outro afirma que o perfil conservador exige eliminar qualquer risco, sem avaliar emissor, garantia, carência ou reinvestimento. Marta pede uma solução que consiga manter mesmo se o mercado cair e pergunta qual dos dois colegas interpretou corretamente seu perfil. Avalie como tratar o objetivo distante diante do perfil apurado.</p>",
+     "alternativas": {
+      "a": "Buscar aplicação sem riscos de mercado, crédito ou reinvestimento e dispensar a comparação de garantias e carência.",
+      "b": "Aumentar a exposição à oscilação pelo prazo de quinze anos, pois tempo disponível substitui a reação declarada pela cliente.",
+      "c": "Usar somente produtos de prazo curto, pois o rótulo conservador impede considerar o horizonte da aposentadoria.",
+      "d": "Respeitar a baixa tolerância e examinar opções compatíveis com a meta, explicando riscos, liquidez e custo de preservação."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-20-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Moderado é uma categoria geral; Patrícia distingue oscilação, crédito e indisponibilidade, além de ter objetivos em datas diferentes. Yuri deve decompor esses limites e compará-los a risco, emissor, garantias, carência e finalidade.</p><p>A alternativa B inventa uma proporção universal. A alternativa C confunde risco de mercado com liquidez e ignora os dois horizontes. A alternativa D inclui a análise do emissor, mas desloca para uma obrigação próxima uma aceitação limitada à parte da carteira que pode suportar risco.</p><p>Regra de bolso: moderado não significa meio a meio nem tolerância igual a cada tipo de risco.</p>",
+     "enunciado": "<p>Ao reunir as respostas de Patrícia, em Salvador, o assessor Yuri encontra uma classificação moderada e duas reações diferentes ao risco. Patrícia aceita que a parcela destinada a uma meta distante oscile no mercado, desde que o valor de uma obrigação prevista para o próximo ano permaneça acessível. Ela rejeita posições com carência longa porque pode precisar alterar o calendário do projeto familiar, embora aceite avaliar risco de crédito privado em uma parte limitada da carteira após entender emissor e garantias. Um integrante da equipe traduz moderado como metade do patrimônio em cada uma de duas classes e recomenda a divisão sem perguntar valores ou prazos. Patrícia pergunta se a palavra moderada obriga a divisão sugerida e lembra que pode tolerar queda de preço sem aceitar ficar impedida de resgatar. Indique o diagnóstico que orienta a recomendação.</p>",
+     "alternativas": {
+      "a": "Separar objetivos e perguntar quais perdas, carências e riscos Patrícia aceita em cada parcela, comparando as respostas ao produto.",
+      "b": "Usar a divisão em duas metades como ponto final, pois a categoria moderada já estabelece proporção equilibrada para cada classe.",
+      "c": "Aplicar o mesmo prazo às duas parcelas, já que a disposição para oscilação indica tolerância equivalente à baixa liquidez.",
+      "d": "Considerar o crédito privado aceitável para o valor da obrigação próxima, desde que o emissor e as garantias sejam examinados."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-20-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Renda e reserva novas justificam atualizar a análise, mas o produto desejado não deve conduzir respostas ou classificação. O assessor precisa examinar objetivos, situação financeira, conhecimento e tolerância e depois confrontar o perfil com as características da operação.</p><p>A alternativa A transforma interesse em categoria e adia dados essenciais. A alternativa B congela um perfil que pode ter mudado. A alternativa D atualiza parte dos fatos, porém induz respostas para permitir a venda.</p><p>Regra de bolso: mudanças do cliente atualizam o perfil; desejo pelo produto não o define.</p>",
+     "enunciado": "<p>Um produto com prazo longo e forte oscilação desperta o interesse de Luana durante atendimento em Belém. O cadastro atual registra perfil conservador, formado quando ela dependia de renda variável e ainda não tinha reserva. Luana informa que sua renda se estabilizou e que passou a manter uma reserva, mas o assessor Bruno ainda não confirmou valores, dívidas, objetivos, experiência ou reação a perdas desde aquela classificação. O material do produto descreve riscos, emissor, garantias e carência; Luana pede que Bruno a classifique como arrojada antes de completar a entrevista para que o sistema permita a contratação. Ela afirma que desejar o produto é prova suficiente de nova tolerância. Ao ser questionada sobre uma perda prolongada, Luana pede que Bruno indique quais respostas permitiriam enquadrá-la no produto. Indique a sequência de atendimento coerente.</p>",
+     "alternativas": {
+      "a": "Alterar a categoria para arrojada pelo interesse de Luana e conferir renda e dívidas apenas depois de executar a operação.",
+      "b": "Preservar a categoria anterior sem revisão, pois o cadastro conservador impede investigar mudanças de renda, reserva e objetivo.",
+      "c": "Recolher informações atuais, aplicar os critérios de perfil sem indução e confrontar o resultado com riscos e restrições do produto.",
+      "d": "Atualizar a renda e a reserva, mas ajustar as respostas sobre perdas para enquadrar o produto escolhido e agilizar a análise."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-20-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Renda, dependentes, dívidas e finalidade mudaram de modo relevante. Nara deve atualizar os fatos, reavaliar a classificação e verificar a adequação da parcela agora necessária em dez meses, além de considerar tolerância e conhecimento.</p><p>A alternativa A conserva prazo que já não corresponde ao objetivo. A alternativa C usa uma mudança isolada para impor categoria, sem diagnóstico completo. A alternativa B adia a revisão apesar de alteração material e trata limite de valor como substituto da análise.</p><p>Regra de bolso: quando objetivo e finanças mudam, um perfil antigo não decide a nova recomendação.</p>",
+     "enunciado": "<p>Seis meses após receber classificação arrojada, Roberto volta à planejadora Nara, em Manaus. Na entrevista anterior, ele tinha duas fontes de renda, reserva formada e nenhuma despesa relevante com data próxima. Agora passou a sustentar um familiar, perdeu uma das fontes de renda e assumiu prestação mensal de financiamento. A parte da carteira que pretendia investir por oito anos será usada para quitar uma obrigação contratual em dez meses. Roberto insiste em manter a categoria antiga porque obteve ganhos recentes em ativos voláteis e quer repetir a operação antes de eventual queda de preços. Ele acrescenta que a classificação já consta do aplicativo, logo uma nova conversa seria mera formalidade. Roberto afirma que sua experiência recente com ganhos também comprova conhecimento e tolerância para repetir a posição. Avalie a resposta de Nara diante da alteração do caso.</p>",
+     "alternativas": {
+      "a": "Conservar o perfil arrojado e proteger somente a nova prestação, pois o horizonte original de oito anos continua no cadastro.",
+      "b": "Manter a categoria até o prazo formal de revisão, mas limitar o valor da operação para compensar a mudança de objetivos.",
+      "c": "Reduzir a categoria pelo fim de uma renda, sem investigar dependentes, obrigação próxima ou reação de Roberto a perdas.",
+      "d": "Atualizar as informações e reavaliar o perfil e a adequação da parcela com uso em dez meses antes de indicar outra operação."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-20-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Fase de vida não define categoria. Helena pode ter baixa capacidade para a parcela próxima apesar da idade; Vicente pode dispor de mais capacidade para a parcela distante, sem que isso estabeleça sua tolerância ou dispensa de conhecimento. A adequação é verificada por objetivo e produto.</p><p>A alternativa C transforma idade em perfil e tenta corrigir depois apenas no produto. A alternativa B inventa uma categoria média para substituir o diagnóstico. A alternativa D usa finalidade e prazo, mas conserva a fase de vida como fator decisivo.</p><p>Regra de bolso: classificação nasce dos dados reais do cliente e adequação depende também da finalidade do dinheiro.</p>",
+     "enunciado": "<p>Duas pessoas atendidas pelo assessor Ícaro, em Porto Alegre, contestam rótulos baseados na fase de vida. Helena tem 27 anos, sustenta dois dependentes, recebe por projetos e precisará de uma parte do dinheiro para uma obrigação em oito meses. Ela ouviu que sua idade deveria torná-la arrojada, apesar da margem financeira curta. Vicente está aposentado, recebe renda regular acima das despesas, mantém reserva e destinou a parcela discutida a um objetivo flexível e distante; ele rejeita a ideia de que aposentadoria implique automaticamente classificação conservadora. Helena e Vicente pedem que Ícaro diga se a idade basta para classificá-los ou se as demais informações produzem outra leitura. Compare os dois casos e indique como classificar e avaliar a adequação.</p>",
+     "alternativas": {
+      "a": "Apurar disposição, capacidade, objetivos e conhecimento de cada um e verificar o produto em relação ao recurso que será aplicado.",
+      "b": "Dar a ambos categoria moderada para neutralizar o efeito da idade, depois usar a renda para escolher a classe de investimentos.",
+      "c": "Classificar Helena como arrojada pela juventude e Vicente como conservador pela aposentadoria, ajustando apenas os produtos ao prazo.",
+      "d": "Separar as parcelas por prazo e liquidez, mas manter a categoria demográfica como referência determinante do risco admissível."
+     },
+     "gabarito": "a"
+    }
+   ],
+   "Investidor comum e qualificado: critérios e distinção do perfil de risco": [
+    {
+     "id": "cpror-cli-21-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Neste conteúdo, investidor comum é uma designação didática para quem não se enquadra nas categorias especiais de investidor qualificado ou profissional; os artigos 11 e 12 não trazem definição formal equivalente.</p><p>A alternativa B confunde categoria regulatória com perfil conservador. A alternativa A transforma um único critério patrimonial em definição geral e ignora outras hipóteses de qualificação. A alternativa D troca categoria regulatória por experiência e conhecimento.</p><p>Regra de bolso: comum, neste tópico, significa fora das categorias especiais, não um perfil de risco.</p>",
+     "enunciado": "<p>Uma cliente pergunta por que seu cadastro a descreve como investidora comum, embora essa expressão não apareça como categoria formal nos artigos estudados da Resolução CVM 30. Identifique o sentido usado no programa.</p>",
+     "alternativas": {
+      "a": "Pessoa natural com patrimônio total inferior a R$ 1 milhão, mesmo quando possui certificação aceita pela CVM.",
+      "b": "Pessoa que possui perfil conservador e acessa apenas investimentos protegidos contra oscilações de mercado.",
+      "c": "Pessoa que permanece fora das categorias regulatórias especiais de investidor qualificado ou profissional.",
+      "d": "Pessoa que realizou poucas operações e ainda não demonstrou experiência suficiente para receber recomendação."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-21-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O artigo 12 inclui os investidores profissionais entre os qualificados, mas existem investidores qualificados que não são profissionais. A relação funciona em um sentido, sem equivalência entre as categorias.</p><p>A alternativa A iguala categorias com requisitos distintos. A alternativa C inverte a relação e usa o termo escrito como passe para a categoria profissional. A alternativa D cria perda de condição pelo uso de recursos próprios, regra ausente na aula.</p><p>Regra de bolso: profissional está dentro de qualificado; qualificado não se torna profissional por consequência.</p>",
+     "enunciado": "<p>Ao revisar as categorias regulatórias, um assessor compara investidores profissionais e qualificados conforme o artigo 12 apresentado na aula. Indique a relação entre essas categorias.</p>",
+     "alternativas": {
+      "a": "As categorias são equivalentes, porque os mesmos requisitos patrimoniais e documentais se aplicam às duas.",
+      "b": "O investidor profissional também é qualificado, mas a condição de qualificado não implica ser profissional.",
+      "c": "O investidor qualificado também é profissional quando assina o termo, independentemente do critério usado.",
+      "d": "O investidor profissional deixa de ser qualificado quando opera recursos próprios fora de sua atividade habitual."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-21-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O critério patrimonial usa investimentos financeiros superiores a R$ 1 milhão e exige termo escrito. Vinícius possui R$ 650.000 nessa base; residência, veículo e valor empresarial não entram automaticamente no conceito apresentado.</p><p>A alternativa A usa patrimônio total no lugar de investimentos financeiros. A alternativa C repete a soma indevida e trata o termo como correção da base errada. A alternativa B mantém a categoria por ora, mas atribui ao valor atualizado do imóvel uma função que a regra não lhe dá.</p><p>Regra de bolso: para o critério patrimonial, some investimentos financeiros, não os bens do balanço pessoal.</p>",
+     "enunciado": "<p>Na agência de Recife, a gerente Paula recebe o balanço de Vinícius, pessoa natural que deseja acessar uma oferta destinada a investidores qualificados. Ele possui R$ 650.000 em aplicações financeiras, um imóvel de moradia avaliado em R$ 1,4 milhão, veículo de R$ 120.000 e participação empresarial estimada em R$ 500.000. Vinícius soma os quatro itens, conclui que seu patrimônio supera R$ 1 milhão e leva um termo já assinado para acelerar o cadastro. Ele não apresenta aprovação em exame técnico, certificação aceita pela CVM nem outra hipótese de categoria especial descrita na aula. Vinícius insiste que excluir a residência seria incoerente, pois ela é o bem de maior valor e consta de sua declaração patrimonial. Paula registra separadamente patrimônio total e investimentos financeiros antes de responder ao enquadramento solicitado. Analise a categoria de Vinícius segundo os dados apresentados.</p>",
+     "alternativas": {
+      "a": "Ele é qualificado porque o patrimônio total supera R$ 1 milhão e o termo supre a composição exigida para o critério patrimonial.",
+      "b": "Ele permanece comum apenas até atualizar o valor do imóvel, que depois pode substituir as aplicações financeiras no critério.",
+      "c": "Ele é qualificado porque imóvel e participação empresarial podem completar o limite quando existe termo escrito.",
+      "d": "Ele permanece comum no sentido didático, pois os investimentos financeiros informados não superam R$ 1 milhão."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-21-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A via patrimonial reúne dois requisitos: investimentos financeiros em valor superior a R$ 1 milhão e atestado escrito em termo próprio. Alice tem exatamente o limite, não valor superior, e o termo ainda não foi assinado.</p><p>A alternativa C lê superior como igual e posterioriza o termo. A alternativa B contabiliza transferência não realizada e também desloca o documento para depois. A alternativa D reconhece a falta do termo, mas considera suficiente um valor que não supera o limite.</p><p>Regra de bolso: acima de R$ 1 milhão e termo escrito são requisitos cumulativos do critério patrimonial.</p>",
+     "enunciado": "<p>Durante uma atualização cadastral em Curitiba, Alice informa possuir exatamente R$ 1.000.000 em investimentos financeiros. Ela já leu o termo de investidora qualificada, mas prefere assiná-lo somente depois de contratar o produto reservado à categoria, pois considera a assinatura uma confirmação posterior da operação. Seu companheiro mantém R$ 180.000 em conta individual e aceita transferir o valor para Alice se o sistema exigir saldo maior, mas a transferência ainda não ocorreu. Alice não apresenta certificação ou condição profissional prevista na aula. Ela argumenta que a expressão superior a R$ 1 milhão deveria ser lida como igual ou superior e que o cadastro pode considerar a intenção de receber o dinheiro. O especialista Caio usa o saldo existente na data e o estado documental informado para examinar a solicitação. Indique o resultado do enquadramento patrimonial neste momento.</p>",
+     "alternativas": {
+      "a": "Alice ainda não se enquadra: o valor precisa superar R$ 1 milhão e a condição deve ser atestada por escrito em termo próprio.",
+      "b": "Alice se enquadra pela soma do saldo atual com a transferência prometida, desde que assine o termo no dia da liquidação.",
+      "c": "Alice se enquadra porque exatamente R$ 1 milhão atende ao limite e a assinatura pode ocorrer depois da primeira aplicação.",
+      "d": "Alice ainda não se enquadra apenas pela falta do termo, pois exatamente R$ 1 milhão já cumpre a exigência patrimonial."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-21-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Não é qualquer curso ou certificado. A via alcança pessoas naturais aprovadas em exames técnicos ou com certificações aceitas pela CVM como requisito para os registros profissionais indicados e vale em relação aos próprios recursos.</p><p>A alternativa D considera suficiente um certificado sem verificar sua aceitação. A alternativa B substitui o requisito regulatório pelo conteúdo geral do curso. A alternativa C mistura termo do critério patrimonial com formação genérica para criar uma hipótese ausente.</p><p>Regra de bolso: na via técnica, confira qual exame ou certificação a CVM aceita e o escopo dos recursos próprios.</p>",
+     "enunciado": "<p>O consultor Henrique atende Mônica, em Salvador, que possui R$ 320.000 em investimentos financeiros e deseja ser reconhecida como qualificada pela via de certificação. Ela concluiu um curso livre sobre mercado de capitais, recebeu certificado da escola e opera apenas os próprios recursos. Mônica trabalha em área administrativa sem atividade ligada à análise ou distribuição de investimentos. Ao preencher o cadastro, afirma que qualquer certificado de mercado demonstra conhecimento superior ao critério patrimonial e pede que o documento seja aceito. O curso não aparece entre exames de qualificação técnica nem entre certificações aprovadas pela CVM como requisito para registros profissionais mencionados na aula. Mônica não apresenta outra hipótese de enquadramento especial. Henrique confere a natureza do documento e o escopo em que a via de certificação pode produzir a condição regulatória. Analise a solicitação de Mônica.</p>",
+     "alternativas": {
+      "a": "O curso livre não basta; a via exige exame ou certificação aceita pela CVM para os registros profissionais indicados, quanto a recursos próprios.",
+      "b": "O certificado basta se o curso abordar riscos, ainda que não seja aceito pela CVM para um dos registros profissionais citados.",
+      "c": "A qualificação depende apenas de Mônica assinar termo próprio, pois formação de mercado e declaração escrita substituem o exame aceito.",
+      "d": "O certificado basta porque a via técnica substitui o valor patrimonial quando a pessoa opera exclusivamente recursos próprios."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-21-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Sirlene atende ao critério regulatório, mas categoria não equivale a perfil nem comprova conhecimento do produto. O uso em dez meses, a baixa tolerância e a falta de experiência afetam a adequação da estrutura.</p><p>A alternativa B transforma termo em perfil arrojado e conhecimento. A alternativa A usa acesso regulatório para apagar objetivo e experiência. A alternativa D confunde a finalidade futura de uma parcela com perda automática da condição regularmente obtida.</p><p>Regra de bolso: categoria pode abrir acesso; perfil e contexto decidem se a recomendação cabe ao cliente.</p>",
+     "enunciado": "<p>Em Belém, o assessor Hugo atende Sirlene, empresária que assinou o termo de investidora qualificada após apresentar R$ 1,3 milhão em investimentos financeiros. Ela quer aplicar R$ 900.000 em uma estrutura complexa divulgada num evento e informa que usará o mesmo valor para comprar um galpão dentro de dez meses. Sirlene relata baixa tolerância a oscilações, desconhece o funcionamento de produto semelhante e afirma que sua categoria comprova preparo para qualquer estrutura disponível. O enquadramento patrimonial e documental está regular, mas o galpão tem contrato em negociação e a data pretendida orienta o planejamento do caixa. Sirlene pede execução rápida para aproveitar uma condição comercial e considera desnecessário responder a novas perguntas sobre experiência. Analise a relação entre a categoria regulatória e a adequação da estrutura ao caso.</p>",
+     "alternativas": {
+      "a": "A categoria autoriza a estrutura para os R$ 900.000, pois o limite patrimonial substitui objetivo e experiência na operação.",
+      "b": "A assinatura do termo converte Sirlene em arrojada e comprova conhecimento, restando verificar apenas o prazo de liquidação.",
+      "c": "A categoria está regular, mas finalidade próxima, tolerância e desconhecimento da estrutura tornam necessária análise própria de adequação.",
+      "d": "A compra do galpão cancela a condição de qualificada, porque recurso com finalidade próxima deixa de ser investimento financeiro."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-21-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. Categoria regulatória e perfil respondem a perguntas distintas. Laura pode ser qualificada e conservadora; Rafael pode ser comum e arrojado. A recomendação respeita o acesso regulatório e testa adequação por objetivo, situação financeira, conhecimento e preferências.</p><p>A alternativa A usa categoria como sinônimo de coragem. A alternativa C apaga as duas análises diante de prazo longo. A alternativa D transforma perfil em via de qualificação e condiciona uma categoria já atendida à aceitação de perdas.</p><p>Regra de bolso: comum ou qualificado trata de categoria; conservador ou arrojado trata do perfil apurado.</p>",
+     "enunciado": "<p>Uma mesa de atendimento em Goiânia revisa dois cadastros antes de recomendar produtos. Laura possui R$ 1,4 milhão em investimentos financeiros, assinou o termo próprio e foi classificada como conservadora após relatar baixa tolerância a perdas e necessidade de liquidez. Rafael possui R$ 480.000 em investimentos financeiros, não atende a outra hipótese especial e permanece comum no sentido usado pelo programa; seu perfil é arrojado, ele tem experiência com produtos disponíveis ao público e destina a parcela analisada a uma meta flexível de longo prazo. Um analista sugere oferecer risco elevado a Laura por causa da categoria e impedir Rafael de receber recomendações arrojadas por ser comum. Outro propõe comparar cada produto com objetivo, finanças, conhecimento e preferências, respeitando também as regras de acesso. Os dois clientes perguntam como categoria e perfil influenciam decisões diferentes. Avalie a proposta compatível com as informações apresentadas.</p>",
+     "alternativas": {
+      "a": "Laura recebe produtos arrojados pela qualificação, enquanto Rafael recebe produtos conservadores porque a categoria comum limita seu perfil.",
+      "b": "Laura pode ter perfil conservador e Rafael perfil arrojado; a recomendação confronta cada perfil e objetivo com o produto acessível.",
+      "c": "Os dois recebem a mesma recomendação quando o prazo é longo, pois categoria e perfil deixam de importar em objetivos flexíveis.",
+      "d": "Rafael passa a qualificado pelo perfil arrojado, enquanto Laura mantém a categoria apenas se aceitar produtos com perdas maiores."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-21-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A aula alerta que não se pode afirmar genericamente que investidor qualificado está dispensado. Entre as exceções, o dever é mantido para pessoas naturais qualificadas pelo volume de investimentos ou por exame e certificação.</p><p>A alternativa A aplica uma dispensa genérica justamente à hipótese ressalvada. A alternativa B inventa dispensa para a primeira ordem. A alternativa C preserva apenas objetivo e usa a categoria para eliminar as demais dimensões da adequação.</p><p>Regra de bolso: antes de invocar dispensa, confira a categoria, a pessoa e as exceções do artigo 10.</p>",
+     "enunciado": "<p>O gerente Daniel, em Porto Alegre, recebe uma ordem de Elisa, pessoa natural reconhecida como investidora qualificada por possuir investimentos financeiros acima de R$ 1 milhão e assinar o termo próprio. Ela quer contratar uma categoria de produto que ainda não utilizou e sustenta que investidores qualificados ficam dispensados da verificação de adequação. O cadastro mostra objetivo com data próxima e ausência de experiência com a estrutura. Um colega cita genericamente o artigo 10 para executar a ordem sem examinar perfil; outro lembra que as dispensas contêm exceções e que a aula mantém o dever para pessoas naturais qualificadas pelo volume de investimentos ou por exame e certificação. Elisa pede que Daniel trate sua iniciativa e sua categoria como suficientes para afastar as perguntas. A instituição ainda não analisou se a operação combina com objetivo, situação financeira, conhecimento e preferências. Indique o procedimento coerente com a exceção descrita na aula.</p>",
+     "alternativas": {
+      "a": "Dispensar a verificação porque o termo patrimonial retira as pessoas naturais qualificadas do alcance do suitability.",
+      "b": "Dispensar a verificação apenas nesta primeira ordem, registrando objetivo e conhecimento para operações futuras da categoria.",
+      "c": "Manter somente a análise de objetivo, porque a categoria substitui situação financeira, conhecimento e preferência por risco.",
+      "d": "Manter a verificação de adequação, pois a dispensa genérica não alcança essa pessoa natural qualificada pelo volume de investimentos."
+     },
+     "gabarito": "d"
+    }
+   ],
+   "Investidor profissional: critérios patrimoniais e profissionais": [
+    {
+     "id": "cpror-cli-22-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. O artigo 12 inclui os investidores profissionais entre os qualificados, mas há outras hipóteses de investidor qualificado que não produzem a categoria profissional.</p><p>A alternativa B inverte a relação e acrescenta condições insuficientes para ser profissional. A alternativa A iguala categorias com hipóteses distintas. A alternativa D trata uma relação de inclusão como substituição entre categorias.</p><p>Regra de bolso: profissional está dentro de qualificado, mas qualificado não implica profissional.</p>",
+     "enunciado": "<p>Em uma capacitação interna, a gerente apresenta a relação entre as categorias regulatórias de investidor profissional e qualificado. Identifique a afirmação compatível com os artigos estudados da Resolução CVM 30.</p>",
+     "alternativas": {
+      "a": "As duas categorias possuem os mesmos critérios, variando somente o nome usado pela instituição financeira.",
+      "b": "Investidor qualificado também é profissional quando investe recursos próprios e assina termo específico.",
+      "c": "Investidor profissional também é qualificado, mas existem investidores qualificados que não são profissionais.",
+      "d": "A categoria profissional substitui a qualificada quando o cliente recebe autorização para acessar oferta restrita."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-22-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A aula inclui instituições financeiras autorizadas pelo Banco Central, seguradoras, fundos de investimento e investidores não residentes entre as hipóteses do artigo 11.</p><p>A alternativa A reúne atividades que não produzem a categoria pela simples natureza. A alternativa B mistura patrimônio sem critério, clube sem gestor autorizado e formação genérica. A alternativa D substitui hipóteses normativas por perfil e disponibilidade financeira.</p><p>Regra de bolso: algumas instituições são profissionais por hipótese expressa, sem depender da conta patrimonial da pessoa natural.</p>",
+     "enunciado": "<p>Uma analista revisa exemplos de investidores profissionais por natureza institucional, sem aplicar o critério patrimonial de uma pessoa comum. Indique um conjunto formado por hipóteses expressamente citadas na aula.</p>",
+     "alternativas": {
+      "a": "Empresas comerciais, associações de investidores e escritórios financeiros que prestam serviços de consultoria empresarial.",
+      "b": "Sociedades empresárias com patrimônio elevado, clubes administrados por cotista comum e pessoas com curso livre de mercado.",
+      "c": "Instituições financeiras autorizadas pelo Banco Central, seguradoras, fundos de investimento e investidores não residentes.",
+      "d": "Investidores arrojados, entidades com reservas financeiras e pessoas jurídicas que aceitam menor proteção regulatória."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-22-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O critério usa investimentos financeiros superiores a R$ 10 milhões e termo próprio. Otávio tem R$ 7,8 milhões nessa base; o documento não permite somar residência e participação empresarial.</p><p>A alternativa A substitui investimentos financeiros por patrimônio total. A alternativa C repete a soma de bens estranhos à base do dispositivo. A alternativa D exclui um item pela liquidez, mas admite indevidamente a residência no critério.</p><p>Regra de bolso: no critério patrimonial do profissional, conte investimentos financeiros e confira o termo.</p>",
+     "enunciado": "<p>Na reunião de cadastro em Recife, Otávio apresenta R$ 7,8 milhões em investimentos financeiros, uma residência avaliada em R$ 4 milhões e participação empresarial estimada em R$ 2 milhões. Ele assinou o termo de investidor profissional e soma os três grupos para declarar patrimônio de R$ 13,8 milhões. Otávio não pertence a instituição regulada, não exerce uma das funções autorizadas pela CVM citadas na aula e não informa outra hipótese do artigo 11. Ele argumenta que o imóvel oferece segurança financeira superior à de algumas aplicações e, por isso, deveria completar o limite. A especialista Renata mantém no relatório a separação entre investimentos financeiros e os demais itens do balanço. O pedido envolve exclusivamente o enquadramento pela hipótese patrimonial. Analise a categoria de Otávio com os dados apresentados.</p>",
+     "alternativas": {
+      "a": "Ele se enquadra porque o patrimônio total supera R$ 10 milhões e o termo confirma que aceita o tratamento regulatório.",
+      "b": "Ele não se enquadra nessa hipótese, pois os investimentos financeiros não superam R$ 10 milhões, apesar do termo assinado.",
+      "c": "Ele se enquadra porque residência e participação empresarial complementam os investimentos quando possuem valor documentado.",
+      "d": "Ele não se enquadra apenas porque a participação empresarial carece de liquidez, mas a residência poderia integrar a base."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-22-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Superior a R$ 10 milhões exclui o saldo exatamente igual ao limite. Com R$ 10,4 milhões e termo, a hipótese é atendida; aos R$ 9,8 milhões, ela deixa de ser atendida, sem compensação pelos imóveis.</p><p>A alternativa C transforma o termo em proteção contra a queda do saldo. A alternativa B lê superior como igual ou superior. A alternativa D acerta o momento dos R$ 10,4 milhões, mas soma imóveis quando o saldo financeiro diminui.</p><p>Regra de bolso: compare o investimento financeiro da data com o limite; exatamente R$ 10 milhões não é acima de R$ 10 milhões.</p>",
+     "enunciado": "<p>O consultor Bruno atualiza o cadastro de Lígia, em Curitiba. No primeiro extrato, ela possui exatamente R$ 10 milhões em investimentos financeiros e já assinou o termo próprio. Lígia considera que atingir o número impresso na norma equivale a superá-lo. Uma semana depois, parte da carteira vence e o saldo passa a R$ 10,4 milhões; nessa data, ela pede nova análise e mantém o termo válido no cadastro. Meses mais tarde, após resgates, os investimentos caem para R$ 9,8 milhões, enquanto o valor de seus imóveis aumenta. Lígia não apresenta outra hipótese de enquadramento profissional. Bruno registra os três momentos sem acrescentar os imóveis à base financeira. Compare o atendimento do critério patrimonial em cada fotografia.</p>",
+     "alternativas": {
+      "a": "A hipótese é atendida apenas com R$ 10,4 milhões; exatamente R$ 10 milhões e R$ 9,8 milhões não superam o limite.",
+      "b": "A hipótese é atendida com R$ 10 milhões e R$ 10,4 milhões, mas deixa de ser atendida quando o saldo cai a R$ 9,8 milhões.",
+      "c": "A hipótese é atendida nos três momentos, pois o termo escrito preserva a categoria apesar das alterações do saldo financeiro.",
+      "d": "A hipótese é atendida com R$ 10,4 milhões e pode continuar aos R$ 9,8 milhões se a valorização dos imóveis cobrir a diferença."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-22-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Trabalhar em banco ou departamento financeiro não cria automaticamente a categoria pessoal. A hipótese profissional exige estar em uma das funções previstas e possuir a autorização da CVM correspondente.</p><p>A alternativa A transfere indevidamente a condição institucional ao empregado. A alternativa C troca função autorizada por tempo de trabalho e cursos. A alternativa D combina termo e vínculo bancário para criar hipótese inexistente.</p><p>Regra de bolso: emprego no mercado não basta; confira função prevista e autorização da CVM.</p>",
+     "enunciado": "<p>Durante o atendimento em Salvador, Marcelo informa trabalhar há nove anos no departamento financeiro de um banco. Ele prepara relatórios gerenciais internos, concluiu cursos de investimentos e mantém R$ 750.000 em aplicações próprias. Marcelo não atua como assessor de investimento, administrador de carteira, analista ou consultor de valores mobiliários autorizado pela CVM. Ainda assim, pede enquadramento como profissional por ocupação e afirma que qualquer empregado experiente de instituição financeira pertence à categoria. A gerente Elisa consulta o cargo, a autorização e o alcance das hipóteses pessoais do artigo 11. O banco em que Marcelo trabalha é instituição profissional por sua natureza regulada, mas o cadastro solicitado pertence a Marcelo como pessoa natural. Ele também não satisfaz o critério patrimonial nem apresenta outra condição expressa. Analise o pedido de enquadramento individual.</p>",
+     "alternativas": {
+      "a": "Marcelo se enquadra porque o vínculo com instituição financeira transfere ao empregado a categoria regulatória do empregador.",
+      "b": "Marcelo não se enquadra pela ocupação descrita, pois trabalhar no mercado não substitui função prevista e autorização exigida.",
+      "c": "Marcelo se enquadra pela experiência de nove anos e pelos cursos, ainda que sua função não exija autorização da CVM.",
+      "d": "Marcelo não se enquadra apenas pelo saldo, mas pode usar o termo profissional para completar o requisito da função bancária."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-22-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A função autorizada permite o enquadramento da pessoa natural quanto aos próprios recursos. Ela não transforma dinheiro de clientes ou familiares em recursos próprios nem estende a condição a outra titular.</p><p>A alternativa B transfere a categoria pela influência sobre a decisão. A alternativa C usa a titularidade da ordem para dispensar os requisitos da irmã. A alternativa A soma patrimônios distintos e introduz termo incapaz de substituir a hipótese profissional ou o limite de R$ 10 milhões.</p><p>Regra de bolso: na hipótese da função autorizada, a categoria acompanha a pessoa e seus próprios recursos.</p>",
+     "enunciado": "<p>Helena atua como analista de valores mobiliários autorizada pela CVM e possui R$ 600.000 em investimentos próprios. Em reunião com o assessor Caio, em Belém, ela pede o enquadramento profissional para aplicar parte desse dinheiro. Também administra informalmente R$ 200.000 pertencentes à irmã e sugere reunir os dois valores numa ordem emitida em nome da familiar, afirmando que sua autorização técnica acompanha qualquer recurso cuja decisão passe por ela. A irmã não possui autorização, não atende ao limite patrimonial e não informa outra hipótese do artigo 11. Helena explica corretamente os riscos do investimento, mas quer usar sua condição pessoal para ampliar o acesso da familiar. O cadastro mantém separados titularidade, origem dos recursos e pessoa que atende aos requisitos profissionais. Analise o alcance da hipótese ligada à autorização de Helena.</p>",
+     "alternativas": {
+      "a": "Helena só se enquadra se somar seus R$ 600.000 aos R$ 200.000 da irmã e ambas assinarem termo de investidor profissional.",
+      "b": "Helena e a irmã se enquadram porque a análise da profissional autorizada abrange recursos cuja decisão de investimento ela acompanha.",
+      "c": "Apenas a irmã se enquadra, pois a ordem em seu nome prevalece sobre o limite patrimonial e sobre a autorização de Helena.",
+      "d": "Helena pode enquadrar-se quanto aos recursos próprios, mas sua autorização não transfere a condição aos recursos ou ao cadastro da irmã."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-22-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Guilherme atende ao critério regulatório, mas a categoria não define perfil nem comprova conhecimento. A finalidade em sete meses, a baixa tolerância e a falta de experiência precisam ser confrontadas com a estratégia para a parcela de R$ 8 milhões.</p><p>A alternativa B transforma categoria em perfil e adequação automática. A alternativa C confunde objetivo próximo com perda do enquadramento já atendido. A alternativa D atribui ao termo prova de conhecimento e desloca a limitação para a parcela errada.</p><p>Regra de bolso: profissional é categoria regulatória; prazo, capacidade, tolerância e conhecimento definem adequação.</p>",
+     "enunciado": "<p>Guilherme apresenta ao planejador Iuri, em Goiânia, R$ 12 milhões em investimentos financeiros, R$ 4 milhões em imóveis e o termo próprio já assinado. O enquadramento patrimonial como investidor profissional está regular. Ele pretende usar R$ 8 milhões para comprar uma participação empresarial dentro de sete meses, declara baixa tolerância a oscilações e desconhece a estratégia complexa oferecida para esse valor. Guilherme sustenta que a categoria profissional comprova perfil arrojado, experiência suficiente e capacidade para suportar uma queda antes da compra. O restante dos recursos não possui uso próximo, mas ainda não foi separado no planejamento. Iuri dispõe da finalidade, do prazo e das respostas de risco, além da documentação da categoria. Guilherme aceita avaliar as parcelas separadamente, desde que sua condição regulatória seja preservada. Analise a relação entre o enquadramento e a adequação da estratégia.</p>",
+     "alternativas": {
+      "a": "A categoria permanece regular, mas a parcela de R$ 8 milhões exige análise de prazo, tolerância e conhecimento antes da recomendação.",
+      "b": "A categoria profissional define perfil arrojado e torna a estratégia compatível, restando confirmar o custo de saída em sete meses.",
+      "c": "A necessidade próxima cancela a categoria profissional, que só pode ser mantida quando os recursos não têm finalidade definida.",
+      "d": "O termo comprova conhecimento da estratégia, mas a baixa tolerância limita apenas a parcela de R$ 4 milhões mantida sem objetivo."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-22-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A aula ressalta que a dispensa não pode ser generalizada e mantém o dever para a pessoa natural enquadrada como profissional pelo volume de investimentos do artigo 11, inciso IV.</p><p>A alternativa A usa termo e categoria para apagar o perfil. A alternativa C inventa dispensa para a primeira operação. A alternativa B preserva apenas conhecimento e trata volume financeiro como prova de objetivo e situação financeira.</p><p>Regra de bolso: ao aplicar dispensa, confira a hipótese específica e as ressalvas do artigo 10.</p>",
+     "enunciado": "<p>O gerente Raul, em Porto Alegre, recebe uma ordem de Teresa, pessoa natural enquadrada como investidora profissional pelo critério de volume do artigo 11, inciso IV. Ela mantém investimentos financeiros acima de R$ 10 milhões, assinou o termo e solicita uma estratégia que ainda não utilizou. Teresa afirma que a condição profissional dispensa a instituição de verificar adequação e pede execução sem atualizar objetivo, situação financeira ou conhecimento. O cadastro anterior indica recursos com uso próximo, mas não informa se a finalidade continua válida. Um colega cita de forma genérica as dispensas do artigo 10; outro observa que a aula ressalva justamente a pessoa natural profissional pelo volume de investimentos. Teresa aceita confirmar a origem de sua categoria, porém insiste que o termo elimina perguntas adicionais. Indique o tratamento do dever de suitability na hipótese apresentada.</p>",
+     "alternativas": {
+      "a": "A verificação é dispensada porque o termo patrimonial produz categoria profissional e substitui as informações do perfil.",
+      "b": "A verificação abrange apenas conhecimento, porque objetivo e situação financeira ficam comprovados pelo volume de investimentos.",
+      "c": "A verificação é dispensada na primeira operação da estratégia e passa a valer depois que Teresa formar histórico comparável.",
+      "d": "A verificação é mantida, pois a ressalva alcança a pessoa natural profissional enquadrada pelo volume do artigo 11, inciso IV."
+     },
+     "gabarito": "d"
+    }
+   ],
+   "Ciclo de vida: acumulação e construção do patrimônio": [
+    {
+     "id": "cpror-cli-23-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Na acumulação, aportes e construção patrimonial predominam, enquanto objetivos próximos e distantes disputam a capacidade de poupança. Idade ajuda a contextualizar, mas não define sozinha a fase ou a estratégia.</p><p>A alternativa B transforma juventude em autorização para risco. A alternativa C reduz a acumulação à rentabilidade e ignora aportes e proteção. A alternativa A observa retiradas, mas desconsidera um fluxo de caixa comprometido por dívida.</p><p>Regra de bolso: acumulação é fase de construir patrimônio com aportes, não sinônimo de cliente jovem e arrojado.</p>",
+     "enunciado": "<p>Ao apresentar a fase de acumulação do ciclo de vida, uma planejadora evita classificá-la apenas pela idade da pessoa. Identifique a característica que define essa fase no plano financeiro.</p>",
+     "alternativas": {
+      "a": "A ausência de retiradas da carteira, ainda que o cliente dependa de crédito para despesas essenciais.",
+      "b": "A juventude do cliente, que permite assumir risco elevado mesmo quando há despesas próximas.",
+      "c": "A busca de rentabilidade acima da inflação, independentemente da capacidade recorrente de poupar.",
+      "d": "A predominância de aportes e da construção do patrimônio para objetivos com prazos diferentes."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-23-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A proteção existe para cobrir imprevistos e reduzir o risco de interromper objetivos ou vender ativos de longo prazo em momento desfavorável; por isso privilegia acesso, liquidez e baixa oscilação.</p><p>A alternativa A descreve prioridades possíveis de metas longas. A alternativa B troca proteção por concentração. A alternativa D reúne finalidades e prazos distintos sob o horizonte previdenciário.</p><p>Regra de bolso: a primeira camada protege o plano quando a renda ou as despesas surpreendem.</p>",
+     "enunciado": "<p>Um cliente organiza o plano de acumulação em camadas de proteção, metas próximas e metas longas. Indique o critério dominante da camada de proteção.</p>",
+     "alternativas": {
+      "a": "Retorno potencial e prazo longo, para ampliar o patrimônio antes das demais metas.",
+      "b": "Concentração no investimento conhecido pelo cliente, para simplificar o acompanhamento.",
+      "c": "Liquidez, baixa oscilação e acesso, para cobrir imprevistos e evitar interrupção do plano.",
+      "d": "Data final da aposentadoria, usada como horizonte comum para reserva e despesas programadas."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-23-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Renato está acumulando, mas renda parcialmente variável, dependente, margem estreita, falta de reserva e meta próxima limitam a exposição. A estratégia protege o fluxo, separa o veículo e preserva para o longo prazo somente o valor sustentável.</p><p>A alternativa A usa aposentadoria distante para apagar a vulnerabilidade atual. A alternativa C reúne metas incompatíveis e deixa a idade decidir a carteira. A alternativa D condiciona proteção a renda futura e depende de retorno incerto para cobrir falhas no fluxo.</p><p>Regra de bolso: na acumulação, proteja o aporte contra imprevistos antes de aumentar sua oscilação.</p>",
+     "enunciado": "<p>Aos 28 anos, Renato procura a assessora Paula, em Recife, para começar a investir. Ele recebe R$ 8.500 líquidos, sustenta uma filha, paga R$ 6.900 entre despesas essenciais e prestações e ainda não formou reserva. Parte da renda vem de contratos renovados a cada trimestre. Renato pretende usar R$ 24.000 na entrada de um veículo em dezoito meses e quer iniciar a aposentadoria para daqui a trinta e cinco anos. Um colega lhe disse que clientes jovens deveriam aplicar a sobra inteira em ativos de forte oscilação, pois teriam tempo para recuperar perdas. Renato aceita a ideia, embora nunca tenha acompanhado uma carteira durante queda relevante e não possua outra fonte para o veículo. Paula registra idade, fluxo mensal, dependente, estabilidade da renda, dívida, objetivos e experiência antes de organizar os primeiros aportes. Indique a prioridade coerente com a fase de acumulação de Renato.</p>",
+     "alternativas": {
+      "a": "Direcionar a sobra à aposentadoria volátil, pois o horizonte de trinta e cinco anos domina as demais necessidades do cliente.",
+      "b": "Formar proteção, separar a meta do veículo e destinar ao longo prazo apenas o aporte compatível com fluxo e tolerância.",
+      "c": "Tratar os R$ 24.000 e a aposentadoria como uma carteira única, usando a idade para escolher a exposição a oscilações.",
+      "d": "Adiar a reserva até o próximo aumento de renda e usar o rendimento da carteira para cobrir meses sem renovação de contrato."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-23-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Capital humano ajuda a analisar a capacidade de gerar renda, mas não é dinheiro disponível para uma emergência ou meta próxima. Concentração de clientes e atrasos ampliam a necessidade de liquidez antes de assumir carência e aporte elevado.</p><p>A alternativa A transforma renda futura em estoque patrimonial. A alternativa C toma contratos ainda não obtidos como proteção do fluxo. A alternativa D usa capacidade de trabalho como garantia imediata e desloca o pouco caixa para outro objetivo.</p><p>Regra de bolso: renda futura sustenta projeções; reserva disponível paga o imprevisto de hoje.</p>",
+     "enunciado": "<p>Mariana, profissional autônoma de Goiânia, apresenta ao planejador Caio uma projeção de renda crescente pelos próximos vinte anos. Hoje recebe por projetos de três clientes, mantém apenas R$ 5.000 em recursos acessíveis e tem despesas essenciais de R$ 7.000 por mês. Mariana chama o valor presente de sua capacidade futura de trabalho de patrimônio disponível e quer assumir um compromisso elevado de aporte, com carência longa, porque espera conquistar novos contratos. Nos últimos seis meses, um dos três clientes respondeu por metade da receita e já adiou pagamentos. Ela também planeja uma mudança de residência dentro de dois anos. Caio mantém separadas a capacidade de gerar renda, o caixa já disponível e as obrigações com data conhecida. Mariana insiste que a projeção profissional garante os aportes mesmo em meses fracos. Analise o papel do capital humano e da liquidez no plano apresentado.</p>",
+     "alternativas": {
+      "a": "O capital humano equivale a patrimônio líquido e permite assumir carência quando a carreira possui horizonte longo de crescimento.",
+      "b": "A renda futura esperada pode orientar projeções, mas não substitui reserva disponível nem garante aportes diante de concentração e atraso.",
+      "c": "A projeção de novos contratos elimina a necessidade de liquidez, desde que Mariana mantenha o compromisso mensal de contribuição.",
+      "d": "A mudança em dois anos pode usar o capital humano como garantia, deixando os R$ 5.000 livres para uma meta de prazo maior."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-23-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Com renda de R$ 15.000 e despesas de R$ 9.000, a folga sobe de R$ 3.000 para R$ 6.000. A revisão pode destinar parte do aumento à acumulação, acelerar metas ou reduzir esforço futuro, sem transformar o ganho inteiro em padrão de vida.</p><p>A alternativa C confunde renda maior com patrimônio já construído. A alternativa B amplia a aposentadoria eliminando outra meta sem analisar prioridade e flexibilidade. A alternativa D poupa o aumento, mas dispensa a revisão que define quanto cabe a cada objetivo.</p><p>Regra de bolso: quando a renda cresce, revise a taxa de poupança antes de elevar o padrão de consumo.</p>",
+     "enunciado": "<p>Na revisão anual de Beatriz, em Salvador, a consultora Luana registra renda líquida de R$ 12.000 e despesas recorrentes de R$ 9.000, incluindo prestações. Beatriz mantém reserva compatível com o diagnóstico e divide a sobra de R$ 3.000 entre uma viagem em dois anos e a aposentadoria em vinte e cinco anos. Após promoção, a renda sobe para R$ 15.000, enquanto as despesas permanecem iguais. Beatriz pretende incorporar os R$ 3.000 adicionais ao padrão de consumo e conservar os aportes anteriores, pois acredita que a promoção já melhora sua situação futura. A viagem e a aposentadoria mantêm valores e datas, e ela aceita rever a distribuição da nova folga sem alterar a proteção existente. Beatriz pergunta quanto a promoção altera o dinheiro disponível por mês e como isso afeta suas duas metas. Indique a decisão coerente com a construção patrimonial.</p>",
+     "alternativas": {
+      "a": "Reavaliar metas e direcionar parte da folga adicional aos aportes, evitando converter automaticamente a promoção em despesa.",
+      "b": "Cancelar a viagem e destinar R$ 6.000 à aposentadoria, porque a meta longa prevalece na fase de acumulação.",
+      "c": "Preservar a poupança de R$ 3.000 e incorporar o aumento ao consumo, pois a promoção já representa crescimento do patrimônio.",
+      "d": "Manter os aportes e aplicar os R$ 3.000 adicionais sem revisar objetivos, pois renda maior amplia a capacidade na mesma proporção."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-23-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Diversificação reduz concentração por emissor, mercado e fonte de retorno, o que é especialmente relevante quando a renda já depende do setor. Ela não elimina a possibilidade de perda nem garante capital.</p><p>A alternativa B converte redução de concentração em garantia. A alternativa A usa familiaridade e prazo para ampliar a exposição ao mesmo risco da renda. A alternativa D limita a diversificação à meta próxima e presume recuperação no horizonte longo.</p><p>Regra de bolso: diversificar reduz dependências; não transforma risco em certeza de ganho.</p>",
+     "enunciado": "<p>Um casal atendido por Rafael, em Belém, já possui reserva e separa aportes para a entrada de um imóvel em quatro anos e independência financeira em vinte anos. Para a meta longa, eles querem concentrar os recursos em ações de uma única empresa do setor em que um dos dois trabalha, alegando conhecer o negócio e ter tempo para recuperar eventual queda. A renda familiar também depende majoritariamente desse mesmo setor. Rafael apresenta alternativas com diferentes emissores, mercados e fontes de retorno, mas o casal afirma que diversificação impede perdas e, portanto, deveria produzir garantia de capital. Ao mesmo tempo, teme que distribuir a carteira reduza o ganho caso a empresa escolhida suba. O valor do imóvel permanece separado e não será usado nessa decisão. Analise o papel e o limite da diversificação na camada de longo prazo.</p>",
+     "alternativas": {
+      "a": "Concentrar é coerente porque conhecimento do setor e horizonte longo compensam a dependência da renda familiar pela mesma empresa.",
+      "b": "Diversificar elimina o risco de perda no prazo de vinte anos, desde que a entrada do imóvel permaneça em outra camada.",
+      "c": "Diversificar reduz dependência de uma empresa, setor ou fonte de retorno, mas a carteira continua sujeita a perdas.",
+      "d": "Distribuir recursos só faz sentido na meta próxima, pois a recuperação de preços no longo prazo torna a concentração suficiente."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-23-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. A reserva de R$ 14.000 cobre apenas dois meses de despesas essenciais de R$ 7.000, diante de renda variável. A meta imobiliária é próxima e pouco flexível; a aposentadoria admite análise de prazo maior, dentro da tolerância ainda pouco testada.</p><p>A alternativa B substitui proteção por dívida e usa idade para justificar risco. A alternativa C expõe reserva e entrada à mesma oscilação que poderiam forçar venda. A alternativa D impõe prioridade universal à aposentadoria e ignora a decisão concreta da cliente sobre o imóvel.</p><p>Regra de bolso: proteção, meta próxima e meta longa recebem riscos diferentes, mesmo para a mesma pessoa.</p>",
+     "enunciado": "<p>Larissa leva seu plano a Ítalo, em Porto Alegre. Aos 31 anos, recebe R$ 11.000 líquidos, gasta R$ 7.000 em despesas essenciais e mantém R$ 14.000 de reserva. A renda depende de comissões, e os meses fracos reduzem sua sobra. Ela quer comprar um imóvel em três anos e formar renda para aposentadoria em trinta anos. Larissa nunca enfrentou queda relevante na carteira, mas pretende aplicar reserva, entrada e aposentadoria numa estratégia de forte oscilação porque sua idade permitiria recuperar perdas. Em seguida, pede empréstimo pré-aprovado como fonte para emergências, caso um mês de comissão baixa coincida com queda do mercado. A entrada do imóvel não possui outra fonte e a data tem pouca flexibilidade. Larissa pergunta se uma única carteira pode atender aos três destinos e insiste que separar os recursos reduziria o retorno esperado. Avalie a estrutura inicial do plano de Larissa.</p>",
+     "alternativas": {
+      "a": "Reforçar liquidez, separar aportes da entrada e limitar o risco da aposentadoria à capacidade, tolerância e conhecimento apurados.",
+      "b": "Usar o empréstimo como proteção e aplicar os R$ 14.000 com a aposentadoria, pois a juventude amplia o período de recuperação.",
+      "c": "Manter reserva e imóvel juntos em ativos voláteis, deixando apenas a aposentadoria diversificada pelo horizonte de trinta anos.",
+      "d": "Priorizar a aposentadoria e financiar a entrada no futuro, porque a acumulação de longo prazo tem precedência sobre meta imobiliária."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-23-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Renda estável, reserva maior, prazo imobiliário ampliado e experiência podem elevar a capacidade e apoiar nova análise das metas longas. A reserva, porém, mantém a função de acesso para imprevistos; cada parcela conserva finalidade própria.</p><p>A alternativa A transforma proteção em meta longa. A alternativa B congela o diagnóstico apesar de mudanças materiais. A alternativa C iguala horizontes diferentes e dispensa a avaliação de valor, flexibilidade, tolerância e produto.</p><p>Regra de bolso: mudanças de vida pedem revisão por camada, não uma elevação uniforme do risco.</p>",
+     "enunciado": "<p>Dois anos depois, Larissa retorna à planejadora Nara, em Manaus. Sua renda passou a ser fixa, a reserva alcançou R$ 56.000 e as despesas essenciais continuam em R$ 7.000. A compra do imóvel foi adiada e agora está prevista para daqui a sete anos. Larissa manteve aportes regulares, estudou os produtos usados no plano e acompanhou uma queda sem abandonar a estratégia. Ela pede que a nova estabilidade seja usada para aumentar o risco da carteira inteira, incluindo a reserva, porque agora possui oito meses de despesas e horizonte imobiliário maior. O valor de R$ 56.000 continua destinado a imprevistos, enquanto imóvel e aposentadoria têm calendários próprios. Larissa aceita manter as camadas se puder rever os limites de risco nas parcelas de prazo maior. Analise como as mudanças afetam o plano.</p>",
+     "alternativas": {
+      "a": "A estabilidade permite elevar o risco das três camadas, pois a reserva maior transforma imprevistos em objetivos de longo prazo.",
+      "b": "O perfil anterior permanece fixo, porque mudanças de renda e objetivo alteram aportes, mas não a capacidade de suportar perdas.",
+      "c": "O imóvel adiado recebe a mesma exposição da aposentadoria, pois sete anos e trinta anos representam horizontes equivalentes na acumulação.",
+      "d": "A capacidade pode ter aumentado nas metas longas, mas a reserva conserva função de proteção e cada parcela exige nova análise."
+     },
+     "gabarito": "d"
+    }
+   ],
+   "Ciclo de vida: consolidação e transição para aposentadoria": [
+    {
+     "id": "cpror-cli-24-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Na transição, a carteira de acumulação se aproxima do plano de retiradas, com estimativa de despesas, rendas futuras, lacuna, liquidez inicial e riscos compatíveis com cada período.</p><p>A alternativa B associa a transição à idade legal e presume encerramento da exposição a risco. A alternativa C posterga o orçamento que orienta a preparação das retiradas. A alternativa D trata o patrimônio alvo como suficiente, sem convertê-lo em fluxo de renda.</p><p>Regra de bolso: consolidar é transformar patrimônio acumulado em um plano sustentável de renda.</p>",
+     "enunciado": "<p>Ao explicar a consolidação e a transição para a aposentadoria, uma planejadora relaciona a carteira acumulada com a renda futura do cliente. Identifique a característica central dessa fase do ciclo de vida.</p>",
+     "alternativas": {
+      "a": "Converter o plano de acumulação em retiradas, preparando liquidez e ajustando riscos conforme despesas e rendas futuras.",
+      "b": "Encerrar a exposição a risco na data legal de aposentadoria, preservando o valor nominal formado durante a acumulação.",
+      "c": "Manter a estratégia de aportes até o fim da renda profissional, deixando o orçamento para depois da primeira retirada.",
+      "d": "Definir um patrimônio alvo e conservar a composição da carteira, pois o montante acumulado determina a renda disponível."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-24-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Quando uma queda ocorre perto do início das retiradas, o cliente vende mais ativos para obter o mesmo valor em dinheiro e deixa menos capital participando de uma eventual recuperação.</p><p>A alternativa A aborda perda de poder de compra, mas não a ordem entre queda e saques. A alternativa B atribui o efeito à concentração, embora ele possa ocorrer em carteira diversificada. A alternativa C confunde retorno médio com possibilidade de venda e não descreve a redução do capital após os resgates.</p><p>Regra de bolso: com retiradas, a ordem dos retornos importa tanto quanto a média.</p>",
+     "enunciado": "<p>Um profissional alerta que retiradas iniciadas durante uma queda podem acelerar o consumo do patrimônio. Identifique o risco descrito nessa situação.</p>",
+     "alternativas": {
+      "a": "Risco de inflação, porque cada retirada reduz o poder de compra das fontes de renda previstas.",
+      "b": "Risco de concentração, porque os resgates aumentam a participação do ativo que perdeu valor.",
+      "c": "Risco de liquidez, porque uma média positiva de retorno impede a venda dos ativos durante a aposentadoria.",
+      "d": "Risco de sequência de retornos, porque a queda seguida de saques deixa menos capital para uma recuperação."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-24-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A fase depende da data efetiva de redução da renda do trabalho e do começo das retiradas. Vera precisa aproximar a carteira do fluxo de renda em um ano, enquanto Lúcia ainda terá oito anos de salário e aportes.</p><p>A alternativa B reconhece datas diferentes, mas atribui maior risco à cliente que usará o patrimônio antes. A alternativa C usa a idade para antecipar a fase de Lúcia e deixa a liquidez para o fim. A alternativa D prende a classificação à idade legal, mesmo com retiradas e aportes em calendários distintos.</p><p>Regra de bolso: no ciclo de vida, a data de usar a carteira informa mais que a idade isolada.</p>",
+     "enunciado": "<p>Durante um encontro em Florianópolis, a especialista Denise atende as irmãs Vera e Lúcia, ambas com 59 anos e patrimônios de valor semelhante. Vera pretende encerrar o trabalho em um ano e começar retiradas mensais da carteira logo depois. Lúcia continuará na empresa por mais oito anos, cobre as despesas com o salário e mantém aportes regulares. As duas possuem outras rendas futuras, mas ainda precisam confirmar valores e datas. Vera afirma que a idade igual exige carteiras iguais e pede que Denise replique para ela a distribuição escolhida por Lúcia. Lúcia concorda, alegando que a data legal da aposentadoria situa ambas na mesma fase. Denise registra as datas efetivas de redução da renda do trabalho e do início das retiradas. Analise a classificação das duas clientes no ciclo de vida.</p>",
+     "alternativas": {
+      "a": "Vera está mais próxima da transição, enquanto Lúcia permanece acumulando por mais tempo, apesar de terem a mesma idade.",
+      "b": "As duas estão na mesma fase, mas Vera pode conservar risco maior porque começará a usar o patrimônio antes de Lúcia.",
+      "c": "Lúcia já entrou na transição pela idade, mas os aportes permitem adiar a preparação de liquidez até o último ano de trabalho.",
+      "d": "As duas permanecem em acumulação até a idade legal, embora datas de retirada e continuidade dos aportes alterem seus orçamentos."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-24-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A lacuna inicial é R$ 17 mil menos R$ 7 mil, ou R$ 10 mil por mês. A concentração é R$ 960 mil divididos por R$ 2,4 milhões, ou 40%, e o mesmo evento empresarial pode atingir trabalho, bônus e carteira.</p><p>A alternativa B usa a renda previdenciária como lacuna e ignora a despesa. A alternativa C calcula corretamente a lacuna, mas divide a posição pelos R$ 1,44 milhão restantes em vez do patrimônio total. A alternativa A desconsidera a renda prevista do orçamento em vez de validá-la e testar cenários.</p><p>Regra de bolso: subtraia as rendas das despesas e examine se renda e patrimônio dependem da mesma fonte.</p>",
+     "enunciado": "<p>Em Sorocaba, a planejadora Raulina revisa o caso de Elisa, que pretende parar de trabalhar em seis anos. A carteira vale R$ 2,4 milhões, com R$ 960 mil em ações da empresa empregadora. Elisa estima despesas mensais de R$ 17 mil e renda previdenciária de R$ 7 mil a partir da aposentadoria. O financiamento da residência termina em quatro anos, e o orçamento projetado ainda não retirou essa prestação das despesas futuras. Elisa quer manter as ações porque conhece a companhia e entende que salário, bônus e investimento formam fontes diferentes. Raulina apresenta a lacuna mensal inicial e a participação das ações na carteira antes de discutir uma redução gradual da posição. Calcule os dois indicadores e indique a leitura do diagnóstico.</p>",
+     "alternativas": {
+      "a": "A lacuna é de R$ 17 mil e a posição representa 40%, já que a renda previdenciária precisa ser validada antes de entrar no orçamento.",
+      "b": "A lacuna é de R$ 7 mil e a posição representa 40%, pois o benefício previdenciário define o valor retirado da carteira.",
+      "c": "A lacuna é de R$ 10 mil e a posição representa 66,7%, porque a ação é comparada com os R$ 1,44 milhão restantes.",
+      "d": "A lacuna é de R$ 10 mil e a posição representa 40%, expondo renda profissional e patrimônio ao mesmo evento da empresa."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-24-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Antes da queda, R$ 60.000 representam 10% de R$ 600.000. Depois, representam 12,5% de R$ 480.000. O saque posterior à perda exige consumir uma parcela maior e deixa menos capital para participar de eventual recuperação.</p><p>A alternativa A acerta as proporções, mas trata a liquidez para desembolsos próximos como aumento de risco. A alternativa D mantém o percentual pelo valor nominal do saque e ignora a base menor. A alternativa C inverte a ordem das proporções e conclui que o resgate preserva mais capital.</p><p>Regra de bolso: queda antes do saque aumenta a fração retirada e reduz o capital capaz de se recuperar.</p>",
+     "enunciado": "<p>No primeiro ano de aposentadoria, Célia precisa retirar R$ 60.000 de uma carteira que valia R$ 600.000 no início do período. Antes do resgate, uma queda reduz o patrimônio para R$ 480.000. Os ativos podem ser vendidos, e não há outra renda disponível para essa despesa. Célia argumenta que a média de retorno esperada para os próximos anos permanece positiva e, por isso, a queda anterior ao saque não altera o plano. O assessor Felipe compara quanto da carteira seria consumido se a retirada ocorresse antes da queda com a proporção exigida depois dela. Célia insiste em manter os desembolsos e a exposição sem reservar liquidez, pois espera uma recuperação no ano seguinte. Calcule as duas proporções e avalie o efeito da sequência apresentada.</p>",
+     "alternativas": {
+      "a": "A retirada passa de 10% para 12,5%, e reservar liquidez elevaria o risco por reduzir o capital exposto à recuperação esperada.",
+      "b": "A retirada passa de 10% para 12,5%, deixando menos capital investido e tornando a ordem entre queda e saque relevante.",
+      "c": "A retirada passa de 12,5% para 10%, e o resgate após a queda preserva uma parcela maior para a recuperação dos preços.",
+      "d": "A retirada permanece em 10%, porque o valor de R$ 60.000 não mudou e a média futura compensa a queda antes do saque."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-24-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A antecipação cria dois anos sem salário nem benefício, aumenta a necessidade de liquidez e reduz o tempo disponível para corrigir um déficit ou recuperar uma perda antes dos saques.</p><p>A alternativa A troca a ponte planejada por dívida e mantém a dependência de venda futura. A alternativa B contabiliza uma renda antes da data prevista. A alternativa D vincula o risco de sequência ao benefício, embora ele surja quando começam as retiradas da carteira.</p><p>Regra de bolso: se a renda termina antes do benefício, construa a ponte antes do primeiro saque.</p>",
+     "enunciado": "<p>A gerente Aline recebe Sérgio em uma agência de João Pessoa. Ele planejava trabalhar por mais sete anos, mas decidiu encerrar a atividade em três anos para cuidar do pai. A renda previdenciária começará somente dois anos após a saída, e Sérgio não terá salário nem aluguel nesse intervalo. As despesas mensais estimadas são de R$ 9.000, com possível aumento de gastos de saúde, e a carteira está concentrada em ativos sujeitos a oscilação. Sérgio propõe manter a composição até a aposentadoria e vender a cada mês o necessário durante os dois anos sem benefício, porque acredita que antecipar a data altera somente a quantidade de aportes. Aline registra a ausência temporária de renda e o prazo menor para corrigir eventual déficit. Indique o ajuste central para a transição de Sérgio.</p>",
+     "alternativas": {
+      "a": "Manter a carteira até a saída e financiar os dois anos, preservando os ativos para o período em que o benefício começar.",
+      "b": "Projetar a renda previdenciária desde o primeiro mês sem salário, compensando depois os valores recebidos com atraso.",
+      "c": "Preparar uma ponte de renda para o intervalo, ampliar liquidez e rever a parcela sujeita a oscilação antes das retiradas.",
+      "d": "Conservar a exposição e reduzir o orçamento futuro, pois o risco de sequência começa apenas quando o benefício previdenciário é pago."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-24-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. A lacuna inicial é R$ 18.000 menos R$ 11.000, ou R$ 7.000, mas o plano precisa validar datas e previsibilidade, testar perda de poder de compra, vacância e duração das retiradas, além de respeitar contingência e legado.</p><p>A alternativa A congela a lacuna e presume efeitos iguais sobre rendas e despesas. A alternativa B reduz a análise a quatro anos, mantém concentração e elimina oscilação sem examinar o horizonte posterior. A alternativa D antecipa renda não confirmada e trata um aluguel sujeito a vacância como proteção suficiente.</p><p>Regra de bolso: a lacuna abre o cálculo, mas datas, inflação, longevidade e objetivos completam o plano.</p>",
+     "enunciado": "<p>Em Campo Grande, a consultora Janaína atende Roberto e Paulo, que pretendem reduzir o trabalho dentro de quatro anos. Eles projetam despesas mensais de R$ 18.000 e contam com R$ 11.000 de previdência e aluguéis, mas ainda não confirmaram a data de início do benefício nem consideraram vacância do imóvel. O casal deseja preservar uma reserva para saúde e deixar parte do patrimônio como legado. Roberto pede que a diferença de R$ 7.000 seja multiplicada pelos anos de aposentadoria para formar um valor fixo, sem testar inflação ou longevidade. Paulo prefere manter o patrimônio concentrado no imóvel alugado, porque a renda atual coincide com parte das despesas. Ambos aceitam organizar recursos de uso próximo e posterior, desde que o plano não exija liquidar a carteira inteira. Avalie a construção do plano de renda.</p>",
+     "alternativas": {
+      "a": "Usar a lacuna de R$ 7.000 como valor permanente, somando o legado ao fim, pois inflação e vacância afetam despesas e renda na mesma proporção.",
+      "b": "Manter a concentração no imóvel, reservar quatro anos da lacuna e transferir o restante para ativos sem oscilação quando o trabalho diminuir.",
+      "c": "Validar fontes e datas, testar inflação, vacância e longevidade, separar liquidez inicial e preservar parcelas para contingência e legado.",
+      "d": "Projetar a previdência desde a redução do trabalho, separar a reserva de saúde e usar o aluguel como proteção suficiente contra inflação e longevidade."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-24-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A transição protege os desembolsos próximos, reduz concentrações incompatíveis e reconhece que parte do patrimônio conserva horizonte longo, no qual uma exposição compatível pode ajudar a enfrentar a perda de poder de compra.</p><p>A alternativa A acerta a preocupação com oscilações, mas executa a concentração de uma vez e trata o começo dos saques como fim do horizonte. A alternativa C conserva o risco concentrado e transforma seis meses de liquidez em justificativa para mantê-lo. A alternativa D preserva horizonte longo, mas enfraquece a liquidez inicial e desloca o benefício para uma função diferente da renda prevista.</p><p>Regra de bolso: proteja os primeiros saques sem encurtar o horizonte do patrimônio inteiro.</p>",
+     "enunciado": "<p>Após vender sua empresa em Fortaleza, Helena, de 62 anos, informa ao especialista Murilo que começará retiradas em dezoito meses. Parte das despesas será coberta por um benefício com data confirmada; a carteira financiará a diferença e também uma aposentadoria que pode durar décadas. Helena possui recursos líquidos para seis meses da lacuna, uma participação relevante em um único emissor e investimentos diversificados com horizontes diferentes. Depois de ver uma queda recente, ela exige a venda imediata de qualquer ativo sujeito a oscilação e quer deixar o patrimônio em recursos de curto prazo até o fim da aposentadoria. Murilo apresenta os custos de uma venda concentrada agora e pergunta quanto ficará exposto à perda de poder de compra ao longo dos anos. Helena aceita separar o dinheiro conforme a data de uso, mas mantém a exigência de proteger os primeiros pagamentos. Avalie a estrutura da transição.</p>",
+     "alternativas": {
+      "a": "Vender a posição concentrada de uma vez e manter os recursos de curto prazo, pois o início das retiradas encerra o horizonte da carteira.",
+      "b": "Organizar liquidez para os desembolsos próximos, reduzir a concentração de modo gradual e manter risco compatível nas parcelas posteriores.",
+      "c": "Preservar os seis meses líquidos e manter a concentração, porque a reserva inicial absorve perdas até a recuperação do emissor.",
+      "d": "Ampliar a parcela sujeita a oscilação e usar o benefício como contingência, pois a duração esperada da aposentadoria domina a liquidez inicial."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Ciclo de vida: usufruto, retiradas e preservação da renda": [
+    {
+     "id": "cpror-cli-25-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. No usufruto, o patrimônio passa a financiar o fluxo de renda, mas o plano também considera inflação, imprevistos e duração dos recursos para evitar esgotamento prematuro.</p><p>A alternativa B define a fase pelo fim dos aportes e ignora outras rendas, embora o cliente possa continuar recebendo ou contribuindo ocasionalmente. A alternativa A confunde preservação da renda com proibição de consumir capital. A alternativa D coloca o horizonte inteiro em liquidez imediata e sacrifica retorno potencial e poder de compra.</p><p>Regra de bolso: usufruto transforma patrimônio em renda sem esquecer inflação, imprevistos e longevidade.</p>",
+     "enunciado": "<p>Ao apresentar a fase de usufruto, uma especialista explica como o patrimônio passa a participar do orçamento do cliente. Identifique a característica central dessa fase do ciclo de vida.</p>",
+     "alternativas": {
+      "a": "Manutenção nominal do patrimônio recebido na aposentadoria, com despesas limitadas aos rendimentos distribuídos.",
+      "b": "Interrupção definitiva dos aportes e substituição das demais rendas por pagamentos mensais retirados da carteira.",
+      "c": "Uso planejado do patrimônio para gerar renda disponível, com preservação de poder de compra e proteção para imprevistos.",
+      "d": "Transferência dos recursos para liquidez imediata, reduzindo oscilações ao longo do horizonte de aposentadoria."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-25-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Preservar renda não exige manter intacto o valor nominal do patrimônio. O consumo de capital pode integrar o objetivo quando é planejado, sustentável e coerente com contingências e legado.</p><p>A alternativa A transforma o saldo original em limite obrigatório sem avaliar o objetivo. A alternativa C aplica uma taxa universal e ignora diferenças de horizonte, carteira e flexibilidade. A alternativa B substitui rendas previstas e escolhe a fonte do saque apenas pela frequência de distribuição.</p><p>Regra de bolso: consumir capital pode ser estratégia, desde que seja uma escolha testada e sustentável.</p>",
+     "enunciado": "<p>Um aposentado deseja preservar renda e aceita usar parte do patrimônio ao longo dos anos. Identifique quando o consumo gradual do capital é compatível com o plano.</p>",
+     "alternativas": {
+      "a": "Quando ocorre apenas depois de consumidos os rendimentos nominais e mantém o saldo original como referência obrigatória.",
+      "b": "Quando substitui as fontes vitalícias previstas e concentra os saques nos ativos que distribuem renda com frequência.",
+      "c": "Quando segue uma taxa fixa usada por outros aposentados, dispensando projeções próprias de horizonte e flexibilidade.",
+      "d": "Quando é intencional, sustentável nos cenários testados e compatível com contingências e legado desejado."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-25-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A lacuna é R$ 12.400 menos R$ 7.600, ou R$ 4.800. Os R$ 67.200 líquidos divididos por R$ 4.800 cobrem 14 meses de retiradas no cenário básico.</p><p>A alternativa B usa a renda como se fosse a lacuna, e R$ 67.200 divididos por R$ 7.600 resultam em 8,84 meses. A alternativa A ignora a renda previsível, e R$ 67.200 divididos por R$ 12.400 resultam em 5,42 meses. A alternativa D soma despesa e renda, chegando a R$ 19.600 e a 3,43 meses de cobertura.</p><p>Regra de bolso: compare a liquidez com a lacuna financiada pela carteira, desde que a outra renda seja confiável.</p>",
+     "enunciado": "<p>Em Maceió, a planejadora Sônia atende Augusto, aposentado com despesas mensais de R$ 12.400 e renda líquida previsível de R$ 7.600. Ele mantém R$ 67.200 em recursos de alta liquidez e R$ 980.000 em uma carteira com prazos variados. A renda começa na mesma data das retiradas e não há indicação de interrupção no cenário básico. A parcela líquida será usada nos pagamentos mensais enquanto os demais investimentos permanecem associados a prazos posteriores. Augusto dividiu os R$ 67.200 pela despesa total e concluiu que a proteção cobre pouco mais de cinco meses, por isso quer vender parte da carteira agora. Sônia propõe comparar a liquidez com o valor que efetivamente precisa sair dos investimentos e depois discutir o custo de antecipar a venda. Calcule a lacuna mensal e os meses de cobertura da parcela líquida.</p>",
+     "alternativas": {
+      "a": "A lacuna é de R$ 12.400 e a cobertura é de 5,42 meses, pois a reserva deve ser comparada com a despesa total.",
+      "b": "A lacuna é de R$ 7.600 e a cobertura é de 8,84 meses, pois a outra renda define o valor mensal das retiradas.",
+      "c": "A lacuna é de R$ 4.800 e a cobertura é de 14 meses, pois a renda previsível reduz o valor financiado pela carteira.",
+      "d": "A lacuna é de R$ 19.600 e a cobertura é de 3,43 meses, pois despesas e renda são somadas no início do usufruto."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-cli-25-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Antes do apoio, a lacuna era R$ 13.700 menos R$ 8.200, ou R$ 5.500, e R$ 99.000 cobriam 18 meses. A nova despesa eleva a lacuna para R$ 6.600 e reduz a cobertura para 15 meses.</p><p>A alternativa B deixa uma despesa permanente fora do fluxo. A alternativa C soma a nova despesa ao gasto e ignora a renda, usando R$ 14.800 como lacuna e obtendo 6,69 meses. A alternativa D usa a renda como lacuna antes e depois do apoio, produzindo coberturas de 12,07 e 10,65 meses.</p><p>Regra de bolso: quando a despesa permanente sobe, recalcule a lacuna e a duração da liquidez no mesmo momento.</p>",
+     "enunciado": "<p>Durante a revisão em Uberlândia, o consultor Davi verifica que Irene recebe R$ 8.200 líquidos por mês e gasta R$ 13.700. A carteira mantém R$ 99.000 em liquidez para financiar a diferença. Após assumir apoio permanente de R$ 1.100 mensais para uma irmã, Irene afirma que a reserva conserva os dezoito meses de cobertura calculados no plano anterior, pois o patrimônio líquido não mudou. O apoio começa no mês seguinte e não possui data prevista para terminar. Ela prefere manter as retiradas e compensar a nova despesa apenas se ocorrer perda na carteira. Davi refaz a lacuna e o prazo de cobertura antes de avaliar ajustes em gastos, liquidez e outras fontes. Calcule os valores após a mudança e indique o efeito imediato no plano.</p>",
+     "alternativas": {
+      "a": "A lacuna sobe de R$ 5.500 para R$ 6.600, e a cobertura dos R$ 99.000 cai de 18 para 15 meses.",
+      "b": "A lacuna permanece em R$ 5.500, e a cobertura fica em 18 meses, pois o apoio familiar sai da reserva extraordinária.",
+      "c": "A lacuna sobe de R$ 5.500 para R$ 14.800, e a cobertura cai para 6,69 meses ao excluir a renda do cálculo.",
+      "d": "A lacuna sobe de R$ 8.200 para R$ 9.300, e a cobertura cai de 12,07 para 10,65 meses pela renda recebida."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-25-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A igualdade entre despesas e rendas zera a lacuna corrente, mas não elimina inflação, emergências, despesas extraordinárias nem o objetivo de legado. Mudanças futuras continuam exigindo revisão.</p><p>A alternativa C presume que renda nominal fixa preserva poder de compra e encerra a função da carteira. A alternativa B destina os recursos ao legado e atribui às rendas correntes a cobertura de eventos extraordinários. A alternativa D usa uma taxa universal e ignora horizonte, flexibilidade e finalidade do patrimônio.</p><p>Regra de bolso: lacuna zero hoje reduz o saque corrente, mas não zera os riscos e objetivos futuros.</p>",
+     "enunciado": "<p>Na revisão de Vera, em Natal, o assessor Leandro registra despesas correntes de R$ 9.300 e rendas líquidas vitalícias que passaram a somar o mesmo valor. A carteira continua destinada a despesas extraordinárias, proteção contra perda de poder de compra e legado para dois sobrinhos. Vera entende que a lacuna mensal corrente chegou a zero e pede o encerramento das revisões, com transferência do patrimônio para uma única aplicação de renda nominal fixa. Ela argumenta que uma carteira só tem função no usufruto quando financia o orçamento mensal. Leandro confirma o equilíbrio atual, mas observa que saúde, moradia e inflação podem mudar a necessidade futura. Analise o efeito da lacuna corrente zerada sobre o planejamento.</p>",
+     "alternativas": {
+      "a": "O fluxo corrente está coberto, mas a carteira ainda atende inflação, emergências, gastos extraordinários e legado, sujeitos a revisão.",
+      "b": "A carteira pode ser direcionada ao legado, dispensando liquidez, porque as rendas vitalícias absorvem despesas extraordinárias futuras.",
+      "c": "A lacuna zerada encerra a função da carteira no orçamento, e a renda nominal fixa conserva o poder de compra das despesas futuras.",
+      "d": "O equilíbrio permite aplicar uma taxa universal sobre o patrimônio, pois as retiradas deixam de depender do horizonte da cliente."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-25-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Quedas no início combinadas com saques reduzem a base de recuperação. Uma política flexível pode usar liquidez para despesas próximas e diminuir gastos discricionários após perdas, evitando vendas forçadas.</p><p>A alternativa A trata retorno médio como se a ordem dos resultados não alterasse o patrimônio remanescente. A alternativa C aumenta retiradas durante a queda e condiciona a recomposição a uma recuperação incerta. A alternativa D retira fontes externas do orçamento e amplia a dependência da carteira.</p><p>Regra de bolso: durante o usufruto, proteja os pagamentos próximos e ajuste o saque quando a sequência vier desfavorável.</p>",
+     "enunciado": "<p>Ao iniciar as retiradas em Curitiba, Nivaldo separa apenas o valor do próximo mês em liquidez e mantém o restante em ativos sujeitos a oscilações. Uma queda ocorre nos primeiros meses, mas a projeção de retorno médio para dez anos continua igual à usada no plano. Nivaldo insiste em conservar o saque mensal e vender os ativos depreciados, porque acredita que a média futura torna irrelevante a ordem dos resultados. A especialista Camila mostra que cada venda após a queda reduz a base que participaria de eventual recuperação. Nivaldo aceita rever gastos discricionários, mas rejeita formar liquidez para pagamentos próximos por considerar o recurso improdutivo. Avalie a resposta da política de retiradas ao cenário.</p>",
+     "alternativas": {
+      "a": "Manter os saques preserva o plano, porque o retorno médio projetado incorpora a queda e recompõe a base vendida nos anos seguintes.",
+      "b": "Reduzir gastos discricionários após perdas e manter liquidez próxima pode diminuir vendas forçadas e preservar capital para recuperação.",
+      "c": "Ampliar os saques aproveita preços baixos, e a liquidez pode ser recomposta quando os ativos retornarem ao valor anterior.",
+      "d": "Suspender as rendas externas e financiar o orçamento pela carteira permite medir o efeito da sequência sem misturar outras fontes."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-cli-25-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A política de retiradas define fonte, frequência e regra de revisão, considera o valor líquido após custos e tributos, casa liquidez com o orçamento e pode ajustar gastos ou recompor reservas conforme os resultados.</p><p>A alternativa A importa uma taxa de outro cliente, usa valor bruto e exclui a contingência das revisões. A alternativa C organiza vencimentos, mas congela objetivos por fonte e mantém parte dos gastos sem ajuste. A alternativa B usa média histórica como regra de saque, consome a contingência com custos e restringe a revisão a uma única mudança.</p><p>Regra de bolso: a política de retiradas diz de onde, quando e quanto sacar, além de quando rever cada decisão.</p>",
+     "enunciado": "<p>Em Brasília, a planejadora Fabiana acompanha Jorge e Celso, que recebem duas rendas com datas e correções diferentes. O orçamento separa despesas essenciais, lazer e uma possível reforma de acessibilidade. A carteira reúne uma parcela líquida para os próximos pagamentos, ativos com vencimentos escalonados e investimentos destinados a anos posteriores. Jorge quer adotar o percentual de retirada usado por um amigo e mantê-lo mesmo após perdas, enquanto Celso pede que a renda seja calculada pelo valor bruto dos resgates. Há custos e tributos em parte das vendas, e o casal deseja preservar uma contingência sem impedir o consumo planejado de capital. Fabiana propõe uma regra com fontes, frequência e revisão. Avalie os elementos que essa política deve reunir.</p>",
+     "alternativas": {
+      "a": "Fixar o percentual do amigo, usar o valor bruto como renda e vender primeiro os ativos líquidos, mantendo a contingência fora das revisões.",
+      "b": "Calcular saques pela média histórica, pagar custos com a contingência e revisar a política apenas quando uma renda for interrompida.",
+      "c": "Usar os vencimentos para despesas essenciais, reservar os ativos longos ao legado e manter o lazer pela taxa inicial sem revisões.",
+      "d": "Definir saques pelo fluxo líquido, casar fontes e datas, rever gastos após perdas e recompor a liquidez em períodos favoráveis."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-cli-25-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A estrutura combina liquidez para o orçamento próximo, redução planejada de concentrações e horizonte para recursos posteriores, além de considerar inflação, custos, tributos, contingência e legado.</p><p>A alternativa A reduz oscilação, mas concentra o patrimônio em caixa e usa saldo bruto, prejudicando retorno potencial e poder de compra. A alternativa D reconhece o custo de saída, porém o transforma em justificativa para conservar a concentração. A alternativa C limita a taxa universal a uma parcela, mas deixa saúde e legado expostos à inflação e ignora a renda líquida.</p><p>Regra de bolso: no usufruto, cada parcela precisa de prazo, liquidez e risco compatíveis com o uso que financiará.</p>",
+     "enunciado": "<p>Em Ribeirão Preto, a consultora Marta revê o plano de Heloísa, aposentada que financia parte das despesas com a carteira e pretende manter uma reserva de saúde e algum legado. Os gastos essenciais têm baixa flexibilidade, enquanto viagens podem ser adiadas. A renda nominal cobre parcela relevante do orçamento, mas não acompanha necessariamente a inflação. Heloísa possui ativos de liquidez imediata, posições concentradas com custo de saída e investimentos diversificados para horizontes posteriores. Depois de uma alta recente, ela quer transferir o patrimônio inteiro para caixa e aplicar uma taxa anual indicada em uma reportagem, sem considerar tributos dos resgates. Marta apresenta cenários de vida longa, inflação e interrupção de renda. Indique a estrutura coerente com os objetivos de Heloísa.</p>",
+     "alternativas": {
+      "a": "Manter o patrimônio em caixa e calcular a taxa sobre o saldo bruto, pois a baixa oscilação protege renda, contingência e legado.",
+      "b": "Separar retiradas próximas, reduzir concentrações conforme custos e organizar o restante por horizonte, inflação e valor líquido.",
+      "c": "Aplicar a taxa da reportagem apenas à parcela diversificada, mantendo saúde e legado em liquidez sem considerar inflação.",
+      "d": "Preservar a concentração até o fim, usando viagens como ajuste, porque o custo de saída supera os riscos de uma única posição."
+     },
+     "gabarito": "b"
     }
    ]
   },
@@ -7008,6 +8016,294 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
    ]
   },
   "Indicação de investimentos": {
+   "Alocação de ativos: perfil, fase de vida e pilares da decisão": [
+    {
+     "id": "cpror-inv-01-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A alocação distribui o patrimônio entre funções e classes de investimento; a seleção vem depois e escolhe títulos, fundos ou outros instrumentos capazes de ocupar cada espaço.</p><p>A alternativa A troca as etapas, atribuindo produtos à alocação e objetivos à seleção. A alternativa C transforma as duas decisões em medidas de perfil de risco. A alternativa D restringe alocação a retorno e seleção à eliminação de oscilação, ignorando função, prazo e liquidez.</p><p>Regra de bolso: primeiro distribua o dinheiro por função e classe, depois escolha os instrumentos.</p>",
+     "enunciado": "<p>Ao estruturar uma carteira, um especialista separa primeiro as funções do patrimônio e depois pesquisa instrumentos. Compare alocação de ativos e seleção de ativos nesse processo.</p>",
+     "alternativas": {
+      "a": "A alocação escolhe títulos e fundos específicos, enquanto a seleção determina o objetivo e o prazo de cada parcela do patrimônio.",
+      "b": "A alocação distribui o patrimônio entre classes e funções, enquanto a seleção escolhe instrumentos dentro da estrutura definida.",
+      "c": "A alocação classifica a tolerância do cliente, enquanto a seleção calcula a capacidade financeira para absorver perdas.",
+      "d": "A alocação estima o retorno de cada produto, enquanto a seleção elimina instrumentos que apresentam oscilação no horizonte."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-01-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Acumulação, transição e usufruto ajudam a investigar aportes e retiradas, mas idade ou fase isolada não definem percentuais sem objetivos, prazos, situação financeira e perfil.</p><p>A alternativa A transforma idade em regra de composição. A alternativa C usa a fase para dispensar objetivos e demais dados. A alternativa B liga faixa etária diretamente a classe e desloca liquidez e restrições para uma etapa posterior.</p><p>Regra de bolso: fase de vida orienta as perguntas; os dados do cliente sustentam os percentuais.</p>",
+     "enunciado": "<p>Duas pessoas com a mesma idade podem estar em fases financeiras diferentes. Identifique como a fase de vida participa da decisão de alocação.</p>",
+     "alternativas": {
+      "a": "Define percentuais pela idade cronológica, ajustados apenas quando o cliente muda de classificação de risco.",
+      "b": "Indica a classe com retorno esperado compatível com a faixa etária, deixando liquidez e restrições para a seleção de produtos.",
+      "c": "Substitui a análise dos objetivos quando a data de aposentadoria e a renda futura já foram informadas pelo cliente.",
+      "d": "Orienta perguntas sobre aportes, substituição de renda e retiradas, sem determinar sozinha os percentuais da carteira."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-01-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A emergência soma R$ 7.500 vezes cinco, ou R$ 37.500. Após separar R$ 82.500 para o imóvel, restam R$ 120.000 para aposentadoria. Sobre R$ 240.000, as parcelas são 15,625%, 34,375% e 50%. O bloqueio de trinta meses impede acesso à reserva e vence depois da data do imóvel.</p><p>A alternativa B usa seis meses para a reserva, embora o caso defina cinco, e ainda aceita um bloqueio posterior ao imóvel. A alternativa A troca os valores do imóvel e da aposentadoria e usa o prazo desta para justificar a carteira inteira. A alternativa D troca reserva e imóvel e trata retorno como compensação para liquidez incompatível.</p><p>Regra de bolso: calcule cada finalidade separadamente e rejeite o prazo de produto que atravessa a data de uso.</p>",
+     "enunciado": "<p>Em Aracaju, a planejadora Mirela atende Gustavo, que possui R$ 240.000 e despesas essenciais de R$ 7.500 por mês. Ele quer separar cinco meses de despesas para emergências, pagar R$ 82.500 na entrada de um imóvel em dois anos e destinar o restante à aposentadoria em vinte e quatro anos. A entrada do imóvel será paga em parcela única na data prevista. Gustavo pede que o montante inteiro seja colocado em um único produto com resgate permitido apenas depois de trinta meses, pois a remuneração anunciada supera a de alternativas com liquidez. Mirela ainda não escolheu classes nem produtos e começa pela função de cada parcela. Calcule os valores e percentuais destinados à emergência, ao imóvel e à aposentadoria e avalie a proposta de bloqueio.</p>",
+     "alternativas": {
+      "a": "R$ 37.500, R$ 120.000 e R$ 82.500, equivalentes a 15,625%, 50% e 34,375%; o produto serve porque a aposentadoria tem prazo longo.",
+      "b": "R$ 45.000, R$ 82.500 e R$ 112.500, equivalentes a 18,75%, 34,375% e 46,875%; o bloqueio atende ao imóvel pelo prazo de dois anos.",
+      "c": "R$ 37.500, R$ 82.500 e R$ 120.000, equivalentes a 15,625%, 34,375% e 50%; o bloqueio conflita com as duas primeiras funções.",
+      "d": "R$ 82.500, R$ 37.500 e R$ 120.000, equivalentes a 34,375%, 15,625% e 50%; o retorno compensa a falta de acesso no início."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-01-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Nove meses de R$ 8.000 formam R$ 72.000 de reserva. A pós-graduação permanece em R$ 72.000, e sobram R$ 156.000 para a meta longa. Sobre R$ 300.000, as parcelas são 24%, 24% e 52%.</p><p>A alternativa A mantém seis meses de reserva apesar da decisão de ampliá-la. A alternativa B aumenta a pós-graduação junto com a reserva, embora seu valor tenha sido mantido. A alternativa D usa doze meses de despesas na reserva ao somar referências de prazos que cumprem funções diferentes.</p><p>Regra de bolso: mudança de renda pode redistribuir as funções da carteira sem depender de previsão de mercado.</p>",
+     "enunciado": "<p>Na revisão semestral em Londrina, a assessora Noemi encontra uma carteira de R$ 300.000 dividida em R$ 48.000 para emergência, R$ 72.000 para uma pós-graduação em três anos e R$ 180.000 para independência financeira. As despesas essenciais de Raul são R$ 8.000 mensais, e a reserva corresponde a seis meses. Raul deixa o emprego com salário fixo e passa a receber por projetos, com meses de receita irregular. A pós-graduação será paga em parcela única e continua com orçamento de R$ 72.000. Ele decide ampliar a proteção para nove meses, mantendo o valor e a data dessa meta, e pergunta quanto restará para a independência financeira. Noemi conserva o patrimônio total usado no diagnóstico e refaz as três parcelas. Calcule a nova distribuição em valores e percentuais.</p>",
+     "alternativas": {
+      "a": "R$ 48.000, R$ 72.000 e R$ 180.000, ou 16%, 24% e 60%, pois a mudança de renda altera o perfil, mas não as funções.",
+      "b": "R$ 72.000, R$ 96.000 e R$ 132.000, ou 24%, 32% e 44%, porque a pós-graduação acompanha o aumento da reserva.",
+      "c": "R$ 72.000, R$ 72.000 e R$ 156.000, ou 24%, 24% e 52%, porque três meses adicionais migram da meta longa para a reserva.",
+      "d": "R$ 96.000, R$ 72.000 e R$ 132.000, ou 32%, 24% e 44%, porque nove meses são somados aos três anos da meta intermediária."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-01-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Disposição descreve a reação subjetiva à incerteza, enquanto capacidade examina se a perda comprometeria obrigações. Prazo curto, reserva pequena, dependentes e renda variável limitam objetivamente o risco dessa parcela.</p><p>A alternativa A usa compreensão como prova de capacidade e trata o compromisso como redutor da disposição. A alternativa C estende a aceitação declarada ao dinheiro com data próxima. A alternativa D coloca a disposição acima da capacidade e deixa a restrição para a escolha do produto.</p><p>Regra de bolso: querer suportar uma perda e poder absorvê-la são testes diferentes.</p>",
+     "enunciado": "<p>A gerente Priscila atende Mauro em uma agência de Campo Grande. No questionário, ele declara tranquilidade diante de uma queda de 25% e pede exposição elevada a oscilações. O levantamento mostra que parte relevante do patrimônio pagará o tratamento da mãe dentro de dez meses, que a reserva familiar cobre apenas dois meses e que Mauro sustenta dois filhos com renda variável. O tratamento não possui outra fonte de pagamento. Ele argumenta que sua reação emocional determina o risco da carteira e que aceitar a perda torna desnecessário separar esse dinheiro. Priscila confirma que ele compreende a oscilação, mas registra o efeito que uma perda teria sobre os compromissos. Analise a disposição e a capacidade de Mauro para assumir perdas.</p>",
+     "alternativas": {
+      "a": "A capacidade é elevada porque Mauro compreende a oscilação, embora a disposição precise ser reduzida pelo tratamento previsto.",
+      "b": "A disposição é elevada, mas a capacidade é limitada pelos compromissos, prazo próximo, reserva curta e renda variável.",
+      "c": "Disposição e capacidade são elevadas, pois aceitar queda de 25% permite manter a parcela de dez meses exposta ao mercado.",
+      "d": "A disposição define a carteira, enquanto a capacidade serve para escolher o produto dentro da exposição já aceita pelo cliente."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-01-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Necessidades simultâneas conservam funções e prazos próprios. O perfil arrojado não muda a data do carro nem a possibilidade de uso inesperado da reserva; apenas a parcela longa pode avaliar o instrumento dentro dos demais pilares.</p><p>A alternativa C mantém separação apenas contábil e ignora o bloqueio econômico. A alternativa B usa retorno para compensar liquidez incompatível. A alternativa D reduz o prazo do carro a detalhe de produto, embora ele determine a função da parcela na alocação.</p><p>Regra de bolso: um perfil pode ser único, mas cada objetivo mantém prazo e necessidade de liquidez próprios.</p>",
+     "enunciado": "<p>Durante uma videochamada, o consultor Ícaro revê as metas de Denise, moradora de Palmas. Ela mantém recursos para emergência, pretende trocar de carro em quinze meses e planeja complementar a aposentadoria em vinte e dois anos. Denise se considera arrojada e encontrou um produto de prazo longo cujo retorno estimado poderia acelerar a meta previdenciária. Ela pede que as três parcelas sejam reunidas no produto, alegando que um retorno maior compensará qualquer dificuldade de resgate. Ícaro registra que a troca do carro tem data pouco flexível e que a reserva pode ser usada sem aviso. Denise aceita manter divisões contábeis, mas insiste que o mesmo instrumento pode atender aos três horizontes. Avalie a relação entre perfil, função e liquidez.</p>",
+     "alternativas": {
+      "a": "A meta longa admite análise do produto, mas reserva e carro exigem acesso coerente com suas funções e datas próprias.",
+      "b": "O produto pode receber as três parcelas se o retorno esperado cobrir o custo de saída antes da aposentadoria.",
+      "c": "O perfil arrojado permite reunir as parcelas, desde que os valores da reserva e do carro continuem identificados no controle interno.",
+      "d": "A data do carro restringe apenas a seleção de ativos, enquanto a alocação pode permanecer concentrada no horizonte previdenciário."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-01-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Se a meta exige retorno incompatível com prazo e capacidade de perda, o plano revê aporte, prazo ou valor. A disposição declarada e o conhecimento não corrigem automaticamente a insuficiência financeira.</p><p>A alternativa C usa conhecimento e reserva como autorização para expor uma obrigação rígida. A alternativa B atribui à liquidez o poder de reduzir perda de mercado e conserva premissas incompatíveis. A alternativa D separa o prazo da alocação, embora ele determine a função e o risco suportável da parcela.</p><p>Regra de bolso: quando a conta da meta não fecha, ajuste aporte, prazo ou valor antes de aumentar risco.</p>",
+     "enunciado": "<p>Em São Luís, o especialista Bento recebe Marisa, que deseja acumular R$ 500.000 em quatro anos para comprar uma clínica. O patrimônio separado soma R$ 280.000, e os aportes mensais planejados não sustentam o valor desejado nas premissas usadas. Marisa afirma aceitar forte oscilação e pede uma carteira com retorno suficiente para fechar a diferença, mesmo que o dinheiro possa estar abaixo do valor necessário na data da compra. Ela conhece produtos voláteis, possui reserva separada e não quer adiar a clínica nem elevar aportes. Bento explica que retorno desejado participa da análise, mas não remove a restrição de prazo e a capacidade de perder parte do capital destinado ao negócio. Marisa pede uma decisão baseada apenas em seu perfil declarado. Avalie a orientação coerente com os pilares da alocação.</p>",
+     "alternativas": {
+      "a": "Rever aporte, prazo ou valor da meta, pois a disposição para risco não torna compatível a perda do recurso na data da clínica.",
+      "b": "Manter o prazo e o valor, escolhendo produtos líquidos de maior retorno, porque liquidez reduz o efeito de uma eventual perda.",
+      "c": "Elevar o risco da parcela, pois conhecimento e reserva separada permitem buscar o retorno necessário dentro do prazo fixado.",
+      "d": "Usar o perfil declarado para a alocação e registrar o prazo apenas na seleção dos instrumentos que formarão a carteira."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-01-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A alocação exige justificativa ligada aos dados do cliente e revisão quando renda, dívida, objetivo, prazo ou uso do patrimônio mudam. Bom desempenho passado não prova aderência atual.</p><p>A alternativa A condiciona a revisão à perda e usa retorno como validação da estrutura. A alternativa C reconhece o novo prazo, mas o limita à escolha de produto e congela os percentuais. A alternativa B reage à renda variável por uma troca automática e deixa sem análise dívida encerrada, casa adiada e retiradas.</p><p>Regra de bolso: documente por que a carteira foi montada e refaça a análise quando a vida do cliente mudar.</p>",
+     "enunciado": "<p>Um ano após definir a carteira de Tereza, em Porto Velho, a assessora Lívia recebe novas informações. Tereza encerrou uma dívida relevante, passou a trabalhar por conta própria, adiou a compra da casa de dois para cinco anos e começou a fazer retiradas ocasionais para ajudar o filho. A carteira original separava emergência, entrada do imóvel e aposentadoria, com classes e instrumentos escolhidos para os prazos anteriores. Tereza quer manter a composição porque os produtos apresentaram bom retorno e considera a justificativa inicial válida enquanto nenhum ativo registrar perda. Lívia reúne a situação financeira atual, os novos fluxos, objetivos e restrições, além dos motivos registrados na decisão anterior. Analise a conduta de acompanhamento da alocação.</p>",
+     "alternativas": {
+      "a": "Manter a composição até ocorrer perda, pois retorno positivo confirma a aderência das classes e produtos escolhidos no início.",
+      "b": "Ampliar a reserva pela renda variável e reduzir a aposentadoria no mesmo valor, dispensando nova análise das demais mudanças.",
+      "c": "Alterar apenas os produtos da entrada da casa, conservando os percentuais, porque o adiamento afeta seleção e não alocação.",
+      "d": "Revisar funções, prazos, liquidez, capacidade de risco e justificativa, pois renda, dívida, objetivo e retiradas mudaram."
+     },
+     "gabarito": "d"
+    }
+   ],
+   "Alocação estratégica e tática, market timing e seleção de ativos": [
+    {
+     "id": "cpror-inv-02-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A alocação estratégica estabelece a estrutura de longo prazo coerente com objetivos, perfil e restrições, enquanto a tática admite desvio temporário e limitado diante de uma tese.</p><p>A alternativa B descreve market timing e seleção de ativos, não estratégia e tática. A alternativa C troca os horizontes e atribui à tática a revisão dos dados do cliente. A alternativa D promete eliminar oscilação e obter retorno adicional sem alterar risco.</p><p>Regra de bolso: estratégia é a referência; tática é o desvio temporário ao redor dela.</p>",
+     "enunciado": "<p>Ao documentar uma carteira, um gestor separa a referência de longo prazo das posições temporárias. Compare alocação estratégica e alocação tática.</p>",
+     "alternativas": {
+      "a": "A estratégica define percentuais ou faixas persistentes; a tática cria desvios temporários apoiados em uma tese de mercado.",
+      "b": "A estratégica escolhe momentos de entrada e saída; a tática seleciona instrumentos com desempenho superior dentro da classe.",
+      "c": "A estratégica acompanha notícias de curto prazo; a tática redefine objetivos, perfil e restrições usados no planejamento.",
+      "d": "A estratégica elimina oscilações pela diversificação; a tática busca retorno adicional sem alterar o risco da carteira."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-02-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Market timing tenta acertar momentos de entrada e saída, enquanto seleção de ativos procura instrumentos com desempenho superior dentro de uma classe.</p><p>A alternativa A confunde momento de negociação com referência estratégica e instrumento com perfil. A alternativa B troca market timing por seleção e seleção por desvio entre classes. A alternativa D atribui as duas decisões a revisão de objetivo e estrutura de longo prazo.</p><p>Regra de bolso: timing escolhe quando negociar; seleção escolhe o que usar dentro da classe.</p>",
+     "enunciado": "<p>Uma analista avalia duas decisões: escolher quando comprar e vender uma classe e escolher um instrumento dentro dessa classe. Identifique os conceitos correspondentes.</p>",
+     "alternativas": {
+      "a": "A primeira é alocação estratégica, e a segunda é revisão do perfil financeiro do cliente e da carteira.",
+      "b": "A primeira é seleção de ativos, e a segunda é desvio tático entre classes da carteira.",
+      "c": "A primeira é market timing, e a segunda é seleção de ativos dentro da classe escolhida.",
+      "d": "A primeira é rebalanceamento por objetivo, e a segunda é alocação estratégica de longo prazo."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-02-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A renda variável atual é R$ 800.000 vezes 35%, ou R$ 280.000. A posição pretendida é R$ 800.000 vezes 47,5%, ou R$ 380.000, gerando desvio de R$ 100.000. A alta passada, isolada, não forma processo tático.</p><p>A alternativa B usa os 55% da renda fixa como posição atual da renda variável e chama troca entre classes de seleção. A alternativa A usa 55% como posição pretendida, chegando a R$ 440.000, e trata notícia de mercado como mudança de objetivo. A alternativa D usa a liquidez de 10% como posição atual e considera definida uma saída que não existe.</p><p>Regra de bolso: meça o desvio e documente tese, limite, prazo e saída antes de chamá-lo de tático.</p>",
+     "enunciado": "<p>Em Vitória, a especialista Amanda acompanha uma carteira de R$ 800.000 com referência estratégica de 55% em renda fixa, 35% em renda variável e 10% em liquidez. Desde a definição dessa referência, não ocorreram novos aportes nem retiradas. Após uma sequência de alta da bolsa, o cliente Henrique quer elevar a renda variável para 47,5%, retirando o valor necessário da renda fixa e preservando a liquidez. Ele afirma que a valorização recente basta como justificativa e não define limite de perda, horizonte ou condição de saída. Amanda calcula os valores antes e depois da proposta para mostrar o tamanho do deslocamento, sem alterar o patrimônio total considerado. Calcule a renda variável atual, a pretendida e o desvio solicitado e avalie a natureza da decisão.</p>",
+     "alternativas": {
+      "a": "R$ 280.000, R$ 440.000 e R$ 160.000; é revisão estratégica, pois a alta recente altera o objetivo do cliente.",
+      "b": "R$ 440.000, R$ 380.000 e R$ 60.000; é seleção de ativos, porque a renda fixa financia a mudança de posição.",
+      "c": "R$ 280.000, R$ 380.000 e R$ 100.000; é um desvio reativo sem tese, limite ou saída documentados.",
+      "d": "R$ 80.000, R$ 380.000 e R$ 300.000; é market timing completo, porque a entrada foi definida pela alta observada."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-02-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O ganho bruto é 3% de R$ 160.000, ou R$ 4.800. Os custos são 0,8% de R$ 160.000, ou R$ 1.280. Depois de deduzir também R$ 1.920 de tributo, restam R$ 1.600.</p><p>A alternativa A usa apenas o ganho bruto e exclui encargos da avaliação. A alternativa C deduz R$ 1.280, mas afirma que os R$ 1.920 já estão incorporados. A alternativa D soma custos e tributos como perda adicional sobre o capital e ainda elimina o ganho obtido.</p><p>Regra de bolso: uma tática acrescenta valor apenas depois de superar custos, tributos e erros de execução.</p>",
+     "enunciado": "<p>Em uma mesa de investimentos no Rio de Janeiro, o assessor Pablo revisa uma operação tática de Lúcia. Ela deslocou R$ 160.000 entre classes e manteve a posição pelo período definido na tese. Ao encerrá-la, obteve ganho bruto de 3%. A operação não recebeu aportes nem retiradas durante o período. A compra e a venda somaram custos equivalentes a 0,8% do valor movimentado, e o efeito tributário da realização foi de R$ 1.920. Lúcia afirma que acertar a direção do mercado garante contribuição positiva, independentemente dos encargos, e pretende repetir operações de prazo curto quando surgir uma notícia favorável. Pablo calcula o ganho líquido atribuível à decisão antes de discutir frequência e execução. Calcule esse resultado e avalie a conclusão de Lúcia.</p>",
+     "alternativas": {
+      "a": "O ganho líquido é R$ 4.800, pois o acerto da direção preserva o ganho bruto e deixa custos e tributos fora da tática.",
+      "b": "O ganho líquido é R$ 1.600, pois do ganho bruto de R$ 4.800 saem R$ 1.280 de custos e R$ 1.920 de tributo.",
+      "c": "O ganho líquido é R$ 3.520, pois R$ 4.800 menos R$ 1.280 de custos já incorpora o efeito tributário informado.",
+      "d": "O ganho líquido é negativo em R$ 3.200, pois custos e tributos são aplicados sobre os R$ 160.000 além da perda do ganho bruto."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-02-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Uma posição tática disciplinada registra hipótese, classes favorecida e reduzida, tamanho máximo, horizonte, condição de saída, risco da tese errada, custos e tributos, sem ultrapassar o perfil.</p><p>A alternativa A omite saída, custos, tributos e outros controles. A alternativa C adia justamente a regra que impede a manutenção indefinida após perda. A alternativa B avalia custos somente depois da operação e usa ganho bruto como critério suficiente.</p><p>Regra de bolso: sem tese, limite, prazo e saída, o desvio temporário pode virar aposta permanente.</p>",
+     "enunciado": "<p>A gerente Eloá atende Sérgio em uma agência de Cuiabá. A carteira possui faixas estratégicas compatíveis com o perfil, e uma parcela previdenciária admite pequena posição tática. Essa parcela possui uso previsto no longo prazo. Sérgio acredita que os juros cairão nos próximos quatro meses e quer favorecer uma classe usando recursos dessa parcela. Ele aceita limitar o desvio a quatro pontos percentuais e descreve o risco caso a hipótese falhe, mas se recusa a definir condição de saída porque pretende aguardar até recuperar qualquer perda. Também ignora custos e o efeito tributário de uma reversão. Eloá explica que a opinião econômica, por si só, não impede a posição de virar aposta permanente. Avalie o registro necessário antes da execução.</p>",
+     "alternativas": {
+      "a": "Registrar a classe favorecida e o horizonte basta, pois o limite percentual controla os efeitos de uma hipótese incorreta.",
+      "b": "Registrar os custos após a reversão, porque estimativas anteriores podem impedir uma tática que ainda produzirá ganho bruto.",
+      "c": "Registrar o perfil e a previsão de juros, deixando a saída para o momento em que o mercado confirmar ou rejeitar a tese.",
+      "d": "Registrar hipótese, classes alteradas, limite, horizonte, saída, risco, custos e tributos, mantendo a posição dentro do perfil."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-02-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Tática continua sujeita ao perfil, às restrições e à função do dinheiro. Limite, tese e saída não tornam apropriado um produto incompatível nem afastam a data da obrigação universitária.</p><p>A alternativa B usa controles táticos para apagar duas restrições essenciais. A alternativa C transforma aceitação escrita em substituta do conhecimento e da adequação. A alternativa D trata o desvio incompatível como mero problema de instrumento, embora ele exponha uma finalidade próxima.</p><p>Regra de bolso: tática flexibiliza pesos dentro do plano; não suspende perfil, prazo ou finalidade.</p>",
+     "enunciado": "<p>Na revisão de Joana, em Belo Horizonte, o consultor Caetano encontra uma referência estratégica coerente com objetivos e tolerância moderada. Joana quer aproveitar uma previsão de valorização de um produto complexo que ela não compreende e que possui oscilação incompatível com seu perfil. O recurso disponível está reservado para a mensalidade universitária da filha em onze meses. Ela chama a operação de tática, propõe limitar a posição a três pontos percentuais e argumenta que o tamanho pequeno neutraliza a inadequação do produto e do prazo. Caetano confirma que a tese possui horizonte e saída, mas registra a finalidade do dinheiro e as restrições da cliente. Analise se o desvio permanece tático ou abandona o planejamento.</p>",
+     "alternativas": {
+      "a": "Abandona o planejamento, pois a tática não autoriza produto incompatível nem exposição de recurso destinado a obrigação próxima.",
+      "b": "Permanece tático, porque limite pequeno, horizonte e saída compensam a incompatibilidade do produto e a data da mensalidade.",
+      "c": "Permanece tático se Joana aceitar a oscilação por escrito, já que a disposição declarada substitui o conhecimento do produto.",
+      "d": "Abandona apenas a seleção de ativos, mas preserva a alocação porque três pontos percentuais ficam fora da referência estratégica."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-02-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A destinação de R$ 180.000 a uma obrigação em vinte meses muda objetivo, prazo e liquidez da parcela. Isso exige adequação estratégica à nova informação do cliente, independentemente da reportagem.</p><p>A alternativa A confunde eventual execução da venda com a razão central da mudança. A alternativa C preserva uma função previdenciária que foi substituída pela franquia. A alternativa D chama de oportunidade temporária uma necessidade concreta com data própria.</p><p>Regra de bolso: mudança de mercado pode gerar tática; mudança de objetivo do cliente pede revisão estratégica.</p>",
+     "enunciado": "<p>Em Recife, o planejador Vicente acompanha Otávio, cuja carteira foi estruturada para aposentadoria em quinze anos. Após vender um imóvel, Otávio decide usar R$ 180.000 da carteira na entrada de uma franquia dentro de vinte meses. A parcela ainda está aplicada em classes definidas para o horizonte previdenciário. Ao mesmo tempo, uma reportagem recomenda reduzir renda variável, e Otávio pede que Vicente apresente a mudança como market timing para aproveitar a notícia. O cliente insiste que qualquer alteração de percentual depende de previsão sobre o mercado. Vicente separa a nova necessidade de caixa da opinião publicada e revê a função dos recursos, o prazo e a liquidez. Classifique a mudança exigida pela entrada da franquia.</p>",
+     "alternativas": {
+      "a": "É market timing, porque reduzir a exposição antes da franquia exige escolher o momento de venda das classes previdenciárias.",
+      "b": "É revisão estratégica por nova informação do cliente, pois objetivo e prazo mudaram e o recurso precisa ser separado por liquidez.",
+      "c": "É seleção de ativos, porque a entrada da franquia altera os instrumentos, mas conserva a função previdenciária da parcela.",
+      "d": "É posição tática, porque o horizonte de vinte meses permite desvio temporário até a data do pagamento da entrada."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-02-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A tese tinha horizonte e condição de saída objetivos, e ambos foram alcançados. Como o cliente não mudou, a referência estratégica continua válida; a reversão deve considerar custos, sem converter perda em justificativa para prazo indefinido.</p><p>A alternativa A substitui a condição registrada pelo preço de entrada. A alternativa B amplia o risco para recuperar perda e ignora a tese invalidada. A alternativa C redesenha a referência para acomodar a posição, embora objetivos, perfil e restrições permaneçam iguais.</p><p>Regra de bolso: encerre a tática quando a condição de saída ocorrer; perda não transforma desvio em estratégia.</p>",
+     "enunciado": "<p>No comitê de acompanhamento de uma família em Porto Alegre, a economista Rebeca avalia uma posição tática criada seis meses antes. A hipótese previa melhora de uma classe em até dois trimestres, com desvio máximo de cinco pontos percentuais e retorno à referência se um indicador econômico seguisse direção oposta. O prazo terminou, o indicador acionou a condição de saída e a posição acumulou pequena perda. O cliente pede manutenção por tempo indeterminado até voltar ao preço de entrada e sugere aumentar o desvio para recuperar o resultado. Objetivos, perfil e restrições permanecem iguais aos registrados na alocação estratégica. Rebeca compara a tese original com os fatos observados e com os custos de uma nova movimentação. Avalie a decisão de revisão.</p>",
+     "alternativas": {
+      "a": "Manter a posição até recuperar o preço, pois realizar a perda antes da reversão transforma uma tese econômica em erro de execução.",
+      "b": "Aumentar o desvio dentro do mesmo perfil, porque a perda reduz o valor financeiro exposto e abre espaço para recomposição.",
+      "c": "Redefinir a referência estratégica pela posição atual, evitando custos de retorno enquanto objetivos e restrições permanecem iguais.",
+      "d": "Aplicar a condição de saída e retornar à referência, considerando custos, pois prazo e indicador invalidaram a tese documentada."
+     },
+     "gabarito": "d"
+    }
+   ],
    "VGBL: acumulação, aposentadoria e planejamento patrimonial": [
     {
      "id": "cpror-inv-40-q1",
