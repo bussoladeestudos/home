@@ -7,7 +7,7 @@
    Só intercepta GET da MESMA ORIGEM (Firebase/Google passam direto).
    Ao mudar a versão abaixo, o SW novo assume e limpa os caches antigos.
    ════════════════════════════════════════════════════════════════ */
-const CACHE = "bussola-v120";   // C-Pro R: questoes do cpror-cli-19
+const CACHE = "bussola-v127";   // v127 (19/09): nos exercicios, clicar escolhe e o botao Responder confirma; acerto e erro ganham efeito curto. css e ui em ?v=20260919-responder.
 const SHELL = [
   "./",
   "index.html",
