@@ -135,6 +135,7 @@ const ACTIONS={
   exMarcarVisiveis:()=>exMarcarVisiveis(),
   exLimparTopicos:()=>exLimparTopicos(),
   exToggleErradas:()=>exToggleErradas(),
+  exToggleNovas:()=>exToggleNovas(),
   exLimparFiltro:()=>exLimparFiltro(),
   exComecar:()=>exComecar(),
   revIniciarQuestoes:d=>revIniciarQuestoes(Number(d.num)),
@@ -3997,7 +3998,7 @@ function getMedalha(perc){
 /* topicos e uma LISTA de {mat,top}: o aluno estuda dois ou tres assuntos e
    resolve tudo numa sessao so. Lista vazia = banco inteiro (dentro da materia
    escolhida, se houver). */
-let _exFiltro={materia:"",topicos:[],niveis:[],soErradas:false};
+let _exFiltro={materia:"",topicos:[],niveis:[],soErradas:false,soNaoRespondidas:false};
 let _exQuantidade="";
 let _exBuscaTop="";   /* texto do campo de busca de topico */
 let _exLista=[];      /* [{mat,top,n}] na ordem em que foi desenhada; o data-i das linhas aponta aqui */
@@ -4009,7 +4010,8 @@ function _exListar(){
     materia:_exFiltro.topicos.length||_exFiltro.materia==="*"?null:(_exFiltro.materia||null),
     topicos:_exFiltro.topicos,
     niveis:_exFiltro.niveis,
-    soErradas:_exFiltro.soErradas
+    soErradas:_exFiltro.soErradas,
+    soNaoRespondidas:_exFiltro.soNaoRespondidas
   });
 }
 function _exMarcado(mat,top){
@@ -4046,6 +4048,7 @@ function renderExercicios(){
 
   const sel=_exListar();
   const nErradas=listarQuestoes(STATE.prefeitura,{soErradas:true}).length;
+  const nNovas=listarQuestoes(STATE.prefeitura,{soNaoRespondidas:true}).length;
 
   const optMat=[`<option value=""${!_exFiltro.materia?" selected":""}>Selecione matéria</option><option value="*"${_exFiltro.materia==="*"?" selected":""}>Todas as matérias</option>`].concat(
     matsComQ.map(m=>`<option value="${esc(m.nome)}"${_exFiltro.materia===m.nome?" selected":""}>${esc(m.nome)} (${cont.porMateria[m.nome]})</option>`)
@@ -4078,7 +4081,24 @@ function renderExercicios(){
     return cab+linhas;
   }).join("");
 
+  /* Resumo do banco por matéria. Fica no topo do menu, em pastilhas
+     pequenas: no rodapé, depois do histórico, o aluno nunca chegava até
+     ele. É informação de contexto, então entra discreta e não compete
+     com o filtro, que é o que ele veio fazer. */
+  const bancoHtml=materias.map(m=>{
+    const n=cont.porMateria[m.nome]||0;
+    const tops=(topicos[m.nome]||[]);
+    const comQ=tops.filter(t=>temQuestoes(STATE.prefeitura,m.nome,t)).length;
+    const dica=n?`${n} questões em ${comQ} de ${tops.length} tópicos`:"ainda sem questões";
+    return `<span class="ex-banco-item${n?"":" off"}" title="${esc(m.nome)}: ${esc(dica)}"><b>${esc(m.nome)}</b><i>${n}</i></span>`;
+  }).join("");
+
   el.innerHTML=`
+    <div class="ex-banco">
+      <span class="ex-banco-tit">Banco disponível</span>
+      <span class="ex-banco-tot">${cont.total} questões · ${cont.topicosComQuestao} tópicos</span>
+      <span class="ex-banco-lista">${bancoHtml}</span>
+    </div>
     <div class="ex-filtro">
       <div class="ex-linha">
         <label class="ex-lab" for="exMateria">1. Matéria</label>
@@ -4102,6 +4122,7 @@ function renderExercicios(){
         <label class="ex-lab">3. Nível</label>
         <div class="ex-chips">${chipNivel(1)}${chipNivel(2)}${chipNivel(3)}
           <button type="button" class="ex-chip${_exFiltro.soErradas?" on":""}" data-action="exToggleErradas" title="Só as questões que você errou da última vez">❌ Só as que errei${nErradas?" ("+nErradas+")":""}</button>
+          <button type="button" class="ex-chip${_exFiltro.soNaoRespondidas?" on":""}" data-action="exToggleNovas" title="Só as questões que você ainda não respondeu nenhuma vez">📝 Ainda não respondi${nNovas?" ("+nNovas+")":""}</button>
         </div>
       </div>
       <div class="ex-rodape">
@@ -4117,18 +4138,7 @@ function renderExercicios(){
       </div>
     </div>
     ${sel.length?"":`<div class="ex-vazio">Selecione uma matéria ou ajuste os filtros para encontrar questões.</div>`}
-    ${exHistoricoHtml()}
-    <div class="ex-resumo-titulo">Banco disponível</div>
-    <div class="ex-cards">${materias.map(m=>{
-      const n=cont.porMateria[m.nome]||0;
-      const tops=(topicos[m.nome]||[]);
-      const comQ=tops.filter(t=>temQuestoes(STATE.prefeitura,m.nome,t)).length;
-      return `<div class="ex-card${n?"":" off"}">
-        <div class="ex-card-nome">${esc(m.nome)}</div>
-        <div class="ex-card-n">${n}</div>
-        <div class="ex-card-sub">${n?`questões em ${comQ} de ${tops.length} tópicos`:"ainda sem questões"}</div>
-      </div>`;
-    }).join("")}</div>`;
+    ${exHistoricoHtml()}`;
 
   /* Depois de redesenhar, reaplica o texto da busca sobre as linhas novas e
      escreve os números do rodapé. Sem isto, mudar o nível apagaria o efeito
@@ -4233,8 +4243,21 @@ function exToggleNivel(n){
   if(i>-1) _exFiltro.niveis.splice(i,1); else _exFiltro.niveis.push(n);
   renderExercicios();
 }
-function exToggleErradas(){ _exFiltro.soErradas=!_exFiltro.soErradas; renderExercicios(); }
-function exLimparFiltro(){ _exQuantidade=""; _exFiltro={materia:"",topicos:[],niveis:[],soErradas:false}; _exBuscaTop=""; renderExercicios(); }
+function exToggleErradas(){
+  _exFiltro.soErradas=!_exFiltro.soErradas;
+  if(_exFiltro.soErradas) _exFiltro.soNaoRespondidas=false;
+  renderExercicios();
+}
+/* "Ainda não respondi" e "Só as que errei" se excluem por definição: para
+   errar da última vez a questão precisou ser respondida. Ligar os dois
+   juntos devolveria zero sempre, e filtro que devolve zero e pior do que
+   filtro que nao existe. */
+function exToggleNovas(){
+  _exFiltro.soNaoRespondidas=!_exFiltro.soNaoRespondidas;
+  if(_exFiltro.soNaoRespondidas) _exFiltro.soErradas=false;
+  renderExercicios();
+}
+function exLimparFiltro(){ _exQuantidade=""; _exFiltro={materia:"",topicos:[],niveis:[],soErradas:false,soNaoRespondidas:false}; _exBuscaTop=""; renderExercicios(); }
 
 /* Embaralhar é decisão da tela, e não do engine, para o motor continuar
    testável. Fisher-Yates sobre a lista já filtrada. */
@@ -4578,7 +4601,7 @@ function contPraticar(){
   if(!_conteudoAtual) return;
   const mat=_conteudoAtual.mat, top=_conteudoAtual.top;
   const temQ=temQuestoes(STATE.prefeitura,mat,top);
-  _exFiltro={materia:mat,topicos:temQ?[{mat:mat,top:top}]:[],niveis:[],soErradas:false};
+  _exFiltro={materia:mat,topicos:temQ?[{mat:mat,top:top}]:[],niveis:[],soErradas:false,soNaoRespondidas:false};
   _exBuscaTop=""; _exQuantidade="";
   navTo("exercicios"); window.scrollTo(0,0);
   if(!temQ) showToast("Ainda não há questões deste tópico. Abri a matéria inteira.");
@@ -5432,7 +5455,7 @@ function applyRecovery(){
 /* Descarta sessão transitória de exercícios ao trocar a identidade. */
 function resetAccountUI(){
   _exSessao=null; _exLista=[]; _exBuscaTop="";
-  _exFiltro={materia:"",topicos:[],niveis:[],soErradas:false};
+  _exFiltro={materia:"",topicos:[],niveis:[],soErradas:false,soNaoRespondidas:false};
   _exPeriodo="7"; _exQuantidade=""; _revCicloAberto.clear();
 }
 
