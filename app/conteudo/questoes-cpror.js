@@ -1,5 +1,5 @@
 /* GERADO por outputs/questoes_para_js.py. NAO editar a mao.
-   Fonte: _conteudo/cpror/questoes/**.yaml  ·  565 questoes em 64 topicos
+   Fonte: _conteudo/cpror/questoes/**.yaml  ·  585 questoes em 66 topicos
    Para mudar uma questao, edite o YAML e rode o script de novo. */
 window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
  "cproRAnbima": {
@@ -13,33 +13,33 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "simulado",
       "revisao"
      ],
-     "comentario": "<p>A alternativa D está correta. A poupança potencial parte da renda efetivamente disponível e retira despesas essenciais, gastos discricionários e compromissos contratados do mesmo período.</p><p>A alternativa A usa renda bruta e deixa os descontos obrigatórios fora da base disponível. A alternativa B omite gastos ajustáveis que também consomem renda. A alternativa C introduz um bônus esperado que não integra a sobra efetiva daquele mês.</p><p>Regra de bolso: capacidade de poupança começa na renda líquida menos os desembolsos do período.</p>",
-     "enunciado": "<p>Durante o levantamento financeiro de um cliente, uma especialista precisa estimar a poupança potencial do mês. Identifique a relação que serve como primeira aproximação para esse cálculo.</p>",
+     "comentario": "<p>A alternativa C está correta. Capacidade de poupança é uma medida do orçamento, expressa em reais por mês, e responde a quanto sobra depois das despesas correntes e dos compromissos já contratados.</p><p>A alternativa A confunde estoque com fluxo: o que já foi acumulado é resultado do passado e não informa quanto o cliente sustenta daqui para frente. A alternativa B troca o dado pela intenção, e intenção sem número no orçamento não sustenta aporte. A alternativa D desloca a pergunta para o desempenho da carteira, que é assunto de outro momento do atendimento.</p><p>Regra de bolso: capacidade de poupança é reais por mês, apurados no orçamento.</p>",
+     "enunciado": "<p>Em uma reunião de equipe em Vitória, um assessor recém-chegado pergunta o que a capacidade de poupança de um cliente mede. Identifique a resposta correta.</p>",
      "alternativas": {
-      "a": "Subtrair da renda bruta as despesas e obrigações do período, antes dos descontos obrigatórios.",
-      "b": "Subtrair da renda líquida despesas essenciais e prestações, tratando gastos ajustáveis como sobra.",
-      "c": "Subtrair da renda líquida os desembolsos e acrescentar o bônus esperado ao saldo do mês.",
-      "d": "Subtrair da renda líquida as despesas e obrigações cobertas no mesmo período."
+      "a": "O saldo já acumulado pelo cliente em aplicações financeiras até a data do atendimento.",
+      "b": "O percentual da renda que o cliente declara pretender guardar quando conseguir guardar.",
+      "c": "O valor que o cliente consegue separar da renda de cada mês, cobertas despesas e obrigações.",
+      "d": "A rentabilidade que a carteira do cliente precisa alcançar para que as metas fiquem viáveis."
      },
-     "gabarito": "d"
+     "gabarito": "c"
     },
     {
      "id": "cpror-cli-01-q2",
      "tipo": "multipla",
-     "nivel": 1,
+     "nivel": 2,
      "usar_em": [
       "simulado",
       "revisao"
      ],
-     "comentario": "<p>A alternativa D está correta. Valor elevado em um mês pode ampliar um aporte pontual, mas a capacidade recorrente exige observar estabilidade da renda, despesas, obrigações e sobra sustentável.</p><p>A alternativa A transforma bônus pontual em base para aporte fixo. A alternativa B deduz recorrência de um mês forte sem testar os meses de receita fraca. A alternativa C reconhece a estabilidade como fator, mas usa renda extraordinária para sustentar compromisso recorrente.</p><p>Regra de bolso: renda alta explica o tamanho de um recebimento; estabilidade ajuda a explicar se o aporte pode se repetir.</p>",
-     "enunciado": "<p>Um cliente recebeu salário elevado e um bônus pontual no mês, mas seus ganhos mensais variam e seus compromissos fixos absorvem parte relevante da renda. Compare valor e estabilidade da renda para identificar a leitura coerente sobre sua capacidade de poupança recorrente.</p>",
+     "comentario": "<p>A alternativa B está correta. A conta subtrai da renda líquida tudo o que já tem destino no mês: R$ 6.400 menos R$ 3.630 de essenciais, menos R$ 1.320 de compromissos contratados, menos R$ 760 de ajustáveis, o que deixa R$ 690.</p><p>A alternativa A chega a R$ 1.450 ao ignorar os ajustáveis, e poder cortar um gasto é diferente de já tê-lo cortado. A alternativa C diluiu um bônus em doze meses e somou R$ 150 à sobra, quando recebimento incerto reforça objetivo no mês em que cai e fica fora do compromisso mensal. A alternativa D chega a R$ 2.010 ao retirar os compromissos contratados da conta, quando são justamente eles que saem da conta bancária com data marcada.</p><p>Regra de bolso: entra na subtração tudo o que já tem destino no mês, tenha sido escolhido agora ou antes.</p>",
+     "enunciado": "<p>Em Sorocaba, o assessor Rafael atende Tainá, enfermeira de hospital público. A renda líquida dela é de R$ 6.400 por mês, creditada no quinto dia útil. Entre as despesas essenciais, o aluguel do apartamento que ela divide com uma colega custa R$ 1.900 na parte dela, alimentação e transporte somam R$ 1.250 e o plano de saúde consome R$ 480. Entre os compromissos já contratados, a prestação do carro é de R$ 890 e a mensalidade de um curso técnico é de R$ 430, com mais dezoito parcelas pela frente. Os gastos ajustáveis, que reúnem lazer, assinaturas e restaurantes, somam R$ 760. Tainá conta que recebeu um bônus de produtividade de R$ 1.800 no mês passado e pergunta como ele entra na conta. Calcule o valor que ela consegue separar por mês e indique o raciocínio que sustenta o resultado.</p>",
      "alternativas": {
-      "a": "A renda elevada permite aporte pontual, e o mesmo valor pode virar aporte fixo se o bônus for distribuído pelos meses seguintes.",
-      "b": "A sobra do mês forte indica capacidade recorrente quando as despesas fixas estão cobertas, mesmo com ganhos variáveis.",
-      "c": "A estabilidade da renda importa, mas o bônus pode sustentar a parcela fixa do plano quando a renda ordinária oscila.",
-      "d": "A renda elevada pode gerar aporte ocasional, enquanto a recorrência depende da estabilidade e da sobra mensal."
+      "a": "R$ 1.450, porque os gastos ajustáveis ficam de fora da conta, por serem despesa que ela pode cortar a qualquer momento.",
+      "b": "R$ 690, porque a conta retira da renda do mês os essenciais, os compromissos e os ajustáveis, e o bônus fica fora do valor mensal.",
+      "c": "R$ 840, porque o bônus de R$ 1.800 se distribui pelos doze meses do ano e acrescenta R$ 150 por mês à sobra apurada.",
+      "d": "R$ 2.010, porque as prestações saem do cálculo da capacidade, já que foram contratadas em períodos anteriores a este."
      },
-     "gabarito": "d"
+     "gabarito": "b"
     },
     {
      "id": "cpror-cli-01-q3",
@@ -49,33 +49,33 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "simulado",
       "revisao"
      ],
-     "comentario": "<p>A alternativa B está correta. A idade ajuda a investigar fase de vida, eventos prováveis e prazo, mas Renato e Vera precisam ser avaliados pelos fluxos, compromissos e margens que realmente possuem.</p><p>A alternativa A recolhe dados relevantes, mas deixa a idade determinar o valor do aporte. A alternativa C reconhece parte do diagnóstico, mas usa risco para criar capacidade de poupança. A alternativa D considera o patrimônio de Vera sem verificar quanto seu fluxo permite reservar mensalmente.</p><p>Regra de bolso: idade abre perguntas; renda disponível, compromissos e prazo constroem a resposta.</p>",
-     "enunciado": "<p>Dois clientes procuram a planejadora Elisa, em Goiânia, para formar uma reserva destinada a objetivos futuros. Renato tem 29 anos, renda variável, dois dependentes, aluguel e pouca margem depois das obrigações. Vera tem 58 anos, renda previsível, patrimônio líquido, despesas correntes cobertas e uma sobra mensal recorrente. Renato acredita que sua idade lhe permite poupar pouco agora e compensar por meio de investimentos arriscados; Vera supõe que a proximidade da aposentadoria impede qualquer capacidade relevante de poupança. Elisa precisa explicar como a idade participa da análise sem substituir o diagnóstico dos fluxos reais. Ela também precisa considerar que o prazo de cada meta afeta o esforço de aporte, enquanto o risco do investimento é incapaz de criar dinheiro disponível no orçamento. No atendimento, ambos pedem uma regra simples baseada somente na faixa etária, mas o orçamento de cada um mostra restrições diferentes para sustentar depósitos mensais. Analise os dois casos e indique a conclusão que orienta a conversa de Elisa.</p>",
+     "comentario": "<p>A alternativa B está correta. Nívea tem renda de valor comparável ao de Paulo, com estabilidade e previsibilidade diferentes. Um compromisso mensal fixo se mede pelo mês de faturamento baixo, e o excedente dos meses fortes entra como parcela adicional.</p><p>A alternativa A transforma crédito rotativo em ponte de fluxo de caixa, o que encarece o plano e costuma consumir a própria reserva. A alternativa C troca estabilidade por composição familiar: ter menos dependentes reduz a despesa, e continua sem tornar a receita previsível. A alternativa D compara folgas médias, e a média de Nívea existe no papel sem existir em cada mês.</p><p>Regra de bolso: valor, estabilidade e previsibilidade da renda são três perguntas, e o compromisso fixo responde à terceira.</p>",
+     "enunciado": "<p>Em Belém, o assessor Otávio atende dois clientes na mesma semana. Nívea é dentista autônoma e fatura conforme a agenda do consultório: nos quatro últimos meses recebeu R$ 7.400, R$ 15.200, R$ 8.100 e R$ 18.600. Ela tem despesas fixas de R$ 6.200, entre as quais o aluguel do consultório, de R$ 2.300, e vive sozinha. Paulo é servidor municipal, recebe R$ 9.300 líquidos no dia 20 de cada mês há nove anos, com reajuste em data-base anual, tem despesas fixas de R$ 7.100 e duas filhas na escola. Os dois pedem a Otávio um valor mensal para separar. Nívea abre o extrato do ano passado, mostra que a média mensal dela ficou em R$ 12.000 e conclui que pode assumir o mesmo compromisso fixo que Otávio sugeriu a Paulo. Analise o argumento de Nívea.</p>",
      "alternativas": {
-      "a": "Examinar renda e dependentes, mas fixar o aporte de Renato pela idade e o de Vera pela proximidade da aposentadoria.",
-      "b": "A idade orienta perguntas sobre fase de vida e prazo, mas a capacidade resulta da renda, estabilidade, dependentes, despesas, obrigações e mudanças esperadas.",
-      "c": "Examinar renda, dependentes e prazo, mas elevar o risco da carteira de Renato para compensar sua pequena margem mensal.",
-      "d": "Examinar prazo e despesas dos dois, mas usar o patrimônio de Vera como substituto da sobra mensal na definição do aporte."
+      "a": "A média anual sustenta o compromisso, porque nos meses de faturamento baixo Nívea recorre ao limite da conta e recompõe o saldo nos meses fortes.",
+      "b": "A média descreve o ano e o compromisso é mensal, então o valor fixo de Nívea cabe no mês de faturamento baixo, com parcela extra nos meses fortes.",
+      "c": "O argumento se sustenta, porque Nívea vive sozinha e sem dependentes, de modo que a folga dela absorve a oscilação do faturamento do consultório.",
+      "d": "O argumento se sustenta depois de ajustada a diferença entre as despesas fixas dos dois, já que a folga média de Nívea supera a de Paulo."
      },
      "gabarito": "b"
     },
     {
      "id": "cpror-cli-01-q4",
      "tipo": "multipla",
-     "nivel": 2,
+     "nivel": 1,
      "usar_em": [
       "simulado",
       "revisao"
      ],
-     "comentario": "<p>A alternativa B está correta. O planejamento parte das categorias de despesas do padrão pretendido, registra hipóteses sobre o que muda e confronta o objetivo futuro com a sobra efetiva do orçamento atual.</p><p>A alternativa A começa pelo método correto, mas trata reajustes passados como sobra garantida apesar do aumento das despesas. A alternativa C verifica o fluxo atual, mas substitui a estimativa das despesas futuras por percentual fixo. A alternativa D considera duas categorias, mas elimina o apoio familiar sem testar essa hipótese.</p><p>Regra de bolso: projete despesas futuras por categoria e confira se o aporte necessário cabe no fluxo de hoje.</p>",
-     "enunciado": "<p>Em Florianópolis, o especialista Davi revisa o planejamento de Helena, médica de 46 anos que recebeu reajustes de renda nos últimos três anos. No mesmo período, ela mudou para um imóvel com prestação elevada, ampliou gastos de lazer e assumiu apoio mensal aos pais. A renda cresceu, mas as despesas avançaram em ritmo semelhante e a poupança efetiva permaneceu estável. Para a aposentadoria, Helena propõe aplicar um percentual fixo e universal sobre a renda atual, supondo que suas despesas futuras serão uma versão reduzida das despesas presentes. Davi observa que algumas prestações podem terminar, enquanto saúde, apoio familiar ou lazer podem mudar, e que o aumento de preços afeta o custo do padrão pretendido. Ele precisa transformar essas informações em uma estimativa defensável do esforço de poupança. Helena quer manter, depois de parar de trabalhar, atividades que hoje financia com a renda corrente; por isso a estimativa precisa partir do padrão que deseja custear. Avalie o caso e indique a abordagem coerente com a aula.</p>",
+     "comentario": "<p>A alternativa D está correta. A idade ajuda a antecipar o que tende a mudar em receitas, despesas e prazos, e por isso orienta as perguntas do atendimento. O valor que cabe separar continua saindo do orçamento.</p><p>A alternativa A converte um indício em regra e decide pela cliente antes de olhar os números dela. A alternativa B começa bem, enumera os fatores certos e erra no fim, ao tratar risco de carteira como criador de capacidade financeira. A alternativa C apaga a fase de vida, embora renda estável conviva com despesas que mudam quando chegam dependentes ou cuidados de saúde.</p><p>Regra de bolso: idade levanta perguntas, orçamento dá a resposta.</p>",
+     "enunciado": "<p>Uma cliente de 58 anos pergunta ao assessor se, por causa da idade, ela já deveria reduzir o valor que separa a cada mês. Explique o papel da idade nessa análise.</p>",
      "alternativas": {
-      "a": "Estimar despesas futuras por categoria, mas converter os reajustes salariais passados em aporte adicional garantido.",
-      "b": "Estimar despesas futuras por categoria, explicitar hipóteses, considerar mudanças do padrão e verificar quanto cabe no fluxo presente de Helena.",
-      "c": "Conferir a sobra atual e projetar o padrão futuro como percentual fixo da renda, para dispensar hipóteses por categoria.",
-      "d": "Projetar saúde e lazer por categoria, mas excluir o apoio familiar porque essa despesa pode terminar antes da aposentadoria."
+      "a": "A idade determina a capacidade, porque o tempo restante até a aposentadoria fixa quanto cabe separar em cada fase da vida.",
+      "b": "A idade situa a fase de vida, e a capacidade vem da renda e das despesas, de modo que quem tem margem curta eleva o risco da carteira para compensar o prazo.",
+      "c": "A idade perde importância quando a renda é estável, porque a estabilidade responde sozinha pela capacidade de separar recursos.",
+      "d": "A idade indica eventos prováveis da fase de vida e levanta perguntas, enquanto o valor sai da renda, das despesas e das obrigações."
      },
-     "gabarito": "b"
+     "gabarito": "d"
     },
     {
      "id": "cpror-cli-01-q5",
@@ -85,13 +85,13 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "simulado",
       "revisao"
      ],
-     "comentario": "<p>A alternativa A está correta. A conta inicial é R$ 14.000 menos R$ 7.600, R$ 3.400 e R$ 2.200, resultando em R$ 800; a redução viável de R$ 700 eleva a margem para R$ 1.500 e a conferência final evita confundir aporte bruto com poupança efetiva.</p><p>A alternativa B calcula a margem corretamente, mas usa bônus incerto para fixar contribuição de R$ 2.000. A alternativa C confunde a margem inicial com a margem após o ajuste e projeta R$ 2.000 sem fonte adicional. A alternativa D acerta os valores, mas usa transferências brutas em vez de verificar a poupança que permaneceu aplicada.</p><p>Regra de bolso: calcule a sobra, identifique o ajuste concreto, automatize um valor compatível e confira quanto permaneceu poupado.</p>",
-     "enunciado": "<p>Camila leva suas contas à consultora Bruna, em Campo Grande, com renda líquida mensal de R$ 14.000. O levantamento mostra R$ 7.600 de despesas essenciais, R$ 3.400 de compromissos contratados e R$ 2.200 de gastos ajustáveis. Camila deseja automatizar R$ 2.000 logo após o salário e pretende contar com um bônus anual incerto para cobrir eventuais faltas de caixa. Ao revisar os gastos ajustáveis, ela encontra R$ 700 que podem ser reduzidos sem atingir necessidades essenciais. Bruna quer propor uma estratégia que transforme a margem em poupança recorrente, preserve as contas do mês e permita verificar se o valor separado permaneceu investido até o fechamento do período. A transferência programada ocorrerá antes dos pagamentos variáveis do mês; Bruna precisa conferir o saldo ao fim do ciclo para distinguir aporte bruto de economia efetiva. Calcule a poupança potencial antes do ajuste e indique a estratégia compatível com os dados apresentados.</p>",
+     "comentario": "<p>A alternativa A está correta. O padrão de vida subiu junto com a renda e consumiu quase todo o aumento, então o problema nasce no orçamento e se resolve na revisão dos compromissos assumidos, antes de qualquer escolha de produto.</p><p>A alternativa B atribui a um detalhe operacional um resultado que vem da estrutura de gastos, e programar transferência sobre margem inexistente gera resgate no fim do mês. A alternativa C usa rentabilidade para cobrir despesa recorrente, quando rendimento incerto não paga compromisso certo. A alternativa D inverte a regra da apuração, porque compromisso contratado é exatamente o que reduz o valor disponível.</p><p>Regra de bolso: aumento de renda só vira capacidade quando o padrão de vida fica onde estava.</p>",
+     "enunciado": "<p>Em Florianópolis, a assessora Letícia atende Wagner, promovido há dez meses. A renda líquida dele passou de R$ 5.800 para R$ 8.100. No mesmo período, ele mudou de apartamento e o aluguel subiu R$ 900, trocou de carro e assumiu prestação de R$ 740, e ampliou gastos com restaurantes e assinaturas em cerca de R$ 500. O extrato que ele leva à reunião mostra saldo de R$ 210, R$ 40 e R$ 320 no último dia dos três meses anteriores, e o saldo da conta reserva segue em zero desde a promoção. Wagner tem 34 anos e está na mesma empresa há seis. Ele chega irritado, diz que ganha R$ 2.300 acima do salário antigo e continua sem separar dinheiro, e pede que Letícia indique a aplicação capaz de resolver isso. Indique o diagnóstico e o encaminhamento da assessora.</p>",
      "alternativas": {
-      "a": "A margem inicial é R$ 800; reduzir R$ 700 dos gastos ajustáveis permite reservar R$ 1.500 após o recebimento e conferir o saldo efetivo no fim do mês.",
-      "b": "A margem inicial é R$ 800; reduzir R$ 700 permite reservar R$ 1.500, mas o bônus autoriza fixar R$ 2.000.",
-      "c": "A margem inicial é R$ 1.500; após reduzir R$ 700, Camila pode automatizar R$ 2.000 sem alterar outra despesa.",
-      "d": "A margem inicial é R$ 800; reduzir R$ 700 permite reservar R$ 1.500, medidos pelas transferências brutas."
+      "a": "Os R$ 2.300 de aumento foram absorvidos por R$ 2.140 de gastos novos, então a conversa é sobre o que foi assumido desde a promoção.",
+      "b": "A promoção criou margem no orçamento, e a falta de sobra vem da ausência de uma transferência programada para logo depois da data do recebimento.",
+      "c": "A margem existe no orçamento de Wagner, e cabe buscar rentabilidade elevada para que o rendimento cubra os compromissos assumidos desde a promoção.",
+      "d": "Os R$ 2.300 do aumento seguem disponíveis, porque aluguel e prestação entram como compromissos contratados e ficam fora da capacidade apurada."
      },
      "gabarito": "a"
     },
@@ -103,15 +103,15 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "simulado",
       "revisao"
      ],
-     "comentario": "<p>A alternativa C está correta. A renda variável pede uma base que caiba no cenário conservador, complemento nos meses fortes e conferência da poupança líquida de resgates, em vez de apenas registrar a transferência inicial.</p><p>A alternativa A usa renda conservadora como base, mas supõe que rendimento incerto complete o aporte dos meses fracos. A alternativa B ajusta a contribuição à receita, porém confunde transferência bruta com poupança preservada. A alternativa D usa uma média que pode pressionar os meses fracos e deixa os resgates fora da avaliação.</p><p>Regra de bolso: renda variável combina aporte básico prudente, adicional condicional e medição do valor que permaneceu investido.</p>",
-     "enunciado": "<p>Em Manaus, o planejador Raul acompanha Ícaro, profissional autônomo cuja renda líquida passou a variar entre R$ 10.000 e R$ 16.000 por mês. Antes da mudança, Ícaro recebia valor previsível e automatizava R$ 1.500 na data do pagamento. Nos meses recentes, o débito automático ocorreu antes de algumas obrigações e ele resgatou parte do investimento para completar as contas, embora o aplicativo registrasse o aporte bruto como realizado. Ícaro quer manter o mesmo valor obrigatório para preservar a sensação de disciplina e propõe elevar a exposição da carteira para compensar os meses em que consegue poupar pouco. Raul precisa redesenhar a regra de contribuição, respeitar a renda conservadora, aproveitar os meses fortes e medir a poupança que permaneceu aplicada. Ícaro relata que as retiradas posteriores ao débito ocorrem justamente nos meses de menor receita, quando os compromissos continuam vencendo nas datas habituais. Analise a mudança e indique a estratégia que sustenta uma recorrência compatível com o novo fluxo.</p>",
+     "comentario": "<p>A alternativa D está correta. Sílvia transferiu R$ 4.800 e resgatou R$ 2.250, o que deixa R$ 2.550 efetivamente separados em quatro meses, ou R$ 637,50 por mês. Elevar a transferência para R$ 1.600 aumentaria o resgate, e o passo anterior é ajustar o valor ao que o orçamento sustenta.</p><p>A alternativa A trata como reserva formada um dinheiro que voltou para o consumo corrente no mesmo mês. A alternativa B desconta só os três resgates de R$ 450 e chega a R$ 862,50, deixando de fora o mês de R$ 900. A alternativa C desconta apenas o resgate de R$ 900, chega a R$ 975 e trata como normal um saque que se repetiu em três meses seguidos.</p><p>Regra de bolso: o valor separado é o que fica, e não o que foi transferido.</p>",
+     "enunciado": "<p>Em Teresina, o assessor Danilo revisa o histórico de Sílvia, vendedora de material hospitalar, que recebe o salário no dia 1 e paga as contas de casa no dia 20. Ela programou uma transferência automática de R$ 1.200 para o dia 5 e manteve a programação nos quatro últimos meses. Em três desses meses, Sílvia resgatou R$ 450 por volta do dia 18 para fechar as contas, e no quarto mês resgatou R$ 900 pelo mesmo motivo. O extrato registra os quatro créditos e os quatro resgates, sem nenhum depósito adicional no período. Na reunião, ela comemora que já separa R$ 1.200 por mês, conta que acaba de receber um reajuste de R$ 300 e pede para elevar a transferência automática a R$ 1.600. Calcule o valor médio efetivamente separado no período e avalie o pedido de Sílvia.</p>",
      "alternativas": {
-      "a": "Fixar uma base compatível com R$ 10.000 e completar R$ 1.500 nos meses fracos usando rendimento esperado.",
-      "b": "Fixar uma base compatível com R$ 10.000 e adicionar nos meses fortes, contando o aporte bruto como poupança.",
-      "c": "Definir aporte básico compatível com a renda conservadora, acrescentar parcela nos meses fortes e comparar aportes com resgates e saldo efetivo.",
-      "d": "Usar a média entre R$ 10.000 e R$ 16.000 para manter R$ 1.500 fixos, sem conferir resgates mensais."
+      "a": "R$ 1.200 por mês, porque o resgate posterior é uso da reserva já formada, de modo que a elevação para R$ 1.600 pode ser programada desde já.",
+      "b": "R$ 862,50 por mês, valor obtido ao descontar do total transferido os três resgates de R$ 450, que foram os que romperam a programação.",
+      "c": "R$ 975 por mês, porque só o resgate de R$ 900 compromete o aporte do mês, e os resgates de menor valor cabem na rotina do orçamento dela.",
+      "d": "R$ 637,50 por mês, porque os resgates somam R$ 2.250 no período, e o ajuste do valor programado antecede qualquer elevação."
      },
-     "gabarito": "c"
+     "gabarito": "d"
     },
     {
      "id": "cpror-cli-01-q7",
@@ -120,13 +120,13 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "usar_em": [
       "simulado"
      ],
-     "comentario": "<p>A alternativa C está correta. A queda de renda, o novo dependente e o aumento de despesas alteram a capacidade de poupança, exigem revisão do valor recorrente e tornam necessário comparar aportes com resgates e saldo efetivo.</p><p>A alternativa A atualiza o orçamento, mas ainda chama de poupança o aporte parcialmente resgatado. A alternativa B considera o novo dependente, porém transforma gratificação incerta em renda recorrente. A alternativa D mede o líquido corretamente, mas usa desempenho futuro para preservar obrigação incompatível com o fluxo atual.</p><p>Regra de bolso: mudança em renda, dependentes ou despesas reabre o diagnóstico antes de manter a contribuição antiga.</p>",
-     "enunciado": "<p>Seis meses após a implantação, Leandro e Fábio voltam à assessora Patrícia, em Fortaleza, para revisar o plano. O casal havia definido aporte automático de R$ 2.400 com base em duas rendas previsíveis, despesas registradas e uma meta de longo prazo. Desde então, Fábio reduziu a jornada para cuidar do filho recém-nascido, a renda familiar caiu, despesas de saúde e cuidado aumentaram e parte do valor automatizado passou a ser resgatada antes do fim do mês. Leandro deseja conservar os R$ 2.400 porque o aplicativo exibe regularidade nos aportes; Fábio propõe usar uma gratificação eventual para preencher a diferença e manter o plano original. Patrícia precisa distinguir disciplina aparente de poupança sustentável, reconhecer a mudança de dependentes e evitar que uma renda incerta sustente compromisso recorrente. O extrato confirma entradas regulares na aplicação, mas também saídas no mesmo período; o casal precisa saber quanto realmente permaneceu reservado para a meta. Avalie o caso e indique o procedimento que preserva a lógica do planejamento.</p>",
+     "comentario": "<p>A alternativa C está correta. Dividir R$ 45.600 por vinte e quatro meses exige R$ 1.900 mensais, e a capacidade de Nelson é de R$ 1.250. A diferença de R$ 650 por mês é um problema de orçamento, e as saídas legítimas são rever o valor da meta, a data ou a prioridade dela diante das outras.</p><p>A alternativa A usa o encurtamento do prazo como justificativa para risco, quando prazo menor reduz o tempo de recuperação de uma perda. A alternativa B veste a mesma ideia de prudência ao repartir o aporte, e a média de R$ 1.900 continua dependendo de um rendimento que ninguém garante. A alternativa D fixa um aporte que a apuração já mostrou inviável, e acompanhar depois deixa de criar os R$ 650 que faltam.</p><p>Regra de bolso: prazo menor eleva o aporte necessário, e não o risco aceitável.</p>",
+     "enunciado": "<p>Em Campo Grande, a assessora Heloísa acompanha Nelson, que junta R$ 45.600 para a entrada de um imóvel. A capacidade dele foi apurada no mês passado em R$ 1.250, com renda líquida de R$ 7.900 e desembolsos de R$ 6.650, e cobria com folga pequena o prazo combinado de quarenta meses. A entrada equivale a 20% do valor do imóvel. A construtora antecipou a data de assinatura e o prazo caiu para vinte e quatro meses. Nelson recusa rever o valor da entrada e recusa adiar a assinatura. Ele chega à reunião com uma ideia de um colega de trabalho, que diz ter obtido 18% em doze meses: manter os mesmos R$ 1.250 e aplicá-los em um fundo arrojado, para que o rendimento cubra a diferença. Avalie a proposta de Nelson e indique o encaminhamento de Heloísa.</p>",
      "alternativas": {
-      "a": "Recalcular renda e despesas após o nascimento, mas manter R$ 2.400 como poupança porque a transferência ocorreu.",
-      "b": "Refazer o orçamento com o novo dependente e usar a gratificação eventual para sustentar R$ 2.400 mensais.",
-      "c": "Refazer receitas, despesas, obrigações e prioridades, ajustar o aporte ao fluxo atual e medir o valor líquido que permanece poupado.",
-      "d": "Medir o aporte líquido de resgates, mas manter R$ 2.400 fixos até que o desempenho da carteira compense a diferença."
+      "a": "A proposta se sustenta enquanto o valor da entrada e a data continuarem fixos, porque prazo curto justifica risco elevado na carteira.",
+      "b": "A proposta se sustenta em parte: mantidos os R$ 1.250, cabe dividir o aporte entre um fundo arrojado e a reserva, de forma que a média alcance R$ 1.900.",
+      "c": "O prazo de vinte e quatro meses pede R$ 1.900 por mês contra R$ 1.250 de capacidade, e os R$ 650 de diferença se resolvem em valor, data ou prioridade.",
+      "d": "A conta permanece a mesma do plano anterior, e o encaminhamento é elevar o aporte para R$ 1.900 e acompanhar se Nelson sustenta o valor novo."
      },
      "gabarito": "c"
     },
@@ -137,15 +137,33 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "usar_em": [
       "simulado"
      ],
-     "comentario": "<p>A alternativa A está correta. Encurtar o prazo para a mesma meta tende a exigir aporte superior, e a resposta pode combinar revisão do valor, da data ou da prioridade com ajuste que continue cabendo no orçamento.</p><p>A alternativa B refaz parte da conta, mas ignora se o corte proposto será sustentável. A alternativa C revisa variáveis controláveis, porém trata renda eventual incerta como aporte recorrente. A alternativa D considera prazo e despesas, mas usa retorno arriscado para completar uma capacidade de poupança ausente.</p><p>Regra de bolso: prazo curto aumenta o esforço; revise meta, data e prioridade antes de tentar substituir aporte por risco.</p>",
-     "enunciado": "<p>A mudança profissional de Nádia exige acumular R$ 180.000, e ela procura a planejadora Soraia em João Pessoa. O prazo inicialmente considerado era de seis anos, mas Nádia decide antecipar o objetivo para três anos sem alterar o valor desejado. Seu orçamento registra renda líquida estável, despesas essenciais cobertas, compromissos contratados e uma sobra recorrente já destinada ao plano. Nádia afirma que a redução do prazo pode ser resolvida apenas escolhendo investimentos com oscilação elevada, pois acredita que rentabilidade esperada dispensa ampliar o aporte. Soraia verifica que cortar de forma intensa os gastos discricionários eliminaria atividades importantes para a família e poderia tornar a estratégia difícil de sustentar. Ela precisa mostrar quais variáveis podem ser revistas sem apresentar risco como criador de capacidade financeira. Nádia quer uma resposta que possa acompanhar no orçamento a cada mês, e não uma promessa de retorno capaz de esconder eventual insuficiência de caixa. Analise a situação e indique a orientação coerente.</p>",
+     "comentario": "<p>A alternativa A está correta. Com os números de hoje, R$ 6.100 menos R$ 4.030 de essenciais, menos R$ 1.350 de compromissos e menos R$ 520 de ajustáveis deixam R$ 200 por mês. O aumento de R$ 600 na renda veio acompanhado de R$ 1.300 de despesa nova, e o plano se ajusta ao que existe agora.</p><p>A alternativa B usa risco para cobrir um valor que o orçamento deixou de comportar, e o resgate no meio do mês chega antes do rendimento. A alternativa C mantém no papel um aporte que já não cabe, e esse é o desenho que leva ao resgate e à sensação de fracasso. A alternativa D troca um aporte menor por aporte nenhum, quando R$ 200 por mês preservam o hábito e parte do avanço.</p><p>Regra de bolso: mudou renda, dependente ou despesa, a conta se refaz antes de discutir o valor antigo.</p>",
+     "enunciado": "<p>Em Maceió, o assessor Iuri revisa com Bruna o plano montado doze meses antes, cuja meta é a entrada de um apartamento, sem data fechada com a construtora. Na montagem, com renda líquida de R$ 5.500, as despesas essenciais somavam R$ 3.350, os compromissos contratados somavam R$ 730 e os gastos ajustáveis somavam R$ 520, e Bruna reservou R$ 900 em onze dos doze meses do período. O segundo filho nasceu no oitavo mês do plano. Hoje a renda líquida dela é de R$ 6.100, as despesas essenciais subiram para R$ 4.030 com a chegada do segundo filho, entrou uma mensalidade escolar de R$ 620 entre os compromissos contratados e os gastos ajustáveis seguem em R$ 520. Bruna pergunta se mantém os R$ 900, já que a renda aumentou. Indique o encaminhamento de Iuri.</p>",
      "alternativas": {
-      "a": "Recalcular o esforço e negociar valor, prazo ou prioridade, ajustando o aporte dentro do fluxo sem tratar risco como fonte de poupança.",
-      "b": "Recalcular o esforço para três anos e reduzir gastos ajustáveis sem testar se o corte poderá ser mantido pela família.",
-      "c": "Revisar valor e prioridade da meta, mas contar renda extraordinária futura como aporte mensal já disponível.",
-      "d": "Revisar prazo e despesas, mantendo o valor da meta por meio de rentabilidade esperada de uma carteira arriscada."
+      "a": "Refazer a conta com os números atuais, que devolvem R$ 200 por mês, e ajustar o valor reservado a esse resultado.",
+      "b": "Manter os R$ 900 e cobrir a diferença com um fundo de risco elevado, já que o horizonte da meta segue longo e a renda de Bruna subiu R$ 600 no período.",
+      "c": "Manter os R$ 900 por disciplina e revisar a lista de gastos ajustáveis ao longo dos próximos meses, até que o orçamento volte a comportar o valor.",
+      "d": "Suspender os aportes até a renda recompor os R$ 900 de margem, preservando sem alteração o valor e o prazo combinados na montagem original."
      },
      "gabarito": "a"
+    },
+    {
+     "id": "cpror-cli-01-q9",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O padrão de vida pretendido se estima por categoria, com as hipóteses declaradas: uma despesa que termina sai da conta, uma que sobe com a idade entra com o aumento esperado, e um gasto que hoje outra pessoa paga entra com valor próprio se passar para Sandra.</p><p>A alternativa A inverte a ordem do trabalho, porque o rendimento da carteira ajuda a chegar à meta e não define quanto Sandra vai gastar por mês. A alternativa C supõe uma compensação entre quedas e altas que ninguém verificou, e é justamente essa hipótese que precisa aparecer escrita. A alternativa D corrige um item e mantém a régua de fora, deixando saúde, cuidados e viagens sem tratamento.</p><p>Regra de bolso: renda pretendida na aposentadoria se monta somando despesas futuras por categoria, e percentual da renda atual é chute com aparência de conta.</p>",
+     "enunciado": "<p>Em Juiz de Fora, o assessor Murilo atende Sandra, gerente de loja, de 52 anos, com renda líquida de R$ 9.700 por mês. Ela quer organizar a aposentadoria e chega com uma regra que leu em uma revista: acumular o suficiente para receber 70% da renda atual. Sandra descreve o que espera daquela fase: a prestação do apartamento, de R$ 1.480, termina em seis anos; o plano de saúde custa R$ 940 e sobe a cada mudança de faixa etária; a mãe dela já recebe cuidados domiciliares de R$ 1.100 por mês, que hoje a irmã paga e passarão a ser divididos entre as duas; e o plano é viajar duas vezes por ano, em roteiros que ela estima em R$ 6.000 cada. Ela pede que Murilo confirme o percentual para fechar o valor da meta. Avalie a regra trazida por Sandra e indique o encaminhamento do assessor.</p>",
+     "alternativas": {
+      "a": "O percentual serve de ponto de partida e se acerta no fim, depois de estimado o rendimento que a carteira de Sandra entregará durante o período de acumulação.",
+      "b": "A projeção se monta por categoria de despesa, porque a prestação sai do orçamento, o plano de saúde sobe com a idade e os cuidados e as viagens entram com valor próprio.",
+      "c": "O percentual se aplica ao caso, porque a queda de despesas na aposentadoria compensa o aumento dos gastos com saúde na mesma proporção ao longo dos anos.",
+      "d": "A projeção parte dos 70% e desconta a prestação de R$ 1.480 depois da quitação, ajuste que já adapta a regra da revista à situação descrita por Sandra."
+     },
+     "gabarito": "b"
     }
    ],
    "Planejamento financeiro para formação de poupança": [
@@ -9184,6 +9202,347 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "d": "O CDB usa o saldo de R$ 120.000 do teto ordinário; o DPGE é analisado no regime especial e pode abranger os R$ 10 milhões nas condições dadas."
      },
      "gabarito": "d"
+    }
+   ],
+   "Renda fixa privada: custódia, carência, liquidez e rating": [
+    {
+     "id": "cpror-inv-09-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Renda fixa privada reúne instrumentos de dívida de entidades não soberanas, incluindo emissões financeiras e cooperativas, dívida corporativa e estruturas de crédito ou securitização. O controle estatal do emissor não transforma a dívida privada em título público.</p><p>A alternativa B inclui títulos governamentais e usa custódia como critério de classificação. A alternativa C confunde regra de remuneração com garantia de retorno e inclui fundos e ações. A alternativa A exclui emissores que pertencem expressamente à categoria descrita na aula.</p><p>Regra de bolso: renda fixa privada é dívida de entidade não soberana; depois identifique o emissor e a estrutura.</p>",
+     "enunciado": "<p>Uma especialista organiza os instrumentos de renda fixa privada antes de apresentá-los a um cliente. Identifique a descrição correta dessa categoria e de seus principais grupos de ativos.</p>",
+     "alternativas": {
+      "a": "Reúne dívidas de empresas privadas, excluindo instituições financeiras, cooperativas, securitizadoras e sociedades sob controle estatal ou misto.",
+      "b": "Reúne títulos emitidos por entes governamentais e empresas, desde que a taxa seja conhecida e o ativo permaneça custodiado em banco.",
+      "c": "Reúne aplicações com retorno garantido por regra contratual, incluindo fundos, ações preferenciais e títulos públicos indexados.",
+      "d": "Reúne dívidas de entidades não soberanas, como emissões financeiras, debêntures, notas comerciais e instrumentos de crédito ou securitização."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-09-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O emissor capta e assume a obrigação de pagamento; o distribuidor apresenta ou intermedeia; o custodiante controla e concilia a posição e processa instruções e eventos; o depositário central mantém a infraestrutura centralizada quando aplicável.</p><p>A alternativa A transfere a dívida e a garantia ao distribuidor e ao custodiante. A alternativa C atribui inadimplência ao custodiante e reparte suas funções entre outras partes. A alternativa D troca os papéis do depositário central e do emissor.</p><p>Regra de bolso: emissor deve, distribuidor oferece, custodiante controla e depositário centraliza a infraestrutura.</p>",
+     "enunciado": "<p>Uma plataforma oferece um título emitido por outra instituição e mantém a posição do cliente em sua estrutura de custódia. Compare as funções do emissor, distribuidor, custodiante e depositário central.</p>",
+     "alternativas": {
+      "a": "O distribuidor assume a dívida, o custodiante garante o pagamento e o depositário central escolhe a taxa aplicada ao investidor.",
+      "b": "O emissor paga a obrigação, o distribuidor oferece o produto, o custodiante controla a posição e o depositário central mantém a infraestrutura aplicável.",
+      "c": "O custodiante assume o risco de inadimplência, enquanto emissor e distribuidor dividem o controle, a conciliação e o processamento dos eventos financeiros.",
+      "d": "O depositário central distribui o produto ao cliente, e o emissor apenas registra a posição depois de juros, amortizações e vencimento."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-09-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O percentual do CDI aplica uma proporção à variação acumulada do indexador e difere de CDI mais spread. Cupons pagam juros e amortizações devolvem principal antes do vencimento, criando risco de reinvestimento se as novas taxas forem diferentes.</p><p>A alternativa C trata 110% do CDI como CDI mais dez pontos e atribui ao custodiante a repetição da taxa. A alternativa B usa prefixação para apagar risco de crédito e chama amortização de juros. A alternativa D retira a parcela fixa da estrutura híbrida e nega a devolução antecipada do principal.</p><p>Regra de bolso: identifique a fórmula da taxa e depois separe cupom de juros, amortização de principal e pagamento final.</p>",
+     "enunciado": "<p>Em São Luís, o gerente Otávio apresenta a Helena três emissões com prazo de quatro anos e aplicação de R$ 90.000 em cada uma. A primeira paga taxa prefixada no vencimento. A segunda remunera a 110% do CDI e paga juros semestrais. A terceira combina IPCA com taxa anual e devolve parcelas do principal a cada ano. Helena afirma que 110% do CDI equivale a CDI mais 10% e prefere os recebimentos periódicos, pois acredita que repetirá a taxa original ao reaplicar cada valor. Os documentos separam cupons de juros e amortizações de principal, com datas indicadas no cronograma das emissões. A cliente usará o fluxo para formar patrimônio, sem despesas previstas no período. Analise remuneração, pagamentos e risco de reinvestimento.</p>",
+     "alternativas": {
+      "a": "A segunda aplica 110% à variação do CDI; cupons e amortizações antecipam recursos e podem ser reaplicados por taxas diferentes.",
+      "b": "A primeira elimina risco de crédito por fixar a taxa, enquanto a terceira devolve apenas juros nas amortizações anuais.",
+      "c": "A segunda soma dez pontos ao CDI, e seus cupons preservam a taxa contratada quando forem reaplicados pelo mesmo custodiante durante o prazo original.",
+      "d": "A terceira é pós-fixada sem parcela fixa, e as amortizações mantêm o principal investido até o vencimento final da emissão."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-09-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Na transferência de custódia, o título continua pertencendo à mesma pessoa, mantém as condições econômicas e passa a ser controlado por outro custodiante. Não há venda, resgate ou mudança do devedor por esse ato.</p><p>A alternativa B cria liquidação e reinvestimento sem ordem de venda. A alternativa C transfere ao custodiante a obrigação e o risco do emissor. A alternativa A mistura transferência, resgate e venda no mercado secundário.</p><p>Regra de bolso: transferência muda quem controla a posição; venda ou resgate muda a disponibilidade do dinheiro.</p>",
+     "enunciado": "<p>Após trocar de plataforma, Mauro pede que uma debênture com vencimento em 2029 passe do custodiante Origem para o custodiante Destino. O título permanece em seu nome, e a documentação da emissão conserva taxa, fluxo de cupons, amortizações e vencimento. A plataforma Origem também mostra uma opção de venda no mercado secundário, sujeita a comprador e ao preço vigente. Mauro acredita que a transferência converterá o papel em dinheiro e que o novo custodiante assumirá a obrigação caso o emissor deixe de pagar. O extrato da plataforma Destino deverá registrar a mesma quantidade de títulos depois da movimentação. A equipe recebe apenas uma instrução de transferência da posição, sem ordem de venda ou pedido de resgate. Avalie os efeitos da transferência solicitada.</p>",
+     "alternativas": {
+      "a": "A transferência equivale a resgate contratual e preserva a taxa apenas quando existe comprador para a posição no mercado secundário.",
+      "b": "A transferência liquida a debênture pelo preço de mercado e envia o dinheiro ao novo custodiante, que escolhe outra emissão com taxa e prazo semelhantes para o cliente.",
+      "c": "A transferência mantém o título, mas desloca ao novo custodiante a dívida, os cupons e o risco de inadimplência antes ligado ao emissor.",
+      "d": "A transferência muda o controle da posição para outro custodiante, preserva o título e suas condições e não transforma a operação em venda ou resgate."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-09-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. No X, o fim da carência precisa ser combinado com janela de resgate e prazo de crédito. No Y, a venda depende de comprador e preço de mercado. A taxa indicada não transforma nenhuma dessas condições em disponibilidade garantida.</p><p>A alternativa B iguala negociabilidade a resgate e preserva a taxa em uma venda sujeita ao mercado. A alternativa C ignora janelas e processamento depois do fim da carência. A alternativa D usa o vencimento comum para apagar diferenças decisivas de saída.</p><p>Regra de bolso: vencimento encerra, carência restringe, resgate segue contrato e venda depende de mercado.</p>",
+     "enunciado": "<p>A professora Sílvia reserva R$ 48.000 para pagar a entrada de um imóvel em nove meses. Em uma reunião em João Pessoa, ela compara dois títulos do mesmo emissor, ambos com vencimento em trinta meses. O título X tem carência de seis meses, mas o contrato prevê resgate apenas em janelas trimestrais, com crédito dois dias úteis após o pedido. O título Y não permite resgate e só pode sair por venda a outro investidor pelo preço aceito no mercado. Sílvia insiste no Y porque a tela o chama de negociável e porque sua taxa indicada é superior. O contrato do imóvel fixa a data e prevê perda do negócio se o valor não for pago. A próxima janela do X e seu prazo de crédito terminam antes dessa data. Avalie a compatibilidade das saídas com o compromisso.</p>",
+     "alternativas": {
+      "a": "O X merece análise da janela e do prazo de crédito; o Y depende de comprador e preço, e sua taxa não assegura saída em nove meses.",
+      "b": "O Y atende ao compromisso porque negociabilidade equivale a resgate na data escolhida e preserva a remuneração indicada na venda.",
+      "c": "O fim da carência do X garante crédito imediato em seis meses, mesmo com janelas trimestrais e prazo operacional após o pedido.",
+      "d": "Os dois atendem da mesma forma porque o vencimento comum define a liquidez, enquanto carência e mercado afetam apenas a taxa."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-09-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A alta das taxas afeta preço, a abertura do spread reflete pior percepção de crédito, a escassez de compradores revela liquidez, cupons expõem ao reinvestimento e 65% no mesmo emissor cria concentração. Levar ao vencimento não elimina inadimplência.</p><p>A alternativa A reduz fenômenos distintos ao risco de mercado. A alternativa C limita liquidez aos cupons e transfere a dívida ao custodiante. A alternativa D aplica reinvestimento ao principal inteiro e trata concentração como proteção contra deterioração do emissor.</p><p>Regra de bolso: nomeie separadamente quem pode deixar de pagar, quanto o preço oscila, como sair, onde reaplicar e quanto está concentrado.</p>",
+     "enunciado": "<p>Em Cuiabá, o analista Davi revisa a carteira de Fátima, composta em 65% por títulos prefixados longos de uma mesma companhia. Desde a compra, as taxas de mercado aumentaram, o mercado passou a exigir spread de crédito superior para financiar o emissor e as ofertas de compra ficaram escassas e com desconto. Parte dos papéis paga cupons, que a cliente vem reaplicando por taxas inferiores às contratadas na origem. As três emissões vencem em datas próximas e respondem ao mesmo setor econômico. Fátima afirma que manter os títulos até o vencimento remove os riscos porque as oscilações deixam de aparecer no extrato. Ela descarta reduzir a posição, e a empresa segue responsável pelos pagamentos. Classifique os riscos presentes na carteira.</p>",
+     "alternativas": {
+      "a": "Há apenas risco de mercado, porque o aumento das taxas explica spread, falta de compradores, cupons e concentração no mesmo emissor.",
+      "b": "Há riscos de mercado, crédito, liquidez, reinvestimento e concentração; carregar até o vencimento reduz o efeito do preço, mas preserva risco de pagamento.",
+      "c": "Há risco de liquidez apenas durante os cupons, pois o vencimento fixa o preço e transfere a obrigação de pagamento ao custodiante.",
+      "d": "Há risco de reinvestimento sobre o principal inteiro, enquanto a concentração reduz o impacto da piora de crédito do emissor e da falta de compradores na carteira."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-09-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Rating é uma opinião relativa dentro da metodologia e da escala usadas. Agência, escala, atualização e objeto precisam ser identificados. Garantias, subordinação e prioridade podem diferenciar emissão e emissor, enquanto outlook negativo aponta direção possível sem registrar rebaixamento.</p><p>A alternativa A compara diretamente escalas e ignora fatores da emissão. A alternativa B trata perspectiva como nota já alterada e replica o efeito nas emissões. A alternativa D impõe a nota do emissor e exclui elementos que podem mudar o rating de um título específico.</p><p>Regra de bolso: antes de comparar letras de rating, compare agência, escala, data e aquilo que recebeu a nota.</p>",
+     "enunciado": "<p>A gerente Lorena recebe de Roberto duas fichas de crédito. A companhia possui uma nota em escala nacional atribuída há três meses e perspectiva negativa. Uma emissão subordinada da mesma empresa recebeu nota inferior, também em escala nacional, por sua posição na prioridade de pagamento. Outro relatório traz nota em escala global para uma emissão com garantia, publicada por agência diferente e em outra data. As fichas mostram vencimentos e condições de negociação distintos. Roberto quer ordenar as três notas como se usassem a mesma régua e afirma que a perspectiva negativa já rebaixou a companhia. Ele pretende escolher o título com símbolo visualmente elevado sem verificar liquidez ou atualização. Analise o uso das classificações.</p>",
+     "alternativas": {
+      "a": "As notas podem ser ordenadas pelo símbolo, pois escala nacional, escala global, agência, garantia e subordinação afetam apenas a taxa.",
+      "b": "A perspectiva negativa já substitui a nota vigente por outra inferior e permite antecipar o mesmo rebaixamento para as emissões.",
+      "c": "É preciso conferir agência, escala, data e objeto avaliado; emissão e emissor podem divergir, e perspectiva negativa indica direção possível.",
+      "d": "A nota do emissor prevalece sobre as emissões, porque garantia, prioridade e subordinação ficam fora da opinião de crédito."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-09-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. A data do objetivo torna carência e processamento do resgate condições da indicação. O A possui saída contratual anterior ao compromisso, sujeita à confirmação operacional. O B fica indisponível por dezoito meses, e nem custódia nem rating encurtam esse período.</p><p>A alternativa A usa taxa, custódia e rating para criar antecipação do principal. A alternativa B calcula uma carência média que não altera o bloqueio de cada parcela. A alternativa D usa a nota comum para apagar diferenças de prazo, liquidez e remuneração.</p><p>Regra de bolso: a taxa entra na comparação depois que a saída cabe na data do objetivo.</p>",
+     "enunciado": "<p>O dentista Guilherme separou R$ 72.000 para quitar equipamentos da clínica em onze meses e mantém sua reserva de emergência em outro produto. Uma distribuidora apresenta dois títulos do mesmo emissor. O título A paga 104% do CDI, vence em três anos e permite resgate em dias úteis após carência de quatro meses, com crédito no segundo dia útil. O título B paga 119% do CDI, vence em três anos, mantém carência de dezoito meses e não possui venda contratualmente assegurada. Ambos aparecem sob o mesmo custodiante e têm a mesma nota de crédito. O fornecedor já fixou a data do pagamento no contrato. Guilherme exige o B pela taxa e diz que custódia e rating garantem o dinheiro na compra dos equipamentos. Indique a conduta diante do objetivo.</p>",
+     "alternativas": {
+      "a": "Indicar o B porque a taxa compensa a carência, e o custodiante pode antecipar o principal quando o rating do emissor permanece estável.",
+      "b": "Indicar metade em cada título, pois a combinação das taxas reduz a carência média para onze meses e assegura o valor da despesa.",
+      "c": "Priorizar a saída compatível do A, confirmando janela e crédito; custódia e rating não corrigem a indisponibilidade do B no prazo.",
+      "d": "Escolher pelo rating comum, pois notas iguais tornam prazo, carência, forma de saída e remuneração indiferentes para o objetivo."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-09-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Distribuir posições entre custodiantes não muda a concentração de R$ 420.000 no mesmo setor. A venda antecipada depende do preço disponível e pode realizar a perda associada ao desconto. Cupons e amortizações também exigem reinvestimento em condições futuras.</p><p>A alternativa B usa custodiantes como diversificação e ignora o efeito econômico da venda. A alternativa C transforma perspectiva em inadimplência comprovada e usa liquidez de outra posição para apagar concentração. A alternativa D atribui ao vencimento a eliminação de riscos e presume reinvestimento pela taxa original.</p><p>Regra de bolso: custódia organiza posições; diversificação depende das exposições, e saída antecipada depende de comprador e preço.</p>",
+     "enunciado": "<p>A empresária Aline leva ao consultor Bruno uma carteira de R$ 640.000. Dela, R$ 420.000 estão em três debêntures longas do mesmo setor, custodiadas em duas plataformas; duas pagam cupons e uma possui amortizações anuais. Uma das emissões teve perspectiva alterada para negativa, sem mudança da nota, e passou a ser negociada com desconto após abertura do spread. Os R$ 220.000 restantes ficam em um título bancário com resgate contratual para a reserva da empresa. As três debêntures financiam companhias expostas ao mesmo ciclo econômico. Aline considera a carteira diversificada por usar dois custodiantes e quer vender a emissão descontada para eliminar o risco de crédito, mesmo sem necessidade imediata de caixa. Avalie o diagnóstico e a decisão.</p>",
+     "alternativas": {
+      "a": "A custódia não diversifica emissores ou setores; a venda depende de preço, e cupons e amortizações ainda trazem risco de reinvestimento.",
+      "b": "Dois custodiantes eliminam concentração; vender com desconto remove o risco de crédito sem transformar a oscilação em resultado para a carteira.",
+      "c": "A perspectiva negativa prova inadimplência futura e exige venda, enquanto o título bancário líquido compensa a concentração das debêntures.",
+      "d": "Manter até o vencimento elimina crédito, mercado e liquidez, e a divisão entre cupons e amortizações preserva a remuneração original."
+     },
+     "gabarito": "a"
+    }
+   ],
+   "Dívida corporativa: emissões, ofertas, cupons e duration": [
+    {
+     "id": "cpror-inv-10-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Debêntures podem ser simples, conversíveis em ações da própria companhia ou permutáveis por ações de outra companhia indicada. A nota comercial é promessa de pagamento em dinheiro, não conversível, e pode ser emitida pelas formas societárias descritas na aula.</p><p>A alternativa A trata instrumentos distintos como o mesmo contrato. A alternativa C troca os emissores, pois nota comercial também pode ser emitida por limitada e cooperativa. A alternativa B apresenta instituição financeira como emissora regular de debênture, contrariando a regra e suas exceções específicas.</p><p>Regra de bolso: identifique primeiro o instrumento, o emissor permitido e o direito de conversão previsto nos documentos.</p>",
+     "enunciado": "<p>Ao classificar instrumentos de dívida corporativa, uma analista compara debêntures e notas comerciais. Identifique a afirmação compatível com emissores, forma e possibilidade de conversão apresentadas na aula.</p>",
+     "alternativas": {
+      "a": "Debênture e nota comercial são o mesmo contrato, diferenciadas pelo prazo escolhido e pela instituição que coordena a distribuição.",
+      "b": "Instituição financeira emite debênture como regra, enquanto sociedade não financeira utiliza nota comercial para financiar suas atividades e captar junto ao público.",
+      "c": "Nota comercial é restrita a sociedades anônimas abertas, enquanto debênture pode ser emitida por sociedade limitada ou cooperativa.",
+      "d": "Debênture pode prever conversão ou permuta conforme a forma; nota comercial é promessa de pagamento em dinheiro e não se converte em ações."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-10-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O valor nominal serve de referência para cálculos e pagamentos, sem ser necessariamente o preço de aquisição ou negociação. Cupom é juro, amortização devolve principal e cada série pode ter vencimento, remuneração e cronograma próprios.</p><p>A alternativa A troca preço, cupom e amortização. A alternativa C apaga diferenças permitidas entre séries da mesma emissão. A alternativa D transforma vencimento em preço e cria incompatibilidade inexistente entre cupom e formas de pagamento do principal.</p><p>Regra de bolso: leia a série específica e separe valor de referência, juros, devolução do principal e data final.</p>",
+     "enunciado": "<p>Uma companhia divide sua emissão em duas séries com condições próprias. Compare série, valor nominal, cupom, amortização e vencimento na individualização dos títulos.</p>",
+     "alternativas": {
+      "a": "O valor nominal é o preço de mercado do título; cupom devolve principal e amortização representa os juros pagos antes do vencimento.",
+      "b": "O valor nominal é a referência da emissão; cupom paga juros, amortização devolve principal e cada série pode ter fluxo e vencimento próprios.",
+      "c": "As séries compartilham taxa e cronograma por pertencerem à mesma emissão, variando somente o número de títulos oferecido ao público.",
+      "d": "O vencimento define o preço de aquisição, e a existência de cupom impede amortizações, resgate antecipado ou pagamento integral do principal na data final."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-10-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Em condições comparáveis, cupons e amortizações antecipam recebimentos e tendem a reduzir a duration diante de uma estrutura concentrada no vencimento. Cupom isolado não determina retorno, que também depende de preço, prazo, amortizações e cumprimento da obrigação.</p><p>A alternativa A iguala duration pela data final e usa cupom como prova de retorno. A alternativa B inverte o efeito da concentração dos fluxos sobre a duration. A alternativa D condiciona a diferença ao valor nominal e ignora o momento dos recebimentos.</p><p>Regra de bolso: vencimento informa a data final; duration também enxerga quando cada fluxo chega ao investidor.</p>",
+     "enunciado": "<p>Em Ribeirão Preto, o assessor Leandro compara duas debêntures da mesma companhia, com valor nominal de R$ 1.000 e vencimento em cinco anos. A série Alfa paga juros semestrais e começa a amortizar o principal no terceiro ano. A série Beta acumula a remuneração e paga o principal no vencimento. As taxas e as demais condições são comparáveis. A cliente Joice afirma que as duas possuem a mesma duration porque a data final é idêntica e prefere Alfa por acreditar que cupom elevado prova retorno superior. Os documentos mostram a distribuição temporal de cada fluxo, os preços de aquisição e a obrigação da companhia em cada série. Joice pretende reinvestir os valores recebidos até o quinto ano. Analise a relação entre fluxos, retorno e duration.</p>",
+     "alternativas": {
+      "a": "As séries têm a mesma duration por vencerem juntas, e o cupom de Alfa demonstra retorno superior sem considerar preço, amortização ou taxa de reinvestimento.",
+      "b": "Beta tende a ter duration inferior porque concentra o recebimento no vencimento e evita o risco de reinvestimento dos cupons de Alfa.",
+      "c": "Alfa tende a ter duration inferior por antecipar juros e principal; o retorno ainda depende de preço, prazo, fluxos e pagamento do emissor.",
+      "d": "Alfa e Beta diferem na duration somente se os valores nominais mudarem, pois cupons e amortizações não alteram o momento dos fluxos."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-10-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A emissão de títulos novos forma a parcela primária e direciona R$ 300 milhões ao emissor. A venda de títulos existentes forma a parcela secundária e direciona R$ 180 milhões à titular vendedora. A combinação caracteriza oferta mista.</p><p>A alternativa C usa a obrigação da emissora para transformar a venda existente em captação nova. A alternativa B usa a presença da vendedora para apagar a parcela primária. A alternativa D classifica corretamente a oferta, mas atribui ao emissor recursos que pertencem à vendedora.</p><p>Regra de bolso: título novo financia o emissor; título existente vendido financia seu titular.</p>",
+     "enunciado": "<p>Uma companhia anuncia oferta de R$ 480 milhões em debêntures. Desse volume, R$ 300 milhões correspondem a títulos novos, e o prospecto informa que os recursos financiarão equipamentos e capital de giro. Os R$ 180 milhões restantes pertencem a uma acionista que vende títulos adquiridos anteriormente. Durante o atendimento em Aracaju, Paulo entende que o volume inteiro reforçará o caixa da emissora porque a companhia aparece como responsável pelas debêntures. A documentação separa a quantidade ofertada em cada parcela, identifica a titular vendedora e informa as contas que receberão os valores na liquidação. O material também apresenta a destinação apenas para a parcela de emissão nova. Classifique a oferta e o destino dos recursos.</p>",
+     "alternativas": {
+      "a": "A oferta é mista: R$ 300 milhões da parcela primária vão ao emissor e R$ 180 milhões da parcela secundária vão à vendedora.",
+      "b": "A oferta é secundária nos R$ 480 milhões, pois a presença de uma titular vendedora desloca para ela o produto financeiro da captação.",
+      "c": "A oferta é primária nos R$ 480 milhões, pois a responsabilidade da emissora pelo título define quem recebe os recursos da distribuição.",
+      "d": "A oferta é mista, mas os R$ 480 milhões vão à emissora, que depois repassa à vendedora o valor referente aos títulos existentes."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-10-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A companhia emissora continua responsável pelo título, o coordenador líder organiza a distribuição e as corretoras podem integrar o consórcio. A lâmina é síntese e não substitui os documentos aplicáveis. O rito automático ocorre sem análise prévia da CVM e não aprova a qualidade do investimento.</p><p>A alternativa A transfere a dívida ao coordenador e torna a lâmina substituta dos documentos. A alternativa B elimina obrigações que permanecem no rito automático. A alternativa C transforma registro em aprovação e reservas em assunção do risco de crédito.</p><p>Regra de bolso: registro disciplina a oferta; não certifica o emissor, o título ou sua adequação ao cliente.</p>",
+     "enunciado": "<p>A investidora Raquel recebe material de uma oferta sob rito automático. A companhia é a emissora e também promove a parcela primária; o Banco Vetor atua como coordenador líder, enquanto duas corretoras recebem reservas. A lâmina resume as características, e o prospecto apresenta destinação, fatores de risco e procedimentos. A escritura reúne remuneração, datas e obrigações do título. Raquel afirma que o registro automático significa análise prévia e aprovação da qualidade pela CVM. Ela pretende ler somente a lâmina e atribuir ao coordenador a obrigação de pagar os títulos. O aviso da oferta identifica responsabilidades separadas e não registra análise prévia do regulador. Avalie participantes, documentos e rito.</p>",
+     "alternativas": {
+      "a": "O coordenador passa a ser devedor dos títulos, e a lâmina substitui prospecto e escritura quando o registro segue rito automático.",
+      "b": "O rito automático dispensa divulgação e responsabilidade dos participantes, pois o registro é obtido sem exame documental da CVM.",
+      "c": "A CVM aprova a qualidade da emissão no rito automático, e as corretoras que recebem reservas assumem o risco de crédito e o pagamento dos fluxos da companhia.",
+      "d": "O emissor permanece devedor; o líder organiza a distribuição, a lâmina sintetiza e o rito automático não representa aprovação da qualidade."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-10-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O bookbuilding coleta intenções e auxilia a definição da remuneração, sem garantir alocação. O pedido de reserva segue as condições próprias da oferta. Com demanda superior ao volume, o rateio pode reduzir R$ 120.000 para R$ 72.000 conforme os critérios divulgados.</p><p>A alternativa A transforma intenção em garantia de volume e taxa. A alternativa C atribui a taxa ao pedido de reserva e desloca o bookbuilding para depois da liquidação. A alternativa D usa a alocação para apagar etapas posteriores do processo.</p><p>Regra de bolso: bookbuilding ajuda a precificar, reserva manifesta o pedido e rateio pode reduzir o que será alocado.</p>",
+     "enunciado": "<p>Em uma oferta de notas comerciais, o intervalo indicativo de remuneração será testado por bookbuilding. Fernanda manifesta interesse por R$ 120.000 no procedimento e, depois, envia pedido de reserva conforme as regras divulgadas. A demanda supera o volume disponível, e os documentos preveem rateio proporcional. A taxa final fica em um ponto inferior dentro da faixa inicial, e Fernanda recebe alocação de R$ 72.000. O comunicado apresenta a demanda coletada e o critério aplicado aos pedidos. Ela contesta o resultado porque entende que a intenção apresentada garantiu R$ 120.000 e fixou a taxa no limite superior da faixa. O cronograma ainda prevê subscrição, liquidação e anúncio de encerramento. Analise formação da taxa e alocação.</p>",
+     "alternativas": {
+      "a": "A intenção no bookbuilding garante o volume solicitado e a taxa superior da faixa, cabendo ao rateio atingir investidores sem reserva ou que enviaram pedidos depois da coleta.",
+      "b": "Bookbuilding coleta intenções para formar condições, reserva segue suas regras e excesso de demanda pode gerar rateio e alocação parcial.",
+      "c": "O pedido de reserva define a taxa final, enquanto o bookbuilding ocorre depois da liquidação para medir o resultado da distribuição.",
+      "d": "A alocação de R$ 72.000 encerra a oferta para Fernanda e elimina as etapas de subscrição, liquidação e anúncio de encerramento."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-10-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A garantia firme compromete o intermediário a subscrever ou adquirir a parcela não distribuída e protege a execução da captação para o ofertante. Ela não garante que a companhia pagará a dívida, não substitui garantias da debênture e não cria liquidez para o cliente.</p><p>A alternativa B transfere a obrigação da emissora ao intermediário. A alternativa A transforma compromisso de colocação em resgate individual. A alternativa D substitui garantias da escritura e muda indevidamente a identidade do emissor.</p><p>Regra de bolso: garantia de colocação trata do sucesso da distribuição; garantia do título trata da obrigação de crédito.</p>",
+     "enunciado": "<p>O gerente Marcos apresenta a Elisa uma emissão de debêntures distribuída com garantia firme de colocação. O contrato obriga a instituição intermediária a adquirir, nas condições pactuadas, a parcela que não encontrar investidores. A escritura atribui à companhia a obrigação de pagar juros e principal e descreve separadamente as garantias do título. Elisa acredita que a participação de um banco de grande porte elimina o risco da emissora e insiste em aplicar recursos destinados a uma despesa próxima. A oferta alcançou demanda inferior ao volume inicialmente previsto, e o banco deverá cumprir o compromisso de colocação. O material também informa vencimento longo e ausência de resgate contratual no prazo da cliente. Avalie o alcance da garantia firme.</p>",
+     "alternativas": {
+      "a": "A garantia firme funciona como resgate ao investidor, pois obriga o intermediário a comprar a posição quando surgir uma despesa do cliente.",
+      "b": "A garantia firme transfere juros e principal ao banco intermediário depois da oferta, eliminando o risco de crédito da companhia emissora.",
+      "c": "A garantia firme protege a execução da colocação para o ofertante, mas não garante pagamento do título nem corrige a incompatibilidade de liquidez.",
+      "d": "A garantia firme substitui as garantias previstas na escritura e converte o banco coordenador em emissor e devedor da parcela adquirida na distribuição."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-10-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. No resgate antecipado, a emissora cancela as debêntures; na opção de compra, pode mantê-las em tesouraria e revendê-las. O investidor não impede cláusulas previstas. Na repactuação, a emissora recompra de quem recusar; o vencimento antecipado protege credores diante de descumprimento.</p><p>A alternativa A troca quem é favorecido pelas cláusulas. A alternativa C inverte cancelamento e tesouraria e cria concordância do investidor. A alternativa D prende quem recusa a repactuação e transforma vencimento antecipado em alongamento favorável à emissora.</p><p>Regra de bolso: resgate cancela, opção pode levar à tesouraria, repactuação admite saída e descumprimento pode antecipar a dívida.</p>",
+     "enunciado": "<p>A companhia Boreal possui duas séries de debêntures com vencimento original em seis anos. A escritura prevê resgate antecipado e opção de compra, acionáveis pela emissora conforme as condições pactuadas, além de repactuação em data definida. Também prevê vencimento antecipado se a companhia descumprir obrigação relevante. Com a queda dos juros, a emissora avalia encerrar uma dívida cara. O comunicado menciona valor nominal atualizado e remuneração proporcional até o evento. O investidor César afirma que poderá impedir qualquer antecipação e que os títulos recomprados permanecerão em circulação em qualquer das cláusulas. Se houver repactuação, ele pretende recusar os novos termos sem vender seus papéis. Compare os efeitos das quatro cláusulas.</p>",
+     "alternativas": {
+      "a": "Resgate antecipado e opção de compra favorecem o debenturista, enquanto repactuação e vencimento antecipado são escolhas da emissora para alterar prazo e custo da dívida.",
+      "b": "Resgate antecipado cancela os títulos; opção de compra pode levá-los à tesouraria; recusa à repactuação obriga recompra, e inadimplemento pode antecipar vencimento.",
+      "c": "Resgate antecipado mantém os títulos em tesouraria, e opção de compra exige cancelamento, embora as duas dependam da concordância do investidor.",
+      "d": "Repactuação prende quem rejeita os termos, enquanto vencimento antecipado permite à emissora alongar o prazo depois de descumprir obrigação."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-10-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Sol entrega juros trimestrais, compatíveis com a renda solicitada. Ao antecipar cupons e depois principal, seus fluxos diferem de Lua e tendem a reduzir a duration em condições comparáveis. A remuneração final e a alocação ainda dependem do processo da oferta.</p><p>A alternativa C cria retirada periódica em uma série que concentra pagamentos e garante a faixa preliminar. A alternativa B usa emissor e vencimento para apagar diferenças de fluxo e processo. A alternativa D inverte o efeito dos cupons sobre a duration e transforma intenção em alocação.</p><p>Regra de bolso: escolha primeiro o fluxo que serve ao objetivo; depois confirme taxa final, alocação e risco do emissor.</p>",
+     "enunciado": "<p>A aposentada Lúcia procura a assessora Camila em Belém para investir R$ 160.000 e complementar a renda pelos próximos quatro anos. Sua reserva e os gastos de curto prazo estão separados. Uma oferta apresenta duas séries da mesma debênture e com o mesmo vencimento: a série Sol paga juros trimestrais e amortiza o principal a partir do terceiro ano; a série Lua acumula remuneração e concentra o principal no vencimento. A taxa final será definida em bookbuilding, e o pedido pode sofrer rateio. A cliente pretende usar cada crédito trimestral para despesas correntes e não deseja vender os títulos no mercado. Lúcia escolhe Lua porque a faixa indicativa parece elevada e afirma que vencimento comum torna os fluxos e a duration equivalentes. Avalie a indicação e as conclusões da cliente.</p>",
+     "alternativas": {
+      "a": "Sol é compatível com a renda periódica pelos cupons; seus fluxos antecipados diferenciam a duration, e taxa e alocação ainda serão definidas.",
+      "b": "As séries atendem igualmente ao objetivo, pois vencimento e emissor comuns anulam diferenças de fluxo, duration, taxa e alocação.",
+      "c": "Lua atende à renda periódica porque a remuneração acumulada pode ser retirada trimestralmente, e o bookbuilding garante a faixa divulgada.",
+      "d": "Lua deve ser indicada pela faixa elevada, pois ausência de cupons reduz a duration e converte a intenção no bookbuilding em alocação certa para o valor solicitado."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-10-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. A dívida vence antes de o projeto gerar caixa relevante, e outras obrigações se concentram no mesmo período. Lucro contábil não equivale a caixa disponível, alongar parte do passivo não reduz automaticamente o endividamento total e o registro não certifica o pagamento.</p><p>A alternativa B transforma lucro em caixa e refinanciamento em redução automática da dívida. A alternativa C usa registro e taxa para apagar o descasamento de prazos. A alternativa D atribui à destinação dos recursos a eliminação da necessidade de refinanciamento.</p><p>Regra de bolso: compare quando a dívida vence com quando a finalidade financiada começa a produzir caixa.</p>",
+     "enunciado": "<p>Uma indústria pretende captar R$ 700 milhões em notas comerciais com vencimento em dezoito meses para financiar um projeto cuja geração de caixa relevante começará em quatro anos. O prospecto informa lucro contábil recente, endividamento elevado e outras dívidas concentradas no mesmo semestre do vencimento da nova emissão. Parte dos recursos substituirá obrigações imediatas e parte financiará equipamentos. As demonstrações indicam necessidade de novos financiamentos durante a implantação. O diretor financeiro afirma que o lucro e o alongamento de uma parcela do passivo provam capacidade de pagamento. A investidora Neide quer decidir apenas pela taxa indicada e pelo registro da oferta. Analise prazo, destinação e capacidade de pagamento.</p>",
+     "alternativas": {
+      "a": "O prazo curto pode pressionar o caixa antes da maturação do projeto; lucro, refinanciamento e registro não dispensam analisar geração de caixa e vencimentos concentrados.",
+      "b": "O lucro contábil assegura o pagamento, e substituir obrigações reduz o endividamento total no valor captado antes do início do projeto, mesmo com necessidade de novos financiamentos.",
+      "c": "O registro da oferta confirma a capacidade de pagamento, enquanto a taxa indicada absorve o descasamento entre projeto e vencimento.",
+      "d": "A destinação para equipamentos elimina a dependência de refinanciamento, mesmo com outras dívidas vencendo no mesmo semestre."
+     },
+     "gabarito": "a"
     }
    ],
    "VGBL: acumulação, aposentadoria e planejamento patrimonial": [
