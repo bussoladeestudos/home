@@ -1,5 +1,5 @@
 /* GERADO por outputs/questoes_para_js.py. NAO editar a mao.
-   Fonte: _conteudo/cpror/questoes/**.yaml  ·  829 questoes em 90 topicos
+   Fonte: _conteudo/cpror/questoes/**.yaml  ·  879 questoes em 95 topicos
    Para mudar uma questao, edite o YAML e rode o script de novo. */
 window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
  "cproRAnbima": {
@@ -13052,6 +13052,901 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "d": "O fundo pode participar da carteira em proporção compatível, mas enquadramento fiscal não elimina concentração, mercado, projeto, liquidez nem exposição prévia ao grupo."
      },
      "gabarito": "d"
+    }
+   ],
+   "Tributação dos fundos: come-cotas, IOF e alocação líquida": [
+    {
+     "id": "cpror-inv-30-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. No regime geral, a tributação periódica ocorre no último dia útil de maio e novembro. A antecipação usa 15% nos fundos de longo prazo e 20% nos de curto prazo.</p><p>A alternativa A troca datas e alíquotas. A alternativa C cria aniversário individual e usa 22,5% como cobrança periódica. A alternativa D inventa resgate obrigatório e ignora a classificação fiscal da carteira.</p><p>Regra de bolso: maio e novembro, 15% no longo e 20% no curto.</p>",
+     "enunciado": "<p>Um investidor compara a incidência periódica de dois fundos sujeitos ao regime geral, um classificado como longo prazo e outro como curto prazo. Identifique datas e alíquotas do come-cotas.</p>",
+     "alternativas": {
+      "a": "A incidência ocorre no primeiro dia útil de junho e dezembro, com 20% no fundo de longo prazo e 15% no fundo de curto prazo.",
+      "b": "A incidência ocorre no último dia útil de maio e novembro, com 15% no fundo de longo prazo e 20% no fundo de curto prazo.",
+      "c": "A incidência ocorre apenas no aniversário de cada aplicação, com 15% no fundo de longo prazo e 22,5% no fundo de curto prazo.",
+      "d": "A incidência ocorre no resgate anual obrigatório, com alíquota definida pelo tempo que o cotista permaneceu em cada um dos fundos."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-30-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O imposto é recolhido mediante redução da quantidade de cotas em valor equivalente. Trata-se de antecipação do IR devido, incorporada ao controle fiscal para impedir nova cobrança sobre a mesma parcela.</p><p>A alternativa B reduz o valor unitário e cria imposto adicional. A alternativa C leva o imposto à conta corrente e preserva as cotas. A alternativa D trata o mecanismo como resgate obrigatório do principal.</p><p>Regra de bolso: come-cotas antecipa imposto reduzindo quantidade, e não cria uma segunda tributação sobre o mesmo ganho.</p>",
+     "enunciado": "<p>Após a cobrança semestral, uma cliente vê redução de sua quantidade de cotas, enquanto o valor unitário permanece no patamar apurado pelo fundo. Explique o mecanismo do come-cotas.</p>",
+     "alternativas": {
+      "a": "Há redução de cotas pelo IR antecipado; o controle fiscal evita nova cobrança sobre o mesmo rendimento.",
+      "b": "O administrador reduz o valor unitário da cota e conserva a quantidade, criando uma despesa adicional que será somada ao imposto do resgate.",
+      "c": "O gestor vende ativos da carteira e transfere o imposto à conta corrente, sem alterar quantidade de cotas ou custo fiscal da aplicação.",
+      "d": "O cotista resgata parte do principal por obrigação legal, e a parcela tributada deixa de integrar a apuração de ganhos e perdas do fundo."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-30-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Vinte por cento de R$ 4.000 correspondem a R$ 800. Como R$ 600 já foram antecipados, o complemento é R$ 200, sem soma de duas tributações independentes.</p><p>A alternativa B soma alíquotas como impostos separados. A alternativa C trata a antecipação como tributação definitiva. A alternativa A aproveita apenas parte arbitrária do valor recolhido.</p><p>Regra de bolso: imposto final menos come-cotas já pago resulta no complemento do resgate.</p>",
+     "enunciado": "<p>Uma aplicação em fundo de longo prazo acumula R$ 4.000 de rendimento sujeito a uma incidência periódica. O come-cotas antecipa 15%, equivalentes a R$ 600. Meses depois, o cotista resgata em prazo cuja alíquota final aplicável ao rendimento ainda é de 20%. Ele afirma que o resgate cobrará mais 20% sobre os mesmos R$ 4.000 e que o come-cotas funciona como imposto separado. A gerente esclarece que o informe registra o montante recolhido como antecipação vinculada à posição. Para simplificar, considere o mesmo rendimento como base de comparação e desconsidere valorização posterior, novos aportes ou outras incidências. Calcule o imposto total correspondente à alíquota final, o complemento no resgate e explique a relação com o valor antecipado.</p>",
+     "alternativas": {
+      "a": "O imposto total é R$ 800 e o complemento é R$ 600, pois apenas R$ 200 do come-cotas podem ser aproveitados contra o imposto final do resgate.",
+      "b": "O imposto total é R$ 1.400 e o complemento é R$ 800, porque o resgate soma 20% aos 15% recolhidos anteriormente pelo come-cotas.",
+      "c": "O imposto total é R$ 600 e inexiste complemento, porque a incidência de 15% encerra a tributação desse rendimento no fundo de longo prazo.",
+      "d": "O imposto total é R$ 800 e o complemento é R$ 200, pois os R$ 600 antecipados integram o imposto devido e falta alcançar a alíquota final de 20%."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-30-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Curto ou longo prazo decorre da carteira segundo as regras fiscais. No fundo curto, a alíquota final fica em 20% acima de 180 dias, ainda que o cotista permaneça por vários anos.</p><p>A alternativa A transforma prazo do investidor em classificação e cria restituição. A alternativa B importa faixa da tabela de longo prazo. A alternativa D ignora o complemento possível até 22,5% no resgate curto.</p><p>Regra de bolso: o relógio do cotista define a faixa dentro do regime; a carteira define qual regime usar.</p>",
+     "enunciado": "<p>Eduardo mantém há quatro anos uma aplicação em fundo classificado como curto prazo para fins fiscais. A carteira conserva prazo médio compatível com essa classificação, e o fundo recolhe come-cotas de 20% em maio e novembro. Ao planejar o resgate, Eduardo aplica à posição a alíquota mínima de 15% da tabela dos fundos de longo prazo, alegando que seu tempo pessoal superou 720 dias. O relatório fiscal informa que fundos de curto prazo usam alíquota final de 22,5% até 180 dias e 20% acima desse prazo. Como a antecipação já ocorreu a 20%, o exemplo apresenta saldo de complemento igual a zero para essa posição antiga. Eduardo insiste que seu extrato individual deveria prevalecer sobre a composição da carteira. Analise a classificação, a alíquota e o argumento do cotista.</p>",
+     "alternativas": {
+      "a": "O tempo pessoal transforma o fundo em longo prazo, permitindo 15% e restituição dos cinco pontos percentuais antecipados em excesso no come-cotas.",
+      "b": "A carteira define a classificação, mas quatro anos levam o fundo curto à alíquota de 17,5%, com complemento de imposto no momento do resgate.",
+      "c": "A carteira define a classificação; após 180 dias, o curto prazo permanece em 20%, de modo que a longa permanência do cotista não leva à alíquota de 15%.",
+      "d": "O come-cotas de 20% torna a tributação definitiva em qualquer prazo, mesmo quando o resgate de fundo curto ocorre dentro dos primeiros 180 dias."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-30-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A Lei 14.754 estendeu, em regra, a tributação periódica a condomínios abertos e fechados, alcançando fundos fechados e exclusivos fora de regimes especiais ou exceções.</p><p>A alternativa B repete a referência anterior a 2024. A alternativa A ignora tratamentos próprios e exceções. A alternativa D cria distinção baseada em negociação e separa características que não definem sozinhas o regime.</p><p>Regra de bolso: desde 2024, fechado pode ter come-cotas; confirme categoria, regime específico e exceção antes de concluir.</p>",
+     "enunciado": "<p>Na revisão tributária de uma família, o assessor encontra um fundo fechado exclusivo que vinha sendo descrito em material antigo como sujeito a imposto apenas na amortização ou no resgate. A classe permanece fora dos regimes especiais e das exceções legais mencionadas na aula. Desde 2024, seus informes passaram a registrar tributação periódica segundo o regime geral. O cliente contesta a mudança, afirma que condomínio fechado conserva a regra anterior e pede tratamento diferente do fundo aberto da mesma classificação fiscal. O assessor também analisa um FII, um FI-Infra e um FIA enquadrado, cada qual com tratamento próprio, e separa os produtos antes de comparar o valor líquido. Avalie o alcance da Lei 14.754/2023 e o cuidado com as exceções.</p>",
+     "alternativas": {
+      "a": "A lei colocou cada fundo fechado no come-cotas, inclusive FII, FI-Infra, FIA enquadrado e outros produtos com tributação própria ou exceção legal.",
+      "b": "O regime geral alcança apenas fundos abertos, enquanto fechados e exclusivos conservam tributação exclusivamente na amortização ou no resgate.",
+      "c": "Desde 2024, o regime geral pode alcançar fundos abertos, fechados e exclusivos; categoria e enquadramento definem eventuais exceções.",
+      "d": "A forma exclusiva determina come-cotas, mas a forma fechada afasta a cobrança quando as cotas ficam sem negociação em mercado organizado."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-30-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O FIA enquadrado, com ao menos 67% nos ativos admitidos, não sofre come-cotas e paga 15% no evento tributável. O diferimento não significa isenção nem compatibilidade automática.</p><p>A alternativa B cria isenção. A alternativa C aplica cobrança periódica ao FIA enquadrado. A alternativa D ignora diferenças de volatilidade, horizonte e objetivo entre as classes.</p><p>Regra de bolso: FIA enquadrado difere imposto até o evento, mas conserva o risco acionário.</p>",
+     "enunciado": "<p>Uma classe de ações mantém 72% da carteira nos ativos de renda variável admitidos para o enquadramento fiscal e conserva essa condição durante o período analisado. Em novembro, uma cliente estranha a ausência de redução de cotas e conclui que o fundo é isento. O material informa retenção de 15% na distribuição de rendimentos, amortização ou resgate. A cliente pretende substituir uma aplicação de renda fixa por essa classe apenas para adiar o imposto, embora seu objetivo tenha prazo curto e baixa tolerância à volatilidade. Ela insiste que qualquer adiamento tributário compensa a possibilidade de perda na cota. O assessor precisa separar diferimento, enquadramento da carteira e adequação financeira. Analise o tratamento do FIA e a conclusão de alocação.</p>",
+     "alternativas": {
+      "a": "O FIA enquadrado fica sem come-cotas e sofre 15% no evento tributável; isso representa diferimento, sem isenção nem dispensa da análise de risco e prazo.",
+      "b": "A participação acima de 67% torna o FIA isento para pessoa física, desde que a cliente mantenha a cota até o objetivo e aceite a oscilação da carteira.",
+      "c": "O FIA sofre come-cotas de 15% em novembro e complementa a mesma alíquota no resgate, porque a parcela de renda variável supera o mínimo fiscal.",
+      "d": "A ausência de come-cotas torna o FIA alternativa equivalente à renda fixa, variando apenas o momento do imposto e a quantidade de cotas do cliente."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-30-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O IOF é 20% de R$ 1.200, ou R$ 240. A base do IR cai para R$ 960, sobre a qual 22,5% resultam em R$ 216. O ganho líquido é R$ 744.</p><p>A alternativa B calcula IR sobre o ganho antes do IOF. A alternativa C aplica a soma das alíquotas como IOF e volta a tributar o saldo. A alternativa A usa R$ 960 como base declarada, mas calcula 22,5% sobre R$ 1.200.</p><p>Regra de bolso: em resgate sujeito aos dois tributos, IOF reduz primeiro o ganho que servirá de base ao IR.</p>",
+     "enunciado": "<p>Bianca resgata no vigésimo dia uma aplicação sujeita a IOF regressivo e à tabela de fundo de longo prazo. O rendimento bruto é de R$ 1.200. Para o exercício, a tabela aplicável naquele dia informa IOF de 20% sobre o rendimento, e o prazo leva a IR de 22,5%. O IOF é calculado primeiro, e a base do IR considera sua dedução. Bianca soma as duas alíquotas e tenta aplicar 42,5% diretamente sobre o ganho bruto. O extrato apresenta come-cotas anterior e outras deduções iguais a zero, enquanto o principal aplicado fica fora das bases. Ela pede que o gerente demonstre cada etapa, pois desconfia do valor creditado e acredita que as porcentagens podem ser simplesmente somadas. Calcule IOF, base do IR, IR e rendimento líquido após os dois tributos, seguindo a ordem descrita na aula.</p>",
+     "alternativas": {
+      "a": "A apuração resulta em IOF de R$ 240, base de IR de R$ 960, IR de R$ 270 e ganho líquido de R$ 690 para Bianca.",
+      "b": "A apuração resulta em IOF de R$ 240, base de IR de R$ 1.200, IR de R$ 270 e ganho líquido de R$ 690 para Bianca.",
+      "c": "A apuração resulta em IOF de R$ 510, base de IR de R$ 690, IR de R$ 155,25 e ganho líquido de R$ 534,75 para Bianca.",
+      "d": "A apuração resulta em IOF de R$ 240, base de IR de R$ 960, IR de R$ 216 e ganho líquido de R$ 744 para Bianca."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-30-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. O produto com imposto final deixa a parcela futura do tributo investida por mais tempo. No come-cotas, a redução antecipada de cotas retira capital que também produziria rendimento.</p><p>A alternativa A trata antecipação como imposto adicional. A alternativa C troca redução de quantidade por queda obrigatória do valor unitário. A alternativa D ignora o rendimento que o imposto antecipado deixa de gerar.</p><p>Regra de bolso: alíquotas finais iguais podem produzir líquidos diferentes quando uma delas é recolhida antes.</p>",
+     "enunciado": "<p>Dois produtos recebem R$ 80.000, obtêm o mesmo retorno bruto, possuem o mesmo risco e terminam sujeitos a 15% sobre o ganho. No primeiro, o imposto é pago apenas no resgate; no segundo, 15% dos rendimentos são antecipados em incidências periódicas. Um demonstrativo simplificado informa valor líquido final de R$ 126.500 no primeiro e R$ 121.900 no segundo. As taxas de administração são iguais, com IOF e complemento no resgate iguais a zero. O cliente atribui os R$ 4.600 de diferença a uma alíquota final superior no segundo produto e afirma que reduzir cotas deixa intactos os juros compostos. O assessor precisa explicar a causa econômica usando os dados fornecidos. Analise a diferença líquida e o efeito do momento da cobrança.</p>",
+     "alternativas": {
+      "a": "A diferença decorre de alíquota superior no segundo produto, pois cobranças periódicas de 15% se somam ao imposto final de 15% no resgate.",
+      "b": "A diferença de R$ 4.600 decorre da antecipação, que reduz cotas e a base que renderia nos períodos seguintes, mesmo com retorno bruto e alíquota final iguais.",
+      "c": "A diferença decorre da redução do valor unitário da cota, que perde rentabilidade após cada cobrança mesmo quando a quantidade permanece igual.",
+      "d": "Os valores deveriam ser iguais, porque diferimento altera a data do recolhimento sem efeito sobre o capital que participa da rentabilidade composta."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-30-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. Desde 2024, um fundo fechado pode integrar o regime geral, mas a conclusão depende da categoria e do enquadramento, pois existem tratamentos próprios e exceções legais.</p><p>A alternativa A conserva a regra antiga. A alternativa C generaliza o come-cotas e ignora regimes próprios. A alternativa D usa a negociação como critério determinante, embora a aula exija examinar a categoria efetiva.</p><p>Regra de bolso: aberto ou fechado deixou de encerrar a resposta; categoria e enquadramento fiscal decidem o regime.</p>",
+     "enunciado": "<p>Uma consultora revisa quatro classes fechadas após a mudança legislativa: um fundo de renda fixa sob regime geral, um FII, um FI-Infra qualificado e um FIP que atende aos requisitos de tratamento específico. O cliente aprendeu em material anterior que fundo fechado fica sem come-cotas e quer aplicar essa frase aos quatro produtos. A consultora também considera um ETF de renda fixa e um FIDC cujo enquadramento precisa ser verificado. A forma condominial é conhecida, mas categoria, composição e requisitos fiscais variam. O cliente insiste em escolher pelo diferimento e ignora riscos, custos e liquidez. Os documentos de cada classe estão disponíveis para conferir a composição e os requisitos efetivamente cumpridos. Avalie o procedimento para identificar a tributação periódica após a Lei 14.754.</p>",
+     "alternativas": {
+      "a": "A forma fechada afasta o come-cotas dos quatro produtos, preservando tributação apenas na amortização, distribuição ou resgate de cada classe.",
+      "b": "O fundo de renda fixa pode entrar no regime geral; as demais categorias exigem conferência de regime próprio e enquadramento.",
+      "c": "A lei colocou os quatro produtos e o ETF de renda fixa no come-cotas, deixando exceção apenas para fundos de ações com 67% em renda variável.",
+      "d": "A negociação das cotas define o regime: classe listada fica fora da cobrança periódica, enquanto classe sem mercado secundário entra no come-cotas."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-30-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Diferimento melhora a capitalização apenas dentro de uma estratégia financeiramente compatível. Para obrigação próxima e baixa capacidade de perda, volatilidade, liquidez, custos e tributos precisam ser comparados em conjunto.</p><p>A alternativa B trata prazo curto como proteção contra volatilidade. A alternativa C afirma que o IOF consome o principal, embora incida sobre rendimento. A alternativa D equipara riscos distintos e inventa compensação automática.</p><p>Regra de bolso: compare valor líquido, risco e disponibilidade no mesmo horizonte; imposto isolado não decide a alocação.</p>",
+     "enunciado": "<p>Fábio monta uma reserva para despesas que podem surgir em vinte dias e compara um fundo de renda fixa com resgate rápido e come-cotas com um FIA sem tributação periódica, mas exposto à oscilação acionária. O fundo de renda fixa está sujeito a IOF no prazo cogitado e poderá ter complemento de IR conforme a faixa da aplicação. O FIA cobra 15% no evento tributável, mas sua cota pode cair antes do uso. Fábio pede o FIA apenas para evitar come-cotas e afirma que pagar imposto depois produz resultado superior em qualquer situação. Seu orçamento apresenta baixa capacidade de perda e dependência do valor para uma obrigação próxima. O assessor compara prazo de conversão e pagamento, IOF, IR, taxas, risco e valor líquido provável. Avalie a alocação diante do objetivo.</p>",
+     "alternativas": {
+      "a": "A ausência de come-cotas não basta para substituir risco estável por ações; liquidez, IOF, IR, custos e capacidade de perda precisam ser comparados no prazo real.",
+      "b": "O FIA deve ser escolhido porque diferir 15% preserva capitalização, e o prazo curto reduz a chance de a volatilidade superar a economia tributária esperada.",
+      "c": "O fundo de renda fixa deve ser excluído porque o IOF nos primeiros dias consome o principal e torna o valor líquido inferior ao do FIA sem cobrança periódica.",
+      "d": "Os dois produtos são equivalentes no risco, pois tributação antecipada no fundo de renda fixa compensa a oscilação do FIA quando o horizonte é curto."
+     },
+     "gabarito": "a"
+    }
+   ],
+   "Patrimônio negativo, insolvência e liquidação de fundos": [
+    {
+     "id": "cpror-inv-31-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O patrimônio líquido corresponde aos ativos menos as obrigações: R$ 80 milhões menos R$ 100 milhões resultam em R$ 20 milhões negativos.</p><p>A alternativa A inverte o sinal do resultado. A alternativa C desconsidera as obrigações. A alternativa D soma grandezas que devem ser subtraídas para apurar o patrimônio.</p><p>Regra de bolso: se obrigações superam ativos, falta patrimônio e o saldo é negativo.</p>",
+     "enunciado": "<p>Uma classe possui R$ 80 milhões em ativos e R$ 100 milhões em obrigações. Calcule o patrimônio líquido e interprete a situação.</p>",
+     "alternativas": {
+      "a": "O patrimônio líquido é positivo em R$ 20 milhões, pois as obrigações representam apenas valores a vencer.",
+      "b": "O patrimônio líquido é negativo em R$ 20 milhões, pois os ativos são insuficientes para cobrir as obrigações.",
+      "c": "O patrimônio líquido equivale a R$ 80 milhões, porque somente os ativos entram na apuração contábil da classe.",
+      "d": "O patrimônio líquido equivale a R$ 180 milhões, pela soma dos ativos com os compromissos assumidos pela classe."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-31-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Rentabilidade negativa reduz a cota, enquanto patrimônio negativo surge quando as obrigações superam os ativos. A materialização de risco, isoladamente, também é insuficiente para concluir pela existência de fraude.</p><p>A alternativa A equipara conceitos distintos e presume falha. A alternativa C transforma perda em processo judicial automático. A alternativa D usa a queda percentual para definir responsabilidade e impedir apuração.</p><p>Regra de bolso: perda reduz valor; patrimônio negativo revela insuficiência de ativos; fraude depende de evidência.</p>",
+     "enunciado": "<p>Depois de uma queda de 10% na cota, um investidor afirma que a classe entrou em patrimônio negativo e que a perda comprova fraude. Analise a afirmação e diferencie os conceitos.</p>",
+     "alternativas": {
+      "a": "Rentabilidade negativa e patrimônio negativo são equivalentes, e ambos demonstram falha dos prestadores na gestão da carteira.",
+      "b": "Uma perda pode ocorrer com ativos ainda superiores às obrigações; patrimônio negativo e eventual falha exigem apurações próprias.",
+      "c": "A queda da cota produz insolvência judicial imediata, independentemente do valor dos ativos e das obrigações da classe.",
+      "d": "A perda de 10% limita as obrigações ao saldo da carteira e encerra qualquer análise sobre a conduta dos prestadores essenciais."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-31-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A limitação alcança o valor subscrito. A parcela comprometida e ainda pendente pode continuar devida, enquanto a perda econômica pode consumir o montante integralizado.</p><p>A alternativa B confunde limite de responsabilidade com garantia de restituição e perdão da subscrição. A alternativa C ultrapassa o limite regulamentar. A alternativa D troca o valor subscrito pelo integralizado e cria chamada irrestrita.</p><p>Regra de bolso: responsabilidade limitada alcança o valor subscrito (o além do valor aplicado somente fica afastado quando a subscrição já foi integralizada).</p>",
+     "enunciado": "<p>Helena subscreveu R$ 100 mil em uma classe denominada Responsabilidade Limitada e integralizou R$ 70 mil. Antes da data prevista para o restante, derivativos geraram perdas e o patrimônio da classe ficou negativo. Ela entende que a limitação elimina tanto a parcela de R$ 30 mil ainda comprometida quanto qualquer perda sobre o valor já entregue. O anexo da classe confirma que a responsabilidade está limitada ao valor subscrito, e os prestadores apresentam a chamada da parcela pendente segundo as condições assumidas. O extrato discrimina separadamente o compromisso original e o montante efetivamente pago. Considere ausentes dolo ou má-fé e qualquer aporte voluntário aprovado para resolver o déficit. Determine a extensão do compromisso de Helena e o efeito econômico sobre suas cotas.</p>",
+     "alternativas": {
+      "a": "Helena pode perder R$ 70 mil e deve cumprir os R$ 30 mil pendentes; o limite impede cobrança além dos R$ 100 mil subscritos.",
+      "b": "A responsabilidade limitada extingue os R$ 30 mil pendentes e garante a devolução dos R$ 70 mil, pois o déficit pertence apenas aos prestadores.",
+      "c": "Helena deve cobrir sua parcela proporcional de qualquer déficit, ainda que o total ultrapasse os R$ 100 mil subscritos no ingresso.",
+      "d": "A perda fica limitada aos R$ 70 mil integralizados, mas a classe pode cobrar valor adicional livremente se a assembleia rejeitar o plano de resolução."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-31-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Sem limitação no regulamento, pode existir chamada adicional para cobrir o patrimônio negativo. A recomendação exige leitura do anexo, do termo e da capacidade do cliente.</p><p>A alternativa B atribui efeito jurídico ao nome comercial. A alternativa C transforma ciência de risco em limitação. A alternativa D trata uma possível obrigação da classe ilimitada como escolha individual e transfere o déficit.</p><p>Regra de bolso: nome do produto orienta a busca; regulamento, anexo e adesão definem a responsabilidade assumida.</p>",
+     "enunciado": "<p>Durante a indicação de uma classe que admite exposição a risco de capital, o gerente consulta apenas a categoria comercial e informa ao cliente que a perda termina no valor aplicado. O anexo descritivo, porém, classifica a responsabilidade como ilimitada, e o termo de adesão registra a ciência sobre a possibilidade de perdas superiores ao patrimônio comprometido. O cliente possui reserva pequena, horizonte curto e diz que aceitaria perder a cota, mas recusaria qualquer chamada adicional. O gerente argumenta que o termo serve apenas como aviso genérico e que uma assembleia poderia transformar eventual aporte em decisão facultativa para cada investidor. Avalie a informação necessária antes da recomendação.</p>",
+     "alternativas": {
+      "a": "A classe ilimitada pode gerar contribuição adicional; anexo, adesão e capacidade financeira orientam a recomendação.",
+      "b": "A categoria comercial define a limitação, enquanto anexo e termo apenas descrevem riscos de mercado suportados pelo gestor.",
+      "c": "A assinatura do termo converte a responsabilidade em limitada, desde que o cliente declare capacidade de perder o valor da cota.",
+      "d": "O aporte em classe ilimitada depende da vontade individual do cotista, pois qualquer insuficiência permanece sob responsabilidade do administrador."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-31-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Diante de patrimônio negativo em classe limitada, o administrador fecha a classe, interrompe amortizações e subscrições, cancela pedidos pendentes de conversão, comunica o gestor e divulga fato relevante.</p><p>A alternativa A admite entradas e pagamentos seletivos. A alternativa C preserva movimentações que devem ser interrompidas. A alternativa D cria preferência temporal incompatível com o tratamento equitativo.</p><p>Regra de bolso: fechar, cancelar pendências, comunicar e medir o déficit antecedem a tentativa de resolução.</p>",
+     "enunciado": "<p>Ao fechar o balancete, o administrador identifica patrimônio negativo em uma classe com responsabilidade limitada. Existem novos pedidos de aplicação, amortização programada e resgates solicitados cujas cotas ainda aguardam conversão. Um atendente sugere manter as movimentações até a assembleia, para preservar a experiência dos clientes, e divulgar o problema somente depois de estimar a recuperação. Outro funcionário alerta que permitir a saída dos primeiros cotistas poderia concentrar as obrigações em quem permanecesse. O administrador também precisa comunicar o gestor e organizar a resposta prevista na norma. Identifique as providências imediatas compatíveis com a proteção equitativa dos cotistas.</p>",
+     "alternativas": {
+      "a": "A classe permanece aberta para aplicações, enquanto resgates convertidos e pendentes são pagos pela ordem em que chegaram.",
+      "b": "Movimentações são interrompidas, pedidos pendentes de conversão são cancelados e o fato relevante é divulgado.",
+      "c": "Somente a amortização é suspensa; aplicações e resgates continuam até que a assembleia rejeite uma solução.",
+      "d": "A classe paga primeiro os resgates solicitados e depois fecha para entradas, porque o direito de precedência acompanha o horário do pedido."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-31-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Em regra, administrador e gestor elaboram o plano em até 20 dias. Concluído o documento, o administrador convoca a assembleia em até dois dias úteis. A dispensa depende de conclusão fundamentada dos prestadores essenciais sobre a solvência.</p><p>A alternativa B inverte a sequência. A alternativa A cria suspensão sem prazo. A alternativa D atribui discricionariedade isolada ao administrador mesmo diante de risco à solvência.</p><p>Regra de bolso: primeiro medir e propor em até 20 dias; depois convocar em até dois dias úteis.</p>",
+     "enunciado": "<p>Uma classe limitada entrou em patrimônio negativo. O administrador e o gestor iniciaram o levantamento das causas, prepararam um balancete e discutiram alternativas de resolução. Um cotista exige assembleia no dia seguinte à identificação, antes da conclusão dos dados, enquanto outro afirma que a administração pode aguardar indefinidamente porque a classe está fechada. Os prestadores essenciais ainda avaliam se a insuficiência oferece risco à solvência, e a conclusão fundamentada dessa análise pode afetar a necessidade do plano. O registro interno marca como dia inicial a confirmação do saldo patrimonial negativo. Considere a regra geral de prazo e a exceção descrita na aula. Analise a ordem de elaboração do plano e de convocação da assembleia.</p>",
+     "alternativas": {
+      "a": "O fechamento suspende os prazos de resposta, cabendo ao gestor decidir quando divulgar causas, balancete e proposta aos cotistas.",
+      "b": "A assembleia ocorre em até dois dias corridos da perda, e o plano é apresentado em até 20 dias depois da deliberação dos cotistas.",
+      "c": "O plano sai em até 20 dias e, depois, a assembleia é convocada em até dois dias úteis; conclusão fundamentada sobre solvência pode dispensá-lo.",
+      "d": "O plano torna-se facultativo por decisão do administrador, ainda que os prestadores identifiquem risco concreto à solvência da classe."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-31-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Se o fechamento supera cinco dias úteis, o administrador convoca a assembleia em até um dia, para realização em até 15 dias. Resgate em ativos depende da concordância dos afetados.</p><p>A alternativa A converte fechamento em liquidação e cria fila preferencial. A alternativa C afasta a assembleia e inventa estimativa diária. A alternativa B reduz indevidamente as alternativas de deliberação.</p><p>Regra de bolso: iliquidez excepcional permite fechar; acima de cinco dias úteis, a assembleia organiza a solução.</p>",
+     "enunciado": "<p>Uma onda de resgates atinge uma classe aberta cuja carteira possui títulos sem compradores a preços razoáveis. Para pagar os primeiros pedidos, o gestor teria de vender com desconto elevado e transferir a perda para os cotistas remanescentes. O administrador fecha a classe para resgates e aplicações, cancela os pedidos ainda pendentes de conversão e divulga fato relevante. A suspensão alcança o sexto dia útil. Um cliente acusa fraude e exige pagamento imediato, enquanto outro propõe receber ativos da carteira sem consultar os demais afetados. A equipe registra que a classe ainda possui patrimônio positivo, embora a venda imediata imponha prejuízo relevante. Considere os prazos e as deliberações previstos para a crise de liquidez. Avalie a continuidade do procedimento.</p>",
+     "alternativas": {
+      "a": "O sexto dia transforma o fechamento em liquidação, e os primeiros solicitantes recebem os ativos disponíveis conforme a ordem dos pedidos.",
+      "b": "Os cotistas deliberam apenas entre reabrir e liquidar, pois cisão, manutenção do fechamento e entrega de ativos ficam fora da assembleia.",
+      "c": "A ausência de preço autoriza manter a classe fechada sem assembleia, desde que o gestor publique diariamente uma estimativa de reabertura.",
+      "d": "O administrador convoca a assembleia no prazo máximo de um dia, para realização em até 15 dias; resgate em ativos exige concordância dos afetados."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-31-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Patrimônio negativo é uma situação contábil; insolvência é procedimento judicial. Se a assembleia fracassa nas hipóteses descritas, o administrador apresenta o pedido, e a CVM também possui legitimidade nas condições da norma.</p><p>A alternativa A presume cancelamento sem processo. A alternativa B trata resgate como solução do déficit. A alternativa C confunde queda de cota, insolvência e responsabilidade do prestador.</p><p>Regra de bolso: patrimônio negativo aciona a resposta; insolvência exige o caminho judicial.</p>",
+     "enunciado": "<p>Depois do patrimônio negativo, uma classe limitada foi fechada e recebeu um plano com alternativas de aporte voluntário, reorganização e encerramento. A assembleia, por falta de quórum, deixou de ser instalada, e as obrigações continuam superiores aos ativos. Um grupo de cotistas afirma que o saldo contábil negativo já equivale a uma declaração judicial de insolvência. Outro grupo pede que o administrador simplesmente reabra os resgates, mesmo sem solução para o déficit. A CVM avalia impactos sobre o funcionamento do mercado e a integridade do sistema financeiro. O fato relevante sobre cada etapa permanece disponível aos investidores. Distinga a situação contábil do procedimento judicial e indique o encaminhamento previsto quando a deliberação fracassa.</p>",
+     "alternativas": {
+      "a": "O patrimônio negativo cancela automaticamente o registro da classe, dispensando pedido judicial e divulgação aos cotistas.",
+      "b": "A reabertura encerra o déficit contábil, pois os pedidos de resgate transformam as obrigações em perdas individuais dos cotistas.",
+      "c": "A insolvência surge com qualquer cota negativa e transfere ao administrador as obrigações assumidas pela carteira antes do fechamento.",
+      "d": "A insolvência depende de declaração judicial; frustrada a solução da assembleia, o administrador ou a CVM podem requerê-la."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-31-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. Após considerar as obrigações, os R$ 10 milhões são divididos pelas cotas: 60% geram R$ 6 milhões e 40% geram R$ 4 milhões. Ativos ilíquidos podem exigir pagamentos sucessivos.</p><p>A alternativa A rateia o valor anterior à reserva. A alternativa B ignora as participações. A alternativa D cria precedência e garantia de capital ausentes no rateio proporcional.</p><p>Regra de bolso: liquide ativos, considere obrigações e divida o saldo na proporção das cotas.</p>",
+     "enunciado": "<p>Em uma liquidação, a venda gradual dos ativos gera R$ 12 milhões. O plano reserva R$ 2 milhões para obrigações da classe, deixando R$ 10 milhões de patrimônio para os cotistas. O grupo X detém 60% das cotas e o grupo Y, 40%. Parte da carteira ainda era pouco líquida, por isso as vendas ocorreram em etapas e os valores foram atualizados simultaneamente para os investidores. Um cotista do grupo Y exige receber primeiro o valor originalmente aplicado, alegando que proporcionalidade garante restituição integral e imediata. O auditor acompanha a movimentação patrimonial até o encerramento efetivo da classe. Para o cálculo, desconsidere outros custos e mudanças no patrimônio após a reserva das obrigações. Calcule a divisão e interprete os limites do rateio.</p>",
+     "alternativas": {
+      "a": "O grupo X recebe R$ 7,2 milhões e o grupo Y, R$ 4,8 milhões, pois as obrigações são rateadas somente depois da distribuição.",
+      "b": "Cada grupo recebe R$ 5 milhões, porque a liquidação divide o patrimônio disponível igualmente entre os conjuntos de investidores.",
+      "c": "O grupo X recebe R$ 6 milhões e o grupo Y, R$ 4 milhões; o rateio segue as cotas e pode ocorrer em etapas.",
+      "d": "O grupo Y recebe primeiro seu capital aplicado, e o saldo posterior pertence ao grupo X por possuir participação superior na classe."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-31-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. A responsabilidade limitada restringe a chamada ao valor subscrito, mas permite perda econômica integral e suspensão de resgates. O uso em prazo curto exige avaliar liquidez, diversificação e capacidade de perda.</p><p>A alternativa C transforma limitação em garantia. A alternativa B protege indevidamente a cota e condiciona fechamento à insolvência. A alternativa D reduz suitability à aceitação declarada de volatilidade.</p><p>Regra de bolso: limite de responsabilidade define quanto pode ser chamado; risco e liquidez definem quanto pode ser perdido ou ficar indisponível.</p>",
+     "enunciado": "<p>Mauro quer concentrar a reserva de curto prazo em uma classe que usa derivativos e admite risco de capital. Ele aceita oscilação, mas depende do dinheiro para uma obrigação em três meses e afirma que o sufixo Responsabilidade Limitada garante resgate, preserva o principal e impede fechamento. O regulamento limita a responsabilidade ao valor subscrito, a subscrição está integralizada e a política permite perdas relevantes. O gerente explica que iliquidez excepcional pode suspender movimentações e que uma liquidação depende da realização dos ativos. Mauro insiste em ignorar diversificação, prazo e fatos relevantes porque teme apenas uma chamada adicional. Avalie a adequação e o alcance da proteção regulamentar.</p>",
+     "alternativas": {
+      "a": "O limite afasta chamada adicional, mas admite perda e suspensão; prazo, liquidez e diversificação desaconselham a concentração.",
+      "b": "A limitação afasta perdas na cota, mas permite fechamento apenas quando a assembleia comprova insolvência judicial da classe.",
+      "c": "O sufixo garante principal e disponibilidade, tornando a classe compatível com a reserva desde que a subscrição esteja integralizada.",
+      "d": "A aceitação de volatilidade basta para a indicação, pois risco de capital e barreira de resgate ficam incorporados à ciência do cliente."
+     },
+     "gabarito": "a"
+    }
+   ],
+   "Fiagro, FIDC, exclusivos, FoF, FIP e clubes: comparação e tributação": [
+    {
+     "id": "cpror-inv-32-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O Fiagro direciona recursos às cadeias do agronegócio por diferentes ativos. Crédito, clima, safra, commodities, imóveis, concentração e liquidez variam conforme a carteira.</p><p>A alternativa B restringe a estrutura a recebíveis. A alternativa C limita a carteira a imóveis e elimina riscos relevantes. A alternativa D confunde Fiagro com clube e inventa composição obrigatória.</p><p>Regra de bolso: o nome Fiagro informa o setor; a carteira revela a origem do risco.</p>",
+     "enunciado": "<p>Uma cliente acredita que a sigla Fiagro identifica uma carteira formada exclusivamente por crédito rural. Explique a natureza e os riscos dessa estrutura.</p>",
+     "alternativas": {
+      "a": "O Fiagro pode reunir imóveis, participações, créditos e outros ativos do agronegócio; o risco depende da carteira efetiva.",
+      "b": "O Fiagro compra somente recebíveis rurais garantidos pela safra, por isso seu risco central se limita ao atraso dos devedores.",
+      "c": "O Fiagro adquire apenas propriedades rurais e elimina os riscos de crédito, preço de commodities e concentração regional.",
+      "d": "O Fiagro funciona como clube de produtores, com carteira obrigatoriamente distribuída entre ações e títulos públicos."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-32-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O clube é condomínio aberto de três a 50 pessoas naturais, distinto de fundo, registrado em entidade administradora de mercado e com ao menos 67% nos ativos admitidos de renda variável.</p><p>A alternativa B transforma o clube em fundo fechado e admite negociação das cotas. A alternativa C o equipara a classe exclusiva. A alternativa D cria sociedade, limite e carteira incompatíveis.</p><p>Regra de bolso: clube reúne de três a 50 pessoas naturais em uma carteira coletiva de renda variável.</p>",
+     "enunciado": "<p>Três colegas pretendem reunir recursos em uma carteira coletiva de renda variável e perguntam pelas características do clube de investimento. Identifique a estrutura.</p>",
+     "alternativas": {
+      "a": "O clube é condomínio aberto de três a 50 pessoas naturais, distinto de fundo, com pelo menos 67% nos ativos admitidos de renda variável.",
+      "b": "O clube é fundo fechado para investidores profissionais, com cotas negociadas em bolsa e participação individual sem limite.",
+      "c": "O clube é classe exclusiva de uma pessoa natural, administrada pelos participantes e dispensada de registro em entidade de mercado.",
+      "d": "O clube é sociedade empresária de até 100 participantes, com carteira concentrada em cotas de fundos e negociação pública das cotas."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-32-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O FIDC deve manter parcela superior a 50% em direitos creditórios após a formação. Para o regime especial, a aula exige ao menos 67%, condição de entidade de investimento e demais requisitos.</p><p>A alternativa B iguala os testes. A alternativa C inverte os percentuais. A alternativa A transforma a sigla FIDC em garantia tributária e ignora o enquadramento efetivo.</p><p>Regra de bolso: mais de 50% identifica a carteira regulatória; 67% participa do teste fiscal especial.</p>",
+     "enunciado": "<p>O comitê avalia um FIDC que, depois do período de formação, mantém 60% do patrimônio em direitos creditórios. A classe atende ao requisito regulatório de carteira e possui documentação dos recebíveis, mas o distribuidor afirma que os mesmos 60% bastam para o regime tributário especial sem come-cotas. A administração ainda precisa confirmar se o veículo é entidade de investimento e se cumpre os demais requisitos legais. Um analista lembra que o percentual fiscal previsto na aula difere do patamar regulatório e que a tributação periódica pode incidir quando o enquadramento especial falha. A ata do comitê exige que a decisão registre separadamente o teste da carteira e o teste fiscal. Compare os dois testes e avalie a conclusão do distribuidor.</p>",
+     "alternativas": {
+      "a": "O percentual de recebíveis define apenas o risco da carteira, pois a natureza de FIDC afasta a tributação periódica independentemente do enquadramento.",
+      "b": "Os 60% garantem simultaneamente a classificação como FIDC e o regime de 15% apenas no evento, pois o teste tributário repete o regulatório.",
+      "c": "O limite regulatório é de 67%, enquanto o fiscal exige apenas mais de 50%; a classe falha como FIDC, mas preserva o tratamento tributário.",
+      "d": "Os 60% superam 50%, mas ficam abaixo dos 67% fiscais; o regime especial ainda exige entidade de investimento e outros requisitos."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-32-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A perda consome R$ 20 milhões da subordinada e R$ 10 milhões do mezanino. Os R$ 5 milhões restantes alcançam a sênior, demonstrando que subordinação oferece proteção inicial, e não garantia.</p><p>A alternativa B inverte a ordem de absorção. A alternativa C interrompe artificialmente a perda. A alternativa A ignora as prioridades previstas entre as subclasses.</p><p>Regra de bolso: a perda sobe da subordinada para o mezanino e alcança a sênior quando as proteções inferiores acabam.</p>",
+     "enunciado": "<p>Uma estrutura de FIDC possui R$ 70 milhões em cotas seniores, R$ 10 milhões em mezanino e R$ 20 milhões em subordinadas. Para o exercício, considere que as perdas de crédito são absorvidas primeiro pelas subordinadas, depois pelo mezanino e, por fim, pelas seniores, sem recuperações, garantias adicionais ou outras variações patrimoniais. Uma inadimplência definitiva gera perda de R$ 35 milhões. O cliente detém cota sênior e acredita que a subordinação garante seu pagamento mesmo se a perda superar as camadas inferiores. O relatório de risco apresenta as três posições antes da perda e pede que o saldo seja acompanhado até chegar à classe sênior. Calcule a distribuição da perda entre as subclasses e interprete a proteção da cota sênior.</p>",
+     "alternativas": {
+      "a": "Cada subclasse absorve R$ 11,67 milhões, porque a existência de prioridades altera os pagamentos, mas conserva o rateio igual das perdas.",
+      "b": "A sênior absorve os R$ 35 milhões por receber primeiro as amortizações, enquanto mezanino e subordinada preservam o capital comprometido.",
+      "c": "A subordinada absorve os R$ 20 milhões e os R$ 15 milhões restantes desaparecem, pois a subordinação impede perdas nas demais cotas.",
+      "d": "A subordinada absorve R$ 20 milhões, o mezanino R$ 10 milhões e a sênior R$ 5 milhões; a prioridade reduz, mas não elimina, o risco da sênior."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-32-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. O FIP assume risco de negócio, governança, concentração e saída, além de poder exigir futuras integralizações. O tratamento de 15% no evento depende do enquadramento legal.</p><p>A alternativa A presume liquidez e afasta o compromisso subscrito. A alternativa B transforma influência em eliminação de risco. A alternativa D trata a sigla como garantia de regime fiscal.</p><p>Regra de bolso: no FIP, avalie empresa, saída, capital comprometido e condição tributária.</p>",
+     "enunciado": "<p>Uma empresária procura exposição a companhias em desenvolvimento e aceita horizonte longo. O FIP apresentado adquire participações, indica membros para conselhos e acompanha decisões estratégicas das investidas. O regulamento prevê chamadas de capital, e a saída dependerá de venda futura, abertura de capital ou aquisição por outro investidor. A cliente considera reservar apenas o valor da primeira integralização e afirma que qualquer FIP fica livre de tributação periódica. Os documentos ainda precisam confirmar se o veículo é entidade de investimento e atende aos requisitos legais. A empresária insiste que sua experiência na gestão de empresas substitui a reserva financeira para chamadas futuras. Avalie risco, liquidez, compromisso de capital e tratamento tributário.</p>",
+     "alternativas": {
+      "a": "O FIP oferece liquidez pela venda diária das participações, e as chamadas futuras podem ser ignoradas quando a primeira parcela já foi integralizada.",
+      "b": "A influência na gestão elimina o risco empresarial, enquanto a concentração aumenta a previsibilidade do preço de saída da carteira.",
+      "c": "O FIP combina risco empresarial, saída incerta e chamadas de capital; o regime sem come-cotas depende da condição de entidade de investimento e dos requisitos legais.",
+      "d": "A denominação FIP garante IR de 15% apenas na saída, ainda que o veículo exerça controle e fique fora da condição de entidade de investimento."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-32-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Dos R$ 100 mil brutos, restam R$ 85 mil após os custos dos fundos investidos. Deduzidos R$ 850 da camada própria, o resultado é R$ 84.150.</p><p>A alternativa A ignora o efeito econômico dos custos internos. A alternativa C desconsidera a taxa própria. A alternativa D duplica a taxa de R$ 850 sem base no caso.</p><p>Regra de bolso: no FoF, custos internos reduzem as cotas investidas e custos próprios reduzem o resultado da estrutura superior.</p>",
+     "enunciado": "<p>Um FoF recebe R$ 1 milhão e, em determinado período, os fundos investidos geram resultado bruto de R$ 100 mil. Para isolar o efeito econômico das duas camadas, considere que taxas e despesas dos fundos investidos consomem R$ 15 mil desse resultado. O saldo de R$ 85 mil chega ao FoF, cuja taxa própria no exercício equivale a 1% desse saldo, ou R$ 850. Desconsidere tributos, aportes, resgates e outras variações. O cliente afirma que apenas a taxa cobrada diretamente pelo FoF afeta sua rentabilidade, pois os custos dos fundos investidos aparecem dentro das respectivas cotas. Ele pede que o extrato mostre um débito adicional dos R$ 15 mil e rejeita qualquer custo que apareça apenas na rentabilidade das cotas inferiores. Calcule o resultado depois das duas camadas e avalie a afirmação.</p>",
+     "alternativas": {
+      "a": "O resultado é R$ 99.150: somente os R$ 850 do FoF afetam o cotista, porque despesas internas dos fundos investidos ficam fora do retorno econômico.",
+      "b": "O resultado é R$ 84.150: os R$ 15 mil reduzem as cotas investidas e os R$ 850 representam a camada própria do FoF.",
+      "c": "O resultado é R$ 85 mil: a taxa própria do FoF substitui os custos dos fundos investidos e fica compensada na consolidação das cotas.",
+      "d": "O resultado é R$ 83.300: a taxa de R$ 850 é debitada duas vezes, uma no fundo investido e outra na conta do cotista do FoF."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-32-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Classe exclusiva é forma de acesso e personalização. Desde 2024, fundos abertos e fechados podem entrar no regime geral, sem prejuízo das categorias e condições especiais.</p><p>A alternativa A conserva a regra antiga. A alternativa C vincula imposto ao pagamento dos custos. A alternativa D generaliza a incidência e ignora regimes especiais.</p><p>Regra de bolso: exclusividade personaliza o veículo; enquadramento da carteira define a tributação.</p>",
+     "enunciado": "<p>Um investidor profissional estuda criar classe exclusiva para personalizar política, prestadores, governança e liquidez. O consultor apresenta estimativa de custos fixos e alerta para concentração, mas o cliente usa uma apostila anterior a 2024 e afirma que a exclusividade preserva imposto apenas na amortização ou no resgate. A carteira cogitada pertence ao regime geral e fica fora das categorias com tratamento especial mencionadas na aula. O cliente também acredita que receber recursos de um único investidor transforma a classe em categoria autônoma de investimento. A simulação compara a mesma política em veículos abertos e fechados. Considere a mudança trazida pela Lei 14.754 e a função da exclusividade. Analise a estrutura e o regime aplicável.</p>",
+     "alternativas": {
+      "a": "A exclusividade cria uma categoria fiscal própria e conserva diferimento até o resgate, mesmo quando a carteira pertence ao regime geral.",
+      "b": "A exclusividade personaliza o acesso, mas a classe no regime geral pode sofrer come-cotas; categoria e requisitos definem eventual tratamento especial.",
+      "c": "A classe exclusiva fica isenta de tributação periódica quando os custos fixos são pagos diretamente pelo investidor profissional.",
+      "d": "A partir de 2024, classes exclusivas passaram a ter come-cotas de 15% em qualquer carteira, inclusive nas categorias com regime especial."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-32-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. As condições apresentadas permitem a isenção dos rendimentos distribuídos. O ganho de R$ 30 mil na venda recebe alíquota de 20%, gerando R$ 6 mil.</p><p>A alternativa B estende a isenção ao ganho. A alternativa C inverte os tratamentos. A alternativa D aplica alíquota de 15% aos dois eventos sem observar o regime descrito.</p><p>Regra de bolso: no Fiagro elegível, distribuição pode ser isenta; ganho na venda ou no resgate sofre 20%.</p>",
+     "enunciado": "<p>Renata possui 8% das cotas e 8% dos rendimentos de um Fiagro negociado exclusivamente em bolsa. O fundo tem 120 cotistas, e o conjunto de pessoas físicas ligadas a Renata detém 24% das cotas e dos rendimentos. A carteira distribui R$ 18 mil a ela, e meses depois Renata vende suas cotas com ganho de capital de R$ 30 mil. A investidora afirma que a isenção da distribuição também alcança o ganho na venda. O informe confirma que Renata permanece abaixo de 10% das cotas e dos rendimentos, que o grupo ligado fica abaixo de 30% e que a quantidade de cotistas supera o piso legal. Ela insiste que cumprir esses limites torna qualquer resultado da cota isento. Considere cumpridas as condições informadas e a regra da aula segundo a qual ganho na alienação ou no resgate é tributado a 20%. Analise separadamente os dois eventos e determine o imposto sobre o ganho.</p>",
+     "alternativas": {
+      "a": "Os R$ 18 mil distribuídos podem ser isentos, mas o ganho de R$ 30 mil sofre 20%, resultando em imposto de R$ 6 mil.",
+      "b": "Distribuição e ganho ficam isentos, porque o limite individual de 10% foi atendido e o fundo possui mais de 100 cotistas.",
+      "c": "A distribuição sofre 20%, enquanto o ganho de capital fica isento por decorrer de venda realizada exclusivamente em bolsa.",
+      "d": "Os dois eventos sofrem 15%, resultando em R$ 2.700 na distribuição e R$ 4.500 sobre o ganho de capital."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-32-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. O FoF ainda exige exame de sobreposição, custos e liquidez. O FIP envolve horizonte longo, saída incerta, concentração e chamadas de capital, incompatíveis com a necessidade apresentada.</p><p>A alternativa A transforma influência em proteção e chamadas em liquidez. A alternativa B presume diversificação e elimina a segunda camada de custos. A alternativa D equipara mecanismos de saída distintos.</p><p>Regra de bolso: veja os ativos finais, os custos e a porta de saída antes de comparar veículos.</p>",
+     "enunciado": "<p>Uma cliente pede diversificação imediata e liquidez compatível com um objetivo em dois anos. Ela compara um FoF com resgate compatível com o prazo e um FIP concentrado em empresas fechadas, com chamadas de capital e saída incerta. A cliente prefere o FIP porque participa da gestão das investidas e insiste que influência empresarial garante valorização. No FoF, os três principais fundos investidos possuem vários emissores em comum, e a estrutura cobra sua taxa além dos custos já suportados nas cotas inferiores. O assessor possui os documentos de liquidez, composição e custos das duas alternativas. O orçamento da cliente deixa pouca margem para novas integralizações durante o período. Compare os veículos diante do objetivo, sem tratar a sigla como substituta da análise.</p>",
+     "alternativas": {
+      "a": "O FIP atende ao prazo porque influência na gestão reduz o risco de saída, e chamadas de capital ampliam a liquidez disponível para a cliente.",
+      "b": "O FoF garante diversificação por investir em três fundos, mesmo que eles repitam emissores, e sua taxa substitui as despesas das carteiras inferiores.",
+      "c": "O FoF exige análise de sobreposição, custos e resgate; o FIP acrescenta iliquidez e compromisso incompatíveis com a necessidade.",
+      "d": "Os dois veículos possuem liquidez equivalente, pois cotas de fundos permitem saída pelo valor patrimonial quando o cliente comunica o gestor."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-32-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. Com os requisitos informados, FIDC e FIP entidades de investimento e o FoF elegível podem usar 15% no evento sem come-cotas. A exclusiva acompanha o regime geral, e o clube enquadrado em ações tem 15% no resgate.</p><p>A alternativa A ignora os enquadramentos especiais e atribui diferimento à forma de acesso. A alternativa C cria isenções e alíquota inadequada. A alternativa D generaliza a tributação periódica.</p><p>Regra de bolso: a sigla inicia a análise; composição, requisitos e condição do veículo definem o imposto.</p>",
+     "enunciado": "<p>Na preparação de uma recomendação, o gerente recebe cinco fichas. Um FIDC possui 70% em direitos creditórios e confirma a condição de entidade de investimento. Um FIP também é entidade de investimento e cumpre os requisitos legais. Um FoF mantém 96% em fundos que atendem ao regime especial citado na aula. Uma classe exclusiva de renda fixa segue o regime geral. Um clube conserva 70% nos ativos admitidos de renda variável. O cliente quer concluir o imposto apenas pelo nome de cada veículo e desconsiderar documentos, riscos e liquidez. As fichas registram separadamente composição, condição de entidade e forma de acesso. Considere que os demais requisitos dos enquadramentos informados foram cumpridos. Relacione cada estrutura ao tratamento tributário apresentado na aula.</p>",
+     "alternativas": {
+      "a": "FIDC e FIP sofrem come-cotas por investirem em créditos e empresas; FoF, exclusiva e clube diferem o imposto até o resgate por sua forma de acesso.",
+      "b": "FIDC, FIP e FoF podem ter 15% no evento sem tributação periódica; a exclusiva segue o regime geral, e o clube enquadrado em ações tem 15% no resgate.",
+      "c": "A classe exclusiva e o clube ficam isentos, enquanto FIDC, FIP e FoF sofrem 20% em cada distribuição, amortização ou resgate.",
+      "d": "Os cinco veículos recebem o mesmo regime de 15% em maio e novembro, pois a Lei 14.754 uniformizou estruturas abertas e fechadas."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Previdência social e estimativa da necessidade de renda complementar": [
+    {
+     "id": "cpror-inv-37-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. No RGPS, trabalhadores, empregadores e outras fontes financiam benefícios correntes. O segurado adquire proteção e direitos legais, e não uma carteira financeira individual.</p><p>A alternativa A descreve capitalização. A alternativa C inventa separação entre contribuições. A alternativa D transforma contribuição social em saldo garantido com rentabilidade.</p><p>Regra de bolso: no RGPS, a contribuição atual ajuda a pagar o benefício atual; na complementar, forma-se reserva vinculada ao plano.</p>",
+     "enunciado": "<p>Durante o atendimento, um segurado diz que cada contribuição ao INSS é investida em uma conta individual que financiará exclusivamente sua aposentadoria. Explique o funcionamento do RGPS.</p>",
+     "alternativas": {
+      "a": "O RGPS capitaliza cada contribuição em carteira individual, e o benefício corresponde ao saldo acumulado dividido pela expectativa de vida.",
+      "b": "O RGPS usa repartção simples: contribuições e outras receitas atuais financiam benefícios correntes segundo direitos e fórmulas legais.",
+      "c": "O RGPS investe somente a contribuição do empregado, enquanto a parcela do empregador forma um fundo coletivo para cobrir pensões.",
+      "d": "O RGPS garante que a soma das contribuições pessoais será devolvida com rentabilidade, mesmo quando os requisitos legais ficam incompletos."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-37-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Para novos filiados, a regra geral urbana exige 62 anos e 15 anos de contribuição para a mulher, 65 anos e 20 anos para o homem e carência de 180 contribuições mensais.</p><p>A alternativa A troca tempos e elimina carência. A alternativa B eleva os tempos e reduz a carência. A alternativa D aplica uma transição a quem ingressou depois da reforma.</p><p>Regra de bolso: idade, tempo de contribuição e carência são requisitos relacionados, mas distintos.</p>",
+     "enunciado": "<p>Uma mulher e um homem ingressaram no RGPS depois de 13 de novembro de 2019 e perguntam pelos requisitos gerais da aposentadoria programada urbana. Identifique-os.</p>",
+     "alternativas": {
+      "a": "Mulher com 60 anos e 20 anos de contribuição; homem com 65 anos e 15 anos, ambos dispensados da carência mensal.",
+      "b": "Mulher com 62 anos e 20 anos de contribuição; homem com 65 anos e 25 anos, ambos com carência de 120 contribuições.",
+      "c": "Mulher com 62 anos e 15 anos de contribuição; homem com 65 anos e 20 anos, ambos com carência de 180 contribuições mensais.",
+      "d": "Mulher com 57 anos e homem com 60 anos, desde que cumpram pedágio de 100% e tenham ingressado depois da reforma."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-37-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Patrícia supera 30 anos, alcança 93 pontos e também supera 59 anos e 6 meses. Ainda assim, o planejamento depende de validar o CNIS e comparar cálculos, pois antecipar a data pode reduzir o benefício.</p><p>A alternativa B elimina requisito cumulativo. A alternativa C aplica o patamar masculino à mulher. A alternativa A presume benefícios iguais entre regras diferentes.</p><p>Regra de bolso: transição exige conferir filiação, requisitos cumulativos, CNIS, data e valor projetado.</p>",
+     "enunciado": "<p>Patrícia contribuía antes da reforma de 2019 e, em 2026, apresenta 60 anos de idade e 33 anos de contribuição, somando 93 pontos. Um colega afirma que basta alcançar a pontuação, mesmo que o tempo de contribuição esteja abaixo do mínimo da regra. Outro sugere ignorar o CNIS e escolher a transição que indica a primeira data, sem comparar o valor estimado. A aula informa que, em 2026, a regra dos pontos para a mulher exige 30 anos de contribuição e 93 pontos, enquanto a idade progressiva exige 30 anos e 59 anos e 6 meses. O histórico possui um vínculo ainda sem confirmação, e a simulação preliminar apresenta valores distintos nas duas transições. Patrícia deseja decidir apenas depois de entender tanto a data quanto a renda projetada. Analise o acesso de Patrícia e o procedimento de planejamento.</p>",
+     "alternativas": {
+      "a": "A primeira data indicada deve ser escolhida, pois regras de transição alteram apenas o acesso e produzem o mesmo valor de benefício.",
+      "b": "A pontuação substitui o tempo mínimo, de modo que qualquer segurada com 93 pontos pode usar a regra mesmo com poucos anos de contribuição.",
+      "c": "Patrícia falha na regra dos pontos porque a soma exigida em 2026 é 103, patamar aplicável indistintamente a mulheres e homens.",
+      "d": "Patrícia satisfaz as duas transições informadas, mas deve validar o CNIS e comparar data e cálculo antes da decisão."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-37-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Ana tem dez anos além de 15: 60% mais 20 pontos resultam em 80% e R$ 4.800. Bruno tem 15 anos além de 20: 60% mais 30 pontos resultam em 90% e R$ 5.400.</p><p>A alternativa B usa a mesma base temporal para ambos. A alternativa C confunde composição da média com percentual do benefício. A alternativa D inverte bases e percentuais.</p><p>Regra de bolso: primeiro calcule a média do período abrangido; depois aplique o percentual correspondente ao tempo de contribuição.</p>",
+     "enunciado": "<p>Em uma reunião familiar, Ana e Bruno usam a mesma média contributiva atualizada de R$ 6.000. Ana possui 25 anos completos de contribuição, e Bruno, 35 anos. Para este exercício, aplique a regra geral: o benefício começa em 60% da média e cresce 2 pontos percentuais por ano completo que exceder 15 anos para a mulher e 20 anos para o homem. Desconsidere teto, piso, descartes permitidos, regras especiais e transições. Bruno afirma que ambos receberão 100% porque a expressão média de 100% inclui cada salário do período. Ana responde que a quantidade de salários usada para formar a média representa uma etapa diferente do percentual aplicado ao resultado. O casal pede que o gerente mostre separadamente os anos excedentes e o valor em reais. Calcule os percentuais e os benefícios estimados e avalie essa interpretação.</p>",
+     "alternativas": {
+      "a": "Ana recebe 80%, ou R$ 4.800, e Bruno recebe 90%, ou R$ 5.400; usar 100% dos salários na média difere de pagar 100% da média.",
+      "b": "Ana recebe 70%, ou R$ 4.200, e Bruno recebe 80%, ou R$ 4.800, porque o adicional incide apenas depois de 20 anos para ambos.",
+      "c": "Ana e Bruno recebem 100%, ou R$ 6.000 cada, porque a inclusão do período contributivo inteiro transforma a média no percentual final.",
+      "d": "Ana recebe 90%, ou R$ 5.400, e Bruno recebe 80%, ou R$ 4.800, pois o acréscimo masculino começa cinco anos antes do feminino."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-37-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A regra geral considera 100% dos salários abrangidos, sem descarte automático dos 20% menores. O benefício respeita limites legais, o que pode aumentar a lacuna de renda de quem ganha acima do teto.</p><p>A alternativa B repete a regra antiga e ignora o teto do benefício. A alternativa C usa somente o último salário. A alternativa D afasta indevidamente o limite da aposentadoria.</p><p>Regra de bolso: média de 100% trata do período considerado; teto e percentual legal ainda limitam o benefício.</p>",
+     "enunciado": "<p>Marcelo teve salários de contribuição altos e baixos desde julho de 1994. Ao projetar a aposentadoria, ele elimina automaticamente os 20% menores valores e considera apenas os maiores salários. Também supõe que contribuições calculadas sobre renda acima do teto produzirão benefício superior ao limite do RGPS. A simulação usa a regra geral posterior à reforma, sem benefício especial, direito adquirido ou hipótese específica de descarte. Marcelo tem renda atual elevada e pretende manter o mesmo padrão de consumo na aposentadoria. Seu orçamento projetado permanece acima do valor máximo que ele atribui ao regime público, mas ainda falta medir a diferença mensal. Analise a formação da média, o limite do benefício e a possível necessidade de renda complementar.</p>",
+     "alternativas": {
+      "a": "A regra usa os salários abrangidos, inclusive altos e baixos; o RGPS respeita seus limites, e renda elevada pode ampliar o déficit.",
+      "b": "A regra geral exclui os 20% menores salários, e contribuições acima do teto autorizam benefício proporcionalmente superior ao limite do regime.",
+      "c": "A média usa apenas o último salário, pois ele representa o padrão de vida que a aposentadoria programada procura substituir.",
+      "d": "Os salários baixos entram na média, mas o teto restringe apenas a contribuição mensal e deixa livre o valor final da aposentadoria."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-37-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A pensão preserva 1,00 na primeira faixa, 0,60 na segunda, 0,40 na terceira e 0,10 sobre a meia faixa seguinte, somando 2,10. Com a aposentadoria integral de cinco, a renda chega a 7,10.</p><p>A alternativa A aplica a última alíquota ao valor inteiro. A alternativa C preserva integralmente o benefício menor. A alternativa B aplica 40% de forma uniforme.</p><p>Regra de bolso: preserve integralmente o benefício mais vantajoso e aplique os redutores por degraus ao menos vantajoso.</p>",
+     "enunciado": "<p>Lúcia recebe aposentadoria de cinco salários mínimos e passa a ter direito a uma pensão acumulável de três salários mínimos e meio. Considere direitos formados depois da reforma e aplique ao benefício menos vantajoso as faixas cumulativas apresentadas na aula: 100% até um salário mínimo, 60% entre um e dois, 40% entre dois e três e 20% entre três e quatro. A aposentadoria, por ser mais vantajosa, é preservada sem redutor. Lúcia multiplica 20% pelo valor completo da pensão e estima recebimento de apenas 0,70 salário mínimo. O atendente organiza a pensão em quatro parcelas: uma unidade, outra unidade, uma terceira unidade e a metade restante. Ele explica que cada trecho recebe o percentual de sua faixa. Calcule a parcela mantida da pensão e a renda acumulada em salários mínimos.</p>",
+     "alternativas": {
+      "a": "A pensão mantida é 0,70 e a renda acumulada é 5,70 salários mínimos, pois a última faixa determina o percentual sobre o benefício inteiro.",
+      "b": "A pensão mantida é 1,40 e a renda acumulada é 6,40 salários mínimos, pela aplicação uniforme de 40% sobre a pensão.",
+      "c": "A pensão permanece em 3,50 e a renda acumulada chega a 8,50 salários mínimos, porque os redutores incidem apenas sobre aposentadorias.",
+      "d": "A pensão mantida é 2,10 e a renda acumulada é 7,10 salários mínimos, pela soma de 1,00, 0,60, 0,40 e 0,10."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-37-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O déficit é a renda desejada menos previdência social e outras fontes sustentáveis: R$ 12.000 menos R$ 4.500 menos R$ 1.500 resultam em R$ 6.000 mensais.</p><p>A alternativa A trata trabalho incerto como permanente. A alternativa C ignora rendas sustentáveis. A alternativa D substitui o orçamento pelo salário bruto e deixa de deduzir fontes.</p><p>Regra de bolso: use o padrão de vida desejado e desconte apenas rendas sustentáveis na mesma base de poder de compra.</p>",
+     "enunciado": "<p>Um casal estima despesas desejadas de R$ 12.000 mensais, em valores atuais, durante a aposentadoria. A projeção conservadora indica R$ 4.500 de benefício previdenciário e R$ 1.500 líquidos de aluguel sustentável. O casal também espera receber R$ 2.000 de trabalho eventual, mas essa receita depende de contratos incertos e fica fora da base permanente. Eles pedem que o assessor use o último salário bruto de R$ 18.000 como necessidade mensal e misture esse valor atual com uma reserva futura sem ajuste de inflação. Para manter premissas consistentes, trabalhe com o orçamento desejado em poder de compra atual e com as fontes sustentáveis informadas. Calcule o déficit mensal a ser financiado pela reserva complementar.</p>",
+     "alternativas": {
+      "a": "O déficit é R$ 4.000, pois o trabalho eventual de R$ 2.000 integra automaticamente a renda sustentável do casal.",
+      "b": "O déficit é R$ 6.000, obtido por R$ 12.000 menos R$ 4.500 e R$ 1.500, mantendo fora a receita eventual incerta.",
+      "c": "O déficit é R$ 12.000, porque benefício social e aluguel devem ser preservados fora do planejamento da previdência complementar.",
+      "d": "O déficit é R$ 18.000, pois o último salário bruto substitui o orçamento e dispensa a dedução das outras fontes de renda."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-37-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. O capital calculado depende de hipóteses. Menor taxa real reduz o rendimento da reserva, prazo maior cria mais retiradas e renda maior amplia cada saque, elevando a necessidade.</p><p>A alternativa B converte projeção em garantia. A alternativa A usa taxa escolhida como redução de risco. A alternativa D elimina prazo e taxa da fórmula.</p><p>Regra de bolso: renda maior, aposentadoria mais longa ou retorno real menor exigem reserva maior.</p>",
+     "enunciado": "<p>Roberto precisa complementar R$ 5.000 mensais, em valores de hoje, durante 25 anos. A equipe usa rentabilidade líquida real de 0,3% ao mês e 300 retiradas, chegando a capital aproximado de R$ 988.137 pela fórmula do valor presente. Roberto afirma que esse número constitui promessa de suficiência e pede que a taxa seja elevada para reduzir artificialmente a reserva. O assessor apresenta cenários com aposentadoria mais longa, custos, impostos e margem de longevidade, além de manter cada variável em poder de compra atual. A família deseja compreender por que uma hipótese otimista pode diminuir a meta no papel sem melhorar os recursos existentes. Considere a relação entre renda, prazo, taxa real e capital necessário. Analise a estimativa e o efeito de mudanças nas premissas.</p>",
+     "alternativas": {
+      "a": "Aumentar a taxa projetada reduz a reserva e também reduz o risco do plano, mesmo quando a carteira do cliente permanece sem alteração.",
+      "b": "Os R$ 988.137 garantem as retiradas, porque o uso de taxa real elimina riscos de mercado, custos, impostos e variações de longevidade.",
+      "c": "Os R$ 988.137 dependem das premissas; taxa real menor, prazo maior ou renda desejada maior elevam o capital necessário.",
+      "d": "O capital depende apenas da renda mensal, pois prazo e taxa modificam a rentabilidade futura sem alterar o valor presente das retiradas."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-37-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. O numerador é aproximadamente R$ 2.964,41. Dividido por 1,0524, resulta em cerca de R$ 2.817 mensais. Trata-se de estimativa sujeita a revisão.</p><p>A alternativa B ignora a rentabilidade e congela a projeção. A alternativa C inventa relação de 0,1%. A alternativa D usa o fator como aporte e elimina parte da fórmula.</p><p>Regra de bolso: meta, taxa e prazo formam o aporte estimado; mudança em qualquer premissa pede nova conta.</p>",
+     "enunciado": "<p>Camila tem meta de capital de R$ 988.137, faltam 20 anos para sua aposentadoria e sua reserva inicial é igual a zero. A hipótese de acumulação usa taxa líquida real de 0,3% ao mês durante 240 meses. Para facilitar a conta, considere que <code>[(1,003)^240 - 1]</code> equivale aproximadamente a 1,0524. A contribuição é calculada por <code>capital x taxa ÷ [(1 + taxa)^n - 1]</code>. Camila acredita que bastaria dividir o capital pelos 240 meses, ignorando os rendimentos, e trata qualquer resultado como valor fixo garantido até a aposentadoria. O assessor registra a taxa e o prazo para comparar posteriormente o realizado com o projetado. Desconsidere aporte inicial, contribuição patronal, custos adicionais e impostos nesta conta. Calcule o aporte mensal aproximado e interprete seu uso no acompanhamento.</p>",
+     "alternativas": {
+      "a": "O aporte é aproximadamente R$ 2.817, pois R$ 988.137 vezes 0,003, dividido por 1,0524, gera uma referência que deve ser revista com as premissas.",
+      "b": "O aporte é aproximadamente R$ 4.117, pela divisão direta de R$ 988.137 por 240, e permanece fixo mesmo se taxa, renda ou horizonte mudarem.",
+      "c": "O aporte é aproximadamente R$ 988, pois a taxa mensal transforma o capital final em contribuição equivalente a 0,1% da meta.",
+      "d": "O aporte é aproximadamente R$ 1.052, pois o fator acumulado substitui o número de meses e elimina a necessidade de multiplicar pela taxa."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-37-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. O planejamento percorre regime, benefício, déficit e reserva. As projeções dependem de dados pessoais e premissas financeiras e precisam ser revistas quando esses elementos mudam.</p><p>A alternativa A escolhe o produto antes da necessidade. A alternativa C transforma simulação em concessão e ignora o CNIS. A alternativa D reduz o diagnóstico a duas variáveis.</p><p>Regra de bolso: primeiro meça a lacuna; depois escolha, acompanhe e recalcule a solução complementar.</p>",
+     "enunciado": "<p>Daniel procura um plano complementar antes de conferir o CNIS. Ele informa renda atual, mas ainda desconhece a regra previdenciária aplicável, o benefício provável e o orçamento desejado na aposentadoria. O gerente propõe primeiro documentar idade, dependentes, vínculos, salários, outras rendas, horizonte e capacidade de contribuição. Daniel resiste e pede uma rentabilidade fixa que garanta a diferença até o fim da vida. Nos anos seguintes, sua renda, estrutura familiar, legislação e condições de mercado podem mudar. O gerente também considera taxa real líquida, custos, impostos e margem de longevidade na projeção. O cadastro prevê revisão anual e revisão extraordinária após mudanças relevantes. Avalie a sequência e o acompanhamento adequados.</p>",
+     "alternativas": {
+      "a": "O produto deve ser escolhido pela rentabilidade recente, e o déficit pode ser calculado depois porque o benefício do RGPS acompanha o último salário.",
+      "b": "A projeção deve estimar regra, benefício, renda desejada, fontes sustentáveis, déficit e reserva, com revisões quando premissas ou vida do cliente mudarem.",
+      "c": "A simulação oficial equivale à concessão garantida, permitindo fixar o aporte complementar sem verificar lacunas no CNIS ou mudanças legais.",
+      "d": "O planejamento deve usar somente o salário atual e a idade, pois dependentes, outras rendas, longevidade e custos pertencem à escolha posterior do produto."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Previdência complementar: capitalização e quatro pilares de uso": [
+    {
+     "id": "cpror-inv-38-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A previdência complementar é facultativa e autônoma e forma reservas com contribuições e resultados. No RGPS de repartição, receitas atuais ajudam a financiar benefícios correntes.</p><p>A alternativa B atribui repartição e garantia salarial à complementar. A alternativa C cria contas individuais nos dois regimes. A alternativa A inverte os mecanismos.</p><p>Regra de bolso: repartição financia benefícios correntes; capitalização forma reserva vinculada ao plano.</p>",
+     "enunciado": "<p>Uma cliente confunde previdência complementar com o RGPS e acredita que ambos usam as contribuições atuais para pagar benefícios correntes. Explique a diferença central.</p>",
+     "alternativas": {
+      "a": "O RGPS acumula reserva financeira pessoal, enquanto a complementar usa as contribuições novas para pagar os participantes aposentados.",
+      "b": "A complementar adota repartição simples, mas separa as contribuições por entidade para assegurar benefício equivalente ao último salário.",
+      "c": "O RGPS e a complementar formam contas individuais, variando apenas o órgão responsável pela supervisão dos investimentos.",
+      "d": "A complementar é facultativa e capitalizada: aportes e resultados formam reserva vinculada ao plano."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-38-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A reserva pode apoiar renda futura, sucessão, objetivos de menores e planejamento do momento e da forma da tributação.</p><p>A alternativa A inclui usos estranhos e promete eliminação de tributos. A alternativa B mistura proteção social, emergência e crédito. A alternativa D lista formas de recebimento, e não os quatro pilares.</p><p>Regra de bolso: renda, sucessão, menores e tributação são finalidades submetidas à adequação.</p>",
+     "enunciado": "<p>Um planejador organiza as finalidades da reserva previdenciária antes de selecionar o produto. Identifique os quatro pilares apresentados na aula.</p>",
+     "alternativas": {
+      "a": "Renda futura, proteção cambial, compra de imóveis e eliminação de tributos durante a fase de benefício.",
+      "b": "Aposentadoria do RGPS, seguro obrigatório, reserva de emergência e financiamento de curto prazo para dependentes.",
+      "c": "Renda futura, planejamento sucessório, formação de reserva para menores e planejamento tributário coerente.",
+      "d": "Pagamento único, renda vitalícia, renda temporária e resgate, que representam as quatro modalidades obrigatórias de uso."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-38-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O prazo menor retira anos de aportes e de rendimentos sobre rendimentos. Nas premissas dadas, buscar a mesma meta em 20 anos eleva o aporte aproximado para R$ 1.997.</p><p>A alternativa B aplica proporcionalidade linear. A alternativa C atribui aos juros a recuperação do tempo perdido. A alternativa D cria acréscimo anual fixo sem relação com a fórmula.</p><p>Regra de bolso: começar antes amplia a capitalização e reduz o esforço mensal para a mesma meta.</p>",
+     "enunciado": "<p>Dois irmãos planejam a mesma meta previdenciária usando rentabilidade real líquida hipotética de 0,4% ao mês. O primeiro pretende aportar R$ 1.000 mensais durante 30 anos e recebe projeção aproximada de R$ 802.147. O segundo adiará o início por dez anos e terá apenas 20 anos para acumular. Pela mesma hipótese, R$ 1.000 mensais em 20 anos formariam cerca de R$ 401.675, e o aporte necessário para buscar R$ 802.147 nesse prazo seria aproximadamente R$ 1.997. O segundo afirma que o prazo caiu um terço e, por isso, bastaria aumentar sua contribuição também em um terço. A planilha mantém taxa, meta e poder de compra constantes para isolar a diferença criada pelo momento de início. Analise o efeito do horizonte e o esforço mensal indicado pela projeção.</p>",
+     "alternativas": {
+      "a": "O atraso reduz o tempo de capitalização; para a mesma meta e taxa, o aporte projetado sobe para perto de R$ 1.997, quase o dobro dos R$ 1.000.",
+      "b": "O atraso exige apenas R$ 1.333 mensais, pois o aporte cresce na mesma proporção linear em que o prazo total foi reduzido.",
+      "c": "O aporte permanece em R$ 1.000, porque juros compostos compensam os dez anos perdidos quando a taxa mensal continua em 0,4%.",
+      "d": "O segundo deve aportar R$ 3.000, pois cada ano de adiamento acrescenta 10% ao valor mensal, independentemente da taxa e da meta."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-38-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Capitalização cria reserva, mas o saldo depende de aportes, rentabilidade e custos. Planos abertos ficam sob a Susep; planos fechados, sob a Previc, com acesso ligado ao grupo definido.</p><p>A alternativa A promete saldo, troca supervisores e elimina vínculo. A alternativa C trata o fechado como aberto e afasta riscos. A alternativa D separa artificialmente plano, custos e estratégia.</p><p>Regra de bolso: capitalização forma patrimônio, e não garantia; aberto é Susep, fechado é Previc.</p>",
+     "enunciado": "<p>Uma empresa apresenta aos empregados um plano fechado com contribuição do patrocinador. Um funcionário compara essa opção com um plano aberto disponível ao público e afirma que capitalização garante rentabilidade e elimina riscos. A equipe explica que as contribuições e os resultados líquidos formam a reserva, mas a estratégia pode oscilar e suportar riscos de mercado, crédito, liquidez e inflação. Custos e interrupções de aporte também afetam o saldo. O empregado pergunta ainda quem supervisiona cada segmento e se pode contratar o plano fechado mesmo depois de perder o vínculo previsto no regulamento. O material de adesão separa as regras do plano da carteira usada para investir os recursos. Analise capitalização, acesso e supervisão.</p>",
+     "alternativas": {
+      "a": "Capitalização garante o saldo projetado; planos abertos são supervisionados pela Previc e fechados pela Susep, sem exigência de vínculo.",
+      "b": "A reserva varia com aportes, resultados e custos; Susep supervisiona planos abertos, e Previc, os fechados vinculados.",
+      "c": "Planos abertos e fechados possuem acesso público, mas o fechado elimina risco por receber contribuições de patrocinador ou instituidor.",
+      "d": "O risco pertence apenas ao fundo vinculado, de modo que custos e regras do plano ficam fora da análise da reserva previdenciária."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-38-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. R$ 900.000 divididos por R$ 5.000 geram 180 meses; divididos por R$ 3.000, 300 meses. Essa conta ilustra duração, mas a conversão em renda depende das regras e premissas do plano.</p><p>A alternativa B inverte os prazos. A alternativa C transforma saldo em renda vitalícia garantida. A alternativa D reduz a conversão a uma divisão simples.</p><p>Regra de bolso: o saque mostra a pressão sobre a reserva; a modalidade define como o benefício será efetivamente calculado.</p>",
+     "enunciado": "<p>Ao se aposentar, Gustavo possui reserva de R$ 900.000. Inicialmente, estima complemento de R$ 5.000 por mês e conclui que basta dividir o saldo pelo saque para contratar uma renda. Depois, ao adiar a aposentadoria e elevar o benefício público, seu déficit cai para R$ 3.000 mensais. Para comparar apenas a duração aritmética, desconsidere rendimentos, inflação, custos e impostos. A entidade alerta que a conversão efetiva em renda também depende da modalidade, idade, prazo, tábua biométrica, taxa prevista e eventual proteção aos beneficiários. Gustavo deseja preservar flexibilidade para resgates, mas também teme sobreviver além do período financiado pela conta simples. Calcule os dois prazos simplificados e avalie a decisão sobre recebimento.</p>",
+     "alternativas": {
+      "a": "R$ 5.000 geram 180 meses, ou 15 anos; R$ 3.000 geram 300 meses, ou 25 anos, mas a renda contratada exige analisar premissas e modalidade.",
+      "b": "R$ 5.000 geram 300 meses e R$ 3.000 geram 180 meses, pois a redução do saque acelera o consumo da reserva acumulada.",
+      "c": "Os dois saques sustentam renda vitalícia, porque a existência de R$ 900.000 elimina o risco de o participante sobreviver ao patrimônio.",
+      "d": "Dividir o saldo pelo saque define a renda contratada, tornando idade, tábua, taxa e proteção dos beneficiários irrelevantes para o valor."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-38-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A indicação deve acompanhar mudanças familiares e ser compatível com a renda futura do titular. Inventário e tributação dependem da natureza do produto, da legislação e das circunstâncias.</p><p>A alternativa B promete efeitos jurídicos universais. A alternativa C compromete a aposentadoria da titular. A alternativa D equipara beneficiário e herdeiro e afasta revisão necessária.</p><p>Regra de bolso: atualize beneficiários e percentuais sem prometer resultado sucessório ou tributário automático.</p>",
+     "enunciado": "<p>Depois do nascimento da segunda filha, uma participante revisa o plano previdenciário usado também em sua organização sucessória. A indicação de beneficiários ainda atribui 100% ao ex-cônjuge, cadastrado antes do divórcio. Ela quer atualizar nomes e percentuais, mas acredita que a simples indicação garante pagamento imediato, ausência de inventário e isenção de tributo estadual em qualquer circunstância. Também pretende destinar a reserva inteira aos beneficiários, embora dependa dela para complementar a própria aposentadoria. O assessor limita sua atuação à análise financeira e recomenda coordenação jurídica e tributária. A participante pede registro claro das premissas, sem promessa sobre o desfecho jurídico. Avalie o uso sucessório.</p>",
+     "alternativas": {
+      "a": "A indicação deve ser atualizada e coordenada com a renda da titular; efeitos sucessórios e tributários dependem do produto, da lei e do caso.",
+      "b": "O beneficiário cadastrado prevalece em qualquer situação, e a existência do plano afasta conflitos, inventário e tributos estaduais.",
+      "c": "Destinar a reserva inteira aos beneficiários fortalece o planejamento, mesmo quando elimina a fonte prevista para a renda futura da participante.",
+      "d": "Beneficiário e herdeiro necessário são conceitos equivalentes, por isso casamento, divórcio e nascimento dispensam revisão cadastral."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-38-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A data de uso define o horizonte, e a proximidade do objetivo pode justificar redução de risco. Titularidade, representação, movimentação, carência, custos e tributação dependem do contrato.</p><p>A alternativa A usa patrocinador fora do sentido técnico. A alternativa C substitui a estrutura jurídica por intenção informal. A alternativa D ignora o risco perto da data de uso.</p><p>Regra de bolso: para o menor, transforme intenção em objetivo, contrato, prazo e redução planejada de risco.</p>",
+     "enunciado": "<p>Uma avó deseja contribuir para uma estrutura destinada ao neto de três anos, com uso previsto aos dezoito para educação. O horizonte inicial é de quinze anos. Ela se apresenta como patrocinadora, quer manter a mesma exposição a ativos voláteis até a véspera do pagamento e presume que sua intenção informal basta para definir titularidade e movimentação. O responsável legal pede contribuições automáticas e aceita aportes adicionais da família quando o contrato permitir. Antes da contratação, ainda faltam conferir carência, custos, beneficiários, consequências fiscais e quem possui poderes sobre a reserva. A data de matrícula é conhecida e funcionará como referência para reduzir gradualmente a oscilação. Analise a estruturação do objetivo da criança.</p>",
+     "alternativas": {
+      "a": "A avó torna-se patrocinadora por realizar aportes, adquirindo os mesmos direitos de uma empresa que contribui para plano fechado de empregados.",
+      "b": "A data de uso define o prazo; contrato e movimentação devem ser conferidos, e o risco pode cair perto do objetivo.",
+      "c": "A intenção familiar define a propriedade da reserva, de modo que representação legal, carência e regras do produto ficam em segundo plano.",
+      "d": "O horizonte de quinze anos torna adequada a manutenção da exposição inicial até a data do pagamento, independentemente da oscilação."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-38-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Diferimento posterga o imposto e pode manter mais recursos capitalizados, mas seu valor depende das condições fiscais, do produto, do regime, do prazo, dos custos e do reinvestimento.</p><p>A alternativa B transforma diferimento em isenção. A alternativa C presume vantagem do resgate precoce. A alternativa A separa a economia fiscal da formação da reserva.</p><p>Regra de bolso: diferir significa pagar depois; a vantagem depende de enquadramento, permanência, custo e disciplina.</p>",
+     "enunciado": "<p>Um cliente procura previdência exclusivamente porque ouviu que o produto elimina imposto. Ele pretende resgatar em prazo curto, ainda desconhece se usa declaração completa ou simplificada e compara PGBL e VGBL sem examinar a natureza de sua renda. O plano analisado possui taxa elevada, e o cliente pretende gastar qualquer economia fiscal em consumo corrente. O assessor explica que diferimento mantém recursos na reserva por mais tempo, mas o resultado depende do produto, do regime tributário, do prazo, dos custos e do reinvestimento da economia. O cliente insiste que a palavra previdência basta para produzir o benefício, mesmo sem cumprir as condições fiscais. Os limites e as bases específicas serão tratados na etapa seguinte do planejamento. Avalie o papel da tributação nesta recomendação.</p>",
+     "alternativas": {
+      "a": "O benefício fiscal decorre apenas da contratação; o cliente pode consumir a economia sem alterar a meta ou o esforço de acumulação.",
+      "b": "A previdência elimina o imposto durante a acumulação e no recebimento, tornando declaração, produto e regime tributário irrelevantes.",
+      "c": "O resgate curto aumenta a vantagem do diferimento, porque reduz o tempo em que taxas e tributos poderiam afetar o saldo do participante.",
+      "d": "Diferimento posterga imposto e pode favorecer a reserva, mas exige condições cumpridas, prazo coerente e custos controlados."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-38-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. Reserva de emergência pede acesso imediato e risco compatível. A meta distante pode receber aportes em estrutura previdenciária separada, após avaliar custos, risco e regras.</p><p>A alternativa B usa o horizonte de outro objetivo para ignorar liquidez. A alternativa A trata carência como disponibilidade. A alternativa D transforma custo em proteção de capital.</p><p>Regra de bolso: cada objetivo exige sua própria combinação de prazo, liquidez, risco e custo.</p>",
+     "enunciado": "<p>Raquel possui apenas R$ 12.000 para imprevistos e despesas mensais de R$ 6.000. Um gerente recomenda colocar a reserva inteira em plano previdenciário com carência e estratégia sujeita a oscilação, argumentando que o horizonte de aposentadoria de 25 anos torna qualquer plano adequado. Raquel pode precisar do dinheiro em poucos dias e demonstra baixa capacidade de absorver perda nesse montante. O plano também cobra taxa superior à alternativa líquida usada atualmente. A cliente gosta da disciplina dos aportes automáticos e deseja iniciar uma reserva separada para o longo prazo, mas resiste a manter recursos fora da previdência. O orçamento mostra que os R$ 12.000 representam somente dois meses de suas despesas. Compare a função da emergência com a meta previdenciária.</p>",
+     "alternativas": {
+      "a": "A carência melhora a liquidez ao impedir saques impulsivos, deixando o valor compatível com despesas inesperadas de curto prazo.",
+      "b": "O horizonte de 25 anos permite transferir a reserva inteira, pois a data da aposentadoria prevalece sobre carência, risco e necessidade imediata.",
+      "c": "A emergência exige disponibilidade e estabilidade; Raquel pode preservá-la e formar outra reserva previdenciária para o longo prazo.",
+      "d": "A taxa superior indica maior proteção do capital, compensando a oscilação e a indisponibilidade da reserva usada em emergências."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-38-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. Os quatro pilares compartilham a reserva, mas possuem necessidades próprias. A indicação deve conciliar prazo, liquidez, risco, custos, tributação, recebimento e beneficiários e ser revista.</p><p>A alternativa A reduz a decisão ao imposto. A alternativa C congela estratégia e cadastro com justificativa falsa. A alternativa D trata saldo como suficiente sem examinar contrato e objetivos.</p><p>Regra de bolso: finalidade vem antes do produto, e cada mudança relevante pede nova verificação de adequação.</p>",
+     "enunciado": "<p>Um casal quer usar uma única reserva para complementar renda em 22 anos, apoiar a faculdade da filha em nove anos e destinar parte do patrimônio a beneficiários. Eles também esperam aproveitar diferimento tributário. A renda permite contribuição mensal, mas o casal precisa manter liquidez para outros objetivos e possui tolerâncias diferentes a risco. Os beneficiários ainda refletem uma configuração familiar antiga, e a estratégia de investimento permanece igual desde a contratação. O vendedor propõe escolher o plano apenas pela vantagem fiscal anunciada. O planejador prefere separar datas, valores, forma de recebimento, custos, carências, riscos e percentuais de beneficiários e revisar o conjunto periodicamente. Avalie a condução adequada.</p>",
+     "alternativas": {
+      "a": "A vantagem fiscal define o plano, enquanto renda, sucessão e objetivo da filha podem compartilhar prazo, risco e liquidez sem ajustes específicos.",
+      "b": "Cada finalidade exige horizonte, liquidez, risco e contrato coerentes; o plano deve conciliar contribuição, custos, recebimento, beneficiários e revisões.",
+      "c": "A estratégia inicial deve permanecer até o recebimento, porque alterar risco ou beneficiários interrompe a capitalização e elimina o diferimento.",
+      "d": "Uma reserva previdenciária atende aos quatro pilares pela simples acumulação de saldo, independentemente das regras do plano e das datas de uso."
+     },
+     "gabarito": "b"
     }
    ],
    "VGBL: acumulação, aposentadoria e planejamento patrimonial": [
