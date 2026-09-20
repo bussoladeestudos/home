@@ -7,7 +7,7 @@
    Só intercepta GET da MESMA ORIGEM (Firebase/Google passam direto).
    Ao mudar a versão abaixo, o SW novo assume e limpa os caches antigos.
    ════════════════════════════════════════════════════════════════ */
-const CACHE = "bussola-v150";   // v150 (20/09): integra questoes C-Pro R ate cpror-inv-13. Preserva a tela de Exercicios exvisual e a revisao rev1portopico.
+const CACHE = "bussola-v153";   // v153 (20/09): integra questoes C-Pro R ate cpror-inv-16. Preserva realce escolhida, tela exvisual e revisao rev1portopico.
 const SHELL = [
   "./",
   "index.html",
