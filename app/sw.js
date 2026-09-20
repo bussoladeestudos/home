@@ -7,7 +7,7 @@
    Só intercepta GET da MESMA ORIGEM (Firebase/Google passam direto).
    Ao mudar a versão abaixo, o SW novo assume e limpa os caches antigos.
    ════════════════════════════════════════════════════════════════ */
-const CACHE = "bussola-v153";   // v153 (20/09): integra questoes C-Pro R ate cpror-inv-16. Preserva realce escolhida, tela exvisual e revisao rev1portopico.
+const CACHE = "bussola-v173";   // v173 (20/09): menta como FAIXA do cabecalho dos paineis do dashboard, cartoes seguem brancos. css em ?v=20260920-mentafaixa.
 const SHELL = [
   "./",
   "index.html",
