@@ -1,5 +1,5 @@
 /* GERADO por outputs/questoes_para_js.py. NAO editar a mao.
-   Fonte: _conteudo/cpror/questoes/**.yaml  ·  699 questoes em 77 topicos
+   Fonte: _conteudo/cpror/questoes/**.yaml  ·  709 questoes em 78 topicos
    Para mudar uma questao, edite o YAML e rode o script de novo. */
 window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
  "cproRAnbima": {
@@ -10114,6 +10114,185 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "b": "A análise deve separar destinos, examinar quem vende e quanto permanece investido, confrontar a narrativa com riscos e avaliar preço e alocação.",
       "c": "A permanência dos fundadores garante retorno, e auditores e coordenadores conhecidos eliminam os riscos descritos no prospecto.",
       "d": "A destinação primária basta para decidir, porque faixa de preço, critérios de alocação e fatores de risco não alteram o sentido econômico da oferta."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Riscos acionários, volatilidade e correlação": [
+    {
+     "id": "cpror-inv-14-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O risco de mercado chega pelo resultado esperado e pelo valor atribuído a ele; liquidez aparece no preço de execução; juros atuam pelo desconto, pela dívida e pela demanda; câmbio depende das exposições; e risco país alcança retorno exigido, capital, juros, câmbio e regulação.</p><p>A alternativa B reduz indevidamente todos os canais. A alternativa C troca riscos de preço por variáveis sem a relação descrita na aula. A alternativa D trata proteção, valorização e ganho cambial como consequências automáticas.</p><p>Regra de bolso: primeiro identifique a força econômica, depois acompanhe o caminho pelo qual ela chega ao preço.</p>",
+     "enunciado": "<p>Um analista organiza os principais riscos que podem afetar o preço de uma ação. Identifique a associação correta entre risco e canal de transmissão.</p>",
+     "alternativas": {
+      "a": "Mercado altera resultado esperado ou retorno exigido; liquidez afeta o preço executável; juros atingem valor, dívida e demanda; câmbio atua nas exposições em moeda; risco país alcança retorno, capital e regras.",
+      "b": "Mercado se limita a fatos internos da companhia; liquidez depende de haver negócio diário; juros atingem instituições financeiras; câmbio alcança importadoras; risco país fica restrito à dívida pública.",
+      "c": "Mercado mede o volume negociado da ação; liquidez altera o lucro contábil divulgado; juros definem dividendos; câmbio substitui custos; risco país representa falhas operacionais da própria empresa.",
+      "d": "Mercado cobre quedas ligadas à empresa; liquidez protege ordens grandes; juros elevam o preço das ações; câmbio favorece exportadoras pelo valor bruto; risco país afeta companhias com operação ineficiente."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-14-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Volatilidade descreve quanto os retornos se dispersaram em torno da média dentro de uma janela, sendo usualmente calculada pelo desvio padrão.</p><p>A alternativa B transforma dispersão em previsão de direção. A alternativa A confunde volatilidade com perda máxima. A alternativa D atribui à medida uma explicação causal que depende do mapa de exposições da empresa.</p><p>Regra de bolso: volatilidade mede o tamanho do sobe e desce observado, não o sentido nem o pior prejuízo possível.</p>",
+     "enunciado": "<p>Ao apresentar a volatilidade de uma ação, uma especialista precisa explicar exatamente o que essa medida informa. Identifique a definição correta.</p>",
+     "alternativas": {
+      "a": "É a perda máxima que o investidor pode sofrer, calculada pela distância entre a alta extrema e a queda extrema registradas na série histórica.",
+      "b": "É a direção provável da cotação no período seguinte, estimada pelo sinal positivo ou negativo do retorno médio observado.",
+      "c": "É a dispersão dos retornos em torno da própria média, normalmente medida pelo desvio padrão em determinada janela e frequência.",
+      "d": "É a causa econômica das oscilações, capaz de separar efeitos de juros, câmbio, liquidez e risco país sobre o preço da ação."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-14-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O lucro cresceu, mas ficou abaixo dos 20% esperados, e o retorno exigido também aumentou. Os dois canais permitem revisão negativa do preço mesmo com melhora do resultado contábil.</p><p>A alternativa A presume omissão e elimina fatores de mercado. A alternativa C vincula mecanicamente preço e lucro. A alternativa D transforma lucro crescente em proteção e atribui a queda à liquidez sem evidência na cena.</p><p>Regra de bolso: compare o resultado com a expectativa e observe quanto o mercado aceita pagar por esse resultado.</p>",
+     "enunciado": "<p>Depois da divulgação trimestral, Lívia telefona ao assessor porque uma companhia da sua carteira apresentou lucro 12% superior ao do mesmo período anterior, mas a ação caiu 7% no pregão. O consenso dos analistas projetava crescimento de 20%, e, naquela semana, a percepção de risco aumentou e os investidores passaram a exigir retorno superior para manter ações. Lívia insiste que lucro crescente deveria produzir valorização e conclui que a queda prova erro na divulgação da empresa. O comunicado confirmou aumento de receita e não relatou interrupção operacional, enquanto outras ações do setor também recuaram no dia. O assessor precisa separar a evolução do resultado, a expectativa que já estava incorporada ao preço e a mudança no retorno exigido. Analise a reação da cotação.</p>",
+     "alternativas": {
+      "a": "A queda indica falha operacional omitida no comunicado, pois crescimento do lucro elimina a influência da expectativa e do retorno exigido sobre a cotação naquele pregão.",
+      "b": "A queda é compatível com lucro abaixo da expectativa e retorno exigido superior, pois o preço reflete o resultado esperado e o valor atribuído a ele.",
+      "c": "A ação deveria subir 12%, acompanhando o lucro divulgado, enquanto a diferença para 20% afeta apenas projeções do exercício seguinte.",
+      "d": "O lucro maior protege a cotação de aversão a risco, e a queda de 7% decorre necessariamente de baixa liquidez durante o pregão."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-14-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A última cotação registra um negócio, mas uma venda grande pode consumir diferentes ofertas e realizar preços menores. Liquidez executável relaciona o tamanho da posição à profundidade disponível.</p><p>A alternativa B toma negociação diária como garantia de preço. A alternativa C classifica impacto de execução como risco de mercado da empresa. A alternativa A ignora o conflito entre esperar compradores e cumprir a necessidade de caixa na data prevista.</p><p>Regra de bolso: papel negociado pode ser líquido para uma ordem pequena e insuficiente para uma saída grande e urgente.</p>",
+     "enunciado": "<p>Sérgio mantém R$ 900.000 em ações de uma companhia que registra negócios em cada pregão. Ao precisar pagar a entrada de um imóvel, ele pede a venda integral em um único dia e toma a última cotação da tela como valor certo de saída. O livro de ofertas, porém, mostra poucas ordens próximas desse preço e volumes adicionais a preços progressivamente menores. Sérgio argumenta que a negociação diária prova liquidez suficiente e pede que o gerente confirme o recebimento dos R$ 900.000. A ordem é grande diante do fluxo habitual do papel e consumiria vários níveis de ofertas. O contrato do imóvel vence no dia seguinte, e uma execução parcial não produziria o caixa exigido pelo vendedor. Avalie o risco de liquidez da posição.</p>",
+     "alternativas": {
+      "a": "A ordem pode aguardar até surgirem compradores pelo preço da tela, preservando ao mesmo tempo a data do pagamento e o valor necessário para o imóvel.",
+      "b": "A existência de negócio diário assegura a execução integral pela última cotação, porque o histórico de giro do papel substitui a profundidade atual do livro de ofertas para uma ordem urgente.",
+      "c": "A diferença entre cotação e execução representa risco de mercado da companhia, ainda que decorra do volume vendido diante das ofertas disponíveis.",
+      "d": "O valor realizável pode ficar abaixo da última cotação, porque uma ordem grande consome ofertas a preços piores; a liquidez relevante depende do tamanho da posição."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-14-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A parcela flutuante é R$ 600 milhões vezes 60%, ou R$ 360 milhões. Aplicando 1,5%, o acréscimo aproximado é R$ 5,4 milhões. A empresa ainda enfrenta possível redução da demanda financiada e retorno exigido superior.</p><p>A alternativa B aplica 1,5% sobre toda a dívida e incorpora indevidamente os demais canais ao valor. A alternativa C trata a parcela flutuante como despesa adicional. A alternativa D acerta a conta, mas exclui demanda e desconto.</p><p>Regra de bolso: juros chegam à ação pelo valor atribuído, pela despesa financeira e pela demanda dependente de crédito.</p>",
+     "enunciado": "<p>Na revisão de uma fabricante de veículos, Camila encontra dívida financeira de R$ 600 milhões, sendo 60% vinculados a taxa flutuante. O cenário usado pela equipe prevê aumento de 1,5 ponto percentual no custo dessa parcela, sem amortizações, novas captações, impostos ou proteção durante o ano. A companhia também vende grande parte da produção por financiamento, e seus lucros mais distantes passaram a ser descontados por retorno exigido superior. O saldo da dívida flutuante permanecerá constante durante os doze meses considerados. Um colega considera somente a dívida e afirma que os juros atingem a ação por um único caminho. Calcule o acréscimo aproximado da despesa financeira e avalie os canais presentes.</p>",
+     "alternativas": {
+      "a": "A despesa cresce cerca de R$ 5,4 milhões, e os juros ainda podem reduzir demanda financiada e pressionar o valor atribuído aos lucros futuros.",
+      "b": "A despesa cresce cerca de R$ 9 milhões, e esse valor reúne os efeitos sobre demanda e retorno exigido, dispensando análise adicional da ação.",
+      "c": "A despesa cresce cerca de R$ 360 milhões, enquanto demanda e valor atribuído ficam preservados porque pertencem ao risco de mercado.",
+      "d": "A despesa cresce cerca de R$ 5,4 milhões, mas o efeito acionário se encerra na dívida, pois vendas financiadas e desconto não respondem aos juros."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-14-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A exposição líquida simplificada é US$ 140 milhões menos US$ 55 milhões, US$ 25 milhões e US$ 35 milhões, resultando em US$ 25 milhões. A receita bruta não representa o ganho cambial líquido.</p><p>A alternativa B soma a proteção em vez de deduzi-la. A alternativa C ignora custos, dívida e proteção. A alternativa D exclui o serviço da dívida da redução e trata uma obrigação cambial como benefício.</p><p>Regra de bolso: da receita em moeda estrangeira, retire custos, compromissos e proteção do mesmo período.</p>",
+     "enunciado": "<p>Uma cliente avalia ações da Exportadora Horizonte depois de o dólar subir. No período analisado, a companhia prevê US$ 140 milhões de receitas, US$ 55 milhões de custos na mesma moeda, US$ 25 milhões de serviço de dívida externa e US$ 35 milhões cobertos por proteção cambial. A cliente usa os US$ 140 milhões como exposição e insiste que a alta observada do dólar terá esse mesmo efeito positivo sobre o resultado. O volume vendido e os preços dos produtos ficam constantes na hipótese apresentada, e as entradas, saídas e proteções pertencem ao mesmo período anual. O analista propõe calcular uma exposição líquida simplificada antes de discutir outros fatores. Calcule essa exposição e avalie a conclusão da cliente.</p>",
+     "alternativas": {
+      "a": "A exposição líquida é US$ 25 milhões; a alta favorece essa parcela simplificada, e o efeito final ainda depende das demais exposições econômicas.",
+      "b": "A exposição líquida é US$ 60 milhões; custos e dívida são deduzidos, enquanto a proteção aumenta o ganho por acompanhar a cotação da moeda.",
+      "c": "A exposição líquida é US$ 140 milhões; receitas externas determinam o efeito cambial, e as saídas pertencem à análise financeira separada.",
+      "d": "A exposição líquida é US$ 80 milhões; custos e proteção reduzem a receita, enquanto o serviço da dívida externa favorece a exportadora por acompanhar a moeda."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-14-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Em Alfa, os desvios diante da média de 3% são zero. Em Beta, cada retorno fica 6 pontos acima ou abaixo da média: a raiz de [(6² + (-6)² + 6² + (-6)²) / 4] é 6%.</p><p>A alternativa A confunde média com dispersão. A alternativa C usa retornos isolados no lugar dos desvios. A alternativa D soma as distâncias e chega a 12%, em vez de calcular a raiz da média dos quadrados.</p><p>Regra de bolso: médias iguais podem esconder caminhos distintos; volatilidade mede a dispersão desses caminhos.</p>",
+     "enunciado": "<p>Durante uma reunião, o especialista compara duas ações em quatro períodos. A ação Alfa entregou 3%, 3%, 3% e 3%. A ação Beta entregou 9%, menos 3%, 9% e menos 3%. Uma investidora soma os retornos, encontra média de 3% por período nas duas séries e conclui que tiveram o mesmo risco e a mesma trajetória. Ela pretende escolher Beta porque seus dois retornos positivos foram elevados e trata as quedas como irrelevantes por terem sido recuperadas no período seguinte. O recurso será usado dentro de dois anos, e ela afirma que a média basta para avaliar as oscilações enfrentadas no caminho. Para simplificar, considere os quatro retornos como a série inteira e calcule a volatilidade pela raiz da média dos quadrados dos desvios em relação à média. Compare as duas ações.</p>",
+     "alternativas": {
+      "a": "Alfa e Beta têm volatilidade de 3%, pois o retorno médio comum determina o risco observado das duas séries no período.",
+      "b": "Alfa tem volatilidade zero e Beta tem 6%; as médias coincidem, mas Beta apresentou retornos mais dispersos em torno delas.",
+      "c": "Alfa tem volatilidade de 3% e Beta tem 9%, porque se usa o retorno constante de Alfa e a alta positiva de Beta como medidas.",
+      "d": "Alfa tem volatilidade zero e Beta tem 12%, pois se somam as distâncias de 6 pontos acima e abaixo da média e o resultado representa a dispersão da série."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-14-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A deterioração fiscal é um fator soberano e pode elevar retorno exigido, pressionar fluxos, juros, câmbio e regras. Cada empresa reage conforme dívida, receitas, mercado atendido e outras exposições.</p><p>A alternativa B restringe risco país à dívida soberana. A alternativa C troca os canais de transmissão pela origem do choque. A alternativa A reconhece a origem, mas presume intensidade equivalente entre empresas diferentes.</p><p>Regra de bolso: risco país é comum na origem e particular na intensidade com que atravessa cada negócio.</p>",
+     "enunciado": "<p>Após uma deterioração fiscal elevar o retorno exigido para ativos brasileiros, uma gestora compara uma exportadora e uma varejista. A exportadora recebe parte relevante em moeda estrangeira, possui dívida moderada e vende também no exterior. A varejista concentra receita no mercado interno, financia estoques por taxa flutuante e depende de vendas parceladas. As duas mantiveram suas operações e não divulgaram problema próprio, mas as ações reagiram com intensidades diferentes. No mesmo intervalo, a moeda local se desvalorizou e as condições de financiamento ficaram mais caras. Um cliente atribui a queda à ineficiência das administrações e sustenta que risco país deveria produzir a mesma variação percentual em companhias locais. Analise a origem e a diferença dos impactos.</p>",
+     "alternativas": {
+      "a": "O choque é de risco país e deveria gerar a mesma queda nas duas ações, pois empresas ligadas ao mesmo país carregam exposição equivalente.",
+      "b": "O choque é específico das companhias, porque risco país alcança títulos soberanos e deixa ações de empresas eficientes fora de seu efeito, ainda que juros e câmbio também mudem.",
+      "c": "O choque é cambial para a exportadora e operacional para a varejista, e a origem fiscal deixa de participar quando as reações divergem.",
+      "d": "O choque é de risco país e pode atingir retorno, capital, juros e câmbio; exposições de receita, dívida e demanda explicam reações diferentes."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-14-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. Correlação mostra como duas séries caminharam linearmente numa janela, mas não prova causa nem permanência. Proteção, dívida e custos alteram exposições, e usar valorização do real no lugar do dólar em reais pode inverter o sinal.</p><p>A alternativa B transforma associação histórica em causalidade estável. A alternativa A trata janela e sinal como garantias futuras. A alternativa D converte coeficiente estatístico em valor de exposição e dispensa indevidamente o diagnóstico econômico.</p><p>Regra de bolso: correlação aponta uma pista histórica; janela, variável e exposições dizem como interpretar essa pista.</p>",
+     "enunciado": "<p>O relatório de uma distribuidora mostra que as ações de uma fabricante apresentaram correlação positiva com o dólar em reais nos últimos doze meses. Nesse intervalo, a companhia exportava metade da produção e mantinha pouca proteção. Para o novo exercício, ela contratou proteção cambial, tomou dívida em dólar e ampliou custos de insumos importados. Um cliente interpreta o coeficiente anterior como prova de que o dólar causará alta da ação e pede uma recomendação baseada somente nessa relação. A janela anterior incluiu forte desvalorização do real, enquanto a nova análise abrangerá meses com condições distintas. O analista também observa que outro relatório usa a valorização do real como variável de referência, em vez do dólar em reais. Avalie como a correlação pode ser usada no diagnóstico.</p>",
+     "alternativas": {
+      "a": "Ela garante alta da ação quando o dólar subir, desde que a janela tenha doze meses, e a valorização do real preserva o mesmo sinal estatístico.",
+      "b": "Ela confirma causalidade entre dólar e ação, e proteção, dívida ou custos posteriores alteram o resultado da empresa sem afetar a correlação esperada na nova janela.",
+      "c": "Ela descreve relação linear na janela, sem provar causa; novas exposições podem mudar o coeficiente, e trocar a variável de referência pode inverter o sinal.",
+      "d": "Ela mede a exposição cambial líquida em moeda, permitindo substituir o levantamento de receitas, custos, dívidas e proteções da companhia."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-14-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. Gama anualiza para 1,5% vezes 15,87, aproximadamente 23,81%. Delta anualiza para 6% vezes 3,46, aproximadamente 20,76%. Na mesma base, Gama apresenta o número superior.</p><p>A alternativa A multiplica diretamente por 252 e 12. A alternativa C divide pelas raízes em vez de multiplicar. A alternativa D compara frequências diferentes sem ajuste, embora janela e frequência alterem a medida.</p><p>Regra de bolso: antes de comparar volatilidades, iguale a frequência e confira também a janela usada.</p>",
+     "enunciado": "<p>Um comitê recebe dois relatórios para comparar oscilações. O primeiro informa volatilidade diária de 1,5% para a ação Gama. O segundo informa volatilidade mensal de 6% para a ação Delta. Um participante compara diretamente 1,5% com 6% e classifica Gama como menos volátil, usando essa conclusão para defender concentração na primeira ação. Os relatórios usam frequências distintas, mas o comitê quer colocá-las na mesma base anual pela convenção indicada na aula: raiz de 252 para dados diários e raiz de 12 para dados mensais. Desconsidere diferenças de janela e método além da frequência e use raiz de 252 igual a 15,87 e raiz de 12 igual a 3,46. Calcule os valores anualizados no relatório e avalie a comparação direta.</p>",
+     "alternativas": {
+      "a": "Gama fica perto de 378% ao ano e Delta de 72%; a anualização multiplica a volatilidade pelo número integral de períodos do ano.",
+      "b": "Gama fica perto de 23,81% ao ano e Delta de 20,76%; a comparação direta das taxas em frequências diferentes levou à ordem invertida.",
+      "c": "Gama fica perto de 9,52% ao ano e Delta de 1,73%; a anualização divide a taxa observada pela raiz do número de períodos.",
+      "d": "Gama permanece em 1,5% e Delta em 6%; volatilidades já representam dispersão e dispensam ajuste quando a comparação envolve ações."
      },
      "gabarito": "b"
     }
