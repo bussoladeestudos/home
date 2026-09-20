@@ -1,5 +1,5 @@
 /* GERADO por outputs/questoes_para_js.py. NAO editar a mao.
-   Fonte: _conteudo/cpror/questoes/**.yaml  ·  709 questoes em 78 topicos
+   Fonte: _conteudo/cpror/questoes/**.yaml  ·  829 questoes em 90 topicos
    Para mudar uma questao, edite o YAML e rode o script de novo. */
 window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
  "cproRAnbima": {
@@ -10904,6 +10904,2154 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "d": "Elisa pode exigir o contrato não reversível, e Mauro só devolve antes se a cotação tiver caído desde a venda a descoberto."
      },
      "gabarito": "a"
+    }
+   ],
+   "Day trade, swing trade e buy and hold na adequação ao cliente": [
+    {
+     "id": "cpror-inv-18-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Day trade compra e vende o mesmo ativo no mesmo dia, swing trade mantém operações por dias ou semanas e buy and hold trabalha com fundamentos e permanência no longo prazo.</p><p>A alternativa B troca os prazos das filosofias e atribui realização diária ao buy and hold. A alternativa C inverte permanência e acompanhamento. A alternativa A reduz a diferença ao ativo e trata oscilações e custos como eliminados.</p><p>Regra de bolso: mesmo pregão é day trade, dias ou semanas é swing trade, e permanência fundamentada é buy and hold.</p>",
+     "enunciado": "<p>Uma profissional compara day trade, swing trade e buy and hold para explicar como cada filosofia se relaciona com prazo e forma de atuação. Identifique a associação correta.</p>",
+     "alternativas": {
+      "a": "Day trade e swing trade diferem apenas pelo ativo negociado; buy and hold se distingue por eliminar oscilações e custos da renda variável.",
+      "b": "Day trade mantém posições por semanas; swing trade encerra no mesmo pregão; buy and hold realiza ganhos diariamente para preservar o capital.",
+      "c": "Day trade constrói patrimônio pela permanência; swing trade evita realizações; buy and hold depende de acompanhamento contínuo e alavancagem.",
+      "d": "Day trade encerra a posição no mesmo pregão; swing trade dura dias ou semanas; buy and hold busca permanência longa apoiada em fundamentos."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-18-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A isenção mensal de vendas de até R$ 20.000 alcança operações comuns no mercado à vista de ações, mas não as operações de day trade.</p><p>A alternativa B estende a isenção ao day trade. A alternativa C cria prazo de dois pregões e mistura modalidades. A alternativa D aplica o limite ao ganho, embora a aula trate do valor de vendas e exclua o day trade.</p><p>Regra de bolso: venda mensal reduzida pode importar na operação comum, mas não cria isenção para day trade.</p>",
+     "enunciado": "<p>Um cliente realizou somente operações de day trade e vendeu menos de R$ 20.000 em ações durante o mês. Identifique o tratamento da isenção mensal descrito na aula.</p>",
+     "alternativas": {
+      "a": "A isenção mensal não alcança day trade, de modo que o ganho da modalidade permanece sujeito à apuração mesmo com vendas abaixo de R$ 20.000.",
+      "b": "A isenção alcança o day trade porque o total vendido ficou abaixo de R$ 20.000, independentemente do encerramento no mesmo pregão e da frequência das operações.",
+      "c": "A isenção depende da permanência por dois pregões, e o cliente pode somar as operações diárias às posições comuns para testar o limite.",
+      "d": "A isenção surge quando o ganho é pequeno, pois o limite mensal considera o lucro líquido e não o valor das vendas realizadas em bolsa."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-18-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Cada ida e volta acrescenta custos de transação, e cada ganho realizado pode antecipar o imposto. As saídas reduzem o capital disponível para participar dos retornos posteriores.</p><p>A alternativa A trata custos como recuperáveis automaticamente. A alternativa C transforma realização em aumento da capitalização mesmo com saídas. A alternativa D ignora que custos e tributos são pagos com recursos do investidor.</p><p>Regra de bolso: quanto maior o giro, mais vezes custos e eventos tributários retiram dinheiro da base que continuaria rendendo.</p>",
+     "enunciado": "<p>Ao revisar o extrato de Gustavo, a assessora identifica 36 operações completas de compra e venda em três meses. Cada ida e volta gerou corretagem, emolumentos e custos de liquidação, e os ganhos foram realizados ao fim de cada movimento. Gustavo compara o resultado bruto com uma carteira de baixa rotatividade e afirma que negociar com frequência é neutro porque os custos unitários parecem pequenos e o imposto seria devido no futuro de qualquer forma. As duas carteiras comparadas compraram ações semelhantes e apresentaram o mesmo ganho antes das despesas, mas a segunda fez apenas três operações completas no período. Parte do capital retirado para pagar custos e tributos deixou de participar das altas seguintes. Analise como a frequência de negociação afeta a rentabilidade líquida.</p>",
+     "alternativas": {
+      "a": "O giro altera apenas a data do imposto, pois corretagem e emolumentos unitários são recuperados automaticamente quando a operação seguinte produz lucro.",
+      "b": "O giro multiplica custos e antecipa impostos sobre ganhos realizados, retirando recursos que poderiam continuar rendendo e reduzindo a capitalização líquida.",
+      "c": "O giro aumenta a capitalização líquida porque cada realização transforma valorização em caixa e impede que custos posteriores incidam sobre o patrimônio acumulado.",
+      "d": "O giro é neutro quando as operações terminam com lucro bruto, já que custos e tributos pertencem à infraestrutura e não reduzem o capital reinvestido."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-18-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A compensação é segregada, por isso o prejuízo de R$ 12.000 em day trade não reduz o lucro de R$ 30.000 nas operações comuns. Aplicando 15% sobre R$ 30.000, o imposto é R$ 4.500, e a perda permanece na modalidade de origem.</p><p>A alternativa B mistura day trade e operações comuns e calcula 15% sobre R$ 18.000. A alternativa A mantém a base, mas reduz o imposto para R$ 2.700. A alternativa D combina base compensada com imposto calculado sobre a base anterior.</p><p>Regra de bolso: prejuízo de day trade conversa com day trade; prejuízo de operação comum conversa com operação comum.</p>",
+     "enunciado": "<p>Renata encerrou o mês com R$ 30.000 de lucro em operações comuns com ações e R$ 12.000 de prejuízo acumulado em day trade. As vendas comuns superaram o limite mensal de isenção, e a cliente pede que a instituição desconte a perda especulativa do lucro da carteira antes de aplicar a alíquota de 15% informada na aula. Ela argumenta que os resultados ocorreram no mesmo CPF, na mesma bolsa e dentro do mesmo mês. O prejuízo veio de posições abertas e encerradas no próprio pregão, enquanto o lucro veio de ações mantidas por vários dias. Não há prejuízo anterior em operações comuns. Desconsidere outros ajustes e valores retidos para avaliar apenas a segregação entre modalidades. Calcule a base tributável das operações comuns e indique o destino do prejuízo de day trade.</p>",
+     "alternativas": {
+      "a": "A base das operações comuns permanece em R$ 30.000, com imposto de R$ 2.700; o prejuízo de day trade reduz diretamente o tributo calculado sobre o lucro comum.",
+      "b": "A base das operações comuns cai para R$ 18.000, com imposto de R$ 2.700; a coincidência de mês e CPF permite compensar os resultados entre modalidades.",
+      "c": "A base das operações comuns permanece em R$ 30.000, com imposto de R$ 4.500; os R$ 12.000 ficam segregados para compensação na modalidade day trade.",
+      "d": "A base das operações comuns cai para R$ 18.000, com imposto de R$ 4.500; o prejuízo reduz a base, mas a alíquota incide sobre o ganho anterior à compensação."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-18-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Júlia chega a R$ 108.000, apura ganho total de R$ 28.000, paga R$ 4.200 e fica com R$ 103.800. Caio chega a R$ 104.760, apura R$ 7.760 na segunda etapa, paga R$ 1.164 e fica com R$ 103.596. A diferença é R$ 204.</p><p>A alternativa A compara valores antes do imposto final. A alternativa C reduz indevidamente o valor líquido de Júlia. A alternativa D trata o imposto adiado de R$ 3.000 como economia definitiva, embora ele seja pago na realização final.</p><p>Regra de bolso: diferimento rende sobre o imposto adiado; não transforma o próprio imposto em ganho do investidor.</p>",
+     "enunciado": "<p>Dois investidores começam com R$ 80.000 na mesma ação. Após a posição chegar a R$ 100.000, Caio vende e paga 15% sobre o ganho de R$ 20.000, ficando com R$ 97.000 para recomprar. Júlia mantém os R$ 100.000 aplicados. Em seguida, a ação valoriza 8%, e ambos vendem acima do limite mensal de isenção. Não houve novos aportes, e os dois ficaram expostos à mesma variação de mercado na segunda etapa. Caio sustenta que Júlia economizou definitivamente os R$ 3.000 que ele recolheu na primeira venda, enquanto ela reconhece que o ganho acumulado será tributado na saída. Na segunda etapa, Caio apura o ganho sobre seu custo de recompra, enquanto Júlia apura o ganho total sobre os R$ 80.000 iniciais. Desconsidere custos e valores retidos. Calcule os valores líquidos finais e a vantagem econômica do diferimento.</p>",
+     "alternativas": {
+      "a": "Júlia termina com R$ 108.000 e Caio com R$ 104.760; o diferimento acrescenta R$ 3.240 porque o imposto final cabe apenas a quem girou a posição.",
+      "b": "Júlia termina com R$ 103.800 e Caio com R$ 103.596; o diferimento acrescenta R$ 204, e não os R$ 3.000 de imposto inicialmente adiado.",
+      "c": "Júlia termina com R$ 105.000 e Caio com R$ 103.596; o diferimento acrescenta R$ 1.404, correspondente ao imposto evitado na primeira realização.",
+      "d": "Júlia termina com R$ 103.800 e Caio com R$ 100.800; o diferimento acrescenta R$ 3.000, valor integral do imposto que deixou de ser pago no primeiro momento."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-18-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O imposto inicialmente adiado é R$ 40.000 vezes 15%, ou R$ 6.000. Esse valor rende 12%, gerando R$ 720. Descontando 15% sobre R$ 720, ou R$ 108, o benefício líquido é R$ 612.</p><p>A alternativa B chama o imposto adiado de economia definitiva. A alternativa C ignora o imposto de R$ 108 sobre o rendimento adicional. A alternativa D aplica 12% como desconto sobre o principal adiado em vez de calcular seu rendimento líquido.</p><p>Regra de bolso: benefício do diferimento é o rendimento líquido gerado pelo imposto que permaneceu investido.</p>",
+     "enunciado": "<p>Uma posição gera R$ 40.000 de ganho sujeito à alíquota de 15%, mas o investidor decide permanecer e adia o pagamento. No período seguinte, o valor correspondente ao imposto adiado participa de uma valorização adicional de 12%. Ao final, a posição é vendida e essa valorização adicional também integra o ganho tributável. O cliente afirma que sua vantagem foi de R$ 6.000, porque esse era o imposto que não saiu da conta na primeira etapa. Ele pretende usar esse valor cheio em uma apresentação sobre a estratégia e resiste à ideia de que a obrigação tributária apenas mudou de data. Desconsidere outras variações e custos e examine apenas o rendimento produzido pelo valor adiado, líquido do imposto de 15% sobre esse rendimento. Calcule o benefício econômico do diferimento.</p>",
+     "alternativas": {
+      "a": "O imposto adiado é R$ 6.000, seu rendimento é R$ 720 e, após R$ 108 de imposto sobre esse rendimento, a vantagem líquida é R$ 612.",
+      "b": "O imposto adiado é R$ 6.000 e essa quantia inteira constitui a vantagem, porque a venda posterior tributa somente a valorização da segunda etapa.",
+      "c": "O benefício é R$ 720, pois o valor adiado rende 12% e o rendimento obtido fica fora da apuração realizada quando a posição é vendida.",
+      "d": "O benefício é R$ 5.280, pois se descontam 12% do imposto adiado e o saldo representa a parcela economizada pela permanência na ação."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-18-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Day trade exige acompanhamento contínuo, experiência, controle emocional e pode envolver alavancagem. Paulo tem horizonte longo, rotina integral e pouca experiência, combinação mais coerente com permanência fundamentada do que com especulação diária.</p><p>A alternativa B trata encerramento diário como eliminação de risco. A alternativa C usa a reserva separada para ignorar rotina e experiência. A alternativa D subordina a adequação à preferência por velocidade e exclui critérios essenciais.</p><p>Regra de bolso: alinhe a estratégia ao prazo, à experiência e ao tempo real que o cliente consegue dedicar.</p>",
+     "enunciado": "<p>Paulo está formando patrimônio para aposentadoria em quinze anos, trabalha em horário integral e fez sua primeira aplicação em ações há três meses. Depois de assistir a vídeos sobre operações rápidas, pede ao gerente que transfira a reserva destinada ao objetivo para day trade com alavancagem. Ele afirma que encerrar a posição no mesmo dia elimina o risco e que resultados rápidos compensam a falta de tempo para acompanhar o mercado. A reserva de emergência está separada, mas Paulo não possui experiência com volatilidade, margem ou controle emocional em operações especulativas e nunca acompanhou um pregão completo. Avalie a adequação da filosofia solicitada à experiência, à rotina e ao horizonte apresentados.</p>",
+     "alternativas": {
+      "a": "O day trade é desproporcional à experiência e ao tempo disponível; uma estratégia de permanência pode se alinhar ao horizonte, após avaliar os demais limites do cliente.",
+      "b": "O day trade se alinha ao horizonte longo porque permite reinvestir ganhos diariamente, e encerrar posições no pregão retira a necessidade de experiência prévia e acompanhamento contínuo.",
+      "c": "A reserva de emergência separada torna a alavancagem adequada para a carteira previdenciária, mesmo sem disponibilidade para acompanhar o mercado durante o dia.",
+      "d": "A escolha deve seguir a velocidade de retorno desejada por Paulo, pois experiência, tempo disponível e horizonte influenciam custos, mas não a adequação da filosofia."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-18-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. Buy and hold pressupõe horizonte longo e capacidade de permanecer. Denise precisa do dinheiro em cinco meses, sem fonte alternativa, e sua experiência não altera a rigidez da data nem garante recuperação de eventual queda.</p><p>A alternativa A transforma conhecimento em garantia de preço. A alternativa C usa custo e diferimento para apagar o horizonte. A alternativa D confunde quantidade de vendas com adequação de uma filosofia de longo prazo.</p><p>Regra de bolso: permanência só funciona quando o objetivo permite esperar; experiência não alonga o prazo do cliente.</p>",
+     "enunciado": "<p>Denise vendeu um imóvel e reservou R$ 250.000 para pagar uma pós-graduação no exterior daqui a cinco meses. Ela possui experiência com ações e pede uma carteira de buy and hold, argumentando que fundamentos sólidos tornam a estratégia conservadora e que poderá vender os papéis quando chegar a matrícula. O assessor verifica que a data de uso é rígida, que o valor não possui fonte substituta e que oscilações de mercado podem persistir além do prazo disponível. A universidade exige pagamento integral até a data informada e não oferece parcelamento. Denise resiste à mudança porque associa permanência a risco reduzido e considera sua experiência suficiente para compensar qualquer incompatibilidade. Analise a adequação da filosofia ao objetivo.</p>",
+     "alternativas": {
+      "a": "O buy and hold se torna adequado porque Denise conhece ações, e a análise de fundamentos assegura disponibilidade do valor necessário no quinto mês, mesmo sem fonte substituta.",
+      "b": "O buy and hold fica desalinhado ao prazo rígido de cinco meses, pois permanência de longo prazo e experiência não garantem recuperação antes da data de uso.",
+      "c": "O buy and hold é indicado por reduzir o giro e diferir imposto, vantagens que substituem a análise da data e da possibilidade de perda no resgate.",
+      "d": "O prazo curto favorece o buy and hold porque a cliente fará uma única venda, evitando a frequência de operações que caracteriza o swing trade."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-18-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. Ricardo tem experiência, reserva e capital específico, além de disponibilidade compatível com posições de dias ou semanas, o que pode sustentar swing trade. A falta de acompanhamento contínuo pesa contra day trade, enquanto buy and hold serve a objetivos de permanência.</p><p>A alternativa B ignora a rotina e declara superioridade pela rapidez. A alternativa A exclui filosofias sem avaliar capacidade e finalidade. A alternativa D trata capital separado como substituto de experiência, tempo e horizonte.</p><p>Regra de bolso: não há filosofia superior fora do caso concreto; rotina, conhecimento, capital e prazo definem o encaixe.</p>",
+     "enunciado": "<p>Ricardo mantém reserva de emergência, conhece renda variável e separou R$ 60.000 para risco direcional, sem compromisso de uso nos próximos anos. Ele acompanha o mercado no início e no fim do dia, mas não durante o pregão inteiro, e já operou posições mantidas por alguns dias. Sua rotina permite revisar notícias e ordens duas vezes ao dia, e ele aceita oscilações nessa parcela sem comprometer outras metas. Ao receber uma oferta de curso, pede para migrar o capital ao day trade alavancado porque acredita que lucro rápido demonstra superioridade sobre as demais filosofias. A assessora precisa responder sem tratar uma estratégia como vencedora em abstrato e sem ignorar que Ricardo reúne experiência e capital de risco. Compare day trade, swing trade e buy and hold diante da situação.</p>",
+     "alternativas": {
+      "a": "O buy and hold é a única filosofia possível para pessoa física, pois swing trade e day trade são atividades especulativas incompatíveis com planejamento financeiro.",
+      "b": "O day trade é compatível porque Ricardo conhece ações e tem reserva, ainda que não acompanhe o pregão; a velocidade do resultado e o capital separado definem a superioridade da estratégia solicitada.",
+      "c": "O swing trade pode ser compatível com experiência, capital separado e acompanhamento disponível; day trade exige rotina contínua, e buy and hold atende objetivos longos de permanência.",
+      "d": "As três filosofias são equivalentes para Ricardo porque o capital está separado; experiência e disponibilidade alteram custos, mas não mudam a indicação entre elas."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-18-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Quarenta operações custam R$ 720, deixando R$ 4.280. Quatro operações custam R$ 72, deixando R$ 4.928. A diferença de custos e de resultado líquido é R$ 648.</p><p>A alternativa B cobra apenas R$ 18 na primeira rotina e R$ 72 na segunda. A alternativa C aplica o custo de 40 operações às duas rotinas. A alternativa A soma os custos ao ganho em vez de deduzi-los.</p><p>Regra de bolso: custo pequeno por operação ganha peso quando a carteira repete muitas idas e voltas.</p>",
+     "enunciado": "<p>Uma planejadora compara duas rotinas para um cliente que deseja operar ações. Na primeira, ele faria 40 idas e voltas durante o trimestre; na segunda, faria quatro. Cada operação completa custa R$ 18 entre corretagem, emolumentos e liquidação. Antes de custos e tributos, as duas rotinas produziram R$ 5.000 de ganho no exercício apresentado. O cliente diz que a diferença de frequência é irrelevante porque R$ 18 representa pouco diante do capital investido. Os custos são debitados da conta a cada encerramento, sem desconto por volume, e não há novos aportes no período. Desconsidere imposto nesta comparação e suponha que cada ida e volta suporte o mesmo custo informado. Calcule o resultado líquido de cada rotina e avalie o efeito exclusivo do giro.</p>",
+     "alternativas": {
+      "a": "A primeira rotina fica com R$ 5.720 e a segunda com R$ 5.072; custos de negociação são somados ao ganho porque remuneram a execução das ordens.",
+      "b": "A primeira rotina fica com R$ 4.982 e a segunda com R$ 4.928; o custo é cobrado uma vez por estratégia, sem depender da quantidade de giros.",
+      "c": "A primeira rotina fica com R$ 4.280 e a segunda com R$ 4.280; o número de operações muda a distribuição dos custos, mas preserva o total trimestral.",
+      "d": "A primeira rotina fica com R$ 4.280 e a segunda com R$ 4.928; o giro adicional consome R$ 648 adicionais do mesmo ganho bruto."
+     },
+     "gabarito": "d"
+    }
+   ],
+   "Índices acionários e imobiliários como referências de carteira": [
+    {
+     "id": "cpror-inv-19-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O índice funciona como referência de desempenho, retrato de determinado segmento e base para produtos que buscam replicá-lo ou para contratos derivativos.</p><p>A alternativa B transforma as três funções em recomendação, previsão e garantia. A alternativa C atribui ao índice análise de perfil e preço. A alternativa A troca a natureza da medida e trata a composição e a recomendação como fixas.</p><p>Regra de bolso: índice pode medir, retratar ou servir de base, mas não decide a compra para o cliente.</p>",
+     "enunciado": "<p>Uma especialista apresenta os três usos práticos de um índice no mercado. Identifique a associação correta entre a função e sua aplicação.</p>",
+     "alternativas": {
+      "a": "Benchmark mede risco de crédito; retrato fixa a composição do índice; ativo subjacente representa uma carteira recomendada pela bolsa ao cliente.",
+      "b": "Benchmark recomenda ativos; retrato prevê o retorno seguinte; ativo subjacente garante que produtos e derivativos entreguem ganho ao investidor.",
+      "c": "Benchmark define o perfil do cliente; retrato seleciona empresas baratas; ativo subjacente substitui a metodologia periódica da carteira teórica.",
+      "d": "Benchmark compara desempenho; retrato resume um recorte do mercado; ativo subjacente serve de base para produtos de replicação e derivativos."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-19-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O índice aplica regras de seleção e ponderação definidas previamente, sem avaliar preço, fundamento ou perfil. Sua carteira teórica muda nas reavaliações periódicas.</p><p>A alternativa B atribui avaliação de preço e adequação. A alternativa C descreve seleção discricionária por retorno futuro. A alternativa D converte inclusão mecânica em recomendação de compra.</p><p>Regra de bolso: carteira de índice segue metodologia; carteira recomendada exige análise e adequação.</p>",
+     "enunciado": "<p>Um investidor interpreta a entrada de uma ação na carteira teórica de um índice como recomendação de compra emitida pela B3. Identifique a explicação correta.</p>",
+     "alternativas": {
+      "a": "A inclusão decorre de metodologia previamente definida, sem juízo sobre preço, fundamento ou adequação, e a carteira teórica é reavaliada periodicamente.",
+      "b": "A inclusão confirma que a ação está barata e adequada aos investidores do segmento, permanecendo no índice enquanto seus fundamentos e sua cotação forem positivos.",
+      "c": "A inclusão resulta de análise discricionária sobre retorno futuro, e a revisão periódica serve para retirar empresas que apresentem queda de cotação.",
+      "d": "A inclusão equivale a recomendação coletiva de compra, embora cada instituição possa ajustar o prazo de permanência ao perfil de seus clientes."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-19-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Ibovespa e IBrX pertencem à família de negociabilidade. O primeiro é o principal termômetro do mercado, o IBrX 100 amplia o recorte para cem ações e units líquidas e o IBrX 50 usa cinquenta.</p><p>A alternativa B mistura tamanho e dividendos. A alternativa C troca ações por fundos imobiliários e atributos empresariais. A alternativa D usa capitalização, exclui units e trata a composição como fixa.</p><p>Regra de bolso: Ibovespa e IBrX perguntam quanto o papel é negociado; o número do IBrX indica a largura do recorte.</p>",
+     "enunciado": "<p>Durante uma reunião mensal, Helena procura uma referência para acompanhar o mercado acionário brasileiro por negociabilidade. Ela quer distinguir o principal termômetro do mercado de uma alternativa com recorte mais amplo e pergunta se a diferença está no tamanho das companhias. O relatório mostra ações e units com negociação relevante, mas não pretende separar empresas por capitalização, pagamento de dividendos ou práticas de sustentabilidade. Helena administrará um painel para clientes e precisa explicar por que duas réguas baseadas em giro podem apresentar composições e retornos diferentes sem que uma represente empresas maiores. A equipe também menciona uma versão formada por cinquenta ativos líquidos. Compare Ibovespa, IBrX 100 e IBrX 50 diante do pedido.</p>",
+     "alternativas": {
+      "a": "Ibovespa é o principal termômetro de negociabilidade; IBrX 100 reúne cem ações e units líquidas, e IBrX 50 aplica lógica semelhante com cinquenta.",
+      "b": "Ibovespa reúne empresas de grande capitalização; IBrX 100 seleciona pagadoras de dividendos, e IBrX 50 separa companhias de média capitalização.",
+      "c": "Ibovespa retrata fundos imobiliários líquidos; IBrX 100 reúne ações sustentáveis, e IBrX 50 seleciona empresas pelos segmentos de governança.",
+      "d": "Ibovespa e IBrX usam capitalização como critério central, mas diferem porque o primeiro exclui units e o segundo mantém cem companhias fixas."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-19-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. MidLarge abrange companhias de média e grande capitalização, enquanto SMLL representa empresas menores, normalmente sujeitas a volatilidade maior e liquidez pior que a do mercado amplo.</p><p>A alternativa A repete o erro sobre o MLCX e presume liquidez superior. A alternativa C troca capitalização por negociabilidade. A alternativa D exclui médias do MLCX e inventa critérios de volatilidade e dividendos para o SMLL.</p><p>Regra de bolso: MLCX cobre média e grande capitalização; SMLL ocupa a ponta das empresas menores.</p>",
+     "enunciado": "<p>Um cliente recebeu duas lâminas de fundos. O primeiro concentra a carteira em companhias de menor capitalização e usa o SMLL como referência. O segundo investe em empresas de média e grande capitalização e informa o MLCX. O cliente afirma que MidLarge significa apenas empresas médias e que o SMLL deveria apresentar liquidez superior por ser um índice conhecido. Ele pretende trocar o primeiro fundo pelo segundo apenas porque acredita que a sigla SMLL oferece proteção contra oscilações, embora o relatório mostre movimentos mais amplos e menor profundidade de negociação nas posições pequenas. A analista observa que o critério da família é o valor de mercado das companhias, e não a popularidade da sigla ou o giro do papel. Avalie a leitura dos dois recortes e suas características.</p>",
+     "alternativas": {
+      "a": "MLCX reúne apenas empresas médias; SMLL reúne companhias pequenas com liquidez superior e volatilidade reduzida, pois a presença no índice amplia automaticamente o volume negociado.",
+      "b": "MLCX reúne médias e grandes empresas; SMLL reúne as de menor capitalização, que costumam apresentar volatilidade superior e liquidez inferior ao mercado amplo.",
+      "c": "MLCX e SMLL selecionam por negociabilidade, sendo o primeiro formado pelos ativos líquidos e o segundo pelos papéis com menor número de negócios.",
+      "d": "MLCX reúne grandes empresas e exclui as médias; SMLL mede companhias de qualquer tamanho que tenham baixa volatilidade e distribuição frequente de dividendos."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-19-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. IDIV olha a remuneração por dividendos e JCP, IGC seleciona pelos segmentos diferenciados de listagem e ISE considera compromisso com práticas ambientais, sociais e de governança.</p><p>A alternativa B troca os três critérios entre si. A alternativa C substitui atributos por tamanho e liquidez. A alternativa D atribui negociabilidade à família temática e reduz a diferença à quantidade de ativos.</p><p>Regra de bolso: IDIV olha proventos, IGC olha segmento de listagem e ISE olha sustentabilidade empresarial.</p>",
+     "enunciado": "<p>Uma plataforma oferece três carteiras temáticas. A primeira busca companhias que se destacam na remuneração por dividendos e juros sobre capital próprio. A segunda restringe o universo a empresas do Novo Mercado, Nível 1 e Nível 2 da B3. A terceira considera compromisso com práticas ambientais, sociais e de governança. Uma cliente confunde os critérios e afirma que os três índices selecionam empresas pelo lucro distribuído, mudando apenas o porte das companhias. Ela pretende comparar os resultados em um único relatório e pede que o Ibovespa substitua as referências específicas para facilitar a leitura. Os regulamentos mantêm os atributos descritos e não adotam limite de capitalização. O assessor precisa associar cada mandato à referência correspondente sem recorrer a um índice amplo. Identifique a associação.</p>",
+     "alternativas": {
+      "a": "IDIV corresponde à remuneração ao investidor; IGC aos segmentos diferenciados de governança; ISE ao compromisso com práticas ambientais, sociais e de governança.",
+      "b": "IDIV corresponde aos segmentos Novo Mercado, Nível 1 e Nível 2; IGC à sustentabilidade empresarial; ISE às companhias que distribuem proventos e mantêm alta liquidez.",
+      "c": "IDIV corresponde à grande capitalização; IGC às ações de alta liquidez; ISE às empresas pequenas que adotam políticas ambientais e sociais.",
+      "d": "IDIV, IGC e ISE selecionam pelo volume negociado e se diferenciam pela quantidade de ativos mantidos em cada carteira teórica temática."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-19-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. O IFIX acompanha cotas de fundos imobiliários e corresponde ao mandato. O fundo rendeu 3% diante de menos 2% do índice, diferença positiva de 5 pontos percentuais. Ibovespa mede ações.</p><p>A alternativa B usa o local de negociação para ignorar o mercado representado. A alternativa A calcula incorretamente a diferença entre 3% e menos 2%. A alternativa D escolhe outro índice acionário sem alinhar a classe de ativos.</p><p>Regra de bolso: carteira imobiliária se mede com régua imobiliária; retorno relativo é carteira menos benchmark.</p>",
+     "enunciado": "<p>Márcio investe em um fundo de fundos imobiliários e recebe um relatório que compara seu desempenho ao Ibovespa. No semestre, o fundo rendeu 3%, o Ibovespa avançou 11% e o IFIX recuou 2%. O cliente conclui que o gestor destruiu 8 pontos percentuais de valor porque ficou abaixo do índice acionário e solicita resgate antes da reunião de acompanhamento. O mandato do fundo permite investir apenas em cotas de fundos imobiliários negociadas em bolsa ou balcão organizado, sem posições em ações de companhias. A diferença entre ações e imóveis foi acentuada pelo cenário de juros, e o gestor permaneceu dentro da política informada. Calcule o desempenho relativo diante do indicador alinhado ao mandato e avalie a conclusão de Márcio.</p>",
+     "alternativas": {
+      "a": "A referência coerente é o IFIX, e o fundo ficou 1 ponto acima dela; retornos positivo e negativo devem ser comparados pela diferença entre valores absolutos.",
+      "b": "A referência coerente é o Ibovespa, e o fundo ficou 8 pontos abaixo dela; ambos são negociados em bolsa e por isso pertencem ao mesmo mercado medido.",
+      "c": "A referência coerente é o IFIX, e o fundo ficou 5 pontos percentuais acima dela; os 8 pontos abaixo do Ibovespa comparam mercados de naturezas diferentes.",
+      "d": "A referência coerente é o IBrX 100, e o fundo ficou 8 pontos abaixo dele; o recorte amplo corrige a concentração presente no Ibovespa e no IFIX."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-19-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Horizonte entregou 14% contra 22%, ficando 8 pontos abaixo do SMLL. Renda Urbana entregou 4% contra menos 3%, ficando 7 pontos acima do IFIX. A régua alinhada muda a avaliação.</p><p>A alternativa B mantém o Ibovespa para mandatos distintos. A alternativa C inverte o sinal do primeiro cálculo e erra a diferença do segundo. A alternativa A troca deliberadamente os benchmarks entre classes incompatíveis.</p><p>Regra de bolso: antes de elogiar o retorno, subtraia o benchmark que representa o mandato da carteira.</p>",
+     "enunciado": "<p>Ao avaliar dois gestores, Beatriz observa que o Fundo Horizonte, dedicado a small caps, rendeu 14% no ano, enquanto o SMLL avançou 22%. O Fundo Renda Urbana, restrito a fundos imobiliários, rendeu 4%, enquanto o IFIX caiu 3%. Beatriz compara ambos ao Ibovespa, que subiu 9%, e elogia o primeiro por superar o índice amplo em 5 pontos, enquanto considera o segundo fraco por render apenas 4%. Ela decide aumentar o aporte no Horizonte e resgatar o Renda Urbana com base nessa classificação, apesar de os regulamentos apontarem mercados distintos. Os mandatos permaneceram inalterados durante o ano, e nenhum dos gestores podia migrar para ações fora do próprio universo. Calcule o desempenho relativo de cada fundo diante da referência correspondente e reavalie a conclusão.</p>",
+     "alternativas": {
+      "a": "Horizonte ficou 13 pontos acima do IFIX; Renda Urbana ficou 18 pontos abaixo do SMLL, pois os benchmarks devem ser trocados para testar diversificação.",
+      "b": "Horizonte ficou 5 pontos acima do Ibovespa; Renda Urbana ficou 5 pontos abaixo dele, pois um índice amplo mantém comparabilidade entre gestores diferentes.",
+      "c": "Horizonte ficou 8 pontos acima do SMLL; Renda Urbana ficou 1 ponto acima do IFIX, porque diferenças com índice negativo usam apenas valores absolutos.",
+      "d": "Horizonte ficou 8 pontos abaixo do SMLL; Renda Urbana ficou 7 pontos acima do IFIX, de modo que a leitura por mandatos inverte a avaliação inicial."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-19-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A carteira rendeu 11% e o IDIV 9%, portanto ficou 2 pontos acima da referência temática. O Ibovespa refletiu exposições diferentes e pode criar expectativa incompatível com a tese de proventos.</p><p>A alternativa A usa o mercado nacional para apagar o mandato. A alternativa C mistura os retornos dos índices antes de comparar. A alternativa D inverte a diferença e reduz o IDIV a pagamentos, ignorando o comportamento da carteira teórica.</p><p>Regra de bolso: carteira temática pede benchmark temático; a régua ampla pode premiar ou punir a exposição errada.</p>",
+     "enunciado": "<p>Lúcia contratou uma carteira voltada a empresas que distribuem proventos e usa esse fluxo para complementar renda. Em um ano de forte valorização das companhias ligadas a commodities, o Ibovespa avançou 18%, a carteira rendeu 11% e o IDIV subiu 9%. Lúcia pede a troca imediata das ações porque enxerga perda de 7 pontos diante do mercado e afirma que qualquer carteira acionária deve superar o principal índice da bolsa. Ela não autorizou concentração em commodities e continua priorizando a geração de renda, mas quer abandonar a tese ao ver a manchete sobre o Ibovespa. O mandato permaneceu focado em dividendos, sem buscar reproduzir a composição setorial do índice amplo. Compare a carteira com a referência coerente e avalie o pedido de mudança.</p>",
+     "alternativas": {
+      "a": "A carteira ficou 7 pontos abaixo do Ibovespa; por serem ações brasileiras, o índice amplo substitui referências temáticas na avaliação do gestor.",
+      "b": "A carteira ficou 2 pontos acima do IDIV; usar o Ibovespa ignora o mandato de proventos e pode induzir mudanças contrárias à tese contratada.",
+      "c": "A carteira ficou 9 pontos acima do IDIV; o retorno do benchmark deve ser subtraído do Ibovespa antes da comparação com a carteira temática.",
+      "d": "A carteira ficou 2 pontos abaixo do IDIV; índices de dividendos medem apenas pagamentos distribuídos e excluem a oscilação das ações que os compõem."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-19-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. A carteira teórica é reavaliada conforme regras previamente definidas e pode mudar. Um produto de replicação segue essa composição, sem que a alteração represente análise de preço, fundamento ou adequação.</p><p>A alternativa B atribui juízo fundamentalista e autoriza desvio do mandato. A alternativa A transforma método em recomendação e avaliação de preço. A alternativa D trata a composição como fixa e limita a revisão aos pesos.</p><p>Regra de bolso: revisão de índice executa regra; replicação acompanha a regra; recomendação exige outro tipo de análise.</p>",
+     "enunciado": "<p>Uma cliente acompanha um produto que busca replicar o IGC. Após uma reavaliação periódica, duas empresas deixam a carteira teórica e outras entram conforme os critérios do índice. Ela interpreta a mudança como sinal de que a B3 perdeu confiança nos fundamentos das empresas retiradas e pede que o gestor mantenha a composição anterior, que havia rendido bem. Uma das companhias mudou sua condição de enquadramento nos segmentos considerados, enquanto a revisão aplicou a mesma regra divulgada para as demais participantes. O produto tem mandato de acompanhar o índice, sem liberdade para preservar ativos apenas pelo retorno passado, e a metodologia não emite opinião sobre preço. Analise a natureza da revisão e a consequência para um produto de replicação.</p>",
+     "alternativas": {
+      "a": "A revisão transforma o IGC em carteira recomendada; o produto deve comprar as entradas porque a B3 confirmou que estão baratas e adequadas ao cliente.",
+      "b": "A revisão expressa análise negativa dos fundamentos retirados; o gestor pode manter a composição anterior se considerar que preços e retornos passados ainda oferecem resultado suficiente ao produto.",
+      "c": "A revisão aplica a metodologia e pode alterar a carteira teórica; o produto que replica o índice acompanha a nova composição, sem tratar entrada ou saída como recomendação.",
+      "d": "A revisão serve apenas para recalcular pesos, pois a composição de um índice de governança permanece fixa enquanto existirem os três segmentos de listagem."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-19-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. MLCX mede médias e grandes empresas, SMLL acompanha as menores, IGC seleciona Novo Mercado, Nível 1 e Nível 2, e IFIX representa cotas de fundos imobiliários.</p><p>A alternativa A mantém três referências desalinhadas. A alternativa C inverte os índices de tamanho e troca governança e imóveis. A alternativa D usa negociabilidade, sustentabilidade e dividendos onde os mandatos pedem outros recortes.</p><p>Regra de bolso: leia o mandato e escolha o índice que mede a mesma classe, tamanho ou atributo.</p>",
+     "enunciado": "<p>Um comitê precisa definir referências para quatro mandatos: uma carteira de empresas médias e grandes, outra de companhias pequenas, uma estratégia baseada nos segmentos diferenciados de listagem e um portfólio de fundos imobiliários. Um diretor propõe usar o MLCX para a primeira, o Ibovespa para a segunda, o ISE para a terceira e o IBrX 100 para a quarta, alegando que índices conhecidos facilitam a comunicação. A remuneração dos gestores será avaliada pelo retorno relativo, e os clientes receberão relatórios trimestrais comparando cada carteira com a régua escolhida. Os regulamentos descrevem fielmente os quatro recortes e não autorizam mudança de classe ou de atributo. Avalie a proposta e associe cada mandato à régua coerente.</p>",
+     "alternativas": {
+      "a": "MLCX para médias e grandes, Ibovespa para pequenas, ISE para segmentos diferenciados e IBrX 100 para fundos imobiliários, como proposto.",
+      "b": "MLCX para médias e grandes, SMLL para pequenas, IGC para segmentos diferenciados de listagem e IFIX para fundos imobiliários.",
+      "c": "SMLL para médias e grandes, MLCX para pequenas, IDIV para segmentos diferenciados e Ibovespa para fundos imobiliários listados.",
+      "d": "IBrX 100 para médias e grandes, SMLL para pequenas, ISE para segmentos diferenciados e IDIV para fundos imobiliários distribuidores."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Derivativos: finalidades, futuros e garantias": [
+    {
+     "id": "cpror-inv-20-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Hedge parte de uma exposição a proteger, especulação busca resultado com o movimento sem exposição prévia e arbitragem compra onde está barato e vende onde está caro para capturar distorção temporária.</p><p>A alternativa B troca hedge e especulação e preserva a distorção. A alternativa C classifica pela ferramenta e elimina a diferença de preço. A alternativa A promete retorno, retira risco do especulador e transforma arbitragem em aposta direcional.</p><p>Regra de bolso: exposição prévia indica hedge, aposta no movimento indica especulação e diferença entre mercados indica arbitragem.</p>",
+     "enunciado": "<p>Um professor compara hedge, especulação e arbitragem no mercado de derivativos. Identifique a distinção correta entre as três finalidades.</p>",
+     "alternativas": {
+      "a": "Hedge garante rentabilidade; especulação oferece liquidez sem assumir risco; arbitragem depende de previsão direcional para escolher apenas a ponta comprada e aguardar o mercado.",
+      "b": "Hedge busca ganho sem exposição; especulação elimina oscilações de uma posição existente; arbitragem mantém preços diferentes até o vencimento dos contratos.",
+      "c": "Hedge e especulação se distinguem pelo contrato utilizado; arbitragem se caracteriza por comprar e vender o mesmo ativo pelo mesmo preço em um mercado.",
+      "d": "Hedge reduz efeito de uma exposição existente; especulação assume risco sem exposição prévia; arbitragem explora diferença temporária de preços entre mercados."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-20-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A padronização torna contratos futuros intercambiáveis e negociáveis em bolsa, com contraparte central e ajuste diário. O termo é bilateral e sob medida.</p><p>A alternativa A inverte as estruturas. A alternativa C troca flexibilidade e ajuste entre os contratos. A alternativa D reduz a diferença ao ativo objeto e ignora a mecânica de negociação.</p><p>Regra de bolso: futuro é padronizado, de bolsa e ajustado diariamente; termo é bilateral e personalizado.</p>",
+     "enunciado": "<p>Uma cliente pergunta o que diferencia o contrato futuro negociado em bolsa de um contrato a termo bilateral. Identifique a explicação correta.</p>",
+     "alternativas": {
+      "a": "O futuro é bilateral e ajustado às necessidades das partes; o termo usa contratos intercambiáveis, contraparte central e apuração diária de resultados.",
+      "b": "O futuro é padronizado em lote, vencimento e ativo, é negociado em bolsa e tem ajuste diário; o termo é bilateral e pode ser feito sob medida.",
+      "c": "O futuro permite escolher qualquer quantidade e pagar no vencimento; o termo exige múltiplos de lotes definidos e liquida diferenças a cada pregão.",
+      "d": "O futuro e o termo têm a mesma mecânica, diferenciando-se apenas pelo ativo objeto, pois moedas usam futuro e commodities usam contratos a termo."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-20-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A importadora já tem pagamento em dólar e usa o futuro para reduzir o efeito da alta. Bruno não possui exposição anterior e assume risco para lucrar, o que caracteriza especulação.</p><p>A alternativa B classifica pelo contrato e ignora a exposição. A alternativa C impede o uso protetivo do futuro. A alternativa D confunde obrigação cambial com arbitragem e chama aposta de hedge.</p><p>Regra de bolso: o mesmo futuro pode proteger um compromisso ou criar uma aposta; posição e intenção definem a finalidade.</p>",
+     "enunciado": "<p>Dois clientes compram o mesmo contrato futuro de dólar. A importadora Vale Azul possui pagamento de US$ 500.000 por mercadorias em noventa dias e teme a alta da moeda. O orçamento da compra foi aprovado em reais e uma valorização do dólar elevaria o desembolso necessário. Bruno não possui receita, dívida ou compromisso em dólar, mas acredita que a cotação subirá e quer lucrar com esse movimento. Ele aceita perder caso a moeda caia e não relaciona a operação a outra posição de sua carteira. Ambos assumem futuro comprado com o mesmo vencimento e pelo mesmo preço. Bruno afirma que a finalidade também é idêntica porque o instrumento utilizado não muda. Analise as duas posições pela exposição anterior e pela intenção de cada participante.</p>",
+     "alternativas": {
+      "a": "A importadora faz hedge de uma obrigação existente; Bruno especula sobre a alta sem exposição prévia, embora os dois usem o mesmo contrato.",
+      "b": "As duas posições são hedge porque o contrato futuro reduz a incerteza do preço do dólar, independentemente de existir obrigação na moeda.",
+      "c": "As duas posições são especulação porque contratos de dólar envolvem risco de cotação e não podem proteger compromissos do mundo real.",
+      "d": "A importadora faz arbitragem entre mercadoria e moeda; Bruno faz hedge porque pretende encerrar a posição antes de assumir uma obrigação cambial."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-20-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A diferença bruta é R$ 106 menos R$ 100, ou R$ 6. Subtraindo R$ 2 de custos, restam R$ 4 por unidade, equivalentes a R$ 40.000 em 10.000 unidades. As pontas simultâneas caracterizam arbitragem.</p><p>A alternativa B ignora os custos e chama arbitragem de hedge. A alternativa A deduz os custos incorretamente e classifica como aposta direcional. A alternativa D ignora que as duas pontas travam a diferença.</p><p>Regra de bolso: arbitragem compra barato e vende caro ao mesmo tempo; a diferença líquida dos custos é o resultado buscado.</p>",
+     "enunciado": "<p>Uma commodity equivalente é negociada por R$ 100 em um mercado e por R$ 106 em outro no mesmo momento. Uma instituição consegue comprar 10.000 unidades no primeiro, vender simultaneamente a mesma quantidade no segundo e gasta R$ 2 por unidade entre os custos das duas pontas. As ordens são executadas juntas, sem manter saldo direcional, e as posições correspondentes são encerradas conforme os mercados convergem. A mesa só realiza a operação quando as duas pontas podem ser travadas e não mantém aposta sobre o preço posterior. Um cliente chama a operação de especulação porque envolve derivativos e afirma que o lucro depende de a commodity subir depois da compra. Desconsidere outros riscos e calcule os resultados unitário e total, identificando a finalidade.</p>",
+     "alternativas": {
+      "a": "O resultado é R$ 2 por unidade e R$ 20.000 no total; a finalidade é especulação, pois o custo é deduzido somente da ponta comprada.",
+      "b": "O resultado é R$ 6 por unidade e R$ 60.000 no total; a finalidade é hedge, pois os custos ficam fora da diferença travada entre mercados.",
+      "c": "O resultado é R$ 4 por unidade e R$ 40.000 no total; a finalidade é arbitragem, pois as pontas capturam a distorção líquida dos custos.",
+      "d": "O resultado depende da direção posterior e a finalidade é especulação, pois as 10.000 unidades mantêm aberta a exposição ao preço da commodity."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-20-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A posição vendida perde aproximadamente 4% de R$ 500.000, ou R$ 20.000, e o ajuste diário debita esse resultado. A posição física valorizou, mas ainda não gerou caixa, criando necessidade temporária de liquidez.</p><p>A alternativa A trata o ajuste como informativo. A alternativa C inverte o resultado da venda futura e soma ganhos. A alternativa D confunde saída de caixa intermediária com falha da proteção.</p><p>Regra de bolso: ajuste diário liquida o futuro agora; o ativo protegido pode gerar o caixa apenas depois.</p>",
+     "enunciado": "<p>Uma indústria vende contratos futuros para proteger uma carteira de matéria prima avaliada em R$ 500.000. Em determinado pregão, o preço do ativo sobe 4%. A posição física ganha aproximadamente R$ 20.000, mas a venda futura registra perda equivalente, debitada pelo ajuste diário. A matéria prima continua em estoque e não foi vendida, de modo que a valorização física ainda não gerou dinheiro para a empresa. A tesouraria dispõe de apenas R$ 12.000 livres naquela manhã e teria de buscar os R$ 8.000 restantes para suportar o débito. O diretor considera a proteção defeituosa porque houve saída antes do vencimento e quer esperar a data final para reconhecer o resultado. Desconsidere descasamentos e custos. Analise a função e o efeito de caixa do ajuste diário.</p>",
+     "alternativas": {
+      "a": "O futuro aguarda o vencimento para cobrar R$ 20.000, pois ganhos e perdas diários servem apenas como informação e não movimentam a conta nem exigem caixa da empresa.",
+      "b": "O futuro debita cerca de R$ 20.000 naquele ajuste, enquanto o ganho físico ainda não virou caixa; a proteção econômica pode funcionar e exigir liquidez no caminho.",
+      "c": "O futuro credita R$ 20.000 porque a matéria prima valorizou, somando o resultado das duas pontas e ampliando o ganho econômico da proteção.",
+      "d": "O débito prova falha do hedge, pois uma proteção correta impede saída de caixa durante o contrato e preserva a valorização integral da posição física."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-20-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A garantia é recalculada conforme preços e risco. Se a chamada de margem não for atendida no prazo, a posição pode ser encerrada compulsoriamente e os ativos depositados podem ser executados.</p><p>A alternativa B congela a margem. A alternativa C transforma garantia em lucro e adia a execução. A alternativa A cria transferência do contrato e preserva garantias apesar da inadimplência.</p><p>Regra de bolso: risco aumentou, margem pode subir; reforço faltou, posição e garantias podem ser executadas.</p>",
+     "enunciado": "<p>Otávio abre uma posição futura e deposita R$ 60.000 em títulos públicos como margem. Após movimento desfavorável do mercado, os ajustes consomem recursos e a bolsa recalcula o risco, elevando a garantia exigida para R$ 82.000. Os títulos continuam entre os ativos aceitos, mas seu valor depositado ficou abaixo da nova exigência. Otávio recusa o reforço de R$ 22.000 porque entende que o depósito inicial permanece suficiente até o vencimento e que a contraparte deve aguardar a recuperação do preço. O prazo para recomposição termina sem novo depósito, embora a posição continue acumulando exposição. A corretora informa que aplicará os procedimentos previstos pela contraparte central. Avalie a relação entre ajuste diário, margem e a consequência da falta de atendimento.</p>",
+     "alternativas": {
+      "a": "A falta de depósito transfere o contrato à outra ponta sem encerramento, mantendo as garantias intactas até que o mercado retorne ao preço inicial.",
+      "b": "A margem inicial permanece fixa e a posição segue aberta, pois o ajuste diário substitui a necessidade de garantia adicional até o vencimento contratado.",
+      "c": "A chamada converte os títulos públicos em lucro da posição, e a execução ocorre apenas se a perda continuar depois da data final do contrato futuro.",
+      "d": "A margem pode ser recalculada e, sem reforço no prazo, a posição pode ser encerrada compulsoriamente e as garantias executadas para cobrir a obrigação."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-20-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A safra rende 600 vezes R$ 1.500, ou R$ 900.000. A venda futura ganha 600 vezes a diferença de R$ 300, ou R$ 180.000. O total é R$ 1.080.000.</p><p>A alternativa B inverte o resultado da posição vendida. A alternativa A aplica o preço travado à venda física e calcula incorretamente o futuro. A alternativa D elimina a compensação produzida pelo derivativo.</p><p>Regra de bolso: preço caiu, a venda física recebe menos e a posição futura vendida compensa a diferença.</p>",
+     "enunciado": "<p>Um cafeicultor espera vender 600 toneladas daqui a três meses e vende futuros equivalentes à produção por R$ 1.800 a tonelada. Ele assumiu compromissos com fornecedores usando receita mínima de R$ 1.080.000 e preferiu previsibilidade a participar de eventual alta. Na colheita, o preço à vista cai para R$ 1.500. A quantidade produzida, o ativo objeto e o vencimento coincidem com a proteção, e os ajustes foram suportados ao longo do período. O produtor observa a receita física menor e conclui que perdeu R$ 180.000 por ter contratado o hedge, desconsiderando o resultado da posição vendida. Desconsidere custos e diferenças entre futuro e preço à vista na data final. Calcule a venda física, o resultado futuro e o valor combinado.</p>",
+     "alternativas": {
+      "a": "A venda física gera R$ 1.080.000, o futuro ganha R$ 300.000 e o total fica em R$ 1.380.000, pois se usa o preço contratado nas duas pontas.",
+      "b": "A venda física gera R$ 900.000, o futuro perde R$ 180.000 e o total fica em R$ 720.000, pois a posição vendida perde quando o preço cai.",
+      "c": "A venda física gera R$ 900.000, o futuro ganha R$ 180.000 e o total fica em R$ 1.080.000, equivalente ao preço travado de R$ 1.800.",
+      "d": "A venda física gera R$ 900.000 e o futuro termina sem resultado, porque o hedge apenas garante comprador e não compensa a variação do preço."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-20-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. A venda física rende 600 vezes R$ 2.100, ou R$ 1.260.000. A venda futura perde 600 vezes R$ 300, ou R$ 180.000. O total permanece em R$ 1.080.000, valor travado.</p><p>A alternativa B atribui ganho à posição vendida na alta. A alternativa C usa o preço futuro como receita física e erra a perda. A alternativa D elimina os ajustes justamente no cenário em que a venda futura perde.</p><p>Regra de bolso: preço subiu, o ativo físico ganha e o futuro vendido devolve a alta; previsibilidade custa a oportunidade de ganho.</p>",
+     "enunciado": "<p>A mesma cooperativa vende futuros sobre 600 toneladas a R$ 1.800 por tonelada para financiar compromissos que exigem receita previsível de R$ 1.080.000. Na colheita, uma quebra de oferta eleva o preço à vista para R$ 2.100. A cooperativa vende a produção por esse valor, mas acumulou perdas diárias na posição futura vendida e o presidente acusa a estratégia de retirar o ganho da alta. Ele propõe encerrar a proteção assim que o mercado começar a subir, embora os compromissos permaneçam fixos e a safra continue exposta até a venda. Quantidade, vencimento e ativo objeto coincidem, e a empresa manteve margem até o encerramento. Desconsidere custos e diferenças finais entre mercados. Calcule os dois resultados e explique o preço da proteção.</p>",
+     "alternativas": {
+      "a": "A venda física gera R$ 1.260.000, o futuro perde R$ 180.000 e o total fica em R$ 1.080.000; o hedge preserva o preço travado e abre mão da alta.",
+      "b": "A venda física gera R$ 1.260.000, o futuro ganha R$ 180.000 e o total fica em R$ 1.440.000; a posição vendida acompanha a valorização da safra.",
+      "c": "A venda física gera R$ 1.080.000, o futuro perde R$ 300.000 e o total fica em R$ 780.000; o contrato substitui o preço à vista pelo valor inicial.",
+      "d": "A venda física gera R$ 1.260.000 e o futuro termina sem perda, pois o aumento de preço elimina ajustes de uma posição criada para proteção."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-20-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Dez contratos cobrem 1.000 toneladas para exposição de 950, o vencimento antecede a necessidade e a especificação difere do produto. Quantidade, data e ativo objeto deixam parcelas de risco.</p><p>A alternativa B atribui ajustes automáticos inexistentes à padronização. A alternativa C usa contraparte central para apagar descasamentos. A alternativa D trata a diferença de 50 toneladas como a única parcela protegida.</p><p>Regra de bolso: hedge aproxima exposição e contrato; quantidade, vencimento ou objeto diferentes deixam risco descoberto ou excedente.</p>",
+     "enunciado": "<p>Uma produtora prevê colher 950 toneladas de milho em cinco meses. O contrato futuro disponível tem lote padronizado de 100 toneladas e vencimento quatro meses à frente, além de usar especificação que não coincide exatamente com a qualidade vendida pela empresa. A estimativa de produção já foi revisada pela equipe agrícola. O diretor quer vender dez contratos e afirma que isso eliminará o risco de preço das 950 toneladas até a data da entrega. Com nove contratos, 50 toneladas ficariam sem cobertura; com dez, a posição futura excederia a safra na mesma quantidade. A tesouraria alerta ainda que o futuro vencerá antes da venda física e que o preço da qualidade produzida pode variar de modo diferente do ativo objeto. Analise os descasamentos e a proteção resultante.</p>",
+     "alternativas": {
+      "a": "A proteção é aproximada: há excesso de 50 toneladas, diferença de vencimento e diferença de especificação, de modo que permanecem riscos residuais.",
+      "b": "A proteção é exata porque a padronização arredonda automaticamente a safra para o lote seguinte e estende o contrato até a venda da produção.",
+      "c": "A proteção elimina o risco de preço das 950 toneladas, pois quantidade, data e qualidade deixam de importar quando o derivativo possui contraparte central.",
+      "d": "A proteção cobre apenas 50 toneladas, diferença entre 1.000 e 950, enquanto as demais ficam fora porque o contrato foi vendido antes da colheita."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-20-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. O ganho econômico da receita aparece depois, enquanto o futuro movimenta caixa diariamente. Sem liquidez para ajustes e margem, a posição pode ser encerrada compulsoriamente durante o período de proteção.</p><p>A alternativa A presume compensação com recurso ainda inexistente. A alternativa C trata perda do hedge como erro direcional. A alternativa D confunde descasamento econômico com exigência de garantia.</p><p>Regra de bolso: hedge de preço só atravessa o período se o cliente também conseguir financiar o caixa dos ajustes.</p>",
+     "enunciado": "<p>Uma exportadora receberá dólares em quatro meses e vende futuros para reduzir o efeito de queda da moeda sobre a receita. O volume e o vencimento estão alinhados, mas a empresa usa quase todo o caixa disponível na operação cotidiana e espera receber dos clientes apenas na data final. Após valorização do dólar, a posição futura vendida sofre ajustes negativos e surge chamada de margem, enquanto o valor em reais da receita futura aumenta. A reserva livre é de R$ 20.000, e a tesouraria estima que novos movimentos possam exigir até R$ 90.000 antes do recebimento. O sócio recusa contratar liquidez porque considera que o ganho econômico da exposição pagará qualquer perda no vencimento. Analise a proteção diante do intervalo entre ajustes e entrada da receita.</p>",
+     "alternativas": {
+      "a": "O ganho esperado na receita dispensa caixa intermediário, pois a bolsa compensa automaticamente o ajuste futuro com dólares que a empresa ainda receberá quatro meses depois.",
+      "b": "O hedge pode estar economicamente alinhado e ainda falhar por caixa; sem recursos para ajustes e margem, a posição pode ser encerrada antes de proteger a receita.",
+      "c": "A chamada de margem indica que o hedge está na direção errada, e a solução é inverter a posição para ganhar com a valorização antes do recebimento.",
+      "d": "O alinhamento de volume e vencimento elimina risco de liquidez, porque garantias são exigidas apenas quando quantidade ou ativo objeto não coincidem."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Opções, moneyness e swaps: funcionamento e comparação": [
+    {
+     "id": "cpror-inv-21-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O titular paga o prêmio e adquire um direito: comprar na call e vender na put. Se houver exercício, o lançador da call vende e o lançador da put compra.</p><p>A alternativa B inverte prêmio, direito e obrigação. A alternativa C troca call e put e confunde prêmio com preço do ativo. A alternativa A estende a escolha ao lançador e prevê devolução do prêmio.</p><p>Regra de bolso: titular compra um direito com o prêmio; lançador recebe o prêmio e assume a obrigação correspondente.</p>",
+     "enunciado": "<p>Uma gerente explica os direitos e as obrigações nas opções de compra e de venda. Identifique a associação correta entre posição, prêmio e exercício.</p>",
+     "alternativas": {
+      "a": "O titular e o lançador possuem o mesmo direito de abandonar o contrato, e o prêmio é devolvido quando o exercício não produz vantagem econômica.",
+      "b": "O titular da call recebe prêmio e deve comprar; o titular da put recebe prêmio e deve vender; os lançadores escolhem se cumprem o exercício solicitado no vencimento.",
+      "c": "O titular da call pode vender e o da put pode comprar; ambos pagam o preço de exercício como entrada, enquanto o prêmio corresponde ao ativo objeto.",
+      "d": "O titular da call paga prêmio e pode comprar; o titular da put paga prêmio e pode vender; os respectivos lançadores devem vender ou comprar se houver exercício."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-21-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Na call, mercado acima do exercício torna vantajoso comprar a R$ 45 algo que vale R$ 48. Na put, vender a R$ 45 algo que vale R$ 48 é desfavorável.</p><p>A alternativa B inverte a leitura. A alternativa C ignora o preço de mercado. A alternativa A atribui valor simultâneo às duas opções com o mesmo exercício.</p><p>Regra de bolso: preço acima do exercício favorece a call; preço abaixo favorece a put.</p>",
+     "enunciado": "<p>Uma ação vale R$ 48 no mercado. Compare uma call e uma put com preço de exercício de R$ 45 e identifique o moneyness de cada opção nesse momento.</p>",
+     "alternativas": {
+      "a": "A call e a put estão dentro do dinheiro porque qualquer diferença entre mercado e exercício produz valor intrínseco para as duas posições.",
+      "b": "A call está fora do dinheiro porque exige pagamento para comprar, e a put está dentro do dinheiro porque seu exercício fica abaixo da cotação observada no mercado.",
+      "c": "A call e a put estão no dinheiro porque usam o mesmo preço de exercício, independentemente de a cotação estar em R$ 48.",
+      "d": "A call está dentro do dinheiro porque permite comprar abaixo do mercado, e a put está fora do dinheiro porque permitiria vender abaixo do mercado."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-21-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A call com exercício abaixo do mercado e a put com exercício acima estão dentro do dinheiro. Quando exercício e mercado coincidem, call B e put C estão no dinheiro.</p><p>A alternativa A inverte as opções com valor intrínseco. A alternativa C trata igualdade de forma diferente entre call e put. A alternativa D chama as opções no dinheiro de fora do dinheiro.</p><p>Regra de bolso: igualdade é no dinheiro para ambas; acima do exercício favorece call e abaixo favorece put.</p>",
+     "enunciado": "<p>Carlos acompanha quatro opções sobre a mesma ação no vencimento, quando o ativo está cotado a R$ 70. A call A tem exercício de R$ 65, a call B tem exercício de R$ 70, a put C tem exercício de R$ 70 e a put D tem exercício de R$ 76. Ele pretende usar a classificação para decidir quais direitos possuem valor intrínseco naquele momento, sem calcular o resultado líquido das posições. Carlos afirma que call e put usam a mesma direção para classificar dentro e fora do dinheiro e que opções com exercício igual ao mercado ficam fora do dinheiro porque não geram lucro. Os prêmios pagos foram diferentes, mas o relatório solicitado separa moneyness de rentabilidade e não os utiliza nesta etapa. As quatro posições usam a mesma cotação de referência. Classifique as opções.</p>",
+     "alternativas": {
+      "a": "Call A e put D estão fora; call B e put C estão no dinheiro, pois qualquer exercício diferente de R$ 70 é desfavorável ao titular.",
+      "b": "Call A está dentro; call B e put C estão no dinheiro; put D está dentro, pois a leitura se inverte entre compra e venda.",
+      "c": "Call A e put D estão dentro; call B está dentro e put C está fora, pois a igualdade favorece apenas o direito de comprar.",
+      "d": "Call A está dentro; call B e put C estão fora; put D está dentro, pois opções sem valor intrínseco positivo ficam fora do dinheiro."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-21-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O valor intrínseco é R$ 50 menos R$ 40, ou R$ 10. Após o prêmio de R$ 3, sobram R$ 7 por ação, total de R$ 1.400. O equilíbrio é R$ 40 mais R$ 3, ou R$ 43.</p><p>A alternativa A ignora o prêmio. A alternativa C chama o resultado líquido de valor intrínseco e usa a cotação como equilíbrio. A alternativa D troca prêmio e valor intrínseco e subtrai o prêmio do exercício.</p><p>Regra de bolso: call comprada equilibra em exercício mais prêmio; lucro líquido desconta o prêmio do valor intrínseco.</p>",
+     "enunciado": "<p>Fernanda compra uma call sobre 200 ações, paga prêmio de R$ 3 por ação e obtém o direito de comprar cada papel por R$ 40. Ela desembolsa os R$ 600 do prêmio no início e registra esse valor como custo definitivo da estratégia. No vencimento, a ação vale R$ 50 e o direito permite adquirir os papéis por preço inferior ao mercado. Fernanda decide exercer, mas afirma que seu lucro é R$ 2.000 porque considera apenas a diferença entre mercado e exercício e volta a tratar o prêmio como entrada que será devolvida. Seu extrato não apresenta estorno do prêmio, e o contrato não possui outros custos ou pagamentos na data final. Calcule o valor intrínseco por ação, o resultado líquido do contrato e o ponto de equilíbrio da posição comprada.</p>",
+     "alternativas": {
+      "a": "O valor intrínseco é R$ 10, o resultado líquido é R$ 2.000 e o ponto de equilíbrio é R$ 40, pois o prêmio retorna no exercício.",
+      "b": "O valor intrínseco é R$ 10, o resultado líquido é R$ 1.400 e o ponto de equilíbrio é R$ 43 por ação.",
+      "c": "O valor intrínseco é R$ 7, o resultado líquido é R$ 1.400 e o ponto de equilíbrio é R$ 50, cotação observada no vencimento.",
+      "d": "O valor intrínseco é R$ 3, o resultado líquido é R$ 600 e o ponto de equilíbrio é R$ 37, obtido ao deduzir o prêmio do exercício."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-21-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O valor intrínseco é R$ 62 menos R$ 60, ou R$ 2. Descontando o prêmio de R$ 4, o resultado é perda de R$ 2 por ação e R$ 200 no contrato. Ainda assim, a call está dentro do dinheiro.</p><p>A alternativa B exclui o prêmio do resultado. A alternativa C chama a opção de no dinheiro e perde o valor intrínseco. A alternativa D usa o ponto de equilíbrio para classificar moneyness.</p><p>Regra de bolso: dentro do dinheiro significa exercício favorável, mas lucro só existe depois de recuperar o prêmio.</p>",
+     "enunciado": "<p>Roberto compra uma call com preço de exercício de R$ 60 e paga prêmio de R$ 4 por ação para um contrato de 100 ações. O desembolso inicial é de R$ 400 e o ponto de equilíbrio indicado no comprovante é R$ 64. No vencimento, o ativo está em R$ 62. Ele vê que pode comprar abaixo do mercado e conclui que a opção está dentro do dinheiro e, por isso, gerou lucro suficiente para recuperar o custo. Roberto pretende exercer para reduzir a perda, enquanto um colega recomenda abandonar o direito e perder o prêmio inteiro. A instituição registra separadamente o valor obtido no exercício e o custo do direito adquirido. O prêmio não será devolvido, e não existem outros custos. Separe valor intrínseco, moneyness e resultado total e avalie a conclusão de Roberto.</p>",
+     "alternativas": {
+      "a": "A call está dentro do dinheiro, mas perde R$ 2 por ação e R$ 200 no contrato, porque os R$ 2 de valor intrínseco não recuperam o prêmio de R$ 4.",
+      "b": "A call está dentro do dinheiro e ganha R$ 2 por ação e R$ 200 no contrato, pois o prêmio serve apenas para adquirir o direito e fica fora do resultado.",
+      "c": "A call está no dinheiro e perde R$ 4 por ação e R$ 400 no contrato, pois o preço de mercado precisa coincidir com o exercício para gerar valor.",
+      "d": "A call está fora do dinheiro e perde R$ 2 por ação e R$ 200 no contrato, pois o ponto de equilíbrio de R$ 64 altera a classificação de moneyness."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-21-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A put permite vender a R$ 75 algo que vale R$ 64, valor intrínseco de R$ 11. Descontando o prêmio de R$ 5, o ganho é R$ 6 por ação e R$ 600 no contrato.</p><p>A alternativa B inverte o moneyness da put. A alternativa A soma o prêmio ao ganho. A alternativa D chama a opção de no dinheiro e ignora o custo pago.</p><p>Regra de bolso: put comprada equilibra em exercício menos prêmio; mercado abaixo desse nível produz lucro líquido.</p>",
+     "enunciado": "<p>Patrícia compra uma put sobre 100 ações, com preço de exercício de R$ 75 e prêmio de R$ 5 por ação. Ela usa o contrato para limitar o efeito de uma queda nas ações que mantém e desembolsa R$ 500 pelo direito. No vencimento, o ativo vale R$ 64. Patrícia pretende exercer e vender pelo preço contratado, enquanto um colega sustenta que puts ganham quando o mercado fica acima do exercício, que a opção estaria fora do dinheiro e que o prêmio deveria ser somado ao valor obtido. O extrato registra o prêmio como custo já pago e o contrato não possui outros encargos adicionais. Patrícia quer comparar o exercício com a perda do prêmio caso abandonasse o direito. Calcule o moneyness, o resultado líquido por ação e o total da titular.</p>",
+     "alternativas": {
+      "a": "A put está dentro do dinheiro, ganha R$ 16 por ação e R$ 1.600 no contrato, pois o prêmio pago é somado à diferença de R$ 11.",
+      "b": "A put está fora do dinheiro, perde R$ 5 por ação e R$ 500 no contrato, porque vender por R$ 75 é desfavorável quando o mercado está em R$ 64.",
+      "c": "A put está dentro do dinheiro, ganha R$ 6 por ação e R$ 600 no contrato, após descontar o prêmio dos R$ 11 de valor intrínseco.",
+      "d": "A put está no dinheiro, ganha R$ 11 por ação e R$ 1.100 no contrato, pois o prêmio define apenas o ponto de equilíbrio e não reduz o resultado."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-21-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O valor nocional é referência de cálculo e, na estrutura básica, não é transferido. As partes assumem fluxos recíprocos e liquidam a diferença entre os resultados dos índices.</p><p>A alternativa B transforma swap em direito abandonável. A alternativa C chama nocional de prêmio e dá escolha unilateral. A alternativa D exige troca de principal e elimina obrigação no cenário desfavorável.</p><p>Regra de bolso: nocional calcula; índices geram fluxos; diferença liquida; ambas as pontas permanecem obrigadas.</p>",
+     "enunciado": "<p>Uma empresa contrata swap com valor nocional de R$ 3 milhões, recebendo CDI e pagando taxa prefixada por um ano. Ela deseja tornar previsível o componente variável de uma dívida e alinha o período do contrato à obrigação. O diretor solicita a transferência dos R$ 3 milhões para a contraparte e afirma que poderá abandonar o contrato se o CDI cair, como faria o titular de uma opção fora do dinheiro. A tesouraria não encontra ordem de transferência do principal nem pagamento de prêmio no início. O documento informa que o nocional serve para calcular os dois fluxos, que serão comparados ao fim do período, com liquidação da diferença, inclusive quando o saldo for desfavorável à empresa. Analise o funcionamento da estrutura e as obrigações das partes.</p>",
+     "alternativas": {
+      "a": "O nocional serve de base e não precisa ser transferido; as duas pontas são obrigatórias, e a diferença entre CDI e taxa prefixada será liquidada.",
+      "b": "O nocional deve ser entregue à contraparte no início; depois do pagamento, a empresa adquire o direito de abandonar a ponta prefixada se ela ficar desfavorável.",
+      "c": "O nocional funciona como prêmio do swap; quem o paga escolhe no vencimento qual dos dois índices receberá, sem obrigação sobre a outra ponta.",
+      "d": "O swap troca o principal de R$ 3 milhões entre as partes e mantém apenas o índice vencedor, dispensando liquidação quando o CDI fica abaixo da taxa fixa."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-21-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. A 14%, recebe R$ 280.000 e paga R$ 200.000, saldo de R$ 80.000; a dívida custa R$ 340.000 e cai para R$ 260.000. A 8%, recebe R$ 160.000, paga R$ 200.000, saldo negativo de R$ 40.000; a dívida custa R$ 220.000 e sobe para R$ 260.000.</p><p>A alternativa B trata o fluxo recebido como resultado líquido. A alternativa A inverte os saldos e não estabiliza o custo. A alternativa D permite abandonar uma obrigação recíproca.</p><p>Regra de bolso: receber CDI e pagar prefixado troca o componente variável por taxa fixa; o spread da dívida permanece.</p>",
+     "enunciado": "<p>Uma empresa deve R$ 2 milhões remunerados a CDI mais 3% ao ano e contrata swap para receber CDI e pagar taxa prefixada de 10% sobre o mesmo nocional por um ano. O orçamento financeiro reservado para o período é de R$ 260.000, correspondente à taxa fixa de 10% acrescida do spread de 3% que permanece na dívida. No primeiro cenário, o CDI acumula 14%. No segundo, acumula 8%. A diretoria acredita que o swap produzirá recebimento nos dois casos e que a queda do CDI reduzirá o custo combinado abaixo do orçamento, porque ignora a ponta prefixada a pagar. A empresa manterá o contrato até a data final nos dois cenários. Não há transferência do nocional, capitalização intermediária ou outros custos. Calcule o resultado do swap e o custo conjunto em cada cenário.</p>",
+     "alternativas": {
+      "a": "Com CDI de 14%, o swap paga R$ 80.000; com CDI de 8%, recebe R$ 40.000; o custo combinado varia entre R$ 420.000 e R$ 180.000.",
+      "b": "Com CDI de 14%, o swap recebe R$ 280.000; com CDI de 8%, recebe R$ 160.000; a dívida fica limitada ao spread de R$ 60.000.",
+      "c": "Com CDI de 14%, o swap recebe R$ 80.000; com CDI de 8%, paga R$ 40.000; nos dois casos, o custo combinado fica em R$ 260.000.",
+      "d": "Com CDI de 14%, o swap recebe R$ 80.000; com CDI de 8%, termina sem resultado, pois a empresa abandona a troca quando a taxa fixa supera o CDI."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-21-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. A opção cobra prêmio pela flexibilidade de exercer somente no cenário adverso, preservando a queda favorável do dólar. O swap troca o indexador da dívida e obriga os dois fluxos.</p><p>A alternativa B atribui escolha unilateral ao swap e troca os objetivos. A alternativa C equipara prêmio e nocional e permite escolher índice. A alternativa D promete preservar cenários favoráveis e cria prêmio inexistente na estrutura básica do swap.</p><p>Regra de bolso: opção compra limite com flexibilidade; swap troca uma referência por outra com obrigações recíprocas.</p>",
+     "enunciado": "<p>Uma importadora pagará dólares em seis meses e quer limitar o custo caso a moeda suba, mas deseja aproveitar eventual queda da cotação. Seu orçamento admite pagar um prêmio conhecido agora em troca dessa escolha, e a empresa recusaria exercer o direito se comprar a moeda no mercado fosse vantajoso. Outra companhia tem dívida pós fixada e quer substituir a variação do indexador por custo previsível, aceitando desembolso no swap se a taxa cair. O conselho da segunda companhia prioriza estabilidade e aceita abrir mão do benefício da queda do indexador. Um gerente propõe o mesmo swap para as duas porque acredita que proteção exige obrigatoriedade simétrica. Os contratos podem ser alinhados aos respectivos prazos e valores. Compare opção e swap diante dos dois objetivos.</p>",
+     "alternativas": {
+      "a": "A importadora pode comprar opção para preservar a escolha mediante prêmio; a devedora pode usar swap para trocar o indexador por fluxo obrigatório e previsível.",
+      "b": "A importadora deve usar swap para aproveitar a queda do dólar sem obrigação; a devedora deve comprar opção porque precisa substituir a variação do indexador e estabilizar o orçamento.",
+      "c": "As duas devem comprar opções, pois prêmio e nocional têm a mesma função e permitem escolher no vencimento qual índice será aplicado à exposição.",
+      "d": "As duas devem contratar swaps, pois a troca obrigatória preserva os cenários favoráveis e limita a perda de cada empresa ao valor de um prêmio inicial."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-21-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. Comprar a R$ 48 e vender a R$ 30 gera perda de R$ 18 por ação, parcialmente compensada pelo prêmio de R$ 2, resultando em R$ 16 por ação e R$ 16.000 no total.</p><p>A alternativa A limita a perda ao prêmio. A alternativa C trata a diferença contrária ao lançador como ganho. A alternativa D transfere à contraparte central o custo econômico da obrigação.</p><p>Regra de bolso: titular comprador limita perda ao prêmio; lançador descoberto de call limita ganho ao prêmio e enfrenta perda crescente na alta.</p>",
+     "enunciado": "<p>Leandro lança a descoberto uma call sobre 1.000 ações, recebe prêmio de R$ 2 por ação e assume obrigação de vender os papéis por R$ 30 caso o titular exerça. Ele não possui as ações nem outra proteção e usa os R$ 2.000 recebidos como renda imediata. Durante o contrato, a cotação sobe sucessivamente, mas Leandro mantém a posição porque acredita que o prêmio recebido também limita sua perda. No vencimento, o papel chega a R$ 48 e o titular exerce. Para entregar as ações, Leandro terá de comprá-las no mercado e vendê-las pelo preço de exercício. Ele afirma que sua perda máxima é o prêmio, por ser esse o preço da opção, e ignora o custo da entrega. Desconsidere outros encargos. Calcule o resultado líquido do lançador e avalie o risco da posição descoberta.</p>",
+     "alternativas": {
+      "a": "A perda é limitada a R$ 2 por ação e R$ 2.000 no total, pois o prêmio recebido funciona como garantia contra a diferença entre mercado e exercício.",
+      "b": "A perda líquida é R$ 16 por ação e R$ 16.000 no total; altas adicionais ampliariam a perda, enquanto o ganho máximo isolado era o prêmio de R$ 2.000.",
+      "c": "O lançador ganha R$ 20 por ação e R$ 20.000 no total, somando o prêmio de R$ 2 à diferença positiva de R$ 18 no exercício.",
+      "d": "O resultado é zero porque o titular exerce dentro do dinheiro, e a contraparte central entrega as ações sem custo ao lançador que recebeu o prêmio."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Estruturas com derivativos: margem, liquidação e direitos": [
+    {
+     "id": "cpror-inv-22-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A put cria um piso de venda, a posição acompanha a ação entre os preços de exercício e a call lançada pode obrigar a venda, limitando a valorização acima do teto.</p><p>A alternativa B inverte proteção e teto. A alternativa C promete valor fixo em qualquer cenário. A alternativa D mistura resultado derivativo com direitos societários e dividendos.</p><p>Regra de bolso: no collar, put cria piso, ação participa no meio e call lançada cria teto.</p>",
+     "enunciado": "<p>Uma investidora possui ações, compra uma put com exercício inferior e lança uma call com exercício superior, formando um collar. Identifique o resultado por faixas de preço.</p>",
+     "alternativas": {
+      "a": "A put estabelece proteção abaixo de seu exercício, a ação acompanha o mercado entre os exercícios e a call limita o ganho acima do preço contratado.",
+      "b": "A put amplia a perda abaixo de seu exercício, a carteira fica sem variação entre os exercícios e a call preserva o ganho da ação acima do preço contratado.",
+      "c": "A put e a call eliminam as oscilações em qualquer cotação, pois os dois direitos se compensam e mantêm o valor da ação fixo até o vencimento.",
+      "d": "A estrutura transfere os direitos acionários ao lançador da call, enquanto a titular da put recebe dividendos apenas se o preço ficar entre os exercícios."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-22-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A exposição por derivativo não torna o cliente acionista sem a posse da ação. Seus direitos abrangem o contrato, informação, adequação, custos, registros, garantias e regras de encerramento.</p><p>A alternativa B concede voto e retira informação. A alternativa C cria direitos societários temporários e restringe registros. A alternativa D nega direitos contratuais durante a operação.</p><p>Regra de bolso: derivativo entrega direitos contratuais e informação, mas não concede automaticamente direitos de acionista.</p>",
+     "enunciado": "<p>Um cliente compra derivativo referenciado em ações sem adquirir os papéis. Identifique os direitos que decorrem dessa posição e do relacionamento com a instituição.</p>",
+     "alternativas": {
+      "a": "Ele tem os direitos previstos no contrato e deve receber informações, registros, custos, prazos e regras de encerramento, mas não ganha voto ou subscrição por esse simples fato.",
+      "b": "Ele se torna acionista econômico, recebe voto e subscrição, mas abre mão de informações sobre margem, custos e encerramento porque não comprou as ações diretamente.",
+      "c": "Ele recebe os direitos societários enquanto o derivativo estiver vigente, e os registros da posição pertencem apenas à instituição até a liquidação final.",
+      "d": "Ele não possui direitos contratuais nem societários antes do vencimento, pois o derivativo produz efeitos somente quando ocorre exercício ou liquidação."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-22-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A call comprada vale R$ 2.500 e a lançada perde R$ 1.500, saldo de R$ 1.000 antes dos prêmios. Descontando o custo líquido de R$ 200, restam R$ 800. Acima de R$ 60, as duas variações se compensam.</p><p>A alternativa A ignora a call lançada. A alternativa C trata prêmios de R$ 400 e R$ 200 como iguais. A alternativa D considera a perda da call lançada, mas substitui o ganho da comprada pelo prêmio.</p><p>Regra de bolso: mesma quantidade entre calls cria uma trava; diferença dos exercícios menos custo líquido define o ganho máximo.</p>",
+     "enunciado": "<p>Joana compra 100 calls com exercício de R$ 50 e paga R$ 4 por ação. Para reduzir o custo, lança 100 calls com exercício de R$ 60 e recebe R$ 2 por ação. O desembolso líquido dos prêmios é R$ 200. Ela escolheu quantidades iguais e aceitou limitar a valorização em troca de reduzir o custo inicial, mas depois passou a esperar uma alta forte. No vencimento, a ação vale R$ 75. Joana afirma que o resultado continuará crescendo acima de R$ 60 porque a call comprada permanece dentro do dinheiro, e ignora a obrigação criada na call lançada. As duas pernas vencem juntas, representam uma ação por opção e serão liquidadas na mesma data. Desconsidere outros custos. Calcule o resultado líquido da estrutura e o limite criado pela combinação.</p>",
+     "alternativas": {
+      "a": "O resultado líquido é R$ 2.300: a call comprada ganha R$ 2.500 e apenas o prêmio líquido de R$ 200 reduz o resultado, sem efeito da call lançada.",
+      "b": "O resultado líquido é R$ 800: a diferença entre exercícios gera R$ 1.000 e o custo líquido é R$ 200; acima de R$ 60, o ganho fica limitado.",
+      "c": "O resultado líquido é R$ 1.000: os prêmios se anulam e a diferença entre exercícios define ganho sem custo, ainda que os valores recebidos sejam distintos.",
+      "d": "O resultado líquido é perda de R$ 700: a call lançada perde R$ 1.500 e a comprada compensa apenas o prêmio pago de R$ 400."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-22-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A R$ 65, a call comprada ganha R$ 1.500 e as lançadas perdem R$ 1.000, saldo de R$ 500. A R$ 75, os valores são R$ 2.500 e perda de R$ 3.000, saldo negativo de R$ 500.</p><p>A alternativa B ignora as calls vendidas. A alternativa A ignora a call comprada. A alternativa D usa a compensação dos prêmios para apagar obrigações no exercício.</p><p>Regra de bolso: prêmios podem zerar na entrada; quantidades diferentes podem criar exposição descoberta e perda depois.</p>",
+     "enunciado": "<p>Marcos compra 100 calls com exercício de R$ 50 por prêmio total de R$ 400 e lança 200 calls com exercício de R$ 60, recebendo também R$ 400. Ele celebra o custo inicial líquido zero e afirma que a estrutura não pode gerar perda. Marcos não possui as ações e não contratou outra opção para cobrir a quantidade excedente vendida. No vencimento, a ação pode estar em R$ 65 ou em R$ 75. Acima de R$ 60, uma call lançada compensa a posição comprada, enquanto a segunda venda permanece descoberta e aumenta sua obrigação a cada alta adicional. Cada opção representa uma ação, e as três pernas possuem a mesma data. A corretora pode exigir garantias durante o caminho, mas desconsidere margem e outros custos no cálculo final. Calcule o resultado da estrutura nos dois preços e avalie o efeito da quantidade lançada.</p>",
+     "alternativas": {
+      "a": "A R$ 65, a perda é R$ 1.000; a R$ 75, a perda é R$ 3.000, pois somente as duas calls lançadas entram no resultado final.",
+      "b": "A R$ 65, o ganho é R$ 1.500; a R$ 75, o ganho é R$ 2.500, porque custo inicial zero elimina a obrigação das calls lançadas.",
+      "c": "A R$ 65, o ganho é R$ 500; a R$ 75, há perda de R$ 500, pois a segunda call lançada deixa a estrutura descoberta na alta.",
+      "d": "A R$ 65 e a R$ 75, o resultado é zero, porque prêmios de mesmo valor compensam também os resultados de exercício no vencimento."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-22-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A exigência de R$ 2.500 menos R$ 900 em garantias deixa reforço de R$ 1.600. Sem recomposição no prazo, posições podem ser reduzidas ou encerradas e as garantias utilizadas.</p><p>A alternativa A usa a garantia existente como valor do reforço e impede encerramento. A alternativa C ignora os R$ 900 elegíveis. A alternativa D equipara custo inicial zero a ausência de risco e margem.</p><p>Regra de bolso: margem exigida menos garantia elegível é o reforço; falta de caixa pode encerrar a estrutura antes do cenário esperado.</p>",
+     "enunciado": "<p>Durante uma alta rápida, a instituição recalcula o risco de uma estrutura alavancada e eleva a margem exigida para R$ 2.500. O cliente possui R$ 900 em garantias elegíveis e nenhum saldo livre na conta. Ele afirma que não precisa aportar porque os prêmios se compensaram na montagem e porque espera queda do ativo antes do vencimento. A chamada recebida às 10 horas informa valor, prazo até as 16 horas e possibilidade de encerramento compulsório. O cliente dispõe de títulos aceitos em outra conta, mas decide aguardar a cotação até o fim do dia em vez de transferi-los no prazo. As garantias atuais permanecem aceitas, porém são insuficientes para a nova exigência. Calcule o reforço necessário e indique a consequência caso o prazo termine sem atendimento.</p>",
+     "alternativas": {
+      "a": "O reforço é R$ 900; sem atendimento, a estrutura permanece aberta porque o valor já depositado impede qualquer encerramento antes do vencimento.",
+      "b": "O reforço é R$ 1.600; sem aporte ou ativo elegível no prazo, a instituição pode reduzir ou encerrar posições e usar as garantias conforme as regras.",
+      "c": "O reforço é R$ 2.500; os R$ 900 ficam fora do cálculo por terem sido depositados antes da alta, e a posição só pode ser encerrada na data final.",
+      "d": "O reforço é zero; prêmios compensados retiram o risco de crédito, e chamadas de margem alcançam apenas estruturas com desembolso inicial positivo."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-22-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Antes do vencimento, preço do ativo, volatilidade e tempo influenciam o valor das opções. Posições compradas e vendidas reagem de formas diferentes, e o preço de saída pode registrar perda mesmo com a tese ainda possível.</p><p>A alternativa B fixa antecipadamente o valor de saída. A alternativa C presume compensação proporcional entre pernas. A alternativa A atribui efeito positivo uniforme ao tempo e ignora posições lançadas.</p><p>Regra de bolso: desenho no vencimento é mapa final; saída antecipada usa o preço das pernas nas condições do dia.</p>",
+     "enunciado": "<p>Aline monta uma estrutura com opções para um cenário de valorização moderada em seis meses. Após dois meses, o ativo permanece perto do preço inicial, mas a volatilidade esperada sobe fortemente e as opções compradas e lançadas mudam de valor em intensidades diferentes. A plataforma mostra perda caso Aline encerre naquele dia, embora o cenário projetado para o vencimento ainda seja possível. Ela entende que o desenho final deveria determinar o preço de saída e acusa o sistema de ignorar a estratégia. Aline recebeu proposta para fechar cada perna pelos preços atuais e precisa decidir antes de usar os recursos em outra aplicação. Ainda restam quatro meses, e nenhuma condição contratual garante o valor antecipado. Analise a influência da volatilidade e do tempo.</p>",
+     "alternativas": {
+      "a": "O tempo restante aumenta o valor de qualquer estrutura diariamente, porque amplia a chance do cenário favorável sem alterar as obrigações vendidas.",
+      "b": "O preço de saída deve reproduzir o resultado desenhado para o vencimento, pois a combinação de opções elimina efeitos de volatilidade, passagem do tempo e preço corrente.",
+      "c": "A alta da volatilidade favorece na mesma proporção opções compradas e lançadas, deixando o valor líquido da estrutura constante até a data de exercício.",
+      "d": "O preço de saída reflete condições atuais; volatilidade e tempo afetam cada perna, de modo que a estrutura pode perder hoje mesmo com cenário final ainda possível."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-22-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A data de observação verifica gatilhos, o exercício ativa direito ou obrigação e a liquidação realiza o que foi apurado. Conforme o contrato, pode haver entrega do ativo ou pagamento financeiro.</p><p>A alternativa A funde datas e impõe liquidação única. A alternativa C adia o efeito do gatilho e ignora a obrigação física. A alternativa D troca as duas formas de liquidação.</p><p>Regra de bolso: observe quando se mede, quando se exerce e quando se entrega ou paga; cada data cumpre uma função.</p>",
+     "enunciado": "<p>Um investidor contrata uma estrutura cujo documento prevê observação do ativo em 10 de outubro, exercício em 11 de outubro e liquidação física dois dias depois. A primeira perna pode gerar compra de 500 ações, enquanto outra possui liquidação exclusivamente financeira. Ele acredita que as datas significam o mesmo evento e que receberá apenas dinheiro, por isso mantém a conta sem recursos e agenda outra operação para a data prevista de entrega. O contrato também contém um gatilho que pode encerrar uma perna se determinada cotação for observada, antes que a outra seja exercida. A instituição disponibilizou o calendário, as quantidades e as condições no registro da operação. Avalie as diferenças de prazo e liquidação.</p>",
+     "alternativas": {
+      "a": "Observação, exercício e liquidação são nomes equivalentes para a mesma data, e estruturas registradas em bolsa terminam por pagamento financeiro, mesmo quando o documento prevê ações.",
+      "b": "Observação verifica a condição, exercício cria direitos ou obrigações e liquidação cumpre o resultado; uma perna pode exigir ativo, enquanto outra paga diferença financeira.",
+      "c": "O gatilho só produz efeito na liquidação, permitindo vender as ações antes sem risco de obrigação física criada pelo exercício da outra perna.",
+      "d": "A liquidação física transfere apenas o resultado em dinheiro, enquanto a financeira exige entrega do ativo objeto na quantidade prevista pelo contrato."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-22-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. O fechamento antecipado usa os preços disponíveis e realiza o valor daquele momento. Esperar preserva a participação nos cenários futuros, junto com riscos, margem, passagem do tempo e obrigações.</p><p>A alternativa B substitui mercado por gráfico projetado. A alternativa A promete recuperação da perda. A alternativa D nega que volatilidade e tempo afetem o preço de saída.</p><p>Regra de bolso: sair hoje realiza o mercado de hoje; esperar mantém oportunidade e risco até a data contratada.</p>",
+     "enunciado": "<p>Fábio monta uma estrutura para permanecer até dezembro, mas em setembro precisa de caixa para uma despesa familiar. O ativo está próximo do cenário central projetado, porém a volatilidade subiu e o preço disponível para fechar as pernas naquele dia produz perda. Algumas opções possuem menor liquidez, e a instituição apresenta cotações executáveis para cada posição, com os custos previstos no contrato. Fábio pede que seja pago o resultado indicado no gráfico de vencimento, alegando que sua tese ainda pode ocorrer. Não existe garantia desse valor para saída antecipada, e as alternativas são realizar o preço atual ou buscar outra fonte de caixa. A margem está regular e nenhum gatilho foi acionado. Compare o encerramento naquele momento com a permanência até dezembro.</p>",
+     "alternativas": {
+      "a": "Permanecer elimina a perda mostrada em setembro, pois estruturas mantidas até dezembro recuperam o valor quando o ativo está perto do cenário central.",
+      "b": "Encerrar agora garante o resultado do gráfico final, porque o cenário projetado substitui as cotações das opções quando o cliente apresenta necessidade de liquidez antes da data contratada.",
+      "c": "Encerrar agora realiza os preços correntes das pernas; permanecer mantém exposição a cenários futuros, mas exige suportar margem, prazo e mudanças até o vencimento.",
+      "d": "Encerrar e permanecer são economicamente iguais, porque volatilidade e tempo alteram apenas registros da instituição e não o valor negociado das pernas."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-22-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. A decisão consciente exige cenários, alavancagem, margem, custos, calendário e regras de encerramento. A adequação considera objetivos, situação financeira e conhecimento, e a cliente deve acessar registros e movimentações.</p><p>A alternativa B troca informação por nome comercial. A alternativa C restringe dados da própria posição. A alternativa D omite prazo e consequência necessários para decidir sobre o aporte.</p><p>Regra de bolso: estrutura adequada exige entender resultado, obrigação e caixa, com registros acessíveis durante todo o ciclo.</p>",
+     "enunciado": "<p>Uma instituição oferece a Elisa uma estrutura alavancada descrita comercialmente como proteção com custo reduzido. Elisa tem pouca experiência, reserva apertada e objetivo com data rígida em oito meses. Na apresentação, recebe apenas o ganho do cenário central, sem tabela de perdas, quantidade de cada perna, margem estimada, custos ou regra de encerramento. O atendente afirma que a assinatura eletrônica substitui essas explicações e que os documentos detalhados serão liberados apenas na data final. Após contratar, Elisa vê uma chamada de margem no aplicativo, mas não encontra prazo nem consequência da falta de aporte. Ela solicita os registros das posições, movimentações e garantias para decidir se mantém a operação. Avalie os direitos da cliente e a adequação do processo.</p>",
+     "alternativas": {
+      "a": "Elisa deve receber cenários, obrigações, margem, custos, prazos, encerramento e registros; a recomendação exige avaliação de objetivo, finanças e conhecimento.",
+      "b": "A expressão proteção com custo reduzido substitui a tabela de perdas, e a assinatura transfere à cliente a responsabilidade de descobrir margem, custos e encerramento.",
+      "c": "A instituição pode omitir quantidades e registros até o vencimento, pois essas informações revelam a estratégia interna usada para montar a estrutura.",
+      "d": "A chamada de margem precisa informar apenas o valor, porque prazo e consequência decorrem do mercado e podem ser definidos depois da falta de aporte."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-22-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A R$ 35, a put permite vender por R$ 45, total de R$ 4.500. A R$ 52, nenhuma opção altera a venda, total de R$ 5.200. A R$ 70, a call pode obrigar venda por R$ 60, total de R$ 6.000.</p><p>A alternativa B ignora exercícios. A alternativa C fixa todas as faixas no piso. A alternativa A troca a função da put e da call e inverte os resultados.</p><p>Regra de bolso: collar transforma a posição em piso, participação intermediária e teto, definidos pelos dois exercícios.</p>",
+     "enunciado": "<p>Sônia possui 100 ações cotadas a R$ 52, compra 100 puts com exercício de R$ 45 por prêmio de R$ 2 e lança 100 calls com exercício de R$ 60, recebendo também R$ 2. Os prêmios se compensam, e as três posições vencem na mesma data. Ela deseja limitar a perda, mas aceita vender as ações por R$ 60 caso o mercado ultrapasse esse valor. Ao revisar a estrutura, Sônia afirma que, se a cotação cair para R$ 35, manterá apenas o valor de mercado porque a put expirará; se subir a R$ 70, acredita que continuará com toda a valorização por já possuir os papéis. Ela quer comparar essas ideias com o contrato nos cenários de R$ 35, R$ 52 e R$ 70. Considere exercício quando favorável, desconsidere outros custos e trate os prêmios líquidos como zero. Calcule o valor final da posição e identifique as faixas do collar.</p>",
+     "alternativas": {
+      "a": "Os valores são R$ 6.000, R$ 5.200 e R$ 4.500; a put limita a alta e a call protege a queda, invertendo as faixas da estrutura.",
+      "b": "Os valores são R$ 3.500, R$ 5.200 e R$ 7.000; prêmios compensados preservam a oscilação da ação e impedem exercício das duas opções.",
+      "c": "Os valores são R$ 4.500 nos três cenários; a combinação fixa o preço no exercício da put e neutraliza qualquer movimento posterior da ação.",
+      "d": "Os valores são R$ 4.500, R$ 5.200 e R$ 6.000; a put cria piso em R$ 45, o meio acompanha a ação e a call cria teto em R$ 60."
+     },
+     "gabarito": "d"
+    }
+   ],
+   "COE: estrutura, riscos, custos, tributação e DIE": [
+    {
+     "id": "cpror-inv-23-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. O COE reúne uma dívida do emissor e uma estratégia com derivativos. O índice é o ativo subjacente usado na fórmula de pagamento, sem transferir ao titular a propriedade das ações que o compõem.</p><p>A alternativa A trata o índice como uma carteira entregue ao cliente. A alternativa B transforma o certificado em cota do índice e restringe a dívida à entrega física. A alternativa D concede direitos societários que a compra do COE não produz.</p><p>Regra de bolso: no COE, o cliente compra o certificado; o subjacente serve de referência para calcular o pagamento.</p>",
+     "enunciado": "<p>Um cliente adquiriu um COE referenciado em um índice de ações e acredita ter comprado parte das companhias que o compõem. Identifique a relação entre o certificado e o índice.</p>",
+     "alternativas": {
+      "a": "O certificado transfere as ações do índice ao cliente, enquanto os derivativos servem apenas para registrar o preço de aquisição desses papéis.",
+      "b": "O certificado representa uma cota do índice, e a dívida do emissor aparece somente quando a liquidação ocorre por entrega física dos ativos.",
+      "c": "O certificado combina dívida do emissor e estratégia com derivativos; o índice referencia a fórmula, sem dar ao cliente propriedade sobre suas ações.",
+      "d": "O certificado concede direitos econômicos e societários das ações, mas limita voto e subscrição durante o prazo definido para a estrutura."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-23-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A modalidade protegida prevê pagamentos mínimos iguais ou superiores ao valor inicial no vencimento, condicionados ao pagamento pelo emissor. Na modalidade em risco, a perda pode alcançar o capital investido.</p><p>A alternativa A cria rendimento positivo e limita indevidamente a perda aos juros. A alternativa C atribui proteção ao FGC e à distribuidora. A alternativa D confunde proteção no vencimento com disponibilidade para resgate antecipado.</p><p>Regra de bolso: protegido limita a perda nominal no vencimento; em risco admite perda parcial ou total do capital.</p>",
+     "enunciado": "<p>Uma gerente apresenta as modalidades de COE a um investidor que deseja entender o resultado adverso previsto para o vencimento. Compare Valor Nominal Protegido e Valor Nominal em Risco.</p>",
+     "alternativas": {
+      "a": "No Valor Nominal Protegido, o emissor garante rendimento positivo; no Valor Nominal em Risco, a perda fica restrita aos juros prometidos.",
+      "b": "No Valor Nominal Protegido, o mínimo contratual no vencimento alcança o valor aplicado se o emissor pagar; no Valor Nominal em Risco, a perda pode chegar ao capital.",
+      "c": "No Valor Nominal Protegido, o FGC assegura o capital no vencimento; no Valor Nominal em Risco, a instituição distribuidora assume eventual perda do cliente.",
+      "d": "No Valor Nominal Protegido, o valor aplicado fica disponível para resgate; no Valor Nominal em Risco, a perda surge apenas depois do vencimento."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-23-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A proteção é nominal, vale nas condições do vencimento e depende do emissor. Ela não elimina risco de crédito, inflação, custo de oportunidade ou falta de liquidez, e o prazo de quatro anos conflita com o uso planejado em três.</p><p>A alternativa B retira o risco de crédito e presume recompra nominal. A alternativa C trata o subjacente como compensação para a falta do FGC. A alternativa A transforma uma alta durante o prazo em garantia de preço na saída antecipada.</p><p>Regra de bolso: capital protegido descreve um pagamento no vencimento, não uma reserva líquida nem uma garantia contra os demais riscos.</p>",
+     "enunciado": "<p>Depois de receber uma oferta de COE com Valor Nominal Protegido e vencimento em quatro anos, Rafael diz à assessora que o produto equivale a deixar o dinheiro protegido em caixa. Ele pretende usar os recursos para a entrada de um imóvel em três anos, acredita que a expressão capital protegido elimina a necessidade de avaliar o banco emissor e considera irrelevante comparar o resultado com a inflação ou com uma aplicação simples. A emissão é sem cobertura do FGC, pode terminar sem remuneração positiva e inexiste compromisso de recompra. Rafael insiste na contratação porque o anúncio mostra um cenário de alta do ativo de referência. A assessora possui o DIE, o prazo do objetivo e o orçamento do cliente. Analise os riscos que precisam ser reenquadrados no atendimento.</p>",
+     "alternativas": {
+      "a": "O prazo do imóvel pode ser atendido pela venda antecipada, desde que a alta mostrada no anúncio ocorra em algum momento dos três primeiros anos da estrutura.",
+      "b": "A proteção cobre o risco do emissor no vencimento, mas a assessora deve comparar inflação e oportunidade e confirmar se haverá recompra pelo valor nominal no terceiro ano, diante do objetivo imobiliário.",
+      "c": "A ausência do FGC é compensada pela referência a um ativo de mercado, embora inflação, oportunidade e prazo ainda devam integrar a avaliação da compra.",
+      "d": "A proteção limita a perda nominal no vencimento se o emissor pagar, mas permanecem crédito, inflação, oportunidade e liquidez, incompatível com tratar o valor como caixa para três anos."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-23-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A venda por R$ 108.000 realiza perda de R$ 12.000 em relação aos R$ 120.000 aplicados. A proteção contratual vale no vencimento e depende do pagamento do emissor, enquanto a saída antecipada ocorre pelo preço disponível.</p><p>A alternativa A compara duas cotações e transforma o valor do extrato em nova proteção. A alternativa B usa a necessidade de caixa como base da perda. A alternativa D estende a proteção do vencimento para uma recompra antecipada que o contrato não previa.</p><p>Regra de bolso: antes do vencimento vale a marcação a mercado; proteção nominal não fixa o preço de saída antecipada.</p>",
+     "enunciado": "<p>Carla aplicou R$ 120.000 em um COE de Valor Nominal Protegido com vencimento em cinco anos. Passados dezoito meses, uma mudança familiar exige R$ 110.000 em até dez dias. O extrato marca o certificado a R$ 114.000, e a única proposta executável de recompra naquele momento é de R$ 108.000. O ativo subjacente está próximo do valor inicial, os juros e a volatilidade mudaram desde a emissão e ainda faltam mais de três anos para o vencimento. Carla afirma que a instituição tem de devolver os R$ 120.000 porque o nome do produto contém a palavra protegido. O DIE vinculava a proteção à data final e informava ausência de mercado ativo ou compromisso de recompra. Desconsidere tributos e outros custos. Calcule a perda caso Carla aceite a proposta e explique o alcance temporal da proteção.</p>",
+     "alternativas": {
+      "a": "A perda é R$ 6.000, calculada pelo extrato menos a proposta; o valor de R$ 114.000 passa a ser o capital protegido após a marcação do dia.",
+      "b": "A perda é R$ 10.000, porque a necessidade de Carla limita a comparação ao valor que ela pretende levantar, preservando os R$ 10.000 restantes no certificado.",
+      "c": "A perda é R$ 12.000, e a saída antecipada usa o preço disponível; a proteção de R$ 120.000 permanece condicionada ao vencimento e ao pagamento do emissor.",
+      "d": "A perda é zero, pois o valor nominal protegido obriga a instituição a recomprar por R$ 120.000 quando o cliente comprova uma necessidade familiar antes do prazo."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-23-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A participação produziria 35%, mas o teto limita o ganho a 25%, ou R$ 20.000. O bruto é R$ 100.000, o imposto é R$ 3.000 e o líquido é R$ 97.000.</p><p>A alternativa B aplica 35% e calcula 15% sobre os R$ 28.000 de ganho. A alternativa C aplica a alíquota sobre o valor bruto. A alternativa D mantém o ganho de 35% e usa o teto apenas para calcular o tributo.</p><p>Regra de bolso: aplique participação e limites da fórmula antes de calcular o imposto sobre o rendimento positivo.</p>",
+     "enunciado": "<p>Eduardo avalia investir R$ 80.000 por três anos em um COE de Valor Nominal Protegido. A fórmula paga 70% da alta de um índice, limitada a 25% sobre o capital, e devolve o valor nominal se o cenário de remuneração falhar, desde que o emissor honre o certificado. No vencimento, o índice registra alta de 50%. Para o prazo do caso, considere Imposto de Renda de 15% sobre o rendimento positivo, retido na fonte, e desconsidere custos adicionais. Eduardo calcula 35% de remuneração, pois multiplica a alta do índice pela participação, e ignora o limite contratual. A instituição apresentou no DIE a participação, o teto, os fluxos dos cenários e a liquidação financeira na data final. Calcule o valor bruto, o imposto e o valor líquido a receber.</p>",
+     "alternativas": {
+      "a": "O valor bruto é R$ 100.000, o imposto é R$ 3.000 e o líquido é R$ 97.000, pois a alta participada de 35% é limitada a 25% sobre R$ 80.000.",
+      "b": "O valor bruto é R$ 108.000, o imposto é R$ 4.200 e o líquido é R$ 103.800, porque a participação de 70% prevalece sobre o limite de 25%.",
+      "c": "O valor bruto é R$ 100.000, o imposto é R$ 15.000 e o líquido é R$ 85.000, porque a alíquota incide sobre capital e rendimento na liquidação.",
+      "d": "O valor bruto é R$ 108.000, o imposto é R$ 3.000 e o líquido é R$ 105.000, pois o teto reduz apenas a base tributável e preserva a alta contratual."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-23-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A diferença nominal é R$ 181.500 menos R$ 150.000, ou R$ 31.500. Para expressar o capital final em poder de compra inicial, divide-se R$ 150.000 por 1,18, chegando a aproximadamente R$ 127.119.</p><p>A alternativa B usa valores sem fechar com as operações informadas. A alternativa C confunde proteção nominal com preservação real. A alternativa D trata o montante inteiro da alternativa como custo de oportunidade, em vez de calcular a diferença.</p><p>Regra de bolso: proteção nominal conserva a quantidade de reais no vencimento; oportunidade e inflação medem o que esses reais deixaram de render e comprar.</p>",
+     "enunciado": "<p>Patrícia compara um COE de Valor Nominal Protegido com uma alternativa simples para R$ 150.000 durante quatro anos. No cenário adverso do COE, a fórmula devolve somente os R$ 150.000 no vencimento, condicionados ao pagamento do emissor. A alternativa simples projeta R$ 181.500 líquidos na mesma data. A inflação acumulada estimada para o período é de 18%, e o DIE mostra a perda financeira real da devolução nominal em relação a uma referência. Patrícia vê que o saldo do COE permanece igual em reais e conclui que nenhum prejuízo econômico pode existir. Ela também afirma que a comparação com a alternativa seria propaganda, embora os prazos sejam iguais. Desconsidere diferenças de risco entre os produtos para calcular apenas as lacunas apresentadas. Calcule o custo de oportunidade nominal e o poder de compra aproximado dos R$ 150.000 em valores do início do período.</p>",
+     "alternativas": {
+      "a": "O custo de oportunidade é R$ 31.500, e o poder de compra é cerca de R$ 127.119, obtido por R$ 150.000 dividido por 1,18.",
+      "b": "O custo de oportunidade é R$ 27.000, e o poder de compra é R$ 123.000, obtido pela subtração direta de 18% e da diferença entre aplicações.",
+      "c": "O custo de oportunidade é R$ 31.500, e o poder de compra permanece em R$ 150.000, porque a proteção nominal também conserva o valor real.",
+      "d": "O custo de oportunidade é R$ 181.500, e o poder de compra é cerca de R$ 127.119, pois a alternativa inteira representa o valor abandonado pelo COE."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-23-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Custos podem estar incorporados à fórmula por meio da captação, dos derivativos, da margem e da distribuição. Participação parcial, teto e ausência de dividendos também afetam o resultado que o cliente recebe.</p><p>A alternativa A limita custo ao débito visível. A alternativa B trata a remuneração da distribuição como resumo suficiente da estrutura. A alternativa C exclui alternativas de prazo semelhante e restringe a comparação ao cenário positivo.</p><p>Regra de bolso: no COE, procure o custo na fórmula, no que o cliente deixa de receber e na remuneração revelada pelo DIE.</p>",
+     "enunciado": "<p>Durante uma videoconferência, uma distribuidora apresenta a Mauro um COE ligado a uma cesta de ações. O extrato vem sem tarifa destacada, mas a fórmula entrega 65% da alta, limita o ganho a 22% e exclui os dividendos da cesta. O DIE informa a remuneração recebida pelo intermediário e descreve a captação do emissor, os derivativos e os cenários de pagamento. Mauro compara o produto apenas com a variação positiva mostrada em uma simulação e conclui que custo existe somente quando aparece um débito separado na conta. O assessor considera uma aplicação simples com prazo semelhante e a exposição direta à cesta, observando riscos e liquidez próprios de cada alternativa. Analise como os custos econômicos e a remuneração da distribuição entram nessa comparação.</p>",
+     "alternativas": {
+      "a": "A ausência de tarifa separada elimina custos para Mauro, e participação, teto e dividendos pertencem apenas ao cálculo do emissor, sem efeito na decisão do cliente.",
+      "b": "A remuneração do distribuidor substitui a análise da fórmula, pois esse valor resume a captação, os derivativos, o ganho limitado, os dividendos cedidos e os riscos assumidos pelo cliente.",
+      "c": "A comparação deve usar somente o cenário positivo do COE e a alta da cesta, porque uma aplicação simples possui estrutura distinta e não serve como referência econômica.",
+      "d": "Participação, teto e dividendos cedidos afetam o resultado econômico; a remuneração informada no DIE ajuda a avaliar custo e conflito junto das alternativas de prazo semelhante."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-23-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. O rendimento positivo de R$ 20.000 sofre retenção de 15%, resultando em R$ 3.000. Para a pessoa física, a perda no segundo COE não reduz esse imposto e também não compensa o ganho líquido com ações.</p><p>A alternativa A compensa a perda entre certificados. A alternativa C cria uma base conjunta de COE e ações. A alternativa D soma resultados positivos de regimes distintos e aplica a retenção do COE ao ganho de renda variável.</p><p>Regra de bolso: para pessoa física, cada COE positivo sofre sua retenção; perda em COE não vira crédito contra outro certificado nem contra renda variável.</p>",
+     "enunciado": "<p>Helena, pessoa física, encerra após três anos dois COEs registrados em sistema autorizado. No primeiro, aplicou R$ 90.000 e recebeu R$ 110.000, gerando resultado positivo de R$ 20.000. No segundo, aplicou R$ 70.000 e recebeu R$ 58.000, com perda de R$ 12.000. No mesmo mês, obteve ganho líquido de R$ 9.000 em operações com ações. Helena reúne os três resultados e quer tributar apenas o saldo positivo de R$ 17.000. O documento da emissão informa retenção na fonte pela alíquota regressiva e, para o prazo apresentado, use 15% sobre o rendimento positivo. Considere as regras da aula para pessoa física, em que a perda em outro COE fica sem crédito e sem compensação com ganho líquido de renda variável. Calcule o imposto do primeiro certificado e avalie as compensações propostas.</p>",
+     "alternativas": {
+      "a": "O imposto é R$ 1.200, calculado sobre R$ 8.000 após compensar os dois COEs; o ganho com ações permanece em apuração separada.",
+      "b": "O imposto é R$ 3.000 sobre os R$ 20.000 positivos; a perda de R$ 12.000 não reduz esse tributo nem compensa o ganho de R$ 9.000 em ações.",
+      "c": "O imposto é R$ 2.550 sobre o saldo conjunto de R$ 17.000, porque COE e ações de pessoa física integram uma base única quando realizados no mesmo mês.",
+      "d": "O imposto é R$ 4.350 sobre R$ 29.000, somando o rendimento do COE e o ganho em ações antes de reconhecer a perda do outro certificado."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-23-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A dispensa de registro da oferta não significa aprovação ou garantia da CVM. O DIE deve ser entregue antes da aquisição, e a publicidade precisa ser coerente com ele, moderada, identificada e equilibrada quanto a riscos e cenários.</p><p>A alternativa A aceita entrega posterior do DIE. A alternativa D converte dispensa em aprovação regulatória. A alternativa C permite destaque desequilibrado do cenário favorável e posterga informações essenciais.</p><p>Regra de bolso: publicidade desperta interesse; o DIE entregue antes da compra sustenta compreensão e decisão.</p>",
+     "enunciado": "<p>Um anúncio no aplicativo destaca o potencial de ganho de um COE com Valor Nominal em Risco e mostra em tamanho grande apenas o cenário favorável. Ao pedir a contratação imediata, Daniel recebe a informação de que a oferta pública segue a Resolução CVM 8 e é dispensada de registro na CVM. O atendente interpreta a dispensa como aprovação da estrutura pelo regulador, promete encaminhar o DIE depois da compra e oferece uma assinatura eletrônica sem acesso prévio aos fluxos, às perdas possíveis ou à remuneração da distribuição. A peça carece de identificação clara de sua natureza publicitária e omite os demais cenários. Daniel aceita risco, mas deseja compreender a fórmula antes de autorizar. Avalie a condução da oferta, a publicidade e o momento de entrega do DIE.</p>",
+     "alternativas": {
+      "a": "A dispensa de registro permite contratar pelo anúncio, desde que o intermediário envie o DIE depois, guarde a assinatura eletrônica e registre a ciência dos riscos e cenários pelo cliente.",
+      "b": "A dispensa não equivale a aprovação ou garantia; o DIE deve chegar antes da aquisição, e a publicidade deve ser coerente, moderada, identificar-se e mostrar riscos e cenários.",
+      "c": "O anúncio pode privilegiar o cenário favorável quando identifica o ativo subjacente, pois os demais cenários e a remuneração pertencem apenas ao DIE posterior.",
+      "d": "A oferta sem registro representa aprovação da CVM quanto à fórmula, mas o intermediário ainda precisa destacar o Valor Nominal em Risco na confirmação final."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-23-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Como a fórmula observa o preço final, uma alta ocorrida no meio do prazo não fixa remuneração. A recomendação também depende do prazo, da liquidez, do emissor, da entrega possível, dos custos, dos tributos e da compatibilidade com o cliente.</p><p>A alternativa C transforma o teto em trava automática do pico. A alternativa B trata proteção nominal como cobertura do risco de crédito e limita indevidamente a falta de recompra. A alternativa D calcula participação sobre uma alta que a fórmula não observa e altera a função do limite.</p><p>Regra de bolso: leia no DIE qual cotação entra na fórmula, em que data ela é observada e quais riscos cercam o pagamento e a saída.</p>",
+     "enunciado": "<p>Na revisão de uma recomendação, Beatriz encontra um COE de quatro anos referenciado no preço final de uma ação estrangeira. O cliente acredita que qualquer alta durante o período produzirá ganho e planeja vender o certificado se surgir uma despesa. O DIE informa Valor Nominal Protegido no vencimento, participação de 75% na alta observada apenas na data final, limite de ganho de 28%, ausência de FGC, inexistência de compromisso de recompra e possibilidade de entrega física em um cenário definido. Também apresenta risco do emissor, fontes de cotação, datas relevantes, tributação, remuneração da distribuição e estimativa de perda real se houver apenas devolução nominal. Dois anos depois da emissão, a ação chegou a subir 40%, mas retornou ao preço inicial. O cliente insiste que o pico já garantiu remuneração. Analise a leitura do DIE e a decisão antes da contratação.</p>",
+     "alternativas": {
+      "a": "A fórmula usa a data final, então o pico não fixa ganho; prazo, saída, crédito, entrega, custos, tributos e compatibilidade com o cliente precisam ser avaliados.",
+      "b": "A proteção nominal elimina o risco do emissor no vencimento, enquanto a ausência de recompra afeta apenas clientes que escolherem liquidação financeira e saída antes da data final.",
+      "c": "A alta intermediária garante 28%, pois o limite contratual transforma o pico observado em remuneração; o risco de liquidez fica restrito à entrega física.",
+      "d": "A participação de 75% assegura ganho de 30% sobre a alta intermediária de 40%, e o limite de 28% serve somente para estimar a perda real no DIE."
+     },
+     "gabarito": "a"
+    }
+   ],
+   "Fundos: documentos, distribuição e responsabilidades": [
+    {
+     "id": "cpror-inv-24-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O regulamento, com anexo e apêndice quando existentes, contém as regras aplicáveis. A lâmina resume informações centrais quando exigida, e o termo registra o acesso e a ciência dos riscos.</p><p>A alternativa B transforma a lâmina em substituta do regulamento e o termo em teste de adequação. A alternativa C limita o regulamento à carteira e atribui garantias aos demais documentos. A alternativa D restringe indevidamente os documentos e usa a assinatura para dispensar informação.</p><p>Regra de bolso: regulamento rege, lâmina resume e termo registra acesso e ciência.</p>",
+     "enunciado": "<p>Ao explicar os documentos de um fundo, uma especialista compara regulamento, lâmina e termo de adesão e ciência de risco. Identifique a função principal de cada um.</p>",
+     "alternativas": {
+      "a": "O regulamento reúne as regras, a lâmina resume pontos centrais quando aplicável e o termo registra acesso às regras e ciência dos riscos.",
+      "b": "O regulamento registra a ordem, a lâmina substitui as regras da classe e o termo comprova que o investimento é compatível com o perfil.",
+      "c": "O regulamento apresenta apenas a carteira, a lâmina garante a qualidade das informações e o termo transfere ao cotista as decisões do gestor.",
+      "d": "O regulamento serve ao administrador, a lâmina informa apenas rentabilidade e o termo dispensa explicações depois da assinatura do cliente."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-24-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O distribuidor atua na oferta, no atendimento e no recebimento da ordem. O administrador fiduciário cuida da constituição e do funcionamento, e o gestor decide os investimentos conforme a política.</p><p>A alternativa A troca as três atribuições. A alternativa C entrega atendimento e suitability a prestadores diferentes do distribuidor. A alternativa D coloca seleção de ativos e cadastro comercial sob responsáveis inadequados.</p><p>Regra de bolso: distribuidor atende, administrador controla o funcionamento e gestor monta a carteira.</p>",
+     "enunciado": "<p>Uma cliente pergunta quem oferece as cotas, quem cuida do funcionamento fiduciário do fundo e quem escolhe os ativos da carteira. Relacione essas funções aos respectivos prestadores.</p>",
+     "alternativas": {
+      "a": "O gestor oferece as cotas e registra a ordem, o distribuidor controla o fundo e o administrador fiduciário escolhe os ativos da carteira.",
+      "b": "O distribuidor oferece as cotas e atende o cliente, o administrador fiduciário cuida do funcionamento e o gestor decide os investimentos da carteira.",
+      "c": "O administrador fiduciário atende e recebe a ordem do cliente, o gestor verifica suitability e o distribuidor define e acompanha a política de investimento da classe.",
+      "d": "O distribuidor escolhe os ativos, o administrador fiduciário faz a recomendação individual e o gestor mantém o cadastro comercial dos cotistas."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-24-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Os documentos e as informações devem estar disponíveis enquanto ainda podem orientar a decisão. A gerente também precisa comparar liquidez e demais características com o perfil antes de colher o termo e registrar a ordem.</p><p>A alternativa B torna a entrega tardia e deixa a liquidez para depois. A alternativa C antecipa a assinatura e reduz a análise à rentabilidade. A alternativa D trata a iniciativa do cliente como dispensa da entrega prévia e dos procedimentos de adequação.</p><p>Regra de bolso: primeiro informe e compare, depois confirme e registre.</p>",
+     "enunciado": "<p>Durante o fechamento mensal da agência, Paulo pede aplicação imediata em um fundo cuja rentabilidade recente apareceu no aplicativo. Seu cadastro está atualizado, mas o prazo de resgate do produto pode conflitar com uma despesa prevista para daqui a quatro meses. A tela permite assinar o termo de adesão e ciência de risco em poucos segundos, enquanto o regulamento, o anexo da classe e a lâmina aplicável seriam enviados por correio eletrônico no dia seguinte. Paulo insiste em confirmar naquele momento e afirma que a assinatura basta para demonstrar conhecimento. A gerente possui acesso às versões vigentes e consegue interromper a ordem para explicar liquidez, riscos, taxas e adequação. Analise a sequência que preserva a função dos documentos e o suitability.</p>",
+     "alternativas": {
+      "a": "Disponibilizar os documentos vigentes e explicar condições antes da confirmação, confrontar o prazo com a necessidade e colher o termo após permitir a leitura.",
+      "b": "Confirmar a ordem e enviar os documentos depois, pois cadastro atualizado e assinatura registram a escolha do cliente, ficando a liquidez para o acompanhamento posterior.",
+      "c": "Colher o termo antes da lâmina e do regulamento, desde que a gerente faça uma comparação verbal de rentabilidade e registre a despesa prevista no cadastro.",
+      "d": "Liberar a aplicação porque o pedido partiu do cliente, mantendo o alerta de inadequação e os documentos para consulta antes do primeiro pedido de resgate."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-24-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A dispensa de novo termo no retorno à mesma classe ou subclasse pressupõe ausência de alteração do regulamento que a impacte. Como houve mudança relevante, o novo ingresso pede acesso às regras vigentes e novo termo conjunto.</p><p>A alternativa A ignora a condição da dispensa. A alternativa B separa indevidamente a ciência de risco e estende a adesão anterior às novas regras. A alternativa C recria dois documentos e interpreta de forma errada o limite do termo vigente.</p><p>Regra de bolso: retorno sem mudança relevante pode aproveitar o termo; mudança que impacta o investimento exige nova ciência das condições.</p>",
+     "enunciado": "<p>Renata resgatou por inteiro suas cotas de uma subclasse e, oito meses depois, deseja retornar. A plataforma localiza o termo de adesão e ciência de risco assinado no primeiro ingresso. Desde então, o regulamento recebeu uma alteração que mudou uma condição relevante para aquela subclasse. O atendente propõe reutilizar o termo antigo e apresentar a mudança somente no extrato posterior, alegando que a cliente já conhecia o fundo. O novo termo preparado pelo sistema reúne adesão e ciência de risco, possui menos de 5.000 caracteres e identifica os cinco principais fatores de risco da carteira. Renata quer concluir a aplicação pelo canal eletrônico, que consegue comprovar autoria e integridade. Avalie o uso do termo e o efeito da alteração ocorrida entre os dois ingressos.</p>",
+     "alternativas": {
+      "a": "Reutilizar o termo antigo, pois o retorno à mesma subclasse dispensa nova formalização mesmo após mudança relevante, desde que a assinatura anterior esteja preservada.",
+      "b": "Colher apenas um termo de ciência de risco, porque a adesão registrada no primeiro ingresso continua abrangendo alterações posteriores do regulamento.",
+      "c": "Exigir dois documentos separados, um de adesão e outro de risco, pois o limite de 5.000 caracteres alcança apenas cada declaração isoladamente.",
+      "d": "Disponibilizar as regras vigentes e colher novo termo conjunto, pois a dispensa após resgate integral depende de ausência de alteração que impacte a classe ou subclasse."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-24-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A lâmina é exigida quando aplicável e funciona como resumo, sem substituir regulamento, anexo ou apêndice. A ausência de lâmina em categoria não alcançada por essa exigência não impede, por si, o ingresso.</p><p>A alternativa A transforma resumo em documento completo e cria impedimento uniforme. A alternativa B usa a expressão do programa para ampliar a obrigação normativa. A alternativa D torna facultativa a lâmina descrita como exigida e permite que ela substitua outros documentos.</p><p>Regra de bolso: lâmina é porta de entrada quando aplicável; as regras completas continuam nos documentos do fundo.</p>",
+     "enunciado": "<p>Uma equipe prepara a distribuição de duas classes. A primeira é um fundo de investimento financeiro aberto destinado ao público em geral, com lâmina de informações básicas elaborada e atualizada pelo administrador. A segunda pertence a uma categoria para a qual a equipe confirmou que a lâmina daquele modelo é inaplicável. Um analista sugere impedir o ingresso na segunda classe por falta de lâmina e, na primeira, entregar apenas o documento resumido porque ele já contém público-alvo, objetivos, riscos, custos e movimentação. Outro integrante lembra que o programa também usa a expressão lâmina de informações essenciais. Os regulamentos e anexos vigentes das duas classes estão disponíveis. Analise o uso da lâmina e sua relação com os demais documentos.</p>",
+     "alternativas": {
+      "a": "A primeira pode usar apenas a lâmina, pois o resumo substitui o regulamento no ingresso; a segunda fica impedida de receber cotistas até produzir documento idêntico.",
+      "b": "As duas precisam de lâmina de informações essenciais, porque essa denominação do programa cria obrigação uniforme mesmo quando a norma afasta o documento.",
+      "c": "A primeira disponibiliza lâmina e documentos vigentes; a segunda segue as exigências de sua categoria, pois a lâmina varia conforme a aplicação e não substitui o regulamento.",
+      "d": "A lâmina da primeira é facultativa por ser fundo aberto ao público, enquanto a segunda pode adotá-la como substituta do anexo e das informações complementares."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-24-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O selo indica compromisso com a autorregulação correspondente. Ele não aprova rentabilidade, garante capital ou atesta adequação, que continua dependendo das características do fundo e do perfil do cliente.</p><p>A alternativa B atribui certificação de qualidade e reduz a análise ao prazo. A alternativa C cria garantia de capital. A alternativa A transfere à ANBIMA a responsabilidade que permanece com os prestadores em suas atribuições.</p><p>Regra de bolso: selo informa compromisso com regras; suitability decide a compatibilidade com a pessoa.</p>",
+     "enunciado": "<p>Sérgio procura a central após ver o selo ANBIMA ao lado do nome de um fundo. Ele deseja aplicar a reserva destinada ao pagamento da faculdade da filha em doze meses, embora a classe tenha prazo de resgate superior a esse horizonte. Sérgio afirma que o selo representa aprovação da rentabilidade, garantia do capital e confirmação de adequação para qualquer investidor. A atendente verifica que a atividade e os prestadores identificados assumiram compromissos de autorregulação, mas o produto mantém riscos, custos e condições próprias. O cadastro revela a data rígida da despesa e conhecimento limitado sobre fundos. Sérgio insiste que uma instituição autorregulada pode dispensar a comparação com seu perfil. Indique a resposta que reenquadra o significado do selo e a decisão de investimento.</p>",
+     "alternativas": {
+      "a": "O selo transfere à ANBIMA a responsabilidade pelos documentos, mas o distribuidor conserva o dever de registrar a ordem e explicar a data de resgate.",
+      "b": "O selo confirma a qualidade do fundo e a regularidade dos prestadores, mas a atendente deve verificar apenas se o prazo de resgate cabe nos doze meses e registrar essa conferência.",
+      "c": "O selo garante o capital dentro das regras da autorregulação, embora rentabilidade e liquidez continuem sujeitas ao regulamento e ao perfil informado.",
+      "d": "O selo indica compromisso com regras de autorregulação aplicáveis, sem aprovar resultado ou adequação; prazo, riscos, custos e perfil ainda orientam a decisão."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-24-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A atuação do distribuidor abrange cadastro, suitability, informação, documentos, remuneração, declarações, ordem e registros capazes de demonstrar a sequência do atendimento.</p><p>A alternativa C transfere deveres do relacionamento a outros prestadores. A alternativa B reduz evidências a cadastro e ordem e presume que o regulamento substitui a explicação. A alternativa D usa assinatura e complementação posterior para tentar corrigir falhas anteriores.</p><p>Regra de bolso: o registro deve permitir reconstruir o que o cliente recebeu, entendeu, declarou e ordenou.</p>",
+     "enunciado": "<p>Na auditoria de uma distribuição, foram encontrados cadastro do cliente e ordem eletrônica de aplicação, porém o arquivo carece da versão dos documentos disponibilizados, do resultado da análise de perfil e dos alertas feitos durante o atendimento. O investidor tinha objetivo de curto prazo, o fundo possuía carência e a equipe comercial conhecia essa divergência. O supervisor afirma que o registro da ordem prova a iniciativa do cliente e que os demais elementos pertencem ao administrador fiduciário, porque ele mantém o regulamento. A instituição também informou a remuneração da distribuição apenas em relatório interno, sem disponibilizá-la ao cliente conforme as regras aplicáveis. Avalie os deveres do distribuidor e as evidências necessárias para reconstituir o atendimento.</p>",
+     "alternativas": {
+      "a": "O distribuidor deve manter cadastro, adequação, versões disponibilizadas, alertas, declarações e ordem, além de informar condições e remuneração pelas regras aplicáveis.",
+      "b": "O distribuidor registra apenas cadastro e ordem, pois carência e riscos constam do regulamento mantido pelo administrador e dispensam evidência da explicação.",
+      "c": "A ordem eletrônica encerra a responsabilidade comercial, enquanto administrador e gestor registram perfil, alertas, remuneração e documentos em nome do distribuidor.",
+      "d": "A divergência de prazo pode ser corrigida pelo termo assinado, desde que o distribuidor acrescente depois a versão do regulamento e o relatório de remuneração."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-24-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. Na distribuição por conta e ordem, o distribuidor informa a modalidade, mantém identificação dos beneficiários finais e registros individualizados, assegura acesso a documentos e comunicações e cumpre obrigações tributárias que lhe caibam.</p><p>A alternativa A usa a consolidação para transferir deveres do distribuidor. A alternativa B aceita registros insuficientes e acesso apenas sob demanda. A alternativa D permite omitir beneficiários e desloca obrigações da plataforma para gestor e administrador.</p><p>Regra de bolso: por conta e ordem concentra a posição perante o fundo, mas amplia o dever do distribuidor de conhecer e atender cada cliente.</p>",
+     "enunciado": "<p>Uma plataforma distribui cotas por conta e ordem e mantém, em seu próprio sistema, a relação individual dos clientes. Em uma revisão interna, constata que o fundo recebe os valores consolidados, mas a plataforma deixou de registrar parte dos beneficiários finais e separou aplicações e resgates apenas por canal de venda. As comunicações do administrador ficam disponíveis em área restrita da equipe, sem encaminhamento ou acesso pelos investidores. Ao questionar o fluxo, um diretor afirma que o administrador já possui o total de cotas e que o distribuidor pode tratar identificação, documentos e obrigações tributárias como tarefas facultativas. Os contratos confirmam a modalidade por conta e ordem e os clientes também deixaram de receber informação clara sobre esse arranjo. Analise as obrigações adicionais do distribuidor nesse modelo.</p>",
+     "alternativas": {
+      "a": "O administrador deve substituir o cadastro complementar do distribuidor, pois a consolidação do total de cotas transfere identificação e tributos ao fundo.",
+      "b": "O distribuidor pode manter registros apenas por canal se o administrador conhecer o total, desde que envie as comunicações e identifique o beneficiário quando houver pedido individual do cotista.",
+      "c": "O distribuidor deve informar a modalidade, identificar beneficiários finais, registrar aplicações e resgates, dar acesso a documentos e comunicações e cumprir tributos cabíveis.",
+      "d": "A modalidade permite omitir os beneficiários do registro complementar, mas exige que gestor e administrador dividam as obrigações tributárias da plataforma."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-24-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. O regime atual distribui informações complementares entre documentos e exigências da categoria. O canal eletrônico precisa apresentar os itens aplicáveis, indicar acesso às fontes e manter coerência com as regras oficiais.</p><p>A alternativa A cria um documento substitutivo e omite informações relevantes. A alternativa D aceita descrição comercial divergente e tenta corrigi-la com ciência genérica. A alternativa C presume formato universal e documento único que a aula afasta.</p><p>Regra de bolso: informação complementar aprofunda e atualiza; ela não substitui nem contradiz a fonte oficial.</p>",
+     "enunciado": "<p>A equipe digital redesenha a página de um fundo e decide criar um arquivo chamado Formulário Universal de Informações Complementares para substituir os demais materiais. A nova tela mostra rentabilidade e classificação de risco, mas omite condições de resgate, limites de movimentação, taxas, tributação e o caminho para regulamento e atendimento. Um texto comercial promete liquidez simples, enquanto o anexo da classe prevê prazo de pagamento e condições específicas. O responsável argumenta que reunir tudo em um único nome antigo facilita a jornada e que uma informação complementar pode resumir o risco de forma diferente da redação oficial. A instituição segue regras de autorregulação para canais eletrônicos e possui documentos periódicos atualizados. Avalie a organização das informações e a coerência exigida entre os materiais.</p>",
+     "alternativas": {
+      "a": "O formulário universal pode substituir regulamento e anexos se reunir rentabilidade e risco, ficando taxas, tributação e atendimento para os documentos periódicos.",
+      "b": "As informações podem estar distribuídas nos documentos exigidos, e o canal deve exibir os dados aplicáveis e acesso às fontes sem contrariar nem suavizar suas regras e riscos.",
+      "c": "O formato antigo deve ser adotado em cada fundo, pois informações complementares precisam estar reunidas em documento único para produzir validade regulatória.",
+      "d": "A tela comercial pode simplificar o prazo de resgate porque o anexo permanece disponível, desde que o cliente assine ciência genérica antes de aplicar."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-24-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. O distribuidor responde pelas falhas de informação, suitability e registro em seu atendimento. A escolha dos ativos cabe ao gestor dentro da política, e o administrador exerce as atribuições fiduciárias e documentais próprias.</p><p>A alternativa A transfere atendimento ao administrador e seleção ao distribuidor. A alternativa C usa a contratação para deslocar a falha e a ordem comercial. A alternativa D entrega carteira e política ao distribuidor e divide indevidamente seus deveres de atendimento.</p><p>Regra de bolso: identifique o ato questionado e atribua-o a quem informa e vende, a quem administra o funcionamento ou a quem decide a carteira.</p>",
+     "enunciado": "<p>Camila reclama que uma classe comprou ativos diferentes dos que imaginava e pede responsabilização da pessoa que recebeu sua ordem. A apuração mostra que o gestor escolheu os ativos dentro da política prevista, o administrador manteve regulamento, anexo e documentos da classe, e o distribuidor ofereceu as cotas. No atendimento, porém, o distribuidor apresentou apenas o nome comercial, deixou de fornecer os documentos vigentes e registrou a ordem sem verificar se risco, carência e custos eram compatíveis com o perfil de Camila. O supervisor comercial sustenta que a decisão do gestor sobre a carteira torna o distribuidor responsável também pela seleção dos ativos, enquanto o atendimento seria obrigação do administrador. Cada contrato preserva as atribuições descritas na aula. Analise a divisão de responsabilidades no caso.</p>",
+     "alternativas": {
+      "a": "O administrador responde pelo atendimento e pelo suitability porque mantém os documentos, enquanto o distribuidor divide com o gestor a escolha, o acompanhamento e a substituição dos ativos oferecidos.",
+      "b": "O distribuidor responde por informação, adequação e registro da ordem; o gestor decide os ativos conforme a política, e o administrador cumpre suas funções fiduciárias e documentais.",
+      "c": "O gestor assume a falha de informação ao contratar o distribuidor em nome do fundo, e o administrador passa a receber e registrar a ordem transmitida por Camila.",
+      "d": "O distribuidor responde pela carteira e pela política de investimento, enquanto gestor e administrador dividem a explicação individual de carência, custos e perfil."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Fundos de renda fixa, multimercados e ações: classes e estratégias": [
+    {
+     "id": "cpror-inv-25-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Cada classe possui patrimônio segregado que responde por suas obrigações. As subclasses podem diferenciar público-alvo, condições de movimentação e taxas, mas compartilham a carteira da classe.</p><p>A alternativa A atribui patrimônio próprio à subclasse e mistura categorias. A alternativa C reduz a classe a nome comercial e entrega política independente às subclasses. A alternativa B confunde a estrutura patrimonial com emissores e canais de distribuição.</p><p>Regra de bolso: patrimônio e carteira pertencem à classe; a subclasse diferencia condições oferecidas ao cotista.</p>",
+     "enunciado": "<p>Uma investidora encontra duas subclasses dentro da mesma classe de cotas e pergunta como patrimônio, taxas e condições podem se organizar. Identifique a relação entre classe e subclasse no regime da Resolução CVM 175.</p>",
+     "alternativas": {
+      "a": "Cada subclasse possui carteira e patrimônio segregados, permitindo que uma mesma classe reúna categorias e tratamentos tributários distintos.",
+      "b": "As subclasses dividem o patrimônio do fundo por emissor, e as classes existem apenas para separar canais de distribuição e registros dos clientes.",
+      "c": "A classe serve apenas como nome comercial, enquanto cada subclasse escolhe ativos, categoria, prestadores e política de investimento independentes.",
+      "d": "A classe possui patrimônio segregado; suas subclasses podem diferenciar público, movimentação e taxas, sem receber parcelas próprias da carteira."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-25-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Renda Fixa possui ao menos 80% relacionados ao fator que dá nome ao tipo, Multimercado envolve vários fatores sem concentração obrigatória em um deles e Ações mantém ao menos 67% nos ativos admitidos.</p><p>A alternativa A troca percentuais e fatores. A alternativa B transforma classificações em garantias e retira o risco acionário principal. A alternativa D restringe artificialmente as carteiras e cria preço fixado.</p><p>Regra de bolso: Renda Fixa olha o fator de juros ou preços, Multimercado combina riscos e Ações preserva predominância acionária.</p>",
+     "enunciado": "<p>Ao comparar três classes, um analista precisa reconhecer o fator de risco que caracteriza Renda Fixa, Multimercado e Ações. Relacione cada tipo à sua regra central.</p>",
+     "alternativas": {
+      "a": "Renda Fixa concentra 67% em títulos, Multimercado segue um único fator e Ações mantém 80% em ativos ligados a juros ou índices de preços.",
+      "b": "Renda Fixa elimina oscilação de preços, Multimercado garante diversificação e Ações pode tratar o risco acionário como fator secundário da carteira.",
+      "c": "Renda Fixa tem ao menos 80% ligados ao fator de juros ou preços, Multimercado combina fatores e Ações mantém ao menos 67% nos ativos admitidos.",
+      "d": "Renda Fixa mantém caixa sem risco de crédito, Multimercado usa somente derivativos e Ações aplica a parcela restante em ativos com preço fixado."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-25-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A estratégia passiva busca acompanhar o referencial, mas custos e execução produzem desvio. A ativa busca superar o índice, sem garantia, e deve ser examinada pelo resultado após custos e pelo risco adicional.</p><p>A alternativa B promete igualdade e retorno excedente. A alternativa C atribui à gestão passiva proteção contra quedas e condiciona taxas recorrentes à superação. A alternativa A trata decisões de gestão como substitutas do risco acionário e exige réplica exata.</p><p>Regra de bolso: passivo busca acompanhar; ativo tenta superar; em ambos, compare o que sobra depois de custo e risco.</p>",
+     "enunciado": "<p>Beatriz possui uma carteira de longo prazo e compara dois fundos de ações ligados ao mesmo índice. O primeiro busca acompanhar o referencial, tem giro menor e apresentou pequeno desvio causado por taxas, caixa e rebalanceamentos. O segundo seleciona ativos e altera pesos para superar o índice, cobra taxa recorrente superior e pode cobrar performance. Nos últimos doze meses, ambos tiveram retorno bruto próximo, mas o fundo ativo ficou abaixo depois dos custos. Beatriz afirma que o passivo deveria repetir exatamente o índice e que a denominação ativa já demonstra capacidade de gerar retorno excedente. Ela aceita volatilidade e quer compreender o papel de cada estratégia antes de alterar sua carteira. Compare as propostas e o resultado relevante para a decisão.</p>",
+     "alternativas": {
+      "a": "A estratégia ativa substitui a exposição acionária por decisões do gestor, enquanto a passiva conserva o fator de risco apenas quando replica a composição exata.",
+      "b": "A estratégia passiva garante igualdade com o índice depois das taxas, enquanto a ativa comprova retorno excedente em cada período pela liberdade de selecionar ativos e alterar pesos.",
+      "c": "A estratégia passiva reduz custos ao evitar quedas do índice, e a ativa cobra taxas superiores apenas quando termina acima do referencial no período analisado.",
+      "d": "A estratégia passiva procura proximidade com o índice e admite desvio por execução; a ativa tenta superá-lo, mas precisa justificar custos e riscos pelo resultado líquido."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-25-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. R$ 232.177,35 menos R$ 209.285,69 resulta em R$ 22.891,66. O custo reduz o patrimônio que produziria retorno nos períodos seguintes, por isso o efeito composto supera uma conta linear simples.</p><p>A alternativa B usa 1,4% de forma linear sobre o capital inicial. A alternativa C calcula apenas 0,4% ao ano sem capitalização. A alternativa D compara o valor bruto sem taxa de uma estratégia com o valor líquido da outra.</p><p>Regra de bolso: taxa recorrente retira dinheiro hoje e também o rendimento futuro que esse dinheiro produziria.</p>",
+     "enunciado": "<p>Marcelo separou R$ 120.000 para um objetivo de oito anos e compara duas estratégias que, na hipótese didática, obtêm o mesmo retorno bruto de 9% ao ano. A passiva cobra taxa anual de 0,4%, enquanto a ativa cobra 1,8%, sem performance. Para isolar o efeito do custo, use retorno líquido simplificado de 8,6% ao ano no primeiro fundo e 7,2% no segundo, com capitalização anual, sem tributos ou outros encargos. Marcelo considera pequena a diferença de 1,4 ponto percentual e acredita que ela pode ser multiplicada apenas pelo capital inicial e pelos oito anos. Os valores calculados pela fórmula de juros compostos são aproximadamente R$ 232.177,35 para a estratégia passiva e R$ 209.285,69 para a ativa. Calcule a diferença final e interprete o efeito acumulado das taxas.</p>",
+     "alternativas": {
+      "a": "A diferença é R$ 22.891,66, pois a taxa reduz a base que continua rendendo; com retorno bruto igual, o custo recorrente se acumula no patrimônio.",
+      "b": "A diferença é R$ 13.440,00, pois 1,4% de R$ 120.000 durante oito anos mede o efeito completo das taxas, inclusive o retorno que o custo deixa de produzir.",
+      "c": "A diferença é R$ 7.680,00, porque a comparação considera somente a taxa passiva de 0,4% aplicada ao capital inicial durante os oito anos.",
+      "d": "A diferença é R$ 29.821,83, obtida entre o valor bruto de R$ 239.107,52 e o fundo ativo, sem descontar a taxa da estratégia passiva."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-25-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Para sobrar 8,6% depois da taxa de 1,8%, a estratégia ativa precisa gerar 10,4% brutos no modelo simplificado. Produzir os mesmos 9% brutos deixaria apenas 7,2% líquidos.</p><p>A alternativa B ignora a diferença de taxas. A alternativa C usa o retorno líquido desejado como retorno bruto. A alternativa D soma as duas taxas ao retorno da passiva, embora a taxa de 0,4% já esteja refletida nos 8,6% líquidos.</p><p>Regra de bolso: gestão com taxa superior precisa gerar retorno bruto adicional suficiente para cobrir a diferença de custo.</p>",
+     "enunciado": "<p>Lívia compara uma estratégia passiva com retorno bruto esperado de 9% ao ano e taxa anual de 0,4% com uma estratégia ativa que cobra 1,8% ao ano. No modelo simplificado usado pela instituição, as taxas são subtraídas do retorno bruto para estimar a taxa líquida antes de outros custos e tributos. A passiva entrega, nessa hipótese, 8,6% líquidos ao ano. O gerente afirma que a ativa igualará esse resultado se produzir 9% brutos, pois as duas pertencem à mesma classe, e destaca que eventual performance seria analisada depois. Lívia sabe que a gestão ativa assume decisões diferentes do índice e quer descobrir o retorno bruto mínimo necessário apenas para compensar a taxa recorrente maior. Calcule esse retorno e avalie a afirmação do gerente.</p>",
+     "alternativas": {
+      "a": "A ativa precisa de 10,4% brutos, pois 10,4% menos 1,8% resulta nos 8,6% líquidos da passiva antes de outros custos.",
+      "b": "A ativa precisa de 9,0% brutos, porque pertencer à mesma classe iguala o resultado líquido antes de eventual taxa de performance.",
+      "c": "A ativa precisa de 8,6% brutos, porque o retorno líquido da passiva funciona como referência antes da cobrança de sua própria taxa de gestão.",
+      "d": "A ativa precisa de 11,2% brutos, obtidos pela soma das duas taxas, 0,4% e 1,8%, ao retorno bruto de 9% da estratégia passiva."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-25-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Sobre R$ 50 milhões, os tetos são R$ 10 milhões, R$ 5 milhões e R$ 2,5 milhões. A posição privada excede R$ 500 mil, e o enquadramento ainda depende dos limites por modalidade e do regulamento.</p><p>A alternativa A aplica 10% à pessoa jurídica privada. A alternativa C transforma as posições existentes em limites e trata teto como meta. A alternativa D usa uma base patrimonial de R$ 100 milhões, diferente da informada.</p><p>Regra de bolso: calcule o teto sobre o patrimônio, aplique a categoria correta do emissor e depois confira modalidade e regulamento.</p>",
+     "enunciado": "<p>Uma classe de fundo de investimento financeiro possui patrimônio líquido de R$ 50 milhões e segue os limites gerais por emissor apresentados na aula. A carteira registra R$ 9 milhões em títulos de uma instituição financeira autorizada pelo Banco Central, R$ 5 milhões de uma companhia aberta e R$ 3 milhões de uma pessoa jurídica privada fora dessas duas categorias. O analista verifica separadamente os tetos de 20%, 10% e 5%, mas conclui que respeitá-los torna desnecessária a conferência dos limites por modalidade de ativo e das regras mais restritivas do regulamento. Desconsidere dispensas e regras específicas de público. Calcule os tetos em reais, identifique a posição excedente e avalie a conclusão do analista.</p>",
+     "alternativas": {
+      "a": "Os tetos são R$ 10 milhões, R$ 5 milhões e R$ 5 milhões; as três posições estão enquadradas, mas limites por modalidade ainda podem reduzir a exposição.",
+      "b": "Os tetos são R$ 10 milhões, R$ 5 milhões e R$ 2,5 milhões; a última posição excede R$ 500 mil, e modalidades e regulamento ainda precisam ser conferidos.",
+      "c": "Os tetos são R$ 9 milhões, R$ 5 milhões e R$ 3 milhões, pois o limite regulatório se ajusta à posição efetiva e funciona como meta para cada emissor.",
+      "d": "Os tetos são R$ 20 milhões, R$ 10 milhões e R$ 5 milhões, porque os percentuais incidem sobre R$ 100 milhões para fundos de investimento financeiro."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-25-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Administração e gestão remuneram serviços e seguem as condições do regulamento mesmo com queda. A linha d'água impede cobrar performance sobre recuperação que ainda permanece abaixo da base atualizada.</p><p>A alternativa A cobra performance antes de superar a base e suspende taxas recorrentes. A alternativa C estende a linha d'água às taxas de administração e gestão. A alternativa D trata performance como substituta das demais remunerações.</p><p>Regra de bolso: taxas recorrentes remuneram serviços; performance exige superar a referência e também a base protegida pela linha d'água.</p>",
+     "enunciado": "<p>Após uma queda, a cota de um fundo ativo permanece abaixo da cota base atualizada pelo índice de referência. Nos meses seguintes, a carteira recupera parte da perda e supera o referencial apenas no período mais recente, permanecendo abaixo da base relevante. O relatório informa cobrança normal das taxas de administração e gestão conforme o regulamento. Um cotista contesta essas despesas e, ao mesmo tempo, aceita uma nova taxa de performance porque houve recuperação. A classe está sujeita à regra geral, usa referencial verificável e compatível, e a apuração de performance respeita período semestral. O distribuidor precisa separar a cobrança recorrente da remuneração por desempenho. Analise o efeito da linha d'água e das diferentes taxas nesse cenário.</p>",
+     "alternativas": {
+      "a": "A recuperação autoriza performance sobre o ganho do semestre, enquanto administração e gestão ficam suspensas até a cota voltar à base anterior.",
+      "b": "Administração e gestão continuam conforme o regulamento, mas a linha d'água impede performance enquanto a cota permanecer abaixo da base atualizada pelo referencial.",
+      "c": "A linha d'água elimina taxas recorrentes durante quedas e permite performance quando o fundo supera parte do índice no período de recuperação.",
+      "d": "A performance substitui administração e gestão quando o referencial é verificável, evitando que o mesmo patrimônio suporte remunerações de naturezas distintas."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-25-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. A conversão no vigésimo dia define a cota e encerra a exposição conforme as regras apresentadas. O pagamento três dias depois disponibiliza o dinheiro no vigésimo terceiro dia.</p><p>A alternativa A fixa a cota no pedido e ignora o prazo de pagamento. A alternativa B troca os marcos e inclui indevidamente um prazo no outro. A alternativa D desloca a conversão para a data de pagamento e prolonga a exposição descrita.</p><p>Regra de bolso: pedido inicia o processo, conversão define o valor e pagamento coloca o dinheiro na conta.</p>",
+     "enunciado": "<p>Otávio pretende usar R$ 200.000 de uma classe aberta para quitar uma obrigação com data rígida. O regulamento converte as cotas vinte dias após o pedido e realiza o pagamento três dias depois da conversão, adotando a mesma convenção de contagem para os dois prazos. O pedido foi enviado dentro do horário limite e inexiste carência adicional. A carteira pode oscilar até a conversão. Otávio insiste que a solicitação fixa imediatamente o valor mostrado no extrato e que a expressão resgate em vinte dias significa dinheiro disponível nessa data. O atendente precisa informar o prazo real sem prometer a cota futura. Desconsidere calendário e conte apenas os intervalos informados. Determine quando o valor será calculado, quando ficará disponível e qual exposição permanece entre esses momentos.</p>",
+     "alternativas": {
+      "a": "A cota é fixada no pedido e o dinheiro chega após vinte dias; os três dias seguintes servem apenas para atualizar o extrato sem exposição da carteira.",
+      "b": "A cota é calculada três dias após o pedido e o dinheiro chega no vigésimo dia, pois o prazo de pagamento fica incluído no prazo de conversão.",
+      "c": "A cota é calculada no vigésimo dia e o dinheiro chega vinte e três dias após o pedido; até a conversão, o valor segue as oscilações da carteira.",
+      "d": "A cota é calculada no vigésimo terceiro dia e o pagamento ocorre nessa mesma data, mantendo a exposição até a transferência financeira ao cliente."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-25-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. A classe Multimercado permite combinar vários fatores, mas isso não garante diversificação eficaz. O referencial pode não retratar o risco, e a indicação deve examinar mandato, exposições, custos, concentração e prazo de saída.</p><p>A alternativa B transforma classe e referencial em garantias informativas. A alternativa C restringe o multimercado a juros e altera sua classe pelo uso de instrumentos permitidos. A alternativa D presume liquidez criada pela gestão e ignora o prazo contratual.</p><p>Regra de bolso: em multimercado, o nome da classe abre a análise; estratégia, posições e liquidez mostram o risco que o cliente realmente assume.</p>",
+     "enunciado": "<p>Uma empresária mantém reserva operacional separada e dispõe de uma parcela para objetivo em sete anos. Ela aceita oscilação moderada, mas deseja entender por que dois multimercados comparados ao CDI tiveram comportamentos opostos durante uma mudança de cenário. O primeiro combina juros e moedas com posições pequenas e saída em poucos dias. O segundo usa crédito privado, exposição internacional, derivativos e possibilidade de alavancagem, além de converter o resgate em quarenta dias. O assessor afirma que a classificação Multimercado torna ambos diversificados e que o CDI revela o risco assumido. A cliente considera escolher o segundo apenas pela rentabilidade recente, embora possa antecipar seu objetivo. Analise a classe, o referencial e os elementos necessários à indicação.</p>",
+     "alternativas": {
+      "a": "O multimercado pode combinar riscos de formas distintas; mandato, crédito, alavancagem, exterior, concentração, custos e saída precisam caber no objetivo e no perfil.",
+      "b": "A classificação garante diversificação entre fatores, e o CDI descreve as exposições; resta comparar rentabilidade recente e prazo de pagamento entre os fundos.",
+      "c": "A referência ao CDI limita as posições ao mercado de juros, e a presença de moedas ou derivativos transforma o segundo fundo em classe de ações.",
+      "d": "A flexibilidade do segundo fundo compensa o prazo de conversão, pois a gestão pode desmontar posições quando a cliente antecipar a data do objetivo."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-25-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. Pagamento rápido não elimina volatilidade acionária, o rótulo Renda Fixa não impede perda em títulos longos e a flexibilidade do multimercado não garante proteção. A parcela pede compatibilidade entre preservação, risco e prazo.</p><p>A alternativa A confunde velocidade de pagamento com estabilidade de preço. A alternativa D trata a classe como garantia e reduz o problema ao calendário. A alternativa C presume ação futura do gestor e usa rentabilidade passada para justificar risco e custo.</p><p>Regra de bolso: liquidez operacional responde quando o dinheiro chega; adequação também exige saber quanto ele pode valer nessa data.</p>",
+     "enunciado": "<p>André recebeu bônus profissional e separou o valor para a entrada de um imóvel que pode ocorrer em sessenta dias. Um fundo de ações passivo paga o resgate dois dias após o pedido e cobra taxa reduzida. Um fundo de renda fixa com títulos prefixados longos converte em quinze dias e paga no dia seguinte. Um multimercado ativo converte em trinta dias, cobra taxas maiores e pode usar posições em moedas, crédito e derivativos. André aponta a liquidez operacional do fundo de ações e afirma que o pagamento rápido elimina o risco para o objetivo. Também considera o rótulo Renda Fixa prova de estabilidade do segundo fundo e a flexibilidade do multimercado garantia de proteção. A rentabilidade recente dos três é positiva, mas a data da compra do imóvel admite pouca margem para perda. Avalie a indicação para essa parcela.</p>",
+     "alternativas": {
+      "a": "O fundo de ações atende ao objetivo por pagar em dois dias, pois a velocidade do pagamento reduz a oscilação que pode ocorrer antes do pedido de resgate.",
+      "b": "Os três exigem rejeição das conclusões automáticas: risco de mercado, estratégia e prazo de saída precisam ser compatíveis com a data rígida e a baixa margem para perda.",
+      "c": "O multimercado atende pela flexibilidade, desde que o gestor reduza posições antes do resgate e a taxa ativa seja compensada pela rentabilidade recente.",
+      "d": "O fundo de renda fixa atende pelo rótulo, embora títulos longos e quinze dias de conversão exijam apenas ajuste da data em que André transmite o pedido."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Fundos sustentáveis e integração ESG na indicação": [
+    {
+     "id": "cpror-inv-26-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A classe IS incorpora o benefício ambiental, social ou de governança ao objetivo declarado. Na integração, fatores ESG influenciam a análise e a alocação, mas o objetivo do fundo permanece financeiro.</p><p>A alternativa B troca os compromissos. A alternativa A trata propostas diferentes como equivalentes. A alternativa D transforma ESG em classe de ativo e associa integração à ausência de risco.</p><p>Regra de bolso: IS busca benefício sustentável; integração usa ESG para decidir investimentos com objetivo financeiro.</p>",
+     "enunciado": "<p>Uma assessora compara uma classe identificada com o sufixo IS e outra que declara integrar fatores ESG à gestão. Compare o compromisso central dessas duas propostas.</p>",
+     "alternativas": {
+      "a": "A classe IS e a integração ESG possuem o mesmo objetivo, variando apenas a forma como o gestor divulga os ativos e os indicadores da carteira.",
+      "b": "A classe IS usa fatores ESG apenas para reduzir risco financeiro; a integração assume compromisso de produzir benefício ambiental ou social mensurável.",
+      "c": "A classe IS busca benefício ESG declarado; a integração usa fatores ESG na análise para alcançar um objetivo financeiro, sem se apresentar como sustentável.",
+      "d": "A classe IS identifica uma categoria de ativo sustentável; a integração transforma ações, crédito e outros instrumentos em uma carteira sem risco de mercado."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-26-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Emissões e água pertencem ao eixo ambiental, relações de trabalho e direitos humanos ao social, e controles e tratamento dos acionistas à governança.</p><p>A alternativa A coloca emissões no social e trabalho no ambiental. A alternativa B classifica emissões como governança e controles como ambiental. A alternativa D leva relações de trabalho à governança e acionistas ao social.</p><p>Regra de bolso: ambiental observa recursos e clima, social observa pessoas e comunidades, e governança observa decisões, controles e transparência.</p>",
+     "enunciado": "<p>Ao examinar uma empresa para um fundo, um analista separa emissões e uso de água, relações de trabalho e direitos humanos, além de controles e tratamento dos acionistas. Classifique esses fatores na ordem apresentada.</p>",
+     "alternativas": {
+      "a": "Social, ambiental e governança, porque emissões afetam comunidades, relações de trabalho dependem do ambiente e controles tratam do acionista.",
+      "b": "Governança, social e ambiental, porque emissões resultam das decisões internas, trabalho envolve pessoas e controles reduzem impacto climático.",
+      "c": "Ambiental, social e governança, pois os três grupos podem afetar risco, custos, receitas, reputação e continuidade do negócio analisado.",
+      "d": "Ambiental, governança e social, pois relações de trabalho pertencem aos controles internos e tratamento do acionista representa impacto comunitário."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-26-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Uma classe IS precisa ligar objetivo, política, metodologia, critérios, dados, indicadores e acompanhamento, além de prever como reage quando um ativo deixa de atender ao compromisso.</p><p>A alternativa A usa um ativo isolado e posterga elementos essenciais. A alternativa C substitui metodologia por divulgação da carteira e concentração setorial. A alternativa B apoia a proposta no sufixo e transfere a responsabilidade de demonstração.</p><p>Regra de bolso: em uma classe IS, a promessa precisa aparecer no processo, na carteira, na medição e na resposta aos desvios.</p>",
+     "enunciado": "<p>Uma gestora pretende lançar uma classe IS voltada à transição energética. O material inicial afirma que o fundo promoverá benefícios ambientais, mas a política apenas autoriza comprar empresas de energia. A equipe ainda carece de critérios para definir atividades alinhadas, fontes de dados, indicadores de emissões, limites da metodologia e providências para ativos que se afastem do objetivo. Um diretor considera suficiente manter uma empresa de energia renovável na carteira e usar imagens de baixo carbono na comunicação. A área de produtos quer estruturar um compromisso que possa ser acompanhado durante o tempo e explicado aos investidores. Analise os elementos que sustentam o objetivo declarado de uma classe IS.</p>",
+     "alternativas": {
+      "a": "A presença de um ativo renovável sustenta a identificação IS, enquanto indicadores e tratamento de desenquadramentos podem ficar para relatórios criados depois da distribuição.",
+      "b": "A comunicação pode definir o benefício de forma ampla, pois o sufixo IS transfere à autorregulação a avaliação da metodologia e das mudanças na carteira.",
+      "c": "O objetivo ambiental permite dispensar fontes e limitações se a gestora publicar a composição da carteira e mantiver a classe concentrada no setor de energia.",
+      "d": "A política precisa orientar a carteira, e a metodologia deve explicar critérios, fontes, limitações, indicadores, monitoramento e resposta a ativos desalinhados."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-26-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A estratégia incorpora fatores ESG ao processo de investimento para buscar superação financeira. Ela informa essa integração e não declara que o fundo possui objetivo de produzir benefício sustentável.</p><p>A alternativa A transforma qualquer métrica em compromisso IS. A alternativa C restringe integração à exclusão de emissores. A alternativa D permite comunicar impacto sem objetivo, método e acompanhamento que sustentem essa promessa.</p><p>Regra de bolso: integração muda a análise financeira; IS muda também o objetivo declarado do produto.</p>",
+     "enunciado": "<p>Um fundo de ações busca superar seu índice de referência. Antes de investir, o gestor avalia preço, geração de caixa e endividamento e acrescenta análise de emissões, relações trabalhistas e controles internos quando esses fatores podem afetar o valor das empresas. A metodologia registra como as conclusões ESG alteram seleção, peso e retorno exigido, reconhece limitações de dados e utiliza métricas relevantes. O material informa que a classe integra ESG, sem empregar o sufixo IS nem declarar benefício sustentável como objetivo. Um cliente entende que a análise de emissões transforma o produto em fundo de impacto ambiental e exige divulgação de toneladas evitadas como compromisso central. Avalie a natureza da estratégia descrita.</p>",
+     "alternativas": {
+      "a": "A presença de métricas ambientais transforma a classe em IS, mesmo que o objetivo, a identificação e a política permaneçam voltados à superação do índice.",
+      "b": "A análise caracteriza integração ESG, pois esses fatores influenciam decisões voltadas ao objetivo financeiro, sem criar compromisso de originar benefício sustentável.",
+      "c": "A integração ocorre apenas se fatores ESG excluírem emissores controversos, pois alterar pesos ou retorno exigido preserva uma análise estritamente financeira.",
+      "d": "A classe pode anunciar impacto ambiental porque considera emissões na seleção, ficando a declaração do benefício para o relatório posterior de resultados."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-26-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A primeira classe apresenta o compromisso e as evidências próprias de IS. A segunda pode integrar ESG, mas sua comunicação deve refletir esse papel sem sugerir objetivo sustentável, certificação financeira ou garantia.</p><p>A alternativa B iguala compromissos distintos. A alternativa C aceita comunicação comercial incoerente com os documentos. A alternativa D trata monitoramento de objetivo sustentável como recurso exclusivo da integração.</p><p>Regra de bolso: a identificação precisa dizer com clareza se ESG é objetivo do fundo ou parte do processo de análise.</p>",
+     "enunciado": "<p>Ao revisar uma página de distribuição, Carolina encontra duas classes. A primeira usa o sufixo IS e descreve objetivo social, metodologia, indicadores e acompanhamento. A segunda informa integração de governança na seleção de crédito para buscar retorno financeiro, mas o título da página a chama de fundo sustentável certificado. A equipe comercial afirma que as duas expressões aumentam a clareza e que a supervisão da ANBIMA funciona como garantia de qualidade. Carolina consulta a identificação da classe, o anexo, a política e os relatórios e percebe que o conteúdo técnico da segunda estratégia é coerente com integração, enquanto sua chamada comercial sugere outro compromisso. Analise a identificação e a divulgação das duas classes.</p>",
+     "alternativas": {
+      "a": "A primeira sustenta a identificação IS; a segunda deve comunicar integração ESG sem sugerir objetivo sustentável ou garantia de qualidade pela autorregulação.",
+      "b": "As duas podem usar a denominação sustentável, pois objetivo IS e integração ESG recebem a mesma identificação quando metodologia e métricas aparecem nos documentos.",
+      "c": "A segunda pode manter a chamada comercial se o anexo esclarecer o objetivo financeiro, pois a identificação técnica corrige a impressão gerada na página de venda.",
+      "d": "A primeira deve retirar o sufixo IS, porque indicadores e acompanhamento servem apenas à integração de riscos e oportunidades na análise financeira."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-26-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Greenwashing pode surgir de comunicação vaga ou exagerada, seleção isolada de casos e falta de coerência entre objetivo, método, carteira, indicadores e resposta a desenquadramentos.</p><p>A alternativa A usa um ativo isolado como prova do processo. A alternativa C exige falsidade literal para reconhecer o problema. A alternativa D trata recursos de comunicação e fontes de dados como substitutos de objetivo e método verificáveis.</p><p>Regra de bolso: teste a distância entre o que o fundo promete e o que seus documentos, processo e resultados conseguem demonstrar.</p>",
+     "enunciado": "<p>Uma campanha apresenta um fundo como agente de transformação ambiental e destaca fotografias de florestas, uma empresa de reciclagem da carteira e um prêmio recebido pela gestora. O regulamento traz objetivo amplo, sem benefício definido. A metodologia lista bases de dados, mas omite como os critérios alteram seleção ou alocação. O relatório divulga somente casos favoráveis, usa indicadores sem ligação com o objetivo e deixa sem tratamento os ativos que perdem alinhamento. O responsável de marketing afirma que greenwashing exigiria uma frase literalmente falsa e que os elementos visuais representam apenas criatividade. A equipe de controles recebeu a tarefa de comparar discurso, documentos, carteira e reporte. Avalie os sinais presentes na campanha e no processo.</p>",
+     "alternativas": {
+      "a": "O uso de uma empresa de reciclagem comprova a coerência do fundo, e os demais elementos servem apenas para aperfeiçoar o relatório e os indicadores após a campanha de distribuição.",
+      "b": "A campanha apresenta sinais de greenwashing, pois a aparência sustentável supera o suporte verificável em objetivo, critérios, indicadores, carteira e tratamento de desvios.",
+      "c": "A ausência de frase falsa afasta greenwashing, embora a gestora ainda possa melhorar a relação entre indicadores e objetivo na próxima divulgação periódica.",
+      "d": "As imagens e o prêmio suprem a falta de benefício definido, desde que as bases de dados citadas sejam reconhecidas e a carteira contenha ativos ambientais."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-26-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Um emissor controverso pode integrar estratégia de transição ou engajamento. A conclusão depende da coerência entre justificativa, metas, acompanhamento, prazo, consequências e evidências divulgadas.</p><p>A alternativa C proíbe a posição sem examinar a estratégia. A alternativa B usa o ativo como prova suficiente de greenwashing. A alternativa D transforma a existência de metas em autorização sem avaliação de execução e consequências.</p><p>Regra de bolso: ativo controverso é ponto de investigação; coerência se confirma pelo método, pelo monitoramento e pela resposta à evolução observada.</p>",
+     "enunciado": "<p>O relatório de uma classe IS voltada à transição mostra posição em uma companhia intensiva em carbono. Um cotista pede exclusão imediata do fundo de sua carteira e acusa a gestora de fraude apenas pela presença do emissor. A política divulgada admite empresas em transição quando existem metas, plano de engajamento, indicadores periódicos e consequência prevista diante da falta de evolução. No caso analisado, a gestora publicou as metas e os dados iniciais, mas o prazo de avaliação ainda está em curso. O distribuidor dispõe do anexo da classe, dos relatórios de engajamento e da composição atual. Ele precisa responder sem transformar a existência do ativo em absolvição automática nem em prova isolada de greenwashing. Analise a verificação necessária.</p>",
+     "alternativas": {
+      "a": "A análise deve confrontar justificativa, metas, engajamento, acompanhamento e consequências com a política e o reporte antes de concluir sobre a coerência.",
+      "b": "A posição é suficiente para confirmar greenwashing, ficando metodologia e prazo de avaliação relevantes apenas depois que a gestora vender o ativo.",
+      "c": "A presença do emissor descaracteriza a classe IS, porque empresas intensivas em carbono ficam incompatíveis com estratégias de transição mesmo quando há metas e engajamento.",
+      "d": "A estratégia de transição afasta questionamentos sobre o emissor, pois publicar metas permite manter a posição durante o prazo definido pela própria gestora."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-26-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Fernanda pediu benefício social como objetivo, característica presente no primeiro fundo. Mesmo assim, suitability continua necessário, e rentabilidade recente não transforma integração ESG em compromisso IS nem garante resultado futuro.</p><p>A alternativa B equipara integração a benefício declarado e promete superioridade. A alternativa C ignora a diferença de objetivos. A alternativa D trata o sufixo como prova de impacto realizado e dispensa a análise financeira.</p><p>Regra de bolso: primeiro identifique a preferência temática; depois confirme evidências e suitability, sem usar desempenho passado como garantia.</p>",
+     "enunciado": "<p>Fernanda deseja que uma parcela de longo prazo contribua para ampliar práticas de inclusão no trabalho. Ela aceita oscilações de renda variável e pede um produto cujo benefício social faça parte do compromisso declarado. O primeiro fundo usa o sufixo IS, define indicadores de diversidade, critérios de seleção, política de engajamento e consequências para empresas sem evolução. O segundo busca superar um índice e integra relações trabalhistas e governança à análise de risco, alterando pesos quando necessário. Seu gerente prefere o segundo por causa da rentabilidade recente e insiste que integrar fatores sociais produz o mesmo compromisso do primeiro, com vantagem financeira já demonstrada. Custos, concentração e liquidez ainda serão comparados. Avalie qual proposta corresponde à preferência expressa e como tratar o argumento de rentabilidade.</p>",
+     "alternativas": {
+      "a": "O primeiro corresponde ao benefício social declarado, mas a indicação ainda depende dos demais riscos; o retorno recente do segundo não iguala integração a objetivo IS nem promete vantagem futura.",
+      "b": "O segundo corresponde à preferência porque integrar relações trabalhistas produz benefício social, e a rentabilidade recente confirma superioridade para a parcela de longo prazo.",
+      "c": "Os dois assumem o mesmo compromisso social, pois critérios de seleção e alteração de pesos geram impacto equivalente mesmo com objetivos e identificações distintos.",
+      "d": "O primeiro deve ser indicado pela identificação IS, que comprova o benefício já realizado e torna dispensável comparar custos, concentração e liquidez com a carteira da cliente."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-26-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A documentação pode sustentar plenamente o compromisso IS e, ainda assim, a classe ser inadequada para uma reserva de emergência por volatilidade, concentração, liquidez e prazo.</p><p>A alternativa A usa coerência temática para dispensar suitability. A alternativa C transforma ciência de risco e preferência em autorização contra as restrições financeiras. A alternativa D atribui estabilidade à concentração temática e condiciona liquidez a indicadores ambientais.</p><p>Regra de bolso: aderência à preferência sustentável e adequação financeira são testes cumulativos.</p>",
+     "enunciado": "<p>Uma professora procura uma aplicação para a reserva de emergência e declara forte preferência por empresas ligadas à transição climática. A plataforma sugere uma classe IS de ações concentrada nesse setor, com volatilidade elevada, baixa liquidez em parte da carteira e prazo de resgate incompatível com acesso rápido. A documentação apresenta objetivo ambiental, método, indicadores e reporte coerentes, e a identificação IS está correta. A cliente afirma que sua convicção temática compensa a oscilação e pede para registrar apenas a preferência sustentável. O profissional possui dados que mostram renda variável, dependentes e pouca sobra mensal, enquanto outra parcela de longo prazo ainda poderá ser discutida. Analise a compatibilidade do fundo com a finalidade atribuída aos recursos.</p>",
+     "alternativas": {
+      "a": "A coerência IS torna a classe compatível com a reserva, pois objetivo ambiental comprovado substitui testes de liquidez, concentração e capacidade financeira.",
+      "b": "O fundo pode cumprir sua proposta sustentável e ainda ser incompatível com a reserva; preferência ESG não substitui risco, prazo, liquidez e capacidade de perda.",
+      "c": "A preferência autoriza a aplicação depois de ciência de risco, porque o cliente pode atribuir à sustentabilidade peso superior às restrições identificadas no perfil.",
+      "d": "A concentração temática reduz a volatilidade relevante para a reserva, desde que os indicadores ambientais permaneçam alinhados durante o prazo de resgate."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-26-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. O sufixo IS identifica um compromisso sustentável estruturado, mas não garante impacto realizado, capital, ausência de risco ou rentabilidade. Resultado depende da carteira, dos preços, da gestão, dos custos e do mercado.</p><p>A alternativa A promete retorno superior. A alternativa C trata boas práticas como eliminação de riscos e dispensa a análise financeira. A alternativa B atribui garantia de qualidade à ANBIMA e reduz indevidamente a responsabilidade do gestor.</p><p>Regra de bolso: ESG qualifica objetivo ou análise; não converte sustentabilidade em promessa de retorno nem em proteção financeira.</p>",
+     "enunciado": "<p>Na reunião anual de investimentos, Roberto compara uma classe IS de ações e um fundo convencional com risco semelhante. Ele acredita que o sufixo IS representa garantia da ANBIMA, elimina risco financeiro e assegura rentabilidade superior porque empresas com boas práticas teriam custos menores. A classe IS possui objetivo sustentável bem definido, metodologia consistente e relatório coerente, mas concentra parte relevante da carteira em empresas de transição que demandam capital e enfrentam oscilação de preços. O outro fundo também analisa governança, sem declarar integração sistemática nem objetivo sustentável. Roberto quer decidir apenas pelo rótulo, sem comparar preço dos ativos, execução, taxas ou condições de mercado. Avalie o alcance da identificação IS e dos fatores ESG na expectativa de retorno e risco.</p>",
+     "alternativas": {
+      "a": "O sufixo IS assegura retorno superior quando a metodologia é coerente, embora volatilidade e concentração ainda possam alterar o momento de resgate do cliente.",
+      "b": "A supervisão da autorregulação transfere à ANBIMA a qualidade financeira da classe, enquanto o gestor permanece responsável apenas pela medição do benefício ESG.",
+      "c": "Boas práticas eliminam riscos de fraude e transição, permitindo escolher pelo objetivo declarado quando o relatório comprova consistência entre política, metodologia, indicadores e carteira.",
+      "d": "A identificação demonstra compromisso sustentável, sem garantir impacto realizado, capital ou rentabilidade; retorno e risco dependem também de ativos, preços, gestão, custos e mercado."
+     },
+     "gabarito": "d"
+    }
+   ],
+   "ETFs: estrutura, negociação, categorias e riscos": [
+    {
+     "id": "cpror-inv-27-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O ETF é um fundo de índice, e sua cota representa participação na carteira orientada pelo referencial. A negociação em bolsa aproxima a operação de uma ação, sem mudar a natureza de fundo.</p><p>A alternativa A transforma a cota em ação e promete reprodução exata. A alternativa C atribui propriedade direta dos componentes ao cotista. A alternativa D classifica a cota como derivativo e elimina indevidamente o patrimônio do fundo.</p><p>Regra de bolso: ETF é fundo na estrutura e cota negociada em bolsa na operação.</p>",
+     "enunciado": "<p>Um investidor compra no pregão uma cota de ETF referenciada em um índice de ações e acredita ter adquirido uma ação emitida pela bolsa. Identifique a estrutura econômica do investimento.</p>",
+     "alternativas": {
+      "a": "A cota é uma ação emitida pelo administrador, que garante repetir a rentabilidade do índice por meio das ordens registradas durante o pregão.",
+      "b": "A cota é participação em um fundo cuja carteira busca refletir um índice, embora seja comprada e vendida em bolsa por código de negociação.",
+      "c": "A cota representa propriedade direta de cada componente do índice, concedendo ao investidor os direitos individuais associados a cada ativo.",
+      "d": "A cota é um derivativo do índice, sem patrimônio de fundo, e seu resultado depende apenas da diferença entre compra e venda no mercado secundário."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-27-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O mercado primário envolve criação e resgate de cotas por agentes autorizados conforme o produto. No secundário, investidores compram e vendem entre si pelas ofertas do pregão.</p><p>A alternativa B troca os mercados. A alternativa C atribui garantia ao formador e emissão automática ao administrador. A alternativa D transforma o índice em comprador e fixa o preço de mercado pelo patrimônio.</p><p>Regra de bolso: primário altera a quantidade de cotas; secundário transfere cotas existentes entre investidores.</p>",
+     "enunciado": "<p>Uma cliente pergunta onde surgem novas cotas de ETF e onde ocorre a compra feita por investidores durante o pregão. Compare mercado primário e mercado secundário.</p>",
+     "alternativas": {
+      "a": "No primário, agentes autorizados integralizam ou resgatam cotas segundo as regras; no secundário, investidores negociam cotas entre participantes.",
+      "b": "No primário, investidores comuns negociam entre si durante o pregão; no secundário, agentes autorizados criam ou resgatam lotes diretamente com o fundo e com o índice.",
+      "c": "No primário, o formador garante o preço patrimonial; no secundário, o administrador emite cotas a cada ordem de compra registrada em bolsa.",
+      "d": "No primário, o índice compra os componentes da carteira; no secundário, o gestor define o preço pelo patrimônio apurado antes da abertura do pregão."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-27-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. ETF descreve o veículo, enquanto o índice revela a exposição. Cada categoria traz riscos próprios, e quantidade de ativos, negociação em reais ou rótulo ESG não eliminam concentração, câmbio ou necessidade de analisar a metodologia.</p><p>A alternativa A trata a bolsa como equalizadora de risco. A alternativa C confunde quantidade com diversificação econômica e nota ESG com prova de impacto. A alternativa D retira câmbio do internacional e o atribui indevidamente aos demais.</p><p>Regra de bolso: antes de avaliar o ETF, abra o índice e descubra quais riscos a cota reúne.</p>",
+     "enunciado": "<p>Uma plataforma lista cinco ETFs para uma cliente que deseja diversificar uma carteira já concentrada em ações brasileiras. Há um produto ligado ao mercado amplo nacional, outro a empresas estrangeiras sem proteção cambial, um terceiro concentrado em biotecnologia, um índice de criptoativos e um índice que repondera empresas por notas ESG. A cliente vê o mesmo nome ETF em cada tela e conclui que o veículo oferece risco semelhante nos cinco casos. Ela também supõe que comprar diversas empresas pelo ETF setorial elimina a concentração e que a metodologia ESG comprova impacto positivo. O assessor consulta a composição e as regras de cada índice antes de discutir prazo, tolerância e carteira existente. Analise como as categorias alteram a exposição entregue.</p>",
+     "alternativas": {
+      "a": "A negociação em bolsa equaliza os riscos entre categorias, restando ao cliente escolher pelo histórico de retorno, pelo número de ativos de cada índice e pela quantidade de ofertas da cota.",
+      "b": "O veículo é comum, mas os riscos vêm do índice: mercado doméstico, exterior e câmbio, concentração temática, criptoativos ou critérios ESG precisam ser examinados separadamente.",
+      "c": "O ETF segmentado elimina concentração por possuir várias empresas, e o ETF ESG comprova impacto porque as notas usadas no índice substituem análise da metodologia.",
+      "d": "O ETF internacional negociado em reais elimina câmbio, enquanto o nacional e o de criptoativos dependem principalmente da variação da moeda estrangeira."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-27-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O ETF ficou 1,1 ponto percentual abaixo do índice, logo a diferença foi negativa para o fundo. O erro examina a variabilidade desses desvios no tempo, e ágio ou deságio compara preço de mercado com valor patrimonial.</p><p>A alternativa B inverte o sinal e troca erro por diferença de preço. A alternativa C deduz deságio a partir do retorno relativo, embora sejam riscos distintos. A alternativa D erra a subtração e adiciona fatores já refletidos no resultado.</p><p>Regra de bolso: índice contra retorno mede acompanhamento; preço contra patrimônio mede ágio ou deságio.</p>",
+     "enunciado": "<p>Durante um período anual, um índice de referência valorizou 12%, enquanto o ETF criado para acompanhá-lo valorizou 10,9%, ambos medidos na mesma moeda e com datas comparáveis. O relatório atribui parte do descolamento a custos, caixa mantido na carteira e momento dos rebalanceamentos. Em outros períodos, a diferença variou de intensidade. Rogério afirma que a meta de acompanhar o índice obriga o ETF a entregar os mesmos 12% e chama a diferença observada de deságio da cota. O preço de bolsa e o valor patrimonial estavam próximos na data final, e a análise trata apenas dos retornos acumulados no período. Calcule a diferença de acompanhamento e diferencie esse conceito do erro de acompanhamento e do ágio ou deságio.</p>",
+     "alternativas": {
+      "a": "A diferença é negativa em 1,1 ponto percentual para o ETF; o erro observa a regularidade dos desvios, enquanto ágio ou deságio compara preço e patrimônio.",
+      "b": "A diferença é positiva em 1,1 ponto percentual para o ETF, e o erro mede apenas a distância entre preço de bolsa e patrimônio ao final do período.",
+      "c": "A diferença é negativa em 1,1%, e esse valor comprova deságio porque retorno inferior ao índice significa que a cota terminou abaixo do patrimônio.",
+      "d": "A diferença é positiva em 2,1 pontos percentuais, calculada pela distância entre 12% e 10,9% acrescida dos custos e do caixa informados."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-27-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O ágio é R$ 4 dividido por R$ 80, ou 5%. A perda na convergência é R$ 4 divididos pelos R$ 84 pagos, aproximadamente 4,76%.</p><p>A alternativa A troca as bases dos percentuais. A alternativa C atribui ao formador a absorção da perda. A alternativa B usa a base de compra para o ágio e a base patrimonial para a perda, invertendo os cálculos.</p><p>Regra de bolso: ágio compara diferença com patrimônio; retorno do comprador compara ganho ou perda com o preço pago.</p>",
+     "enunciado": "<p>Em um dia de forte procura, a cota de um ETF possui valor patrimonial de R$ 80 e é negociada por R$ 84. O mercado de referência está fechado, o intervalo entre ofertas aumentou e o formador de mercado mantém ordens dentro das condições contratadas, sem prometer execução pelo patrimônio. A tela mostra separadamente o último valor patrimonial divulgado e as ofertas disponíveis para um lote pequeno. Denise compra a R$ 84 porque acredita que a existência do formador impede diferença de preço. No pregão seguinte, a carteira permanece estável e a cota passa a ser negociada a R$ 80, acompanhando o patrimônio. Desconsidere custos, tributos e alterações cambiais. Calcule o ágio na compra e a perda percentual aproximada sobre o valor pago quando ocorre a convergência.</p>",
+     "alternativas": {
+      "a": "O ágio é 4% e a perda é 5%, porque a diferença de R$ 4 deve ser dividida pelo valor patrimonial antes e depois da compra.",
+      "b": "O ágio é cerca de 4,76% e a perda é 5%, pois as duas medidas usam como base os R$ 84 pagos pela investidora na compra.",
+      "c": "O ágio é 5% e a perda é zero, porque o formador absorve a diferença quando a cota retorna ao valor patrimonial no pregão seguinte.",
+      "d": "O ágio é 5% e a perda é cerca de 4,76%, pois R$ 4 corresponde a 5% de R$ 80 e a aproximadamente 4,76% dos R$ 84 pagos."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-27-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Sem proteção, o retorno em reais combina mercado externo e moeda. Diferença de horários, poucas ofertas e uso de estimativas podem ampliar distorções, e o formador não garante negócio no valor patrimonial.</p><p>A alternativa A confunde moeda de negociação com proteção e cria obrigação de preço. A alternativa C promete ganho e reduz liquidez a tempo. A alternativa D limita o câmbio ao primário, embora ele integre a exposição econômica da carteira.</p><p>Regra de bolso: ETF internacional em reais pode carregar risco externo, cambial e de formação local do preço ao mesmo tempo.</p>",
+     "enunciado": "<p>Carlos deseja exposição internacional e escolhe um ETF negociado em reais que acompanha ações estrangeiras. O fundo opera sem proteção cambial, e o mercado externo encerra o pregão algumas horas depois do mercado local. Em determinado mês, o índice sobe em moeda estrangeira, mas essa moeda perde valor diante do real. A cota brasileira apresenta poucas ofertas em parte do dia e oscila por estimativas enquanto o mercado subjacente está fechado. Carlos insiste que negociar em reais retira o câmbio e que o formador de mercado garante venda imediata pelo valor patrimonial. O assessor examina composição do índice, horários, liquidez, desvio de acompanhamento e diferença entre preço e patrimônio. Analise os riscos presentes na exposição e na negociação.</p>",
+     "alternativas": {
+      "a": "A moeda de negociação elimina o câmbio, mas horários diferentes podem produzir erro de acompanhamento e obrigam o formador a executar pelo valor patrimonial divulgado.",
+      "b": "O resultado em reais combina ativos externos e câmbio; horários, liquidez e estimativas podem afastar o preço do patrimônio, e o formador favorece ofertas sem garantir preço.",
+      "c": "A alta do índice estrangeiro assegura ganho em reais, enquanto baixa liquidez afeta apenas a velocidade de execução e preserva o preço econômico da carteira.",
+      "d": "O câmbio surge apenas no resgate do mercado primário, pois compras e vendas no secundário transferem cotas entre investidores brasileiros em moeda local."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-27-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O ganho líquido é R$ 2.600 e a alíquota da operação comum é 15%, resultando em R$ 390. A isenção mensal de vendas de ações até R$ 20.000 não se aplica ao ETF.</p><p>A alternativa A estende indevidamente a isenção. A alternativa C usa a alíquota de day trade numa operação comum. A alternativa B aplica o percentual sobre o valor da venda, em vez do ganho líquido.</p><p>Regra de bolso: ETF de ações negociado como renda variável não herda a isenção mensal das ações.</p>",
+     "enunciado": "<p>Patrícia, pessoa física, vende em operação comum cotas de um ETF de ações por R$ 19.000. O custo total de aquisição e as despesas dedutíveis somam R$ 16.400, gerando ganho líquido de R$ 2.600. Essa foi sua única venda no mês, e as cotas haviam sido compradas em pregões anteriores por ordens registradas na mesma corretora. Ela conhece a isenção mensal aplicável a determinadas vendas de ações de até R$ 20.000 e afirma que o mesmo limite alcança a cota porque o ETF é negociado no pregão e acompanha uma carteira acionária. A aula determina alíquota de 15% para a venda comum de ETF de renda variável. Desconsidere outros ajustes e compensações. Calcule o imposto e avalie a aplicação da isenção mencionada pela investidora.</p>",
+     "alternativas": {
+      "a": "O imposto é zero, porque o valor vendido ficou abaixo de R$ 20.000 e a negociação em bolsa estende a isenção das ações às cotas do ETF.",
+      "b": "O imposto é R$ 2.850, correspondente a 15% dos R$ 19.000 vendidos, pois a ausência de isenção transfere a alíquota para o valor bruto da operação.",
+      "c": "O imposto é R$ 520, correspondente a 20% de R$ 2.600, porque ETF de renda variável recebe a alíquota de day trade em vendas abaixo de R$ 20.000.",
+      "d": "O imposto é R$ 390, correspondente a 15% de R$ 2.600; a isenção mensal citada para ações não alcança cotas de ETF de ações."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-27-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. A compra e a venda no mesmo dia caracterizam day trade na situação apresentada. A alíquota é 20% sobre o ganho líquido de R$ 2.000, gerando imposto de R$ 400, sem a isenção mensal das ações.</p><p>A alternativa D tributa o valor bruto. A alternativa B usa a alíquota da operação comum. A alternativa C aplica ao ETF uma isenção que a aula restringe às ações nas condições próprias.</p><p>Regra de bolso: em ETF de renda variável, operação comum usa 15% e day trade usa 20%, ambos sobre o ganho líquido.</p>",
+     "enunciado": "<p>No mesmo pregão, Leandro compra cotas de um ETF de renda variável e encerra a posição com venda de R$ 52.500. O custo de aquisição somado às despesas dedutíveis é R$ 50.500, deixando ganho líquido de R$ 2.000. Durante o mês, o valor vendido em ETFs permanece abaixo de R$ 20.000 em outras operações, e ele tenta somar esse dado para pedir isenção sobre o resultado do day trade. O extrato identifica a compra e a venda no mesmo dia, em reais, e a aula estabelece 20% para day trade e 15% para operações comuns. Leandro também sugere aplicar 20% sobre o valor bruto da venda por ser uma operação curta. Desconsidere compensações, retenções e outras operações. Calcule o imposto devido e identifique a base e a alíquota aplicáveis.</p>",
+     "alternativas": {
+      "a": "O imposto é R$ 400, calculado em 20% sobre o ganho líquido de R$ 2.000; o limite mensal citado não cria isenção para cotas de ETF.",
+      "b": "O imposto é R$ 300, calculado em 15% sobre R$ 2.000, porque a natureza de fundo mantém a alíquota das operações comuns mesmo no mesmo dia.",
+      "c": "O imposto é zero, porque vendas mensais reduzidas permitem aplicar ao ETF a isenção usada em determinadas operações com ações.",
+      "d": "O imposto é R$ 10.500, calculado em 20% sobre a venda de R$ 52.500, pois day trade usa o valor bruto como base para ETFs."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-27-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. O prazo médio de repactuação de 650 dias fica acima de 180 e até 720 dias, levando à alíquota de 20%. Sobre R$ 10.000, o imposto é R$ 2.000, independentemente dos três anos da cotista.</p><p>A alternativa A usa o prazo pessoal. A alternativa B inclui 650 dias na faixa de até 180 dias. A alternativa D soma duas medidas de natureza diferente para alcançar a faixa de 15%.</p><p>Regra de bolso: no ETF de renda fixa, olhe o prazo médio de repactuação da carteira, e não o tempo do investidor com a cota.</p>",
+     "enunciado": "<p>Mônica mantém há três anos cotas de um ETF de renda fixa e vende a posição com ganho tributável de R$ 10.000. Na data relevante, a carteira possui prazo médio de repactuação de 650 dias, informação destacada no demonstrativo do produto. Ela consulta a tabela do produto, que indica 25% para prazo médio de até 180 dias, 20% para prazo superior a 180 e igual ou inferior a 720 dias, e 15% para prazo superior a 720 dias. Mônica insiste em usar 15% porque permaneceu com a cota por mais de dois anos e associa a regra à tabela regressiva de outros investimentos de renda fixa. O assessor precisa aplicar o critério específico do ETF e calcular o tributo sem considerar outras deduções. Determine a alíquota, o imposto e o papel do prazo pessoal de permanência.</p>",
+     "alternativas": {
+      "a": "A alíquota é 15% e o imposto é R$ 1.500, porque o tempo de três anos da investidora prevalece sobre a composição atual da carteira.",
+      "b": "A alíquota é 25% e o imposto é R$ 2.500, porque qualquer carteira com prazo abaixo de 720 dias permanece na primeira faixa da tabela.",
+      "c": "A alíquota é 20% e o imposto é R$ 2.000, pois 650 dias enquadram a carteira na faixa intermediária; o prazo pessoal não define a alíquota.",
+      "d": "A alíquota é 15% e o imposto é R$ 1.500, pois o prazo médio de 650 dias se soma aos três anos de permanência para ultrapassar 720 dias."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-27-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. Possibilidade de negociação não garante preservação de valor. O cliente reúne horizonte curto, baixa capacidade de perda, concentração preexistente e exposição a volatilidade, distorção de preço e risco setorial.</p><p>A alternativa A confunde liquidez com estabilidade. A alternativa B trata quantidade de empresas como eliminação da concentração econômica. A alternativa D presume que horário e câmbio compensam concentração e risco de mercado.</p><p>Regra de bolso: liquidez responde se é possível vender; suitability também pergunta a que preço e com qual perda o cliente consegue chegar ao objetivo.</p>",
+     "enunciado": "<p>Uma gerente atende Vinícius, que deseja usar em cinco meses o valor destinado à entrada de um imóvel. Ele pede um ETF segmentado de empresas de tecnologia porque a cota negocia em bolsa, o índice reúne dezenas de companhias e o formador costuma manter ofertas. A carteira do cliente já possui exposição relevante ao mesmo setor por meio de ações individuais. O ETF apresenta oscilação elevada, diferença de horários em parte dos ativos internacionais do índice e histórico de negociação com ágio em dias de estresse. Vinícius aceita a possibilidade de vender rapidamente, mas possui pouca margem financeira para suportar queda antes da compra do imóvel. Ele insiste que quantidade de empresas e negociação diária transformam o produto em alternativa líquida e diversificada para o objetivo. Avalie a compatibilidade da indicação.</p>",
+     "alternativas": {
+      "a": "A negociação diária atende ao objetivo, porque a existência de ofertas e de formador converte liquidez de mercado em preservação do preço durante os cinco meses.",
+      "b": "A quantidade de empresas reduz a concentração setorial e torna o ETF compatível, restando apenas escolher uma ordem limitada para controlar eventual ágio.",
+      "c": "O veículo pode negociar rapidamente e ainda ser incompatível: risco setorial, volatilidade, preço frente ao patrimônio e prazo curto conflitam com a baixa capacidade de perda.",
+      "d": "O índice internacional reduz o risco existente nas ações individuais, pois horários distintos e câmbio compensam a concentração do cliente no setor de tecnologia."
+     },
+     "gabarito": "c"
+    }
+   ],
+   "FIIs: tijolo, papel, rendimentos, custos e riscos": [
+    {
+     "id": "cpror-inv-28-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. O FII é fechado e, em regra, a saída ocorre no mercado secundário pela venda a outro investidor. A subscrição participa de emissão de novas cotas e leva recursos à estrutura ofertada.</p><p>A alternativa A cria resgate ordinário e destinação errada dos negócios secundários. A alternativa B troca subscrição e pregão. A alternativa D transforma o valor patrimonial em preço fixo e oferece resgate incompatível com o regime fechado.</p><p>Regra de bolso: subscrição financia emissão; mercado secundário permite negociar a cota existente.</p>",
+     "enunciado": "<p>Um cotista deseja sair de um FII e confunde resgate, subscrição e venda em bolsa. Identifique como funcionam essas operações em uma classe fechada com cotas negociadas.</p>",
+     "alternativas": {
+      "a": "O cotista pede resgate ordinário ao fundo, enquanto subscrição e venda em bolsa transferem recursos diretamente ao administrador da carteira.",
+      "b": "A subscrição compra cotas existentes no pregão, e a venda secundária cria novas cotas para financiar os investimentos previstos na oferta.",
+      "c": "A saída costuma ocorrer pela venda a outro investidor no secundário; subscrição aporta recursos em nova emissão e pode ampliar a quantidade de cotas.",
+      "d": "O regime fechado fixa o preço de saída pelo valor patrimonial, embora o investidor escolha entre resgate no fundo e negociação em bolsa."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-28-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. No tijolo, a renda vem principalmente do uso e da operação dos imóveis. No papel, vem dos créditos imobiliários. A carteira híbrida pode combinar imóveis, recebíveis, cotas e outros ativos admitidos.</p><p>A alternativa B restringe o tijolo, elimina indevidamente risco no papel e cria cotas por fonte. A alternativa C troca os riscos e promete compensação. A alternativa D iguala fontes diferentes e atribui ao híbrido característica comum do FII fechado.</p><p>Regra de bolso: tijolo pergunta por imóveis e locatários; papel pergunta por créditos e devedores; híbrido exige abrir a composição.</p>",
+     "enunciado": "<p>Uma analista precisa explicar a origem predominante do resultado em FIIs de tijolo, de papel e híbridos. Compare essas três estruturas.</p>",
+     "alternativas": {
+      "a": "Tijolo depende principalmente de imóveis e locatários, papel de créditos e devedores, e híbrido pode reunir essas fontes e outros ativos permitidos.",
+      "b": "Tijolo recebe apenas valorização dos prédios, papel elimina risco imobiliário por investir em títulos, e híbrido separa cada fonte em uma cota própria.",
+      "c": "Tijolo concentra risco em juros, papel depende da ocupação física dos imóveis e híbrido garante compensação entre renda de aluguel e crédito.",
+      "d": "Tijolo e papel possuem a mesma fonte de caixa, enquanto híbrido se diferencia por negociar cotas no mercado secundário em vez de admitir resgate."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-28-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Dois mil metros sobre vinte mil geram vacância física de 10%. R$ 160.000 sobre R$ 1.000.000 representam 16%, e a perda total de R$ 250.000 corresponde a 25% da receita potencial.</p><p>A alternativa A troca medidas e calcula total incompatível. A alternativa C presume receita uniforme por área e ainda soma incorretamente as perdas. A alternativa D soma percentuais como vacância física e exclui concessões da perda financeira.</p><p>Regra de bolso: vacância física mede espaço; perda financeira mede receita e também pode existir em área ocupada.</p>",
+     "enunciado": "<p>Um FII possui 20.000 metros quadrados locáveis e mantém 2.000 metros sem ocupação. A receita potencial mensal é de R$ 1.000.000, mas a área vazia corresponde a R$ 160.000 desse valor porque se concentra em espaços de aluguel superior. Os contratos exibem valores diferentes por área. Entre os espaços ocupados, carências, descontos e inadimplência retiram outros R$ 90.000 do caixa esperado. O relatório separa vacância física, perda financeira da área vazia e demais concessões. Um cliente calcula apenas 10% de área desocupada e conclui que a perda de receita também se limita a 10%, ignorando que ocupação física pode coexistir com falta de pagamento. Calcule a vacância física, a perda ligada à área vazia e a perda total de receita potencial.</p>",
+     "alternativas": {
+      "a": "A vacância física é 16%, a perda da área vazia é 10% e a perda total é 19%, pois concessões incidem apenas sobre os espaços ocupados.",
+      "b": "A vacância física é 10%, a perda da área vazia é 16% e a perda total é 25%, somando os R$ 160.000 e R$ 90.000 sobre a receita potencial.",
+      "c": "A vacância física é 10%, a perda da área vazia é 10% e a perda total é 19%, porque cada metro quadrado representa a mesma parcela da receita.",
+      "d": "A vacância física é 25%, a perda da área vazia é 16% e a perda total é 16%, pois carência e inadimplência ficam fora da perda financeira."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-28-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. O papel pode acompanhar o CDI, mas depende do pagamento dos devedores, da concentração, das garantias e do valor de mercado dos créditos. O tijolo depende de contratos, concessões e capacidade dos locatários.</p><p>A alternativa B transforma garantia e ocupação em proteção de caixa. A alternativa A promete crescimento das distribuições. A alternativa D restringe o efeito dos juros ao patrimônio e ignora crédito, indexadores e exigência de retorno.</p><p>Regra de bolso: no papel, siga o devedor e o crédito; no tijolo, siga o imóvel, o contrato e o locatário.</p>",
+     "enunciado": "<p>Júlia compara um FII de papel concentrado em créditos pós-fixados ao CDI com um FII de escritórios. Com a alta dos juros, o primeiro elevou a distribuição por cota, enquanto o segundo manteve contratos com reajustes anuais e registrou concessões para conservar locatários. O FII de papel, porém, possui poucos devedores, garantias de execução demorada e aumento de atrasos. Júlia afirma que a alta do CDI beneficia o papel sem contrapartida e que imóveis ocupados asseguram a renda do tijolo. Os preços das duas cotas caíram porque investidores passaram a exigir retorno superior. O assessor examina indexadores, capacidade dos devedores, garantias, ocupação, contratos, liquidez e concentração. Analise a origem do caixa e os riscos que podem interrompê-lo.</p>",
+     "alternativas": {
+      "a": "A alta do CDI assegura distribuição crescente no papel, e o reajuste anual assegura o mesmo no tijolo depois que os contratos alcançam a data-base.",
+      "b": "O papel fica protegido pela garantia imobiliária, enquanto a ocupação elimina perda de receita no tijolo e deixa apenas o preço da cota sensível aos juros.",
+      "c": "O papel pode receber juros maiores e também sofrer crédito, concentração e marcação; o tijolo depende de contratos e locatários, mesmo com imóveis fisicamente ocupados.",
+      "d": "Os dois fundos respondem aos juros apenas pelo valor patrimonial, pois pagamentos de crédito e aluguéis permanecem separados das condições de mercado."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-28-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Noventa e cinco por cento de R$ 2.400.000 correspondem a R$ 2.280.000. Subtraindo os R$ 1.500.000 já distribuídos, faltam R$ 780.000, sem que o valor mensal se torne promessa futura.</p><p>A alternativa A exige distribuição de 100%. A alternativa C usa o pago como se definisse o mínimo legal. A alternativa D ignora os pagamentos já realizados no período.</p><p>Regra de bolso: a obrigação olha 95% do lucro em caixa apurado semestralmente; frequência mensal e valor recente não garantem renda futura.</p>",
+     "enunciado": "<p>No balanço semestral, um FII apura R$ 2.400.000 de lucros pelo regime de caixa. O regulamento e a política de distribuição observam o mínimo legal de 95%, e o fundo já distribuiu R$ 1.500.000 ao longo dos primeiros cinco meses. No último mês, houve venda de um imóvel com ganho realizado que elevou o caixa, enquanto a receita recorrente de aluguéis permaneceu estável. Um cotista multiplica o pagamento recente por doze e trata esse valor como renda anual garantida. A administração separa resultado recorrente, ganho da venda, despesas e o montante necessário para cumprir a apuração semestral. Desconsidere outras reservas ou ajustes. Calcule a distribuição mínima do semestre e quanto ainda falta distribuir, avaliando a projeção do cotista.</p>",
+     "alternativas": {
+      "a": "O mínimo é R$ 2.400.000 e faltam R$ 900.000, porque a obrigação alcança o lucro em caixa sem admitir retenção dos 5% restantes.",
+      "b": "O mínimo é R$ 2.280.000 e faltam R$ 780.000; a regra semestral sobre lucro em caixa não transforma o pagamento recente em renda garantida.",
+      "c": "O mínimo é R$ 1.500.000 e nada falta, pois pagamentos mensais já realizados substituem a apuração baseada no balanço ou balancete semestral.",
+      "d": "O mínimo é R$ 2.280.000 e faltam R$ 2.280.000, porque valores distribuídos antes do fechamento ficam fora da obrigação calculada no semestre."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-28-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A análise precisa alcançar taxas e despesas operacionais, especializadas, de oferta e de negociação, verificando quem suporta cada custo e como ele afeta caixa, patrimônio e retorno do investidor.</p><p>A alternativa A restringe custos à taxa anunciada. A alternativa C equipara estruturas pelo pagamento de um mês. A alternativa D separa custos da emissão de seus efeitos e mistura encargos do investidor com distribuição do fundo.</p><p>Regra de bolso: compare o custo completo, sua base e quem o paga, e não apenas a taxa destacada.</p>",
+     "enunciado": "<p>Ao comparar dois FIIs com distribuição semelhante, Mateus observa que o primeiro possui taxa de administração e gestão, imóveis que exigirão reformas, seguros, tributos e despesas de locação. O segundo investe em créditos e suporta análise, estruturação, cobrança e acompanhamento, além das taxas dos prestadores. Uma nova emissão do segundo incorpora custos de distribuição ao preço, e a corretora de Mateus cobra encargos na negociação em bolsa. O material comercial destaca apenas a taxa de administração e afirma que a ausência de uma tarifa de entrada torna os custos equivalentes. Mateus quer comparar o retorno líquido e o caixa que continuará disponível para distribuição. Analise quais custos precisam entrar na decisão.</p>",
+     "alternativas": {
+      "a": "A taxa de administração resume os custos do fundo, enquanto reformas, cobrança, oferta e negociação afetam apenas o patrimônio do prestador responsável.",
+      "b": "A comparação deve incluir taxas, serviços, despesas dos imóveis ou créditos, custos da oferta e encargos de negociação, observando base de cálculo e efeito no caixa.",
+      "c": "A ausência de tarifa de entrada iguala os custos, desde que os fundos distribuam o mesmo valor por cota no mês e negociem no mesmo ambiente.",
+      "d": "Os custos da emissão pertencem aos novos cotistas e ficam sem efeito para a classe, enquanto corretagem e emolumentos alteram o rendimento distribuído pelo fundo."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-28-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Uma carteira híbrida combina fontes, mas pode manter concentração econômica, risco de crédito, sensibilidade a juros, custos em camadas e dificuldade de vender a cota pelo preço desejado.</p><p>A alternativa A transforma variedade em eliminação de concentração e estabilidade. A alternativa C usa patrimônio como garantia de preço. A alternativa B supõe transferência dos riscos e ignora as exposições que continuam no fundo.</p><p>Regra de bolso: híbrido descreve mistura de ativos; composição, vínculos e liquidez mostram a diversificação efetiva.</p>",
+     "enunciado": "<p>Uma aposentada avalia um FII híbrido que reúne dois imóveis, créditos imobiliários e cotas de outros fundos. O relatório comercial chama a carteira de diversificada, mas 45% do patrimônio depende de um mesmo grupo econômico entre locação e crédito. As cotas negociam com pouco volume, o intervalo entre ofertas aumentou e parte dos recebíveis possui prazo longo e taxa prefixada. A cliente pretende usar metade do capital em seis meses e supõe que patrimônio imobiliário garante venda pelo valor patrimonial. A última negociação ocorreu abaixo desse valor. O assessor verifica composição efetiva, devedores, locatários, indexadores, duração, liquidez da cota e custos das classes investidas. Analise os riscos que o rótulo híbrido deixa de resolver.</p>",
+     "alternativas": {
+      "a": "A combinação de ativos elimina a concentração do grupo, e os recebíveis prefixados estabilizam preço e distribuição até a venda programada das cotas.",
+      "b": "A presença de cotas de outros fundos transfere liquidez e gestão às classes investidas, afastando do FII híbrido os riscos dos imóveis e recebíveis diretos.",
+      "c": "O valor patrimonial assegura a saída em seis meses, embora o baixo volume possa exigir que a venda seja dividida em ordens durante vários pregões.",
+      "d": "A carteira pode reunir fontes diferentes e continuar concentrada; crédito, juros, custos em camadas e baixa liquidez podem afetar caixa e preço de saída."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-28-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. As condições são cumulativas, e a restrição de ligados atua quando o conjunto possui 30% ou mais das cotas ou direito a mais de 30% dos rendimentos. Os 32% das cotas já afastam a isenção.</p><p>A alternativa A ignora o controle de pessoas ligadas. A alternativa C exige que os dois limites sejam rompidos ao mesmo tempo. A alternativa B separa Cláudia do conjunto que a regra manda considerar.</p><p>Regra de bolso: para rendimentos de FII, confira negociação, número de cotistas, limites individuais e também o conjunto de pessoas ligadas.</p>",
+     "enunciado": "<p>Cláudia, pessoa física, recebe rendimentos de um FII com 180 cotistas e cotas admitidas exclusivamente à negociação em bolsa. Ela possui 6% das cotas e teria direito a 6% dos rendimentos. Entretanto, Cláudia, seu cônjuge e uma empresa controlada pelo casal formam um conjunto de pessoas ligadas que possui 32% das cotas e direito a 28% dos rendimentos. O gerente verifica os requisitos vigentes após a Lei 14.754/2023, mas Cláudia insiste que o mínimo de 100 cotistas e sua participação individual inferior a 10% bastam para a isenção. Considere os critérios cumulativos da aula, inclusive a restrição para ligados quando o conjunto alcança 30% das cotas ou supera 30% dos rendimentos. Avalie o tratamento dos rendimentos.</p>",
+     "alternativas": {
+      "a": "Os rendimentos são isentos porque o fundo supera 100 cotistas, negocia em bolsa e Cláudia permanece abaixo dos limites individuais de cotas e rendimentos.",
+      "b": "Os rendimentos perdem a isenção apenas para o cônjuge e a empresa, pois a participação individual de Cláudia preserva seu tratamento tributário separado.",
+      "c": "Os rendimentos são isentos porque a restrição de ligados exige alcançar simultaneamente 30% das cotas e mais de 30% dos rendimentos do fundo.",
+      "d": "Os rendimentos perdem a isenção porque o conjunto ligado alcança 32% das cotas, ainda que tenha 28% dos rendimentos e Cláudia cumpra o limite individual."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-28-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. O ganho líquido é R$ 3.000 e sofre alíquota de 20%, resultando em R$ 600. A possível isenção dos rendimentos distribuídos não alcança o ganho na venda, e FII não recebe a isenção mensal citada.</p><p>A alternativa B mistura as duas incidências e aplica isenção inexistente. A alternativa C tributa o valor bruto da venda. A alternativa D usa alíquota de ações e ainda ignora a regra específica das cotas de FII.</p><p>Regra de bolso: rendimento distribuído e ganho na venda são fatos distintos; o ganho líquido com FII paga 20%.</p>",
+     "enunciado": "<p>Gustavo, pessoa física, recebe durante o ano rendimentos isentos de um FII que cumpre os requisitos aplicáveis. Em determinado mês, vende parte das cotas por R$ 18.500. O custo de aquisição e as despesas dedutíveis somam R$ 15.500, gerando ganho líquido de R$ 3.000. Essa é sua única venda no mês, e as notas registram aquisições feitas em datas anteriores. Ele afirma que a isenção dos rendimentos acompanha a cota na venda e, de forma alternativa, tenta usar o limite mensal de R$ 20.000 conhecido para determinadas operações com ações. A aula estabelece alíquota de 20% sobre o ganho líquido na alienação de cotas de FII, sem essa isenção mensal. Desconsidere compensações e outros ajustes. Calcule o imposto e separe o tratamento da distribuição e da venda.</p>",
+     "alternativas": {
+      "a": "O imposto é R$ 600, correspondente a 20% do ganho de R$ 3.000; rendimentos podem ser isentos, mas o ganho na venda segue regra própria.",
+      "b": "O imposto é zero, porque a venda ficou abaixo de R$ 20.000 e a isenção dos rendimentos se estende ao ganho obtido com a mesma cota.",
+      "c": "O imposto é R$ 3.700, correspondente a 20% do valor vendido, pois a ausência de isenção mensal transfere a alíquota para a receita bruta.",
+      "d": "O imposto é R$ 450, correspondente a 15% do ganho, aplicando ao FII a alíquota das vendas comuns de ações abaixo do limite mensal."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-28-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Os recursos têm necessidade próxima e baixa capacidade de perda. Distribuição recente pode incluir evento não recorrente, e a cota fechada depende de preço e liquidez no mercado secundário.</p><p>A alternativa C transforma histórico e patrimônio em garantias. A alternativa B projeta venda extraordinária como renda recorrente. A alternativa D usa garantia e indexador para ignorar concentração, crédito e liquidez.</p><p>Regra de bolso: renda de FII pode variar e a saída depende do mercado; necessidade próxima exige avaliar caixa, preço e capacidade de perda.</p>",
+     "enunciado": "<p>Um casal procura renda mensal para complementar despesas a partir do próximo semestre. O patrimônio disponível também funciona como reserva para um tratamento médico, e a capacidade de suportar queda é reduzida. Eles comparam um FII de shopping com vacância crescente e receitas extraordinárias de venda de imóvel, um FII de papel concentrado em poucos devedores e um híbrido com baixo volume de negociação. Os três pagaram valor semelhante no último mês. O casal pede o fundo de maior distribuição e afirma que imóveis e recebíveis permitem resgate pelo patrimônio se surgir uma emergência. O assessor identifica custos diferentes, riscos de renda, sensibilidade a juros e possibilidade de preço secundário abaixo do valor patrimonial. Avalie a indicação para os recursos descritos.</p>",
+     "alternativas": {
+      "a": "Os riscos de caixa e liquidez precisam ser confrontados com a necessidade médica; distribuição passada e patrimônio não garantem renda nem preço de saída.",
+      "b": "O FII de tijolo atende pela venda extraordinária, porque esse ganho eleva a renda futura e reduz o efeito da vacância sobre o pagamento mensal.",
+      "c": "O pagamento recente permite escolher o FII de maior distribuição, pois imóveis e créditos sustentam renda estável e o secundário converte patrimônio em caixa.",
+      "d": "O FII de papel atende por possuir garantias, desde que a distribuição pós-fixada acompanhe os juros e compense a concentração por devedor."
+     },
+     "gabarito": "a"
+    }
+   ],
+   "Fundos incentivados e de infraestrutura: liquidez e adequação": [
+    {
+     "id": "cpror-inv-29-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. O FI-Infra é uma classe de renda fixa voltada a ativos que financiam projetos e busca cumprir o enquadramento tributário da Lei 12.431.</p><p>A alternativa B transforma o fundo em executor de obras. A alternativa A classifica a carteira como ações e atribui o benefício à negociação das cotas. A alternativa D cria garantia pública contra crédito e mercado.</p><p>Regra de bolso: FI-Infra reúne crédito de projetos e busca o regime fiscal da Lei 12.431.</p>",
+     "enunciado": "<p>Uma cliente pergunta o que caracteriza economicamente um fundo incentivado de infraestrutura. Identifique a estrutura e o objetivo central desse veículo.</p>",
+     "alternativas": {
+      "a": "É uma classe de ações que compra participações em concessionárias e recebe isenção por manter as cotas negociadas em mercado organizado.",
+      "b": "É uma sociedade que executa diretamente obras de infraestrutura e distribui aos cotistas o lucro operacional de cada projeto concluído.",
+      "c": "É uma classe de renda fixa que reúne ativos de financiamento de projetos e busca o enquadramento tributário previsto na Lei 12.431.",
+      "d": "É uma carteira pública garantida pelo governo que direciona recursos a projetos e protege o cotista contra inadimplência e oscilação de taxas."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-29-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A Lei 12.431 estrutura o regime que pode beneficiar a pessoa física e o fundo qualificado. Na Lei 14.801, o incentivo destacado pertence ao emissor e não gera isenção automática ao investidor.</p><p>A alternativa A troca os beneficiários. A alternativa B transforma os dois regimes em isenção automática. A alternativa D limita o benefício ao fundo e o relaciona indevidamente à forma da classe.</p><p>Regra de bolso: Lei 12.431 pode beneficiar o investidor; Lei 14.801 oferece incentivo ao emissor.</p>",
+     "enunciado": "<p>Um gerente compara o incentivo previsto na Lei 12.431 com a debênture de infraestrutura disciplinada pela Lei 14.801. Compare quem recebe o benefício destacado em cada regime.</p>",
+     "alternativas": {
+      "a": "A Lei 14.801 concede alíquota zero ao investidor e ao fundo comprador, enquanto a Lei 12.431 concede o benefício apenas ao emissor responsável pelo projeto financiado.",
+      "b": "As duas leis concedem automaticamente alíquota zero à pessoa física e transformam o fundo que compra os títulos em classe incentivada.",
+      "c": "A Lei 12.431 pode alcançar o investidor e o fundo qualificado; a Lei 14.801 incentiva o emissor e não cria isenção automática para quem compra.",
+      "d": "As duas leis beneficiam somente o fundo, variando conforme a classe seja aberta ou fechada e a cota possua negociação no mercado secundário."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-29-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Oitenta e cinco por cento de R$ 200 milhões correspondem a R$ 170 milhões. Os R$ 164 milhões representam 82%, deixando insuficiência de R$ 6 milhões, e a denominação não comprova o regime.</p><p>A alternativa B retira outros ativos da base e altera o percentual. A alternativa C usa o limite geral de outro enquadramento. A alternativa D chama 82% de 85% e reduz o requisito a diversificação.</p><p>Regra de bolso: benefício fiscal exige composição e condições legais; calcule 85% sobre o valor de referência, sem confiar no nome.</p>",
+     "enunciado": "<p>Uma classe possui valor de referência de R$ 200 milhões e deseja manter o enquadramento central do fundo incentivado de infraestrutura. A carteira registra R$ 164 milhões em ativos elegíveis vinculados a projetos admitidos pela Lei 12.431 e R$ 36 milhões em outros ativos permitidos. O material comercial usa a palavra infraestrutura e afirma que a denominação basta para aplicar alíquota zero aos rendimentos da pessoa física. A equipe de controles considera a regra central de pelo menos 85% em ativos elegíveis, sem analisar neste caso o período legal de formação ou outras hipóteses de desenquadramento. Calcule o valor mínimo exigido, a participação atual e a insuficiência da carteira, avaliando a conclusão comercial.</p>",
+     "alternativas": {
+      "a": "O mínimo é R$ 170 milhões, a carteira possui 82% e faltam R$ 6 milhões; o nome não substitui a verificação do enquadramento e das condições legais.",
+      "b": "O mínimo é R$ 164 milhões, a carteira possui 85% e cumpre a regra porque os R$ 36 milhões restantes ficam fora do valor de referência usado para a composição e para o informe.",
+      "c": "O mínimo é R$ 160 milhões, a carteira possui 82% e supera a exigência de 80% aplicável aos fundos de renda fixa em geral.",
+      "d": "O mínimo é R$ 170 milhões, a carteira possui 85% e faltam R$ 6 milhões apenas para ampliar a diversificação, sem efeito tributário."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-29-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Na classe aberta, a liquidez da carteira influencia os prazos e o custo de atender resgates. Na fechada, a saída depende das ofertas do mercado e pode exigir desconto ou execução parcial.</p><p>A alternativa A promete pagamento, contraparte e preço. A alternativa C supõe conversão sem custo na classe aberta. A alternativa D trata listagem como eliminação de desconto e risco de liquidez.</p><p>Regra de bolso: classe aberta enfrenta liquidez pelo resgate; classe fechada enfrenta liquidez pelo comprador e pelo preço no secundário.</p>",
+     "enunciado": "<p>Dois fundos qualificados investem em títulos longos e pouco negociados de projetos de infraestrutura. A primeira classe é aberta e converte o resgate em quarenta dias, com pagamento posterior previsto no regulamento. A segunda é fechada e possui cotas negociadas com baixo volume no mercado secundário. Os documentos informam cada mecanismo de saída. Um investidor afirma que a classe aberta oferece liquidez imediata por admitir resgate e que a classe fechada assegura saída diária pelo simples fato de estar listada. Em uma semana de estresse, a primeira recebeu muitos pedidos e a segunda apresentou poucas ofertas de compra abaixo do valor patrimonial. Compare como a baixa liquidez dos ativos reaparece nos dois mecanismos de saída.</p>",
+     "alternativas": {
+      "a": "Na aberta, admitir resgate obriga pagamento imediato pelo valor da cota do pedido; na fechada, a bolsa garante contraparte, execução completa e valor patrimonial em cada pregão.",
+      "b": "Na aberta, prazo e eventuais vendas da carteira afetam o resgate; na fechada, a saída depende de comprador, volume e preço, sem garantia de execução pelo patrimônio.",
+      "c": "A baixa liquidez alcança apenas a classe fechada, porque o gestor da aberta converte títulos longos em caixa sem afetar a cota ou os demais investidores.",
+      "d": "A baixa liquidez alcança apenas a classe aberta, pois cotas listadas transferem ao comprador os riscos de prazo e eliminam desconto no mercado secundário."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-29-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Os resgates de R$ 20 milhões menos os R$ 12 milhões líquidos exigem venda de R$ 8 milhões. Quatro por cento desse valor equivalem a R$ 320 mil, perda que reduz o patrimônio da carteira.</p><p>A alternativa B ignora o caixa disponível. A alternativa C aplica o percentual sobre uma base sem relação com a venda. A alternativa D soma caixa e pedidos em vez de calcular a insuficiência.</p><p>Regra de bolso: resgate acima da reserva líquida força venda; desconto no ativo vendido vira perda para o patrimônio.</p>",
+     "enunciado": "<p>Um FI-Infra aberto possui patrimônio de R$ 150 milhões, dos quais R$ 12 milhões estão em caixa e ativos de liquidez imediata. Em um período de saída coletiva, recebe pedidos de resgate de R$ 20 milhões. Para completar o caixa, o gestor vende a parcela necessária de títulos por um desconto médio de 4% em relação ao valor registrado antes da venda. O cliente que permanece afirma que a perda pertence somente a quem pediu resgate, pois a alíquota zero protege o patrimônio dos demais cotistas. O regulamento prevê cotização conforme o processo de resgate, e o exemplo desconsidera outros fluxos e custos. Calcule o valor de títulos que precisa ser vendido e a perda causada pelo desconto, avaliando o efeito econômico sobre a carteira.</p>",
+     "alternativas": {
+      "a": "O fundo vende R$ 8 milhões e perde R$ 320 mil; a venda com desconto reduz o patrimônio e pode afetar o valor das cotas, apesar do benefício fiscal.",
+      "b": "O fundo vende R$ 20 milhões e perde R$ 800 mil, porque o caixa de R$ 12 milhões fica reservado aos cotistas que permanecem na classe.",
+      "c": "O fundo vende R$ 8 milhões e perde R$ 80 mil, aplicando 4% apenas sobre a diferença entre os pedidos e o patrimônio líquido da classe.",
+      "d": "O fundo vende R$ 32 milhões e perde R$ 1,28 milhão, somando o caixa disponível aos pedidos antes de calcular os títulos necessários."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-29-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A taxa de mercado pode reduzir o valor presente dos títulos e da cota mesmo com pagamentos em dia. Problemas operacionais ou financeiros do projeto podem, por sua vez, afetar o crédito.</p><p>A alternativa B trata marcação como prova de inadimplência. A alternativa C transforma alíquota zero em proteção do principal. A alternativa D condiciona os riscos à venda e ignora a avaliação pelas condições de mercado.</p><p>Regra de bolso: mercado altera o preço antes do calote; crédito altera a capacidade de pagar; imposto não protege nenhum dos dois.</p>",
+     "enunciado": "<p>A cota de um fundo de infraestrutura cai após o mercado elevar a taxa exigida para créditos semelhantes. Os emissores permanecem pagando em dia, as obras seguem o cronograma e nenhum covenant foi rompido. Um cotista atribui a queda a inadimplência escondida e afirma que a alíquota zero deveria preservar o valor nominal da aplicação. Os títulos da carteira possuem vencimentos longos e sensibilidade relevante às taxas. Em outro cenário discutido no relatório, atraso de obra, custo superior ao previsto e demanda menor poderiam reduzir o caixa de um projeto e elevar o risco de pagamento. O assessor precisa separar a oscilação presente do possível evento futuro. Analise risco de mercado, risco de crédito e alcance do benefício fiscal.</p>",
+     "alternativas": {
+      "a": "A queda atual pode decorrer da alta das taxas e da marcação a mercado antes de inadimplência; problemas do projeto podem gerar crédito, e a alíquota zero não protege a cota.",
+      "b": "A queda comprova inadimplência porque títulos de emissores adimplentes mantêm valor estável, e o benefício fiscal cobre apenas a parcela perdida por juros.",
+      "c": "A alíquota zero preserva o principal até o vencimento, mas permite oscilação temporária da cota quando o projeto enfrenta atraso ou demanda inferior.",
+      "d": "Risco de mercado e crédito surgem somente quando o fundo vende os títulos, pois o valor da cota permanece pelo custo enquanto os emissores pagam em dia."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-29-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Diversos títulos podem compartilhar controlador, setor, região ou variável regulatória. Um choque comum pode atingir vários projetos, e a carteira total do cliente também entra na avaliação da concentração.</p><p>A alternativa A equipara quantidade a independência. A alternativa C restringe concentração ao limite formal por emissor. A alternativa B usa garantias e veículos distintos para apagar riscos econômicos comuns.</p><p>Regra de bolso: conte exposições econômicas e fatores comuns, e não apenas códigos de emissão.</p>",
+     "enunciado": "<p>Um fundo divulga vinte debêntures incentivadas e usa a quantidade para afirmar ampla diversificação. A análise da carteira revela que doze emissões pertencem a empresas do mesmo grupo econômico, quinze dependem de tarifas do mesmo segmento regulado e parte relevante dos projetos está na mesma região sujeita a escassez hídrica. As garantias são diferentes, mas vários fluxos de pagamento reagem ao mesmo evento. Um investidor entende que cada código de emissão representa risco independente e deseja aumentar a posição, embora já possua crédito do mesmo grupo em outra aplicação. O profissional mapeia emissores, controladores, setores, fatores regulatórios, localização e participação na carteira. Avalie concentração, correlação e risco de projeto.</p>",
+     "alternativas": {
+      "a": "A quantidade de títulos prova diversificação, porque emissões distintas possuem contratos e garantias próprios mesmo quando compartilham controlador ou fator econômico.",
+      "b": "Garantias diferentes eliminam a correlação dos projetos, e a posição externa do investidor deixa de importar porque pertence a outro veículo financeiro.",
+      "c": "A concentração existe apenas quando um emissor individual supera o limite do regulamento, ficando grupo econômico e risco regulatório fora da análise do cotista.",
+      "d": "A carteira pode permanecer concentrada por grupo, setor, região e regulação; vários títulos podem perder valor ou capacidade de pagamento diante do mesmo evento."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-29-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. Enquadramento fiscal não resolve incompatibilidade entre crédito longo e uma necessidade próxima, especialmente sem reserva separada e com baixa capacidade de realizar perda na saída.</p><p>A alternativa A trata imposto como compensação automática. A alternativa C transfere tolerância de uma meta longa para outra curta. A alternativa D limita riscos e cria preservação do principal.</p><p>Regra de bolso: benefício fiscal melhora o retorno de uma estratégia adequada; ele não transforma prazo e risco incompatíveis em solução.</p>",
+     "enunciado": "<p>Helena recebeu recursos para pagar uma pós-graduação em dez meses e ainda está formando sua reserva de emergência. Uma campanha oferece FI-Infra qualificado com alíquota zero para pessoa física, carteira de créditos longos e prazo de resgate de sessenta dias. O fundo oscilou com juros e possui concentração em projetos de transporte. Helena aceita algum risco em sua aposentadoria, mas precisa preservar este valor específico e ter disponibilidade na data da matrícula. Ela insiste que economizar imposto compensa uma eventual saída antecipada e pede que o assessor considere apenas o retorno líquido projetado. O assessor possui alternativas de liquidez distinta e o diagnóstico financeiro completo. Avalie o peso do benefício fiscal na adequação desses recursos.</p>",
+     "alternativas": {
+      "a": "A alíquota zero torna o fundo compatível, porque o ganho fiscal compensa perdas de mercado e o prazo de sessenta dias cabe antes da matrícula prevista.",
+      "b": "O fundo pode ser qualificado e ainda conflitar com o objetivo: ausência de reserva, data próxima, oscilação, concentração e saída demorada superam a vantagem fiscal nessa parcela.",
+      "c": "A tolerância declarada para aposentadoria se estende ao valor da pós-graduação, desde que o assessor registre a diferença de objetivo e a cliente aceite o prazo.",
+      "d": "O risco fica limitado aos juros, pois crédito de infraestrutura com incentivo fiscal preserva o principal quando o cotista respeita o prazo regulamentar de resgate."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-29-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. O nome e a presença de título de infraestrutura não bastam. A composição está abaixo da regra central de 85%, e a Lei 14.801 beneficia o emissor sem criar isenção automática para quem investe.</p><p>A alternativa A confunde os incentivos. A alternativa C reduz o requisito fiscal a diversificação. A alternativa D trata desenquadramento como mudança dos riscos econômicos da carteira.</p><p>Regra de bolso: confirme a lei aplicável, a composição e o enquadramento antes de anunciar benefício ao cotista.</p>",
+     "enunciado": "<p>Uma distribuidora inclui na prateleira um fundo denominado Infraestrutura Crédito Longo. A política admite títulos de projetos, mas o informe mais recente mostra 78% do valor de referência em ativos elegíveis da Lei 12.431. A equipe comercial divulga alíquota zero à pessoa física apenas com base no nome e na presença de uma debênture emitida sob a Lei 14.801. O relatório também registra que a classe está fora do período de formação da carteira, sem detalhar neste caso eventual regra corretiva aplicável. Um cliente pretende comprar pela vantagem tributária e ignora o risco de crédito do emissor da debênture. O profissional precisa decidir quais fatos confirmar antes de apresentar o regime fiscal. Analise nome, composição e origem dos incentivos.</p>",
+     "alternativas": {
+      "a": "O nome e a debênture da Lei 14.801 comprovam a alíquota zero, porque incentivo ao emissor acompanha o título e alcança o investidor do fundo.",
+      "b": "A composição de 78% exige verificar enquadramento e condições legais; o nome não comprova o benefício, e a Lei 14.801 não transfere isenção automática ao investidor.",
+      "c": "A presença de ativos de projetos basta para qualificar a classe, e a diferença até 85% afeta somente a diversificação e o risco de concentração.",
+      "d": "O desenquadramento retira os riscos de crédito e mercado do fundo, pois a classe passa a funcionar como renda fixa comum até recompor os ativos elegíveis."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-29-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Daniel possui horizonte e reserva que permitem considerar o produto, mas a proporção depende de concentração, exposição já existente, crédito, juros, projeto, liquidez e custos.</p><p>A alternativa A usa prazo e setores para apagar concentração. A alternativa C transforma alíquota zero em motivo para parcela elevada e prazo em proteção de preço. A alternativa B trata enquadramento fiscal como prova da relação entre risco e retorno.</p><p>Regra de bolso: o regime fiscal abre a análise; carteira do fundo e carteira do cliente determinam quanto risco cabe na indicação.</p>",
+     "enunciado": "<p>Daniel possui reserva de emergência fora da carteira, horizonte de nove anos e tolerância a oscilações moderadas. Ele considera uma alocação em FI-Infra qualificado que mantém 88% em ativos elegíveis, distribui exposições por energia e saneamento e divulga resgate em noventa dias. A análise mostra concentração relevante em dois grupos econômicos, títulos longos sensíveis aos juros e projetos sujeitos a licenciamento e revisão tarifária. Daniel já possui debêntures de um dos grupos e afirma que alíquota zero e quantidade de projetos justificam aplicar uma parcela elevada. O assessor compara custos, crédito, liquidez, correlação com a carteira existente e capacidade de esperar durante um período adverso. Avalie a indicação e os limites da vantagem fiscal.</p>",
+     "alternativas": {
+      "a": "O horizonte e a reserva tornam irrelevante a concentração, pois projetos de setores distintos e alíquota zero asseguram diversificação suficiente para parcela elevada.",
+      "b": "A presença de 88% em ativos elegíveis comprova relação favorável entre risco e retorno, restando ao assessor verificar apenas custos e prazo do resgate.",
+      "c": "A alíquota zero exige alocação elevada para produzir efeito, e o prazo de noventa dias protege o cliente contra oscilações enquanto o pedido é processado.",
+      "d": "O fundo pode participar da carteira em proporção compatível, mas enquadramento fiscal não elimina concentração, mercado, projeto, liquidez nem exposição prévia ao grupo."
+     },
+     "gabarito": "d"
     }
    ],
    "VGBL: acumulação, aposentadoria e planejamento patrimonial": [
