@@ -4004,10 +4004,16 @@ let _exBuscaTop="";   /* texto do campo de busca de topico */
 let _exLista=[];      /* [{mat,top,n}] na ordem em que foi desenhada; o data-i das linhas aponta aqui */
 let _exSessao=null;   /* {itens, i, respostas:{id:opcao}, verComentario} */
 
+/* Um recorte qualquer ja basta para listar. Antes era obrigatorio
+   escolher materia, e por isso a pastilha dizia 'Ainda nao respondi
+   (575)' enquanto o rodape dizia '0 disponiveis' e o botao ficava
+   apagado: a tela prometia um atalho e recusava honra-lo. Sem materia
+   escolhida, nivel e historico valem para o edital inteiro. */
 function _exListar(){
-  if(!_exFiltro.materia&&!_exFiltro.topicos.length) return [];
+  const f=_exFiltro;
+  if(!f.materia&&!f.topicos.length&&!f.niveis.length&&!f.soErradas&&!f.soNaoRespondidas) return [];
   return listarQuestoes(STATE.prefeitura,{
-    materia:_exFiltro.topicos.length||_exFiltro.materia==="*"?null:(_exFiltro.materia||null),
+    materia:(f.topicos.length||!f.materia||f.materia==="*")?null:f.materia,
     topicos:_exFiltro.topicos,
     niveis:_exFiltro.niveis,
     soErradas:_exFiltro.soErradas,
@@ -4093,19 +4099,28 @@ function renderExercicios(){
     return `<span class="ex-banco-item${n?"":" off"}" title="${esc(m.nome)}: ${esc(dica)}"><b>${esc(m.nome)}</b><i>${n}</i></span>`;
   }).join("");
 
+  /* A numeracao acompanha o que esta na tela. A linha de topicos so
+     aparece depois que ele escolhe a materia, e a numeracao fixa deixava
+     a tela contando 1, 3, 4: passo some, numero fica, e o aluno procura
+     um passo 2 que nao existe. */
+  const temTops=!!_exFiltro.materia;
+  let _p=0; const passo=()=>++_p;
+
   el.innerHTML=`
     <div class="ex-banco">
-      <span class="ex-banco-tit">Banco disponível</span>
-      <span class="ex-banco-tot">${cont.total} questões · ${cont.topicosComQuestao} tópicos</span>
-      <span class="ex-banco-lista">${bancoHtml}</span>
+      <div class="ex-banco-topo">
+        <span class="ex-banco-tit">Banco disponível</span>
+        <span class="ex-banco-tot">${cont.total} questões · ${cont.topicosComQuestao} tópicos</span>
+      </div>
+      <div class="ex-banco-lista">${bancoHtml}</div>
     </div>
     <div class="ex-filtro">
       <div class="ex-linha">
-        <label class="ex-lab" for="exMateria">1. Matéria</label>
-        <select class="form-input" id="exMateria" data-change="exMateria">${optMat}</select>
+        <label class="ex-lab" for="exMateria">${passo()}. Matéria</label>
+        <select class="form-input ex-sel-materia" id="exMateria" data-change="exMateria">${optMat}</select>
       </div>
-      <div class="ex-linha ex-linha-tops"${_exFiltro.materia?"":" hidden"}>
-        <label class="ex-lab">2. Tópicos</label>
+      <div class="ex-linha ex-linha-tops"${temTops?"":" hidden"}>
+        <label class="ex-lab">${temTops?passo()+". ":""}Tópicos</label>
         <div class="ex-tops">
           <div class="ex-tops-topo">
             <input type="text" class="form-input ex-tops-busca" id="exBuscaTop" data-input="exBuscarTopico"
@@ -4119,15 +4134,16 @@ function renderExercicios(){
         </div>
       </div>
       <div class="ex-linha">
-        <label class="ex-lab">3. Nível</label>
+        <label class="ex-lab">${passo()}. Nível</label>
         <div class="ex-chips">${chipNivel(1)}${chipNivel(2)}${chipNivel(3)}
-          <button type="button" class="ex-chip${_exFiltro.soErradas?" on":""}" data-action="exToggleErradas" title="Só as questões que você errou da última vez">❌ Só as que errei${nErradas?" ("+nErradas+")":""}</button>
-          <button type="button" class="ex-chip${_exFiltro.soNaoRespondidas?" on":""}" data-action="exToggleNovas" title="Só as questões que você ainda não respondeu nenhuma vez">📝 Ainda não respondi${nNovas?" ("+nNovas+")":""}</button>
+          <span class="ex-chips-sep" aria-hidden="true"></span>
+          <button type="button" class="ex-chip ex-chip-hist${_exFiltro.soErradas?" on":""}" data-action="exToggleErradas" title="Só as questões que você errou da última vez">❌ Só as que errei${nErradas?" ("+nErradas+")":""}</button>
+          <button type="button" class="ex-chip ex-chip-hist${_exFiltro.soNaoRespondidas?" on":""}" data-action="exToggleNovas" title="Só as questões que você ainda não respondeu nenhuma vez">📝 Ainda não respondi${nNovas?" ("+nNovas+")":""}</button>
         </div>
       </div>
       <div class="ex-rodape">
         <div class="ex-rodape-esq">
-          <label class="ex-qtd-lab" for="exQuantidade">4. Quantidade</label>
+          <label class="ex-qtd-lab" for="exQuantidade">${passo()}. Quantidade</label>
           <input class="form-input ex-qtd-input" id="exQuantidade" type="number" min="1" step="1" value="${esc(_exQuantidade)}" placeholder="Ex.: 10" data-input="exQuantidade">
           <div class="ex-conta" id="exConta"><strong>${sel.length}</strong> ${sel.length===1?"questão selecionada":"questões selecionadas"}</div>
         </div>
@@ -4137,7 +4153,7 @@ function renderExercicios(){
         </div>
       </div>
     </div>
-    ${sel.length?"":`<div class="ex-vazio">Selecione uma matéria ou ajuste os filtros para encontrar questões.</div>`}
+    ${sel.length?"":`<div class="ex-vazio">Escolha uma matéria, marque tópicos ou use um filtro de nível ou de histórico para montar a sessão.</div>`}
     ${exHistoricoHtml()}`;
 
   /* Depois de redesenhar, reaplica o texto da busca sobre as linhas novas e
@@ -4315,19 +4331,18 @@ function exProxima(){
   _exSessao.i++; _exSessao.verComentario=false; _exSessao.selecao=null;
   renderExercicioRun(); window.scrollTo(0,0);
 }
-/* Refazer a revisão ou o simulado inteiro, do fim da sessão. Reaproveita a
-   quantidade por tópico que o aluno escolheu, porque o campo que a informa
-   vive na página de Revisões e não existe aqui. */
+/* Refazer a revisão ou o simulado inteiro, do fim da sessão. Os três
+   formatos são montados pelo sistema, então refazer é um novo sorteio
+   com o mesmo bloco, sem nada para perguntar ao aluno. */
 function exRefazerAtividade(){
   const r=_exSessao&&_exSessao.revisao;
   if(!r) return;
-  const qtd=r.qtd;
   _exSessao=null;
   if(r.tipo==="mini") return iniciarSimulado(miniBloco(r.key));
   if(r.tipo==="geral") return iniciarSimulado(rgBloco(r.key));
   const bloco=buildBlocosRevisao().find(b=>b.num===r.num);
   if(!bloco) return navTo("revisoes");
-  iniciarBlocoQuestoes(bloco,qtd);
+  iniciarBlocoQuestoes(bloco);
 }
 function exRefazerErradas(){
   const erradas=_exSessao.itens.filter(it=>{
@@ -5101,7 +5116,7 @@ function renderExerciciosSection(){
      auto-open que readicionava as revisões disponíveis ao conjunto a cada
      render; como fechar um cartão dispara render, ele reabria sozinho e o
      aluno não conseguia fechá-lo. */
-  let html=`<div style="display:flex;gap:.6rem;align-items:flex-start;background:#EFF6FF;border:1px solid #DBEAFE;border-radius:12px;padding:.7rem .9rem;margin-bottom:1rem;font-size:.8rem;color:#1E40AF;line-height:1.55"><span style="flex-shrink:0">💡</span><span><strong>Como usar:</strong> cada ciclo lista os tópicos que você estudou. As ★ mostram a confiança que você registrou na época. Defina a quantidade por tópico para gerar uma revisão com questões destes tópicos e receber sua nota. Você também pode praticar no seu material e marcar ✅ ao concluir. Se sua segurança mudou, reavalie o tópico no <strong>Retorno Técnico</strong> do cronograma.</span></div>`;
+  let html=`<div style="display:flex;gap:.6rem;align-items:flex-start;background:#EFF6FF;border:1px solid #DBEAFE;border-radius:12px;padding:.7rem .9rem;margin-bottom:1rem;font-size:.8rem;color:#1E40AF;line-height:1.55"><span style="flex-shrink:0">💡</span><span><strong>Como usar:</strong> cada ciclo lista os tópicos que você estudou. As ★ mostram a confiança que você registrou na época. Gerar a revisão sorteia questões destes tópicos e devolve sua nota. Você também pode praticar no seu material e marcar ✅ ao concluir. Se sua segurança mudou, reavalie o tópico no <strong>Retorno Técnico</strong> do cronograma.</span></div>`;
   if(!blocos.some(b=>b.estado!=="futura")){
     html+=`<div class="rev-bloqueio-topo">🔒 <strong>Nenhuma revisão liberada ainda.</strong> Cada revisão abre quando você conclui e avalia, no Cronograma, todos os conteúdos do ciclo dela. Enquanto isso ela fica aqui, mostrando o que falta.</div>`;
   }
@@ -5502,14 +5517,59 @@ function revResultadoHtml(r){
     <p>${esc(r.acertos)} de ${esc(r.total)} acertos · ${esc(r.dia)}</p>
     <ul>${(r.materias||[]).map(m=>`<li>${esc(m.mat)}: ${esc(m.acertos)} / ${esc(m.total)} acertos (${esc(m.pct)}%)</li>`).join("")}</ul></div>`;
 }
+/* ── REVISÃO: quem monta a sessão é o sistema ───────────────
+   O campo "quantas questões por tópico" saiu em 20/09/2026. Ele pedia ao
+   aluno uma decisão que ele não tinha como tomar: o número certo depende
+   de quantos tópicos o ciclo tem e de quanto banco existe em cada um, e
+   nenhuma das duas coisas aparece antes da escolha. O preço de errar era
+   um toast recusando a sessão e a conta refeita à mão.
+   Vale agora a mesma regra do simulado: rodízio entre os tópicos até o
+   limite do formato, com a tela dizendo o tamanho antes de começar. */
+/* UMA QUESTAO POR TOPICO, e o tamanho da sessao sai disso.
+
+   Nao ha teto. Teto redondo sempre cortava alguem, e corte em revisao e
+   promessa quebrada: o aluno estudou aquele topico no ciclo e espera ver
+   questao dele. Com uma por topico, o tamanho da revisao e o tamanho do
+   proprio ciclo, e toda materia entra por consequencia, sem regra extra.
+   Topico sem banco publicado fica de fora e a lista abaixo do botao diz
+   isso por escrito, em vez de sumir em silencio. */
+function revPlano(bloco){
+  const grupos=revTopicos(bloco);
+  const comBanco=grupos.filter(g=>g.itens.length);
+  const materias=new Set(comBanco.map(g=>g.mat||""));
+  return {grupos:grupos,materias:materias.size,topicos:comBanco.length,total:comBanco.length};
+}
+/* A escolha dentro do topico prefere o que o aluno ainda nao respondeu.
+   E isso que faz o refazer valer a pena: a segunda tentativa pega outra
+   questao sem precisar guardar nada de novo, porque quem decide e o
+   historico por questao que o app ja mantem. Banco do topico esgotado
+   volta a repetir, comecando pela que ficou mais tempo sem cair, porque
+   repetir e melhor do que deixar o topico de fora. */
+function _escolherPorTopico(grupos){
+  const status=(typeof statusQuestao==="function")?statusQuestao:()=>null;
+  const out=[];
+  grupos.forEach(g=>{
+    if(!g.itens.length) return;
+    const frescas=[],vistas=[];
+    g.itens.forEach(it=>{
+      const h=status(it.q.id);
+      if(h&&h.n) vistas.push({it:it,h:h}); else frescas.push(it);
+    });
+    if(frescas.length){ out.push(_embaralhar(frescas)[0]); return; }
+    const ord=_embaralhar(vistas).sort((a,b)=>
+      ((a.h.n||0)-(b.h.n||0))||String(a.h.ultima||"").localeCompare(String(b.h.ultima||"")));
+    out.push(ord[0].it);
+  });
+  return _embaralhar(out);
+}
 function revConfiguracaoHtml(bloco){
   const resultado=revResultadoHtml((STATE.revisoesResultados||{})[revResultadoId(bloco)]);
   if(bloco.isFutura||!bloco.topicos.length) return resultado;
-  const materias=revTopicos(bloco),tem= materias.some(m=>m.itens.length);
-  return `${resultado}<section class="rev-questoes" aria-label="Configurar questões da revisão">
+  const plano=revPlano(bloco),materias=plano.grupos,tem=plano.total>0;
+  return `${resultado}<section class="rev-questoes" aria-label="Questões da revisão">
     <h3>Praticar esta revisão</h3>
-    <div class="rev-quantidade"><label for="rev-q-${esc(bloco.num)}">Quantas questões por tópico?<small>O número informado vale para cada tópico com questões disponíveis. Exemplo: 2 em três tópicos gera 6 questões.</small></label>
-      <input class="form-input" id="rev-q-${esc(bloco.num)}" type="number" min="1" step="1" placeholder="Ex.: 1"${tem?"":" disabled"}></div>
+    ${tem?`<p class="rev-sorteio">Esta revisão tem <strong>${esc(plano.total)} ${plano.total===1?"questão":"questões"}</strong>, uma de cada ${plano.total===1?"tópico do ciclo com banco publicado":"um dos "+esc(plano.total)+" tópicos do ciclo com banco publicado"}${plano.materias>1?", nas "+esc(plano.materias)+" matérias que você estudou":""}.</p>
+    <p class="rev-nota">Toda matéria que você estudou no ciclo entra aqui, com uma questão por tópico. Uma questão toca um ponto do assunto, e não o assunto inteiro, então a revisão mostra onde a memória está firme e onde ficou frouxa, sem substituir a leitura. Quando uma questão apontar um tópico inseguro, volte ao conteúdo dele antes de seguir, quantas vezes precisar. Reler faz parte da revisão. Ao refazer, você recebe questões diferentes das que já respondeu, enquanto houver banco no tópico.</p>`:""}
     <p>Tópicos desta revisão:</p><ul class="rev-disponibilidade">${materias.map(m=>`<li>${esc(m.top)} <small>(${esc(m.mat)})</small>: ${esc(m.itens.length)} questões disponíveis${m.itens.length?"":" (não entra na sessão)"}</li>`).join("")}</ul>
     <button class="ex-btn" type="button" data-action="revIniciarQuestoes" data-num="${esc(bloco.num)}"${tem?"":" disabled"}>${resultado?"↻ Refazer a revisão":"Gerar revisão"}</button>
     <p class="rev-ajuda">${tem?"Questões embaralhadas, sem repetição na sessão. Ao responder todas, a nota é salva, os tópicos abaixo são marcados como revisados e o dia entra no histórico do cronograma. Você pode marcar ou desmarcar um tópico à mão quando quiser. Refazer substitui a nota anterior.":"Ainda não há questões publicadas para os tópicos desta revisão. Você pode continuar usando seu material e marcar os tópicos à mão."}</p>
@@ -5520,27 +5580,16 @@ function revIniciarQuestoes(num){
   if(!bloco||bloco.isFutura) return;
   iniciarBlocoQuestoes(bloco);
 }
-function iniciarBlocoQuestoes(bloco,qtd){
-  const num=bloco.num;
-  const materias=revTopicos(bloco),itens=[],vistos=new Set();
-  const campo=document.getElementById("rev-q-"+num);
-  const n=Number(qtd!=null?qtd:(campo?campo.value:0));
-  if(!Number.isSafeInteger(n)||n<1){showToast("Informe quantas questões por tópico: um número inteiro maior que zero.");if(campo) campo.focus();return;}
+function iniciarBlocoQuestoes(bloco){
+  const plano=revPlano(bloco);
+  if(!plano.total){showToast("Não há questões disponíveis para esta revisão.");return;}
   if(!_confirmarRefazer(bloco)) return;
-  for(const m of materias){
-    if(!m.itens.length) continue;
-    if(n>m.itens.length){
-      showToast("O tópico "+m.top+" tem apenas "+m.itens.length+" questões disponíveis. Reduza a quantidade por tópico.");if(campo) campo.focus();return;
-    }
-    const escolhidos=_embaralhar(m.itens.filter(it=>!vistos.has(it.q.id))).slice(0,n);
-    if(escolhidos.length<n){ showToast("Há questões repetidas entre tópicos. Reduza a quantidade solicitada para "+m.top+"."); return; }
-    escolhidos.forEach(it=>{vistos.add(it.q.id);itens.push(it);});
-  }
-  if(!itens.length){showToast("Não há questões disponíveis para esta revisão.");return;}
   if(_exSessao&&!confirm("Iniciar esta atividade substituirá a sessão de exercícios em andamento. Continuar?")) return;
-  _exSessao={itens:_embaralhar(itens),i:0,respostas:{},verComentario:false,
+  /* Uma questão por tópico do ciclo, preferindo as que ele ainda não
+     respondeu, para o refazer não devolver a mesma prova. */
+  _exSessao={itens:_escolherPorTopico(plano.grupos),i:0,respostas:{},verComentario:false,
     revisao:{id:revResultadoId(bloco),num:bloco.num,tipo:bloco.tipo||"revisao",key:bloco.key,
-             topKeys:_topKeysDoBloco(bloco),qtd:n}};
+             topKeys:_topKeysDoBloco(bloco)}};
   navTo("exercicios"); window.scrollTo(0,0);
 }
 
@@ -5656,21 +5705,47 @@ function miniBloco(key){
   return {tipo:"mini",num:key,key,topicos:_simFiltrarEstudados(info.topicos),isFutura:futura};
 }
 /* ── SIMULADOS: quem monta a prova é o sistema ──────────────────────────
-   Na revisão o aluno escolhe quantas questões por tópico, e faz sentido:
-   ali ele treina assunto por assunto. No simulado não serve. São muitas
-   matérias de uma vez, e o que se treina não é o tópico, é o ritmo da
-   prova. Então o sistema sorteia: rodízio entre os tópicos, até o limite
+   A revisão e o simulado usam o mesmo sorteio, e o que muda é o limite e
+   o recorte: a revisão cobre o ciclo, o mini cobre os ciclos liberados e a
+   Revisão Geral cobre o edital. Em todos, o que se treina é o ritmo, e por
+   isso quem monta é o sistema: rodízio entre os tópicos, até o limite
    do formato. Banco menor que o limite não trava nada, entra o que existe
    e a tela diz o número antes de começar, porque o aluno precisa saber o
    tamanho da prova para se organizar. */
 const SIM_LIMITE={mini:30,geral:50};
 const SIM_MIN_POR_QUESTAO=2;
 
-/* Rodízio: uma questão de cada tópico por vez, na ordem embaralhada dos
-   tópicos. Sem isso, um tópico com banco grande abocanha a prova inteira
-   e outro com três questões nunca aparece. */
+/* A ORDEM DA FILA É QUEM GARANTE A MATÉRIA NA SESSÃO.
+
+   Corrigido em 20/09/2026. O rodízio por tópico já impedia que um tópico
+   de banco grande abocanhasse a sessão. Só que, passando do limite do
+   formato, os tópicos do fim da fila eram cortados, e a fila vinha
+   embaralhada: matéria com dois tópicos podia cair inteira por azar
+   enquanto a de quinze ficava com a sessão toda. Quem estudou uma matéria
+   espera ver questão dela, e o corte por acaso quebrava essa promessa.
+
+   O conserto foi na ordem, não no rodízio: as filas são intercaladas por
+   matéria antes de começar, então as primeiras vagas cobrem uma matéria
+   de cada vez, e só depois vem o segundo tópico de qualquer uma. Toda
+   matéria entra, e daí para frente a divisão volta a ser proporcional ao
+   número de tópicos, que é como o aluno gastou o tempo dele. Rotacionar
+   por matéria até o fim seria pior: daria metade da sessão à matéria de
+   um dia só, num ciclo em que ele passou quatro dias na outra. */
+function _intercalarPorMateria(grupos){
+  const porMat=new Map();
+  _embaralhar(grupos).forEach(g=>{
+    const k=g.mat||"";
+    if(!porMat.has(k)) porMat.set(k,[]);
+    porMat.get(k).push(g);
+  });
+  const listas=[...porMat.values()],out=[];
+  for(let i=0;listas.some(l=>l.length>i);i++)
+    for(const l of listas) if(l[i]) out.push(l[i]);
+  return out;
+}
 function _simSortear(grupos,limite){
-  const filas=_embaralhar(grupos.filter(g=>g.itens.length)).map(g=>_embaralhar(g.itens.slice()));
+  const filas=_intercalarPorMateria(grupos.filter(g=>g.itens.length))
+                .map(g=>_embaralhar(g.itens.slice()));
   const vistos=new Set(),out=[];
   let rodouAlgo=true;
   while(rodouAlgo&&out.length<limite){
