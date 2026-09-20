@@ -1,5 +1,5 @@
 /* GERADO por outputs/questoes_para_js.py. NAO editar a mao.
-   Fonte: _conteudo/cpror/questoes/**.yaml  ·  585 questoes em 66 topicos
+   Fonte: _conteudo/cpror/questoes/**.yaml  ·  665 questoes em 74 topicos
    Para mudar uma questao, edite o YAML e rode o script de novo. */
 window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
  "cproRAnbima": {
@@ -9545,6 +9545,579 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "gabarito": "a"
     }
    ],
+   "Renda fixa: tributação e comparação de rentabilidade líquida": [
+    {
+     "id": "cpror-inv-11-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A tabela regressiva usa 22,5% até 180 dias, 20% de 181 a 360 dias, 17,5% de 361 a 720 dias e 15% acima de 720 dias. O período relevante vai da aplicação ou aquisição até o evento tributável.</p><p>A alternativa B reduz indevidamente as quatro alíquotas. A alternativa C usa o vencimento original em vez do tempo efetivo aplicado. A alternativa A relaciona a alíquota ao prazo do emissor e ignora alienação, resgate, liquidação ou pagamento ocorrido antes.</p><p>Regra de bolso: conte os dias efetivamente aplicados até o evento tributável e só então escolha a faixa.</p>",
+     "enunciado": "<p>Ao orientar um cliente sobre a tabela regressiva da renda fixa, uma analista precisa relacionar o tempo efetivo da aplicação à alíquota de Imposto de Renda. Identifique a associação correta.</p>",
+     "alternativas": {
+      "a": "O prazo do emissor define a alíquota: cada título conserva a mesma tributação até o vencimento, ainda que seja alienado antes.",
+      "b": "Até 180 dias aplica-se 20%; de 181 a 360, 17,5%; de 361 a 720, 15%; acima de 720 dias, 10%.",
+      "c": "O vencimento original define a alíquota: papéis emitidos por prazo acima de 720 dias usam 15% desde a aquisição.",
+      "d": "Até 180 dias aplica-se 22,5%; de 181 a 360, 20%; de 361 a 720, 17,5%; acima de 720 dias, 15%."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-11-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Para pessoa física, LCI, LCA, LCD, CRI, CRA e debênture incentivada elegível da Lei 12.431 estão entre os rendimentos favorecidos descritos na aula. É necessário confirmar instrumento, lei e requisitos.</p><p>A alternativa A troca títulos tributados e favorecidos. A alternativa C inverte os beneficiários das Leis 12.431 e 14.801. A alternativa D usa a palavra infraestrutura como prova suficiente e ignora a família jurídica da emissão.</p><p>Regra de bolso: Lei 12.431 pode favorecer quem compra; Lei 14.801 favorece quem emite.</p>",
+     "enunciado": "<p>Uma cliente pessoa física compara títulos bancários, securitizados e corporativos. Identifique o tratamento tributário compatível com os instrumentos e com as duas famílias de debêntures ligadas à infraestrutura.</p>",
+     "alternativas": {
+      "a": "CDB, RDB e debênture comum têm alíquota zero para pessoa física, enquanto LCI, LCA, CRI e CRA seguem a tabela regressiva.",
+      "b": "LCI, LCA, LCD, CRI e CRA têm benefício para pessoa física; debênture incentivada da Lei 12.431 pode ter alíquota zero.",
+      "c": "Debênture de infraestrutura da Lei 14.801 isenta a pessoa física, enquanto a Lei 12.431 concede benefício fiscal somente ao emissor.",
+      "d": "A palavra infraestrutura assegura isenção ao investidor pessoa física, independentemente da lei indicada e dos requisitos da emissão."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-11-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O rendimento bruto é R$ 60.000 x 12% = R$ 7.200. Aos 500 dias, aplica-se 17,5%: o IR é R$ 7.200 x 17,5% = R$ 1.260. O rendimento líquido é R$ 5.940 e o recebimento total é R$ 65.940.</p><p>A alternativa A aplica 17,5% ao principal e subtrai R$ 10.500 do valor bruto de R$ 67.200. A alternativa B calcula 15% sobre R$ 7.200 por usar o vencimento original. A alternativa C calcula 20% sobre R$ 7.200, como se o prazo estivesse entre 181 e 360 dias.</p><p>Regra de bolso: determine a faixa pelo prazo efetivo e aplique o IR somente ao rendimento.</p>",
+     "enunciado": "<p>Em Porto Velho, a engenheira Clara aplica R$ 60.000 em uma debênture comum e vende o título depois de 500 dias. No período, o rendimento bruto acumulado é de 12% sobre o principal, sem IOF nem outros custos. A instituição responsável fará a retenção na fonte no momento da alienação e entregará o informe para a declaração anual. O demonstrativo separa o principal aplicado do rendimento acumulado e indica a data exata da aquisição. Clara acredita que o imposto incide sobre os R$ 60.000 e também considera usar 15% porque o vencimento original da debênture ocorreria depois de cinco anos. Ela deseja saber quanto entrará em sua conta na liquidação. A operação é de pessoa física e não possui benefício fiscal específico. Calcule o IR, o rendimento líquido e o valor líquido recebido.</p>",
+     "alternativas": {
+      "a": "IR de R$ 10.500, rendimento líquido negativo de R$ 3.300 e recebimento de R$ 56.700, aplicando 17,5% ao principal.",
+      "b": "IR de R$ 1.080, rendimento líquido de R$ 6.120 e recebimento de R$ 66.120, usando 15% pelo vencimento original.",
+      "c": "IR de R$ 1.440, rendimento líquido de R$ 5.760 e recebimento de R$ 65.760, usando 20% sobre o rendimento bruto.",
+      "d": "IR de R$ 1.260, rendimento líquido de R$ 5.940 e recebimento de R$ 65.940, usando 17,5% sobre o rendimento."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-11-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. O IOF é R$ 1.200 x 33% = R$ 396. Restam R$ 804 como base do IR. O imposto é R$ 804 x 22,5% = R$ 180,90. O rendimento líquido é R$ 623,10 e o resgate soma R$ 40.623,10.</p><p>A alternativa B calcula IR de R$ 270 e IOF de R$ 396 separadamente sobre os R$ 1.200. A alternativa A desconta o IOF, mas mantém R$ 1.200 como base do IR e chega ao mesmo líquido incorreto. A alternativa D calcula o IOF e elimina a incidência posterior do IR.</p><p>Regra de bolso: em resgate antes de 30 dias, retire o IOF do rendimento e aplique o IR sobre o que restou.</p>",
+     "enunciado": "<p>O empresário Daniel resgata um CDB depois de 20 dias para pagar uma despesa da empresa. O principal aplicado foi de R$ 40.000, e o rendimento bruto apurado no período é de R$ 1.200. Para esse dia, a tabela informada na operação indica IOF de 33% sobre o rendimento. A alíquota de IR é de 22,5%. Não existem tarifas adicionais. Daniel pede ao gerente que calcule primeiro o IR sobre os R$ 1.200 e desconte o IOF depois, pois acredita que a ordem não altera o resultado. O extrato prévio apresenta campos separados para principal, rendimento, IOF e IR, e o crédito ocorrerá na mesma conta cadastrada. A instituição fará as duas retenções no resgate, sem recolhimento posterior pelo cliente. Calcule IOF, base do IR, IR, rendimento líquido e valor final.</p>",
+     "alternativas": {
+      "a": "IOF de R$ 396, base de IR de R$ 1.200, IR de R$ 270, rendimento líquido de R$ 534 e valor final de R$ 40.534.",
+      "b": "IR de R$ 270 e IOF de R$ 396 sobre o rendimento bruto, com rendimento líquido de R$ 534 e valor final de R$ 40.534.",
+      "c": "IOF de R$ 396, base de IR de R$ 804, IR de R$ 180,90, rendimento líquido de R$ 623,10 e valor final de R$ 40.623,10.",
+      "d": "IOF de R$ 396, sem incidência de IR após o primeiro tributo, com rendimento líquido de R$ 804 e valor final de R$ 40.804."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-11-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Aos 500 dias, a alíquota é 17,5%. A parcela líquida é 1 - 0,175 = 0,825. Portanto, 108% do CDI x 0,825 = 89,10% do CDI, sem afirmar qual será o valor futuro do indexador.</p><p>A alternativa B subtrai 17,5 pontos de 108% e chega a 90,50%, em vez de aplicar a alíquota ao rendimento. A alternativa C usa 15% pelo vencimento original e calcula 108% x 0,85 = 91,80%. A alternativa D soma o imposto à taxa e calcula 108% x 1,175 = 126,90%.</p><p>Regra de bolso: taxa líquida tributada é taxa bruta multiplicada por um menos a alíquota.</p>",
+     "enunciado": "<p>A analista Priscila compara para um cliente pessoa física um CDB que paga 108% do CDI e uma alternativa isenta baseada no mesmo indexador. O cliente pretende aplicar R$ 85.000, e o CDB será mantido por 500 dias, sem IOF, tarifas ou pagamentos intermediários. As duas taxas se referem ao mesmo período e à mesma base de remuneração. O material apresenta a remuneração do CDB como percentual bruto do indexador e informa retenção no resgate. O cliente acredita que basta subtrair 17,5 pontos percentuais de 108% e também cogita usar 15% porque o CDB vence depois de 720 dias. A data planejada para o resgate permanece no dia 500, e a comparação solicitada deve ficar expressa como percentual do CDI. Calcule a remuneração líquida equivalente do CDB.</p>",
+     "alternativas": {
+      "a": "89,10% do CDI, calculados por 108% x 0,825, pois a alíquota de 17,5% incide sobre o rendimento no prazo de 500 dias.",
+      "b": "90,50% do CDI, calculados por 108% menos 17,5 pontos percentuais, tratando a alíquota como parcela direta do indexador.",
+      "c": "91,80% do CDI, calculados por 108% x 0,85, usando 15% conforme o vencimento original superior a 720 dias.",
+      "d": "126,90% do CDI, calculados por 108% x 1,175, incorporando o imposto à taxa para preservar o rendimento contratado."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-11-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A taxa bruta equivalente é 91% / (1 - 0,175) = 91% / 0,825 = aproximadamente 110,30% do CDI. Aplicando 17,5% ao rendimento dessa taxa, o resultado líquido empata com os 91% isentos.</p><p>A alternativa C multiplica 91% por 1,175 e chega a 106,93%, taxa insuficiente depois do IR. A alternativa B divide por 0,85 e encontra 107,06% ao usar 15%. A alternativa D divide por 0,80 e encontra 113,75% ao usar 20%.</p><p>Regra de bolso: taxa bruta equivalente é taxa isenta dividida por um menos a alíquota.</p>",
+     "enunciado": "<p>Em uma reunião em Londrina, a gerente Tânia compara uma LCI isenta que paga 91% do CDI com CDBs sujeitos à tabela regressiva. O cliente é pessoa física, aplicará R$ 70.000, manterá o investimento por 500 dias e não terá IOF, tarifas nem fluxos intermediários. As alternativas acompanham o mesmo CDI no mesmo período e serão resgatadas na data planejada, com crédito na conta cadastrada. Três bancos oferecem CDBs com percentuais brutos distintos, e o cliente quer descobrir o ponto exato de empate antes de compará-los. Ele propõe multiplicar 91% por 1,175 para obter esse percentual. Tânia registra que a alíquota aplicável é 17,5% e que a taxa tributada precisa produzir 91% depois da retenção. Calcule a taxa bruta equivalente do CDB.</p>",
+     "alternativas": {
+      "a": "110,30% do CDI, obtidos por 91% / 0,825, para que a retenção de 17,5% deixe 91% do CDI líquidos.",
+      "b": "107,06% do CDI, obtidos por 91% / 0,85, usando a parcela líquida correspondente à alíquota de 15%.",
+      "c": "106,93% do CDI, obtidos por 91% x 1,175, acrescentando a alíquota de 17,5% à remuneração isenta.",
+      "d": "113,75% do CDI, obtidos por 91% / 0,80, usando a parcela líquida da faixa de 20% no prazo informado."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-11-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. No dia 360, 110% x 0,80 = 88% do CDI, 2,5 pontos abaixo da LCI. No dia 361, 110% x 0,825 = 90,75% do CDI, 0,25 ponto acima dos 90,5% da LCI. A conclusão muda ao cruzar a faixa.</p><p>A alternativa A troca os resultados dos dois dias. A alternativa B mantém 17,5% nos dois cenários e ignora a faixa de 20% no dia 360. A alternativa D calcula 110% x 0,80 = 88% nos dois dias e deixa de aplicar a faixa de 17,5% no dia 361.</p><p>Regra de bolso: nas fronteiras da tabela, refaça a conta com a alíquota correspondente ao dia efetivo.</p>",
+     "enunciado": "<p>O planejador Ícaro compara uma LCI de 90,5% do CDI com um CDB de 110% do CDI para a cliente Brena, que aplicará R$ 95.000. Os produtos usam o mesmo indexador, não possuem IOF, custos ou pagamentos intermediários e serão resgatados na mesma data em cada cenário. Brena ainda decide se usará o dinheiro no dia 360 ou no dia 361 e afirma que um único dia não pode inverter a escolha. O compromisso pode ser pago em qualquer dessas datas, e os contratos permitem o resgate nos dois momentos. No primeiro cenário, o CDB está sujeito a 20%; no segundo, a 17,5%. A LCI permanece isenta para a pessoa física. Brena insiste em manter a mesma decisão nos dois cenários por causa das taxas brutas. Calcule a taxa líquida do CDB nos dois dias e compare-a com a LCI.</p>",
+     "alternativas": {
+      "a": "No dia 360, o CDB rende 90,75% do CDI; no dia 361, rende 88%; a LCI perde no primeiro cenário e ganha no segundo.",
+      "b": "Nos dois dias, o CDB rende 90,75% do CDI, porque o vencimento e o indexador permanecem iguais quando o prazo cruza a faixa.",
+      "c": "No dia 360, o CDB rende 88% do CDI e a LCI ganha por 2,5 pontos; no dia 361, o CDB rende 90,75% e ganha por 0,25 ponto.",
+      "d": "Nos dias 360 e 361, o CDB rende 88% do CDI, aplicando 20% nos dois cenários; a LCI ganha por 2,5 pontos em ambos."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-11-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. O dia 180 ainda pertence à faixa de 22,5%: R$ 2.000 x 22,5% = R$ 450, deixando R$ 1.550. O dia 721 está acima de 720 dias: R$ 2.000 x 15% = R$ 300, deixando R$ 1.700.</p><p>A alternativa A usa 20% no dia 180 e calcula R$ 400 de IR. A alternativa C usa 15% nos dois cupons por olhar o vencimento final. A alternativa D usa 22,5% nos dois eventos e ignora o tempo transcorrido até o segundo pagamento.</p><p>Regra de bolso: em cada cupom, conte o prazo da aquisição até aquele pagamento e retenha pela faixa encontrada.</p>",
+     "enunciado": "<p>Uma nota comercial tributada paga dois cupons brutos de R$ 2.000 à pessoa física. O primeiro é creditado exatamente no dia 180 após a aquisição, e o segundo, no dia 721. Não há IOF ou outros custos. A instituição fará a retenção em cada pagamento e entregará os valores líquidos na conta de André. O cronograma da emissão mostra outras datas, mas a questão apresentada pelo cliente envolve apenas esses dois eventos. O investidor argumenta que os dois cupons devem usar 15% porque o vencimento final do título ocorre depois de três anos. O informe separará cada pagamento, sua retenção e o tempo transcorrido desde a aquisição. André pretende conferir os dois créditos individualmente. Calcule o IR e o valor líquido de cada cupom conforme as faixas aplicáveis.</p>",
+     "alternativas": {
+      "a": "Primeiro cupom: IR de R$ 400 e líquido de R$ 1.600; segundo: IR de R$ 300 e líquido de R$ 1.700.",
+      "b": "Primeiro cupom: IR de R$ 450 e líquido de R$ 1.550; segundo: IR de R$ 300 e líquido de R$ 1.700.",
+      "c": "Primeiro e segundo cupons: IR de R$ 300 e líquido de R$ 1.700 em cada pagamento, conforme o vencimento final.",
+      "d": "Primeiro e segundo cupons: IR de R$ 450 e líquido de R$ 1.550 em cada pagamento, conforme a data da aquisição."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-11-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Na comum, R$ 13.200 x 17,5% = R$ 2.310 de IR, restando R$ 10.890 e valor final de R$ 110.890. A incentivada gera R$ 11.000 e R$ 111.000 finais, R$ 110 a mais. A taxa de equilíbrio é 11% / 0,825 = 13,33%.</p><p>A alternativa D compara os R$ 13.200 brutos com R$ 11.000 e ignora o IR. A alternativa B aplica R$ 17.500 de imposto ao principal, deixando R$ 95.700 na comum e diferença de R$ 15.300. A alternativa C usa 15%: a comum fica com R$ 11.220, ganha R$ 220 e a equivalência vira 11% / 0,85 = 12,94%.</p><p>Regra de bolso: compare os rendimentos líquidos e divida a taxa isenta pela parcela líquida para achar o empate bruto.</p>",
+     "enunciado": "<p>A arquiteta Lívia investirá R$ 100.000 por 500 dias e compara duas debêntures com riscos, fluxos e demais condições já avaliados separadamente. A debênture comum rende 13,2% no período e segue a tabela regressiva. A incentivada elegível da Lei 12.431 rende 11% no mesmo período, com alíquota zero para pessoa física. Não há IOF, custos adicionais ou pagamentos intermediários, e os valores serão recebidos no fim do prazo. Lívia olha apenas as taxas brutas e afirma que a comum gera diferença favorável de R$ 2.200. O assessor apresentará o rendimento e o montante final de cada opção. Ele também quer saber a taxa bruta mínima da comum para empatar com os 11% isentos. Compare valores líquidos e calcule a taxa de equilíbrio.</p>",
+     "alternativas": {
+      "a": "A incentivada gera vantagem de R$ 110, e a comum precisa render cerca de 13,33% para empatar com os 11% isentos.",
+      "b": "A incentivada gera vantagem de R$ 15.300, e a taxa de equilíbrio é 13,33%, aplicando 17,5% sobre o principal da comum.",
+      "c": "A comum gera vantagem de R$ 220, e a taxa de equilíbrio é 12,94%, usando 15% pela duração original da emissão.",
+      "d": "A comum gera vantagem de R$ 2.200, e a taxa de equilíbrio é 11%, pois a comparação usa diretamente os rendimentos brutos."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-11-q10",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A equivalência isola o efeito do imposto quando taxas, período e base são comparáveis. Ela não corrige indexadores distintos, fluxos em datas diferentes, alíquota incompatível com o prazo efetivo, liquidez, crédito, mercado ou adequação ao objetivo.</p><p>A alternativa A atribui à fórmula a conversão de diferenças que ela não resolve. A alternativa C transforma isenção em indicação automática e apaga outras condições. A alternativa D usa o vencimento original para aplicar 15% a uma venda que pode ocorrer antes.</p><p>Regra de bolso: equalize as premissas para comparar o imposto e volte ao objetivo e aos riscos antes de indicar.</p>",
+     "enunciado": "<p>Em Florianópolis, o consultor Renato atende Marta, que compara uma LCI isenta prefixada por doze meses com uma debênture comum pós-fixada por três anos, sujeita a cupons semestrais e possível venda antes do vencimento. Ela pretende aplicar R$ 120.000. A cliente converte a taxa anual da debênture com a alíquota de 15% e conclui que ela supera a LCI. As propostas usam bases, indexadores, períodos e fluxos diferentes, e os documentos apresentam datas próprias para resgate e pagamento. Marta insiste em decidir pela equivalência tributária, embora possa precisar do dinheiro em dez meses e os títulos tenham condições distintas de liquidez, crédito e mercado. O valor será destinado à entrada de um imóvel se a compra ocorrer. Avalie o uso da comparação líquida na indicação.</p>",
+     "alternativas": {
+      "a": "A equivalência tributária decide a indicação, pois converte indexadores, períodos, cupons, liquidez e riscos para uma única taxa líquida.",
+      "b": "É preciso alinhar período, base, indexador, fluxos e alíquota efetiva; depois da conta, prazo, liquidez e riscos ainda orientam a indicação.",
+      "c": "A isenção torna a LCI indicada para qualquer prazo, porque risco de crédito, carência e vencimento deixam de afetar a comparação.",
+      "d": "A alíquota de 15% pode ser aplicada desde a compra da debênture, pois o vencimento original de três anos define a tributação da venda."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Debêntures: garantias, covenants e risco na recomendação": [
+    {
+     "id": "cpror-inv-12-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Entre as quatro espécies de debêntures, a ordem decrescente de preferência é garantia real, garantia flutuante, quirografária ou sem preferência e subordinada. Essa sequência compara as espécies, sem reproduzir a ordem completa de uma liquidação empresarial.</p><p>A alternativa A coloca a flutuante antes da real e troca as duas posições finais. A alternativa C leva a quirografária ao início da fila. A alternativa D inverte a ordem ao colocar a subordinada antes das demais espécies.</p><p>Regra de bolso: real, flutuante, quirografária e subordinada, da preferência para a posição residual.</p>",
+     "enunciado": "<p>Ao comparar as espécies de debêntures perante o patrimônio da emissora em uma liquidação, um analista precisa ordenar as posições por preferência. Identifique a sequência decrescente apresentada na aula.</p>",
+     "alternativas": {
+      "a": "Garantia flutuante, seguida de garantia real, subordinada e, por fim, quirografária ou sem preferência.",
+      "b": "Garantia real, seguida de garantia flutuante, quirografária ou sem preferência e, por fim, subordinada.",
+      "c": "Quirografária ou sem preferência, seguida de garantia real, garantia flutuante e, por fim, subordinada.",
+      "d": "Subordinada, seguida de quirografária ou sem preferência, garantia flutuante e, por fim, garantia real."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-12-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A garantia fidejussória é obrigação pessoal de terceiro e pode acompanhar qualquer espécie. A emissão continua quirografária perante o patrimônio da emissora, enquanto a fiança acrescenta outro devedor conforme os limites e condições contratados.</p><p>A alternativa A transforma garantia pessoal em garantia real. A alternativa C cria uma quinta espécie na ordem de preferência. A alternativa D confunde ausência de preferência com impossibilidade de receber garantia adicional.</p><p>Regra de bolso: a espécie define a posição na emissora; a fidejussória acrescenta um garantidor.</p>",
+     "enunciado": "<p>Uma escritura classifica a debênture como quirografária e acrescenta fiança do controlador. Compare a espécie da emissão com a garantia fidejussória adicional.</p>",
+     "alternativas": {
+      "a": "A fiança transforma a debênture em garantia real e concede preferência sobre os bens do controlador e da emissora.",
+      "b": "A emissão permanece quirografária perante a emissora, e a fiança acrescenta a cobrança do garantidor nas condições contratadas.",
+      "c": "A garantia fidejussória cria uma quinta posição depois da subordinada e antes dos acionistas na liquidação da emissora.",
+      "d": "A expressão quirografária impede garantia adicional, pois debênture sem preferência também é título sem possibilidade de garantia."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-12-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A garantia real vincula bem ou direito específico, mas sua recuperação depende de constituição, gravames, valor, venda, custos e execução. A flutuante concede privilégio geral sobre o ativo remanescente, cuja composição pode mudar durante a operação.</p><p>A alternativa A transforma garantia real em prevenção de inadimplência e congela indevidamente o ativo da flutuante. A alternativa B troca as características das duas garantias. A alternativa D usa valores da emissão para prometer pagamento e ignora desvalorização, gravame e execução.</p><p>Regra de bolso: garantia real aponta o ativo; garantia flutuante acompanha o patrimônio que restar.</p>",
+     "enunciado": "<p>Em Joinville, a planejadora Laura examina duas debêntures da Companhia Prisma. A primeira possui garantia real sobre máquinas avaliadas em R$ 140 milhões na emissão, mas os equipamentos são especializados, podem sofrer desvalorização e apresentam gravame anterior. A segunda tem garantia flutuante sobre o ativo da companhia, que continua comprando, vendendo e substituindo bens na atividade normal. Os laudos e balanços foram emitidos em datas diferentes. O cliente Bruno considera a palavra garantia suficiente para assegurar pagamento imediato e acredita que o patrimônio observado hoje permanecerá igual até uma eventual liquidação. Os documentos informam dívida de R$ 120 milhões em cada série. Compare a proteção das duas garantias.</p>",
+     "alternativas": {
+      "a": "A garantia real impede inadimplência pelo valor inicial das máquinas, e a flutuante congela os bens existentes até o vencimento.",
+      "b": "A flutuante vincula máquinas determinadas, enquanto a real permite à companhia negociar os bens protegidos durante a atividade normal.",
+      "c": "A real vincula ativos específicos, mas depende de valor e execução; a flutuante dá privilégio geral sobre o ativo remanescente e variável.",
+      "d": "As duas asseguram pagamento na data contratada porque R$ 140 milhões de ativos superam a dívida de R$ 120 milhões em cada série."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-12-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Garantias podem ser cumulativas, mas sua proteção depende de valor, prioridade, validade, execução e capacidade do garantidor. A correlação reduz a força de uma empresa do mesmo grupo. Debênture não possui cobertura do FGC.</p><p>A alternativa D usa a soma de garantias para criar cobertura do FGC. A alternativa B conta garantias e ignora liquidez e choque comum. A alternativa C transforma fiança em pagamento independente da situação financeira do garantidor.</p><p>Regra de bolso: conte a recuperação provável, não o número de garantias escrito na capa.</p>",
+     "enunciado": "<p>A empresária Simone recebe uma oferta de debênture com garantia real sobre dois imóveis e garantia fidejussória de outra empresa do grupo. Os imóveis possuem baixa procura e custos de execução, enquanto emissora e garantidora dependem do mesmo setor econômico. Um dos bens já possui gravame registrado, e a fiança estabelece valor e prazo próprios. O distribuidor destaca três proteções e afirma que a quantidade elimina perda e ainda permite cobertura do FGC. A escritura identifica a constituição das garantias, os limites da fiança e a ausência de seguro do fundo. Simone deseja manter 35% da carteira nesse papel pela taxa oferecida e não pretende analisar o patrimônio da garantidora. Avalie a suficiência das proteções e o risco comum entre as partes.</p>",
+     "alternativas": {
+      "a": "É preciso avaliar valor, execução, limites e correlação; garantias cumulativas não criam FGC nem asseguram recuperação suficiente.",
+      "b": "A quantidade de garantias assegura recuperação do saldo, ainda que os imóveis tenham baixa liquidez e o grupo sofra o mesmo choque.",
+      "c": "A fiança substitui a análise dos imóveis, porque a garantidora do grupo assume o pagamento sem depender de capacidade financeira própria.",
+      "d": "A combinação das garantias cria cobertura do FGC, pois imóveis e empresa do grupo formam proteção cumulativa para a debênture."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-12-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Covenants financeiros são indicadores medidos periodicamente. Obrigações de fazer ou não fazer são não financeiras. O cross default permite que inadimplemento de outra dívida relevante produza consequências nesta emissão, conforme os critérios contratados.</p><p>A alternativa B classifica obrigações de conduta como financeiras. A alternativa C transforma índices e cross default em garantias sobre bens. A alternativa D ignora os elementos necessários para interpretar e apurar o covenant.</p><p>Regra de bolso: indicador mede condição financeira; obrigação não financeira regula conduta; cross default conecta contratos.</p>",
+     "enunciado": "<p>A escritura da Companhia Vale Azul limita dívida líquida sobre EBITDA, exige cobertura mínima de juros e patrimônio líquido mínimo. Também obriga a manutenção de seguros, a entrega de demonstrações, a preservação de licenças e restringe venda de ativos relevantes. A apuração dos índices ocorre trimestralmente, enquanto seguros e licenças são acompanhados durante a vida da emissão. O investidor Heitor chama as cláusulas de garantias e entende que basta conferir o nome de cada indicador. O relatório informa que fórmulas, datas, demonstrações usadas, exceções e prazo de correção constam em anexos distintos. Há ainda cláusula que conecta inadimplemento de outra dívida relevante, acima do valor definido, à emissão. Classifique os covenants e a função do cross default.</p>",
+     "alternativas": {
+      "a": "Índices periódicos são covenants financeiros; condutas e restrições são não financeiras; cross default pode trazer consequência de outra dívida.",
+      "b": "Seguros, licenças e entrega de informações são covenants financeiros, pois preservam ativos e influenciam os indicadores da companhia.",
+      "c": "Dívida sobre EBITDA e cobertura de juros são garantias reais, enquanto cross default acrescenta um bem à execução da debênture.",
+      "d": "O nome do índice define seu cumprimento, dispensando fórmula, data, exceções e demonstrações previstas na escritura da emissão."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-12-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Dívida líquida sobre EBITDA = R$ 600 milhões / R$ 240 milhões = 2,50 vezes. Como o limite máximo é 3,0 vezes, o covenant foi atendido nessa data de apuração.</p><p>A alternativa A inverte a fórmula e calcula R$ 240 milhões / R$ 600 milhões = 0,40. A alternativa B substitui o cálculo pelo próprio limite de 3,0 vezes. A alternativa D divide a diferença de R$ 360 milhões por R$ 240 milhões, obtém 1,5 e soma indevidamente 2,5 para chegar a 4,0.</p><p>Regra de bolso: dívida líquida sobre EBITDA coloca a dívida no numerador e compara o resultado com o limite da escritura.</p>",
+     "enunciado": "<p>A Companhia Cedro possui covenant que limita dívida líquida sobre EBITDA a 3,0 vezes. Na data de apuração, a dívida líquida definida pela escritura é de R$ 600 milhões e o EBITDA calculado pelas mesmas regras é de R$ 240 milhões. O contrato determina a divisão da dívida líquida pelo EBITDA, prevê apuração trimestral e não apresenta exclusão aplicável aos valores informados. No trimestre anterior, o índice também havia ficado dentro do limite. A diretora Marta acredita que o indicador é obtido invertendo os valores e que qualquer resultado abaixo de 1,0 comprova ampla margem. O agente fiduciário recebeu as demonstrações, a memória de cálculo e as datas de referência e deverá informar o resultado aos debenturistas. Calcule o índice e indique a situação perante o limite.</p>",
+     "alternativas": {
+      "a": "0,40 vez, calculada por R$ 240 milhões / R$ 600 milhões; o limite foi atendido porque o resultado ficou abaixo de 1,0.",
+      "b": "3,00 vezes, calculadas pela adoção direta do limite contratual quando a dívida líquida supera o EBITDA do período.",
+      "c": "2,50 vezes, calculadas por R$ 600 milhões / R$ 240 milhões; o limite de 3,0 vezes foi atendido na data.",
+      "d": "4,00 vezes, calculadas pela diferença de R$ 360 milhões dividida pelo EBITDA de R$ 240 milhões e acrescida de 2,5."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-12-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. R$ 540 milhões / R$ 180 milhões = 3,00 vezes, resultado 0,25 acima do limite de 2,75. Com prazo de correção e vencimento não automático, a consequência segue a escritura e a deliberação. Waiver dispensa a consequência definida, mas não apaga a deterioração.</p><p>A alternativa B inverte a fórmula e chega a 0,33. A alternativa C transforma o teto de 2,75 no resultado apurado. A alternativa D calcula 3,00 corretamente, mas usa o caráter não automático para considerar cumprido um limite ultrapassado.</p><p>Regra de bolso: calcule primeiro, confira prazo de cura e depois leia quem decide a consequência do descumprimento.</p>",
+     "enunciado": "<p>No trimestre seguinte, a Companhia Cedro mantém dívida líquida de R$ 540 milhões, mas o EBITDA definido pela escritura cai para R$ 180 milhões. O covenant estabelece limite de 2,75 vezes e a documentação prevê prazo de correção antes de eventual vencimento não automático. Não existe exceção aplicável aos valores do período, e a companhia dispõe de quinze dias para apresentar seu plano. A assembleia poderá declarar o vencimento ou conceder waiver com condições. A companhia pede dispensa temporária e oferece reforço de garantia e redução de prazo. O investidor Rui afirma que o índice continua em 2,75 porque esse é o teto contratual e que o waiver apagará a deterioração do trimestre. O agente fiduciário enviou a memória de cálculo junto à convocação. Calcule o indicador e avalie os passos previstos.</p>",
+     "alternativas": {
+      "a": "O índice é 3,00 vezes e supera o limite em 0,25; após o prazo, a decisão pode envolver vencimento ou waiver sem apagar a deterioração.",
+      "b": "O índice é 0,33 vez por R$ 180 milhões / R$ 540 milhões, e o limite foi atendido porque o resultado está abaixo de 2,75.",
+      "c": "O índice é 2,75 vezes por definição contratual, e a companhia pode substituir o resultado apurado pelo teto durante o prazo de correção.",
+      "d": "O índice é 3,00 vezes e atende ao limite porque o vencimento não automático permite desconsiderar a fórmula até a assembleia."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-12-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. O agente fiduciário representa a comunhão, acompanha obrigações, informa e atua na proteção dos direitos, sem garantir pagamento. No evento não automático, a assembleia pode deliberar vencimento ou waiver, inclusive condicionado, conforme escritura e quóruns.</p><p>A alternativa A transforma o agente em garantidor e decisor isolado. A alternativa C trata cross default como cancelamento favorável à emissora. A alternativa D elimina a consequência contratual por o inadimplemento ter ocorrido em outra dívida.</p><p>Regra de bolso: agente representa e executa atribuições; decisões coletivas seguem escritura, assembleia e quórum.</p>",
+     "enunciado": "<p>A Companhia Norte deixa de pagar uma dívida bancária acima do valor mínimo previsto no cross default de suas debêntures. A escritura classifica esse evento como vencimento não automático e determina convocação de assembleia. O banco credor já notificou a companhia, e o evento foi comunicado ao mercado. O agente fiduciário informa os titulares, apresenta os documentos e indica as medidas previstas. A emissora solicita waiver condicionado a novo seguro e reforço de garantia, alegando que acelerar várias dívidas ao mesmo tempo agravaria a falta de caixa. A convocação informa quórum e prazo para a deliberação. A debenturista Paula acredita que o agente fiduciário garante o pagamento e pode conceder sozinho uma dispensa definitiva. Analise os papéis e as consequências possíveis.</p>",
+     "alternativas": {
+      "a": "O agente fiduciário paga a dívida em lugar da emissora e concede waiver definitivo sem observar assembleia, quórum ou escritura.",
+      "b": "O agente representa os debenturistas; a assembleia pode deliberar vencimento ou waiver condicionado, conforme escritura e quóruns.",
+      "c": "O cross default cancela a debênture e protege a emissora, como ocorre nas cláusulas de resgate antecipado e opção de compra.",
+      "d": "O evento não automático fica sem consequência, pois a ausência de pagamento nesta emissão impede deliberação sobre outra dívida."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-12-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A posição jurídica subordinada reduz a recuperação esperada, e a taxa não muda essa prioridade. A garantia e os covenants de A precisam ser validados, mas combinam melhor com o limite de perda. Se B couber no perfil, crédito e liquidez frágeis pedem participação reduzida.</p><p>A alternativa A usa taxa para mudar prioridade e venda formal para garantir liquidez. A alternativa C apaga diferenças de recuperação porque ambos negociam pouco. A alternativa B trata ausência de covenant como redução de risco e ignora a subordinação.</p><p>Regra de bolso: crédito frágil e liquidez baixa exigem prêmio, posição pequena e capacidade real de carregar até o vencimento.</p>",
+     "enunciado": "<p>O médico Gustavo separou R$ 240.000 para um objetivo em sete anos e possui reserva para emergências. Ele aceita risco moderado, mas rejeita posições com recuperação residual. A oferta A tem garantia real sobre recebíveis, covenant financeiro, restrição à venda de ativos e remuneração de 11% no período indicado. Os documentos mostram cobertura contratual dos recebíveis, cuja qualidade ainda será verificada. A oferta B é subordinada, não apresenta garantia adicional nem covenant financeiro relevante e remunera 14%. Ambas têm negociação secundária limitada e pertencem a emissores com endividamento relevante. Gustavo insiste em aplicar os R$ 240.000 na B porque a taxa compensa a posição jurídica e porque pretende vendê-la se precisar. Avalie a recomendação e o tamanho da posição.</p>",
+     "alternativas": {
+      "a": "Concentrar na B, pois a taxa de 14% altera sua prioridade na liquidação e a possibilidade formal de venda assegura saída rápida.",
+      "b": "Preferir B porque ausência de covenant evita vencimento antecipado e reduz o risco de perda para quem pretende manter sete anos.",
+      "c": "Dividir igualmente, pois diferença de garantia e subordinação desaparece quando os títulos possuem negociação secundária limitada.",
+      "d": "Preferir A após validar recebíveis e capacidade de pagamento; B exige tolerância à baixa recuperação e, se aceita, participação reduzida."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-12-q10",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Emissora e garantidora expostas aos mesmos clientes podem enfraquecer juntas. Covenant e vencimento antecipado criam direitos, mas não asseguram pagamento ou comprador. Liquidez limitada, objetivo em oito meses e posição de 45% tornam a concentração relevante.</p><p>A alternativa C atribui à fiança, ao covenant e ao agente garantias que eles não oferecem. A alternativa B transforma vencimento antecipado em saída contratual do cliente. A alternativa A converte fiança em preferência real e ignora o preço do mercado secundário.</p><p>Regra de bolso: mecanismos da escritura ajudam a reagir; capacidade de pagamento, saída real e tamanho da posição definem a exposição.</p>",
+     "enunciado": "<p>Em Maceió, a assessora Natália revisa para Célia uma debênture quirografária com fiança de uma empresa do grupo. A emissora perdeu geração de caixa, a garantidora depende dos mesmos clientes e o mercado secundário apresenta poucos compradores e descontos. A fiança possui limite próprio, e as ofertas recentes ficaram abaixo do preço de aquisição. A escritura contém covenant de liquidez e vencimento automático para determinado descumprimento. Célia pretende usar o recurso em oito meses, embora o papel vença em quatro anos, e não dispõe de outro ativo líquido para a despesa. Ela afirma que fiança, covenant e atuação do agente fiduciário garantem saída e pagamento. A posição ocuparia 45% da carteira. Avalie a recomendação diante de crédito, liquidez e mecanismos da escritura.</p>",
+     "alternativas": {
+      "a": "A espécie quirografária passa a ter preferência real pela fiança, e os descontos do secundário deixam de importar com agente fiduciário.",
+      "b": "O vencimento automático cria liquidez contratual para Célia e permite usar a debênture em objetivo de oito meses sem reduzir a posição.",
+      "c": "A fiança elimina a correlação do grupo, o covenant garante pagamento e o agente fiduciário compra a posição quando o cliente precisa sair.",
+      "d": "A proteção pode perder força com choque comum; covenant reage ao evento, mas não garante caixa ou venda, e a concentração amplia a perda."
+     },
+     "gabarito": "d"
+    }
+   ],
+   "Mercado de ações: IPO, OPA e liquidez no mercado secundário": [
+    {
+     "id": "cpror-inv-13-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O IPO leva ações da companhia e de vendedores ao público pela primeira oferta pública. A OPA percorre o sentido inverso: um ofertante propõe comprar ações que estão nas mãos dos acionistas.</p><p>A alternativa A troca os movimentos e atribui emissão ao investidor. A alternativa C trata a OPA como emissão nova. A alternativa D reduz os dois eventos à negociação entre investidores no mercado secundário.</p><p>Regra de bolso: IPO leva ações ao público; OPA traz ações do público para o ofertante.</p>",
+     "enunciado": "<p>Durante uma explicação sobre a vida pública das ações, um assessor precisa diferenciar a direção econômica do IPO e da OPA. Identifique a associação correta.</p>",
+     "alternativas": {
+      "a": "No IPO, a companhia recompra ações em circulação; na OPA, investidores lançam ações novas para financiar a companhia.",
+      "b": "No IPO, ações chegam ao público pela primeira oferta; na OPA, o ofertante propõe adquirir ações que estão com acionistas.",
+      "c": "No IPO e na OPA, a companhia emite ações novas, variando apenas o público autorizado a participar da distribuição.",
+      "d": "No IPO e na OPA, acionistas negociam entre si no mercado secundário, sem participação de companhia, vendedores ou ofertante."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-13-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O registro de companhia aberta submete a empresa ao regime permanente de divulgação e supervisão, o registro da oferta rege aquela distribuição e a listagem permite negociar as ações na B3.</p><p>A alternativa B troca a função dos três atos. A alternativa C trata registros distintos como substitutos e dispensa a listagem. A alternativa D atribui à listagem o regime permanente e reduz os registros à escolha de governança.</p><p>Regra de bolso: companhia é o regime permanente, oferta é a distribuição específica e listagem é a negociação.</p>",
+     "enunciado": "<p>Uma companhia prepara sua abertura de capital e precisa separar três atos com finalidades próprias. Compare registro de companhia aberta, registro da oferta e listagem na B3.</p>",
+     "alternativas": {
+      "a": "O registro da companhia cria o regime permanente; o da oferta disciplina a distribuição; a listagem permite negociação das ações.",
+      "b": "O registro da companhia permite negociação; o registro da oferta cria supervisão permanente; a listagem disciplina a distribuição específica.",
+      "c": "O registro da oferta substitui o da companhia, e a listagem passa a ser facultativa quando o prospecto prevê negociação posterior.",
+      "d": "A listagem cria o regime de divulgação, enquanto os dois registros servem apenas para definir o segmento de governança escolhido."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-13-q3",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Na parcela primária a companhia emite ações e recebe os recursos. Na secundária, acionistas existentes vendem suas ações e recebem o dinheiro correspondente.</p><p>A alternativa C inverte os destinos. A alternativa B coloca a parcela secundária no caixa da companhia e adia o pagamento dos vendedores. A alternativa D atribui os recursos aos coordenadores e os vincula ao pregão posterior.</p><p>Regra de bolso: ação nova financia a companhia; ação existente paga quem vendeu.</p>",
+     "enunciado": "<p>Ao ler o prospecto de uma oferta mista, uma investidora quer saber quem recebe os recursos das duas parcelas. Identifique o destino correto do dinheiro.</p>",
+     "alternativas": {
+      "a": "A primária entra no caixa da companhia pelas ações novas, e a secundária remunera os acionistas que vendem ações existentes.",
+      "b": "As duas parcelas entram no caixa da companhia, e os vendedores recebem sua parte quando negociam as ações depois da estreia.",
+      "c": "A parcela primária paga os acionistas vendedores, e a secundária entra no caixa da companhia para expansão ou redução de dívida.",
+      "d": "As duas parcelas pertencem aos coordenadores, que repassam o saldo à companhia conforme a negociação no mercado secundário."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-13-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A parcela primária é 15 milhões vezes R$ 16, ou R$ 240 milhões. A secundária é 5 milhões vezes R$ 16, ou R$ 80 milhões. Com 75 milhões de ações após a emissão, o valor de mercado inicial é R$ 1,2 bilhão.</p><p>A alternativa A soma R$ 240 milhões e R$ 80 milhões no caixa e confunde oferta com valor de mercado. A alternativa B troca os destinos e calcula R$ 960 milhões com as ações anteriores. A alternativa D mantém a captação correta, mas exclui as 15 milhões de ações novas do valor de mercado.</p><p>Regra de bolso: calcule cada parcela pelo destino e o valor de mercado pelo total de ações depois da emissão.</p>",
+     "enunciado": "<p>A Companhia Aurora possui 60 milhões de ações antes do IPO. O prospecto prevê emissão primária de 15 milhões de ações e venda secundária de 5 milhões pertencentes aos fundadores. Após o bookbuilding, o preço é fixado em R$ 16 por ação. A destinação informa que os recursos primários serão usados na expansão, enquanto a parcela vendida pelos fundadores representa saída parcial deles. As despesas da oferta serão deduzidas separadamente, e os cálculos solicitados usam os valores brutos. Uma cliente soma as duas parcelas e conclui que R$ 320 milhões entrarão no caixa da empresa, que também passaria a valer esse montante. O assessor registra que, depois da emissão, existirão 75 milhões de ações. Calcule captação primária, valor da parcela secundária e valor de mercado inicial e avalie a conclusão da cliente.</p>",
+     "alternativas": {
+      "a": "A companhia recebe R$ 320 milhões e vale R$ 320 milhões, porque oferta mista reúne as duas parcelas no mesmo caixa após a liquidação.",
+      "b": "A companhia recebe R$ 80 milhões, os vendedores recebem R$ 240 milhões e o valor de mercado inicial é R$ 960 milhões.",
+      "c": "A companhia recebe R$ 240 milhões, os vendedores recebem R$ 80 milhões e o valor de mercado inicial é R$ 1,2 bilhão.",
+      "d": "A companhia recebe R$ 240 milhões e vale R$ 960 milhões, pois o valor de mercado considera somente as 60 milhões de ações anteriores."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-13-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. O bookbuilding coleta intenções e ajuda a fixar preço e quantidade, considerando volume e qualidade da demanda. Quando o pregão começa, as ordens produzem outra cotação, e o preço da oferta não funciona como piso nem promessa de ganho.</p><p>A alternativa A transforma o processo em leilão e cria piso. A alternativa B trata participantes renomados como garantia de estabilidade. A alternativa D usa a cotação de estreia para invalidar automaticamente a avaliação e confunde preço de mercado com conclusão definitiva sobre valor.</p><p>Regra de bolso: bookbuilding fixa a colocação; o mercado secundário passa a formar o preço a partir da estreia.</p>",
+     "enunciado": "<p>Henrique acompanha o IPO de uma empresa cuja faixa indicativa vai de R$ 24 a R$ 29. A avaliação considera projeções de fluxo de caixa, comparáveis, endividamento e perspectivas de crescimento, sem produzir um valor único. Durante o bookbuilding, os coordenadores coletam intenções de quantidade e preço, avaliam o volume, a qualidade da demanda e a base acionária pretendida e fixam a ação em R$ 27. No primeiro pregão, novas ordens levam a cotação para R$ 25. Henrique reclama que o preço deveria permanecer acima de R$ 27 porque investidores institucionais participaram da formação e bancos renomados coordenaram a operação. O prospecto apresentava riscos e a oferta não prometia ganho na estreia. Avalie a formação dos dois preços e a expectativa do investidor.</p>",
+     "alternativas": {
+      "a": "O bookbuilding funciona como leilão vencido pela intenção de preço elevado, e a estreia deve respeitar R$ 27 como limite inferior da cotação.",
+      "b": "A presença de institucionais garante continuidade do preço fixado, pois a qualidade da demanda elimina oscilações no mercado secundário.",
+      "c": "O preço de R$ 27 resulta da demanda e da análise da oferta; no pregão, as ordens formam novo preço, sem piso nem garantia de valorização.",
+      "d": "A queda para R$ 25 prova que a avaliação do negócio era inválida, porque preço abaixo da faixa indica que a companhia perdeu valor econômico."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-13-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A reserva registra a intenção de R$ 45.000. O rateio atende 30%, ou R$ 13.500. Dividindo esse valor pelo preço de R$ 15, a alocação é de 900 ações, e a liquidação financeira usa o valor atendido.</p><p>A alternativa A trata reserva como garantia de alocação integral. A alternativa C aplica R$ 15.000 sem relação com 30% de R$ 45.000. A alternativa D usa os 70% não atendidos, R$ 31.500, como se fossem a parcela alocada.</p><p>Regra de bolso: reserva é pedido, rateio define quanto cabe e alocação informa o que o investidor receberá.</p>",
+     "enunciado": "<p>Camila faz pedido de reserva de R$ 45.000 em um IPO sem estabelecer preço máximo. O aplicativo confirma que o pedido foi recebido durante o período divulgado, mas ainda não mostra quantidade de ações. A procura supera a parcela destinada ao varejo e o comunicado informa atendimento de 30% dos pedidos. O preço final sai a R$ 15 por ação. Ao ver a reserva registrada, Camila acredita que receberá R$ 45.000 em ações e que o rateio ocorrerá somente depois da liquidação. A instituição primeiro apura os pedidos elegíveis, depois divulga a quantidade alocada e só então realiza o débito na data prevista. O saldo não atendido permanecerá disponível na conta. Calcule o valor alocado e o número de ações e diferencie reserva, rateio e alocação.</p>",
+     "alternativas": {
+      "a": "A reserva garante R$ 45.000, equivalentes a 3.000 ações, e o rateio decide depois quais ações permanecem na carteira da cliente.",
+      "b": "O rateio reduz o pedido a R$ 13.500, a alocação corresponde a 900 ações e a liquidação debita apenas o valor efetivamente atendido.",
+      "c": "O rateio reduz o pedido a R$ 15.000, equivalentes a 1.000 ações, porque os 30% representam desconto de R$ 30 por ação reservada.",
+      "d": "A alocação fica em R$ 31.500, equivalentes a 2.100 ações, pois o percentual não atendido é que permanece dentro da oferta."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-13-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A reserva condicionada a R$ 19 deixa de ser elegível quando o preço final é R$ 20. O rateio distribui a parcela disponível entre pedidos que aceitam o preço e não altera o preço por ação.</p><p>A alternativa A usa o percentual de rateio para reduzir o preço unitário. A alternativa C inventa subsídio dos coordenadores e execução a R$ 19. A alternativa B ignora a condição registrada e transforma reserva em alocação integral.</p><p>Regra de bolso: primeiro verifique a condição de preço; depois aplique eventual rateio aos pedidos elegíveis.</p>",
+     "enunciado": "<p>André deseja participar de um IPO cuja faixa indicativa vai de R$ 17 a R$ 21. Como aceita pagar até R$ 19, registra uma reserva de R$ 25.000 condicionada a esse preço máximo. A instituição confirma o pedido, explica que reserva não assegura ações e informa que a condição será verificada contra o preço final antes de eventual distribuição. O bookbuilding fixa a ação em R$ 20, e a demanda de varejo levaria a um rateio de 50% entre os pedidos elegíveis. André insiste que deveria receber R$ 12.500 em ações, pois o rateio reduziria seu desembolso e o preço médio ficaria abaixo do limite indicado. Ele aceita quantidade menor, mas não altera o preço máximo registrado. O sistema separa pedidos elegíveis e só depois calcula a alocação e a liquidação financeira. Analise o efeito do preço máximo e a ordem dos momentos da oferta.</p>",
+     "alternativas": {
+      "a": "André recebe R$ 12.500 em ações, pois o rateio de 50% transforma o preço final de R$ 20 em custo econômico de R$ 10 por ação.",
+      "b": "André recebe R$ 25.000 em ações a R$ 20, pois a condição de preço serve apenas para ordenar pedidos antes do bookbuilding.",
+      "c": "André recebe ações a R$ 19, e a diferença de R$ 1 por ação é absorvida pelos coordenadores para preservar a condição da reserva.",
+      "d": "André não recebe ações, porque o preço final supera seu limite; o rateio alcança pedidos elegíveis e não reduz o preço por ação."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-13-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Venda do controle gera OPA obrigatória por alienação, fechamento exige OPA de cancelamento e circulação abaixo de 15% aciona aumento de participação. A aquisição de controle nasce da iniciativa do interessado e é facultativa.</p><p>A alternativa B ignora três classificações da regra. A alternativa C troca a natureza de aquisição, cancelamento e aumento de participação. A alternativa A trata iniciativa facultativa como obrigação e usa o antigo patamar de um terço no lugar do gatilho atual de 15%.</p><p>Regra de bolso: fato que já ocorreu pode gerar OPA obrigatória; vontade de adquirir controle inicia oferta facultativa.</p>",
+     "enunciado": "<p>O conselho de uma companhia aberta avalia quatro eventos. No primeiro, o controlador vende seu bloco de controle a outro grupo. No segundo, pretende cancelar o registro da companhia e encerrar a negociação pública. No terceiro, compras do controlador e de pessoas ligadas reduzem as ações em circulação da mesma classe e espécie para 14%. No quarto, um investidor ainda sem controle decide lançar oferta para adquiri-lo. Um diretor classifica as quatro OPAs como obrigatórias porque podem alterar a estrutura acionária. A equipe consulta a Resolução CVM 215, vigente desde julho de 2025, e confirma que a regra atual usa o patamar de 15% para a circulação. Classifique as modalidades e seus gatilhos.</p>",
+     "alternativas": {
+      "a": "As quatro são obrigatórias, e a redução a 14% mantém a circulação acima do gatilho de um terço previsto pela regra atual.",
+      "b": "Apenas o cancelamento é obrigatório, pois alienação, redução da circulação e aquisição de controle dependem da vontade dos acionistas.",
+      "c": "Alienação e aquisição de controle são obrigatórias; cancelamento e aumento de participação são facultativos quando a circulação chega a 14%.",
+      "d": "Alienação de controle, cancelamento e aumento de participação são obrigatórios; aquisição de controle nasce da iniciativa e é facultativa."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-13-q9",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. O piso legal é 80% de R$ 50, ou R$ 40. Como o estatuto assegura 100%, a oferta aos titulares abrangidos deve usar R$ 50 por ação. O percentual aplicável pode superar o mínimo legal.</p><p>A alternativa B inverte os valores e trata a ampliação como redução. A alternativa A transforma 80% em teto e ignora o estatuto. A alternativa D soma preço do controle e tag along como parcelas, chegando a R$ 90 sem base na mecânica.</p><p>Regra de bolso: calcule 80% como piso e depois confira se estatuto ou segmento concede proteção ampliada.</p>",
+     "enunciado": "<p>Elisa possui ações com direito a voto de uma companhia cujo controle será vendido por R$ 50 por ação do bloco. A regra legal alcança sua espécie de ação e assegura tag along mínimo de 80%. O estatuto da companhia, porém, prevê proteção de 100% para os titulares abrangidos, e a documentação da operação confirma que Elisa está nesse grupo. Ela lê que segmentos de listagem e estatutos podem ampliar percentual e público protegido, mas interpreta os 80% como valor fixo nacional. Elisa calcula R$ 40 pela lei e conclui que o comprador pode escolher esse preço, mesmo diante da cláusula estatutária. O assessor apresenta as duas regras sem somar seus valores nem tratá-las como pagamentos separados. Calcule o piso legal e indique o preço decorrente da proteção estatutária.</p>",
+     "alternativas": {
+      "a": "O mínimo legal e o estatutário são R$ 40, porque o percentual de 80% limita qualquer ampliação feita pelo segmento ou estatuto.",
+      "b": "O mínimo legal é R$ 50 e o estatuto leva a R$ 40, pois a companhia pode reduzir por escrito o percentual previsto na lei.",
+      "c": "O mínimo legal é R$ 40 e o estatuto leva a R$ 50 por ação; a proteção ampliada prevalece para os titulares abrangidos.",
+      "d": "O preço é R$ 90, obtido pela soma dos R$ 50 do controle com R$ 40 de tag along, pois são parcelas pagas separadamente."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-13-q10",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O laudo expõe métodos, premissas e valores ou intervalos. Ele não fixa o preço da OPA nem recomenda aderir. Mauro compara a oferta com os critérios, perspectivas da companhia e liquidez que restará.</p><p>A alternativa A transforma valor econômico em preço obrigatório. A alternativa C usa um critério para declarar vantagem e dispensa fatores relevantes. A alternativa B trata divergência entre métodos como defeito, embora cada critério observe informação diferente.</p><p>Regra de bolso: laudo informa a comparação; preço, perspectivas e consequência de ficar orientam a decisão do acionista.</p>",
+     "enunciado": "<p>Uma OPA apresenta preço de R$ 21 por ação, forma de pagamento, quantidade pretendida e condições de sucesso. O laudo independente informa patrimônio líquido de R$ 14, preço médio ponderado de negociação de R$ 18 e valor econômico estimado de R$ 24, com métodos e premissas próprios. Mauro entende que o valor econômico obriga o ofertante a pagar R$ 24 e que o laudo recomenda rejeitar qualquer preço inferior. A oferta prevê redução relevante das ações em circulação, e Mauro também precisa considerar a liquidez que restará caso decida permanecer. Outros acionistas podem aderir individualmente, e o resultado coletivo pode alterar o ambiente de negociação. O documento não contém recomendação individual de venda. Avalie o papel do laudo e a decisão do acionista.</p>",
+     "alternativas": {
+      "a": "O laudo fixa R$ 24 como preço obrigatório porque o valor econômico substitui os demais critérios quando supera o preço oferecido.",
+      "b": "A diferença entre R$ 14, R$ 18 e R$ 24 invalida o laudo, pois critérios aceitos precisam chegar ao mesmo valor por ação.",
+      "c": "O preço médio de R$ 18 torna a oferta de R$ 21 obrigatoriamente vantajosa, dispensando analisar perspectivas e liquidez remanescente.",
+      "d": "O laudo apresenta critérios, premissas e valores para comparação, mas não fixa o preço nem decide a adesão pelo acionista."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-13-q11",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Negociação frequente forma referências, mostra a reação a informações e dá ao investidor perspectiva de saída. Isso sustenta emissões novas, amplia a base interessada e reduz o desconto exigido em captações futuras.</p><p>A alternativa B separa mercados que se sustentam mutuamente. A alternativa C atribui à companhia o dinheiro das negociações entre investidores. A alternativa D interpreta distância entre compra e venda e escassez como facilidade de executar ordens grandes.</p><p>Regra de bolso: liquidez secundária facilita a saída hoje e melhora as condições de captação da companhia amanhã.</p>",
+     "enunciado": "<p>Uma empresa aberta planeja nova emissão de ações daqui a dois anos. Hoje, poucas ações permanecem em circulação, compradores e vendedores aparecem de forma esporádica e existe distância relevante entre preços de compra e venda. Ordens grandes encontram pouca quantidade disponível nos preços exibidos. O diretor financeiro afirma que a baixa liquidez afeta somente o acionista que deseja sair e não interfere na companhia, pois nenhuma negociação secundária coloca dinheiro em seu caixa. A equipe de relações com investidores observa que a cotação oferece poucas referências e que potenciais compradores da emissão futura pedem desconto para assumir a dificuldade de saída. Avalie a importância do mercado secundário para a companhia e seus investidores.</p>",
+     "alternativas": {
+      "a": "O secundário forma referências de preço, sustenta o interesse no primário e pode ampliar a base de investidores e reduzir o desconto futuro.",
+      "b": "A baixa liquidez afeta apenas quem vende, pois preço público e emissão futura dependem exclusivamente dos recursos captados no mercado primário.",
+      "c": "A companhia recebe o valor das negociações entre investidores, e esse caixa adicional compensa o desconto exigido em novas emissões.",
+      "d": "A distância entre compra e venda favorece ordens grandes, porque a escassez de ações permite execução rápida no preço indicado pelo investidor."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-13-q12",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. Venda secundária não reprova a oferta por si. A análise observa quem vende, quanto continua investido, destinação da parcela primária, riscos, narrativa, preço e critérios de alocação. Prestadores conhecidos melhoram informação, sem garantir retorno.</p><p>A alternativa A transforma parcela secundária em reprovação automática. A alternativa C usa permanência e reputação para garantir resultado e eliminar risco. A alternativa D reduz a decisão à destinação e ignora elementos centrais do prospecto.</p><p>Regra de bolso: numa oferta mista, siga o dinheiro, leia quem reduz posição e confronte a história com riscos, preço e alocação.</p>",
+     "enunciado": "<p>Fernanda estuda o prospecto de um IPO predominantemente secundário. Fundadores venderão parte relevante de suas ações, a companhia emitirá uma parcela pequena e a destinação dos recursos primários será redução de dívida. Os vendedores continuarão acionistas depois da oferta, mas a apresentação comercial destaca expansão sem mostrar que boa parte do dinheiro irá para quem vende. O documento também descreve endividamento, contingências e riscos do setor. Fernanda afirma que venda secundária torna a oferta ruim e que auditores e bancos conhecidos eliminam o risco remanescente. O assessor dispõe do prospecto com destinação, fatores de risco, divisão das parcelas, faixa de preço e critérios de alocação. Avalie a leitura que sustenta a análise da oferta.</p>",
+     "alternativas": {
+      "a": "A parcela secundária reprova a oferta, pois recursos destinados a acionistas vendedores impedem qualquer benefício econômico para a companhia.",
+      "b": "A análise deve separar destinos, examinar quem vende e quanto permanece investido, confrontar a narrativa com riscos e avaliar preço e alocação.",
+      "c": "A permanência dos fundadores garante retorno, e auditores e coordenadores conhecidos eliminam os riscos descritos no prospecto.",
+      "d": "A destinação primária basta para decidir, porque faixa de preço, critérios de alocação e fatores de risco não alteram o sentido econômico da oferta."
+     },
+     "gabarito": "b"
+    }
+   ],
    "VGBL: acumulação, aposentadoria e planejamento patrimonial": [
     {
      "id": "cpror-inv-40-q1",
@@ -10515,6 +11088,868 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "d": "Escolher autocustódia para eliminar risco operacional e manter a parcela pedida, pois a chave privada substitui a análise do objetivo."
      },
      "gabarito": "c"
+    }
+   ]
+  },
+  "Prospecção e relacionamento com a pessoa investidora": {
+   "Código de Distribuição: abrangência, canais digitais e remuneração": [
+    {
+     "id": "cpror-rel-20-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O Código de Distribuição busca padronizar procedimentos e promover ética, concorrência leal, qualificação profissional e decisão informada. As dispensas são delimitadas e não podem ser ampliadas para qualquer cliente institucional ou produto simples.</p><p>A alternativa B restringe indevidamente o alcance e retira os canais digitais. A alternativa C inclui RPPS e pessoa jurídica sem observar as hipóteses previstas. A alternativa D transforma exceções específicas em dispensa geral de responsabilidades.</p><p>Regra de bolso: identifique o alcance da distribuição e leia cada dispensa pelo recorte exato do código.</p>",
+     "enunciado": "<p>Uma instituição revisa o objetivo e o alcance do Código de Distribuição Anbima. Identifique a descrição compatível com os princípios e com as dispensas delimitadas apresentadas na aula.</p>",
+     "alternativas": {
+      "a": "O código padroniza procedimentos e promove ética, concorrência leal, qualificação e decisão informada, com dispensas específicas.",
+      "b": "O código regula apenas vendas presenciais a pessoas físicas e dispensa canais digitais, clientes institucionais e produtos bancários.",
+      "c": "O código dispensa distribuição a RPPS e a pessoa jurídica por sua natureza, independentemente da classificação adotada pela instituição.",
+      "d": "O código transforma poupança e produtos simples em exceção geral às regras de informação, atendimento e certificação profissional."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-20-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A autorregulação não substitui legislação nem normas da CVM ou do Banco Central. Em caso de contradição, a disposição privada incompatível é desconsiderada, mantendo-se as demais exigências aplicáveis.</p><p>A alternativa A coloca a regra privada acima da norma pública. A alternativa B amplia uma dispensa do código para toda a regulamentação. A alternativa D usa uma incompatibilidade pontual para eliminar disposições que continuam válidas.</p><p>Regra de bolso: norma pública prevalece no conflito, e a parte compatível da autorregulação permanece.</p>",
+     "enunciado": "<p>Ao atualizar um procedimento interno, uma gerente encontra conflito entre regra privada do código e norma pública aplicável. Compare autorregulação, legislação e regulamentação pública.</p>",
+     "alternativas": {
+      "a": "A regra privada prevalece por ser específica da distribuição, afastando a norma pública enquanto a instituição permanecer participante.",
+      "b": "Uma dispensa concedida pelo código afasta legislação, normas da CVM e regras do Banco Central para a mesma operação.",
+      "c": "A disposição privada incompatível é desconsiderada, e as demais exigências do código e das normas públicas continuam aplicáveis.",
+      "d": "A contradição elimina o código inteiro para a instituição, inclusive as disposições que permanecem compatíveis com a norma pública."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-20-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O distribuidor pode informar e recomendar dentro de sua atividade, mas não deve induzir a percepção de consultoria independente. A ausência de débito separado não elimina remuneração. Incentivo e conflito precisam ser transparentes, e a indicação continua sujeita às necessidades da cliente.</p><p>A alternativa A usa a forma de cobrança para mudar a natureza do serviço. A alternativa C transforma divulgação do conflito em substituta da adequação. A alternativa D altera uma palavra e preserva a mesma impressão enganosa e o destaque sem fundamento no cliente.</p><p>Regra de bolso: declare o papel comercial, explique o incentivo e justifique a indicação pelo cliente.</p>",
+     "enunciado": "<p>Em uma videochamada, o gerente Caio apresenta a Joana três fundos e um título bancário distribuídos por sua instituição. Ele afirma que a orientação é independente porque não cobra honorário separado e diz que o banco não possui interesse comercial na escolha. A política interna mostra taxa de distribuição, parcela de performance e incentivos distintos entre produtos. Joana pergunta se o profissional atua como consultor independente e por que uma opção aparece destacada no aplicativo. O produto destacado paga remuneração superior ao distribuidor, mas o gerente ainda não relacionou a indicação às necessidades da cliente. A conversa ocorre no canal institucional e ficará registrada no histórico do atendimento. Avalie como a atividade e o incentivo devem ser apresentados.</p>",
+     "alternativas": {
+      "a": "Apresentar o serviço como consultoria independente, pois a ausência de honorário direto separa a recomendação da atividade de distribuição.",
+      "b": "Explicar que se trata de distribuição, revelar remuneração e conflito e fundamentar a indicação nas necessidades da cliente.",
+      "c": "Informar apenas que existe comissão, pois a divulgação do incentivo torna compatível qualquer produto selecionado pelo distribuidor.",
+      "d": "Retirar a palavra independente e manter o destaque comercial, pois a mudança de expressão elimina a impressão transmitida à cliente."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-20-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O meio eletrônico precisa disponibilizar seção específica com objetivo ou estratégia, público-alvo quando restrito, carência, prazo, emissor, tributação, classificação e riscos, além de remuneração, acessos aplicáveis e canais compatíveis com o porte e a base.</p><p>A alternativa A troca informação prévia por suporte posterior. A alternativa C transforma garantia delimitada em ausência de riscos. A alternativa D usa a ficha resumida para afastar documentos e informações próprias do fundo.</p><p>Regra de bolso: canal digital muda a interface, não reduz a informação necessária para decidir.</p>",
+     "enunciado": "<p>Uma fintech prepara a página de uma LCI e de um fundo para lançamento no aplicativo. A equipe exibe somente nome, rentabilidade passada e botão de contratação, alegando que o cliente poderá perguntar ao suporte depois. Os documentos internos contêm objetivo ou estratégia, público-alvo restrito, carência, prazo, emissor da LCI, tributação, classificação e riscos de mercado, crédito e liquidez. Também existem política de remuneração, aviso correspondente, regras mínimas do fundo garantidor para a LCI e documentos próprios do fundo. A contratação ocorrerá exclusivamente pelo aplicativo. O canal atende milhares de clientes e possui apenas um formulário genérico de contato. Analise as informações e o atendimento exigidos antes da decisão.</p>",
+     "alternativas": {
+      "a": "A tela resumida basta porque suporte posterior substitui informações do produto, política de remuneração e documentos específicos do fundo.",
+      "b": "O aplicativo precisa de seção específica com características, riscos e remuneração, acessos aplicáveis e canais compatíveis para dúvidas.",
+      "c": "A referência ao fundo garantidor permite apresentar a LCI sem risco e retirar informações sobre crédito, liquidez e condições de cobertura.",
+      "d": "A ficha do fundo substitui seus documentos e dispensa público-alvo, estratégia e riscos quando a contratação ocorre em canal eletrônico."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-20-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. As regras preveem acesso individual, confirmação de dados no desbloqueio, armazenamento criptografado, impedimento de sessões simultâneas e trilhas capazes de identificar usuário, momento e operação, com retenção mínima de cinco anos.</p><p>A alternativa C aceita compartilhamento de senha e operação pelo assessor. A alternativa B usa urgência para afastar controles de segurança. A alternativa D trata rastreabilidade como autorização para substituir a identidade da cliente.</p><p>Regra de bolso: urgência comercial não autoriza compartilhar credencial ou contornar controle digital.</p>",
+     "enunciado": "<p>Durante uma campanha com prazo curto, o assessor Murilo oferece executar no aplicativo a aplicação de Teresa. Ele pede a senha da cliente e pretende acessar sua conta enquanto ela mantém outra sessão aberta no celular. O sistema registra usuário, momento e operação, armazena os dados criptografados e bloqueia sessões autenticadas simultâneas. Murilo sugere desativar temporariamente esses controles para concluir a reserva antes do encerramento da oferta. Teresa também esqueceu os dados de acesso, e o desbloqueio exige confirmação cadastral. O aparelho pertence à cliente, e o assessor atende de outro local. A instituição mantém as trilhas pelo período mínimo de cinco anos indicado nas regras. Avalie a conduta e os controles do canal.</p>",
+     "alternativas": {
+      "a": "O acesso deve permanecer individual, com confirmação no desbloqueio, criptografia, bloqueio de sessões simultâneas e trilha preservada.",
+      "b": "O prazo da oferta permite duas sessões e dados sem criptografia, pois segurança pode ser recomposta após a liquidação financeira.",
+      "c": "O assessor pode usar a senha com autorização verbal, desde que a trilha registre o nome dele e a cliente confirme a operação depois.",
+      "d": "A trilha substitui o acesso individual, permitindo ao profissional operar como cliente quando o registro identifica horário e investimento."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-20-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A política deve esclarecer atividades, produtos próprios e de terceiros, critérios de recomendação, formas de recebimento, incentivos, conflitos e mitigadores. Spread pode compor remuneração sem débito separado. Mudanças exigidas devem ser atualizadas no mesmo dia.</p><p>A alternativa B vincula remuneração à tarifa visível e omite spread e vínculo com produtos próprios. A alternativa A adia a atualização e exclui arranjo que exige transparência. A alternativa D reduz a política a valores de operação e apaga sua função qualitativa.</p><p>Regra de bolso: política explica como a instituição ganha, quais incentivos surgem e como administra os conflitos.</p>",
+     "enunciado": "<p>O Banco Horizonte revisa sua política de remuneração após criar um incentivo para profissionais que distribuam produtos próprios. A instituição recebe taxa de distribuição em fundos, parcela de performance em alguns veículos e spread em operações de renda fixa. O diretor afirma que spread não precisa aparecer na política porque não há débito separado na conta do cliente. A área de conformidade registra mudança nos critérios de recomendação, nos incentivos e nas medidas de mitigação, mas propõe atualizar o documento no mês seguinte. A versão vigente continua publicada no site sem as novas informações, enquanto o incentivo já começa a produzir efeitos. Há também arranjo de indicação ao exterior e adiantamento a um escritório de assessoria. Analise o conteúdo e o momento de atualização da política.</p>",
+     "alternativas": {
+      "a": "A atualização mensal é suficiente, e arranjos de indicação ao exterior ficam fora da transparência qualitativa da distribuição.",
+      "b": "A política pode omitir spread e produtos próprios porque remuneração existe apenas quando o cliente vê tarifa separada em sua conta.",
+      "c": "A política deve explicar formas de recebimento, produtos, incentivos, conflitos e mitigadores, sendo atualizada no mesmo dia da alteração.",
+      "d": "A política deve apresentar somente valores de cada operação, substituindo critérios de recomendação e medidas de mitigação de conflitos."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-20-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A política tem função qualitativa sobre modelos, incentivos e conflitos. A informação da operação mostra valores ou percentuais praticados ou estimados. O informe atende situações alternativas previstas, e o extrato trimestral consolida remunerações nas hipóteses abrangidas.</p><p>A alternativa A usa a política para apagar informação quantitativa e consolidação. A alternativa B troca as funções da política e da operação e redefine o extrato. A alternativa C amplia uma hipótese específica para eliminar documentos de toda a base.</p><p>Regra de bolso: política explica o modelo, operação mostra o caso e extrato reúne o período.</p>",
+     "enunciado": "<p>A corretora Litoral distribui valores mobiliários a uma cliente e recebe remuneração em formatos distintos ao longo do trimestre. Antes de uma nova aplicação, a cliente pede o valor ou percentual praticado na operação. A equipe responde enviando apenas a política geral, que descreve modelos de recebimento e conflitos, mas não apresenta a estimativa da operação. No fechamento do trimestre, a corretora pretende substituir o extrato consolidado por uma mensagem genérica sobre comissões. A área responsável lembra que certas situações admitem informe de investimento e que investidores profissionais e operações específicas possuem tratamento próprio. Compare a função dos quatro documentos sem transformar exceção em dispensa geral.</p>",
+     "alternativas": {
+      "a": "A política substitui informação da operação e extrato, pois explicar modelos de recebimento elimina a necessidade de valores ou consolidação periódica.",
+      "b": "A informação da operação explica conflitos gerais, enquanto a política mostra cada valor praticado e o extrato serve como comprovante de custódia.",
+      "c": "O informe de investimento elimina política e extrato para a base inteira quando uma operação possuir exceção quantitativa específica.",
+      "d": "A política explica modelos e conflitos; a operação mostra valores ou estimativas; o informe atende hipóteses alternativas e o extrato consolida o período."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-20-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Produto do grupo não é proibido nem inadequado por definição, mas o vínculo, o destino dos ganhos e a remuneração precisam ser informados. A comparação deve considerar risco, custo, liquidez e objetivo. Transparência e adequação permanecem responsabilidades distintas.</p><p>A alternativa A transforma vínculo societário em proibição. A alternativa C posterga a informação e usa divulgação para autorizar privilégio comercial. A alternativa B trata origem do grupo como justificativa da indicação e dispensa comparação com alternativas.</p><p>Regra de bolso: informe o vínculo e compare o produto pelo que ele entrega ao cliente.</p>",
+     "enunciado": "<p>A gerente Renata atende Fábio, que busca reserva para uma obrigação em dezoito meses. O aplicativo destaca um fundo do grupo econômico, com remuneração relevante ao distribuidor, embora outra alternativa de terceiro tenha liquidez e risco compatíveis com o prazo do cliente. A relação societária, o destino dos ganhos ao grupo e os incentivos do profissional ainda não aparecem na conversa. A tela registra que Fábio abriu os dois produtos antes do atendimento. Renata pensa em recomendar o produto próprio porque ele não é proibido e pretende informar a comissão somente depois da contratação. Fábio pergunta se o vínculo com o grupo torna o produto inadequado e se a transparência comercial encerra a análise. Avalie a comparação e o tratamento do conflito.</p>",
+     "alternativas": {
+      "a": "Produto do grupo é proibido na distribuição, ainda que risco, custo, liquidez e objetivo sejam compatíveis com as necessidades do cliente.",
+      "b": "Produto próprio é indicado pela relação com o grupo, pois o destino interno da remuneração reduz o conflito e dispensa comparação externa.",
+      "c": "A divulgação da comissão depois da contratação resolve o conflito e permite privilegiar o produto próprio pela origem societária.",
+      "d": "O vínculo deve ser informado, e a comparação considera risco, custo, liquidez e objetivo; transparência não substitui adequação."
+     },
+     "gabarito": "d"
+    }
+   ],
+   "Suitability: verificação, impedimentos e ordem do cliente": [
+    {
+     "id": "cpror-rel-22-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Objetivos incluem prazo, preferência de risco e finalidade. Situação financeira considera receitas regulares, patrimônio e necessidade futura de recursos. Conhecimento observa familiaridade, histórico de operações e formação e experiência profissional, ressalvada a pessoa jurídica.</p><p>A alternativa B troca informações entre as três dimensões. A alternativa C reduz indevidamente cada conjunto de dados. A alternativa A usa o rótulo do perfil e operações anteriores como substitutos da análise exigida.</p><p>Regra de bolso: adequação começa com objetivo, capacidade financeira e conhecimento real do cliente.</p>",
+     "enunciado": "<p>Ao estruturar a avaliação de adequação prevista na Resolução CVM 30, uma instituição precisa organizar as informações do cliente em três dimensões. Identifique a associação correta.</p>",
+     "alternativas": {
+      "a": "Objetivos, situação financeira e conhecimento podem ser substituídos pelo rótulo do perfil quando o cliente já realizou operações anteriormente.",
+      "b": "Objetivos abrangem patrimônio e receitas; situação financeira abrange formação profissional; conhecimento abrange prazo e finalidade do investimento.",
+      "c": "Objetivos abrangem apenas a preferência de risco; situação financeira limita-se à renda; conhecimento considera somente certificações financeiras.",
+      "d": "Objetivos abrangem prazo, risco e finalidade; situação financeira abrange receitas, patrimônio e recursos futuros; conhecimento abrange familiaridade, operações e experiência."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-22-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A recomendação fica vedada quando o produto ou serviço é incompatível com o perfil, quando faltam informações para identificar o perfil ou quando as informações estão desatualizadas. São causas distintas com a mesma consequência para a recomendação.</p><p>A alternativa B cria impedimentos ligados a garantia, formação e horário. A alternativa A usa custo, patrimônio e recomendação externa como causas automáticas. A alternativa D trata perfil conservador e escolhas comerciais como impedimentos por si mesmos.</p><p>Regra de bolso: incompatível, ausente ou desatualizado significa que a instituição não pode recomendar.</p>",
+     "enunciado": "<p>Um supervisor revisa situações em que a instituição pretende fazer uma recomendação individualizada. Identifique o conjunto de impedimentos que a Resolução CVM 30 estabelece para essa recomendação.</p>",
+     "alternativas": {
+      "a": "Produto com custo, cliente com patrimônio reduzido ou existência de recomendação anterior feita por outra instituição.",
+      "b": "Produto sem garantia, cliente sem formação financeira ou operação solicitada fora do horário de atendimento.",
+      "c": "Produto incompatível, ausência de informações para identificar o perfil ou informações de perfil desatualizadas.",
+      "d": "Perfil conservador, ausência de conta conjunta ou recusa do cliente em contratar produtos do grupo econômico do distribuidor."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-22-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Aceitar oscilação é apenas parte da análise. Roberto precisa do dinheiro antes do fim da carência, não tem outra fonte e conhece pouco a estrutura. Riscos subjacentes, garantias e custos também integram a verificação, e custos excessivos e inadequados impedem recomendar.</p><p>A alternativa D usa preferência de risco para apagar as demais dimensões. A alternativa B omite custos que participam da adequação. A alternativa C acerta que o rótulo é insuficiente, mas propõe abandonar a análise em vez de realizá-la com os dados relevantes.</p><p>Regra de bolso: perfil não é etiqueta; confronte cliente, produto, prazo, custos e finalidade.</p>",
+     "enunciado": "<p>Em Vitória, a gerente Flávia atende Roberto, cujo perfil indica aceitação de oscilações. Ele pretende usar R$ 180.000 em dez meses para quitar um imóvel e possui pouca familiaridade com produtos estruturados. A instituição avalia uma operação com carência de dois anos, ativos subjacentes complexos, garantia limitada e custos diretos e indiretos elevados. O sistema classifica o risco de mercado dentro da faixa aceita por Roberto, e o gerente considera o rótulo suficiente para recomendar. Os dados financeiros mostram que o cliente não possui outra fonte para a quitação. Roberto reconhece que tolera perdas temporárias, mas afirma que a data do pagamento não pode ser adiada e pede que a gerente decida com base em seu perfil arrojado. Avalie a adequação da indicação.</p>",
+     "alternativas": {
+      "a": "Não recomendar: prazo, necessidade futura, conhecimento, carência, estrutura, garantias e custos tornam a operação incompatível com os dados.",
+      "b": "Recomendar após retirar os custos da apresentação, pois despesas elevadas afetam retorno, mas não participam da análise de adequação.",
+      "c": "Recusar a análise do produto porque perfil de risco substitui objetivo, situação financeira, conhecimento e características da estrutura.",
+      "d": "Recomendar porque a preferência por risco coincide com a classificação, mesmo com carência, complexidade, custos e necessidade em dez meses."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-22-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Na ordem espontânea em situação de inadequação, a instituição precisa apontar a divergência concreta, explicar sua causa e obter declaração expressa antes da primeira operação naquela categoria, sem afastar outros requisitos aplicáveis.</p><p>A alternativa A usa aviso genérico e não explica o conflito de prazo. A alternativa C tenta disfarçar recomendação inadequada como ordem. A alternativa D transforma o procedimento do art. 7º em proibição absoluta da iniciativa do cliente.</p><p>Regra de bolso: identifique quem escolheu, explique a divergência específica e documente a ciência antes da primeira operação da categoria.</p>",
+     "enunciado": "<p>A cliente Sônia possui perfil atualizado e pretende pagar uma pós-graduação em oito meses. O assessor identifica que um fundo tem prazo e condições de resgate incompatíveis e decide não recomendá-lo. Dias depois, Sônia retorna e ordena por iniciativa própria a aplicação nesse fundo, categoria que ainda não operou. Ela insiste que basta assinar um aviso genérico sobre oscilações e recusa ouvir a explicação sobre o horizonte. Não há restrição adicional de acesso ao produto. O assessor registra quem iniciou a escolha e compara a necessidade de recursos com as condições do fundo. O formulário disponível permite descrever a razão concreta da inadequação e colher manifestação expressa da cliente antes da execução. Indique o procedimento antes da primeira operação na categoria.</p>",
+     "alternativas": {
+      "a": "Executar com aviso genérico, pois a assinatura transforma a incompatibilidade de prazo em concordância suficiente com os riscos do mercado.",
+      "b": "Explicar a divergência concreta entre horizonte e produto e obter declaração expressa de ciência antes da primeira operação da categoria.",
+      "c": "Recomendar o fundo e apresentar a ordem como espontânea, pois a declaração permite converter indicação incompatível em iniciativa da cliente.",
+      "d": "Bloquear qualquer ordem incompatível, pois o art. 7º transforma divergência de perfil em proibição absoluta de operação solicitada pelo cliente."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-22-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Recomendação comprovada de consultor autorizado pode dispensar alerta e declaração nas condições do art. 7º. Para a dispensa de verificação do art. 10, IV, o distribuidor exige a avaliação de perfil feita pelo consultor. A dispensa alcança a operação diretamente relacionada.</p><p>A alternativa A equipara sugestão vaga a recomendação comprovada e estende a dispensa à conta. A alternativa C elimina o documento exigido para a verificação. A alternativa D amplia a dispensa para operação sem relação direta com a recomendação.</p><p>Regra de bolso: consultor autorizado gera dispensas específicas quando recomendação, perfil e vínculo com a operação estão comprovados.</p>",
+     "enunciado": "<p>O investidor Paulo pede ao distribuidor que execute uma operação e afirma seguir orientação de uma consultora de valores mobiliários autorizada pela CVM. Ele apresenta a recomendação escrita e a avaliação de perfil elaborada pela consultora. A operação corresponde diretamente ao documento. Na semana seguinte, Paulo solicita outro produto não mencionado pela profissional e diz que a autorização dela dispensa suitability em sua conta inteira. O distribuidor precisa distinguir a dispensa do alerta e declaração do art. 7º da dispensa de verificação do art. 10, IV. A área de controles possui meios de arquivar a recomendação, a avaliação e o vínculo de cada operação com os documentos apresentados. Compare as condições aplicáveis às duas operações.</p>",
+     "alternativas": {
+      "a": "A afirmação verbal sobre qualquer pessoa que sugeriu o produto dispensa alerta, declaração e verificação de adequação para a conta inteira.",
+      "b": "A recomendação comprovada pode dispensar providências específicas, e a avaliação do consultor sustenta a dispensa apenas na operação relacionada.",
+      "c": "O consultor autorizado elimina a necessidade de apresentar sua avaliação de perfil, porque o distribuidor deve confiar no registro profissional.",
+      "d": "A segunda operação recebe a mesma dispensa por ocorrer na mesma semana e na mesma conta, ainda que não conste da recomendação comprovada."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-22-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Pessoas naturais enquadradas por volume nos dispositivos indicados permanecem sujeitas à verificação. Certificação ou exame também não equivale à autorização profissional da CVM mencionada na hipótese específica. A análise começa pelo enquadramento legal.</p><p>A alternativa C concede dispensa automática e iguala certificação a autorização. A alternativa B usa patrimônio, termo e relacionamento para substituir dados atuais. A alternativa D aplica o rótulo profissional sem identificar o fundamento jurídico da categoria.</p><p>Regra de bolso: leia como a pessoa física foi enquadrada; volume ou certificação não produz dispensa automática.</p>",
+     "enunciado": "<p>A empresária Denise é pessoa física, possui R$ 13 milhões em investimentos financeiros e assinou o termo correspondente ao enquadramento por volume. Ela solicita um produto complexo e afirma que sua condição profissional elimina a verificação de adequação. Também apresenta certificado de exame financeiro, mas não possui registro ou autorização profissional da CVM. Seu perfil está desatualizado e a finalidade do recurso mudou. O atendente a conhece há anos e considera suficiente o patrimônio informado. A área de controles pede que a hipótese legal de dispensa seja identificada antes de qualquer recomendação. Denise insiste que patrimônio, termo e certificado produzem o mesmo efeito de uma autorização profissional, embora os documentos comprovem situações diferentes. Avalie o enquadramento da cliente.</p>",
+     "alternativas": {
+      "a": "A cliente continua sujeita à verificação por ser pessoa natural enquadrada por volume, e certificação não equivale ao registro profissional.",
+      "b": "O patrimônio substitui perfil atualizado, pois conhecimento histórico do atendente e termo assinado comprovam objetivos e situação financeira.",
+      "c": "A pessoa física enquadrada por volume recebe dispensa automática, e o certificado equivale à autorização profissional prevista na norma.",
+      "d": "A dispensa decorre do nome investidor profissional, independentemente do dispositivo de enquadramento e da natureza da pessoa investidora."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-22-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Cinco anos é intervalo máximo do perfil e não autoriza ignorar mudança relevante. Categorias devem ser revistas em até 24 meses. Documentos ficam guardados por pelo menos cinco anos da última recomendação ou operação. A substituição do diretor é comunicada em sete dias úteis, e o relatório segue até o último dia útil de abril.</p><p>A alternativa A usa cinco anos para perfil, categoria e marco documental. A alternativa C trata o limite como bloqueio e adia comunicação e relatório. A alternativa B usa a categoria para substituir o cliente e escolhe marco incorreto para a guarda.</p><p>Regra de bolso: perfil reage à mudança, produto tem ciclo de 24 meses e guarda documental conta da última interação abrangida.</p>",
+     "enunciado": "<p>Uma distribuidora atualizou o questionário de Helena há quatro anos e seis meses. Hoje ela informa que venderá sua empresa e precisará de liquidez em nove meses, condição ausente no perfil. A classificação das categorias de valores mobiliários foi revisada há 26 meses. O último produto foi recomendado há três anos, e a instituição pretende descartar os documentos cinco anos depois do preenchimento do questionário. A diretoria também substituiu o responsável estatutário e planeja comunicar a CVM em dez dias úteis. O relatório interno do ano anterior será enviado à administração em maio. O responsável argumenta que cada providência pode esperar o próximo ciclo administrativo, apesar dos marcos já registrados. Avalie prazos, marcos e reação à informação nova.</p>",
+     "alternativas": {
+      "a": "O perfil pode esperar completar cinco anos, a categoria permanece válida por cinco anos e os documentos contam do preenchimento inicial.",
+      "b": "A revisão da categoria substitui a atualização do cliente, e a guarda termina cinco anos após a classificação original do produto recomendado.",
+      "c": "O prazo de cinco anos impede atualização antecipada, e a troca do diretor pode ser comunicada junto com o relatório interno no fim de maio.",
+      "d": "A informação nova deve ser considerada; categorias passam de 24 meses, guarda parte da última recomendação ou operação e há prazos institucionais próprios."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-22-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. O capítulo dispensa LFT e fundos de renda fixa simples. Para CDB ou RDB, as condições são cumulativas: nota compatível, liquidez diária do emissor ou vencimento em até seis meses e exposição pós-fixada em juros, ressalvada política contrária.</p><p>A alternativa A usa categoria e nota para dispensar requisitos cumulativos. A alternativa C aceita o primeiro CDB apesar do prazo e liquidez e o segundo apesar da forma prefixada. A alternativa D amplia a autorregulação para afastar obrigação regulamentar aplicável.</p><p>Regra de bolso: exceção de CDB exige crédito, saída e remuneração cumpridos em conjunto.</p>",
+     "enunciado": "<p>O Banco Serra quer dispensar do capítulo de suitability três produtos oferecidos a correntistas. O primeiro é LFT. O segundo é fundo de renda fixa simples. O terceiro é CDB pós-fixado em juros, emitido por instituição com nota compatível com o risco Brasil, mas com vencimento em nove meses e sem liquidez diária do emissor. A política do banco não cria dispensa adicional. O gerente afirma que renda fixa de baixo risco recebe tratamento idêntico e pretende estender a exceção a outro CDB prefixado com liquidez mensal. A equipe precisa aplicar as condições cumulativas das Regras de Distribuição sem afastar obrigação da CVM que incida no caso. A nota de crédito foi confirmada, mas nenhum documento altera os prazos, a liquidez ou a remuneração informados. Avalie os enquadramentos.</p>",
+     "alternativas": {
+      "a": "Os três produtos recebem dispensa porque renda fixa e nota de crédito compatível substituem liquidez, vencimento e forma de remuneração.",
+      "b": "LFT e fundo simples têm a dispensa indicada; o CDB de nove meses falha em liquidez ou prazo, e o prefixado não cumpre a exposição exigida.",
+      "c": "O CDB de nove meses recebe dispensa pela nota, e o CDB prefixado recebe pelo prazo mensal de liquidez oferecido ao cliente.",
+      "d": "A dispensa da Anbima elimina obrigações da Resolução CVM 30 para LFT, fundo simples e qualquer CDB distribuído pela instituição."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-22-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. O procedimento simplificado admite fundos com aplicação e resgate automáticos e compromissadas com debêntures do grupo nas condições descritas, com baixo risco de mercado e liquidez e declaração na contratação. Adotado o procedimento, esses produtos ficam fora do portfólio.</p><p>A alternativa A usa a declaração para corrigir estrutura e risco incompatíveis de C. A alternativa B amplia o rito para qualquer fundo distribuído no aplicativo. A alternativa D proíbe a estrutura que a regra admite quando o risco privado permanece na instituição mantenedora ou no grupo.</p><p>Regra de bolso: automatismo, risco baixo, estrutura admitida e declaração precisam caminhar juntos.</p>",
+     "enunciado": "<p>Uma instituição oferece aplicação e resgate automáticos a correntistas. O produto A é fundo com mecanismo automático, baixo risco de mercado e liquidez. O produto B é compromissada com debênture de empresa do grupo do distribuidor, e o eventual risco de crédito privado permanece no grupo mantenedor da conta. Na contratação, o cliente assina a declaração prevista. O produto C é fundo comum com risco de liquidez elevado e sem automatismo, mas a equipe quer incluí-lo no mesmo procedimento para ampliar a captação. O diretor afirma que, depois de adotado o rito simplificado, qualquer investimento automático pode sair do portfólio de suitability. A minuta registra separadamente o automatismo, os riscos e a declaração de cada produto, permitindo verificar se todos os requisitos coexistem. Analise as condições e o alcance.</p>",
+     "alternativas": {
+      "a": "A declaração transforma o fundo C em automático e permite excluir do portfólio produtos com risco de liquidez elevado ou estrutura comum.",
+      "b": "O rito simplificado alcança qualquer fundo do distribuidor, desde que o cliente seja correntista e a aplicação ocorra pelo aplicativo.",
+      "c": "A e B podem seguir o procedimento nas condições descritas e ficar fora do portfólio; C não atende automatismo e risco exigidos.",
+      "d": "A compromissada B fica impedida por usar debênture do grupo, ainda que o risco privado permaneça na instituição mantenedora ou no grupo."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-22-q10",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Perfil desatualizado impede recomendação pelo art. 6º. A instituição iniciou a escolha, portanto o clique não a transforma em ordem espontânea. Exceção de autorregulação precisa ser demonstrada dentro de seu âmbito e não afasta automaticamente obrigação regulamentar aplicável.</p><p>A alternativa D coloca lista interna acima da Resolução CVM 30. A alternativa B converte recomendação eletrônica em iniciativa do cliente e troca atualização por declaração. A alternativa C presume dispensa sem verificar produto, condições e fundamento.</p><p>Regra de bolso: identifique a fonte da regra, prove a exceção e preserve a obrigação pública aplicável.</p>",
+     "enunciado": "<p>A corretora Atlântico recomenda por aplicativo um valor mobiliário a Mauro. Seu perfil está vencido, mas o produto aparece em lista interna de procedimento simplificado da instituição. O atendente afirma que uma dispensa prevista nas Regras de Distribuição Anbima elimina o impedimento do art. 6º da Resolução CVM 30. Mauro não tomou a iniciativa da escolha e recebeu mensagem individual sugerindo a aplicação. A equipe não identifica qual dispositivo autorregulatório abrangeria o produto nem se suas condições foram cumpridas. O cliente aceita atualizar os dados, mas o atendente deseja concluir a venda antes. O registro eletrônico mostra que a mensagem partiu da corretora e que a lista interna não informa a base normativa da suposta exceção. Distinga a fonte das obrigações e indique o tratamento da recomendação.</p>",
+     "alternativas": {
+      "a": "A recomendação permanece impedida com perfil desatualizado; exceção Anbima exige âmbito comprovado e não elimina norma CVM aplicável.",
+      "b": "A mensagem individual vira ordem do cliente após o clique, permitindo declaração de ciência em lugar da atualização do perfil.",
+      "c": "A dispensa autorregulatória pode ser presumida por constar do sistema, ainda que produto, condições e dispositivo não sejam identificados.",
+      "d": "A lista interna prevalece sobre a Resolução CVM 30 e permite recomendar com perfil vencido até a revisão periódica da instituição."
+     },
+     "gabarito": "a"
+    }
+   ],
+   "Classificação de clientes e produtos e regras de transferência": [
+    {
+     "id": "cpror-rel-23-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. O perfil de menor risco combina baixa tolerância, pouco conhecimento e prioridade por liquidez. O intermediário admite destinar parte dos recursos a risco, enquanto o terceiro aceita potenciais perdas em busca de retorno.</p><p>A alternativa B troca as características dos perfis. A alternativa A transforma informações usadas na análise em critérios isolados e automáticos. A alternativa D trata o perfil como uma alocação fixa e ignora objetivos e necessidades financeiras.</p><p>Regra de bolso: perfil resume informações coletadas, mas não substitui a análise do cliente e de seus objetivos.</p>",
+     "enunciado": "<p>Ao documentar a metodologia de classificação de clientes, uma distribuidora precisa diferenciar os três perfis mínimos exigidos pelas Regras de Distribuição Anbima. Identifique a associação correta entre perfil e características.</p>",
+     "alternativas": {
+      "a": "O Perfil 1 decorre da renda; o Perfil 2 decorre do patrimônio; o Perfil 3 decorre da experiência profissional declarada pelo cliente.",
+      "b": "O Perfil 1 aceita perdas para buscar retorno; o Perfil 2 exige concentração em liquidez; o Perfil 3 reúne clientes com pouco conhecimento.",
+      "c": "O Perfil 1 prioriza liquidez e reúne baixa tolerância e pouco conhecimento; o Perfil 2 admite parcela de risco; o Perfil 3 aceita potenciais perdas.",
+      "d": "Os perfis indicam a proporção fixa da carteira que a instituição destina a risco, independentemente dos objetivos e das necessidades financeiras."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-23-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A escala contínua posiciona o produto do risco reduzido ao elevado segundo a metodologia documentada, mas a nota não é probabilidade percentual, limite de prejuízo ou garantia de resultado.</p><p>A alternativa C converte pontos em limite de perda. A alternativa B interpreta a nota como probabilidade percentual. A alternativa D transforma a classificação de riscos em garantia de desempenho.</p><p>Regra de bolso: ponto de risco serve para comparar classificações, e não para prometer perda ou retorno.</p>",
+     "enunciado": "<p>Uma equipe recebe a nota de risco 4 para um produto e discute como apresentá-la ao cliente. Explique o significado correto dessa pontuação na metodologia descrita pelas Regras de Distribuição.</p>",
+     "alternativas": {
+      "a": "A nota posiciona o produto na escala documentada de risco, sem representar percentual de perda nem garantia de resultado.",
+      "b": "A nota representa 4% de probabilidade de perda e permite comparar esse percentual com a tolerância declarada pelo cliente.",
+      "c": "A nota limita a perda financeira do produto a 4% do valor aplicado durante o período considerado pela instituição.",
+      "d": "A nota garante resultado compatível com a categoria quando crédito, mercado e liquidez receberam avaliação da instituição."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-23-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Na adequação individual, o Perfil 2 admite produto com pontuação de até 3. Alfa tem nota 2,8 e fica dentro do limite, enquanto Beta, com 3,2, e Gama, com 4,6, o excedem.</p><p>A alternativa A cria arredondamento que reduziria 3,2 para 3. A alternativa C usa a insistência do cliente para elevar o limite sem nova avaliação. A alternativa D trata o limite do perfil como piso, quando ele é a pontuação máxima do produto nessa metodologia.</p><p>Regra de bolso: na análise individual, compare a nota de cada produto com o teto do perfil identificado.</p>",
+     "enunciado": "<p>Jonas procura a assessora Mirela depois de receber uma oferta para aplicar R$ 70.000. Classificado no Perfil 2 após o processo regular de identificação, ele recebe três fichas produzidas pela metodologia aprovada da instituição. O produto Alfa tem nota 2,8, o Beta tem nota 3,2 e o Gama tem nota 4,6. As três classificações estão atualizadas e foram apuradas na mesma escala usada pela distribuidora. Jonas insiste no Beta porque a diferença para o Alfa parece pequena e afirma que a casa poderia arredondar a nota para liberar a aplicação. A instituição utiliza adequação individual, e nenhum dado novo sustenta alterar o perfil do cliente. Analise as pontuações e indique a aplicação compatível com o limite numérico do perfil.</p>",
+     "alternativas": {
+      "a": "Alfa e Beta, pois 3,2 pode ser arredondado para 3 quando a diferença entre os produtos é inferior a meio ponto de risco.",
+      "b": "O Alfa, pois sua nota 2,8 respeita o limite 3 do Perfil 2; Beta e Gama ultrapassam o parâmetro da adequação individual.",
+      "c": "Beta, pois a manifestação do cliente permite ampliar o limite do Perfil 2 de 3 para 3,5 sem refazer a identificação do perfil.",
+      "d": "Os três, pois o limite 3 funciona como piso da categoria e admite produtos com notas 3,2 e 4,6 após comunicação ao cliente."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-23-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O total é R$ 200.000: o primeiro produto pesa 60% e contribui com 0,6 ponto, enquanto o segundo pesa 40% e contribui com 1,6 ponto. A soma é 2,2, dentro do limite 3, mas o cálculo não encerra a análise de liquidez e objetivos.</p><p>A alternativa A chega a 2,5 por média simples e ainda usa diversificação para apagar a necessidade financeira. A alternativa B soma as notas sem ponderar valores, obtendo 5. A alternativa C considera somente 40% vezes 4, chegando a 1,6 e excluindo indevidamente a outra posição.</p><p>Regra de bolso: peso financeiro vezes nota, posição por posição, produz a pontuação da carteira.</p>",
+     "enunciado": "<p>Lídia agenda uma videochamada com o especialista Raul para revisar sua carteira. Enquadrada no Perfil 2, ela sabe que a instituição aplica a metodologia por portfólio, cujo limite para esse perfil é 3 pontos. Lídia mantém R$ 120.000 em um produto de nota 1 e R$ 80.000 em outro de nota 4. Ela soma as notas, divide por dois e conclui que a carteira marca 2,5 pontos, sem considerar que os valores investidos são diferentes. Também avisa que pretende usar parte do dinheiro em quatro meses, informação ainda ausente da análise de liquidez. Lídia pede que Raul confirme sua conta antes de avaliar os prazos de saída, pois acredita que um resultado abaixo de 3 resolveria sozinho a adequação da carteira. Calcule a pontuação ponderada e indique o alcance desse resultado no processo de adequação.</p>",
+     "alternativas": {
+      "a": "A carteira marca 2,5 pontos pela média simples e atende ao limite, enquanto a necessidade em quatro meses fica absorvida pela diversificação.",
+      "b": "A carteira marca 5 pontos pela soma das notas e excede o limite, ainda que o produto de nota 1 concentre R$ 120.000.",
+      "c": "A carteira marca 1,6 ponto ao ponderar apenas o produto de nota 4, e a parcela de nota 1 fica fora por reduzir o risco calculado.",
+      "d": "A carteira marca 2,2 pontos e atende ao limite numérico, mas o uso em quatro meses ainda exige análise da liquidez e dos objetivos."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-23-q5",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. O fundo representa 60% e contribui com 0,3 ponto, pois 60% vezes 0,5 resulta em 0,3. A outra aplicação representa 40% e contribui com 1,4. A soma é 1,7, acima do limite 1,5, e o perfil não pode ser ajustado para liberar a posição.</p><p>A alternativa A usa a média simples de 2 e depois cria redução sem base. A alternativa B soma 0,5 e 3,5, chegando a 4 e ignorando os pesos financeiros. A alternativa D calcula apenas 40% vezes 3,5, chegando a 1,4, e omite a contribuição de 0,3 do fundo.</p><p>Regra de bolso: parcela de risco reduzido ajuda na ponderação, mas não apaga a contribuição das demais posições.</p>",
+     "enunciado": "<p>Caetano leva à planejadora Bianca a planilha que montou para conferir a carteira antes da revisão anual. Ela encontra R$ 90.000 em um fundo de nota 0,5 e R$ 60.000 em uma aplicação de nota 3,5. O cliente está no Perfil 1, cujo limite na metodologia por portfólio é 1,5 ponto. As duas posições compõem o montante considerado pela instituição, e não há saldo fora delas nesse cálculo. Caetano calculou a média simples das notas e obteve 2 pontos, mas sustenta que a posição de risco reduzido representa a maioria do dinheiro e, por isso, a carteira ficaria liberada sem cálculo. Ele também pede que Bianca eleve seu perfil para acomodar a posição, embora não tenha apresentado informações novas. Calcule a pontuação ponderada e avalie a conclusão do cliente.</p>",
+     "alternativas": {
+      "a": "A carteira marca 2 pontos pela média simples e supera o limite, mas a posição de R$ 90.000 autoriza reduzir o resultado para 1,5.",
+      "b": "A carteira marca 4 pontos pela soma das notas e supera o limite, de modo que a distribuição dos R$ 150.000 não afeta o cálculo.",
+      "c": "A carteira marca 1,7 ponto e supera o limite de 1,5; a concentração no ativo de nota 0,5 não autoriza alterar o perfil sem avaliação.",
+      "d": "A carteira marca 1,4 ponto ao multiplicar 40% por 3,5, pois a posição de nota 0,5 funciona apenas como redutor qualitativo."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-23-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A classificação examina o produto e os ativos subjacentes, emissores, prestadores, garantias e carências, e a metodologia considera ao menos crédito, mercado e liquidez. Produtos da mesma categoria podem ter riscos diferentes.</p><p>A alternativa A usa a categoria para adiar fatores que integram a classificação. A alternativa C transforma pontuação mínima em nota fixa e elimina riscos exigidos. A alternativa D usa nome comercial e divulgação para substituir a avaliação das condições próprias de cada fundo.</p><p>Regra de bolso: categoria organiza o processo; a nota nasce das características efetivas do produto.</p>",
+     "enunciado": "<p>A área de produtos de uma distribuidora avalia dois fundos classificados na mesma categoria de renda fixa com crédito privado. O Fundo Norte mantém ativos de emissores com qualidades de crédito distintas, prazo de saída de cinco dias e ausência de garantia. O Fundo Sul tem outra composição de emissores, carência de cento e oitenta dias e garantia limitada em parte da estrutura. Os prestadores de serviços também são diferentes, e as fichas registram exposições próprias a mercado e liquidez. Um analista propõe atribuir a ambos a nota mínima da categoria porque os nomes comerciais se parecem. A metodologia da casa usa escala de 0,5 a 5 e está em processo de atualização. O comitê possui documentação para avaliar cada estrutura separadamente. Avalie como a instituição deve classificar os produtos.</p>",
+     "alternativas": {
+      "a": "A categoria define uma nota comum, pois crédito, carência e garantia passam a ser examinados somente durante a recomendação ao cliente.",
+      "b": "Os fundos podem receber avaliações distintas após considerar ativos, emissores, prestadores, garantias, carências, crédito, mercado e liquidez.",
+      "c": "A nota mínima funciona como valor fixo da categoria, e a metodologia pode retirar mercado e liquidez quando o emissor já foi analisado.",
+      "d": "A semelhança do nome permite nota comum no cadastro, desde que a instituição descreva as diferenças nos materiais entregues antes da aplicação."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-23-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. O enquadramento automático exige condições cumulativas, inclusive ausência de investimentos incompatíveis na instituição ou no grupo. Renata também deve receber a comunicação e as instruções antes da recomendação, e a recusa isolada não basta.</p><p>A alternativa A transforma recusa em requisito único e adia a comunicação. A alternativa C ignora a aplicação incompatível no grupo econômico. A alternativa D usa uma condição presente para substituir as demais e para afastar obrigações públicas que continuam aplicáveis.</p><p>Regra de bolso: automático no Perfil 1 exige cadastro, histórico compatível, condição do processo e aviso prévio em conjunto.</p>",
+     "enunciado": "<p>Renata abre uma conta em uma plataforma digital. Seu cadastro está atualizado, mas ela ainda não concluiu o questionário de perfil nem apresentou declaração de desenquadramento. A consulta ao grupo econômico mostra uma aplicação anterior incompatível com o Perfil 1. Mesmo assim, o atendente pretende classificá-la automaticamente nessa categoria e recomendar um produto antes de comunicar o enquadramento ou explicar como finalizar a identificação. Renata insiste que recusou responder às perguntas e, por isso, a classificação automática seria um direito seu. A plataforma também precisa preservar as obrigações públicas aplicáveis. Analise se o enquadramento proposto atende às condições da regra.</p>",
+     "alternativas": {
+      "a": "A recusa ao questionário basta para o Perfil 1, e a comunicação pode ocorrer depois da recomendação se o cadastro estiver atualizado.",
+      "b": "O enquadramento falha pela aplicação anterior incompatível e pela falta de comunicação prévia; a recusa isolada não produz a classificação.",
+      "c": "O cadastro atualizado permite o enquadramento, pois investimentos anteriores do grupo não participam da classificação feita pela plataforma.",
+      "d": "A ausência de declaração de desenquadramento supre os demais requisitos e também afasta obrigações públicas sobre identificação do perfil."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-23-q8",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O cliente formaliza o pedido ao distribuidor cedente. A origem confere titularidade, autenticidade e integridade, verifica bloqueios e informa atrasos ou impossibilidade com justificativa, mantendo a titularidade durante a transferência.</p><p>A alternativa B converte transferência em venda e recompra com mudança temporária de titularidade. A alternativa C desloca a formalização para o destino e aceita interesse comercial como barreira. A alternativa D usa a mesma titularidade para dispensar conferências que pertencem ao processo.</p><p>Regra de bolso: na transferência, o titular permanece e o cedente recebe, confere e comunica o andamento.</p>",
+     "enunciado": "<p>Depois de comparar os serviços de duas instituições, Marcelo decide levar suas cotas e outros ativos da Distribuidora Horizonte para a Distribuidora Vale, mantendo a mesma titularidade. Ele entrega o pedido à instituição de destino e pede que ela apenas avise a origem. O gerente da Horizonte, preocupado com a perda de receita, afirma que Marcelo terá de vender a posição e recomprá-la na Vale. Não existe informação de bloqueio nem de estrutura intransferível. Os canais e documentos exigidos para o procedimento estão disponíveis ao investidor. Marcelo confirma que deseja conservar as posições e que seus dados cadastrais coincidem nas duas instituições, mas desconhece qual delas recebe a formalização. Indique o fluxo geral que deve orientar a solicitação de Marcelo.</p>",
+     "alternativas": {
+      "a": "Marcelo formaliza o pedido ao cedente, que confere titularidade, autenticidade, integridade e bloqueios e comunica eventual atraso ou impossibilidade.",
+      "b": "Marcelo vende os ativos na origem e entrega o dinheiro ao destino, pois transferência de custódia exige mudança temporária de titularidade.",
+      "c": "A instituição de destino inicia o pedido em nome de Marcelo, e o cedente pode exigir venda quando a saída reduzir a receita do gerente.",
+      "d": "O cedente recebe o pedido, mas transfere sem conferir autenticidade e bloqueios porque a manutenção da titularidade elimina essas verificações."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-23-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Bloqueio judicial e resgate ainda não convertido e liquidado aparecem entre as causas de recusa das posições afetadas. A redução de receita do gerente não é justificativa, e o item livre deve seguir o processo cabível.</p><p>A alternativa A usa interesse comercial para ampliar a recusa. A alternativa C trata o pedido da cliente como forma de superar bloqueio e transferir resgate pendente. A alternativa B estende impedimentos específicos à posição livre apenas porque os itens vieram no mesmo pedido.</p><p>Regra de bolso: recuse a posição pelo impedimento comprovado, documente a causa e não transforme retenção comercial em requisito.</p>",
+     "enunciado": "<p>Patrícia liga para a central de atendimento depois de solicitar a transferência de três posições para outra distribuidora sem alterar a titularidade. A primeira está submetida a bloqueio judicial. A segunda possui resgate solicitado, mas ainda não convertido e liquidado. A terceira está livre, reconhecida no cadastro e aceita pela instituição de destino. O gerente quer recusar as três de uma vez porque a saída reduzirá sua remuneração e pede que Patrícia desista. Os documentos e os dados da titular estão íntegros, e não foi apontado impedimento próprio para a terceira posição. Ela reconhece os dois impedimentos operacionais, mas exige justificativa individual e continuidade do item livre. Avalie quais motivos podem sustentar a recusa e como tratar a posição restante.</p>",
+     "alternativas": {
+      "a": "A redução da remuneração permite recusar o lote, desde que o gerente informe os bloqueios existentes e ofereça produto semelhante na origem.",
+      "b": "A existência de uma posição bloqueada permite suspender as três, pois o pedido conjunto recebe um único tratamento operacional pelo cedente.",
+      "c": "O resgate pendente pode ser transferido como posição aberta, enquanto o bloqueio judicial deixa de valer após o pedido expresso da titular.",
+      "d": "O bloqueio judicial e o resgate pendente justificam recusar as posições afetadas; a perda comercial não impede transferir o item livre."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-23-q10",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A impossibilidade de transferência deve ser informada ao investidor. A ausência de contrato entre o destino e o administrador fiduciário do fundo também é causa prevista para recusa, com comunicação e justificativa.</p><p>A alternativa B usa a manutenção da titularidade para apagar impedimentos válidos. A alternativa C cria aceite sem contrato e converte posição sem pedido de venda. A alternativa D chama de inconsistência cadastral duas causas diferentes e deixa de explicar cada posição.</p><p>Regra de bolso: impedimento válido não desaparece com o pedido, mas precisa ser identificado e comunicado com sua causa real.</p>",
+     "enunciado": "<p>A cliente Iara solicita à Distribuidora Cedro a transferência de cotas de dois fundos para a Distribuidora Lago, conservando a titularidade. O regulamento operacional do primeiro fundo informa que sua estrutura não permite transferência. No segundo, a posição está reconhecida e sem bloqueios, mas a Lago não possui contrato com o administrador fiduciário. Iara acredita que a simples vontade de sair obriga as instituições a concluir os dois movimentos no mesmo dia. A Cedro dispõe de canal para dúvidas, recebeu documentação íntegra e precisa responder separadamente sobre cada posição. A Lago confirma a ausência do contrato e informa que ainda não tem data para celebrá-lo. Analise as causas apresentadas e indique a comunicação cabível.</p>",
+     "alternativas": {
+      "a": "A Cedro informa a impossibilidade estrutural do primeiro e justifica a recusa do segundo pela ausência de contrato entre destino e administrador.",
+      "b": "A Cedro executa os dois pedidos porque a mesma titularidade supera limitações da estrutura e relações contratuais da instituição de destino.",
+      "c": "A Lago aceita o segundo fundo sem contrato e regulariza a relação depois, enquanto a Cedro converte o primeiro em dinheiro para transferi-lo.",
+      "d": "A Cedro recusa o lote por inconsistência cadastral, pois a ausência de contrato e a intransferibilidade equivalem a erro nos dados da cliente."
+     },
+     "gabarito": "a"
+    }
+   ],
+   "Relacionamento com clientes: Resoluções CMN 4.949 e BCB 155": [
+    {
+     "id": "cpror-rel-24-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A CMN 4.949 disciplina as instituições de seu âmbito e exclui administradoras de consórcio, instituições de pagamento, corretoras e distribuidoras de valores mobiliários e corretoras de câmbio, remetidas à regulamentação específica do Banco Central.</p><p>A alternativa B coloca consórcios e instituições de pagamento na norma que os exclui e restringe indevidamente a BCB 155. A alternativa C devolve corretoras e distribuidoras ao âmbito da CMN 4.949. A alternativa D trata normas com âmbitos próprios como textos opcionais.</p><p>Regra de bolso: primeiro identifique o segmento; depois aplique a norma que o alcança em seu âmbito próprio.</p>",
+     "enunciado": "<p>Uma equipe de conformidade precisa identificar qual norma de relacionamento alcança cada segmento regulado. Compare o âmbito atual das Resoluções CMN 4.949/2021 e BCB 155/2021.</p>",
+     "alternativas": {
+      "a": "A CMN 4.949 rege as instituições de seu âmbito; os segmentos que ela exclui seguem a BCB 155 dentro do respectivo alcance.",
+      "b": "A CMN 4.949 abrange administradoras de consórcio e instituições de pagamento, enquanto a BCB 155 se limita às corretoras de câmbio.",
+      "c": "A BCB 155 alcança instituições de pagamento e consórcios, enquanto corretoras e distribuidoras permanecem na CMN 4.949.",
+      "d": "As duas resoluções possuem âmbito idêntico, e a instituição pode escolher qual texto aplicar ao elaborar sua política de relacionamento."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-24-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. As normas abrangem as três fases do relacionamento, e seus princípios precisam aparecer no processo real, desde as informações para escolha até atendimento, documentos e encerramento.</p><p>A alternativa B encerra os deveres na entrega do comprovante e reduz princípios a texto formal. A alternativa C retira o pós-contrato do âmbito e aceita retenção comercial como regra. A alternativa A concentra a disciplina na saída e elimina deveres anteriores.</p><p>Regra de bolso: antes, durante e depois do contrato, os princípios precisam virar procedimento observável.</p>",
+     "enunciado": "<p>Ao revisar o manual de atendimento, uma gerente precisa resumir em que momentos e por quais princípios as normas orientam o relacionamento. Identifique a descrição correta.</p>",
+     "alternativas": {
+      "a": "A disciplina concentra-se no encerramento, pois a livre escolha anterior ao contrato afasta deveres de adequação e clareza da instituição.",
+      "b": "A disciplina começa na assinatura e termina na entrega do comprovante, enquanto ética e transparência permanecem restritas à política institucional.",
+      "c": "A disciplina trata da oferta e da contratação, e as demandas posteriores seguem os procedimentos comerciais definidos para retenção de clientes.",
+      "d": "A disciplina alcança a pré-contratação, a contratação e a pós-contratação, com ética, responsabilidade, transparência e diligência em condutas concretas."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-24-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A instituição deve considerar o perfil e a vulnerabilidade, apresentar informação compreensível para livre escolha e avaliar a adequação às necessidades, aos interesses e aos objetivos antes da contratação.</p><p>A alternativa B confunde equidade com atendimento mecânico idêntico. A alternativa C transfere informação essencial para depois da assinatura. A alternativa D limita a explicação ao risco de mercado e trata a presença formal de texto técnico como comunicação suficiente.</p><p>Regra de bolso: informação cumpre sua função quando o cliente consegue compreender o que contrata e decidir livremente.</p>",
+     "enunciado": "<p>Teresa procura uma agência para contratar um serviço de investimento e informa que tem dificuldade para compreender documentos extensos. O atendente entrega um contrato padronizado, aponta uma cláusula escrita em linguagem técnica sobre custos e penalidades e pede assinatura imediata. Ele afirma que a presença formal da cláusula cumpre a transparência, embora Teresa não consiga explicar o prazo, os encargos nem o risco de saída. O produto também não foi comparado com as necessidades e os objetivos relatados pela cliente. Teresa havia pedido uma explicação simples ao marcar o atendimento, e a solicitação aparece no sistema da agência. A instituição possui recursos para apresentar um resumo claro e conceder tempo de leitura. Avalie a conduta necessária antes da contratação.</p>",
+     "alternativas": {
+      "a": "Explicar direitos, deveres, custos, penalidades, riscos e condições de forma compreensível e verificar a adequação às necessidades de Teresa.",
+      "b": "Manter o contrato porque o tratamento equitativo exige entregar o mesmo texto, no mesmo prazo, sem considerar a vulnerabilidade informada.",
+      "c": "Solicitar a assinatura e explicar os encargos depois, pois o dever de atendimento permanece na fase posterior à contratação.",
+      "d": "Resumir somente o risco de mercado, já que prazo, penalidades e custos constam da cláusula técnica disponível para consulta."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-24-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A conferência de identidade pode proteger Carlos, mas deve ocorrer por meio apropriado e não pode virar sucessão indefinida de obstáculos. A demanda deve ser tratada com segurança, justificativa e tempestividade.</p><p>A alternativa C elimina uma conferência legítima em nome da rapidez. A alternativa B transforma visitas sem justificativa e venda condicionada em requisitos de saída. A alternativa D paralisa a demanda e retira o cancelamento dos deveres posteriores à contratação.</p><p>Regra de bolso: segurança proporcional protege o cliente; barreira sem função apenas dificulta seu direito.</p>",
+     "enunciado": "<p>Carlos solicita pelo telefone o cancelamento de um serviço contratado pelo aplicativo. Como o canal ainda não validou sua identidade, a atendente informa que fará uma conferência adicional e oferece um meio digital apropriado para concluí-la. O número usado na ligação consta do cadastro, mas esse dado isolado não conclui a autenticação prevista no canal. O supervisor prefere exigir três visitas presenciais, sem explicar a função de cada comparecimento, e condicionar o cancelamento à contratação de outro produto. Carlos insiste que a instituição dispense qualquer conferência porque já conhece seus dados cadastrais. A equipe precisa conciliar segurança, tempestividade e ausência de obstáculos injustificados. Indique o procedimento compatível com as normas de relacionamento.</p>",
+     "alternativas": {
+      "a": "Validar a identidade por meio apropriado, explicar o requisito e processar a demanda sem visitas sucessivas nem venda condicionada.",
+      "b": "Exigir as visitas e a nova contratação, pois a instituição pode definir condições comerciais próprias para encerrar o relacionamento.",
+      "c": "Dispensar a identificação e cancelar pelo telefonema, pois a tempestividade impede controles de segurança em demandas feitas fora da agência.",
+      "d": "Suspender o pedido até Carlos comparecer espontaneamente, pois oferecer canal de cancelamento pertence à fase de contratação do serviço."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-24-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A CMN 4.949 disciplina o atendimento presencial e, como regra, impede recusa apenas pela existência de canal alternativo. Também afasta limites arbitrários e exige informação visível e legível da cooperativa sobre não associados.</p><p>A alternativa A usa aplicativo e organização de fila para justificar recusa e limite sem base. A alternativa C condiciona o atendimento à prova sobre o aparelho e preserva a restrição arbitrária. A alternativa D mistura deveres de instituições distintas e elimina a informação específica da cooperativa.</p><p>Regra de bolso: canal digital amplia opções, mas não vira justificativa automática para fechar o atendimento presencial.</p>",
+     "enunciado": "<p>Joaquim entra em uma agência bancária para pedir um comprovante e esclarecer uma cobrança. Ele apresenta seu documento e aguarda na fila comum, sem solicitar procedimento que exija estrutura especial. Um funcionário aponta o aplicativo e recusa o atendimento presencial porque a operação está disponível no canal digital. Outra cliente deseja realizar duas operações documentais, mas a agência anuncia um limite interno de uma operação por pessoa, sem indicar base normativa. No mesmo salão, uma cooperativa mantém aviso pouco legível sobre as condições de atendimento a não associados. Os responsáveis precisam rever as três práticas segundo a Resolução CMN 4.949. Avalie o tratamento aplicável ao atendimento presencial.</p>",
+     "alternativas": {
+      "a": "A existência do aplicativo permite recusar Joaquim, e o limite interno organiza a fila se a cooperativa mantiver algum aviso sobre não associados.",
+      "b": "A agência deve atender quem a procura, ressalvadas exceções normativas, evitar limites arbitrários e exibir a regra da cooperativa de forma visível e legível.",
+      "c": "A agência pode impor o limite documental, mas atende Joaquim se ele provar que não possui aparelho compatível com o aplicativo disponível.",
+      "d": "A cooperativa fica dispensada de informar o atendimento a não associados quando a agência bancária oferece canal digital para comprovantes."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-24-q6",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Na adesão ao consórcio, a informação contempla taxa de administração, inclusive antecipada, fundo de reserva e seguro quando houver, expressos como percentual do crédito segundo os pagamentos previstos. A comparação também precisa explicar diferenças e efeitos financeiros.</p><p>A alternativa A usa a ausência de juros para omitir custos relevantes. A alternativa B troca o percentual exigido por valor mensal e presume que parcelas tornam produtos comparáveis. A alternativa C retira o seguro posterior da informação inicial, quando sua existência e forma de cobrança precisam ser informadas.</p><p>Regra de bolso: consórcio sem juros continua exigindo visão completa dos custos e da forma como serão cobrados.</p>",
+     "enunciado": "<p>Beatriz recebe uma proposta de adesão a consórcio com crédito de R$ 180.000. O vendedor destaca a ausência de juros e informa a taxa de administração em valor mensal, sem expressá-la como percentual do crédito. O contrato prevê fundo de reserva e seguro, sendo o seguro cobrado somente após a contemplação. Esses dois itens ficam fora da explicação inicial. Para convencer a cliente, o vendedor compara a parcela com a de um financiamento, mas não explica as diferenças nem os efeitos financeiros das formas de cobrança. A simulação reúne os pagamentos previstos, porém não apresenta a relação deles com o valor do crédito. Beatriz pede uma apresentação que permita entender os custos antes de assinar. Analise o conteúdo que deve integrar a informação de adesão.</p>",
+     "alternativas": {
+      "a": "A ausência de juros basta para a decisão, e fundo de reserva e seguro podem ser explicados quando começarem a produzir cobrança para Beatriz.",
+      "b": "A taxa mensal pode substituir o percentual do crédito, pois a comparação da parcela com financiamento já revela o custo relativo da proposta.",
+      "c": "O seguro posterior fica fora da adesão, e a instituição informa somente a forma de cobrança depois da contemplação e da primeira cobrança.",
+      "d": "A apresentação deve trazer taxa de administração, fundo de reserva e seguro quando existentes, em percentual do crédito, além das diferenças da comparação."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-24-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A política deve ser formalizada, aprovada, avaliada, definir responsabilidades e prever treinamento e divulgação. Há acompanhamento, correção, testes periódicos da auditoria, diretor indicado e registros dos controles disponíveis ao Banco Central por pelo menos cinco anos.</p><p>A alternativa A reduz a obrigação ao documento aprovado. A alternativa C deixa incentivos comerciais contrariarem as diretrizes da política. A alternativa D reduz indevidamente o prazo dos registros e condiciona a auditoria à reclamação.</p><p>Regra de bolso: política efetiva tem responsáveis, pessoas treinadas, controles testados, falhas corrigidas e evidências preservadas.</p>",
+     "enunciado": "<p>A diretoria da Instituição Delta aprovou uma política de relacionamento e publicou o documento na intranet. Depois disso, não definiu responsáveis, cancelou o treinamento e manteve campanhas, cobrança e encerramento sem avaliação de aderência. As metas dos funcionários premiam a quantidade de contratos, e desvios em relação às necessidades dos clientes não recebem tratamento. A auditoria interna deixou de testar os controles, e a empresa pretende eliminar seus registros dois anos após a criação. Desde a aprovação, nenhum relatório mediu a efetividade dos procedimentos ou registrou correções de deficiências. Um diretor argumenta que a aprovação formal já cumpre a obrigação e dispensa novas providências. Avalie a estrutura necessária para transformar a política em rotina efetiva.</p>",
+     "alternativas": {
+      "a": "A aprovação e a divulgação interna encerram a obrigação, enquanto treinamento, auditoria e registros pertencem à gestão comercial da instituição.",
+      "b": "A política define responsáveis, treinamento, avaliação, controles e correções, com testes periódicos, diretor indicado e registros por cinco anos.",
+      "c": "As metas podem prevalecer sobre a política durante campanhas, desde que os funcionários informem ao cliente a remuneração recebida pela venda.",
+      "d": "Os registros podem ser eliminados em dois anos se a diretoria aprovar a efetividade, e a auditoria atua somente quando surge reclamação formal."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-24-q8",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A informação precisa permitir que Márcia identifique direitos, deveres, custos, penalidades e riscos. Dizer apenas que existe saída cria expectativa incompleta quando há condições e possibilidade de receber valor inferior ao aplicado.</p><p>A alternativa A confunde presença formal de texto com comunicação compreensível. A alternativa C omite justamente valor e encargos relevantes à decisão. A alternativa D adia informações essenciais para depois da contratação e compromete a livre escolha.</p><p>Regra de bolso: possibilidade de saída só informa de verdade quando prazo, custo, condição e risco vêm junto.</p>",
+     "enunciado": "<p>Márcia recebe pelo aplicativo a descrição de um investimento como “produto com possibilidade de saída”. Antes de contratar, pergunta quando poderá retirar os recursos, qual valor receberá e quais encargos incidem. O atendente responde que a frase já informa liquidez e que os detalhes ficam em um documento técnico. Nesse documento, a saída depende de condições específicas e pode ocorrer por valor inferior ao aplicado, mas essas informações aparecem em texto que Márcia afirma não compreender. O comprovante também não destaca prazo nem penalidade. Márcia explica que sua decisão depende de comparar a data em que usará o dinheiro com as condições reais de retirada. A equipe pode reorganizar a comunicação antes da decisão. Avalie como apresentar as condições do produto.</p>",
+     "alternativas": {
+      "a": "Manter a frase curta porque a existência do documento técnico comprova transparência, ainda que a cliente não compreenda as condições de saída.",
+      "b": "Explicar prazos, encargos, riscos e condições da saída em linguagem compreensível, inclusive a possibilidade de valor inferior ao aplicado.",
+      "c": "Informar somente o prazo, pois o valor de saída e os encargos dependem do mercado e ficam dispensados quando variam ao longo do tempo.",
+      "d": "Entregar o comprovante após a aplicação, pois clareza sobre penalidades e riscos integra o atendimento posterior e não interfere na livre escolha."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-24-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. A BCB 155 teve o alcance ampliado em 2024 e em 2026, quando passou a incluir sociedades prestadoras de serviços de ativos virtuais autorizadas pelo Banco Central. Usar ativos virtuais na plataforma não prova, isoladamente, o enquadramento.</p><p>A alternativa A ignora as ampliações posteriores. A alternativa B equipara funcionalidade da plataforma a categoria regulada e autorização. A alternativa D atribui a atualização à CMN 4.949 e preserva indevidamente o alcance antigo da BCB 155.</p><p>Regra de bolso: atualização de abrangência exige identificar a categoria regulada e confirmar a autorização correspondente.</p>",
+     "enunciado": "<p>Uma fintech prepara seu mapa regulatório e registra que a Resolução BCB 155 continua restrita a instituições de pagamento e administradoras de consórcio. A equipe jurídica lembra que a abrangência foi ampliada pela Resolução BCB 368/2024 e novamente pela Resolução BCB 552/2026. A empresa oferece uma plataforma que permite acesso a ativos virtuais, mas ainda precisa verificar se pertence à categoria de sociedade prestadora desses serviços autorizada a funcionar pelo Banco Central. Seus documentos internos descrevem a funcionalidade, mas não registram o enquadramento nem a autorização regulatória. O diretor quer aplicar a atualização apenas porque a interface exibe ativos virtuais. Analise a abrangência atual e o dado necessário ao enquadramento da empresa.</p>",
+     "alternativas": {
+      "a": "A BCB 155 permanece restrita aos dois segmentos originais, e as resoluções posteriores alteraram apenas procedimentos internos de atendimento.",
+      "b": "A exibição de ativos virtuais enquadra a plataforma como sociedade regulada, independentemente de autorização e da categoria jurídica reconhecida.",
+      "c": "A abrangência foi ampliada e inclui sociedades autorizadas de serviços de ativos virtuais; a empresa precisa confirmar categoria e autorização.",
+      "d": "A atualização de 2026 transfere plataformas de ativos virtuais para a CMN 4.949, enquanto a BCB 155 mantém o alcance anterior a 2024."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-24-q10",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Os deveres posteriores incluem fornecer documentos e processar cancelamento ou transferência com tempestividade, preservadas verificações legítimas, mas sem procedimentos comerciais sem justificativa que dificultem a saída.</p><p>A alternativa A chama retenção comercial de diligência e aceita fracionamento sem função. A alternativa B usa disponibilidade de produtos para suspender a vontade da cliente. A alternativa D cria visita sem justificativa mesmo após as verificações necessárias.</p><p>Regra de bolso: diligência resolve a demanda com segurança e prazo; retenção comercial não pode virar obstáculo à saída.</p>",
+     "enunciado": "<p>Após contratar uma conta, Rosa pede cópia de documentos e transferência de seu relacionamento para outra instituição. O cadastro está regular, não há restrição legal e as obrigações contratuais aplicáveis foram cumpridas. A área operacional confirma que recebeu a solicitação completa e não apontou pendência de identidade ou segurança. A equipe de retenção determina que cada documento seja solicitado em dia diferente e que a transferência fique parada até Rosa ouvir três novas ofertas. O gerente defende a prática como demonstração de diligência, pois deseja confirmar a decisão da cliente. Rosa recusa as ofertas e pede prazo e justificativa para a demora. Indique como responsabilidade, transparência e diligência devem aparecer no tratamento da demanda.</p>",
+     "alternativas": {
+      "a": "A equipe pode fracionar os documentos e aguardar as ofertas, pois a retenção demonstra diligência quando a cliente tem liberdade para recusá-las.",
+      "b": "A transferência pode ficar suspensa enquanto houver produtos da própria instituição compatíveis com o cadastro e disponíveis para nova oferta.",
+      "c": "A instituição deve fornecer documentos e tratar a transferência com tempestividade, sem usar etapas comerciais desarrazoadas como barreira.",
+      "d": "A instituição entrega os documentos, mas condiciona a transferência à visita presencial, ainda que identidade e obrigações já estejam verificadas."
+     },
+     "gabarito": "c"
+    }
+   ],
+   "Educação financeira institucional: resolução conjunta citada no programa": [
+    {
+     "id": "cpror-rel-25-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A referência do programa é à Resolução Conjunta 8, de 21 de dezembro de 2023, editada pelo Banco Central e pelo Conselho Monetário Nacional e vigente desde 1º de julho de 2024.</p><p>A alternativa B interpreta o número 8 como mês de agosto e erra a vigência. A alternativa C troca data, edição e público. A alternativa A confunde a norma citada com a Resolução Conjunta 20, publicada em 2026.</p><p>Regra de bolso: em “08/2023”, leia primeiro o número da resolução, depois confirme data, editores e vigência.</p>",
+     "enunciado": "<p>Uma analista confere a referência “08/2023” usada no programa da certificação. Identifique a norma, seus editores e a data em que entrou em vigor.</p>",
+     "alternativas": {
+      "a": "Resolução Conjunta 20, editada pelo Banco Central e pelo CMN em dezembro de 2023, vigente desde 1º de julho de 2024.",
+      "b": "Resolução Conjunta de agosto de 2023, editada pelo Banco Central, vigente desde a data de publicação do programa da certificação.",
+      "c": "Resolução Conjunta 8, editada pelo CMN em agosto de 2023, vigente desde 1º de janeiro de 2024 para clientes pessoas jurídicas.",
+      "d": "Resolução Conjunta 8, editada pelo Banco Central e pelo CMN em 21 de dezembro de 2023, vigente desde 1º de julho de 2024."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-25-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. As medidas alcançam clientes e usuários pessoas naturais, inclusive empresários individuais, e o consorciado é cliente. Os objetivos incluem orçamento, poupança, resiliência e prevenção de inadimplemento e superendividamento.</p><p>A alternativa A exclui públicos abrangidos e reduz educação à contratação. A alternativa C troca pessoas naturais por empresas e finalidade educativa por venda. A alternativa D restringe público e objetivo a operações vencidas e substituição de dívida.</p><p>Regra de bolso: a política atende pessoas naturais e fortalece organização, poupança, resiliência e prevenção.</p>",
+     "enunciado": "<p>Uma instituição prepara o público e os objetivos de sua política de educação financeira. Identifique a combinação compatível com a Resolução Conjunta 8.</p>",
+     "alternativas": {
+      "a": "Pessoas naturais, exceto empresários individuais e consorciados, com foco na contratação de investimentos oferecidos pela instituição.",
+      "b": "Pessoas naturais, inclusive empresários individuais e consorciados, com orçamento, poupança, resiliência e prevenção do endividamento problemático.",
+      "c": "Clientes empresariais de qualquer porte, com foco em publicidade, aumento de vendas e comparação entre produtos próprios.",
+      "d": "Clientes com operações vencidas, com foco restrito à substituição de dívidas por contratos de prazo prolongado dentro da instituição."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-25-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Valor exige utilidade para decisões, alcance exige acesso às medidas e adequação e personalização pedem canal, linguagem e momento compatíveis com o público. Correção técnica isolada não garante efetividade.</p><p>A alternativa B confunde disponibilização uniforme com acesso efetivo. A alternativa C usa personalização para omitir riscos, quando adaptar significa explicar de modo utilizável. A alternativa D atribui o problema à cliente e repete o canal que já falhou.</p><p>Regra de bolso: educação útil precisa chegar, ser compreendida e ajudar uma decisão real.</p>",
+     "enunciado": "<p>Laura recebe pelo aplicativo uma trilha tecnicamente correta sobre reserva financeira. Ela tem dificuldade para usar o canal, informa que os vídeos não possuem recurso acessível para sua necessidade e abandona o conteúdo na primeira etapa. A instituição considera a ação concluída porque disponibilizou o mesmo material a toda a base. O relatório mostra muitas entregas, baixo acesso e ausência de retorno sobre compreensão. Em atendimentos anteriores, Laura utilizou material escrito e conversa por telefone, canais que continuam disponíveis na instituição. Ela pede uma explicação em formato que consiga consultar durante a organização do orçamento familiar. Avalie a aplicação dos princípios de valor para o cliente, amplo alcance e adequação e personalização.</p>",
+     "alternativas": {
+      "a": "A ação deve entregar conteúdo útil, ampliar acesso real e adaptar canal, linguagem e momento às características e necessidades do público.",
+      "b": "A entrega uniforme cumpre amplo alcance e torna desnecessário adaptar canal ou linguagem quando o conteúdo técnico está correto.",
+      "c": "A personalização permite retirar riscos e dificuldades do material para facilitar o entendimento e aumentar o número de conclusões da trilha.",
+      "d": "O baixo acesso indica falta de interesse de Laura, e a instituição preserva valor para o cliente repetindo o envio pelo mesmo aplicativo."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-25-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A política considera fases do relacionamento e precisa ser compatível com negócio, atividades e complexidade dos produtos. Diante de sinais de dificuldade, conteúdo de orçamento e uso do crédito pode ser útil no momento adequado.</p><p>A alternativa A trata qualquer tema e momento como equivalentes. A alternativa B desloca prevenção para depois da consolidação do problema. A alternativa D transforma complexidade em justificativa para trilha única e exclui objetivos previstos na norma.</p><p>Regra de bolso: conteúdo educativo funciona quando assunto, público e momento respondem à necessidade observada.</p>",
+     "enunciado": "<p>A equipe de crédito identifica clientes que começam a atrasar pagamentos, mas programa para eles uma mensagem genérica sobre investimento enviada seis meses depois. O conteúdo não trata de orçamento, custo do crédito ou prevenção de inadimplemento. Entre os destinatários há pessoas na fase de contratação e outras que já apresentam dificuldade recorrente, mas a programação não distingue os grupos. O responsável afirma que qualquer mensagem financeira satisfaz a política, pois a instituição possui produtos simples e complexos e não precisa diferenciar momentos do relacionamento. Os dados disponíveis permitiriam oferecer orientação antes da contratação ou diante dos primeiros sinais de dificuldade. Indique como a política deve orientar o desenho da medida.</p>",
+     "alternativas": {
+      "a": "A mensagem genérica cumpre a política porque o tema investimento pertence à vida financeira, independentemente do momento e da necessidade identificada.",
+      "b": "A instituição deve enviar o conteúdo depois do atraso consolidado, pois prevenção de inadimplemento começa quando a dívida já exige renegociação.",
+      "c": "A orientação deve considerar a fase do relacionamento, o modelo de negócio, as atividades, a complexidade dos produtos e a necessidade observada.",
+      "d": "A existência de produtos complexos exige uma trilha única sobre investimentos, enquanto orçamento e crédito ficam fora da educação institucional."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-25-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A política pode ser unificada no conglomerado ou sistema cooperativo, mas quem a utiliza sem política própria formaliza a decisão em reunião do conselho ou da diretoria. As ações ainda consideram seu público e seus serviços.</p><p>A alternativa B substitui deliberação formal por mensagens e ignora diferenças de acesso. A alternativa C cria proibição baseada em públicos distintos. A alternativa D usa aprovação e diretor de outra participante para dispensar a formalização interna exigida.</p><p>Regra de bolso: compartilhar a política reduz duplicação, mas não elimina decisão formal nem adaptação local.</p>",
+     "enunciado": "<p>Três instituições de um sistema cooperativo decidem utilizar uma política unificada de educação financeira. Uma delas não criará política própria, mas pretende apenas mencionar o documento compartilhado em uma troca de mensagens entre gerentes. Seu público reúne trabalhadores rurais com acesso limitado ao aplicativo, enquanto outra participante atende clientes por canais digitais. As instituições também oferecem serviços de complexidades diferentes e mantêm estruturas próprias de atendimento. O conselho de administração ainda não deliberou sobre a adesão, não há registro de reunião da diretoria e as ações propostas repetem o mesmo formato para as três instituições. A equipe local consegue adaptar canal e linguagem sem alterar as diretrizes comuns. Avalie a formalização e a aplicação da política compartilhada.</p>",
+     "alternativas": {
+      "a": "A decisão deve ser formalizada em reunião do conselho ou da diretoria, e as ações continuam adaptadas ao público e aos serviços de cada instituição.",
+      "b": "A troca entre gerentes formaliza a adesão, e a política unificada permite repetir o mesmo canal porque pertence ao sistema cooperativo.",
+      "c": "A instituição com acesso digital limitado precisa criar política própria, pois a norma admite documento unificado somente quando os públicos são idênticos.",
+      "d": "A política compartilhada dispensa ato interno de adesão se uma das participantes já aprovou o documento e indicou diretor ao Banco Central."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-25-q6",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Os mecanismos asseguram implementação, monitoramento do cumprimento e da efetividade, métricas adequadas e correção de ineficiências. Há diretor responsável indicado ao Banco Central. Mensagens enviadas medem atividade, não resultado isoladamente.</p><p>A alternativa B equipara volume a efetividade. A alternativa C transforma exemplos didáticos de métricas em lista obrigatória definida pela norma. A alternativa D usa reclamações como substitutas do acompanhamento e condiciona indevidamente a indicação do diretor.</p><p>Regra de bolso: conte o que foi feito, meça o que produziu e corrija o que não funcionou.</p>",
+     "enunciado": "<p>O comitê de uma instituição recebe um painel que mostra 400.000 mensagens enviadas sobre orçamento, mas não informa quantas chegaram ao público, foram compreendidas ou estimularam o uso da ferramenta oferecida. Reclamações indicam termos incompreensíveis, e a campanha continua sem ajustes. A base permite comparar alcance, entendimento declarado e uso da ferramenta sem divulgar dados fora dos controles aplicáveis. A área responsável declara que o volume prova efetividade e dispensa outras métricas. Também não há processo para corrigir ineficiências nem diretor indicado ao Banco Central. A equipe de controles propõe separar realização e resultado, respeitando os controles de dados. Avalie a estrutura de acompanhamento compatível com a política.</p>",
+     "alternativas": {
+      "a": "A instituição deve monitorar implementação e efetividade com métricas adequadas, corrigir ineficiências e indicar diretor responsável ao Banco Central.",
+      "b": "O volume enviado comprova cumprimento e efetividade, enquanto alcance, entendimento e uso da ferramenta ficam como dados promocionais facultativos.",
+      "c": "A instituição deve adotar alcance, entendimento e uso como lista obrigatória e imutável de indicadores definida pela resolução conjunta.",
+      "d": "As reclamações substituem métricas de resultado, e o diretor passa a ser indicado somente quando a campanha deixa de atingir a quantidade prevista."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-25-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A iniciativa educativa precisa entregar informação útil para reconhecer o comprometimento da renda, comparar custos e compreender novas parcelas. Uma oferta pode existir em outro contexto, mas não substitui a educação nem corrige orçamento deficitário.</p><p>A alternativa A usa parcela inicial para validar conteúdo sem orçamento e custo total. A alternativa C transforma urgência do cliente em prova de compreensão. A alternativa D atribui finalidade ao nome da campanha e adia a análise necessária à decisão.</p><p>Regra de bolso: educação melhora a decisão; promoção comercial apenas apresenta uma contratação.</p>",
+     "enunciado": "<p>Renato usa crédito caro de forma recorrente e procura ajuda depois de perceber que as parcelas consomem parte crescente de sua renda. A campanha chamada “educação financeira” apresenta somente um novo empréstimo, sem orçamento, custo total, comparação de consequências ou ferramenta de organização. A simulação destaca a parcela inicial, mas não mostra como a nova obrigação convive com as demais despesas mensais. O vendedor promete que a troca resolverá o problema, embora o levantamento mostre que as despesas continuam acima da renda. Renato insiste na contratação imediata porque a parcela inicial parece baixa e acredita que o nome da campanha garante orientação imparcial. Avalie a finalidade da iniciativa e a resposta educativa aplicável ao caso.</p>",
+     "alternativas": {
+      "a": "A campanha é educativa porque a nova parcela reduz o desembolso inicial, ainda que o conteúdo não trate do orçamento nem do custo total.",
+      "b": "A orientação deve explicar comprometimento da renda, custos e alternativas de organização antes da decisão; a oferta isolada não cumpre essa finalidade.",
+      "c": "A oferta substitui a educação quando o cliente pede contratação imediata, pois sua decisão comprova que compreendeu as consequências financeiras.",
+      "d": "O nome da campanha define sua natureza educativa, e a instituição pode deixar a comparação de consequências para o atendimento posterior."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-25-q8",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Disponibilizar apenas uma ferramenta digital pode falhar quando o cliente não utiliza bem o aplicativo. A adequação orienta buscar forma acessível, considerando necessidade, público e realidade da instituição.</p><p>A alternativa A confunde envio repetido com acesso. A alternativa C usa adaptação para omitir parte útil do conteúdo. A alternativa B transforma personalização em obrigação de solução exclusiva, embora já exista canal acessível.</p><p>Regra de bolso: adapte o caminho para que o conteúdo chegue, sem reduzir a informação que o cliente precisa usar.</p>",
+     "enunciado": "<p>Arnaldo deseja aprender a organizar despesas essenciais e planejar uma reserva, mas informa que não utiliza bem o aplicativo da instituição. O único material oferecido a ele é uma ferramenta digital com várias etapas, e o atendente sugere apenas reenviar o link. O histórico mostra que Arnaldo acompanha orientações por telefone e consulta documentos impressos durante o atendimento, opções já usadas pela instituição com outros conteúdos. Ele pede apoio para compreender como separar gastos e formar proteção para imprevistos. A equipe reconhece que não existe solução universal e que o desenho da medida precisa considerar seu público e a realidade operacional. Indique a resposta coerente com adequação e personalização.</p>",
+     "alternativas": {
+      "a": "Reenviar o link preserva amplo alcance, pois disponibilizar a mesma ferramenta assegura acesso mesmo quando o cliente relata dificuldade com o canal.",
+      "b": "A personalização exige criar um canal exclusivo para Arnaldo, ainda que a instituição já disponha de meio acessível usado no atendimento.",
+      "c": "A dificuldade com o aplicativo permite omitir formação de reserva e restringir a orientação às despesas que o atendente considera prioritárias.",
+      "d": "A instituição deve buscar forma acessível de transmitir o conteúdo, adaptando o canal à necessidade de Arnaldo e à sua realidade operacional."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-25-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. A Resolução Conjunta 20 foi publicada em 4 de maio de 2026, mas sua entrada em vigor está prevista para 1º de julho de 2027. Em setembro de 2026, suas inclusões ainda não são exigíveis por força dessa alteração.</p><p>A alternativa A confunde publicação com vigência. A alternativa B cria vigências separadas que a aula não estabelece. A alternativa D usa a vigência futura para apagar deveres semelhantes que podem decorrer de outra norma aplicável.</p><p>Regra de bolso: norma publicada pode produzir efeitos depois; resolva o caso pela data de entrada em vigor indicada.</p>",
+     "enunciado": "<p>Uma analista revisa a política em setembro de 2026 e encontra a Resolução Conjunta 20, publicada em 4 de maio daquele ano. O texto prevê entrada em vigor em 1º de julho de 2027 e inclui disposições sobre informações e assessoramento diante de saldo devedor vencido persistente ou recorrente, além de requisitos expressos de aprovação, avaliação, responsabilidades, treinamento, disseminação e formalização. A ata da reunião registra separadamente a data da publicação e a data prevista para produção dos efeitos. O diretor quer registrar que essas inclusões já são exigíveis por força da alteração, pois a norma está publicada. A equipe precisa distinguir publicação e vigência sem afastar deveres oriundos de outras regras. Avalie a conclusão temporal correta.</p>",
+     "alternativas": {
+      "a": "As inclusões já vigoram em setembro de 2026 porque a publicação torna exigível o texto antes da data indicada para sua entrada em vigor.",
+      "b": "As inclusões vigoram desde maio de 2026 para saldo vencido e desde julho de 2027 para aprovação, treinamento e formalização da política.",
+      "c": "As inclusões entram em vigor em julho de 2027; antes disso, não devem ser tratadas como vigentes por força da Resolução Conjunta 20.",
+      "d": "A vigência futura elimina até julho de 2027 deveres semelhantes que possam existir em outra regra aplicável à instituição e ao caso."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-25-q10",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Os sinais mostram que enviar não bastou. A instituição pode combinar métricas adequadas, identificar o ponto de falha, ajustar canal, linguagem ou momento e verificar se a mudança melhora a efetividade.</p><p>A alternativa A repete a atividade sem examinar o problema. A alternativa C interpreta baixo acesso como ausência de necessidade. A alternativa D troca a medição para validar o processo existente e continua confundindo realização com resultado.</p><p>Regra de bolso: quando a medida não chega ou não é compreendida, ajuste a execução e meça novamente.</p>",
+     "enunciado": "<p>Após três meses de uma campanha sobre planejamento do orçamento, a instituição verifica que os materiais foram enviados à base prevista, mas poucos clientes abriram o conteúdo e muitos abandonaram a leitura nos termos técnicos. A ferramenta permite registrar uso sem expor dados fora dos controles existentes. A equipe comercial propõe duplicar a frequência das mensagens sem mudar canal, linguagem ou momento. O diretor responsável recebe dados de alcance e comentários que mostram dificuldade de compreensão, mas ainda não há análise do uso da ferramenta de orçamento. A área de controles precisa decidir como reagir aos sinais sem transformar exemplos de métricas em lista fixa. Avalie a providência coerente com efetividade e correção de ineficiências.</p>",
+     "alternativas": {
+      "a": "Duplicar os envios demonstra correção, pois o número de mensagens compensa a baixa abertura e elimina a necessidade de avaliar compreensão.",
+      "b": "A instituição deve examinar alcance, compreensão e uso possível, ajustar canal, linguagem ou momento e acompanhar o resultado da mudança.",
+      "c": "A instituição deve encerrar a campanha, pois baixa abertura comprova que o público não necessita de educação sobre planejamento do orçamento.",
+      "d": "A instituição preserva o material e troca apenas o indicador, registrando mensagens enviadas como medida suficiente de efetividade institucional."
+     },
+     "gabarito": "b"
     }
    ]
   }
