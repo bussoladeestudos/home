@@ -5,6 +5,8 @@
   --navy:#173E2C; --navy-mid:#1F5540; --blue:#2FB374; --blue-pale:#E7F5ED; --blue-border:#9FE0BF;
   /* Sucesso (verde mais profundo) */
   --green:#1C7A4B; --green-viv:#2FB374; --green-pale:#E4F4EA; --green-border:#A6E2BE; --green-mid:#C8EED5;
+  /* Menta do dashboard: fundo dos paineis que separam cada bloco. */
+  --menta:#E8F6EF; --menta-borda:#CDE9DC; --menta-fundo:#F4FBF7;
   /* Âmbar amigável */
   --yellow:#B5791F; --yellow-viv:#E8943A; --yellow-pale:#FBF1D7; --yellow-mid:#F2E0A8;
   /* Vermelho suave (terracota) */
@@ -1750,11 +1752,18 @@ body.aguardando-auth > *:not(#loginScreen) { visibility:hidden !important; point
    na primeira tela. O corte veio do respiro interno, não do tamanho da letra:
    padding, gaps e altura de gráfico. Entre os painéis entrou um respiro
    explícito, porque eles se encostavam e só as bordas arredondadas separavam. */
-.painel-sec { background:var(--white); border:1px solid var(--gray-200); border-radius:var(--radius-lg); padding:.8rem 1.15rem .85rem; }
+/* Faixa menta no cabecalho (20/09). A menta entra como TARJA do titulo, e
+   nao como fundo do cartao: o cartao continua branco e o painel ganha uma
+   aba de cor que diz onde um bloco comeca. Pintar o cartao inteiro obrigaria
+   a repintar tudo o que mora dentro dele, porque os cartoes internos sao
+   creme e creme sobre menta e mistura quente com fria.
+   O recuo da faixa vem de variaveis para o sangramento acompanhar o padding
+   do painel em cada breakpoint, sem numero repetido em dois lugares. */
+.painel-sec { --pnl-px:1.15rem; --pnl-pt:.8rem; background:var(--white); border:1px solid var(--gray-200); border-radius:var(--radius-lg); padding:var(--pnl-pt) var(--pnl-px) .85rem; }
 #page-dashboard > div + div { margin-top:.5rem; }
-.painel-sec-head { display:flex; align-items:baseline; gap:.7rem; flex-wrap:wrap; margin-bottom:.6rem; }
+.painel-sec-head { display:flex; align-items:baseline; gap:.7rem; flex-wrap:wrap; margin:calc(var(--pnl-pt,.8rem) * -1) calc(var(--pnl-px,1.15rem) * -1) .75rem; padding:.5rem var(--pnl-px,1.15rem); background:var(--menta); border-bottom:1px solid var(--menta-borda); border-radius:calc(var(--radius-lg) - 1px) calc(var(--radius-lg) - 1px) 0 0; }
 .painel-sec-tit { font-family:'Bricolage Grotesque',sans-serif; font-size:1.02rem; font-weight:700; color:var(--navy); }
-.painel-sec-sub { font-size:.78rem; color:var(--gray-400); }
+.painel-sec-sub { font-size:.78rem; color:var(--gray-500); }
 
 /* ── Painel de Exercícios ── */
 /* Perto de metade para cada lado: o anel é a leitura principal do painel e
@@ -1833,7 +1842,7 @@ body.aguardando-auth > *:not(#loginScreen) { visibility:hidden !important; point
   .pex-anel-wrap { justify-content:center; }
 }
 @media (max-width:480px){
-  .painel-sec { padding:1rem .9rem; }
+  .painel-sec { --pnl-px:.9rem; --pnl-pt:1rem; padding:var(--pnl-pt) var(--pnl-px); }
   .pex-anel { width:126px; height:126px; }
   .pex-barras { height:160px; }
   .pex-leg, .pex-leg.dir { min-width:0; text-align:center; }
