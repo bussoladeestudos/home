@@ -1,5 +1,5 @@
 /* GERADO por outputs/questoes_para_js.py. NAO editar a mao.
-   Fonte: _conteudo/cpror/questoes/**.yaml  ·  665 questoes em 74 topicos
+   Fonte: _conteudo/cpror/questoes/**.yaml  ·  699 questoes em 77 topicos
    Para mudar uma questao, edite o YAML e rode o script de novo. */
 window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
  "cproRAnbima": {
@@ -10116,6 +10116,615 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "d": "A destinação primária basta para decidir, porque faixa de preço, critérios de alocação e fatores de risco não alteram o sentido econômico da oferta."
      },
      "gabarito": "b"
+    }
+   ],
+   "Ações e eventos societários: espécies, subscrição, split e inplit": [
+    {
+     "id": "cpror-inv-15-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Em D ocorre a negociação, com a execução da ordem, e na configuração usual da B3 a liquidação financeira e a entrega do ativo acontecem em D+2, dois dias úteis depois.</p><p>A alternativa B confunde mercado à vista com liquidação imediata. A alternativa A inverte os momentos e liga pagamento à formação anterior do preço. A alternativa D transforma o ciclo de liquidação em escolha do comprador e congela indevidamente a cotação.</p><p>Regra de bolso: no à vista, preço é negociado em D e dinheiro e ativo são liquidados usualmente em D+2.</p>",
+     "enunciado": "<p>Um cliente compra ações no mercado à vista e pergunta quando ocorrem a execução da ordem e a movimentação financeira na configuração usual da B3. Identifique a sequência correta.</p>",
+     "alternativas": {
+      "a": "A negociação ocorre em D+2 e a liquidação ocorre em D, porque o pagamento precisa anteceder a formação do preço da ação.",
+      "b": "A negociação e a liquidação ocorrem em D, pois mercado à vista significa pagamento e entrega no instante da execução da ordem.",
+      "c": "A negociação ocorre em D e a liquidação financeira e a entrega dos ativos ocorrem usualmente em D+2, dois dias úteis depois.",
+      "d": "A negociação ocorre em D e a liquidação fica para uma data escolhida pelo comprador, com o preço mantido até esse momento."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-15-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A ordinária caracteriza-se pelo voto, em regra um por ação, enquanto a preferencial concede vantagem econômica definida no estatuto e pode não votar ou ter voto restrito.</p><p>A alternativa A transforma espécie em garantia de dividendo e controle. A alternativa C confunde direitos com forma de registro. A alternativa D atribui às espécies proteção automática contra diluição.</p><p>Regra de bolso: ON organiza participação política; PN organiza preferência econômica e suas eventuais limitações de voto.</p>",
+     "enunciado": "<p>Uma investidora compara ações ordinárias e preferenciais antes de ler o estatuto da companhia. Compare os direitos característicos das duas espécies.</p>",
+     "alternativas": {
+      "a": "A ON garante dividendo elevado; a PN garante controle da companhia quando o investidor mantém posição minoritária.",
+      "b": "A ON confere voto nas assembleias; a PN oferece vantagem econômica estatutária e pode não ter voto ou apresentar voto restrito.",
+      "c": "A ON identifica o registro eletrônico da propriedade; a PN identifica a emissão de certificado físico em nome do acionista.",
+      "d": "A ON elimina risco de diluição; a PN preserva participação percentual sem exercício de preferência em aumento de capital."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-15-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Para negociação em bolsa, a PN precisa oferecer ao menos uma das três vantagens: participação mínima de 25% do lucro, dividendo 10% acima da ON ou inclusão na oferta de controle pelo piso indicado e dividendo ao menos igual ao da ON.</p><p>A alternativa A usa reembolso, que não substitui as vantagens exigidas. A alternativa C transforma alternativas em requisitos cumulativos. A alternativa D trata igualdade de dividendo isolada como vantagem suficiente.</p><p>Regra de bolso: para a PN chegar à bolsa, procure ao menos uma das três vantagens legais além do reembolso.</p>",
+     "enunciado": "<p>Uma companhia deseja admitir em bolsa uma classe de ações preferenciais sem voto. O estatuto prevê apenas prioridade no reembolso do capital e dividendo igual ao da ação ordinária, sem participação mínima de 25% do lucro líquido e sem inclusão na oferta em caso de alienação de controle. A classe representará 40% das ações emitidas, dentro do limite quantitativo, e os documentos não atribuem outra vantagem econômica. A diretoria sustenta que a denominação “preferencial” e a prioridade de reembolso bastam para a negociação. Um conselheiro propõe reunir as três vantagens legais, enquanto outro afirma que uma delas seria suficiente. A equipe jurídica precisa conferir os requisitos independentemente do reembolso. Avalie se a classe descrita atende ao requisito e identifique as alternativas admitidas.</p>",
+     "alternativas": {
+      "a": "A prioridade no reembolso basta, pois a negociação em bolsa depende de vantagem patrimonial definida livremente no estatuto da companhia.",
+      "b": "A classe precisa de participação mínima de 25% do lucro, dividendo 10% acima da ON ou inclusão na oferta de controle nas condições legais.",
+      "c": "A classe precisa reunir as três vantagens, e a ausência de uma delas impede a negociação mesmo quando as outras duas constam do estatuto.",
+      "d": "O dividendo igual ao da ON atende ao requisito, porque a restrição de voto converte a igualdade de pagamento em vantagem econômica."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-15-q4",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Nominativa descreve a vinculação da propriedade ao nome do titular. Escritural descreve a manutenção eletrônica em conta de depósito por instituição autorizada, sem certificado físico.</p><p>A alternativa B confunde registro com direitos de ON e PN. A alternativa A recupera a ação ao portador, que não existe no Brasil, e inverte a forma escritural. A alternativa D troca forma de propriedade por mercado e liquidação.</p><p>Regra de bolso: espécie define direitos; nominativa identifica o titular; escritural descreve o registro eletrônico.</p>",
+     "enunciado": "<p>Ao conferir a custódia, um acionista encontra a descrição “ação ordinária nominativa e escritural”. Explique o que nominativa e escritural informam sobre essa ação.</p>",
+     "alternativas": {
+      "a": "Nominativa indica ação ao portador registrada na bolsa; escritural indica certificado físico guardado pela instituição depositária.",
+      "b": "Nominativa indica direito de voto; escritural indica preferência econômica no recebimento de dividendo e reembolso do capital.",
+      "c": "Nominativa indica propriedade ligada ao nome do titular; escritural indica posição eletrônica em conta, sem certificado físico.",
+      "d": "Nominativa indica negociação no mercado à vista; escritural indica liquidação financeira em D+2 após a execução da ordem."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-15-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A preferência protege o acionista em aumento de capital e exige decisão, prazo e pagamento. O bônus é valor mobiliário com direito futuro nas condições da emissão; antes do exercício, seu titular não vira acionista por causa dele.</p><p>A alternativa A trata direitos como ações e automáticos. A alternativa B troca a origem e as formas de emissão dos instrumentos. A alternativa D cria preferência quando um bônus já emitido é exercido, efeito que a aula afasta.</p><p>Regra de bolso: preferência acompanha o aumento atual; bônus guarda uma possibilidade futura, e nenhum dos dois se exerce sozinho.</p>",
+     "enunciado": "<p>Cláudia já é acionista quando a companhia anuncia aumento de capital e recebe direito de preferência proporcional à sua posição. O comunicado informa preço de emissão, data de corte, prazo, possibilidade de pedir sobras e negociação do direito durante o período. Na mesma carteira, ela mantém um bônus de subscrição comprado meses antes, com preço e prazo próprios para aquisição futura de ações. O bônus continua válido, mas seu preço de exercício está acima da cotação atual. Cláudia acredita que os dois instrumentos se exercem automaticamente, que o bônus já lhe concede voto e dividendos e que a conversão dele criará nova preferência para outros acionistas. Ela ainda pode decidir exercer, negociar quando permitido ou deixar cada prazo terminar. Compare a natureza, o exercício e os efeitos dos dois instrumentos.</p>",
+     "alternativas": {
+      "a": "Os dois instrumentos são ações desde a emissão e conferem voto, dividendos e manutenção automática da participação de Cláudia.",
+      "b": "O bônus nasce apenas para acionistas antigos, enquanto a preferência pode ser vendida pela companhia como vantagem ligada a debêntures.",
+      "c": "A preferência nasce do aumento para antigos acionistas; o bônus é valor mobiliário com condições próprias, e ambos exigem exercício e pagamento.",
+      "d": "O exercício do bônus cria novo direito de preferência para os demais acionistas, que podem impedir sua conversão quando a cotação fica abaixo do preço."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-15-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. No follow-on primário há emissão nova, entrada de dinheiro na companhia e possível redução percentual de quem não acompanha. No secundário, ações existentes mudam de dono, o vendedor recebe e o total não cresce.</p><p>A alternativa B usa o momento posterior ao IPO para classificar as parcelas e erra o destino. A alternativa C troca as naturezas. A alternativa D cria ações na venda secundária e liga diluição à mudança de titular.</p><p>Regra de bolso: primário cria ação e pode diluir; secundário transfere ação e paga o vendedor.</p>",
+     "enunciado": "<p>O investidor Bruno analisa dois follow-ons de companhias já abertas. Na oferta Alfa, a empresa possui 10 milhões de ações e emitirá outras 2 milhões para financiar um projeto. Na oferta Beta, que também possui 10 milhões de ações, o controlador venderá 2 milhões que já possui, sem emissão adicional. Bruno detém 100 mil ações de cada companhia e diz que as duas operações aumentam o capital e diluem quem não compra, pois ambas colocam papéis no mercado. Os prospectos separam a destinação dos recursos, identificam quem vende e mostram que apenas Alfa alterará o total de ações. Bruno deseja saber em qual caso seu percentual pode cair por causa da oferta e quem receberá o dinheiro. Compare os efeitos das parcelas primária e secundária.</p>",
+     "alternativas": {
+      "a": "Alfa é primária, leva recursos à companhia e pode diluir quem não acompanha; Beta paga o vendedor e não cria diluição causada pela oferta.",
+      "b": "Alfa e Beta são primárias porque ocorrem depois do IPO, e o dinheiro entra no caixa das companhias antes de chegar aos acionistas.",
+      "c": "Beta é primária porque o controlador integra a companhia, e Alfa é secundária porque as ações novas serão negociadas pelo público.",
+      "d": "Alfa e Beta aumentam o número de ações, mas apenas Beta dilui, pois o controlador transfere sua posição a investidores externos."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-15-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Após a emissão haverá 2.500.000 ações. Para manter 1,5%, Sérgio precisa de 37.500 ações; como já tem 30.000, subscreve 7.500 e aporta R$ 45.000. Sem comprar, 30.000 dividido por 2.500.000 resulta em 1,2%.</p><p>A alternativa B compra a posição antiga novamente e presume percentual estável sem aporte. A alternativa C trata 37.500 como quantidade adicional e calcula 0,75% sem base. A alternativa D atribui ao minoritário a emissão inteira e chega a 1% por raciocínio incompatível com sua posição.</p><p>Regra de bolso: calcule o percentual sobre o capital pós-emissão e subtraia as ações que o investidor já possui.</p>",
+     "enunciado": "<p>Sérgio possui 30.000 ações de uma companhia com 2.000.000 de ações emitidas, o que representa 1,5% do capital. A empresa anuncia follow-on primário de 500.000 novas ações, com preferência proporcional e preço de emissão de R$ 6. Sérgio deseja preservar seu percentual e dispõe de recursos para o aporte. Ele calcula 1,5% apenas sobre as novas ações e pergunta se essa quantidade deve ser somada à posição atual. O comunicado informa prazo, data de corte, proporção e possibilidade de exercer a preferência. A corretora ainda não debitou qualquer valor, pois aguarda a instrução do cliente dentro do período de exercício. Sérgio também quer comparar o percentual preservado com o cenário em que mantém apenas suas 30.000 ações. Calcule a quantidade a subscrever, o aporte necessário e o percentual resultante da ausência de participação.</p>",
+     "alternativas": {
+      "a": "Ele subscreve 7.500 ações, aporta R$ 45.000 e, sem participar, passa de 1,5% para 1,2% do capital após a emissão.",
+      "b": "Ele subscreve 30.000 ações, aporta R$ 180.000 e, sem participar, mantém 1,5% porque sua quantidade não se altera.",
+      "c": "Ele subscreve 37.500 ações, aporta R$ 225.000 e, sem participar, passa a 0,75% porque o capital aumenta em 25%.",
+      "d": "Ele subscreve 500.000 ações, aporta R$ 3 milhões e, sem participar, passa a 1%, pois a preferência exige adquirir a emissão inteira."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-15-q8",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O follow-on secundário transfere 180.000 ações já existentes. O total permanece em 900.000 e Renata continua com 18.000, ou 2%, sem precisar comprar para neutralizar diluição causada pela oferta.</p><p>A alternativa A soma ações transferidas ao capital e chega a 1,67%. A alternativa C distribui a posição vendida aos antigos acionistas sem aquisição. A alternativa B reduz o capital pela quantidade transferida e produz 1,8% sem a mecânica indicada.</p><p>Regra de bolso: mudança de dono não muda o denominador; emissão nova muda e pode diluir.</p>",
+     "enunciado": "<p>Renata possui 18.000 ações de uma companhia com 900.000 papéis emitidos, equivalentes a 2%. O controlador fará um follow-on apenas secundário e venderá 180.000 ações próprias a novos investidores. Antes da oferta, ele possui 450.000 ações; depois da venda, continuará com 270.000, enquanto o total da companhia permanecerá indicado no prospecto. Renata separa dinheiro para comprar 3.600 ações e evitar diluição, pois imagina que a presença de novos titulares aumentará o capital para 1.080.000 ações. A apresentação confirma que nenhuma ação será emitida, o capital não receberá recursos e o preço pago seguirá para o controlador vendedor. A custódia de Renata continuará com a mesma quantidade caso ela não participe. Avalie sua participação e a necessidade de acompanhar a oferta para preservar o percentual.</p>",
+     "alternativas": {
+      "a": "Renata precisa comprar 3.600 ações, pois a venda do controlador aumenta o total para 1.080.000 e reduz sua participação a 1,67%.",
+      "b": "Renata passa a 1,8%, pois a parcela secundária reduz o capital social pelo mesmo número de ações transferidas pelo controlador.",
+      "c": "Renata passa a 2,5%, pois a entrada de investidores distribui a participação vendida pelo controlador entre os acionistas antigos.",
+      "d": "Renata permanece com 2%, pois continuam existindo 900.000 ações; a troca de titular não causa diluição pela oferta secundária."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-15-q9",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. No split de 1 para 4, 2.400 ações viram 9.600 e o preço teórico de R$ 25 é dividido por 4, chegando a R$ 6,25. O produto continua R$ 60.000, sem alteração proporcional de capital ou participação.</p><p>A alternativa B mantém R$ 25 e cria R$ 240.000. A alternativa C aplica a mecânica do inplit, dividindo quantidade e multiplicando preço. A alternativa D ajusta o preço, mas não multiplica a quantidade e reduz indevidamente o valor.</p><p>Regra de bolso: no split, multiplique quantidade e divida preço pelo mesmo fator.</p>",
+     "enunciado": "<p>Paulo possui 2.400 ações cotadas a R$ 25, com valor teórico de R$ 60.000. A companhia aprova split de 1 para 4, transformando cada ação em quatro. O extrato mostrará o crédito da nova quantidade na data indicada, sem aporte, pagamento ou distribuição de dinheiro ao acionista. Paulo comemora porque espera quadruplicar seu patrimônio e sua participação, já que verá quantidade elevada na conta. O comunicado esclarece que o capital social permanece igual, os direitos proporcionais são preservados e o ajuste inicial do preço usa o mesmo fator. A medida busca tornar o preço unitário acessível, mas não promete movimento posterior da cotação. As negociações futuras poderão alterar o preço; o cálculo pedido considera o instante do evento. Calcule quantidade, preço teórico e valor da posição após o desdobramento.</p>",
+     "alternativas": {
+      "a": "Paulo terá 9.600 ações a R$ 6,25, mantendo valor teórico de R$ 60.000 e a mesma participação percentual.",
+      "b": "Paulo terá 9.600 ações a R$ 25, elevando o valor para R$ 240.000 porque o split cria quatro papéis com o preço anterior.",
+      "c": "Paulo terá 600 ações a R$ 100, mantendo R$ 60.000, pois o fator 1 para 4 reduz a quantidade e eleva o preço unitário.",
+      "d": "Paulo terá 2.400 ações a R$ 6,25, reduzindo o valor para R$ 15.000 porque somente o preço é ajustado no desdobramento."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-15-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. No inplit de 7 para 1, cada sete ações viram uma e o preço teórico passa de R$ 3 para R$ 21. Os 2.450 papéis formam 350 ações; a sobra segue as regras divulgadas para completar ou tratar frações, sem eliminação indevida.</p><p>A alternativa B aplica a mecânica do split e chega a valores incompatíveis. A alternativa C mantém o preço antigo e elimina a sobra sem procedimento. A alternativa A usa R$ 7 sem multiplicar R$ 3 pelo fator e afirma redução do capital.</p><p>Regra de bolso: no inplit, divida quantidade, multiplique preço e confira o procedimento das frações.</p>",
+     "enunciado": "<p>Denise possui 2.453 ações cotadas teoricamente a R$ 3 quando a companhia aprova inplit de 7 para 1. Cada grupo de sete papéis formará uma ação, e o preço teórico será ajustado pelo mesmo fator. Antes do evento, a posição vale teoricamente R$ 7.359, incluindo os três papéis que formarão fração. A posição contém 350 grupos completos e sobra de três ações antigas. O comunicado abrirá prazo para completar lotes e explicará o tratamento das frações; depois, frações remanescentes poderão ser reunidas, vendidas e distribuídas proporcionalmente. A participação não muda apenas pelo grupamento, e a companhia não pode estruturar o evento para eliminar indevidamente minoritários. Denise acredita que o capital diminui e que sua sobra pode desaparecer sem compensação. Analise quantidade, preço teórico, valor econômico e tratamento da fração.</p>",
+     "alternativas": {
+      "a": "As 2.453 ações viram 350 ações a R$ 7, e o capital diminui na mesma proporção da quantidade agrupada pela companhia.",
+      "b": "As 2.453 ações viram 17.171 ações a R$ 0,43, pois o inplit multiplica quantidade e divide preço como um desdobramento.",
+      "c": "Os grupos completos viram 350 ações a R$ 3, e as três antigas são eliminadas sem tratamento porque não formam outra ação inteira.",
+      "d": "Os grupos completos viram 350 ações a R$ 21; capital e participação proporcional são preservados, e a fração segue o procedimento divulgado."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-15-q11",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A ON dá participação por voto, sem assegurar decisão isolada ao minoritário. A PN sem voto pode adquiri-lo após o prazo estatutário, limitado a três exercícios consecutivos, e mantê-lo até a regularização prevista.</p><p>A alternativa A transforma voto da ON em controle e nega a aquisição de voto pela PN. A alternativa C cria controle, reduz o prazo a um exercício e retira voto da ON. A alternativa D ignora que identificar o titular permite exercer direitos e participar dos eventos.</p><p>Regra de bolso: proteção minoritária combina participação política, preferência econômica, identificação e mecanismos contra diluição.</p>",
+     "enunciado": "<p>A companhia de Lúcia possui ações ordinárias e preferenciais sem voto, estas limitadas a 50% das ações emitidas. O estatuto prevê dividendo mínimo para a PN e aquisição de voto se esse pagamento deixar de ocorrer pelo prazo estatutário, respeitado o limite de três exercícios consecutivos. Após o período previsto sem pagamento, a administração nega a participação das preferenciais na assembleia e afirma que somente a ON protege minoritários. Lúcia também mantém ON suficiente para votar, mas não para decidir sozinha. As posições são nominativas e escriturais, e os registros eletrônicos identificam quais titulares podem votar, receber proventos e participar dos eventos. A companhia ainda não regularizou o pagamento que ativou a regra estatutária. Avalie como voto, preferência e identificação do titular protegem os acionistas no caso.</p>",
+     "alternativas": {
+      "a": "A ON garante que Lúcia decida sozinha, e a PN permanece sem voto porque vantagem econômica impede participação política em qualquer cenário.",
+      "b": "A ON permite participar sem garantir controle; a PN pode adquirir voto nas condições previstas e mantê-lo até a regularização.",
+      "c": "A PN adquire controle da companhia após um exercício sem dividendo, e a ON perde o voto enquanto o pagamento mínimo estiver pendente.",
+      "d": "A identificação nominativa serve apenas à custódia, sem relação com voto, proventos, preferência ou participação em eventos societários."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-15-q12",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Preferência é direito societário nas hipóteses legais; prioridade é condição descrita na oferta, com regras e rateio próprios. Nenhuma preserva participação por simples recebimento: é preciso adquirir as novas ações.</p><p>A alternativa B torna manutenção e cobrança automáticas. A alternativa C troca natureza e função dos mecanismos. A alternativa A impede a expiração e inventa conversão em bônus de subscrição.</p><p>Regra de bolso: leia a origem do acesso, o prazo e a forma de alocação; proteção contra diluição exige ação do investidor.</p>",
+     "enunciado": "<p>Eduardo recebe comunicado de aumento de capital com direito de preferência negociável, prazo de exercício, data de corte, preço de emissão e possibilidade de pedir sobras. O documento informa que o direito expira se ele não exercer nem ceder dentro do período. Dias depois, lê sobre uma oferta prioritária que reservará parcela de outro follow-on a acionistas existentes, sujeita a limites, pedidos e rateio definidos nos documentos da oferta. Ele conclui que preferência e prioridade são sinônimos e que basta receber qualquer uma delas para manter seu percentual sem aportar. Eduardo não pretende investir, ainda não decidiu se venderá o direito e acredita que a companhia converterá sua inércia em bônus de subscrição. Compare os mecanismos e indique o efeito da ausência de exercício.</p>",
+     "alternativas": {
+      "a": "A falta de exercício mantém o direito ativo depois do prazo, e a companhia converte a posição em bônus de subscrição para evitar diluição involuntária.",
+      "b": "Os dois mecanismos preservam participação automaticamente, pois a companhia reserva ações e cobra o valor apenas quando o acionista decide vendê-las.",
+      "c": "A oferta prioritária cria preferência legal sobre sobras, enquanto o direito de preferência funciona somente como critério de rateio do follow-on.",
+      "d": "Preferência é direito societário; oferta prioritária segue os documentos, e nenhum acesso preserva percentual sem aquisição."
+     },
+     "gabarito": "d"
+    }
+   ],
+   "Ações: tributação, compensação de perdas, dividendos e JCP": [
+    {
+     "id": "cpror-inv-16-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A alíquota da operação comum é 15% e a do day trade é 20%. A isenção considera alienações mensais de ações no mercado à vista de até R$ 20.000 e não se aplica ao day trade.</p><p>A alternativa B iguala alíquotas e usa lucro como limite. A alternativa C inverte alíquotas e cria franquia por ação. A alternativa D aplica 20% às duas modalidades e usa custo de aquisição no lugar do total vendido.</p><p>Regra de bolso: comum 15%, day trade 20% e limite de isenção medido pelas vendas de ações à vista.</p>",
+     "enunciado": "<p>Ao organizar a apuração de uma pessoa física, um assessor precisa diferenciar operação comum, day trade e a isenção mensal do mercado à vista de ações. Identifique a regra correta.</p>",
+     "alternativas": {
+      "a": "Operação comum usa 15%, day trade usa 20%, e a isenção por vendas mensais de até R$ 20.000 não alcança day trade.",
+      "b": "Operação comum e day trade usam 15%, e a isenção de R$ 20.000 considera o lucro líquido apurado em cada modalidade.",
+      "c": "Operação comum usa 20%, day trade usa 15%, e cada ação negociada recebe limite próprio de R$ 20.000 em vendas.",
+      "d": "Operação comum e day trade usam 20%, e a isenção depende do valor de aquisição das ações mantidas na carteira do investidor."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-16-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Dividendo distribui lucro já apurado depois da tributação empresarial. O JCP é calculado sobre contas do patrimônio líquido, dentro dos limites, pode ser dedutível para IRPJ e CSLL e sofre retenção de 17,5%.</p><p>A alternativa B trata remunerações societárias como ganho de alienação. A alternativa C troca as características econômicas. A alternativa D soma fatos sujeitos a regimes de retenção diferentes.</p><p>Regra de bolso: dividendo vem do lucro; JCP remunera o capital próprio, pode gerar dedução na empresa e retém 17,5%.</p>",
+     "enunciado": "<p>Uma acionista recebe pagamentos da companhia e pergunta a diferença econômica e tributária entre dividendo e juros sobre capital próprio. Compare os dois fatos.</p>",
+     "alternativas": {
+      "a": "Dividendo distribui lucro já apurado após tributação empresarial; JCP pode reduzir a base da companhia e sofre IRRF de 17,5% para o beneficiário.",
+      "b": "Dividendo e JCP são ganhos de venda em bolsa, tributados a 15% quando o acionista recebe o crédito em sua conta.",
+      "c": "Dividendo é calculado pela TJLP sobre o patrimônio líquido; JCP distribui lucro tributado sem dedução para a companhia pagadora.",
+      "d": "Dividendo e JCP usam a retenção mensal de 10% quando o total conjunto pago pela empresa supera R$ 50.000."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-16-q3",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Ganhos e perdas de operações comuns permanecem em uma apuração, e day trade fica em outra. Saldos podem seguir para períodos posteriores com os controles e registros correspondentes.</p><p>A alternativa B mistura modalidades. A alternativa A compensa alienação com dividendos e JCP, fatos distintos. A alternativa D usa prejuízo posterior de forma retroativa.</p><p>Regra de bolso: prejuízo acompanha sua modalidade e segue para a frente, sem voltar no tempo.</p>",
+     "enunciado": "<p>Um investidor mantém controles de prejuízos em bolsa e deseja utilizá-los nos meses seguintes. Identifique a regra de separação aplicável à compensação.</p>",
+     "alternativas": {
+      "a": "Perdas em ações compensam dividendos e JCP recebidos depois, porque os pagamentos pertencem ao mesmo investimento societário.",
+      "b": "Perda comum compensa day trade, e perda de day trade compensa operação comum, desde que os resultados ocorram no mesmo ano.",
+      "c": "Perda comum compensa ganho comum, e perda de day trade compensa ganho de day trade, com controles separados entre as modalidades.",
+      "d": "Perda ocorrida em mês posterior reduz retroativamente ganho já apurado, desde que o DARF do mês anterior ainda não tenha sido pago."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-16-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. As alienações mensais somam exatamente R$ 20.000, valor ainda dentro do limite da isenção para ações no mercado à vista. O lucro de R$ 6.000 fica isento, e perda em operação alcançada pela isenção não forma saldo compensável.</p><p>A alternativa B aplica 15% porque mede o limite pelo lucro. A alternativa A cria franquia por empresa e mistura a perda com day trade. A alternativa D trata o limite como dedução do ganho e aplica 20% sem existir day trade.</p><p>Regra de bolso: some as vendas de ações no mês; até R$ 20.000, inclusive, o ganho pode ser isento.</p>",
+     "enunciado": "<p>Patrícia leva ao assessor as notas de corretagem de duas vendas de ações no mercado à vista realizadas durante o mesmo mês. A primeira alienação soma R$ 12.000 e a segunda, R$ 8.000. Depois de considerar custo de aquisição e despesas admitidas, o ganho líquido conjunto é de R$ 6.000. O extrato não mostra day trade nem venda de outro lote de ações no período, e as duas operações pertencem à mesma pessoa física. Patrícia acredita que ultrapassou o limite porque teve lucro elevado e também considera aplicar R$ 20.000 de isenção para cada empresa. Ela pergunta se uma perda apurada em venda igualmente alcançada pela isenção poderia ficar guardada para reduzir ganho futuro. Analise o total de alienações, a incidência do imposto e o efeito de eventual perda nessas operações.</p>",
+     "alternativas": {
+      "a": "Cada empresa recebe limite de R$ 20.000, e eventual perda de uma ação compensa day trade realizado em mês posterior.",
+      "b": "O ganho paga R$ 900, pois R$ 6.000 multiplicados por 15% superam o valor de isenção medido pelo lucro líquido mensal.",
+      "c": "As vendas somam R$ 20.000 e o ganho é isento; eventual perda em operações alcançadas pela isenção não gera saldo compensável.",
+      "d": "A isenção alcança R$ 20.000 do ganho, e o restante da venda fica sujeito a 20% por envolver ações de duas companhias."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-16-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O ganho comum de R$ 7.000 é reduzido pela perda comum de R$ 2.500, formando base de R$ 4.500. A 15%, o imposto é R$ 675; menos R$ 2 de IRRF, o recolhimento é R$ 673. A perda de day trade não entra.</p><p>A alternativa B também deduz R$ 1.000 de day trade, chegando a R$ 3.500 e R$ 523. A alternativa C ignora a perda comum e calcula R$ 1.048. A alternativa A usa 20% sobre R$ 4.500 e chega a R$ 898.</p><p>Regra de bolso: na operação comum, deduza perda comum, aplique 15% e abata o IRRF da própria modalidade.</p>",
+     "enunciado": "<p>Gustavo abre sua planilha mensal depois de vender R$ 40.000 em ações por operações comuns. As notas e o controle de preço médio resultam em ganho líquido de R$ 7.000, já descontadas as despesas admitidas. A declaração e as planilhas dos meses anteriores mostram perda comum acumulada de R$ 2.500, perda antiga de day trade de R$ 1.000 e ausência de outra compensação no período. As notas atuais informam R$ 2 de IRRF nas operações comuns. Gustavo quer usar os dois prejuízos para reduzir o DARF e depois abater a retenção. Como as vendas superaram R$ 20.000, o ganho não está na faixa de isenção. O recolhimento será feito no prazo do mês seguinte. Calcule a base tributável, o imposto de 15% e o valor após as deduções permitidas.</p>",
+     "alternativas": {
+      "a": "A base é R$ 4.500, o imposto é R$ 900 e o valor após o IRRF é R$ 898, porque operações comuns usam a alíquota de 20%.",
+      "b": "A base é R$ 3.500, o imposto é R$ 525 e o valor após o IRRF é R$ 523, porque as duas perdas reduzem o ganho comum.",
+      "c": "A base é R$ 7.000, o imposto é R$ 1.050 e o valor após o IRRF é R$ 1.048, pois perdas anteriores não seguem para outros meses.",
+      "d": "A base é R$ 4.500, o imposto é R$ 675 e o valor após o IRRF é R$ 673; a perda de day trade fica separada."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-16-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Apenas a perda de day trade de R$ 1.500 reduz o ganho de R$ 5.000, formando base de R$ 3.500. A 20%, o imposto é R$ 700 e, após R$ 35 de IRRF, restam R$ 665. A perda comum continua em seu controle.</p><p>A alternativa B mistura as duas perdas e cria saldo comum de R$ 500. A alternativa C aplica 15% e chega a R$ 490. A alternativa A estende ao day trade a isenção ligada às vendas mensais de ações à vista.</p><p>Regra de bolso: day trade usa sua perda, sua alíquota de 20% e seu IRRF.</p>",
+     "enunciado": "<p>Larissa recebe o relatório mensal da corretora e apura ganho líquido de R$ 5.000 em day trade. Seu controle fiscal, atualizado nas declarações correspondentes, registra perda acumulada de R$ 1.500 na mesma modalidade e perda comum de R$ 4.000. A nota informa ainda R$ 35 de IRRF vinculado ao day trade, e os resultados já consideram os custos admitidos. Ela pretende zerar o ganho usando a perda comum e argumenta que a isenção das vendas mensais de ações até R$ 20.000 deveria alcançar o day trade, embora esse limite pertença às operações no mercado à vista abrangidas pela regra específica. Não existem outras perdas ou retenções no mês. Calcule a base tributável e o imposto líquido do day trade e indique o destino dos saldos.</p>",
+     "alternativas": {
+      "a": "O ganho é isento por ficar abaixo de R$ 20.000, e as duas perdas permanecem disponíveis para qualquer modalidade futura.",
+      "b": "A base é zero, porque R$ 1.500 e R$ 4.000 compensam juntas o ganho; os R$ 500 restantes seguem como perda comum.",
+      "c": "A base é R$ 3.500, o imposto é R$ 525 e, após R$ 35 de IRRF, o valor é R$ 490, aplicando a alíquota comum.",
+      "d": "A base é R$ 3.500, o imposto é R$ 700 e, após R$ 35 de IRRF, o valor é R$ 665; a perda comum segue separada."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-16-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. Na comum, R$ 8.000 menos R$ 3.000 resulta em R$ 5.000; 15% são R$ 750, menos R$ 1,50, chegam a R$ 748,50. No day trade, R$ 4.500 menos R$ 500 resulta em R$ 4.000; 20% são R$ 800, menos R$ 45, chegam a R$ 755. A soma é R$ 1.503,50.</p><p>A alternativa A cria base conjunta de R$ 9.000 e alíquota única, chegando a R$ 1.303,50. A alternativa C ignora a perda comum e calcula R$ 998,50 nessa modalidade. A alternativa D aplica ao day trade a isenção de R$ 20.000.</p><p>Regra de bolso: faça duas apurações completas e some apenas os valores finais.</p>",
+     "enunciado": "<p>Rafael encerra o mês e entrega ao contador dois relatórios separados pela corretora. Nas operações comuns, vendeu R$ 30.000, obteve ganho líquido de R$ 8.000, possui perda comum anterior de R$ 3.000 e IRRF de R$ 1,50. No day trade, ganhou R$ 4.500, possui perda acumulada da modalidade de R$ 500 e IRRF de R$ 45. Os valores já descontam despesas admitidas, e não há outros resultados no período. Rafael soma os ganhos, deduz as duas perdas e pretende aplicar 15% sobre uma base única para emitir um cálculo simplificado. O total vendido afasta a isenção da operação comum, e as notas identificam a modalidade de cada retenção. O contador fará os cálculos separadamente e somará apenas os saldos finais. Calcule os dois valores líquidos e o total a recolher.</p>",
+     "alternativas": {
+      "a": "A base conjunta é R$ 9.000, o imposto de 15% é R$ 1.350 e, após R$ 46,50 de IRRF, recolhem-se R$ 1.303,50.",
+      "b": "A operação comum gera R$ 748,50, o day trade gera R$ 755 e o total a recolher é R$ 1.503,50.",
+      "c": "A operação comum gera R$ 998,50, o day trade gera R$ 755 e o total é R$ 1.753,50, sem usar perdas de meses anteriores.",
+      "d": "A operação comum gera R$ 748,50 e o day trade fica isento por ganho inferior a R$ 20.000, totalizando R$ 748,50."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-16-q8",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Os pagamentos da mesma pessoa jurídica à mesma pessoa física no mês são somados. Como R$ 56.000 superam R$ 50.000, os 10% incidem sobre o total, produzindo IRRF de R$ 5.600 e líquido de R$ 50.400.</p><p>A alternativa A tributa apenas o excedente e chega a R$ 600. A alternativa C examina cada pagamento isoladamente e ignora a soma mensal. A alternativa D usa a alíquota do JCP e calcula R$ 9.800.</p><p>Regra de bolso: superado o limite mensal por empresa e beneficiário, aplique 10% sobre o dividendo total.</p>",
+     "enunciado": "<p>Helena é pessoa física residente no Brasil e recebe da mesma companhia R$ 32.000 em dividendos no início do mês e R$ 24.000 na última semana. Os créditos pertencem ao mesmo mês, foram feitos pela mesma pessoa jurídica à mesma beneficiária e se referem a resultados posteriores à regra de transição. O comprovante do primeiro pagamento não trouxe retenção porque o acumulado ainda estava abaixo do limite. Antes do segundo crédito, a empresa soma os pagamentos e identifica total de R$ 56.000. Helena calcula retenção apenas sobre os R$ 6.000 que excedem R$ 50.000 e espera IRRF de R$ 600, tratando o limite como franquia. Considere a regra vigente desde janeiro de 2026. Calcule a base da retenção, o IRRF e o valor líquido mensal recebido.</p>",
+     "alternativas": {
+      "a": "O IRRF incide sobre o excedente de R$ 6.000, soma R$ 600 e deixa R$ 55.400 líquidos, pois R$ 50.000 são franquia mensal.",
+      "b": "O total é R$ 56.000, o IRRF de 10% incide sobre R$ 56.000 e soma R$ 5.600, deixando R$ 50.400 líquidos.",
+      "c": "Cada pagamento fica abaixo de R$ 50.000, não há retenção e Helena recebe R$ 56.000, mesmo sendo a mesma empresa no mesmo mês.",
+      "d": "O IRRF de 17,5% incide sobre R$ 56.000, soma R$ 9.800 e deixa R$ 46.200 líquidos por se tratar de remuneração societária."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-16-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Cada empresa pagou abaixo do limite, então não há retenção mensal. Isso não exclui os dividendos do ajuste anual. Com rendimentos totais de R$ 650.000, Aline está na transição progressiva entre R$ 600.000 e R$ 1.200.000.</p><p>A alternativa B soma pagadores e calcula R$ 6.500. A alternativa C transforma ausência de retenção em exclusão anual. A alternativa D tributa só o excedente conjunto e ainda trata a retenção como definitiva.</p><p>Regra de bolso: retenção olha empresa e mês; ajuste anual olha a renda do ano.</p>",
+     "enunciado": "<p>No mesmo mês, a Companhia Norte paga R$ 35.000 em dividendos a Aline e a Companhia Sul paga outros R$ 30.000. Os comprovantes identificam pagadores distintos e nenhuma empresa supera individualmente R$ 50.000, razão pela qual não há retenção mensal de 10%. Os pagamentos se referem a resultados posteriores à transição. Ao projetar o ano, Aline estima rendimentos totais de R$ 650.000, incluindo esses dividendos, e conclui que os R$ 65.000 ficaram definitivamente fora da tributação porque vieram de fontes diferentes e sem desconto no mês. O assessor explica que a retenção observa pagador, beneficiário e mês, enquanto a tributação mínima anual considera o conjunto da renda e possui transição entre R$ 600.000 e R$ 1.200.000. Avalie a conclusão e o tratamento temporal.</p>",
+     "alternativas": {
+      "a": "Não há retenção mensal, mas os dividendos entram no ajuste anual; R$ 650.000 situa a renda na faixa de transição acima de R$ 600.000.",
+      "b": "Há retenção mensal de R$ 6.500 porque os pagamentos de empresas diferentes são somados antes de comparar com R$ 50.000.",
+      "c": "Não há retenção nem consideração anual, pois valores pagos sem IRRF saem da base da tributação mínima de altas rendas.",
+      "d": "Há retenção de R$ 1.500 apenas sobre o total que excede R$ 50.000, e esse valor é definitivo no mês do pagamento."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-16-q10",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. O lucro disponível precisa ser igual ou superior ao dobro do JCP: para R$ 50.000, o requisito é R$ 100.000, atendido pelos R$ 120.000. O IRRF é 17,5%, ou R$ 8.750, e o líquido é R$ 41.250.</p><p>A alternativa B reduz o requisito e usa 10%, chegando a R$ 45.000. A alternativa A exige R$ 150.000 e calcula 15%, chegando a R$ 7.500. A alternativa D estende ao JCP o limite mensal dos dividendos.</p><p>Regra de bolso: JCP exige lucro de pelo menos o dobro do pagamento e retém 17,5% sem usar o limite dos dividendos.</p>",
+     "enunciado": "<p>Uma companhia pretende creditar R$ 50.000 em JCP a Roberto. O cálculo sobre as contas do patrimônio líquido e a TJLP já respeita os limites correspondentes. Para verificar a condição adicional, as demonstrações mostram R$ 120.000 em lucros do período ou acumulados disponíveis. Roberto acredita que o limite mensal de R$ 50.000 usado nos dividendos torna o JCP livre de retenção e que bastaria lucro igual ao valor distribuído. A área contábil informa que a condição compara o lucro disponível com o dobro dos juros e que o imposto é retido na data do pagamento ou crédito. Não há outra verba a somar ao cálculo. Verifique a condição baseada no lucro e calcule o IRRF e o valor líquido do beneficiário.</p>",
+     "alternativas": {
+      "a": "O pagamento falha porque seria necessário lucro de R$ 150.000; o IRRF seria R$ 7.500 se fosse utilizada a alíquota de 15%.",
+      "b": "O pagamento atende porque lucro e JCP podem ser iguais; o IRRF é R$ 5.000 e o líquido é R$ 45.000 pela regra dos dividendos.",
+      "c": "O pagamento atende à condição, pois R$ 120.000 superam o dobro de R$ 50.000; o IRRF é R$ 8.750 e o líquido é R$ 41.250.",
+      "d": "O pagamento atende, mas fica sem IRRF porque R$ 50.000 não supera o limite mensal aplicado às remunerações de acionistas."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-16-q11",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Alfa reúne resultado apurado até 2025, aprovação até 31 de dezembro de 2025 e pagamento conforme o ato. Beta foi aprovada em janeiro de 2026 e falha no requisito temporal, apesar da origem do lucro.</p><p>A alternativa B usa apenas o ano do resultado. A alternativa C exclui Alfa pelo ano do pagamento e aceita Beta por critério inadequado. A alternativa A usa o limite mensal para substituir os requisitos próprios da transição.</p><p>Regra de bolso: na transição, confirme ano do resultado, data da aprovação e fidelidade aos termos aprovados.</p>",
+     "enunciado": "<p>Duas companhias pagarão em 2026 dividendos relativos a resultados apurados no ano-calendário de 2025. A Companhia Alfa aprovou a distribuição em 20 de dezembro de 2025, documentou valores e datas e fará o pagamento exatamente conforme o ato. A Companhia Beta só aprovou a distribuição em 10 de janeiro de 2026, embora seu lucro também pertença a 2025 e o crédito siga o documento posterior. Um acionista afirma que a origem do lucro basta para afastar a nova retenção nos dois pagamentos. Os registros permitem conferir separadamente ano do resultado, data da aprovação e termos do pagamento. A equipe precisa aplicar a transição, que exige o atendimento conjunto desses elementos. Compare os enquadramentos e identifique qual distribuição pode satisfazer a regra.</p>",
+     "alternativas": {
+      "a": "Alfa e Beta atendem se cada pagamento mensal ficar abaixo de R$ 50.000, pois o limite substitui os requisitos de aprovação e termos.",
+      "b": "Alfa e Beta atendem porque o ano do lucro é o único requisito que define a incidência sobre dividendos pagos em 2026.",
+      "c": "Alfa falha porque qualquer pagamento em 2026 fica fora da transição; Beta atende porque a aprovação ocorreu antes do crédito ao acionista.",
+      "d": "Alfa pode atender à transição pelos três requisitos; Beta falha na data de aprovação, ainda que o resultado seja de 2025."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-16-q12",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O IRRF é 0,005% de R$ 100.000, ou R$ 5. O imposto é 15% de R$ 4.000, ou R$ 600. Deduzido o IRRF, restam R$ 595, recolhidos por DARF até o último dia útil do mês seguinte.</p><p>A alternativa A calcula 0,005% sobre R$ 4.000 como se fossem R$ 20 e chega a R$ 580. A alternativa C trata antecipação de R$ 5 como quitação. A alternativa D aplica 20%, calculando R$ 800 e DARF de R$ 795.</p><p>Regra de bolso: dedo duro antecipa pouco; o investidor calcula o ganho, aplica a alíquota, deduz o IRRF e recolhe o saldo.</p>",
+     "enunciado": "<p>Débora consulta as notas depois de vender R$ 100.000 em ações por operações comuns no mês. O controle de custo médio e despesas resulta em ganho líquido tributável de R$ 4.000, sem perdas compensáveis. O IRRF dedo duro da modalidade corresponde a 0,005% do valor das alienações e está destacado na documentação. Não houve day trade nem outra operação no período. Ao ver a retenção, Débora acredita que a corretora já quitou o imposto e que não precisa fazer apuração ou emitir DARF. Seu calendário fiscal ainda está aberto, e o recolhimento pode ser feito até o último dia útil do mês seguinte. Considere a alíquota de 15% sobre o ganho. Calcule o IRRF, o imposto devido e o valor restante a recolher.</p>",
+     "alternativas": {
+      "a": "O IRRF é R$ 20, o imposto é R$ 600 e o DARF é R$ 580, porque 0,005% incide sobre o ganho de R$ 4.000.",
+      "b": "O IRRF é R$ 5, o imposto é R$ 600 e o DARF restante é R$ 595, com recolhimento no prazo do mês seguinte.",
+      "c": "O IRRF é R$ 5 e encerra a tributação, pois a retenção na fonte substitui a apuração mensal do investidor em operações comuns.",
+      "d": "O IRRF é R$ 5, o imposto é R$ 800 e o DARF é R$ 795, porque ganhos em ações usam 20% fora da faixa de isenção."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Aluguel de ações: remuneração, garantias e riscos": [
+    {
+     "id": "cpror-inv-17-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. O doador já possui a ação, cede sua disponibilidade e recebe taxa. O tomador pode usá-la para venda a descoberto, cumprir liquidação ou estruturar operações com derivativos.</p><p>A alternativa B transfere risco de mercado e proventos ao tomador. A alternativa A trata o aluguel como compra e venda com a B3. A alternativa D troca as motivações das duas pontas.</p><p>Regra de bolso: doador monetiza uma ação que possui; tomador obtém temporariamente o papel para executar uma estratégia.</p>",
+     "enunciado": "<p>Ao explicar o aluguel de ações, uma assessora precisa distinguir as motivações usuais do doador e do tomador. Identifique a associação correta.</p>",
+     "alternativas": {
+      "a": "O doador vende a ação à B3; o tomador compra o papel da bolsa para receber dividendos e votar durante o contrato.",
+      "b": "O doador transfere o risco de mercado em troca de proteção; o tomador recebe proventos como remuneração por manter a ação.",
+      "c": "O doador cede a disponibilidade e busca taxa de aluguel; o tomador usa os papéis em venda a descoberto, liquidação ou estratégias.",
+      "d": "O doador busca lucro com queda do preço; o tomador mantém a ação parada para receber a taxa pactuada pelo empréstimo."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-17-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Durante o contrato, a companhia paga ao tomador porque ele figura como titular, mas o sistema reembolsa o doador na mesma data e pelo mesmo valor. O resultado econômico pertence ao doador.</p><p>A alternativa A entrega o provento ao tomador em caráter definitivo. A alternativa C duplica o pagamento. A alternativa D suspende o provento até a devolução, fluxo que não corresponde ao mecanismo descrito.</p><p>Regra de bolso: o provento passa operacionalmente pelo tomador e termina economicamente com o doador.</p>",
+     "enunciado": "<p>Uma companhia declara dividendos enquanto suas ações estão emprestadas. Compare o fluxo operacional e o resultado econômico para doador e tomador.</p>",
+     "alternativas": {
+      "a": "O tomador fica com os dividendos, pois o empréstimo transfere em caráter definitivo os direitos econômicos e políticos do papel.",
+      "b": "A companhia paga ao tomador, que figura como titular no período, e o sistema reembolsa o doador na mesma data e no mesmo valor.",
+      "c": "O doador recebe da companhia e do tomador ao mesmo tempo, obtendo dois pagamentos por continuar exposto ao risco da ação.",
+      "d": "A companhia suspende os dividendos durante o aluguel e acumula o valor para pagamento ao doador quando ocorrer a devolução."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-17-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A B3 atua como contraparte central, assume o risco de contraparte, exige garantias e, diante de inadimplência, pode executá-las, recomprar os papéis e devolvê-los ao doador.</p><p>A alternativa A torna garantias facultativas e devolve o risco ao doador. A alternativa C usa garantia para cobrir risco de mercado, que permanece com o dono. A alternativa D transforma empréstimo em compra e venda definitiva.</p><p>Regra de bolso: garantia cobre a obrigação de devolver; não cobre a desvalorização da ação do doador.</p>",
+     "enunciado": "<p>Marcelo possui ações e aceita alugá-las, mas teme que o tomador venda os papéis, sofra perda e deixe de devolvê-los. O atendente afirma que a operação dispensa garantias porque a corretora conhece o cliente. A B3 registra o contrato como contraparte central, e o tomador dispõe de dinheiro, títulos públicos e outros ativos líquidos para depósito. Marcelo continuará exposto à oscilação da cotação, embora o risco de contraparte seja tratado pela infraestrutura do mercado. Ele quer saber se a proteção recebida também lhe assegura o preço atual da carteira ou se alcança somente a obrigação de restituição dos papéis. Sua intenção é conservar o investimento depois do contrato. Avalie a função da B3 e das garantias nessa operação.</p>",
+     "alternativas": {
+      "a": "A B3 transfere ao doador a análise de crédito, e as garantias são facultativas quando o tomador possui relacionamento com a corretora.",
+      "b": "A B3 assume o risco de contraparte, exige garantias do tomador e pode executá-las para recomprar e devolver a ação em caso de inadimplência.",
+      "c": "As garantias protegem o doador da queda da cotação, repondo o valor de mercado perdido enquanto as ações permanecem alugadas.",
+      "d": "A B3 compra as ações do doador no início e as revende ao tomador, eliminando o empréstimo e a obrigação posterior de devolução."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-17-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A alta aumenta o risco de recompra do tomador e pode gerar chamada de margem. Sem recomposição, a B3 executa as garantias, recompra compulsoriamente os papéis e os devolve ao doador.</p><p>A alternativa B congela a garantia e atribui a variação ao doador. A alternativa C reduz margem justamente quando o risco do tomador aumenta. A alternativa D converte inadimplência em aquisição definitiva e elimina indevidamente a devolução.</p><p>Regra de bolso: preço sobe, risco do vendido cresce, margem aumenta e falta de depósito pode levar à recompra compulsória.</p>",
+     "enunciado": "<p>Paula toma ações emprestadas e as vende a descoberto. Nos dias seguintes, a cotação sobe e eleva o custo potencial de recomprar os papéis para devolução. A B3 recalcula diariamente o risco e faz chamada de margem adicional. Paula recusa o depósito porque entende que a garantia inicial fixa sua obrigação até o vencimento. A alta continua, e o saldo depositado deixa de cobrir a exposição medida pelo sistema. Seu assessor explica que o contrato ainda está vigente, mas a insuficiência de cobertura pode provocar atuação da infraestrutura de mercado antes da data final. Ela deseja manter a posição esperando futura queda da cotação. Analise o ajuste de garantias e a consequência possível da falta de atendimento à chamada.</p>",
+     "alternativas": {
+      "a": "A chamada acompanha a alta do risco; sem o depósito, a B3 pode executar garantias, recomprar a ação e devolvê-la ao doador.",
+      "b": "A garantia inicial permanece fixa, pois variação posterior pertence ao doador e não altera a obrigação assumida pelo tomador.",
+      "c": "A B3 reduz a margem quando a ação sobe, porque o preço elevado aumenta o valor dos papéis que serão entregues ao doador.",
+      "d": "A falta de margem transfere as ações vendidas ao tomador em caráter definitivo, encerrando a necessidade de recompra no mercado."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-17-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A venda rende R$ 100.000. Recomprar a R$ 10 custa R$ 40.000 e gera ganho de R$ 60.000. Recomprar a R$ 55 custa R$ 220.000 e gera perda de R$ 120.000. Alta adicional amplia a perda.</p><p>A alternativa B calcula valores sem fechar com os preços e limita a perda à venda. A alternativa A trata R$ 100.000 como ganho na queda e transfere excesso à B3. A alternativa D inverte os sinais da venda a descoberto.</p><p>Regra de bolso: vendido ganha quando recompra abaixo e perde quando recompra acima; o zero limita o ganho, a alta não limita a perda.</p>",
+     "enunciado": "<p>Rogério toma 4.000 ações alugadas, vende cada uma por R$ 25 e pretende recomprá-las depois. Em um cenário, a cotação cai para R$ 10. Em outro, sobe para R$ 55. Desconsidere taxas e demais custos para comparar apenas compra e venda. Rogério acredita que o lucro e a perda ficam limitados ao valor inicial de R$ 100.000 e que a margem impede prejuízo acima desse montante. A estratégia continua sujeita à recompra e devolução das mesmas 4.000 ações. O assessor pede que ele compare o caixa recebido na venda com o desembolso necessário em cada recompra, sem tratar a garantia como seguro contra prejuízo. Também lembra que o preço da ação pode continuar subindo. Calcule o resultado nos dois cenários e explique a assimetria da venda a descoberto.</p>",
+     "alternativas": {
+      "a": "Na queda, ganha R$ 100.000; na alta, perde R$ 30.000, porque a B3 absorve a parcela da recompra acima do valor vendido.",
+      "b": "Na queda, ganha R$ 40.000; na alta, perde R$ 100.000, pois o valor da venda inicial limita os dois lados da operação.",
+      "c": "Na queda, ganha R$ 60.000; na alta, perde R$ 120.000, e novas altas podem ampliar a perda sem teto conhecido de antemão.",
+      "d": "Na queda, perde R$ 60.000; na alta, ganha R$ 120.000, pois o tomador se beneficia quando recompra o papel por preço elevado."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-17-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A receita é R$ 320.000 vezes 4% vezes 4/12, ou R$ 4.266,67. A queda de 15% representa R$ 48.000. O aluguel gera receita pequena diante da oscilação e não modifica o risco de mercado da posição.</p><p>A alternativa A usa o aluguel anual de R$ 12.800 e reduz a perda a quatro meses. A alternativa C calcula os valores, mas atribui à B3 cobertura da queda. A alternativa D troca receita e desvalorização.</p><p>Regra de bolso: calcule a taxa pelo período e a oscilação sobre a posição; uma não neutraliza automaticamente a outra.</p>",
+     "enunciado": "<p>Neusa aluga uma posição avaliada em R$ 320.000 por taxa de 4% ao ano durante quatro meses. No período, a cotação das ações cai 15%. Desconsidere outros custos e use proporcionalidade simples para a taxa. Neusa esperava que a remuneração compensasse a desvalorização e afirma que o aluguel provocou a perda de mercado. O contrato funcionou normalmente, e os papéis seriam afetados pela mesma cotação se estivessem parados em sua carteira. Na reunião de acompanhamento, ela pede que o assessor separe a remuneração contratual do efeito econômico decorrente da variação do ativo que continua pertencendo a ela. As ações são devolvidas normalmente ao fim do período. Calcule a receita de aluguel e a perda pela oscilação e avalie a relação entre esses resultados.</p>",
+     "alternativas": {
+      "a": "O aluguel rende R$ 12.800 e a queda representa R$ 16.000, pois os quatro meses reduzem a perda de mercado na mesma proporção.",
+      "b": "O aluguel rende R$ 4.266,67 e a queda representa R$ 48.000; a taxa é renda acessória e não elimina o risco de mercado do doador.",
+      "c": "O aluguel rende R$ 4.266,67 e a B3 reembolsa os R$ 48.000 da queda, porque sua garantia cobre a cotação do doador.",
+      "d": "O aluguel rende R$ 48.000 e a queda representa R$ 4.266,67, pois a taxa anual incide sobre a variação negativa da posição."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-17-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Proventos continuam economicamente com Cecília por meio do reembolso, enquanto o empréstimo retira temporariamente a disponibilidade imediata para venda e o voto. O risco de mercado permanece com ela.</p><p>A alternativa B entrega proventos definitivamente ao tomador. A alternativa C preserva voto apesar do registro temporário. A alternativa D divide pagamentos e relaciona voto ao volume de garantias, critérios ausentes da mecânica.</p><p>Regra de bolso: doador mantém economia do papel e seu risco, mas cede temporariamente disponibilidade e voto.</p>",
+     "enunciado": "<p>Durante o aluguel das ações de Cecília, a companhia declara dividendos e JCP e convoca assembleia. O cadastro operacional mostra o tomador como titular no período. Cecília conclui que ele ficará com os proventos e que ela poderá votar porque continua sendo a proprietária econômica. O contrato permanece vigente, e o sistema está preparado para processar os reembolsos na data de cada pagamento. Cecília também continua exposta à alta ou à queda do papel e recebe a taxa pactuada. Ao mesmo tempo, pensa em vender parte da posição antes da assembleia e pergunta se consegue negociar imediatamente os papéis que ainda estão emprestados. Avalie quais direitos econômicos permanecem com a doadora e quais faculdades ficam temporariamente indisponíveis.</p>",
+     "alternativas": {
+      "a": "Dividendos e JCP são reembolsados à doadora na mesma data e valor; durante o empréstimo, ela perde liquidez imediata e direito de voto.",
+      "b": "Proventos e voto ficam com o tomador em caráter definitivo, e a taxa de aluguel substitui os direitos econômicos cedidos pela doadora.",
+      "c": "A doadora recebe os proventos e vota, pois a exposição econômica impede que o registro temporário produza efeito sobre assembleias.",
+      "d": "A companhia divide os proventos entre as duas pontas, e a B3 atribui o voto a quem depositou garantias de valor elevado no contrato."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-17-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. O custo de recompra subiu R$ 60.000, ampliando a exposição do tomador. A B3 chama margem e, se o reforço não ocorre, pode executar garantias, recomprar compulsoriamente e devolver os papéis.</p><p>A alternativa B atribui a perda da venda a descoberto ao doador. A alternativa C elimina a contraparte central e transfere o crédito. A alternativa A ignora ajuste diário e permite exposição sem cobertura.</p><p>Regra de bolso: margem acompanha o custo de fechar a posição e pode ser executada antes do vencimento.</p>",
+     "enunciado": "<p>Um tomador vende ações alugadas por R$ 80.000. Depois de notícia favorável, a posição necessária para recomprar os papéis passa a custar R$ 140.000. A B3 exige reforço de margem, mas o cliente não deposita a diferença. Ele afirma que o doador deverá cobrar diretamente sua corretora e esperar até o vencimento. As garantias existentes são líquidas e podem ser executadas, e o sistema acompanha diariamente a exposição. O doador, por sua vez, quer entender se a falha do tomador rompe a estrutura de contraparte central ou se aciona justamente os mecanismos previstos para assegurar a devolução. A ação permanece disponível para negociação no mercado. Analise o encadeamento entre alta da ação, margem, inadimplência e proteção do doador.</p>",
+     "alternativas": {
+      "a": "A B3 mantém a venda aberta sem garantia adicional, pois a perda só se realiza quando o tomador decide recomprar voluntariamente.",
+      "b": "A alta reduz a margem porque os R$ 60.000 de perda pertencem ao doador, que continua exposto ao preço da própria ação.",
+      "c": "A falta de depósito encerra a contraparte central, e o doador passa a assumir diretamente o crédito do tomador até o vencimento.",
+      "d": "A alta amplia o risco e a chamada; sem reforço, a B3 pode executar garantias, recomprar os papéis e devolvê-los ao doador."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-17-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Reversibilidade à doadora permite que Teresa solicite a devolução, mas o tomador ainda possui prazo para recomprar e entregar. A disponibilidade para venda não retorna imediatamente com a solicitação.</p><p>A alternativa B elimina o prazo e cria obrigação de venda da B3. A alternativa C ignora que o contrato é reversível às duas pontas. A alternativa A esvazia o direito de pedir devolução e o transforma em ajuste de taxa.</p><p>Regra de bolso: reversibilidade permite pedir; o prazo operacional define quando a ação volta.</p>",
+     "enunciado": "<p>Teresa empresta ações por contrato reversível a ambas as partes. Duas semanas depois, pede a devolução porque pretende vendê-las para pagar uma despesa próxima. O tomador havia vendido os papéis e recebe o prazo previsto para recomprá-los e devolvê-los. Teresa insiste que a reversibilidade obriga crédito instantâneo das ações em sua custódia e tenta emitir ordem de venda no mesmo minuto. O intermediário informa que o direito de solicitar antecipadamente existe, mas não elimina o procedimento de recompra. O tomador também considera encerrar a estratégia antes do prazo original e pergunta se precisa justificar sua decisão à doadora. Avalie os direitos das duas pontas e o efeito do pedido sobre a liquidez da doadora.</p>",
+     "alternativas": {
+      "a": "O tomador pode manter as ações até o prazo original depois do pedido, pois reversibilidade permite apenas reduzir a taxa de aluguel da doadora.",
+      "b": "Teresa recupera as ações imediatamente, pois a reversibilidade elimina o prazo do tomador e transfere à B3 a obrigação de vender os papéis.",
+      "c": "Teresa não pode solicitar devolução, pois somente o tomador encerra antecipadamente contratos registrados como reversíveis a ambas as partes.",
+      "d": "Teresa pode solicitar por haver reversibilidade a ela, mas o tomador dispõe do prazo de recompra e a liquidez não retorna no instante do pedido."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-17-q10",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Em regra, o tomador pode devolver a qualquer momento e paga a taxa proporcional ao período. A doadora só solicita antecipadamente quando o contrato foi registrado como reversível a ela.</p><p>A alternativa B prende o tomador e concede direito irrestrito à doadora. A alternativa C iguala direitos diferentes e cobra período não utilizado. A alternativa D ignora a reversibilidade e condiciona a devolução do tomador ao preço.</p><p>Regra de bolso: tomador pode devolver; doador consulta a reversibilidade; taxa acompanha o tempo efetivo.</p>",
+     "enunciado": "<p>Mauro, tomador de ações, encerra sua estratégia antes do vencimento e deseja devolver os papéis. O contrato permite que o tomador faça a devolução a qualquer momento. Já a doadora, Elisa, pergunta se poderia exigir encerramento antecipado em outro contrato registrado como não reversível a ela. O assessor afirma que as duas pontas possuem o mesmo direito automático e que a taxa anual inteira será cobrada mesmo com uso curto. Os documentos indicam a reversibilidade e o período efetivamente utilizado. Antes de aceitar a orientação, Elisa pede que sejam separados o direito de encerrar de cada participante e a forma de calcular a remuneração pelo tempo durante o qual os ativos ficaram emprestados. Compare as regras de encerramento para tomador e doadora.</p>",
+     "alternativas": {
+      "a": "Mauro pode devolver antes e paga taxa proporcional ao uso; Elisa depende de reversibilidade registrada a ela para solicitar devolução antecipada.",
+      "b": "Mauro permanece até o vencimento, enquanto Elisa pode solicitar qualquer contrato porque continua sendo dona econômica das ações.",
+      "c": "As duas pontas encerram no mesmo instante por decisão unilateral, e a taxa integral é devida porque foi pactuada em base anual.",
+      "d": "Elisa pode exigir o contrato não reversível, e Mauro só devolve antes se a cotação tiver caído desde a venda a descoberto."
+     },
+     "gabarito": "a"
     }
    ],
    "VGBL: acumulação, aposentadoria e planejamento patrimonial": [
