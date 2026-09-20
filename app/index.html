@@ -13,11 +13,11 @@
 <meta name="apple-mobile-web-app-title" content="Bússola">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesque:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Caveat:wght@500;600&family=Hanken+Grotesque:wght@400;500;600;700&display=swap" rel="stylesheet">
 <!-- ?v= força o navegador a buscar a versão nova a cada publicação.
      Sem isso o GitHub Pages entrega o arquivo do cache por até 10 minutos,
      e o aluno vê o HTML novo com o CSS velho, que é tela quebrada. -->
-<link rel="stylesheet" href="css/app.css?v=20260919-filtro-revauto">
+<link rel="stylesheet" href="css/app.css?v=20260920-exvisual">
 <!-- Firebase Auth SDK (compat) -->
 <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
@@ -615,8 +615,24 @@ function fazerLogout() {
 
   <!-- PAGE: EXERCÍCIOS -->
   <div class="page" id="page-exercicios">
-    <div class="page-title">✏️ Exercícios</div>
-    <div class="page-sub">Busque e marque os tópicos que quer treinar, responda e leia o comentário de cada questão.</div>
+    <div class="pg-faixa">
+      <span class="pg-faixa-icone" aria-hidden="true">✏️</span>
+      <div class="pg-faixa-txt">
+        <h2 class="pg-faixa-tit">Exercícios</h2>
+        <p class="pg-faixa-sub">Busque e marque os tópicos que quer treinar, responda e leia o comentário de cada questão.</p>
+      </div>
+      <div class="pg-faixa-marca" aria-hidden="true">
+        <span class="pg-faixa-lema">Disciplina hoje, resultados amanhã.</span>
+        <span class="pg-faixa-selo">
+          <svg viewBox="0 0 48 48" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.4">
+            <path d="M24 3 L27.2 20.8 L45 24 L27.2 27.2 L24 45 L20.8 27.2 L3 24 L20.8 20.8 Z" stroke-linejoin="round"/>
+            <circle cx="24" cy="24" r="3.1"/>
+            <path d="M36.7 11.3 L30.4 17.6 M11.3 36.7 L17.6 30.4 M36.7 36.7 L30.4 30.4 M11.3 11.3 L17.6 17.6" stroke-linecap="round" opacity=".55"/>
+          </svg>
+          <span class="pg-faixa-rumo">Rumo<br>à aprovação</span>
+        </span>
+      </div>
+    </div>
     <div id="exercicioConteudo"></div>
   </div>
 
@@ -772,10 +788,10 @@ function fazerLogout() {
 <script src="conteudo/conteudo-assban-pldft-lgpd.js?v=20260911"></script>
 <script src="conteudo/conteudo-cpror.js?v=20260919-cli01r2"></script>
 <script src="conteudo/questoes-cpa.js?v=20260911"></script>
-<script src="conteudo/questoes-cpror.js?v=20260919-inv10"></script>
+<script src="conteudo/questoes-cpror.js?v=20260919-inv13"></script>
 <script src="js/state.js?v=20260911"></script>
 <script src="js/engine.js?v=20260919-filtro-revauto"></script>
-<script src="js/ui.js?v=20260919-filtro-revauto"></script>
+<script src="js/ui.js?v=20260920-exvisual"></script>
 <script src="js/pomodoro.js?v=20260911"></script>
 
 <script>
