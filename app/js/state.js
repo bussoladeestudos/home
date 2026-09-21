@@ -244,7 +244,116 @@ function _syncStatus(st,title){
   el.textContent=st==="ok"?"☁️":st==="sync"?"⟳":"⚠";
   el.title=title||(st==="ok"?"Progresso sincronizado na nuvem"
     :st==="sync"?"Sincronizando…"
-    :"Sem conexão com a nuvem — dados salvos neste dispositivo");
+    :"Não foi possível salvar na nuvem. Seus dados estão guardados neste aparelho. Clique para ver o motivo.");
+  el.style.cursor=st==="err"?"pointer":"default";
+  el.onclick=st==="err"?function(){ _syncAvisoDispensado=false; _syncAviso(); }:null;
+}
+
+/* ── AVISO VISIVEL DE FALHA NA NUVEM (21/09/2026) ─────────────────────
+   Antes, quando a nuvem recusava uma gravacao, so o pontinho da barra
+   mudava de cor. O aluno seguia estudando sem saber que o progresso estava
+   so no navegador, e isso tem um desfecho ruim conhecido: se ele abrir o
+   app em outro aparelho e responder qualquer coisa, a copia pequena e velha
+   da nuvem passa a ser a 'mais recente' para o decideSync, e na volta ao
+   primeiro aparelho ela SUBSTITUI a copia boa do navegador.
+
+   Por isso o aviso diz as duas coisas que importam: onde o progresso esta
+   (neste aparelho) e o que evitar (outro aparelho). O motivo aparece em uma
+   linha, porque 'sessao expirada' pede uma acao do aluno e 'sem internet'
+   se resolve sozinho.
+
+   A parte que decide e testavel sem DOM (_syncFalha, _motivoDaFalha); o
+   desenho do aviso so roda no navegador. */
+let _syncFalha=null, _syncAvisoDispensado=false;
+function _motivoDaFalha(e,fase){
+  const c=String((e&&e.code)||"").replace(/^firestore\//,"");
+  const m=String((e&&e.message)||"");
+  if(c==="invalid-argument"&&/exceed|size|large/i.test(m)) return "grande";
+  if(c==="resource-exhausted") return "cota";
+  if(c==="permission-denied"||c==="unauthenticated") return "sessao";
+  if(c==="unavailable"||c==="deadline-exceeded"||/offline|network|internet/i.test(m)) return "rede";
+  return fase==="leitura"?"leitura":"outro";
+}
+const _SYNC_MOTIVOS={
+  rede:"Parece ser a conexão com a internet. Quando ela voltar, tentamos de novo sozinhos.",
+  sessao:"Sua sessão expirou. Saia da conta e entre de novo para voltar a salvar na nuvem.",
+  cota:"O serviço da nuvem está indisponível no momento. Tente de novo mais tarde.",
+  grande:"Seu histórico ficou maior do que a nuvem aceita. Fale com o suporte pelo menu Fale Conosco.",
+  leitura:"Não conseguimos ler seus dados da nuvem quando você entrou.",
+  outro:"Não conseguimos falar com a nuvem."
+};
+function _syncFalhou(e,fase){
+  const motivo=_motivoDaFalha(e,fase);
+  if(!_syncFalha||_syncFalha.motivo!==motivo) _syncAvisoDispensado=false;
+  _syncFalha={motivo:motivo,codigo:(e&&e.code)||"",fase:fase};
+  _syncStatus("err");
+  _syncAviso();
+}
+function _syncFalhaLimpar(){
+  const havia=!!_syncFalha;
+  _syncFalha=null; _syncAvisoDispensado=false;
+  _syncAviso();
+  if(havia&&typeof showToast==="function") showToast("☁️ Progresso salvo na nuvem de novo.");
+}
+function _syncAviso(){
+  if(typeof document==="undefined") return;
+  let el=document.getElementById("syncAviso");
+  if(!_syncFalha||_syncAvisoDispensado){ if(el) el.hidden=true; return; }
+  if(!el){
+    const main=document.querySelector("main.main")||document.body;
+    el=document.createElement("div"); el.id="syncAviso"; el.className="sync-aviso";
+    el.setAttribute("role","alert");
+    main.insertBefore(el,main.firstChild);
+  }
+  el.hidden=false;
+  el.innerHTML='<div class="sync-aviso-txt">'
+    +'<strong>Seu progresso não está sendo salvo na nuvem</strong>'
+    +'<p>Ele continua guardado neste aparelho. Até resolver, estude só por aqui: se você abrir o app em outro aparelho, a versão antiga da nuvem pode substituir o que fez neste.</p>'
+    +'<p class="sync-aviso-motivo"></p>'
+    +'</div><div class="sync-aviso-acoes">'
+    +'<button type="button" class="sync-aviso-btn">Tentar de novo</button>'
+    +'<button type="button" class="sync-aviso-fechar">Entendi</button></div>';
+  el.querySelector(".sync-aviso-motivo").textContent=_SYNC_MOTIVOS[_syncFalha.motivo]||_SYNC_MOTIVOS.outro;
+  el.querySelector(".sync-aviso-btn").onclick=function(){ syncTentarDeNovo(); };
+  el.querySelector(".sync-aviso-fechar").onclick=function(){ _syncAvisoDispensado=true; _syncAviso(); };
+}
+/* Tentar de novo. Se a falha foi na LEITURA do login, o app nunca chegou a
+   liberar o envio (_cloudReady continua falso, de proposito: sem saber o
+   que ha na nuvem, subir a copia local poderia apagar a de outro
+   aparelho). Entao refaz a leitura e a decisao do login. Chamar o
+   cloudOnLogin inteiro de novo seria errado: ele zera a sessao de
+   exercicios em andamento pelo resetAccountUI. */
+async function syncTentarDeNovo(){
+  if(!_cloudUser) return false;
+  if(!_cloudReady) return _cloudReconectar();
+  await _cloudPush();
+  return !_syncFalha;
+}
+async function _cloudReconectar(){
+  if(!_cloudUser||typeof DB==="undefined"||!DB) return false;
+  const user=_cloudUser, epoch=_cloudEpoch;
+  _syncStatus("sync");
+  try{
+    const snap=await DB.collection("alunos").doc(user.uid).get();
+    if(epoch!==_cloudEpoch) return false;
+    const remote=snap.exists?snap.data():null;
+    const d=decideSync(STATE,remote,user.uid);
+    if(d.winner==="remote") STATE=cleanState(remote);
+    STATE._syncUid=user.uid;
+    _cloudReady=true;
+    _syncFalhaLimpar();
+    save();
+    _syncStatus("ok");
+    if(d.winner==="remote"&&typeof renderTudo==="function") renderTudo();
+    return true;
+  }catch(e){
+    if(epoch!==_cloudEpoch) return false;
+    _syncFalhou(e,"leitura");
+    return false;
+  }
+}
+if(typeof window!=="undefined"&&window.addEventListener){
+  window.addEventListener("online",function(){ if(_syncFalha) syncTentarDeNovo(); });
 }
 
 function _cloudAgendarPush(){
@@ -260,8 +369,8 @@ async function _cloudPush(){
   const uid=_cloudUser.uid,epoch=_cloudEpoch,payload=JSON.parse(JSON.stringify(STATE));
   try{
     await DB.collection("alunos").doc(uid).set(payload);
-    if(epoch===_cloudEpoch) _syncStatus("ok");
-  }catch(e){ if(epoch===_cloudEpoch) _syncStatus("err"); }
+    if(epoch===_cloudEpoch){ _syncStatus("ok"); if(_syncFalha) _syncFalhaLimpar(); }
+  }catch(e){ if(epoch===_cloudEpoch) _syncFalhou(e,"gravacao"); }
 }
 
 async function cloudOnLogin(user){
@@ -288,6 +397,7 @@ async function cloudOnLogin(user){
     _cloudReady=true;
     save(); // grava local e agenda o push (nuvem termina igual ao vencedor)
     _syncStatus("ok");
+    if(_syncFalha) _syncFalhaLimpar();
     // Nuvem trouxe cronograma configurado → este NÃO é um primeiro acesso:
     // fecha o fluxo de boas-vindas/configuração que o boot deste dispositivo
     // pode ter aberto antes do login resolver (corrida boot × nuvem).
@@ -307,7 +417,7 @@ async function cloudOnLogin(user){
     return true;
   }catch(e){
     if(epoch!==_cloudEpoch) return false;
-    _syncStatus("err");
+    _syncFalhou(e,"leitura");
     // Somente cache do próprio UID; nenhum push antes de consultar a nuvem.
     if(typeof renderTudo==="function") renderTudo();
     _showAccount();
@@ -326,6 +436,7 @@ function _showAccount(){
 }
 function cloudOnLogout(){
   ++_cloudEpoch; clearTimeout(_cloudTimer); _cloudTimer=null;
+  _syncFalha=null; _syncAvisoDispensado=false; _syncAviso();
   _cloudReady=false; _cloudUser=null; STATE=initialState();
   if(typeof window!=="undefined") window._bussolaUserActed=false;
   if(typeof resetAccountUI==="function") resetAccountUI();
@@ -342,5 +453,5 @@ if(typeof window!=="undefined"&&window._pendingAuthUser){
 
 /* ── Export para Node (testes) ── */
 if(typeof module!=="undefined"&&module.exports){
-  module.exports={migrateState,decideSync,STATE_SCHEMA_VERSION,STATE_STORAGE_KEY};
+  module.exports={migrateState,decideSync,STATE_SCHEMA_VERSION,STATE_STORAGE_KEY,_motivoDaFalha};
 }

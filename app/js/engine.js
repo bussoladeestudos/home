@@ -1052,6 +1052,56 @@ function _exDias(){
   if(!STATE.exDias||typeof STATE.exDias!=="object") STATE.exDias={};
   return STATE.exDias;
 }
+/* PODA DO HISTORICO POR DIA (21/09/2026)
+
+   Cada questao guardava uma linha por dia em que foi respondida, para
+   sempre. O documento do aluno no Firestore tem limite fixo de 1 MiB, igual
+   em qualquer plano, e medido com a regra de tamanho do proprio Firestore um
+   aluno de 100 questoes por dia estourava perto do quinto mes. A falha e
+   silenciosa: o ultimo save aceito congela a nuvem e, se o aluno estudar
+   noutro aparelho, a copia velha pode vencer a boa na volta.
+
+   Quem le essas linhas por dia e SO o apagarHistoricoExercicios, e so para
+   'hoje' e '7' (janela de hoje-6 a hoje). Tudo mais velho era peso morto.
+   A poda junta as linhas com mais de PODA_JANELA_DIAS dias num saldo, o
+   mesmo campo `legado` que ja existia para o historico anterior ao porDia.
+
+   Por que a conta fecha, e isto e o que nao pode quebrar:
+   - r.n e r.ok, os totais que o resto do app le, nao sao tocados;
+   - a poda guarda 8 dias (hoje-7 em diante), um a mais que a janela do
+     botao, entao nenhuma linha podada cai dentro de uma exclusao futura e a
+     pre-validacao do apagar continua passando;
+   - o legado guarda a ultima resposta podada, que e o que o apagar usa para
+     restaurar r.ultima quando esvazia a janela.
+   Medido: o documento para perto de 300 KB, mesmo com 150 questoes por dia
+   durante um ano. O STATE.exDias do dashboard e outro registro e nao e podado. */
+const PODA_JANELA_DIAS=7;
+function _podarRegistro(r,corte){
+  if(!r||!r.porDia) return;
+  const velhos=Object.keys(r.porDia).filter(d=>d<corte).sort();
+  if(!velhos.length) return;
+  const ag=r.legado||{n:0,ok:0};
+  velhos.forEach(d=>{
+    const x=r.porDia[d]||{};
+    ag.n=(ag.n||0)+(x.n||0);
+    ag.ok=(ag.ok||0)+(x.ok||0);
+    if(!ag.ultima||d>=ag.ultima){ ag.ultima=d; ag.ultimaOpcao=x.ultimaOpcao; ag.ultimaCerta=x.ultimaCerta; }
+    delete r.porDia[d];
+  });
+  r.legado=ag;
+}
+function _corteDaPoda(hoje){
+  const lim=parseDate(hoje); lim.setDate(lim.getDate()-PODA_JANELA_DIAS);
+  return fmt(lim);
+}
+/* Varre o historico inteiro. Roda no maximo uma vez por dia, na primeira
+   resposta do dia, e e isso que poda tambem quem ja tinha meses acumulados
+   antes desta versao: nao ha migracao separada para dar errado. */
+function podarHistoricoExercicios(hojeRef){
+  const hoje=hojeRef||fmt(new Date()), corte=_corteDaPoda(hoje), h=_hist();
+  Object.keys(h).forEach(id=>_podarRegistro(h[id],corte));
+  STATE._podaEm=hoje;
+}
 function registrarResposta(id,opcao,acertou,hojeRef){
   if(!id) return null;
   const h=_hist();
@@ -1068,7 +1118,9 @@ function registrarResposta(id,opcao,acertou,hojeRef){
   bucket.n++; if(acertou) bucket.ok++;
   bucket.ultimaOpcao=opcao; bucket.ultimaCerta=!!acertou;
   r.porDia[dia]=bucket;
+  _podarRegistro(r,_corteDaPoda(dia));
   h[id]=r;
+  if(STATE._podaEm!==dia) podarHistoricoExercicios(dia);
   const d=_exDias();
   const acc=d[dia]||{n:0,ok:0};
   acc.n=(acc.n||0)+1;
@@ -1452,7 +1504,7 @@ if(typeof module!=="undefined"&&module.exports){
     _densityFor,aggregateEstrelas,calcStreaks,calcHeatmapConsistencia,calcRitmoSemanal,calcMarcos,MARCOS_SEQUENCIA,calcRumo,RUMO_TAGS,calcMesConsistencia,calcMedalhas,PATENTES,
     calcDominio,DOMINIO_MIN_AMOSTRA,
     getAulas,getAulaLink,getProvedores,getProvedor,contarTopicosComAula,_normTexto,
-    getQuestoes,temQuestoes,contarQuestoes,listarQuestoes,statusQuestao,registrarResposta,calcExercicios,
+    getQuestoes,temQuestoes,contarQuestoes,listarQuestoes,statusQuestao,registrarResposta,podarHistoricoExercicios,PODA_JANELA_DIAS,apagarHistoricoExercicios,calcExercicios,
     indexarAgendaTopicos,
     getConteudo,temConteudo,contarTopicosComConteudo};
 }
