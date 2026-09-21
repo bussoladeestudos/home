@@ -1,5 +1,5 @@
 /* GERADO por outputs/questoes_para_js.py. NAO editar a mao.
-   Fonte: _conteudo/cpror/questoes/**.yaml  ·  1179 questoes em 124 topicos
+   Fonte: _conteudo/cpror/questoes/**.yaml  ·  1189 questoes em 125 topicos
    Para mudar uma questao, edite o YAML e rode o script de novo. */
 window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
  "cproRAnbima": {
@@ -5273,7 +5273,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "O piso passa a equivaler à exposição arriscada.",
       "b": "O multiplicador deixa de participar do cálculo.",
       "c": "Compras após altas e vendas após quedas podem repetir perdas e custos.",
-      "d": "A parcela defensiva passa a acompanhar integralmente o ativo arriscado."
+      "d": "A parcela defensiva passa a oscilar na mesma medida do ativo arriscado."
      },
      "gabarito": "c"
     },
@@ -7743,7 +7743,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "Oscilação baixa da carteira e amplo afastamento do índice.",
       "b": "Risco absoluto elevado e risco relativo baixo.",
-      "c": "Risco específico integralmente removido.",
+      "c": "Risco específico eliminado pela diversificação.",
       "d": "Beta negativo diante do índice."
      },
      "gabarito": "b"
@@ -16866,7 +16866,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa B está correta. A original retorna 60% × (10% negativo) + 40% × 5% = 4,00% negativo; a alterada retorna 57% × (10% negativo) + 38% × 5% + 5% × (50% negativo) = 6,30% negativo.</p><p>A alternativa A ignora a ponderação das classes. A alternativa C usa apenas a parcela positiva para determinar o sinal. A alternativa D presume compensação entre a redução de ações e a nova queda sem executar a conta.</p><p>Regra de bolso: teste a alocação em cenários positivos e adversos antes de concluir qual contribuição ela oferece.</p>",
      "enunciado": "<p>O profissional testa a carteira 60/40 em um cenário adverso. Ações caem 10%, renda fixa rende 5% e a parcela cripto cai 50%. A carteira original mantém pesos de 60% e 40%; a alterada mantém 57% em ações, 38% em renda fixa e 5% em bitcoin e ether. O cliente havia analisado apenas o cenário de alta e tratava a contribuição positiva como permanente. Calcule os dois retornos e interprete a mudança.</p>",
      "alternativas": {
-      "a": "A carteira original perde 10,00% e a alterada perde 50,00%, pois cada uma acompanha integralmente a classe que caiu.",
+      "a": "A carteira original perde 10,00% e a alterada perde 50,00%, pois cada uma replica a queda da classe que caiu.",
       "b": "A original perde 4,00% e a alterada perde 6,30%; nesse cenário, a parcela cripto amplia a perda em 2,30 pontos percentuais.",
       "c": "A original ganha 2,00% e a alterada ganha 1,90%, pois o retorno positivo da renda fixa compensa as quedas das outras parcelas.",
       "d": "As duas perdem 4,00%, pois reduzir ações em três pontos neutraliza a queda de 50% aplicada à parcela cripto."
@@ -20434,6 +20434,185 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "b": "Produto próprio é indicado pela relação com o grupo, pois o destino interno da remuneração reduz o conflito e dispensa comparação externa.",
       "c": "A divulgação da comissão depois da contratação resolve o conflito e permite privilegiar o produto próprio pela origem societária.",
       "d": "O vínculo deve ser informado, e a comparação considera risco, custo, liquidez e objetivo; transparência não substitui adequação."
+     },
+     "gabarito": "d"
+    }
+   ],
+   "Conheça seu cliente: cadastro e informações para distribuição": [
+    {
+     "id": "cpror-rel-21-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O processo começa na aceitação, passa pelo procedimento cadastral e acompanha o relacionamento, porque é ao longo dele que atividade, representação e movimentações mudam.</p><p>A alternativa A encerra o dever na aprovação do cadastro, quando ele continua enquanto houver relacionamento. A alternativa C adia o início para a primeira aplicação, mas a aceitação do cliente já exige conhecê-lo. A alternativa D confunde conhecimento do cliente com suitability, dois processos que se comunicam e têm funções diferentes.</p><p>Regra de bolso: conhecer o cliente começa antes da conta e dura enquanto ela existir.</p>",
+     "enunciado": "<p>Num treinamento de novos assessores, uma gerente pergunta em que momentos a instituição aplica o processo de Conheça seu Cliente previsto nas Regras de Distribuição da Anbima. Identifique a resposta correta.</p>",
+     "alternativas": {
+      "a": "Na abertura da conta, e o processo se encerra quando o cadastro é aprovado e os documentos ficam arquivados.",
+      "b": "No início, no procedimento cadastral e durante o relacionamento, com atualização quando a situação do cliente muda.",
+      "c": "Na primeira aplicação do cliente, porque antes de haver movimentação financeira ainda falta o que a instituição possa analisar.",
+      "d": "Na renovação periódica do perfil de suitability, que passa a cumprir também o papel de acompanhar o cadastro."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-21-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O cadastro informa quem é a pessoa, o conhecimento do cliente articula esses dados com atividade, contexto e movimentações, e o suitability examina se os investimentos são adequados. Cadastro atualizado, sozinho, não demonstra perfil identificado.</p><p>A alternativa A funde os três processos e apaga a função de cada um. A alternativa B usa renda e patrimônio como se bastassem para o perfil, que também depende de objetivos e conhecimento. A alternativa C coloca o suitability dentro do cadastro, quando ele é uma análise própria.</p><p>Regra de bolso: cadastro diz quem é, conhecer o cliente diz como ele vive, suitability diz o que lhe serve.</p>",
+     "enunciado": "<p>Um assessor comenta com a equipe que, estando o cadastro do cliente atualizado, o perfil de investimento dele também fica identificado. Explique a relação entre cadastro, conhecimento do cliente e suitability.</p>",
+     "alternativas": {
+      "a": "Os três formam um único processo, e atualizar qualquer um deles dispensa a revisão dos outros dois dentro do mesmo período de análise.",
+      "b": "O cadastro substitui o suitability quando registra renda e patrimônio, porque esses dois dados bastam para definir o perfil do cliente.",
+      "c": "O suitability é uma etapa interna do cadastro e passa a valer no momento em que o cliente assina a ficha de abertura.",
+      "d": "Os três se comunicam e têm funções distintas: identificar a pessoa, entender o contexto dela e avaliar a adequação dos investimentos."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-21-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A divergência entre o cadastro e as movimentações é motivo para análise. O profissional registra o que a cliente disse, esclarece a finalidade do contato e segue o procedimento, sem inventar a conclusão.</p><p>A alternativa B corrige o cadastro com uma informação que Célia não confirmou, e fazer isso só para calar o alerta é o que a regra veda. A alternativa C trata a divergência como prova de crime, quando ela é motivo de apuração. A alternativa D usa a antiguidade do cadastro para encerrar um dever que acompanha o relacionamento.</p><p>Regra de bolso: divergência se apura; não se apaga no sistema nem se converte em acusação.</p>",
+     "enunciado": "<p>O sistema de uma corretora gera um alerta sobre Célia, cadastrada há seis anos como servidora aposentada com renda mensal de R$ 7.200. Nos últimos cinco meses, ela passou a receber transferências mensais entre R$ 18.000 e R$ 24.000 de uma empresa de consultoria e aplica quase tudo em CDB. O analista Marcos liga para ela. O cadastro dela foi atualizado pela última vez há três anos, e nenhum documento sobre outra atividade consta no sistema. Célia diz que é uma renda extra, prefere deixar os detalhes para outra hora e pergunta, incomodada, se está sendo investigada. Marcos quer resolver o caso no mesmo dia e sugere ao supervisor alterar a ocupação dela para empresária no sistema, para o alerta parar de disparar. Avalie a sugestão de Marcos e indique o encaminhamento.</p>",
+     "alternativas": {
+      "a": "Registrar o que Célia informou, explicar a finalidade do contato e seguir o procedimento de esclarecimentos, levando a divergência aos responsáveis.",
+      "b": "Alterar a ocupação para empresária, já que a mudança de renda está evidente nos extratos, e reavaliar o perfil de suitability dela na próxima revisão periódica.",
+      "c": "Tratar as transferências como indício de lavagem e bloquear as movimentações de Célia até que ela apresente a documentação completa da consultoria.",
+      "d": "Encerrar o alerta, porque a cliente é antiga, o cadastro já foi aprovado e os recursos seguem para aplicações dentro da própria instituição."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-21-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Representar e controlar são fatos diferentes. Os poderes do diretor precisam ser conferidos, e a estrutura societária precisa ser compreendida até chegar às pessoas naturais que controlam a empresa ou dela se beneficiam, antes da decisão de aprovação.</p><p>A alternativa A transforma o procurador em beneficiário final porque ele assina, e é justamente essa confusão que o processo existe para evitar. A alternativa B veta por uma característica isolada, quando a decisão depende dos documentos e dos critérios de risco. A alternativa D aprova primeiro e identifica depois, invertendo a ordem do processo.</p><p>Regra de bolso: quem assina pela empresa pode não ser quem manda nela.</p>",
+     "enunciado": "<p>Uma distribuidora de alimentos quer abrir conta para aplicar R$ 2,5 milhões. Quem conduz o processo é o diretor financeiro, que apresenta procuração com poderes para movimentar a conta e assina os documentos. O contrato social mostra que a distribuidora pertence a uma holding, cujos sócios pessoas naturais aparecem apenas num documento ainda pendente de envio. A conta receberia o caixa da empresa em fundos de renda fixa, com resgates frequentes para pagar fornecedores. O diretor explica que os sócios moram no exterior, que ele cuida de tudo sozinho e que mais exigência de papel vai fazer a empresa levar o dinheiro para outro banco. A gerente Denise precisa decidir como seguir com a aprovação. Indique o procedimento esperado.</p>",
+     "alternativas": {
+      "a": "Cadastrar o diretor financeiro como beneficiário final, porque é ele quem assina, movimenta a conta e responde pela empresa perante a instituição.",
+      "b": "Recusar o relacionamento, porque empresa controlada por holding com sócios no exterior apresenta um risco que impede a abertura da conta.",
+      "c": "Conferir os poderes do diretor e seguir a estrutura societária até identificar as pessoas naturais que controlam a empresa, antes de aprovar.",
+      "d": "Aprovar o cadastro com os dados da distribuidora e deixar a identificação dos sócios da holding para a primeira atualização cadastral."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-21-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. As regras não impõem visita física indistinta a qualquer cliente. O procedimento de cada instituição define em que casos a visita acontece, e a modalidade virtual é admitida, desde que produza evidências e respeite os controles aplicáveis.</p><p>A alternativa A atribui às regras uma exigência que elas não fazem. A alternativa B vai ao extremo oposto e trata o canal virtual como dispensa de evidências. A alternativa D inventa um valor de corte para a visita obrigatória, que a norma não prevê.</p><p>Regra de bolso: quem define quando visitar é o procedimento, e virtual não significa sem prova.</p>",
+     "enunciado": "<p>Uma corretora que opera só por canais digitais, com cerca de 40 mil clientes e nenhuma agência, contrata um supervisor vindo de um banco tradicional. Na primeira reunião, ele propõe que cada abertura de conta passe a exigir visita presencial ao endereço do cliente, prática que usava no emprego anterior. A diretoria responde que a abertura hoje é feita por videochamada, com envio de documentos e checagem em bases externas, e que cada abertura gera um dossiê com a gravação da chamada, os documentos e o resultado das consultas. Para ela, a visita inviabilizaria o modelo de negócio. O supervisor insiste que as Regras de Distribuição da Anbima impõem a visita e que sem ela a corretora está irregular. Avalie a proposta do supervisor.</p>",
+     "alternativas": {
+      "a": "A proposta segue as Regras de Distribuição, que exigem visita física a cada cliente antes da aprovação do cadastro, qualquer que seja o canal.",
+      "b": "A proposta é desnecessária, porque o atendimento virtual dispensa evidências e controles adicionais na abertura de conta de clientes digitais.",
+      "c": "As visitas seguem os casos previstos no procedimento, e a modalidade virtual é possível, desde que obtenha evidências e observe os controles.",
+      "d": "A proposta vale para clientes de alto patrimônio, que as regras mandam visitar presencialmente a partir de um valor aplicado definido na norma."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-21-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A análise da abertura não encerra o dever de conhecer o cliente. Uma mudança relevante de controle precisa ser tratada pelo fluxo previsto, com a identificação de quem passou a controlar a empresa.</p><p>A alternativa B usa o CNPJ inalterado para ignorar que o controle mudou, e aplicação existente não autoriza isso. A alternativa C adia para a data periódica uma mudança que já é conhecida hoje. A alternativa D exagera na reação: a mudança exige atualização, e não o encerramento automático do relacionamento.</p><p>Regra de bolso: mudou quem controla, muda o cadastro, na hora em que se sabe.</p>",
+     "enunciado": "<p>Uma construtora abriu conta há dois anos, com cadastro aprovado e R$ 800.000 aplicados em fundos de renda fixa. Na reunião trimestral de acompanhamento, o sócio fundador conta ao assessor Tiago que vendeu o controle da empresa para um grupo de investidores e que agora permanece apenas como diretor técnico, sem participação societária. Ele pede que as aplicações sigam como estão, porque a empresa, o CNPJ e a equipe financeira continuam os mesmos. A mudança foi registrada na junta comercial há três semanas, e o novo grupo controlador reúne dois fundos de investimento e uma pessoa física. Tiago lembra que a análise completa da construtora foi feita na abertura, com a documentação conferida na época. Indique o que a mudança exige.</p>",
+     "alternativas": {
+      "a": "Tratar a troca de controle pelo fluxo de atualização e identificar quem passou a controlar a empresa.",
+      "b": "Manter o cadastro como está, porque a análise feita na abertura continua válida enquanto a empresa mantiver o mesmo CNPJ e as mesmas aplicações.",
+      "c": "Aguardar a próxima atualização periódica prevista no procedimento e registrar até lá a informação dada pelo sócio como observação no sistema.",
+      "d": "Encerrar as aplicações e exigir nova abertura de conta, porque a troca de controle transforma a construtora em outro cliente para fins cadastrais."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-21-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O procedimento define os critérios e os responsáveis pela decisão de aceitação e veto, e essa decisão não pode ser substituída pelo interesse comercial nem pela confiança pessoal de quem atende.</p><p>A alternativa A troca o critério institucional por uma assinatura individual, que não tem esse poder. A alternativa B usa a amizade como redutor de risco, quando conhecer alguém pessoalmente não valida informação nenhuma. A alternativa C transforma processos em andamento em prova de crime, que é outra conclusão que a regra não autoriza.</p><p>Regra de bolso: quem veta é o procedimento, não a amizade nem a meta.</p>",
+     "enunciado": "<p>Um empresário conhecido na cidade, amigo de longa data do gerente regional, quer trazer R$ 3 milhões para a instituição. A análise de aceitação aponta que ele responde a processos ligados a fraude em licitações, situação que o procedimento interno lista como motivo de veto de relacionamento. O gerente regional diz ao atendente que conhece o empresário há vinte anos e confia nele, lembra que a captação fecha a meta do trimestre da agência e pede que o cadastro seja aprovado com a assinatura dele como responsável. O sistema já bloqueou a aprovação automática ao cruzar o nome com a lista de restrições da casa, e a liberação depende do comitê de aceitação, que se reúne na semana seguinte. Avalie o pedido do gerente regional.</p>",
+     "alternativas": {
+      "a": "Aprovar, desde que o gerente regional registre por escrito que assume a responsabilidade pela relação e pelas informações prestadas pelo cliente.",
+      "b": "Aprovar com monitoramento reforçado das movimentações, já que a relação de longa data reduz a chance de as informações estarem erradas.",
+      "c": "Recusar o empresário e comunicar o caso às autoridades como crime, porque os processos em andamento comprovam a fraude nas licitações.",
+      "d": "Seguir os critérios e os responsáveis definidos no procedimento para o veto, porque relação pessoal e meta comercial ficam fora dessa decisão."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-21-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. Os procedimentos precisam ser documentados e ter controles efetivos, compatíveis com porte, complexidade e modelo de negócio. Proporcionalidade calibra o tamanho dos controles, mas a instituição continua precisando demonstrar como identifica, valida e atualiza o que é relevante.</p><p>A alternativa A lê proporcionalidade como licença para a informalidade. A alternativa C é a mesma leitura em versão prudente, e ainda trata o conhecimento pessoal como validação provisória. A alternativa D vai ao extremo oposto e apaga a proporcionalidade que as regras de fato admitem.</p><p>Regra de bolso: proporcional muda o tamanho do controle, não a necessidade de provar que ele existe.</p>",
+     "enunciado": "<p>Uma distribuidora pequena, com três profissionais e cerca de cento e vinte clientes, recebe a visita da supervisão de autorregulação. O diretor explica que a casa dispensa procedimento escrito de Conheça seu Cliente: os sócios atendem cada cliente pessoalmente, conhecem as famílias há anos e guardam os documentos numa pasta compartilhada da empresa. Na última revisão da carteira, feita há quatro anos, dois clientes haviam mudado de atividade sem que a mudança fosse registrada. Ele argumenta que as regras admitem proporcionalidade e que uma estrutura desse tamanho comporta controles simples e informais. A supervisão pede para ver, por escrito, como a casa identifica, valida e atualiza as informações dos clientes. Avalie o argumento do diretor.</p>",
+     "alternativas": {
+      "a": "O argumento procede, porque a proporcionalidade permite trocar o procedimento escrito pelo conhecimento pessoal dos sócios em instituições de pequeno porte.",
+      "b": "A proporcionalidade ajusta o tamanho dos controles, e a casa segue obrigada a documentar o procedimento e a demonstrar como identifica, valida e atualiza as informações.",
+      "c": "O argumento procede em parte: basta formalizar o procedimento na próxima revisão, porque conhecer os clientes pessoalmente supre a validação até lá.",
+      "d": "O argumento falha porque as regras impõem às pequenas instituições os mesmos sistemas e a mesma estrutura de controle exigidos das grandes."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-21-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Dados de clientes circulam em canais e sistemas autorizados, com acesso conforme a necessidade de trabalho, e cópia em conta pessoal cria exposição sem controle institucional. Aplicações e resgates são registrados em nome da cliente, e uma representação que o cadastro não prevê passa pelo fluxo de atualização.</p><p>A alternativa B acerta os documentos e erra o resgate, aceitando um representante que o cadastro desconhece. A alternativa C erra as duas situações e usa dados que qualquer parente sabe como se fossem prova de poderes. A alternativa D acerta os documentos e converte uma situação a apurar em acusação.</p><p>Regra de bolso: dado do cliente fica no sistema, e dinheiro do cliente só sai em nome dele ou de quem o cadastro reconhece.</p>",
+     "enunciado": "<p>Uma assessora que atende em home office passou a receber documentos de atualização cadastral pelo celular pessoal e a guardar cópias numa conta pessoal de armazenamento na nuvem, para consultar quando o sistema está lento, e hoje recebe cerca de trinta documentos por semana desse jeito. Na mesma semana, o filho de uma cliente de 82 anos liga pedindo o resgate de R$ 150.000 de uma aplicação da mãe. Ele diz que cuida das finanças dela e que ela está hospitalizada, confirma por telefone o CPF e a data de nascimento da titular e pede o crédito numa conta em nome dele. O cadastro da cliente registra apenas ela como titular, sem procurador, e a última atualização cadastral dela é de oito meses atrás. Avalie a conduta esperada da assessora nas duas situações.</p>",
+     "alternativas": {
+      "a": "Levar os documentos para canais autorizados e registrar resgates em nome da titular, tratando o pedido do filho pelo fluxo de representação previsto.",
+      "b": "Apagar as cópias pessoais e processar o resgate, registrando no sistema que o pedido foi feito pelo filho em nome da titular hospitalizada.",
+      "c": "Manter as cópias enquanto trabalhar em casa e processar o resgate, porque o filho confirmou corretamente os dados cadastrais da mãe.",
+      "d": "Transferir as cópias para o sistema e recusar o resgate em caráter definitivo, comunicando o episódio às autoridades como uma tentativa de fraude contra a idosa."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-21-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. O procedimento precisa tratar da aceitação, da validação das informações e da forma de aprovação, da identificação do beneficiário final e do veto de relacionamentos por risco. Coleta de documentos é o começo do processo, e não o processo inteiro.</p><p>A alternativa A tenta compensar a falta de conteúdo com frequência, e revisar mais vezes um procedimento incompleto repete a lacuna. A alternativa B limita a validação e o veto à pessoa jurídica, quando eles valem para qualquer cliente. A alternativa C entrega a decisão de veto à área cujo interesse é captar, que é o conflito que a regra quer afastar.</p><p>Regra de bolso: arquivar documento é coletar; conhecer o cliente é validar, aprovar, acompanhar e, quando for o caso, vetar.</p>",
+     "enunciado": "<p>A diretora de compliance de uma corretora revisa a minuta do procedimento de Conheça seu Cliente preparada pela área comercial. O texto descreve com cuidado a coleta de documentos na abertura e prevê atualização do cadastro a cada cinco anos. Sobre como validar as informações recebidas, quem aprova o cliente, a identificação do beneficiário final de empresas e as situações que levam ao veto, a minuta fica em silêncio. A corretora atende pessoas físicas e empresas, e cerca de um terço da carteira é de clientes pessoa jurídica organizados em holdings. A área comercial defende que esses pontos travariam a captação e que a coleta de documentos já cobre o essencial. Identifique o que a diretora precisa exigir na revisão.</p>",
+     "alternativas": {
+      "a": "Manter a minuta e reduzir o intervalo de atualização para um ano, porque a revisão mais frequente compensa os pontos que ficaram ausentes.",
+      "b": "Incluir os pontos ausentes só para clientes pessoa jurídica, já que o cadastro de pessoa física se completa com a coleta de documentos.",
+      "c": "Aprovar a minuta e tratar validação, aprovação e veto num manual da área comercial, que conhece o perfil de captação da corretora.",
+      "d": "Incluir a validação das informações, a forma de aprovação, a identificação do beneficiário final e os critérios de veto de relacionamentos por risco."
      },
      "gabarito": "d"
     }
