@@ -1,5 +1,5 @@
 /* GERADO por outputs/questoes_para_js.py. NAO editar a mao.
-   Fonte: _conteudo/cpror/questoes/**.yaml  ·  879 questoes em 95 topicos
+   Fonte: _conteudo/cpror/questoes/**.yaml  ·  1109 questoes em 118 topicos
    Para mudar uma questao, edite o YAML e rode o script de novo. */
 window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
  "cproRAnbima": {
@@ -13949,6 +13949,185 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "gabarito": "b"
     }
    ],
+   "PGBL: diferimento, benefício fiscal e reinvestimento da economia": [
+    {
+     "id": "cpror-inv-39-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O PGBL é plano de previdência complementar aberta com cobertura por sobrevivência. As contribuições formam reserva que pode financiar resgate ou benefício segundo o regulamento.</p><p>A alternativa B transforma o plano em fundo fechado e restringe o recebimento. A alternativa C confunde PGBL com RGPS. A alternativa D elimina sua cobertura por sobrevivência.</p><p>Regra de bolso: PGBL é plano aberto de acumulação e sobrevivência, com saída regida pelo contrato.</p>",
+     "enunciado": "<p>Uma cliente pergunta o que contrata ao aderir a um PGBL e como os recursos podem ser recebidos depois da acumulação. Identifique a estrutura.</p>",
+     "alternativas": {
+      "a": "O PGBL é plano aberto com cobertura por sobrevivência; forma reserva e permite resgate ou benefício conforme o regulamento.",
+      "b": "O PGBL é fundo fechado que paga somente renda vitalícia e impede resgates durante ou depois do período de acumulação.",
+      "c": "O PGBL é benefício do RGPS financiado por repartição e calculado a partir das contribuições individuais do segurado.",
+      "d": "O PGBL é seguro de risco sem cobertura por sobrevivência, destinado apenas a indenizar beneficiários no falecimento do titular."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-39-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A contribuição ao PGBL pode ser deduzida quando o cliente usa deduções legais e cumpre a condição previdenciária, observadas as dispensas previstas.</p><p>A alternativa B soma indevidamente a dedução ao desconto simplificado. A alternativa C elimina requisitos. A alternativa D restringe o benefício a aposentados e pensionistas.</p><p>Regra de bolso: primeiro compare os modelos da declaração; depois confirme a condição previdenciária e o limite.</p>",
+     "enunciado": "<p>Um contribuinte deseja usar aportes ao PGBL como dedução adicional na Declaração de Ajuste Anual. Identifique a condição fiscal básica.</p>",
+     "alternativas": {
+      "a": "O aproveitamento exige o uso das deduções legais e, em regra, contribuição ao RGPS ou a regime próprio, ressalvadas as dispensas legais.",
+      "b": "O desconto simplificado permite somar o PGBL ao desconto padrão, desde que o participante também tenha rendimentos sujeitos à tributação exclusiva.",
+      "c": "A dedução independe do modelo da declaração e da condição previdenciária, pois decorre somente do pagamento ao plano aberto.",
+      "d": "O PGBL gera dedução apenas para aposentados e pensionistas, ficando vedado a contribuintes ativos vinculados ao RGPS ou a regime próprio."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-39-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Doze por cento de R$ 200.000 correspondem a R$ 24.000. O pagamento pode ser informado, mas somente R$ 24.000 reduzem a base, e o excedente não aumenta o limite futuro.</p><p>A alternativa A trata o aporte como limite. A alternativa C transporta o excedente sem previsão. A alternativa D usa 10% e transforma contribuição em rendimento.</p><p>Regra de bolso: contribuição acima de 12% pode formar reserva, mas não cria dedução adicional nem crédito para outro ano.</p>",
+     "enunciado": "<p>Eduardo utiliza deduções legais, cumpre a condição previdenciária e possui R$ 200.000 de rendimentos tributáveis incluídos na base anual. Durante o exercício, paga R$ 30.000 a um PGBL e afirma que o valor completo reduzirá a base. Ao perceber que existe limite, decide carregar qualquer excedente para ampliar a dedução do ano seguinte. As contribuições ao Fapi e a outros planos abrangidos pelo mesmo limite conjunto são iguais a zero. Eduardo insiste que a disciplina de aportar acima do limite deveria gerar um crédito fiscal futuro, ainda que a renda do próximo ano seja diferente. O comprovante discrimina o valor efetivamente pago e o programa da declaração calcula a parcela aproveitável. Calcule o limite de 12%, a parcela dedutível e o tratamento dos R$ 6.000 excedentes na declaração.</p>",
+     "alternativas": {
+      "a": "O limite é R$ 30.000, pois o valor pago ao PGBL substitui o percentual quando a contribuição previdenciária do cliente está regular.",
+      "b": "O limite é R$ 24.000; essa é a parcela dedutível, e os R$ 6.000 excedentes ficam sem dedução adicional ou transporte para o ano seguinte.",
+      "c": "O limite é R$ 24.000, mas os R$ 6.000 restantes formam crédito automático para aumentar o limite dedutível do exercício seguinte.",
+      "d": "O limite é R$ 20.000, equivalente a 10% da renda tributável, e os R$ 10.000 excedentes devem ser declarados como rendimento isento."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-39-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Apenas os R$ 160.000 sujeitos ao ajuste anual compõem a referência. Doze por cento desse valor resultam em limite de R$ 19.200.</p><p>A alternativa A inclui renda exclusiva. A alternativa C usa patrimônio como base. A alternativa D soma renda e ativos, grandezas estranhas ao limite legal.</p><p>Regra de bolso: use renda tributável da DAA; deixe fora rendimentos isentos, exclusivos, patrimônio e saldo investido.</p>",
+     "enunciado": "<p>Beatriz recebeu R$ 160.000 de salário tributável sujeito ao ajuste anual e R$ 40.000 de rendimentos submetidos à tributação exclusiva. Seu patrimônio financeiro totaliza R$ 900.000. Ela usa deduções legais e cumpre as demais condições do PGBL. Ao preparar o aporte, soma salário, rendimento exclusivo e patrimônio para criar uma base de R$ 1,1 milhão. O contador explica que o limite considera apenas rendimentos tributáveis computados na base da DAA; riqueza, receita e valores sujeitos a tributação definitiva ficam fora. Beatriz argumenta que sua capacidade financeira deveria ampliar o benefício, mas aceita separar disponibilidade para investir de renda elegível para dedução. Desconsidere outras contribuições abrangidas pelo limite conjunto. Calcule a referência correta e o valor dedutível máximo.</p>",
+     "alternativas": {
+      "a": "A referência é R$ 200.000 e o limite é R$ 24.000, porque rendimentos exclusivos entram na DAA mesmo após a tributação definitiva.",
+      "b": "A referência é R$ 160.000 e o limite é R$ 19.200, pois os R$ 40.000 exclusivos e o patrimônio ficam fora desse cálculo.",
+      "c": "A referência é R$ 900.000 e o limite é R$ 108.000, porque o patrimônio mede a capacidade contributiva disponível no exercício.",
+      "d": "A referência é R$ 1,1 milhão e o limite é R$ 132.000, pela soma da renda anual com os ativos financeiros declarados."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-39-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. R$ 24.000 multiplicados por 27,5% resultam em R$ 6.600. O efeito pode reduzir o imposto devido ou aumentar a restituição, que representa devolução de imposto pago em excesso.</p><p>A alternativa B transforma dedução em crédito integral. A alternativa A usa o complemento da alíquota. A alternativa D trata restituição como rendimento creditado pelo plano.</p><p>Regra de bolso: economia fiscal é a diferença entre os dois cálculos de imposto, e não rentabilidade previdenciária.</p>",
+     "enunciado": "<p>Um cliente deduz R$ 24.000 de contribuições ao PGBL. Para simplificar, considere que a dedução inteira reduz renda efetivamente sujeita à alíquota de 27,5%, sem alteração nas demais variáveis da declaração. Ele recebeu retenções ao longo do ano e acredita que eventual restituição é rendimento pago pelo plano, separado da redução do imposto. O assessor prepara duas simulações, uma com a dedução e outra sem ela, para medir apenas a diferença fiscal. No cenário sem PGBL, as retenções apenas se compensam com o imposto apurado. No cenário com a dedução, parte do valor recolhido durante o ano volta ao contribuinte porque a base final diminuiu. O cliente pretende gastar essa devolução e pede que ela seja contabilizada como retorno do investimento. Calcule a redução estimada do IR atual e explique como ela pode aparecer na declaração.</p>",
+     "alternativas": {
+      "a": "A redução é R$ 17.400, obtida pela parcela de 72,5% que permanece depois da aplicação da alíquota marginal informada.",
+      "b": "A redução é R$ 24.000, pois a dedução converte por inteiro a contribuição em crédito de imposto contra a renda anual.",
+      "c": "A redução é R$ 6.600 e pode aparecer como menor imposto a pagar ou maior restituição; restituição devolve imposto recolhido em excesso.",
+      "d": "A redução é R$ 6.600 e constitui rentabilidade do PGBL, creditada pela entidade diretamente na reserva do participante."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-39-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. No PGBL, o IR de saída incide sobre o valor recebido. Dez por cento de R$ 48.000 correspondem a R$ 4.800, deixando R$ 43.200 líquidos.</p><p>A alternativa B tributa apenas o rendimento. A alternativa C trata a economia inicial como dívida nominal. A alternativa D converte a alíquota de 10% em isenção.</p><p>Regra de bolso: PGBL deduz na entrada e tributa contribuição mais rendimento na saída.</p>",
+     "enunciado": "<p>Uma contribuição dedutível de R$ 24.000 permaneceu investida por prazo superior a dez anos e a reserva correspondente dobrou para R$ 48.000. Para este exercício, considere regime regressivo com alíquota definitiva de 10%, sem outros aportes, custos ou ajustes. O cliente calcula imposto de R$ 2.400 porque aplica 10% somente sobre o rendimento de R$ 24.000. Durante a acumulação, o aporte havia gerado economia fiscal estimada de R$ 6.600, que deve ser analisada em conjunto com o imposto futuro. O informe de resgate apresenta o pagamento bruto em uma única parcela e identifica o produto como PGBL. O cliente resiste ao cálculo da entidade porque compara a saída com a tributação de um investimento cuja base alcançaria apenas o ganho. Calcule o IR no resgate e o valor líquido, considerando a base tributável própria do PGBL.</p>",
+     "alternativas": {
+      "a": "O IR é R$ 4.800 sobre o total de R$ 48.000, e o valor líquido é R$ 43.200, pois contribuição e rendimento integram a base.",
+      "b": "O IR é R$ 2.400 sobre o rendimento, e o valor líquido é R$ 45.600, porque a contribuição deduzida fica isenta na saída.",
+      "c": "O IR é R$ 6.600 e o valor líquido é R$ 41.400, pois a economia fiscal inicial deve ser devolvida nominalmente no resgate.",
+      "d": "O IR é zero e o valor líquido é R$ 48.000, porque o prazo superior a dez anos transforma diferimento em isenção."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-39-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. No regressivo, cada contribuição tem seu relógio. A opção pode ocorrer até o primeiro resgate ou benefício e, depois de exercida, é irretratável para os valores abrangidos.</p><p>A alternativa B usa o primeiro aporte como relógio comum e admite troca posterior. A alternativa C usa a idade do plano. A alternativa A permite regimes alternados depois da escolha.</p><p>Regra de bolso: no regressivo, o relógio acompanha o aporte; a escolha tributária deixa de ser reversível depois do evento previsto.</p>",
+     "enunciado": "<p>Marina realizou aportes anuais ao PGBL durante 12 anos e escolheu o regime regressivo ao solicitar o primeiro resgate, conforme a possibilidade vigente desde a Lei 14.803/2024. Ela pede resgate proporcional de contribuições feitas em datas diferentes e afirma que a idade do plano inteiro coloca cada parcela automaticamente na alíquota de 10%. Também acredita que poderá trocar de regime depois de conhecer o imposto retido no primeiro pagamento. O informe separa os lotes por data e mostra que parte dos recursos possui prazo inferior a dez anos. O assessor destaca que o aporte inicial e o aporte mais recente percorreram faixas distintas, embora pertençam ao mesmo contrato. Considere a tabela descrita na aula, que começa em 35% e cai cinco pontos a cada faixa de dois anos. Analise o prazo e a escolha tributária.</p>",
+     "alternativas": {
+      "a": "A escolha feita no primeiro resgate vale apenas para essa parcela, permitindo que contribuições seguintes alternem livremente entre progressivo e regressivo.",
+      "b": "A idade da primeira contribuição define a alíquota dos aportes posteriores, e o regime pode ser alterado depois de cada resgate conforme a renda do ano.",
+      "c": "O prazo do plano garante 10% a cada lote depois de dez anos da adesão, ainda que a contribuição específica tenha sido realizada recentemente.",
+      "d": "Cada contribuição possui prazo próprio; a alíquota depende da idade do lote resgatado, e a opção torna-se irretratável para os valores abrangidos."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-39-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. R$ 6.600 vezes 27,5% geram R$ 1.815. O lote dobra para R$ 13.200; 10% sobre o total equivalem a R$ 1.320, restando R$ 11.880.</p><p>A alternativa A trata aporte como economia e tributa apenas o ganho. A alternativa C impede a duplicação informada. A alternativa D troca os valores das duas alíquotas.</p><p>Regra de bolso: a restituição reinvestida vira novo aporte, sujeito ao limite do ano e à tributação futura sobre o total.</p>",
+     "enunciado": "<p>No primeiro ano, um cliente contribuiu R$ 24.000 ao PGBL e obteve economia estimada de R$ 6.600. No exercício seguinte, ainda usando deduções legais e dentro do novo limite de 12%, reinveste os R$ 6.600 como outro aporte. Considere que esse segundo lote reduz renda sujeita a 27,5%, dobra depois de mais de dez anos e recebe alíquota regressiva de 10% sobre o valor total. Desconsidere custos, aportes adicionais e mudanças de premissa. O cliente trata a origem em restituição como criação automática de limite extra e pretende tributar somente o rendimento do lote na saída. O demonstrativo separa a economia atual do crescimento futuro para evitar que os dois efeitos sejam somados como se fossem a mesma remuneração. Calcule nova economia, valor bruto futuro, IR e valor líquido do segundo lote.</p>",
+     "alternativas": {
+      "a": "Nova economia de R$ 6.600, valor bruto de R$ 13.200, IR de R$ 660 e valor líquido de R$ 12.540, porque somente o rendimento é tributado.",
+      "b": "Nova economia de R$ 1.815, valor bruto de R$ 13.200, IR de R$ 1.320 e valor líquido de R$ 11.880, respeitado o limite do novo ano.",
+      "c": "Nova economia de R$ 1.815, valor bruto de R$ 6.600, IR de R$ 660 e valor líquido de R$ 5.940, pois o reinvestimento impede a capitalização do aporte.",
+      "d": "Nova economia de R$ 1.320, valor bruto de R$ 13.200, IR de R$ 1.815 e valor líquido de R$ 11.385, pela troca entre alíquota atual e futura."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-39-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A dedução acompanha o pagamento efetivo no exercício. As contribuições ao PGBL são informadas em Pagamentos Efetuados, e a proposta sem desembolso fica para o ano do pagamento.</p><p>A alternativa A usa assinatura e declara saldo patrimonial. A alternativa C soma mera intenção ao pagamento. A alternativa B omite contribuições durante a acumulação.</p><p>Regra de bolso: dedução nasce do pagamento ocorrido no ano e comprovado pela entidade.</p>",
+     "enunciado": "<p>No fim de dezembro, uma profissional assina proposta de PGBL de R$ 18.000, mas o pagamento fica agendado para 3 de janeiro. Ela quer usar o valor na declaração referente ao ano encerrado, embora nenhum recurso tenha saído de sua conta naquele exercício. Em outro plano, R$ 7.000 foram efetivamente pagos em dezembro, e o comprovante da entidade registra o CNPJ e a data. A cliente usa deduções legais, possui limite disponível e pretende declarar o PGBL como saldo patrimonial da mesma maneira usada para VGBL. O extrato bancário confirma as datas distintas dos dois desembolsos. O contador pede conciliação entre comprovantes, informes, contribuições e futuros recebimentos. Analise o reconhecimento dos pagamentos e a informação na declaração.</p>",
+     "alternativas": {
+      "a": "A proposta de R$ 18.000 conta no ano da assinatura, e os R$ 7.000 pagos devem aparecer como saldo patrimonial, porque ambos representam direitos do participante.",
+      "b": "Nenhum valor é informado durante a acumulação, porque contribuições ao PGBL aparecem somente quando ocorre resgate ou recebimento de benefício.",
+      "c": "Os R$ 25.000 entram no ano encerrado, pois o agendamento de janeiro confirma a intenção de contribuir e substitui a necessidade de pagamento efetivo.",
+      "d": "Somente os R$ 7.000 pagos no exercício podem compor a dedução daquele ano; contribuições ao PGBL são informadas em Pagamentos Efetuados."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-39-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. O PGBL depende do perfil fiscal, do limite, do prazo, do custo, do regime e do reinvestimento. Desconto simplificado, resgate precoce e consumo da economia podem reduzir ou eliminar a vantagem esperada.</p><p>A alternativa A cria dedução no simplificado e isenção na saída. A alternativa B usa alíquota nominal sem medir efeito real. A alternativa D transforma resgate curto em isenção.</p><p>Regra de bolso: compare economia atual e imposto futuro com as mesmas premissas de aporte, risco, prazo e custo.</p>",
+     "enunciado": "<p>Carlos usa desconto simplificado, possui baixa renda tributável no ajuste anual e pretende resgatar em dois anos. Um vendedor recomenda aporte elevado ao PGBL apenas pela alíquota nominal máxima da tabela, sem comparar os modelos da declaração, o limite disponível ou o imposto sobre o total recebido. O plano cobra taxas superiores às alternativas e Carlos pretende consumir eventual restituição. Ele insiste que qualquer contribuição reduz seu imposto e que prazo curto evita o custo do diferimento. O assessor possui dados para comparar aporte líquido, risco, prazo, custos, economia efetiva e tributação de saída. A simulação preliminar mostra vantagem fiscal atual igual a zero no modelo escolhido pelo cliente. Avalie a recomendação diante da lógica econômica do PGBL.</p>",
+     "alternativas": {
+      "a": "O PGBL deve ser recomendado pelo desconto anunciado, pois a contribuição cria dedução adicional mesmo no simplificado e afasta imposto na saída.",
+      "b": "A alíquota marginal nominal basta para medir a economia, dispensando simulação com e sem dedução e comparação do imposto futuro.",
+      "c": "A indicação exige deduções legais, renda elegível, limite, prazo e custos coerentes; consumir a economia e resgatar cedo pode enfraquecer a vantagem.",
+      "d": "O prazo curto favorece a retroalimentação, pois antecipa o resgate e transforma a base integral do PGBL em rendimento isento."
+     },
+     "gabarito": "c"
+    }
+   ],
    "VGBL: acumulação, aposentadoria e planejamento patrimonial": [
     {
      "id": "cpror-inv-40-q1",
@@ -14109,6 +14288,901 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "d": "O STF converteu o VGBL em herança tributada apenas quando o beneficiário também participa do inventário."
      },
      "gabarito": "c"
+    }
+   ],
+   "Previdência: regimes progressivo e regressivo na decisão do cliente": [
+    {
+     "id": "cpror-inv-41-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. No progressivo, renda, deduções e ajuste anual definem o imposto final. No regressivo, o prazo de cada contribuição define a alíquota definitiva.</p><p>A alternativa B troca os critérios. A alternativa C atribui prazo aos dois e cria isenção. A alternativa A reduz a diferença à retenção.</p><p>Regra de bolso: progressivo olha renda; regressivo olha o tempo de cada recurso.</p>",
+     "enunciado": "<p>Um participante compara os regimes tributários da previdência e pergunta qual variável orienta o imposto em cada um. Analise a diferença entre progressivo e regressivo.</p>",
+     "alternativas": {
+      "a": "Os dois regimes usam a renda anual do cliente, variando somente a retenção feita pela entidade no momento do primeiro pagamento.",
+      "b": "O progressivo depende apenas da idade do plano, enquanto o regressivo soma o recebimento às demais rendas para aplicar a tabela anual.",
+      "c": "Os dois regimes usam o prazo do plano, mas o progressivo permite compensar perdas e o regressivo elimina imposto depois de dez anos.",
+      "d": "O progressivo depende da renda tributável e participa do ajuste; o regressivo depende do prazo de cada aporte e possui tributação definitiva."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-41-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A tabela regressiva começa em 35% até dois anos e cai cinco pontos por faixa de dois anos até 10% para prazo superior a dez anos.</p><p>A alternativa A cria isenção. A alternativa C mistura tabelas de outros rendimentos. A alternativa D altera a sequência e usa a idade do contrato.</p><p>Regra de bolso: 35, 30, 25, 20, 15 e 10; o relógio pertence ao aporte.</p>",
+     "enunciado": "<p>Uma equipe prepara material com a tabela regressiva completa. Identifique a sequência de alíquotas por faixas sucessivas de dois anos.</p>",
+     "alternativas": {
+      "a": "35%, 30%, 25%, 20% e 15%, com isenção depois de dez anos completos de permanência no plano.",
+      "b": "35%, 30%, 25%, 20%, 15% e 10%, sendo 10% aplicável somente quando o prazo do aporte supera dez anos.",
+      "c": "27,5%, 22,5%, 20%, 17,5%, 15% e 10%, conforme a tabela anual usada para rendimentos sujeitos ao ajuste.",
+      "d": "35%, 25%, 20%, 15%, 10% e 5%, com redução aplicada a cada aniversário do contrato previdenciário."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-41-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Quinze por cento de R$ 40.000 correspondem a R$ 6.000. Como o imposto final hipotético é R$ 8.000, restam R$ 2.000 a complementar no ajuste.</p><p>A alternativa B trata a retenção como definitiva e transfere a diferença. A alternativa C confunde retenção com imposto final. A alternativa A troca complemento por restituição.</p><p>Regra de bolso: no resgate progressivo, retenha 15% agora e acerte o imposto final na declaração.</p>",
+     "enunciado": "<p>Helena solicita resgate cuja base tributável já apurada é de R$ 40.000 no regime progressivo. A instituição retém 15% na fonte. Para isolar o efeito do recebimento, considere que os demais dados de sua declaração permanecem constantes e que o imposto final atribuível ao resgate, depois de somadas as rendas e aplicadas as deduções, seja R$ 8.000. Helena acredita que a retenção encerra a obrigação e que a diferença apurada posteriormente pertence à entidade. O informe registra o imposto antecipado para compensação na DAA. A cliente também possui salário tributável, mas essa renda já está refletida no imposto final hipotético fornecido, evitando dupla contagem na questão. O contador apresenta separadamente retenção, imposto apurado e saldo. Calcule a retenção e a diferença devida no ajuste e interprete a natureza dos 15%.</p>",
+     "alternativas": {
+      "a": "A retenção é R$ 6.000 e gera restituição de R$ 2.000, pois o imposto final supera o valor recolhido no resgate.",
+      "b": "A retenção é R$ 6.000 e encerra o imposto, enquanto os R$ 2.000 adicionais ficam a cargo da entidade previdenciária.",
+      "c": "A retenção é R$ 8.000 e o ajuste fica zerado, porque a instituição aplica antecipadamente a alíquota efetiva anual do cliente.",
+      "d": "A retenção é R$ 6.000 e faltam R$ 2.000 no ajuste; os 15% são antecipação compensável, e não alíquota final."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-41-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O benefício progressivo segue a tabela mensal e participa da DAA. A soma das rendas, as deduções e os valores recolhidos definem o resultado final.</p><p>A alternativa B transforma o cálculo mensal em definitivo. A alternativa C aplica 15% definitivo ao benefício. A alternativa D substitui bases e desloca o efeito do aluguel.</p><p>Regra de bolso: no progressivo, o mês antecipa a cobrança e o ano consolida renda, deduções e imposto.</p>",
+     "enunciado": "<p>Paulo recebe benefício previdenciário mensal pelo regime progressivo e também possui aposentadoria pública e aluguel tributável. Ele observa o imposto calculado mensalmente sobre o benefício e conclui que esse recolhimento encerra a tributação, deixando aposentadoria e aluguel fora da análise. No mesmo ano, Paulo teve despesas dedutíveis relevantes e variação na renda de aluguel. O contador explica que o benefício periódico segue a tabela progressiva mensal vigente e participa depois do ajuste anual junto das demais rendas sujeitas ao ajuste. As deduções admitidas também entram na apuração final. O informe anual discrimina pagamentos e valores retidos para permitir a consolidação. Analise a tributação do benefício de Paulo.</p>",
+     "alternativas": {
+      "a": "O benefício sofre a tabela mensal e entra no ajuste anual; outras rendas e deduções podem produzir complemento, neutralidade ou restituição.",
+      "b": "A tabela mensal encerra a cobrança do benefício e impede que aposentadoria, aluguel ou deduções alterem o imposto relacionado ao recebimento.",
+      "c": "O benefício periódico recebe retenção definitiva de 15%, enquanto apenas os resgates isolados seguem a tabela progressiva e o ajuste anual.",
+      "d": "A aposentadoria pública substitui a base do benefício privado, e o aluguel afeta apenas o limite de contribuições realizadas durante a acumulação."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-41-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Vinte por cento de R$ 40.000 são R$ 8.000; 35% são R$ 14.000. O progressivo economiza R$ 6.000, mas exige R$ 2.000 além da retenção inicial de R$ 6.000.</p><p>A alternativa B usa retenção como imposto final. A alternativa C troca a alíquota regressiva e o complemento. A alternativa D aplica a faixa regressiva ao progressivo.</p><p>Regra de bolso: compare imposto final com imposto final; retenção progressiva é apenas a primeira etapa.</p>",
+     "enunciado": "<p>Um cliente compara os regimes sobre base tributável de R$ 40.000 e usa alíquota efetiva progressiva hipotética de 20% depois do ajuste anual. No primeiro cenário, o aporte será resgatado após 18 meses, quando o regressivo aplica 35%. A instituição reteria inicialmente 15% no progressivo, mas o cliente confunde os R$ 6.000 retidos com o custo final. Ele pretende escolher o regressivo apenas por imaginar que a palavra regressivo indica redução imediata do imposto, embora o recurso esteja na primeira faixa. A planilha apresenta em colunas distintas a retenção, o imposto final e o saldo no ajuste. Mantenha renda, deduções e base iguais entre os regimes para isolar a comparação. Calcule o imposto final progressivo, o imposto regressivo, a diferença entre eles e o complemento que ainda surgiria no ajuste progressivo.</p>",
+     "alternativas": {
+      "a": "Progressivo de R$ 8.000, regressivo de R$ 14.000, economia progressiva de R$ 6.000 e complemento de R$ 2.000 após a retenção.",
+      "b": "Progressivo de R$ 6.000, regressivo de R$ 14.000, economia progressiva de R$ 8.000 e ajuste anual encerrado pela retenção.",
+      "c": "Progressivo de R$ 8.000, regressivo de R$ 6.000, economia regressiva de R$ 2.000 e complemento progressivo de R$ 8.000.",
+      "d": "Progressivo e regressivo de R$ 14.000, porque o prazo de 18 meses substitui a alíquota efetiva do ajuste nos dois regimes."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-41-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. O aporte com mais de dez anos recebe 10%; o aporte com exatamente dez anos permanece em 15%; o aporte de seis meses recebe 35%.</p><p>A alternativa B usa a idade do plano. A alternativa A antecipa a faixa de 10%. A alternativa D inventa prazo de 12 anos e reduz a primeira faixa.</p><p>Regra de bolso: cada aporte tem seu relógio, e exatamente dez anos ainda significa 15%.</p>",
+     "enunciado": "<p>Um plano foi aberto há 12 anos. Nele existem três contribuições: uma realizada há 11 anos, outra que completa exatamente dez anos na data do resgate e uma terceira feita há seis meses. O participante escolheu o regime regressivo e afirma que a idade do contrato coloca o saldo inteiro em 10%. Para o exercício, considere que o resgate alcança parcelas dos três lotes e use as faixas descritas na aula. A equipe alerta que exatamente dez anos permanece em 15%, que 10% exige prazo superior a dez anos e que o aporte recente ainda está na primeira faixa. O extrato identifica cada lote pela data e pelo valor, permitindo aplicar a regra sem usar uma idade média do plano. O cliente insiste que a primeira contribuição deveria envelhecer as seguintes. Analise as alíquotas aplicáveis aos três lotes.</p>",
+     "alternativas": {
+      "a": "Os lotes de 11 anos, dez anos e seis meses ficam em 10%, 10% e 35%, pois completar dez anos encerra a faixa de 15%.",
+      "b": "Os três lotes ficam em 10%, porque a abertura do plano há 12 anos inicia um relógio comum para contribuições anteriores e posteriores.",
+      "c": "Os lotes de 11 anos, dez anos e seis meses ficam, respectivamente, em 10%, 15% e 35%, pois cada contribuição possui prazo próprio.",
+      "d": "Os lotes ficam em 15%, 15% e 30%, porque a alíquota mínima exige 12 anos de plano e a primeira faixa dura apenas seis meses."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-41-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Portabilidade elegível pode preservar o tempo acumulado. Resgates observam a metodologia dos recursos mais antigos, e rendas atuariais usam prazo médio ponderado com continuidade da contagem.</p><p>A alternativa A trata portabilidade como resgate e usa o aporte recente na renda. A alternativa C inverte a ordem. A alternativa D congela o prazo depois da primeira prestação.</p><p>Regra de bolso: portabilidade transfere o histórico; resgate e renda atuarial usam metodologias temporais diferentes.</p>",
+     "enunciado": "<p>Renata possui contribuições antigas e recentes no regime regressivo. Ela pretende transferir os recursos para outra entidade e, depois, contratar benefício estruturado em renda atuarial. Um atendente trata a portabilidade como resgate tributável que reinicia cada prazo. Outro copia para as prestações mensais a mesma lógica de um resgate isolado e ignora a idade média dos recursos. Os documentos permitem preservar o histórico dos aportes na transferência. A aula informa que o resgate considera primeiro os recursos mais antigos segundo a metodologia aplicável, enquanto o benefício atuarial parte de prazo médio ponderado e continua contando depois da primeira prestação. A nova entidade receberá o histórico junto com os recursos portados. Avalie os três eventos.</p>",
+     "alternativas": {
+      "a": "Portabilidade equivale a resgate e reinicia os prazos, enquanto cada prestação atuarial recebe a idade do aporte mais recente existente na reserva.",
+      "b": "Portabilidade pode preservar o tempo; resgate prioriza recursos antigos, e benefício atuarial usa prazo médio que continua evoluindo.",
+      "c": "Resgate parcial alcança primeiro os aportes recentes, preservando os antigos para que o saldo remanescente mantenha a alíquota de 10%.",
+      "d": "Benefício atuarial congela a alíquota na primeira prestação, pois o prazo deixa de correr depois que a reserva inicia os pagamentos mensais."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-41-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. A escolha pode ser adiada até o primeiro resgate ou benefício. Depois de exercida, torna-se irretratável para os valores abrangidos, o que exige comparação antes da solicitação.</p><p>A alternativa B permite alternância posterior. A alternativa C exige escolha na adesão. A alternativa D adia a opção para depois do evento que a fixa.</p><p>Regra de bolso: adiar a escolha traz mais informação, mas o primeiro recebimento encerra a flexibilidade.</p>",
+     "enunciado": "<p>Um participante aderiu ao plano sem escolher entre progressivo e regressivo. Anos depois, recebe proposta de resgate parcial para cobrir uma compra e acredita que poderá selecionar progressivo para essa retirada, observar o resultado na declaração e trocar para regressivo no restante. Desde a Lei 14.803/2024, a opção pode ser exercida até a obtenção do benefício ou a solicitação do primeiro resgate. O cliente possui aportes com idades diferentes, outras rendas tributáveis e possibilidade de adiar a compra. O assessor quer comparar os regimes antes de transmitir o pedido à entidade, pois a escolha produzirá efeitos sobre os valores abrangidos. O formulário do resgate exige registrar a opção tributária. Analise o momento e a permanência da decisão.</p>",
+     "alternativas": {
+      "a": "A escolha pode ocorrer até o primeiro resgate ou benefício e depois é irretratável para os valores abrangidos; a simulação deve anteceder o pedido.",
+      "b": "Cada resgate permite nova escolha, porque a irretratabilidade alcança somente a parcela retirada e termina com a entrega da declaração anual.",
+      "c": "A opção precisa ocorrer na adesão ao plano, de modo que a ausência de escolha inicial obriga o cliente a usar o regime progressivo.",
+      "d": "O primeiro resgate pode ser feito sem regime definido, deixando a escolha para o ajuste anual depois que o cliente conhecer o imposto efetivo."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-41-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. Oito por cento de R$ 40.000 correspondem a R$ 3.200; 10% correspondem a R$ 4.000. Mesmo no longo prazo, o progressivo economiza R$ 800 sob a hipótese de renda baixa.</p><p>A alternativa B usa retenção como imposto final. A alternativa A aplica o prazo regressivo ao progressivo. A alternativa D compensa imposto regressivo definitivo.</p><p>Regra de bolso: longo prazo favorece a análise do regressivo, mas renda futura baixa pode manter o progressivo abaixo de 10%.</p>",
+     "enunciado": "<p>Sônia projeta baixa renda tributável na aposentadoria. Sobre uma base previdenciária de R$ 40.000, sua simulação estima imposto progressivo final de 8%, depois de considerar as demais rendas e deduções. O aporte terá prazo superior a dez anos, portanto o regressivo aplicaria 10% de forma definitiva. Um vendedor afirma que longo prazo torna o regressivo necessariamente vantajoso e usa apenas a menor alíquota da tabela regressiva na apresentação. Sônia pede que a mesma base seja usada nas duas colunas e que a retenção de 15% fique separada do imposto progressivo final. Mantenha a mesma base nos dois cenários e desconsidere mudanças legislativas ou de renda para isolar a hipótese fornecida. Calcule os impostos e avalie a conclusão baseada somente no horizonte.</p>",
+     "alternativas": {
+      "a": "Os dois regimes resultam em R$ 4.000, porque o prazo superior a dez anos limita também a alíquota efetiva da tabela progressiva a 10%.",
+      "b": "O progressivo resulta em R$ 6.000 e o regressivo em R$ 4.000, pois a retenção de 15% representa o imposto definitivo do primeiro regime.",
+      "c": "O progressivo resulta em R$ 3.200 e o regressivo em R$ 4.000; nesse cenário, a renda futura baixa faz o progressivo economizar R$ 800.",
+      "d": "O progressivo resulta em R$ 3.200 e o regressivo em R$ 3.200, pois a declaração compensa R$ 800 da retenção definitiva regressiva."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-41-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. Mudanças de horizonte, renda, deduções e liquidez podem inverter a comparação. Como a escolha ainda está aberta, os cenários devem ser refeitos antes do primeiro recebimento.</p><p>A alternativa A congela premissas antigas. A alternativa C reduz indevidamente as alíquotas dos aportes jovens. A alternativa D cria isenção regressiva e torna a retenção progressiva definitiva.</p><p>Regra de bolso: atualize a projeção antes da escolha, especialmente quando renda, prazo ou necessidade de liquidez mudarem.</p>",
+     "enunciado": "<p>Marcelo planejava manter cada aporte por mais de dez anos e esperava renda tributável alta na aposentadoria, combinação que inicialmente favorecia a análise do regressivo. Três anos depois, perdeu a reserva de emergência e passou a considerar retirada em 18 meses. Também reduziu a renda projetada e ganhou novas deduções familiares. Ele permanece sem solicitar resgate ou benefício e resiste a refazer a simulação porque acredita que a recomendação original permanece válida. O assessor conhece a base tributável do produto, a idade de cada aporte, as demais rendas, as deduções e a nova necessidade de liquidez. O primeiro aporte tem apenas três anos e estaria longe da faixa final do regressivo. Avalie a conduta antes do primeiro recebimento.</p>",
+     "alternativas": {
+      "a": "A recomendação original permanece suficiente, porque o regime considera apenas as premissas existentes na abertura do plano.",
+      "b": "O assessor deve refazer os cenários com renda, deduções, liquidez e idade dos aportes atuais antes de uma escolha que se tornará irretratável.",
+      "c": "A possibilidade de retirada precoce reforça o regressivo, pois aportes jovens recebem alíquotas menores para compensar a falta de horizonte.",
+      "d": "A queda da renda futura elimina a tributação regressiva e transforma a retenção progressiva de 15% em imposto definitivo."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Previdência: tábuas biométricas, juro atuarial e modalidades de renda": [
+    {
+     "id": "cpror-inv-42-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A tábua biométrica trabalha com probabilidades de grupos em cada idade e ajuda a estimar por quanto tempo a entidade poderá pagar rendas vitalícias.</p><p>A alternativa A atribui previsão individual à tábua. A alternativa C confunde longevidade com rentabilidade. A alternativa D restringe seu uso à tributação.</p><p>Regra de bolso: a tábua estima a duração do grupo, e não a morte de uma pessoa.</p>",
+     "enunciado": "<p>Um cliente acredita que a tábua biométrica informa a data em que cada participante morrerá. Explique sua função no cálculo previdenciário.</p>",
+     "alternativas": {
+      "a": "A tábua prevê a data individual de morte e permite encerrar cada renda no mês exato informado ao participante na contratação.",
+      "b": "A tábua reúne probabilidades coletivas de sobrevivência e mortalidade por idade para estimar a duração esperada dos pagamentos vitalícios.",
+      "c": "A tábua define a rentabilidade do fundo durante a acumulação e substitui o juro atuarial usado depois da concessão do benefício.",
+      "d": "A tábua determina apenas o percentual de imposto da renda, sem participar do custo esperado de uma obrigação vitalícia."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-42-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Cada modalidade define duração e efeito da morte: encerramento, continuidade dentro da garantia, reversão percentual ou pagamentos restantes até a data final.</p><p>A alternativa B cria saldo na simples e vitaliciedade na garantia. A alternativa C amplia reversão e prazo certo. A alternativa D elimina proteções contratuais.</p><p>Regra de bolso: modalidade de renda responde quem recebe, por quanto tempo e o que acontece depois da morte.</p>",
+     "enunciado": "<p>Uma participante quer identificar o que ocorre depois de sua morte nas principais modalidades de renda. Relacione corretamente cada proteção.</p>",
+     "alternativas": {
+      "a": "Simples termina na morte; garantia cobre o período restante; reversível continua no percentual contratado; prazo certo segue até a data final.",
+      "b": "Vitalícia simples deixa o saldo aos beneficiários; garantia mínima torna a renda vitalícia para eles; prazo certo termina na morte.",
+      "c": "Reversível paga o valor integral ao beneficiário; prazo certo continua vitaliciamente se o titular estiver vivo na data final contratada.",
+      "d": "As quatro modalidades encerram os pagamentos na morte do titular, variando apenas o valor mensal calculado no início do benefício."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-42-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Maior sobrevivência projetada aumenta a quantidade esperada de pagamentos. Mantidos reserva, idade, modalidade e taxa, a renda mensal inicial tende a cair.</p><p>A alternativa B transforma longevidade em remuneração. A alternativa C exclui a tábua do cálculo do titular. A alternativa D altera a modalidade contratada.</p><p>Regra de bolso: maior longevidade esperada significa obrigação mais longa e renda inicial menor para o mesmo capital.</p>",
+     "enunciado": "<p>Duas entidades simulam a mesma renda vitalícia usando reserva de R$ 700.000, mesma idade do participante, mesma modalidade e mesmo juro atuarial. A primeira aplica uma tábua que projeta sobrevivência por período mais longo; a segunda projeta duração menor. O participante afirma que a primeira simulação deveria pagar mais por reconhecer expectativa de vida superior e interpreta a diferença como rentabilidade adicional. Os regulamentos podem prever outros elementos, mas, para este caso, mantenha cada parâmetro diferente da tábua constante. As duas propostas também usam o mesmo índice de atualização e a mesma data de concessão, permitindo isolar o efeito biométrico. Analise o efeito da longevidade projetada sobre o custo atuarial e a renda mensal inicial.</p>",
+     "alternativas": {
+      "a": "A tábua com maior sobrevivência amplia a duração esperada e tende a reduzir a renda inicial, pois a mesma reserva sustenta uma obrigação mais longa.",
+      "b": "A tábua com maior sobrevivência eleva a renda inicial, porque anos adicionais funcionam como rendimento garantido pela entidade ao participante.",
+      "c": "As duas rendas ficam iguais, pois tábuas biométricas afetam apenas beneficiários e deixam o pagamento do titular fora do cálculo.",
+      "d": "A primeira tábua reduz o prazo contratual da renda para compensar a longevidade, transformando a modalidade vitalícia em prazo certo."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-42-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A taxa atuarial pressupõe remuneração futura da provisão e permite renda inicial maior no exemplo. Ela pertence ao cálculo da fase de renda, e não garante retorno do fundo na acumulação.</p><p>A alternativa B elimina o efeito inicial da taxa. A alternativa A atribui garantia ao fundo. A alternativa D inverte o efeito e cria bloqueio inexistente.</p><p>Regra de bolso: juro atuarial participa do cálculo da renda; rentabilidade do fundo pertence à fase e ao contrato de acumulação.</p>",
+     "enunciado": "<p>Para isolar o efeito do juro atuarial, uma entidade simula renda financeira por prazo certo de 20 anos com reserva de R$ 600.000. Sem juro, atualização ou custos, a divisão por 240 meses produz R$ 2.500. Em outra simulação, considera juro efetivo de 3% ao ano, equivalente a aproximadamente 0,2466% ao mês, e obtém renda nivelada próxima de R$ 3.315. O cliente conclui que os 3% representam rentabilidade garantida do fundo usado durante a fase de acumulação. O extrato anterior à concessão, contudo, mostra oscilação da carteira vinculada, e o regulamento separa a estratégia de acumulação da taxa contratual usada no benefício. A diferença de R$ 815 aparece apenas na comparação didática da fase de renda. Mantenha reserva, prazo e demais premissas iguais. Compare os valores e interprete corretamente o papel do juro atuarial.</p>",
+     "alternativas": {
+      "a": "A renda de R$ 3.315 prova que o fundo acumulou 3% ao ano, ainda que o contrato da fase de acumulação apresente estratégia e risco distintos.",
+      "b": "As duas rendas devem ser R$ 2.500, porque qualquer juro da fase de benefício afeta somente a atualização posterior das prestações.",
+      "c": "O juro eleva a renda de R$ 2.500 para cerca de R$ 3.315 na fase de benefício, sem garantir retorno do fundo na acumulação.",
+      "d": "O juro reduz a renda inicial para preservar a reserva, e os R$ 815 de diferença permanecem bloqueados até o encerramento do prazo de 20 anos."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-42-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. R$ 600.000 divididos por 170, 185 e 215 geram aproximadamente R$ 3.529, R$ 3.243 e R$ 2.791. Obrigações adicionais elevam o divisor e reduzem a renda inicial.</p><p>A alternativa B inverte a ordem. A alternativa C ignora as proteções. A alternativa A combina valores incorretos e atribui à reversão eliminação do risco do titular.</p><p>Regra de bolso: com o mesmo capital, mais continuidade potencial costuma significar menor renda inicial.</p>",
+     "enunciado": "<p>Uma entidade usa divisores didáticos para comparar modalidades sobre reserva de R$ 600.000, mantendo idade, tábua, juro e data de concessão constantes. O divisor é 170 na vitalícia simples, 185 na vitalícia com prazo mínimo garantido e 215 na vitalícia reversível. Para o exercício, calcule a renda dividindo a reserva por cada divisor. O cliente espera que a modalidade reversível pague mais porque oferece proteção ao beneficiário e entende a renda menor como penalidade sem causa econômica. A simulação informa que o aumento do divisor representa a possibilidade de a entidade realizar pagamentos depois da morte do titular, dentro da garantia ou durante a vida do beneficiário. O cliente pede que o custo dessa continuidade apareça nos valores mensais. Desconsidere arredondamentos além dos valores aproximados apresentados na aula. Calcule as três rendas e explique a ordem encontrada.</p>",
+     "alternativas": {
+      "a": "Simples de R$ 3.243, garantia de R$ 2.791 e reversível de R$ 3.529; a reversão elimina o risco de longevidade do titular.",
+      "b": "Simples de R$ 2.791, garantia de R$ 3.243 e reversível de R$ 3.529; continuidade maior eleva a renda porque aumenta o prazo de pagamento.",
+      "c": "As três modalidades pagam R$ 3.529, pois a mesma reserva exige a mesma renda inicial independentemente de prazo garantido ou reversão.",
+      "d": "Simples de R$ 3.529, garantia de R$ 3.243 e reversível de R$ 2.791; proteções adicionais ampliam a obrigação esperada e reduzem a renda inicial."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-42-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Se Teresa morrer antes de 15 anos, os beneficiários recebem somente as prestações restantes da garantia. Depois de encerrado o prazo, a morte termina a renda.</p><p>A alternativa B transforma garantia em reversão vitalícia. A alternativa A inverte os efeitos. A alternativa D cria devoluções sem previsão no caso.</p><p>Regra de bolso: prazo mínimo protege apenas o intervalo contratado; depois dele, a renda segue vitalícia apenas para o titular.</p>",
+     "enunciado": "<p>Teresa converte a reserva em renda vitalícia com prazo mínimo garantido de 15 anos. No primeiro cenário, falece no sexto ano de recebimento. No segundo, permanece viva por 18 anos e falece depois de encerrado o período garantido. Seus beneficiários acreditam que a palavra vitalícia também lhes assegura renda enquanto viverem e pedem compensação quando a morte ocorre depois dos 15 anos. O certificado esclarece que a vitaliciedade protege Teresa enquanto viva e que a continuidade aos indicados se limita ao saldo temporal da garantia. Os beneficiários foram cadastrados em percentuais definidos, mas esses percentuais alteram apenas a divisão das prestações ainda devidas. Considere que o contrato oferece apenas a garantia mínima descrita, sem reversão vitalícia ou outra proteção adicional. Compare as consequências da morte nos dois cenários.</p>",
+     "alternativas": {
+      "a": "Na morte no sexto ano, a renda termina imediatamente; na morte depois de 18 anos, os beneficiários recebem os 15 anos garantidos a partir dessa data.",
+      "b": "Nos dois cenários, os beneficiários recebem renda vitalícia, pois a garantia mínima converte a proteção temporária em reversão permanente.",
+      "c": "Na morte no sexto ano, os beneficiários recebem o período restante até completar 15 anos; na morte após 18 anos, os pagamentos terminam.",
+      "d": "Na morte antes do prazo, os beneficiários recebem a reserva original; depois do prazo, recebem a soma nominal das prestações já pagas."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-42-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. R$ 600.000 divididos por 200 geram R$ 3.000; divididos por 215, cerca de R$ 2.791. A maior duração potencial reduz a renda inicial, e a morte do beneficiário extingue a reversão sem compensação.</p><p>A alternativa B inverte valores e efeito. A alternativa C exclui a idade do cálculo inicial. A alternativa A cria aumento posterior ausente no contrato.</p><p>Regra de bolso: beneficiário reversível mais jovem amplia a obrigação esperada e tende a reduzir a renda do titular.</p>",
+     "enunciado": "<p>Um titular compara renda vitalícia reversível para dois beneficiários alternativos, mantendo reserva de R$ 600.000, percentual de reversão, tábua e juro iguais. Com beneficiário de idade próxima, o divisor hipotético é 200. Com beneficiário mais jovem, o divisor sobe para 215, pois a continuidade pode durar mais. Durante a percepção, o beneficiário escolhido falece antes do titular. O cliente espera receber acréscimo compensatório a partir dessa morte, embora o regulamento informe que a reversão se extingue sem aumento da renda original. A entidade explica que o custo potencial da continuidade já participou do cálculo feito na data da concessão e que o evento posterior deixa de acionar a proteção. Calcule as rendas iniciais e interprete os efeitos da idade e da morte do beneficiário.</p>",
+     "alternativas": {
+      "a": "A renda com divisor 215 é R$ 2.791, mas sobe para R$ 3.000 quando o beneficiário morre, como devolução do custo da proteção.",
+      "b": "As rendas são R$ 2.791 e R$ 3.000; o beneficiário jovem eleva o pagamento porque amplia a duração provável da obrigação.",
+      "c": "As duas rendas são R$ 3.000, pois a idade do beneficiário altera apenas pagamentos posteriores à morte do titular.",
+      "d": "As rendas são R$ 3.000 e R$ 2.791; o beneficiário jovem reduz o valor inicial, e sua morte extingue a reversão sem acréscimo."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-42-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. A renda por prazo certo mantém os pagamentos até a data final e permite continuidade aos indicados se o titular morrer, mas termina no prazo mesmo se ele viver.</p><p>A alternativa B atribui continuidade à temporária. A alternativa C cria prazo e continuidade na vitalícia simples. A alternativa D transforma reversão vitalícia em prazo certo.</p><p>Regra de bolso: prazo certo protege o fluxo até uma data; renda vitalícia protege a sobrevivência sem data final conhecida.</p>",
+     "enunciado": "<p>Roberto pretende financiar exatamente 20 anos de despesas e aceita que os pagamentos terminem na data contratada. Sua irmã, dependente financeiramente, deve receber as prestações restantes se ele morrer durante esse período. Um vendedor recomenda renda mensal temporária e afirma que ela produz o mesmo efeito do prazo certo. O regulamento informa que a temporária termina na morte do titular ou no fim do período, o que ocorrer primeiro. Já a renda por prazo certo mantém os pagamentos restantes aos beneficiários ou sucessores e encerra na data final mesmo que o titular esteja vivo. Roberto também quer evitar uma promessa vitalícia porque possui outra fonte de renda depois desse horizonte. Compare as modalidades diante do objetivo.</p>",
+     "alternativas": {
+      "a": "A renda por prazo certo corresponde ao objetivo: preserva prestações até a data final para os indicados, mas encerra depois de 20 anos mesmo com Roberto vivo.",
+      "b": "A renda temporária corresponde ao objetivo, pois a morte do titular transfere automaticamente aos beneficiários os pagamentos restantes até o fim do prazo.",
+      "c": "A vitalícia simples corresponde ao objetivo, porque combina data final conhecida com continuidade obrigatória para a irmã depois da morte do titular.",
+      "d": "A reversível corresponde ao objetivo, pois termina em 20 anos e transfere à irmã apenas as prestações restantes desse período."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-42-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A vitalícia simples transfere o risco de longevidade e, sem necessidade de continuidade a dependente, pode evitar o custo de proteção adicional que reduziria a renda inicial.</p><p>A alternativa A escolhe proteção sem necessidade. A alternativa C inverte o efeito da garantia. A alternativa D atribui continuidade vitalícia ao prazo certo.</p><p>Regra de bolso: escolha a proteção que cobre o risco relevante, pois cada obrigação adicional consome renda inicial.</p>",
+     "enunciado": "<p>Elisa possui reserva previdenciária e nenhuma pessoa depende de sua renda. Ela recebe aposentadoria pública suficiente para despesas essenciais, mas teme sobreviver além do horizonte planejado. Ao comparar simulações, observa que a vitalícia simples apresenta renda inicial superior à reversível e à modalidade com garantia mínima. Elisa insiste em contratar reversão para um sobrinho com patrimônio e renda próprios apenas porque a modalidade oferece mais proteção nominal. O assessor explica que a proteção adicional reduz o pagamento inicial e precisa corresponder a um risco real. As propostas usam o mesmo saldo, data, tábua e juro. O cadastro confirma a independência financeira do sobrinho e a ausência de outro dependente. Avalie a escolha conforme a necessidade declarada.</p>",
+     "alternativas": {
+      "a": "A reversível deve ser escolhida por oferecer proteção adicional, ainda que o beneficiário seja independente e a renda da titular diminua.",
+      "b": "A vitalícia simples pode cobrir a longevidade de Elisa com renda inicial superior, pois o sobrinho possui independência financeira.",
+      "c": "A garantia mínima aumenta a renda inicial porque restringe o risco da entidade ao período definido para os beneficiários.",
+      "d": "A renda por prazo certo elimina o risco de Elisa sobreviver ao patrimônio, pois continua pagando depois da data final enquanto a titular permanecer viva."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-42-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A comparação exige manter saldo e data e examinar renda inicial, atualização, tábua, juro, percentual de reversão e idades. Beneficiária jovem pode ampliar a continuidade esperada.</p><p>A alternativa A considera apenas a renda inicial. A alternativa C transforma juro atuarial em garantia de fundo. A alternativa D exclui a idade da beneficiária reversível.</p><p>Regra de bolso: compare o fluxo completo e a proteção contratada, e não apenas o primeiro pagamento.</p>",
+     "enunciado": "<p>Um casal recebe propostas de conversão para a mesma reserva. O titular tem 72 anos e a beneficiária reversível, 55. Uma proposta usa tábua com maior sobrevivência projetada e juro atuarial menor; outra usa menor sobrevivência projetada e juro maior, mas possui condições distintas de atualização. O titular olha apenas o pagamento inicial superior e ignora percentual de reversão, índice, prazo garantido e reversão de resultados financeiros. A beneficiária depende do fluxo e pode recebê-lo durante muitos anos. O assessor prepara simulações na mesma data e com o mesmo saldo, separando o efeito de cada parâmetro. O relatório também mostra os valores projetados depois da atualização contratual e o fluxo destinado à beneficiária. Avalie a comparação adequada.</p>",
+     "alternativas": {
+      "a": "O pagamento inicial superior encerra a análise, porque tábua, idade da beneficiária e atualização afetam apenas a entidade depois da concessão.",
+      "b": "A decisão deve comparar renda, atualização, tábua, juro, reversão e idades; maior sobrevivência e beneficiária jovem ampliam a duração esperada.",
+      "c": "O juro atuarial maior garante rentabilidade superior do fundo na acumulação e neutraliza qualquer diferença de tábua ou reversão.",
+      "d": "A idade de 72 anos define a renda do casal, enquanto a idade de 55 anos fica fora do cálculo porque a reversão ocorre apenas depois da morte."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Plano e fundo previdenciário: carências, perfil e relacionamento": [
+    {
+     "id": "cpror-inv-43-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O plano organiza a relação contratual com a EAPC. O FIE executa a estratégia da carteira vinculada à provisão e possui riscos e prestadores próprios.</p><p>A alternativa B inverte as funções. A alternativa C equipara instrumentos distintos. A alternativa D transforma o fundo em substituto do contrato.</p><p>Regra de bolso: plano define direitos e movimentações; FIE investe os recursos da provisão.</p>",
+     "enunciado": "<p>Um participante acredita que o plano de previdência e o FIE vinculado são o mesmo instrumento. Analise a diferença entre as duas camadas da estrutura.</p>",
+     "alternativas": {
+      "a": "O plano é o contrato com direitos, carências e benefícios; o FIE mantém a carteira, com política, riscos, taxas e prestadores próprios.",
+      "b": "O plano executa a compra dos ativos, enquanto o FIE define beneficiários, carências, resgates e formas de recebimento do participante.",
+      "c": "O plano e o FIE são contratos equivalentes, e a escolha entre eles depende apenas de o cliente preferir resgate ou portabilidade.",
+      "d": "O FIE substitui o regulamento previdenciário, pois a valorização das cotas determina direitos, coberturas e prazos de movimentação."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-43-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Tradicionalmente, seguradoras ou EAPCs são cotistas do FIE. Nas estruturas com patrimônio segregado admitidas, segurados e participantes podem figurar como cotistas.</p><p>A alternativa A torna o participante cotista obrigatório e EAPC. A alternativa C confunde gestor, participante e garantidor. A alternativa D elimina o contrato previdenciário.</p><p>Regra de bolso: separe quem participa do plano, quem assume a obrigação e quem decide os investimentos.</p>",
+     "enunciado": "<p>Uma aula compara o participante do plano com os cotistas do FIE nos arranjos tradicionais e de patrimônio segregado. Identifique a relação correta.</p>",
+     "alternativas": {
+      "a": "Nos arranjos tradicionais, o participante figura obrigatoriamente como cotista direto do FIE e assume as obrigações contratuais da EAPC.",
+      "b": "Nos arranjos tradicionais, seguradoras ou EAPCs figuram como cotistas; no patrimônio segregado admitido, participantes podem figurar como cotistas.",
+      "c": "O gestor do FIE é participante do plano e cotista exclusivo, pois decide a carteira e garante os benefícios previstos no regulamento.",
+      "d": "O participante fica fora do plano e possui apenas cotas do FIE, cabendo ao administrador do fundo definir beneficiários e coberturas."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-43-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A carência inicial pode começar em 60 dias no plano comum e 180 dias no qualificado. Depois dela, cotização e processamento ainda afetam a disponibilidade.</p><p>A alternativa B iguala prazos distintos. A alternativa C presume que qualificação reduz carência. A alternativa D confunde permissão para pedir com pagamento.</p><p>Regra de bolso: carência abre a porta do pedido; cotização e processamento determinam quando o recurso chega.</p>",
+     "enunciado": "<p>Dois clientes avaliam a primeira possibilidade de resgate. O plano comum de Ana prevê carência de 60 dias. O plano destinado a proponente qualificado de Bruno prevê 180 dias. Ambos os prazos estão no limite inicial permitido pela aula, e os regulamentos também preveem cotização e processamento depois do pedido. Bruno afirma que o status de qualificado deveria assegurar carência menor, enquanto Ana conclui que seu dinheiro estará na conta exatamente no sexagésimo dia. Os dois clientes possuem compromissos financeiros logo depois das respectivas carências e pedem ao distribuidor uma data certa de crédito. O regulamento apresenta separadamente a permissão de solicitar e as etapas posteriores. Considere separadamente o momento em que o pedido pode ser formulado e o prazo necessário para transformá-lo em pagamento. Analise as duas conclusões.</p>",
+     "alternativas": {
+      "a": "As carências contratadas podem ser 60 e 180 dias; o qualificado pode ter prazo inicial maior, e o fim da carência ainda antecede cotização e processamento.",
+      "b": "Os dois planos devem liberar o pagamento no sexagésimo dia, pois a classificação de qualificado altera apenas os ativos acessíveis pelo FIE.",
+      "c": "O plano qualificado deve ter carência inferior ao comum, porque patrimônio e conhecimento regulatório eliminam a necessidade de proteção contratual.",
+      "d": "A carência define a data do crédito em conta, de modo que cotização e processamento ocorrem dentro dos 60 ou 180 dias contratados."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-43-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A carência concluída autoriza o pedido. O pagamento ainda depende da disponibilização pelo FIE e do processamento, respeitado o prazo máximo aplicável.</p><p>A alternativa B inicia os dois dias no evento errado. A alternativa A troca os limites de comum e qualificado. A alternativa D elimina etapas operacionais.</p><p>Regra de bolso: liquidez previdenciária soma carência, intervalo, cotização e processamento.</p>",
+     "enunciado": "<p>Carla terminou a carência de um plano comum e solicita resgate numa segunda-feira. O regulamento usa os prazos operacionais admitidos, e a equipe explica que o pagamento ocorre em até dois dias úteis depois que o FIE disponibiliza os recursos e, em regra, até o 26º dia útil contado do pedido. Em plano para proponente qualificado, o prazo máximo poderia chegar ao 180º dia útil. Carla possui conta a vencer em três dias e insiste que o término da carência equivale a liquidez imediata. O FIE ainda precisa converter as cotas segundo sua regra e transferir os recursos para a entidade antes do prazo de dois dias úteis do pagamento. A equipe limita a previsão à data assegurada pelo contrato. Desconsidere feriados e qualquer prazo mais curto oferecido pela entidade. Avalie a capacidade de usar esse resgate para a obrigação imediata.</p>",
+     "alternativas": {
+      "a": "O plano comum usa o prazo de 180 dias úteis depois da carência, e o qualificado recebe em até 26 dias por possuir acesso ampliado.",
+      "b": "O pagamento deve ocorrer em dois dias úteis desde o pedido, porque a disponibilização pelo FIE e a solicitação do participante são o mesmo evento.",
+      "c": "O fim da carência permite o pedido, mas o pagamento depende de cotização e processamento e pode ocorrer até o 26º dia útil, incompatível com a certeza de três dias.",
+      "d": "A conclusão da carência transforma o saldo em disponibilidade diária e torna os limites operacionais facultativos para o participante."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-43-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A portabilidade movimenta recursos entre planos diretamente entre entidades. Pode ocorrer dentro da mesma EAPC ou para outra, enquanto a troca de FIE dentro do contrato pode ser apenas mudança interna.</p><p>A alternativa B equipara portabilidade interna a troca de FIE e externa a resgate. A alternativa A amplia o conceito indevidamente. A alternativa D elimina inscrição e critérios do receptor.</p><p>Regra de bolso: portabilidade muda o plano e preserva a continuidade; resgate passa pelo cliente; troca de FIE pode permanecer no mesmo plano.</p>",
+     "enunciado": "<p>Davi quer mudar as condições de sua previdência. A primeira proposta transfere a provisão para outro plano da mesma EAPC, cujo regulamento admite prazo interno inferior ao geral. A segunda leva os recursos a um plano de outra entidade que já aceitou sua inscrição segundo critérios objetivos. Davi pede que o dinheiro passe por sua conta para conferir o valor antes da nova aplicação e chama a troca do FIE dentro do plano atual de portabilidade externa. Os três movimentos preservam cobertura por sobrevivência, mas possuem naturezas operacionais diferentes. A entidade explica que o trânsito pela conta caracterizaria outra operação e poderia romper a continuidade pretendida. Os regulamentos de origem e destino identificam a natureza compatível das provisões. Analise as diferenças entre portabilidade interna, externa e simples mudança de investimento.</p>",
+     "alternativas": {
+      "a": "Qualquer mudança de estratégia é portabilidade, mesmo quando o contrato e a entidade permanecem iguais e apenas a carteira vinculada muda.",
+      "b": "A portabilidade interna troca apenas o FIE, enquanto a externa exige resgate na conta do participante e nova contratação na entidade receptora.",
+      "c": "A interna liga planos da mesma EAPC, a externa liga entidades diferentes e ambas transferem recursos diretamente; trocar o FIE segue regra do plano.",
+      "d": "A portabilidade externa dispensa inscrição no destino, pois a entidade receptora deve aceitar recursos previdenciários sem aplicar critérios de entrada."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-43-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Investidor qualificado é classificação de acesso. O perfil depende de objetivo, prazo, situação financeira, conhecimento, tolerância e capacidade de suportar perdas.</p><p>A alternativa A equipara patrimônio a perfil. A alternativa C elimina o dever de adequação e informação. A alternativa D trata conhecimento como proteção financeira.</p><p>Regra de bolso: qualificado descreve acesso regulatório; perfil descreve a combinação entre cliente, objetivo e risco.</p>",
+     "enunciado": "<p>Uma investidora possui mais de R$ 1 milhão em investimentos financeiros e atesta por escrito sua condição de qualificada. Ela tem objetivo previdenciário em quatro anos, depende da reserva para complementar renda e demonstra baixa capacidade de suportar perdas. O distribuidor oferece plano qualificado com FIE volátil e afirma que o patrimônio comprova perfil agressivo, compreensão da estratégia e dispensa de análise de liquidez. A cliente conhece produtos financeiros, mas rejeita a possibilidade de queda relevante perto do uso. A simulação mostra que uma oscilação perto da aposentadoria comprometeria o primeiro período de renda. Considere que o status regulatório permite acesso diferenciado, sem definir tolerância ou objetivo. Avalie a recomendação.</p>",
+     "alternativas": {
+      "a": "O patrimônio superior a R$ 1 milhão comprova perfil agressivo e capacidade de perda, tornando prazo e dependência da reserva fatores secundários.",
+      "b": "A qualificação permite acesso, mas objetivo, horizonte, situação financeira e capacidade de perda indicam desalinhamento da estratégia.",
+      "c": "A declaração de qualificada transfere à cliente a responsabilidade pela adequação e permite ao distribuidor omitir oscilação e prazos.",
+      "d": "O conhecimento de produtos compensa a baixa capacidade financeira, pois compreender o risco reduz a perda que a carteira pode apresentar em quatro anos."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-43-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O perfil precisa refletir a situação atual. O profissional atualiza o diagnóstico, comunica o risco, compara soluções e documenta a orientação e a decisão.</p><p>A alternativa B congela o perfil. A alternativa C impõe venda sem diagnóstico. A alternativa A inverte o efeito do prazo curto sobre a capacidade de recuperar perdas.</p><p>Regra de bolso: desenquadramento pede reavaliação e decisão documentada, e não troca mecânica de produto.</p>",
+     "enunciado": "<p>Quinze anos atrás, Roberto tinha perfil agressivo, renda alta e horizonte de 20 anos. Escolheu FIE com forte participação em renda variável. Agora faltam cinco anos para iniciar os resgates, sua renda caiu e a reserva se tornou essencial para o orçamento. O questionário original permanece arquivado, e o gerente usa esse documento para manter a estratégia sem nova conversa. Roberto diz que mudar o FIE apenas para adequar o rótulo poderia gerar custos e prefere compreender alternativas, inclusive ajuste de alocação ou portabilidade. A instituição identifica divergência entre risco, horizonte e capacidade atual. O relatório mostra a perda potencial no período restante e as condições de cada alternativa. Avalie o tratamento do desenquadramento.</p>",
+     "alternativas": {
+      "a": "A aproximação do objetivo aumenta a capacidade de perda, pois reduz o período em que oscilações podem afetar o saldo antes dos resgates.",
+      "b": "O perfil original permanece válido até o resgate, porque mudanças de renda e horizonte ficam incorporadas ao risco aceito na contratação.",
+      "c": "O desenquadramento exige venda imediata do FIE, mesmo sem avaliar custos, condições de mercado, novo fundo ou decisão consciente do participante.",
+      "d": "A instituição atualiza o diagnóstico, explica riscos, compara alternativas e registra orientação e decisão, sem troca automática."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-43-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A CNSP 382 exige tratamento adequado durante o ciclo do produto, com ética, transparência, diligência, lealdade e informação sobre vínculos e remuneração.</p><p>A alternativa A reduz transparência à entrega formal. A alternativa C usa incentivos comerciais para afastar responsabilidade. A alternativa D limita indevidamente o ciclo de conduta.</p><p>Regra de bolso: informação clara e tratamento adequado acompanham o cliente da oferta ao encerramento.</p>",
+     "enunciado": "<p>Uma corretora oferece previdência por campanha digital que destaca benefício fiscal e rentabilidade recente. A página deixa carência e custos em documento secundário, omite que o intermediário trabalha com uma única entidade e apresenta remuneração apenas depois da adesão. A equipe comercial argumenta que entregar o regulamento cumpre a obrigação e que metas e comissões pertencem à gestão interna. Um cliente relata ter escolhido o plano sem perceber a exclusividade da oferta e descobre a carência somente quando tenta movimentar a reserva. A política de conduta precisa observar a Resolução CNSP 382 durante oferta, acumulação, resgate, portabilidade, reclamação e encerramento. Avalie a conduta e a transparência exigidas.</p>",
+     "alternativas": {
+      "a": "A entrega do regulamento basta, porque carência, custo e conflito deixam de integrar a oferta quando permanecem disponíveis em documento eletrônico.",
+      "b": "A instituição deve prestar informação clara, agir com diligência e lealdade e revelar vínculos, exclusividade e remuneração relevantes durante a relação.",
+      "c": "Metas e comissões afastam a responsabilidade pelo tratamento adequado, desde que o intermediário alcance o público definido pela campanha.",
+      "d": "A norma alcança apenas a contratação inicial, deixando resgate, portabilidade, reclamação e encerramento sob responsabilidade exclusiva do cliente."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-43-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. O cliente oculto é servidor da Susep designado para assumir a posição de interessado ou proponente e testar práticas presencialmente ou a distância, sem aviso prévio.</p><p>A alternativa B exige aviso e presença. A alternativa C restringe o escopo a contrato concluído. A alternativa D transforma supervisão pública em consultoria privada e sanção imediata.</p><p>Regra de bolso: a conduta deve ser adequada em atendimento real, pois a Susep pode testá-la sem identificação antecipada.</p>",
+     "enunciado": "<p>Uma pessoa solicita informações sobre plano previdenciário por atendimento remoto, faz perguntas sobre remuneração, carência e risco e registra as respostas recebidas. A instituição imagina tratar-se de cliente comum, mas depois descobre que era servidor da Susep designado para verificar a conformidade das práticas. O atendente afirma que a fiscalização seria inválida por falta de aviso prévio e por ter ocorrido a distância. A entidade também sustenta que o cliente oculto poderia observar somente contratações concluídas, ficando impedido de testar simulação, distribuição e prestação de informações. O servidor percorreu a mesma jornada digital disponível ao público e solicitou os mesmos documentos oferecidos aos interessados. Analise o instrumento de supervisão.</p>",
+     "alternativas": {
+      "a": "O cliente oculto pode assumir a posição de interessado ou proponente e testar presencialmente ou a distância, sem aviso prévio à entidade ou ao intermediário.",
+      "b": "O teste exige aviso formal antes do contato e presença física, para que a instituição prepare os documentos e identifique o servidor responsável.",
+      "c": "A atuação limita-se a contratos concluídos, pois pesquisa, simulação, promoção e fornecimento de informações ficam fora da supervisão.",
+      "d": "O cliente oculto atua como consultor privado contratado pelo consumidor e pode aplicar sanções diretamente ao atendente durante a conversa."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-43-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A recomendação precisa alinhar contrato e carteira: carências, liquidez, custos e recebimento junto de riscos, taxas e estratégia do FIE.</p><p>A alternativa B usa contrato para neutralizar risco. A alternativa C substitui perfil por rentabilidade passada. A alternativa A ignora a camada contratual do planejamento.</p><p>Regra de bolso: bom plano e bom fundo precisam ser adequados juntos ao objetivo, ao prazo e à capacidade de perda.</p>",
+     "enunciado": "<p>Fernanda quer acumular por oito anos e usar a reserva para renda complementar. O plano apresentado cobra custos compatíveis, mas prevê carência e processamento que podem conflitar com a primeira data de uso. O FIE vinculado tem volatilidade elevada e concentração em ativos que Fernanda conhece pouco. O questionário mostra tolerância moderada e capacidade limitada de recuperar perdas perto do objetivo. O vendedor destaca apenas o histórico de rentabilidade e afirma que contrato adequado compensa qualquer carteira. Fernanda também pode considerar outro FIE ou portabilidade, desde que compreenda prazos e efeitos. A simulação mostra que a data do primeiro recebimento pode ocorrer antes da conclusão de etapas previstas pelo plano. Avalie a recomendação integrada.</p>",
+     "alternativas": {
+      "a": "A escolha deve considerar apenas o FIE, pois carência, processamento, beneficiários e recebimento deixam de importar quando a estratégia possui retorno esperado.",
+      "b": "O contrato adequado torna o FIE compatível, porque direitos de resgate e portabilidade compensam oscilações e concentração perto do objetivo.",
+      "c": "A rentabilidade histórica do FIE substitui o diagnóstico de risco, desde que o prazo de oito anos supere a carência prevista no regulamento.",
+      "d": "A análise deve combinar regras do plano, liquidez efetiva, custos e benefícios com risco, política e taxas do FIE, documentando a compatibilidade com Fernanda."
+     },
+     "gabarito": "d"
+    }
+   ],
+   "Fundos previdenciários: estratégias e limites de concentração": [
+    {
+     "id": "cpror-inv-44-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Renda fixa mantém riscos de mercado e crédito, balanceado trabalha com composição orientada, multimercado possui liberdade de combinação e ações amplia a exposição acionária.</p><p>A alternativa A atribui características incompatíveis às estratégias. A alternativa B equipara estruturas distintas e mistura fundo com carência do plano. A alternativa D usa idade como critério suficiente.</p><p>Regra de bolso: leia a política e as fontes de risco por trás do nome da estratégia.</p>",
+     "enunciado": "<p>Uma participante compara fundos previdenciários de renda fixa, balanceado, multimercado e ações. Identifique a distinção correta entre as estratégias.</p>",
+     "alternativas": {
+      "a": "Renda fixa elimina perdas, balanceado replica um índice acionário, multimercado evita derivativos e ações mantém baixa oscilação.",
+      "b": "Balanceado e multimercado seguem a mesma composição, enquanto renda fixa e ações diferem pelo prazo de carência previsto no plano.",
+      "c": "Renda fixa pode sofrer marcação a mercado; balanceado preserva uma composição orientada; multimercado combina mercados; ações amplia a oscilação.",
+      "d": "A estratégia é definida pela idade do participante, de modo que política, duração, crédito, câmbio e derivativos têm função secundária."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-44-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Títulos longos podem sofrer variações relevantes antes do uso da reserva, e crédito privado acrescenta risco de inadimplência, liquidez e spread.</p><p>A alternativa A confunde renda fixa com cota estável. A alternativa B atribui ao horizonte do cliente efeito sobre a duração dos ativos. A alternativa D trata carência como proteção de mercado.</p><p>Regra de bolso: classe conservadora no nome pode carregar prazo e crédito inadequados ao objetivo.</p>",
+     "enunciado": "<p>Um cliente usará a reserva em dois anos e avalia um fundo previdenciário de renda fixa com títulos prefixados longos. Analise o principal cuidado na indicação.</p>",
+     "alternativas": {
+      "a": "A denominação renda fixa garante estabilidade da cota até o uso, mesmo diante de alta das taxas e abertura dos spreads de crédito.",
+      "b": "O horizonte curto transforma títulos longos em pós-fixados, pois a proximidade do resgate reduz a duração econômica da carteira.",
+      "c": "O fundo pode oscilar por marcação a mercado e crédito; duração e liquidez precisam ser compatíveis com a data de uso da reserva.",
+      "d": "O risco depende da carência do plano, pois o prazo contratual neutraliza a variação de preço dos títulos mantidos pelo FIE."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-44-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O plano comum respeita 100% em renda fixa, 70% em renda variável e 20% nas demais modalidades. No exclusivo para qualificados, os tetos são 100%, 100% e 40%, mas continuam valendo as outras camadas e o suitability.</p><p>A alternativa A cria excessos inexistentes. A alternativa C soma tetos independentes como se fossem uma carteira. A alternativa B confunde acesso regulatório com perfil agressivo.</p><p>Regra de bolso: teto por modalidade autoriza exposição; perfil e regras adicionais determinam se ela cabe na carteira e no cliente.</p>",
+     "enunciado": "<p>A equipe de produtos desenha dois planos durante o período de diferimento. O primeiro recebe participantes comuns e propõe 55% em renda fixa, 25% em renda variável, 10% em imóveis e 10% em variação cambial. O segundo é exclusivo para qualificados e propõe 20% em renda fixa, 75% em renda variável, 25% em imóveis, 20% em variação cambial e 10% em outros. O analista rejeita o segundo porque soma seus percentuais e encontra 150%, embora algumas exposições possam pertencer a camadas distintas da carteira. Outro integrante afirma que a classificação de qualificado basta para recomendar o segundo a qualquer participante admitido. Considere os tetos independentes por modalidade da aula e que as demais regras dos ativos ainda serão verificadas. Avalie as propostas e a conclusão comercial.</p>",
+     "alternativas": {
+      "a": "O primeiro excede o teto comum de renda variável, enquanto o segundo viola o limite qualificado de imóveis e deve ser recusado pela soma de 150%.",
+      "b": "O segundo pode ser recomendado aos qualificados porque os limites ampliados comprovam tolerância à perda, ainda que objetivo e horizonte apontem outra estratégia.",
+      "c": "As duas propostas são irregulares, pois os percentuais máximos das modalidades precisam somar 100% antes da análise de emissores e investimentos.",
+      "d": "O primeiro respeita os tetos comuns; o segundo respeita isoladamente os tetos qualificados, mas a carteira e a indicação ainda dependem das demais regras e da adequação."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-44-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A exposição efetiva corresponde a 75% × 70% = 52,5% do FIE. Em R$ 10 milhões, o teto é R$ 5,25 milhões, abaixo dos R$ 6 milhões propostos.</p><p>A alternativa C ignora o teto da modalidade. A alternativa B ignora o limite interno do grupo. A alternativa D subtrai percentuais com bases encadeadas.</p><p>Regra de bolso: quando um limite cabe dentro de outro, multiplique as proporções e use a base correta.</p>",
+     "enunciado": "<p>Um FIE de plano comum avalia um grupo de ativos enquadrado em renda variável. A norma admite esse grupo até 75% dentro da modalidade, enquanto o plano comum pode manter até 70% do patrimônio na modalidade de renda variável. O gestor deseja aplicar R$ 6 milhões nesse grupo em uma carteira de R$ 10 milhões e argumenta que cada percentual observado separadamente supera os 60% pretendidos. A área de risco explica que um dos limites incide dentro do espaço permitido pelo outro e calcula a exposição efetiva por multiplicação. O parecer deve registrar tanto a base da modalidade quanto a base específica do grupo. Desconsidere limites por emissor, concentração e série, que serão examinados depois. Calcule o teto desse grupo sobre o patrimônio do FIE e avalie a proposta de R$ 6 milhões.</p>",
+     "alternativas": {
+      "a": "O teto é R$ 5,25 milhões, obtido por 75% de 70% da carteira; a proposta de R$ 6 milhões excede essa barreira.",
+      "b": "O teto é R$ 7 milhões, pois o limite geral da renda variável prevalece sem aplicação do percentual específico do grupo.",
+      "c": "O teto é R$ 7,5 milhões, pois o percentual do grupo substitui o teto da modalidade quando é superior a metade do patrimônio.",
+      "d": "O teto é R$ 4,5 milhões, obtido pela diferença entre 75% e 70% aplicada ao valor pretendido pelo gestor."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-44-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O limite de 25% sobre R$ 40 milhões resulta em R$ 10 milhões por instituição financeira. Após os R$ 6 milhões existentes, o espaço é R$ 4 milhões.</p><p>A alternativa B muda a base e separa um mesmo emissor. A alternativa C aplica o percentual sobre a compra, e não sobre o FIE. A alternativa D desconsidera exposição já existente.</p><p>Regra de bolso: some os papéis do mesmo emissor antes de comparar a exposição com o patrimônio do FIE.</p>",
+     "enunciado": "<p>O comitê de um FIE com patrimônio de R$ 40 milhões examina uma emissão de títulos de um banco. A carteira já possui R$ 6 milhões em outros papéis da mesma instituição financeira e pretende comprar mais R$ 5 milhões, com vencimento e indexador diferentes. Os valores correspondem às posições atuais usadas no controle de enquadramento. O responsável comercial afirma que a nova série constitui outro risco e que cada título poderia ocupar até 25% do FIE. A norma, porém, limita a alocação por instituição financeira a 25% dos recursos, considerada a exposição ao emissor. Desconsidere, neste caso, o limite da classe ou série e a concentração dentro do patrimônio da instituição. Calcule o espaço disponível para novas compras desse banco e avalie a proposta do comitê.</p>",
+     "alternativas": {
+      "a": "O teto no banco é R$ 10 milhões; como já existem R$ 6 milhões, restam R$ 4 milhões e a compra integral de R$ 5 milhões excede o limite.",
+      "b": "O teto é R$ 25 milhões por título, pois vencimentos e indexadores distintos fazem cada papel ser tratado como emissor independente.",
+      "c": "A compra de R$ 5 milhões cabe porque o limite de 25% incide sobre o valor pretendido, e a parcela limitada seria R$ 1,25 milhão.",
+      "d": "O espaço é R$ 5 milhões, pois os R$ 6 milhões anteriores deixam de integrar a exposição quando pertencem a outra série do banco."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-44-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Dez por cento de R$ 20 milhões são R$ 2 milhões, e 25% de R$ 4 milhões são R$ 1 milhão. A menor barreira limita a compra a R$ 1 milhão.</p><p>A alternativa A troca as bases e os cálculos. A alternativa C elimina uma camada cumulativa. A alternativa D usa patrimônio futuro incerto para justificar desenquadramento atual.</p><p>Regra de bolso: calcule cada limite em sua própria base e obedeça ao menor valor encontrado.</p>",
+     "enunciado": "<p>Um FIE de R$ 20 milhões estuda aplicar em cotas de um FIDC cujo patrimônio líquido é de R$ 4 milhões. Para a hipótese examinada, a alocação por emissor restringe a exposição ao FIDC a 10% do patrimônio do FIE. A concentração por emissor também impede que a carteira detenha mais de 25% do patrimônio líquido do próprio FIDC. O gestor propõe R$ 1,5 milhão e sustenta que o segundo limite comporta a compra, pois o fundo investido ainda receberá novos aportes no futuro. Sem posição anterior nesse veículo, os valores apresentados são os disponíveis na data da decisão. O comitê deve decidir com os patrimônios atuais e aplicar simultaneamente as duas bases, sem antecipar captações. Calcule os dois tetos, identifique a barreira efetiva e avalie o valor proposto.</p>",
+     "alternativas": {
+      "a": "Os tetos são R$ 4 milhões e R$ 5 milhões; prevalece R$ 4 milhões, porque ambos devem ser calculados sobre o patrimônio do veículo investido.",
+      "b": "Os tetos são R$ 2 milhões e R$ 1 milhão; prevalece R$ 1 milhão, de modo que a proposta de R$ 1,5 milhão excede a concentração permitida.",
+      "c": "O teto efetivo é R$ 2 milhões, pois o limite de alocação do FIE substitui a concentração medida dentro do FIDC.",
+      "d": "A compra de R$ 1,5 milhão cabe, pois futuras captações podem elevar o patrimônio do FIDC e ajustar a concentração depois da aquisição."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-44-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Vinte e cinco por cento de R$ 40 milhões são R$ 10 milhões. As exposições de R$ 7 milhões e R$ 5 milhões devem ser somadas, totalizando R$ 12 milhões.</p><p>A alternativa A separa integrantes do mesmo conglomerado. A alternativa C duplica o teto por pessoa jurídica. A alternativa D usa características dos títulos para afastar a regra do emissor.</p><p>Regra de bolso: diversificar nomes dentro do mesmo grupo pode conservar a dependência econômica e regulatória.</p>",
+     "enunciado": "<p>Para reduzir a dependência aparente de um grupo financeiro, o gestor de um FIE distribui R$ 7 milhões em títulos do Banco Alfa e R$ 5 milhões em títulos da Financeira Beta. O patrimônio do FIE é de R$ 40 milhões, as duas instituições integram o mesmo conglomerado financeiro e o limite aplicável à instituição financeira é de 25%. Os títulos possuem garantias, vencimentos e equipes de gestão distintos. O gestor defende que cada pessoa jurídica deve ser comparada separadamente com o teto de R$ 10 milhões, o que deixaria ambas enquadradas. A área de risco lembra que emissores do mesmo conglomerado são considerados em conjunto para essa finalidade. Desconsidere outras camadas de limite. Avalie a exposição e a diversificação alegada.</p>",
+     "alternativas": {
+      "a": "A carteira está enquadrada porque Banco Alfa e Financeira Beta possuem CNPJs e estruturas operacionais distintos, e cada exposição fica abaixo de R$ 10 milhões.",
+      "b": "A exposição conjunta é de R$ 12 milhões contra teto de R$ 10 milhões; separar empresas do mesmo conglomerado não cria a diversificação regulatória pretendida.",
+      "c": "O teto conjunto é R$ 20 milhões, pois cada instituição acrescenta 25 pontos percentuais ao limite disponível para o conglomerado.",
+      "d": "As garantias e os vencimentos retiram os títulos do conceito de emissor comum, permitindo que o grupo seja desconsiderado no cálculo."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-44-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Quinze por cento de R$ 60 milhões são R$ 9 milhões, enquanto 25% de R$ 80 milhões são R$ 20 milhões. A posição de R$ 12 milhões já supera a menor barreira.</p><p>A alternativa B substitui um limite cumulativo. A alternativa C aplica 15% sobre a base errada. A alternativa D usa 25% do FIE, percentual que pertence a outra base.</p><p>Regra de bolso: classe ou série limita a fatia da emissão; emissor limita a fatia do FIE exposta ao devedor.</p>",
+     "enunciado": "<p>Um FIE de R$ 60 milhões já possui R$ 12 milhões de uma série de debêntures de determinada companhia aberta e pretende adquirir mais R$ 6 milhões da mesma série. A série totaliza R$ 80 milhões em circulação. Para o exercício, a alocação por emissor da companhia aberta admite até 15% do FIE, e a regra por investimento restringe a posição a 25% da mesma classe ou série. A equipe comercial afirma que o limite da série comporta R$ 20 milhões e, por isso, a nova compra inteira poderia ser feita. O risco observa que o teto por emissor deve ser cumprido ao mesmo tempo e inclui os R$ 12 milhões já detidos. Desconsidere exceções e outras emissões da companhia. Calcule cada barreira e indique a decisão compatível com as duas regras.</p>",
+     "alternativas": {
+      "a": "O limite por emissor é R$ 9 milhões e já está excedido; a compra aumenta o desenquadramento, embora a série isoladamente admita até R$ 20 milhões.",
+      "b": "A carteira pode chegar a R$ 20 milhões na série, pois o limite por investimento substitui o teto por emissor quando a emissão possui volume superior ao FIE.",
+      "c": "A posição atual está enquadrada e admite mais R$ 3 milhões, porque 15% da série equivalem ao espaço do emissor dentro do FIE.",
+      "d": "A nova compra cabe porque R$ 18 milhões representam menos de 25% do patrimônio do FIE e menos de 25% da série emitida."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-44-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. O teto de 100% para plano exclusivo de qualificados é permissão regulatória. A indicação ainda deve considerar objetivo, horizonte, tolerância, liquidez e capacidade de perda.</p><p>A alternativa A converte permissão em recomendação. A alternativa C impõe solução sem diagnóstico individual. A alternativa D atribui ao limite da carteira uma análise que pertence ao suitability.</p><p>Regra de bolso: enquadramento responde se a carteira pode existir; suitability responde se ela serve ao participante.</p>",
+     "enunciado": "<p>Marina é investidora qualificada, tem 34 anos e pretende usar a reserva previdenciária em quatro anos para interromper temporariamente o trabalho. O distribuidor oferece um fundo exclusivo para qualificados que pode chegar a 100% em renda variável. A carteira atual mantém 85% em ações e respeita seus limites regulatórios, mas Marina depende do saldo para custear o período sem renda, demonstra tolerância moderada e possui pouca capacidade de repor uma perda perto da data planejada. Ela resiste à alternativa balanceada porque acredita que o teto autorizado e sua idade comprovam adequação da estratégia acionária. O profissional compara cenários de queda, necessidade de liquidez e função do dinheiro. Avalie a recomendação e a interpretação do limite.</p>",
+     "alternativas": {
+      "a": "O fundo acionário é adequado porque a classificação de qualificada e a idade permitem usar o teto regulatório como alocação recomendada.",
+      "b": "O enquadramento permite a carteira existir, mas horizonte, dependência do saldo e capacidade de perda sustentam discutir uma exposição inferior e documentar a decisão.",
+      "c": "A estratégia balanceada deve ser imposta porque o horizonte de quatro anos determina o mesmo percentual de ações para participantes com objetivos semelhantes.",
+      "d": "A dependência da reserva pode ser ignorada quando o fundo respeita 100% em renda variável, pois a norma já incorpora a situação financeira do cotista."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-44-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. As camadas regulatórias são cumulativas e usam bases diferentes. Depois do enquadramento, a recomendação ainda exige compatibilidade entre estratégia, riscos e características da participante.</p><p>A alternativa A usa uma camada e rentabilidade passada como aprovação integral. A alternativa C elimina limites e suitability. A alternativa B trata prazo longo como correção de concentração e compreensão.</p><p>Regra de bolso: primeiro confirme todas as barreiras da carteira; depois confirme se o fundo cabe no plano do cliente.</p>",
+     "enunciado": "<p>O comitê seleciona um fundo previdenciário para participantes comuns com horizonte longo. A política admite renda fixa, renda variável, câmbio e crédito privado. A planilha confirma que cada modalidade está abaixo do teto geral, mas deixa de agrupar emissores do mesmo conglomerado, de medir quanto o FIE representa dentro dos veículos investidos e de conferir a participação em cada série adquirida. O gerente quer aprovar o fundo porque o limite de renda variável está folgado e a rentabilidade recente superou a referência. Uma participante interessada possui horizonte de 18 anos, mas baixa tolerância a oscilações e dificuldade para compreender derivativos e exposição cambial. O comitê precisa decidir sobre enquadramento da carteira e indicação à cliente. Avalie o procedimento completo.</p>",
+     "alternativas": {
+      "a": "A folga na renda variável comprova o enquadramento integral e a rentabilidade recente permite indicar o fundo sem avaliar outras bases ou compreensão da participante.",
+      "b": "O horizonte de 18 anos torna as camadas de concentração secundárias e compensa a dificuldade da participante com os riscos cambiais e derivativos.",
+      "c": "A análise do emissor basta para aprovar a carteira, enquanto tolerância, conhecimento e horizonte ficam cobertos pela política escrita no regulamento do fundo.",
+      "d": "O comitê deve verificar modalidade, emissor e conglomerado, concentração e classe ou série; depois precisa confrontar a estratégia com o perfil e o objetivo da participante."
+     },
+     "gabarito": "d"
+    }
+   ],
+   "Previdência: diversificação e revisão periódica da carteira": [
+    {
+     "id": "cpror-inv-45-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A diversificação efetiva distribui o patrimônio entre fontes de risco que podem reagir de formas diferentes e conecta cada parcela a uma função no planejamento.</p><p>A alternativa A multiplica nomes com exposição semelhante. A alternativa C reforça o risco ligado à renda profissional. A alternativa D persegue desempenho passado.</p><p>Regra de bolso: conte fatores de risco diferentes, e não a quantidade de fundos na tela.</p>",
+     "enunciado": "<p>Um participante deseja diversificar sua carteira previdenciária. Identifique a medida que produz diversificação econômica efetiva.</p>",
+     "alternativas": {
+      "a": "Contratar fundos com nomes distintos que acompanham o mesmo índice e mantêm duração, emissores e exposição cambial semelhantes.",
+      "b": "Distribuir recursos entre estratégias, gestores e classes com fatores de risco diferentes, atribuindo uma função a cada parcela da reserva.",
+      "c": "Abrir planos em entidades diferentes e concentrar cada fundo nos títulos do setor em que o participante recebe salário e participação nos lucros.",
+      "d": "Selecionar fundos pela rentabilidade recente, trocando a carteira quando outro produto supera o resultado no período mais curto."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-45-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Fundos diferentes podem repetir duração, emissores, índices ou cenários de retorno, produzindo diversificação apenas aparente.</p><p>A alternativa B confunde gestores com riscos independentes. A alternativa C transforma correlação passada em garantia. A alternativa D atribui à quantidade de fundos efeito sobre a duração.</p><p>Regra de bolso: abra a carteira e procure o risco repetido por trás dos rótulos.</p>",
+     "enunciado": "<p>Uma carteira reúne cinco fundos de gestores diferentes, mas os cinco dependem de queda dos juros e carregam títulos longos semelhantes. Analise a diversificação apresentada.</p>",
+     "alternativas": {
+      "a": "A carteira possui diversificação aparente, pois nomes diferentes escondem o mesmo fator dominante e podem sofrer juntos em cenário adverso.",
+      "b": "A quantidade de gestores garante independência entre os fundos, ainda que duração, emissores e cenário favorável coincidam.",
+      "c": "A correlação histórica baixa impede convergência futura das perdas, tornando desnecessária a análise das posições em períodos de estresse.",
+      "d": "O número de fundos reduz a duração consolidada, pois cada regulamento absorve uma parte da oscilação dos títulos mantidos pelos demais."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-45-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Objetivos com prazos e funções diferentes podem justificar planos ou carteiras separados, desde que a estrutura facilite o acompanhamento e compense custos e complexidade.</p><p>A alternativa A subordina metas próximas ao prazo mais longo. A alternativa C fragmenta sem propósito. A alternativa D iguala objetivos familiares com necessidades distintas.</p><p>Regra de bolso: cada plano precisa responder qual objetivo atende, quando será usado e qual risco pode suportar.</p>",
+     "enunciado": "<p>Renata possui três objetivos: pagar parte da formação do filho em oito anos, complementar a aposentadoria em 25 anos e formar um legado de prazo incerto. O gerente propõe colocar os recursos em um único fundo agressivo para simplificar o acompanhamento. Renata aceita oscilações na aposentadoria distante, mas depende de maior previsibilidade para a formação do filho. Outra proposta abre um plano para cada campanha comercial disponível, sem relacionar produtos a objetivos, e aumenta taxas, documentos e beneficiários a controlar. A cliente quer uma estrutura compreensível e pergunta se mais de um plano pode ser útil. Considere que produtos e tratamentos tributários serão escolhidos conforme a situação fiscal. Avalie a organização dos objetivos.</p>",
+     "alternativas": {
+      "a": "Um único fundo agressivo harmoniza os objetivos, pois o horizonte de 25 anos da aposentadoria passa a definir o risco dos recursos destinados ao filho e ao legado.",
+      "b": "Planos ou carteiras separados podem atribuir risco e horizonte a cada objetivo, desde que a divisão tenha função clara e seu benefício supere custos e complexidade.",
+      "c": "A abertura de um plano por oferta comercial cria diversificação suficiente, mesmo quando fundos, prazos, tributação e beneficiários permanecem sem finalidade definida.",
+      "d": "A formação do filho deve usar a estratégia do legado, pois objetivos familiares compartilham beneficiários e dispensam redução gradual do risco perto da data de uso."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-45-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A diferença entre R$ 1 milhão e R$ 813 mil é R$ 187 mil. O diagnóstico abre alternativas de aporte, prazo e meta, sem converter o déficit em aumento automático do risco.</p><p>A alternativa B usa o saldo como déficit e impõe risco. A alternativa A confunde projeção com diferença e interpreta o novo aporte como acréscimo. A alternativa D soma grandezas de forma duplicada.</p><p>Regra de bolso: déficit previdenciário pede ajuste de premissas controláveis antes de uma aposta em retorno maior.</p>",
+     "enunciado": "<p>Após cinco anos de acumulação, Paulo revisa a meta real de R$ 1 milhão que pretendia alcançar em vinte anos. Seu saldo atual é de R$ 180 mil e, mantendo aportes mensais de R$ 2 mil e rentabilidade real hipotética de 4% ao ano, a projeção para os quinze anos restantes chega a aproximadamente R$ 813 mil. O assessor sugere aumentar o risco para tentar eliminar a diferença, mas Paulo possui tolerância moderada e rejeita depender de uma rentabilidade superior. A simulação também indica que, nas mesmas premissas, um aporte próximo de R$ 2.762 mensais permitiria buscar a meta. Paulo aceita rever prazo e padrão de vida se o novo aporte pressionar seu orçamento. Trate a taxa como hipótese de comparação, sem promessa de retorno. Calcule o déficit projetado e identifique a revisão apropriada.</p>",
+     "alternativas": {
+      "a": "O déficit é de R$ 813 mil, correspondente ao valor projetado, e o aporte deve subir R$ 2.762 além dos R$ 2 mil já pagos por mês.",
+      "b": "O déficit é de R$ 180 mil, equivalente ao saldo atual, e deve ser corrigido pela troca imediata para fundo com volatilidade superior, preservando aporte e prazo.",
+      "c": "O déficit é de R$ 187 mil; Paulo pode comparar aumento de aporte, extensão do prazo, redução da meta ou combinação dessas medidas antes de alterar o risco.",
+      "d": "A projeção já alcança R$ 1 milhão porque saldo e valor futuro podem ser somados, dispensando revisão de aporte, prazo e padrão de vida."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-45-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Trinta por cento de R$ 500 mil correspondem a R$ 150 mil. Como a posição chegou a R$ 210 mil, o excesso frente à meta é de R$ 60 mil.</p><p>A alternativa A transforma desvio em política. A alternativa C aplica o percentual da parcela defensiva às ações. A alternativa D usa como base apenas o restante da carteira.</p><p>Regra de bolso: rebalancear é devolver os pesos ao plano, e não escolher o ativo que parece vencedor no momento.</p>",
+     "enunciado": "<p>A política de uma carteira previdenciária de R$ 500 mil estabelece 30% em ações e 70% em outras classes. Após uma alta do mercado, a parcela acionária passa a representar 42%, ou R$ 210 mil, sem novos aportes ou retiradas. A participante deseja restaurar a alocação planejada, mas receia vender depois de uma valorização. O profissional explica que o rebalanceamento segue uma regra de risco definida previamente e pode ocorrer por movimentação entre fundos ou pelo direcionamento de contribuições futuras. Para calcular o ajuste imediato, considere o patrimônio constante em R$ 500 mil e ignore impostos, carências e custos operacionais. Determine a posição acionária desejada, o valor a realocar e a lógica da decisão.</p>",
+     "alternativas": {
+      "a": "A meta acionária é R$ 210 mil, pois a valorização altera a política e transforma o peso observado em novo percentual estratégico da participante.",
+      "b": "A meta acionária é R$ 150 mil, exigindo realocar R$ 60 mil; o ajuste recompõe o risco planejado em vez de tentar prever a próxima direção do mercado.",
+      "c": "A meta acionária é R$ 350 mil, obtida pela parcela de 70%, e a carteira precisa transferir R$ 140 mil das outras classes para ações.",
+      "d": "A meta acionária é R$ 126 mil, correspondente a 30% dos R$ 420 mil das outras classes, com realocação de R$ 84 mil."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-45-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A capacidade de contribuir e a capacidade de suportar perdas são dimensões relacionadas, mas distintas, e precisam refletir orçamento, horizonte e reservas do cliente.</p><p>A alternativa A olha apenas a renda bruta. A alternativa B persegue rentabilidade e presume recuperação. A alternativa D cria vínculo mecânico entre aporte e risco.</p><p>Regra de bolso: aporte responde ao orçamento; estratégia responde ao objetivo, ao prazo e à capacidade de perda.</p>",
+     "enunciado": "<p>Eduardo recebeu uma promoção e poderia ampliar os aportes, mas também se tornou responsável por um novo dependente. Faltam seis anos para o início da renda previdenciária, sua carteira mantém forte exposição acionária e a reserva de emergência cobre poucos meses. Ele insiste em elevar simultaneamente a contribuição e o risco porque o fundo de ações liderou a rentabilidade no último ano. O profissional precisa distinguir a mudança permanente de renda das novas despesas, atualizar a meta e avaliar a menor capacidade de recuperar perdas conforme o uso se aproxima. Os recursos mantidos fora da previdência também afetam sua capacidade financeira. Analise como a revisão deve tratar contribuições e estratégia.</p>",
+     "alternativas": {
+      "a": "A promoção sustenta aumento definitivo de aporte e risco, pois a renda bruta adicional prevalece sobre dependentes, liquidez e prazo restante.",
+      "b": "A proximidade do objetivo recomenda repetir o fundo vencedor recente, porque seis anos permitem recuperar oscilações sem considerar a dependência da reserva.",
+      "c": "A revisão deve atualizar orçamento, meta, reserva externa e capacidade de perda, separando a contribuição possível da exposição compatível com o horizonte.",
+      "d": "A contribuição e o risco devem variar juntos, de modo que qualquer aumento de aporte exija elevar na mesma proporção a parcela em ações."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-45-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A revisão confirma a coerência de PGBL ou VGBL, avalia o regime antes da escolha que o fixa e atualiza beneficiários e percentuais por manifestação documentada.</p><p>A alternativa A presume alteração e reversão de decisão irretratável. A alternativa C atribui PGBL à declaração simplificada. A alternativa B trata o primeiro resgate como reabertura recorrente.</p><p>Regra de bolso: revise tributação antes do evento decisivo e beneficiários após mudanças relevantes da vida.</p>",
+     "enunciado": "<p>Na revisão anual, Luciana informa que passou a usar a declaração simplificada, teve um filho e pretende fazer o primeiro resgate no ano seguinte. Seu plano reúne aportes antigos e recentes, e a escolha entre os regimes progressivo e regressivo ainda pode ser exercida até a obtenção do benefício ou a solicitação do primeiro resgate. O atendente afirma que a revisão tributária permite desfazer escolhas já tornadas irretratáveis e que o nascimento altera os beneficiários por presunção, sem manifestação da participante. Luciana quer confirmar PGBL ou VGBL, regime tributário, nomes e percentuais antes do evento que fixa a opção. Considere também que a indicação no plano precisa refletir sua vontade documentada e permanece distinta da análise sucessória jurídica e tributária. Avalie a conduta.</p>",
+     "alternativas": {
+      "a": "A revisão permite substituir opções irretratáveis e atualiza beneficiários por eventos familiares, ainda que a participante deixe de registrar nomes e percentuais.",
+      "b": "O primeiro resgate reabre as escolhas dos valores abrangidos, permitindo alternar o regime conforme a renda verificada em cada recebimento posterior.",
+      "c": "A declaração simplificada determina manter o PGBL, enquanto o nascimento do filho torna secundárias a finalidade dos aportes e a regra tributária escolhida.",
+      "d": "A revisão deve conferir produto, situação fiscal e regime antes do evento de escolha, além de registrar beneficiários e percentuais segundo a vontade atual."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-45-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Diversificar entidades pode reduzir dependência operacional, mas exige visão consolidada dos ativos. A portabilidade pode reorganizar recursos compatíveis durante o diferimento sem passar pela conta do participante.</p><p>A alternativa A equipara resgate e portabilidade e ignora exposições. A alternativa C usa fragmentação como prova de diversificação. A alternativa B descreve incorretamente a transferência da provisão.</p><p>Regra de bolso: instituições diferentes diversificam operação; carteiras diferentes diversificam risco econômico.</p>",
+     "enunciado": "<p>Sérgio mantém quatro planos em três entidades. A distribuição amplia o acesso a gestores, mas dois fundos investem nos mesmos veículos, um plano antigo cobra taxa superior e os beneficiários aparecem com percentuais divergentes. Ele perdeu o controle dos aportes e deseja consolidar parte da estrutura. Um gerente recomenda resgatar os planos, receber os valores na conta e reaplicar no produto mais recente. Outra alternativa examina portabilidade durante o diferimento, respeitando carências, regras dos planos e compatibilidade das provisões. Sérgio acredita que entidades diferentes eliminam os riscos dos ativos e resiste a reunir as informações num demonstrativo consolidado. Avalie a diversificação operacional, a concentração econômica e a forma de reorganização.</p>",
+     "alternativas": {
+      "a": "As três entidades eliminam a concentração dos fundos, e o resgate seguido de nova aplicação preserva a continuidade previdenciária da mesma forma que a portabilidade.",
+      "b": "A consolidação exige resgate, pois a portabilidade transfere apenas rentabilidade e mantém a provisão principal vinculada à entidade de origem.",
+      "c": "Os planos devem permanecer separados porque a quantidade de instituições comprova diversificação, mesmo com veículos repetidos e dificuldade de acompanhamento.",
+      "d": "A revisão deve consolidar exposições, custos e beneficiários; a portabilidade pode reorganizar planos compatíveis sem trânsito pela conta, observadas suas regras."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-45-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Resultado curto precisa ser interpretado no contexto da estratégia. Uma mudança silenciosa nas fontes de risco e na liquidez pode comprometer a função planejada mesmo com cota estável.</p><p>A alternativa B vende após queda e confunde estabilidade com risco constante. A alternativa C elimina acompanhamento durante a acumulação. A alternativa D reduz a revisão ao ranking.</p><p>Regra de bolso: revise mudanças de premissa e execução; evite perseguir o vencedor do período recente.</p>",
+     "enunciado": "<p>Durante uma queda generalizada da bolsa, o fundo de ações que cumpre a parcela de crescimento da previdência de Helena fica abaixo do índice por três meses. O objetivo está a 18 anos, os custos permanecem coerentes e a gestão segue a política descrita, mas Helena exige migrar para o fundo que liderou o ranking recente. Ela afirma que uma revisão periódica deveria substituir o produto perdedor antes da próxima divulgação de rentabilidade. O assessor também observa outro fundo estável na carteira, cuja equipe aumentou silenciosamente a exposição a crédito e reduziu liquidez. A decisão deve considerar função, risco assumido, causa do resultado, consistência, custos e aderência ao plano. Avalie quais sinais justificam aprofundar a revisão e como tratar o movimento de curto prazo.</p>",
+     "alternativas": {
+      "a": "O fundo de ações pode manter sua função apesar da queda; a mudança de crédito e liquidez do fundo estável merece análise por alterar riscos relevantes.",
+      "b": "A queda de três meses exige trocar o fundo de ações pelo vencedor recente, enquanto a estabilidade do outro fundo comprova manutenção do risco original.",
+      "c": "A revisão deve aguardar o fim dos 18 anos, pois avaliar estratégia, custos e riscos antes do objetivo transforma acompanhamento em reação emocional.",
+      "d": "A rentabilidade recente decide a adequação dos dois fundos, tornando desnecessário comparar política, liquidez, concentração e comportamento em estresse."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-45-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. A revisão completa confronta objetivos e projeções com a situação atual, examina produtos e riscos, documenta a decisão e estabelece nova data de acompanhamento.</p><p>A alternativa B limita o processo ao desempenho recente. A alternativa C trata prazo maior como solução de outros desvios. A alternativa D presume beneficiários e usa risco para compensar menor capacidade financeira.</p><p>Regra de bolso: revisão termina com premissas atualizadas, decisão registrada e próximo encontro definido.</p>",
+     "enunciado": "<p>Na reunião de acompanhamento, Beatriz informa redução de renda, casamento e adiamento da aposentadoria por quatro anos. O saldo projetado ainda usa despesas antigas, os aportes atuais pressionam o orçamento, a parcela acionária saiu da faixa prevista e o cadastro mantém beneficiários anteriores. O regime tributário ainda precisa ser avaliado antes do primeiro resgate. Mesmo assim, o consultor propõe conversar somente sobre o fundo com maior rentabilidade no semestre e deixar a próxima revisão sem data. Beatriz pede uma decisão que preserve a continuidade do planejamento e registra preferência por ajustes graduais. A análise também identifica custos diferentes entre os planos e exposição repetida ao mesmo grupo econômico. Determine o encerramento adequado da revisão.</p>",
+     "alternativas": {
+      "a": "A revisão deve atualizar meta, projeção, aporte, alocação, custos, tributação e beneficiários, registrar alternativas e decisão e marcar novo acompanhamento.",
+      "b": "A revisão deve escolher o fundo líder, preservar aportes e beneficiários antigos e aguardar o primeiro resgate para discutir objetivo, orçamento e tributação.",
+      "c": "O adiamento da aposentadoria resolve o desvio da carteira e a redução de renda, dispensando mudanças enquanto o patrimônio conservar valorização nominal.",
+      "d": "O casamento determina novos beneficiários e elimina a necessidade de manifestação de Beatriz, enquanto a baixa de renda recomenda elevar risco para manter a meta."
+     },
+     "gabarito": "a"
     }
    ],
    "Previdência corporativa: planos, contribuições e vesting": [
@@ -14923,6 +15997,3049 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
    ]
   },
   "Prospecção e relacionamento com a pessoa investidora": {
+   "Finanças tradicionais e comportamentais: racionalidade, perdas e carteira": [
+    {
+     "id": "cpror-rel-01-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A racionalidade descreve a consistência da escolha com informações, objetivos e preferências, e não a certeza de resultado favorável.</p><p>A alternativa A confunde processo com resultado. A alternativa C chama incerteza de viés. A alternativa D equipara racionalidade à eliminação de risco.</p><p>Regra de bolso: decisão bem fundamentada reduz erros de processo, mas continua exposta ao futuro incerto.</p>",
+     "enunciado": "<p>Uma investidora escolheu uma carteira coerente com as informações disponíveis, mas sofreu perda após um evento imprevisível. Analise essa decisão pela abordagem tradicional.</p>",
+     "alternativas": {
+      "a": "O prejuízo comprova irracionalidade, pois uma decisão racional produz resultado favorável mesmo diante de acontecimentos incertos.",
+      "b": "A decisão pode ter sido racional, porque coerência na comparação das alternativas não garante lucro nem permite prever o futuro.",
+      "c": "O evento imprevisível transforma a escolha em viés comportamental, independentemente do processo usado para avaliar risco e retorno.",
+      "d": "A racionalidade exige ausência de risco, de modo que aceitar oscilação para um objetivo distante torna a decisão incoerente."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-01-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Viés é uma tendência sistemática que influencia o julgamento. Um erro isolado, uma perda ou uma decisão revista não bastam para caracterizá-lo.</p><p>A alternativa B presume imunidade pelo conhecimento. A alternativa C define viés pelo resultado. A alternativa D trata cautela justificada como distorção.</p><p>Regra de bolso: investigue o padrão de julgamento antes de dar nome comportamental à decisão.</p>",
+     "enunciado": "<p>Durante um treinamento, um gerente afirma que qualquer erro, prejuízo ou mudança de opinião do cliente constitui um viés. Identifique a correção conceitual.</p>",
+     "alternativas": {
+      "a": "Viés é uma tendência sistemática de julgamento; resultado ruim ou revisão de escolha pode ocorrer sem revelar esse padrão.",
+      "b": "Viés aparece somente em clientes iniciantes, pois conhecimento técnico impede emoções e limitações cognitivas na decisão.",
+      "c": "Viés corresponde a uma perda financeira confirmada, enquanto decisões lucrativas demonstram avaliação racional das alternativas.",
+      "d": "Viés é a preferência por produtos conservadores, ainda que liquidez, objetivo e capacidade financeira justifiquem a cautela."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-01-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Aversão ao risco é preferência relativa por menor incerteza. Aversão à perda pode levar a assumir risco adicional para evitar reconhecer prejuízo diante de um ponto de referência.</p><p>A alternativa B troca os conceitos. A alternativa C presume que ambos levam à retirada. A alternativa D transforma o preço pago em fundamento das perspectivas atuais.</p><p>Regra de bolso: aversão ao risco compara incertezas; aversão à perda compara o resultado com uma referência.</p>",
+     "enunciado": "<p>Marcelo compara duas aplicações com condições equivalentes e prefere a alternativa de menor incerteza, embora aceite risco quando a compensação esperada lhe parece suficiente. Sua irmã, Patrícia, mantém um ativo deteriorado e aumenta a posição porque vender abaixo do preço pago confirmaria uma perda que ela deseja recuperar. Marcelo diz que as duas atitudes representam a mesma rejeição ao risco. O assessor pede que cada um explique o ponto de referência, a incerteza tolerada e o efeito da perda sobre a decisão. O objetivo e a necessidade de liquidez permanecem estáveis para ambos. Considere que Patrícia possui recursos para suportar a oscilação, mas substituiu a análise das perspectivas pela tentativa de voltar ao preço de compra. Analise a distinção entre os comportamentos.</p>",
+     "alternativas": {
+      "a": "Marcelo expressa preferência por menor incerteza; Patrícia reage assimetricamente à perda e aceita risco adicional para tentar recuperar o valor de referência.",
+      "b": "Marcelo demonstra aversão à perda e Patrícia demonstra aversão ao risco, porque aumentar uma posição reduz a incerteza percebida sobre a recuperação.",
+      "c": "Os dois rejeitam qualquer risco, pois preferir segurança e evitar reconhecer prejuízo conduzem necessariamente à retirada dos recursos da carteira.",
+      "d": "Patrícia age racionalmente pelo resultado esperado, já que o preço de compra determina as perspectivas atuais e a compensação futura do investimento."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-01-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O preço pago funciona como referência, e o desejo de apagar a perda incentiva risco adicional. A conversa precisa retornar aos fundamentos e ao efeito da concentração.</p><p>A alternativa A chama concentração de redução de risco. A alternativa C usa a ação como diagnóstico suficiente. A alternativa B transforma o preço de compra em regra de manutenção.</p><p>Regra de bolso: medo de reconhecer prejuízo pode aumentar o risco em vez de reduzi-lo.</p>",
+     "enunciado": "<p>Em uma reunião, Joana afirma ter medo de perder dinheiro, mas recusa encerrar uma posição que sofreu queda relevante. Ela propõe vender a reserva de menor risco e aplicar o valor no ativo em perda, esperando retornar mais rápido ao preço pago. O objetivo financeiro permanece distante, e uma análise recente mostra deterioração nas perspectivas do investimento. A reserva de emergência está preservada, de modo que a discussão se concentra na forma de julgar a posição. O gerente interpreta a fala como prova de perfil conservador e pretende autorizar o aumento sem explorar a referência usada por Joana. Ela insiste que sair agora seria admitir um erro e que a recuperação apagaria a experiência negativa. Avalie o comportamento e a resposta profissional adequada.</p>",
+     "alternativas": {
+      "a": "O medo declarado comprova aversão ao risco, e essa preferência justifica concentrar no ativo em perda para reduzir o desconforto com o preço de compra.",
+      "b": "A posição deve ser mantida até voltar ao preço pago, pois reconhecer a perda antes da recuperação contraria a análise integrada da carteira.",
+      "c": "O aumento de posição demonstra tolerância elevada e torna desnecessário investigar emoção, ponto de referência ou entendimento sobre a deterioração.",
+      "d": "A tentativa de recuperar o preço sugere aversão à perda; o gerente deve retomar perspectivas, concentração, objetivo e capacidade de suportar a nova exposição."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-01-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A análise integrada considera a função do ativo e sua relação com o conjunto, sem dispensar o exame das características e perspectivas da própria posição.</p><p>A alternativa A decide pela cor da linha. A alternativa B usa o resultado agregado como aprovação. A alternativa D trata liquidez como compensação de perda e concentração.</p><p>Regra de bolso: avalie simultaneamente o componente, sua função e o risco consolidado da carteira.</p>",
+     "enunciado": "<p>A carteira de Carlos possui uma aplicação com queda de 8%, duas posições com ganhos e uma reserva de liquidez. O conjunto permanece compatível com o objetivo de longo prazo, e o ativo em queda exerce uma função de diversificação, sem notícia nova de deterioração. Carlos abre o aplicativo, olha cada linha separadamente e exige vender a posição negativa porque considera inadmissível manter um item abaixo do valor investido. O assessor reconhece que o resultado agregado positivo também seria insuficiente para provar sozinho a adequação do ativo. Antes de recomendar uma movimentação, ele pretende verificar exposição, liquidez, custos, riscos comuns e papel da aplicação no conjunto. Analise o contraste entre julgamento segregado e carteira integrada.</p>",
+     "alternativas": {
+      "a": "A queda isolada determina a venda, pois a análise integrada impede que uma carteira adequada contenha posições temporariamente negativas.",
+      "b": "O ganho agregado torna a posição adequada, de modo que liquidez, concentração e perspectivas do ativo deixam de influenciar a decisão.",
+      "c": "A função do ativo deve ser examinada no conjunto e individualmente; a linha negativa, por si, não decide venda nem permanência.",
+      "d": "A reserva de liquidez compensa a perda econômica e permite ignorar custos, correlações e riscos repetidos entre os demais investimentos."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-01-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Produtos diferentes podem carregar os mesmos fatores, e a dependência profissional do setor aumenta a exposição econômica consolidada da cliente.</p><p>A alternativa B confunde quantidade com diversidade. A alternativa C transforma correlação passada em garantia. A alternativa D exclui da análise uma fonte relevante de renda e risco.</p><p>Regra de bolso: diversificação real considera carteira, renda e fatores que podem falhar juntos.</p>",
+     "enunciado": "<p>Flávia distribuiu a reserva entre seis produtos. Três fundos seguem o mesmo índice acionário, dois fundos de fundos investem nos mesmos veículos e a renda fixa está concentrada em crédito do grupo econômico em que ela trabalha e recebe bônus. Sua renda mensal também depende desse grupo. O relatório comercial destaca apenas a quantidade de nomes e instituições. Em períodos recentes, as posições apresentaram correlação baixa, mas o teste de estresse indica perdas simultâneas quando pioram o setor empregador e o mercado doméstico. Flávia acredita que possuir seis produtos elimina a possibilidade de concentração e rejeita abrir as carteiras. O profissional precisa explicar os limites da contagem e da correlação histórica. Avalie o diagnóstico.</p>",
+     "alternativas": {
+      "a": "Existe diversificação aparente: exposições repetidas e vínculo entre renda profissional e investimentos podem ampliar perdas no mesmo cenário.",
+      "b": "A carteira está diversificada porque seis produtos e mais de um gestor criam fontes independentes, mesmo quando índices, veículos e grupo econômico se repetem.",
+      "c": "A correlação baixa observada encerra a análise, pois relações históricas entre ativos permanecem estáveis em períodos de crise e estresse.",
+      "d": "O risco ligado ao empregador fica fora da carteira financeira, já que salário e bônus não integram o patrimônio registrado nos fundos."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-01-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Separar recursos por metas pode melhorar o planejamento, desde que a organização não esconda exposições, custos e riscos comuns do patrimônio total.</p><p>A alternativa A rejeita uma organização útil. A alternativa C usa finalidades para apagar concentração. A alternativa D trata visão global e objetivos como incompatíveis.</p><p>Regra de bolso: separe para planejar e consolide para medir o risco total.</p>",
+     "enunciado": "<p>Denise separou investimentos em três grupos visuais: emergência, educação do filho e aposentadoria. Essa organização ajuda a acompanhar prazos e evita usar a reserva de longo prazo para despesas próximas. Porém, os três grupos compram fundos expostos aos mesmos emissores e somam custos ainda sem avaliação consolidada. Um colega afirma que dividir por metas constitui erro comportamental e recomenda reunir tudo num único produto. Outro diz que os grupos devem permanecer isolados inclusive na análise de riscos. Um demonstrativo conjunto consegue preservar as metas e revelar a exposição total aos emissores. Denise prefere manter a organização por objetivos, desde que consiga compreender o patrimônio global. Avalie como conciliar as duas perspectivas.</p>",
+     "alternativas": {
+      "a": "Separar por metas é inadequado porque uma análise racional admite apenas uma conta, um produto e o mesmo horizonte para o patrimônio financeiro.",
+      "b": "A organização por objetivos pode ser útil, mas deve preservar visão consolidada de exposições, liquidez e custos para revelar riscos comuns.",
+      "c": "Os grupos tornam-se carteiras independentes, e emissores repetidos deixam de representar concentração quando atendem a finalidades diferentes.",
+      "d": "A visão consolidada elimina a utilidade das metas, pois riscos agregados determinam prazo, prioridade e necessidade de liquidez de cada objetivo."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-01-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A conversa deve investigar o julgamento isolado, retomar objetivo e função, esclarecer riscos e só então comparar alternativas com a cliente.</p><p>A alternativa A converte desconforto em venda automática. A alternativa C usa o ganho agregado para ignorar o ativo e a cliente. A alternativa D diagnostica perfil sem investigação.</p><p>Regra de bolso: acolha a reação, amplie a visão e devolva a decisão às premissas financeiras relevantes.</p>",
+     "enunciado": "<p>Lívia reservou recursos líquidos para despesas próximas e destinou outra parcela a um objetivo de quinze anos. Um fundo da parcela longa caiu, enquanto outras posições compensaram o recuo. A política, os riscos e a função de diversificação permanecem coerentes, sem informação nova sobre deterioração. Lívia insiste em vender porque rejeita enxergar uma linha negativa e diz que manter a aplicação equivaleria a concordar com a perda. O assessor evita responder que o resultado total positivo encerra o assunto e pede que ela explique o que mudou no objetivo e como interpreta a oscilação. Em seguida, mostra a participação do fundo, cenários desfavoráveis, custos e riscos comuns. Determine a condução adequada diante da resistência.</p>",
+     "alternativas": {
+      "a": "A venda deve ocorrer porque a recusa da cliente transforma a linha negativa em incompatibilidade objetiva, mesmo com horizonte, função e riscos preservados.",
+      "b": "O assessor deve investigar a reação à perda, apresentar ativo e carteira em conjunto e confirmar compreensão antes de comparar manutenção e mudança.",
+      "c": "A carteira positiva comprova a adequação do fundo e autoriza descartar a preferência de Lívia, pois ganhos nas outras posições neutralizam o risco individual.",
+      "d": "A menção à linha negativa basta para diagnosticar perfil conservador, dispensando perguntas sobre referência, liquidez e capacidade financeira."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-01-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. Uma despesa essencial próxima e a insuficiência da reserva líquida criam restrição financeira concreta que exige revisar prazo, liquidez e estratégia.</p><p>A alternativa B ignora a mudança da cliente. A alternativa A usa um rótulo para impedir análise financeira. A alternativa D exclui dados necessários à decisão.</p><p>Regra de bolso: mudança de prazo ou necessidade de caixa pede nova análise, e não diagnóstico automático de viés.</p>",
+     "enunciado": "<p>Em nova conversa, Lívia informa que perdeu parte da renda e precisará do dinheiro aplicado para pagar uma despesa essencial em quatro meses. A reserva líquida cobre somente metade do compromisso. O fundo continua cumprindo sua função na carteira de longo prazo, mas o prazo e a necessidade de liquidez mudaram. O atendente atribui a preocupação à aversão à perda identificada na reunião anterior e insiste em preservar a estratégia para evitar uma decisão emocional. Lívia responde que aceita eventual prejuízo na venda, desde que consiga cumprir a obrigação. O profissional dispõe de informações sobre carência, prazo de resgate, custos e alternativas de reorganização. Avalie a nova situação sem confundir comportamento com restrição concreta.</p>",
+     "alternativas": {
+      "a": "A aversão à perda impede a venda, pois aceitar prejuízo para pagar a despesa confirma que a cliente continua reagindo ao preço de compra.",
+      "b": "A função original do fundo prevalece porque mudanças de renda são externas à carteira e não modificam a adequação de uma estratégia de longo prazo.",
+      "c": "A necessidade essencial altera horizonte e liquidez; a carteira deve ser reavaliada, ainda que a reação anterior tivesse componente comportamental.",
+      "d": "O atendimento deve discutir somente emoções, deixando carência, prazo de resgate e custo para depois da decisão de manter a aplicação."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-01-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A comparação financeira organiza escolhas, enquanto a investigação comportamental esclarece a resistência, o ponto de referência e a compreensão do risco.</p><p>A alternativa A presume imunidade pelo conhecimento. A alternativa B exclui fatores que afetam a decisão. A alternativa C usa o nome do viés para invalidar o cliente.</p><p>Regra de bolso: primeiro compreenda como a pessoa decidiu; depois reconecte a escolha a objetivo, restrições e carteira.</p>",
+     "enunciado": "<p>Um gerente atende Roberto, profissional experiente que deseja concentrar a carteira para recuperar rapidamente uma perda. Roberto conhece os produtos, mas usa o preço pago como referência, ignora o risco consolidado e rejeita responder sobre despesas futuras. O gerente possui uma comparação técnica entre alternativas e identifica possível influência comportamental. Ele considera duas respostas inadequadas: apresentar apenas cálculos sem compreender a resistência ou citar um viés para desqualificar a preferência do cliente. Roberto insiste que experiência profissional o torna imune a distorções e pede execução imediata. Avalie a condução que combina finanças tradicionais e comportamentais sem substituir o diagnóstico financeiro pelo rótulo psicológico.</p>",
+     "alternativas": {
+      "a": "O gerente deve executar a concentração porque conhecimento de mercado elimina vieses e transforma o preço de compra em referência técnica para a carteira.",
+      "b": "O gerente deve recusar a conversa sobre comportamento e apresentar somente retorno esperado, pois emoções ficam fora da análise de alternativas financeiras.",
+      "c": "O gerente deve nomear a aversão à perda e encerrar a solicitação, pois identificar o viés permite desconsiderar preferências e capacidade financeira do cliente.",
+      "d": "O gerente deve pedir que Roberto explique a decisão, retomar objetivo e restrições, mostrar o risco integrado e comparar alternativas após esclarecer a referência à perda."
+     },
+     "gabarito": "d"
+    }
+   ],
+   "Representatividade, disponibilidade e ancoragem no atendimento": [
+    {
+     "id": "cpror-rel-02-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Heurísticas simplificam tarefas de julgamento e podem funcionar, mas prejudicam a decisão quando tomam o lugar das informações relevantes.</p><p>A alternativa B define o mecanismo pelo resultado. A alternativa C transforma impressões em medidas objetivas. A alternativa D presume imunidade pela experiência.</p><p>Regra de bolso: o atalho vira problema quando substitui a evidência que a decisão exige.</p>",
+     "enunciado": "<p>Uma assessora explica a função das heurísticas no julgamento financeiro. Identifique a descrição compatível com a aula.</p>",
+     "alternativas": {
+      "a": "São atalhos que simplificam julgamentos e podem ser úteis, mas geram distorção quando substituem informações necessárias à decisão.",
+      "b": "São erros confirmados pelo prejuízo, de modo que uma escolha lucrativa demonstra ausência de influência comportamental.",
+      "c": "São técnicas estatísticas que convertem lembranças, semelhanças e preços anteriores em probabilidades objetivas para a carteira.",
+      "d": "São características de pessoas sem experiência, porque conhecimento de mercado impede referências e notícias de influenciar estimativas."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-02-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A representatividade usa a semelhança com um padrão conhecido para inferir resultados, mesmo quando diferenças relevantes ainda precisam ser avaliadas.</p><p>A alternativa A descreve ancoragem com o nome de disponibilidade. A alternativa C troca os mecanismos. A alternativa D confunde semelhança narrativa com preferência por menor risco.</p><p>Regra de bolso: quando a justificativa começa com “parece com”, investigue representatividade.</p>",
+     "enunciado": "<p>Um cliente escolhe uma empresa porque sua história se parece com a de outra companhia que valorizou. Identifique a heurística predominante.</p>",
+     "alternativas": {
+      "a": "Disponibilidade, porque a estimativa começa pelo preço histórico e recebe correção pequena diante de fatos recentes.",
+      "b": "Representatividade, porque a semelhança com um caso conhecido ocupa o lugar da análise das diferenças e probabilidades.",
+      "c": "Ancoragem, porque a facilidade de lembrar da empresa vencedora determina a frequência esperada dos resultados.",
+      "d": "Aversão ao risco, porque reconhecer um padrão vencedor expressa preferência por uma alternativa com menor incerteza."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-02-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Beatriz trata uma amostra curta como retrato do processo e ignora a frequência de referência. A decisão ainda precisa considerar o prazo e a finalidade do dinheiro.</p><p>A alternativa A transforma sequência curta em prova. A alternativa B descarta a taxa-base por causa da narrativa. A alternativa D escolhe outro mecanismo e usa o rótulo como autorização.</p><p>Regra de bolso: história convincente pede duas perguntas, qual é a qualidade da amostra e qual é a frequência de referência.</p>",
+     "enunciado": "<p>Beatriz acompanha um gestor novo que obteve resultados positivos em quatro meses consecutivos. Ela conclui que a sequência comprova habilidade persistente e quer transferir a reserva destinada à entrada de um imóvel para o fundo. O material apresenta apenas esses quatro meses e uma narrativa detalhada sobre as decisões vencedoras, sem comparação com períodos diferentes ou com a frequência de resultados de gestores semelhantes. Beatriz afirma que tantos acertos seguidos já representam o processo completo e que dados do grupo seriam irrelevantes diante da história específica. A assessora dispõe das características do objetivo, do prazo da reserva e das informações limitadas sobre o histórico. Analise o raciocínio e a informação que precisa ser retomada.</p>",
+     "alternativas": {
+      "a": "A sequência curta confirma persistência, pois quatro resultados com o mesmo sinal formam amostra suficiente quando a narrativa explica cada decisão tomada.",
+      "b": "A semelhança entre os meses elimina a taxa-base, já que a frequência do grupo perde utilidade quando o gestor apresenta uma história individual detalhada.",
+      "c": "A conclusão sugere representatividade; a análise deve confrontar tamanho e contexto da amostra, taxa-base e compatibilidade do fundo com o prazo do imóvel.",
+      "d": "A lembrança dos quatro meses caracteriza disponibilidade, e esse diagnóstico autoriza manter a transferência desde que Beatriz reconheça o viés por escrito."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-02-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Na disponibilidade, exemplos vívidos e repetidos parecem mais frequentes. A notícia merece investigação, com vínculo concreto entre evento e exposição.</p><p>A alternativa A usa repetição como medida de probabilidade. A alternativa C identifica outro mecanismo e descarta informação potencialmente útil. A alternativa D transforma relato em referência de preço.</p><p>Regra de bolso: lembrar depressa revela saliência; medir risco exige descobrir o que aconteceu e a quem o evento se aplica.</p>",
+     "enunciado": "<p>Após assistir a várias reportagens sobre fraudes financeiras na mesma semana, Mauro passa a considerar suspeitos três investimentos com estruturas, emissores e riscos diferentes. Ele recorda facilmente os relatos e estima que eventos semelhantes ocorram com frequência em cada produto. A gerente reconhece que as notícias podem conter alertas relevantes, mas observa que Mauro ainda desconhece qual exposição foi afetada, como o evento ocorreu e o vínculo concreto com as alternativas analisadas. Mauro pede que a gerente retire os três produtos da comparação com base na repetição das matérias. Considere que a decisão precisa separar a importância do evento da facilidade com que ele vem à memória. Avalie o mecanismo predominante e a resposta profissional.</p>",
+     "alternativas": {
+      "a": "A repetição das reportagens mede a frequência efetiva das fraudes e permite aplicar a mesma estimativa aos produtos, apesar das diferenças de estrutura.",
+      "b": "A facilidade de lembrar sugere disponibilidade; a gerente deve investigar evento, exposição atingida e ligação com cada produto antes de generalizar.",
+      "c": "A semelhança entre as três aplicações caracteriza representatividade, e a gerente deve rejeitar as notícias para preservar uma análise sem emoções.",
+      "d": "O primeiro relato funciona como âncora de preço, e o ajustamento correto consiste em reduzir igualmente a rentabilidade esperada dos três produtos."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-02-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O preço pago domina a estimativa, e Paula faz uma correção pequena apesar de fatos que podem justificar mudança maior na avaliação.</p><p>A alternativa B trata diferença de cotação como valor econômico. A alternativa C transforma referência influente em dado proibido. A alternativa A troca ancoragem por disponibilidade e valida o ajuste sem fundamento.</p><p>Regra de bolso: atualizar um número é insuficiente quando a nova estimativa continua presa à referência sem justificativa atual.</p>",
+     "enunciado": "<p>Paula comprou uma ação por R$ 62. Desde então, a empresa perdeu um contrato relevante, elevou o endividamento e passou a enfrentar condições de mercado diferentes. A cotação atual é de R$ 43, e Paula afirma que o desconto de R$ 19 comprova uma oportunidade. Depois de ler o relatório atualizado, ela reduz sua estimativa de valor para R$ 57, mas mantém esse número perto do preço de compra sem relacioná-lo às novas perspectivas. A posição representa parcela relevante da carteira destinada a um objetivo de médio prazo. O assessor possui projeções atualizadas e pergunta qual fundamento sustenta os R$ 57 e como os fatos recentes alteram risco e valor econômico. Paula responde que o mercado deveria devolver ao menos parte do que ela pagou. Analise a referência inicial e o processo de atualização.</p>",
+     "alternativas": {
+      "a": "A lembrança do preço pago caracteriza disponibilidade, e o valor de R$ 57 passa a ser válido porque incorpora parte das informações recentes.",
+      "b": "A cotação de R$ 43 comprova valor inferior ao preço adequado, pois a diferença para a compra mede diretamente o potencial de recuperação da ação.",
+      "c": "A perda do contrato elimina a utilidade de preços históricos, de modo que mencionar os R$ 62 impede qualquer avaliação financeira do investimento.",
+      "d": "O preço de compra ancora a estimativa, e a redução para R$ 57 pode representar ajustamento insuficiente diante das mudanças nas perspectivas e no risco."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-02-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. As justificativas apontam, respectivamente, para representatividade, disponibilidade e ancoragem. A presença conjunta ainda exige análise da carteira e do produto.</p><p>A alternativa A classifica os mecanismos incorretamente e trata preço como taxa-base. A alternativa C reduz influências diferentes a uma só. A alternativa D usa a acumulação de atalhos como confirmação.</p><p>Regra de bolso: identifique o mecanismo pela justificativa, e depois confronte cada impressão com a informação que ela deixou de usar.</p>",
+     "enunciado": "<p>Durante a seleção de um fundo, Rogério apresenta três justificativas. Primeiro, diz que a estratégia se parece com outra que teve grande valorização. Depois, cita entrevistas recentes com investidores que ganharam dinheiro no segmento. Por fim, compara a cota atual de R$ 84 com o valor de R$ 110 observado na abertura e conclui que o fundo está barato. Ele ainda desconhece composição, custos, liquidez e exposição já existente na carteira. A aplicação consumiria a parcela predominante do novo aporte do mês. A consultora percebe influências diferentes e evita escolher um rótulo único para a decisão. Rogério acredita que reunir três sinais torna a conclusão mais confiável. Identifique os mecanismos associados às justificativas e o limite dessa combinação.</p>",
+     "alternativas": {
+      "a": "Semelhança e entrevistas indicam ancoragem, enquanto a comparação de preços representa taxa-base suficiente para estimar o valor atual do fundo.",
+      "b": "Semelhança indica representatividade, entrevistas lembradas indicam disponibilidade e valor inicial pode ancorar; a soma dessas impressões ainda requer confronto com dados.",
+      "c": "As três justificativas mostram representatividade, pois notícias e preço de lançamento fazem parte do padrão narrativo reconhecido pelo cliente.",
+      "d": "A coexistência dos mecanismos confirma a atratividade, já que vieses diferentes compensam as limitações uns dos outros sem exigir exame de composição, custo ou liquidez."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-02-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. As perguntas testam a validade atual da referência e recolocam risco, prazo, liquidez e objetivo na decisão.</p><p>A alternativa B busca popularidade e preço extremo. A alternativa C troca ancoragem por disponibilidade. A alternativa D troca a âncora por uma inferência de representatividade.</p><p>Regra de bolso: diante de uma âncora, pergunte qual fundamento mantém a referência válida nas condições atuais.</p>",
+     "enunciado": "<p>Elisa recebeu uma oferta de título por R$ 940 cujo valor de referência exibido na plataforma era R$ 1.000. Ela chama a diferença de desconto garantido e recusa analisar mudanças nas condições do emissor, no risco e no mercado. O gerente explica que uma referência pode ser informativa quando possui fundamento atual, mas seu peso se torna problemático quando domina a decisão. Elisa insiste que qualquer preço abaixo de R$ 1.000 deveria ser tratado como oportunidade e pede execução imediata. O objetivo dela vence em sete meses, enquanto o título possui liquidez limitada e prazo superior. O gerente dispõe de dados atualizados do ativo e do cadastro da cliente. Avalie as perguntas que retomam as informações relevantes sem rejeitar a referência de forma automática.</p>",
+     "alternativas": {
+      "a": "Qual fundamento sustenta R$ 1.000 hoje, o que mudou no emissor e no mercado e como prazo e liquidez se encaixam no objetivo de sete meses?",
+      "b": "Qual foi o preço mais alto do título e quantas pessoas compraram nesse valor, para estimar a força da referência usada pela plataforma?",
+      "c": "Qual notícia sobre o emissor Elisa recorda primeiro, para substituir o preço de referência por uma lembrança recente com maior impacto emocional?",
+      "d": "Qual título semelhante valorizou no passado, para comparar narrativas e confirmar se o desconto atual repete aquele padrão de sucesso?"
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-02-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. A conversa testa representatividade, disponibilidade e ancoragem com perguntas específicas e ainda avalia concentração, prazo e adequação.</p><p>A alternativa C usa o viés para julgar o ativo. A alternativa B transforma impressões em confirmação. A alternativa D trata um mecanismo como explicação suficiente para os demais.</p><p>Regra de bolso: desmonte cada atalho com a pergunta correspondente e só então avalie produto, carteira e cliente.</p>",
+     "enunciado": "<p>Natália pretende concentrar novos aportes em uma ação de tecnologia. Ela afirma que a empresa lembra outra companhia que se multiplicou em bolsa, menciona diariamente um investidor entrevistado na televisão e usa a máxima histórica de R$ 75 como prova de que a cotação de R$ 49 está barata. A carteira já possui exposição relevante ao setor, e Natália precisará de parte do dinheiro em dois anos. Quando o assessor pede balanços, riscos e justificativa para o valor, ela insiste que experiência e intuição bastam e acusa a análise de fazê-la perder a oportunidade. O assessor evita concluir que a ação é ruim apenas por causa das justificativas frágeis. Avalie a resposta que investiga os mecanismos e preserva a análise financeira e a adequação.</p>",
+     "alternativas": {
+      "a": "O assessor deve explorar diferenças entre empresas, dados além da entrevista e fundamento do valor atual, além de confrontar setor e prazo com a carteira.",
+      "b": "O assessor deve aceitar o pedido porque referências diferentes confirmam a oportunidade, deixando concentração e horizonte para a revisão seguinte.",
+      "c": "O assessor deve recusar a ação porque três heurísticas aparecem na fala, usando a identificação dos mecanismos como conclusão sobre a qualidade do ativo.",
+      "d": "O assessor deve discutir somente a máxima histórica, pois corrigir a ancoragem elimina os efeitos da semelhança narrativa e da lembrança recorrente."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-02-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. Informações novas e ajustes de carteira alteram a qualidade da decisão, mas ainda cabe avaliar o peso da referência e a adequação ao objetivo.</p><p>A alternativa A trata a mera presença da referência como invalidação. A alternativa B presume eliminação dos vieses e do suitability. A alternativa D classifica planejamento de liquidez como disponibilidade.</p><p>Regra de bolso: novas evidências mudam a análise; o diagnóstico depende do peso dos dados e das impressões na decisão final.</p>",
+     "enunciado": "<p>Na segunda reunião, Natália apresenta estudo atualizado sobre a ação. Ela compara as duas empresas, identifica diferenças relevantes, examina composição da receita, risco e preço e reduz o aporte para uma parcela compatível com o horizonte longo. Também separa os recursos necessários em dois anos. O assessor percebe que a máxima histórica ainda aparece na conversa, mas agora divide espaço com fundamentos e condições da cliente. Um colega diz que a menção à referência prova permanência integral da ancoragem e invalida o estudo. Outro afirma que reunir dados elimina qualquer influência comportamental. A decisão exige avaliar a qualidade das novas informações e o peso que cada elemento recebeu. Analise a evolução do caso.</p>",
+     "alternativas": {
+      "a": "A referência histórica invalida o estudo, pois sua presença na conversa impede que fundamentos atualizados participem de uma decisão financeira.",
+      "b": "Os dados eliminam as heurísticas, e o assessor pode dispensar a análise de concentração, prazo e capacidade financeira da cliente.",
+      "c": "A decisão merece nova análise: os dados e ajustes mudaram o quadro, embora o assessor ainda deva examinar o peso da referência e a adequação.",
+      "d": "A redução do aporte confirma disponibilidade, porque separar o objetivo de dois anos decorre da facilidade de lembrar uma necessidade futura."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-02-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Álvaro apresenta representatividade, Júlia sugere disponibilidade e Samuel mostra ancoragem; cada pergunta recupera a informação omitida pelo mecanismo.</p><p>A alternativa A troca as perguntas entre os clientes. A alternativa C mistura notícia, âncora e taxa-base sem relação com as justificativas. A alternativa B trata objetivo, perfil e prazo como formas de validar os atalhos.</p><p>Regra de bolso: semelhança pede diferenças, lembrança pede dados e referência pede fundamento atual.</p>",
+     "enunciado": "<p>Uma gerente atende três clientes na mesma manhã. Álvaro quer comprar um fundo porque ele se parece com o produto que liderou o ranking anterior. Júlia deseja vender investimentos diversos depois de acompanhar repetidos relatos sobre uma crise em um segmento específico. Samuel mantém sua estimativa perto do preço que pagou, apesar de alterações relevantes nas perspectivas do emissor. Os cadastros mostram objetivos e exposições diferentes entre os três. A equipe propõe entregar a cada pessoa um folheto genérico sobre vieses e encerrar o atendimento. A gerente prefere investigar a formação de cada conclusão e relacionar as respostas ao objetivo, à exposição e ao produto. Compare os mecanismos e indique a sequência de perguntas compatível com cada justificativa.</p>",
+     "alternativas": {
+      "a": "Álvaro: qual preço serviu de referência; Júlia: qual caso parece semelhante; Samuel: quais exemplos recentes vêm à memória com facilidade.",
+      "b": "Álvaro: qual objetivo aceita a semelhança; Júlia: qual perfil elimina a lembrança; Samuel: qual prazo preserva o preço de compra como valor econômico.",
+      "c": "Álvaro: quantas notícias repetiram o ranking; Júlia: qual preço anterior ancora a crise; Samuel: qual taxa-base confirma o valor pago.",
+      "d": "Álvaro: quais diferenças existem entre os casos; Júlia: quais dados ligam os relatos à exposição; Samuel: qual fundamento sustenta o valor hoje."
+     },
+     "gabarito": "d"
+    }
+   ],
+   "Excesso de confiança e aversão à perda": [
+    {
+     "id": "cpror-rel-03-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. O excesso de confiança aparece quando a certeza atribuída à própria previsão supera a evidência e leva a desprezar a possibilidade de erro.</p><p>A alternativa A incorpora incerteza e limites. A alternativa B mantém hipóteses testáveis e revisão. A alternativa D relaciona convicção a risco e consequências.</p><p>Regra de bolso: confiança vira excesso quando a pessoa trata sua previsão como mais precisa do que os dados permitem.</p>",
+     "enunciado": "<p>Um cliente experiente apresenta convicção sobre uma empresa. Identifique o sinal que justifica investigar excesso de confiança.</p>",
+     "alternativas": {
+      "a": "Ele reconhece incerteza, descreve cenários desfavoráveis e limita a exposição conforme o impacto possível sobre seus objetivos.",
+      "b": "Ele estuda o setor, compara hipóteses e admite revisar a posição se fatos relevantes contrariarem sua expectativa inicial.",
+      "c": "Ele afirma conhecer o resultado futuro com precisão e descarta diversificação porque considera sua avaliação imune a erro.",
+      "d": "Ele aceita risco depois de avaliar compensação esperada, liquidez, concentração e consequência de uma previsão equivocada."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-03-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Aversão à perda pode estimular risco adicional para recuperar um prejuízo, enquanto aversão ao risco descreve preferência relativa por menor incerteza.</p><p>A alternativa A chama aumento de exposição de redução da incerteza. A alternativa C equipara mecanismos distintos. A alternativa D usa a preocupação declarada em vez da decisão observada.</p><p>Regra de bolso: aversão ao risco pode reduzir exposição; aversão à perda também pode levar a aumentá-la.</p>",
+     "enunciado": "<p>Uma investidora aumenta uma posição em queda para tentar voltar rapidamente ao preço pago. Compare aversão à perda e aversão ao risco nesse comportamento.</p>",
+     "alternativas": {
+      "a": "A atitude demonstra aversão ao risco, porque aumentar a posição reduz a incerteza sobre o preço necessário para recuperar o valor investido.",
+      "b": "A atitude sugere aversão à perda, pois a tentativa de apagar o prejuízo pode elevar a exposição, enquanto aversão ao risco é preferência por menor incerteza.",
+      "c": "Os conceitos são equivalentes, já que desconforto com perda e preferência por segurança conduzem à mesma decisão de carteira.",
+      "d": "A atitude comprova perfil conservador, pois uma pessoa preocupada com prejuízo reduz a capacidade de assumir risco mesmo quando amplia a posição."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-03-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A queda é R$ 4.500 ÷ R$ 18.000 = 25%. A recuperação exige R$ 4.500 ÷ R$ 13.500 = 33,33%. O valor de mercado já registra a redução patrimonial.</p><p>A alternativa A usa a base inicial nas duas contas. A alternativa C inverte as bases da queda e da recuperação. A alternativa D confunde realização com redução do valor disponível.</p><p>Regra de bolso: queda divide pelo valor inicial; recuperação divide a perda pelo valor atual.</p>",
+     "enunciado": "<p>Teresa aplicou R$ 18.000 em um ativo que hoje vale R$ 13.500. Ela afirma que a perda surge somente na venda e que uma alta do mesmo percentual da queda restauraria o capital inicial. O extrato mostra o valor de mercado atual, e a instituição desconsidera custos e tributos para comparar as bases dos percentuais. Teresa pretende usar o resultado da conta para decidir se aumenta a posição, embora as perspectivas do ativo ainda estejam em análise. O objetivo permanece distante, e o restante da carteira conserva a distribuição planejada. O assessor separa redução patrimonial, realização e retorno necessário para recuperar o valor inicial. Use R$ 18.000 como base da queda e R$ 13.500 como base da recuperação. Calcule os percentuais e avalie a afirmação de Teresa.</p>",
+     "alternativas": {
+      "a": "A queda e a recuperação são de 25%, pois os dois percentuais usam o valor inicial de R$ 18.000 como base comum.",
+      "b": "A queda é de 25% e a recuperação exige cerca de 33,33%; a redução patrimonial já ocorreu, embora a realização dependa da venda.",
+      "c": "A queda é de 33,33% e a recuperação exige 25%, porque o valor atual serve de base para medir a perda já observada.",
+      "d": "A perda patrimonial surge na venda, e até esse momento o ativo precisa recuperar somente R$ 4.500, sem cálculo percentual."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-03-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A queda corresponde a R$ 9.000 ÷ R$ 30.000 = 30%. Para recuperar, R$ 9.000 ÷ R$ 21.000 = 42,86% aproximadamente.</p><p>A alternativa A troca as bases. A alternativa B presume simetria por causa da diferença em reais. A alternativa C transforma os valores em percentuais sem formar as razões corretas.</p><p>Regra de bolso: depois de uma queda, a base encolhe e o percentual de recuperação necessário aumenta.</p>",
+     "enunciado": "<p>O saldo de uma posição de Renato caiu de R$ 30.000 para R$ 21.000. Ele compara os R$ 9.000 perdidos com o capital inicial e conclui que uma alta de 30% levaria o saldo de volta aos R$ 30.000. Para acelerar a recuperação, deseja transferir recursos de uma reserva com uso previsto em nove meses. Essa reserva corresponde ao valor esperado para uma reforma já contratada, e o pagamento ocorrerá em parcela única. Renato apresenta a conta como prova de que a recuperação exigida cabe dentro do prazo. O gerente prepara duas contas antes de discutir perspectivas, liquidez e risco da nova concentração. Considere o valor inicial como base da queda, o saldo atual como base da valorização necessária e ignore custos e tributos. Calcule a queda e o retorno necessário para recuperar o capital inicial e identifique o erro numérico de Renato.</p>",
+     "alternativas": {
+      "a": "A queda é de 42,86% e a recuperação exige 30%, pois o saldo atual deve servir de base para medir a perda já ocorrida.",
+      "b": "A queda e a recuperação são de 30%, já que R$ 9.000 representam a mesma diferença em reais nas duas direções.",
+      "c": "A queda é de 9% e a recuperação exige 21%, pois os valores de R$ 9.000 e R$ 21.000 definem diretamente os percentuais.",
+      "d": "A queda é de 30% e a recuperação exige cerca de 42,86%, porque R$ 9.000 passam a ser comparados com R$ 21.000."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-03-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A certeza excede a evidência, elimina cenários de erro e sustenta concentração que também se soma à dependência profissional do setor.</p><p>A alternativa A usa experiência e resultado como prova de previsão. A alternativa C trata fontes ligadas como diversificação. A alternativa D converte ganho recente em autorização de risco.</p><p>Regra de bolso: peça a quem prevê com certeza que descreva o erro possível e seu efeito sobre o plano.</p>",
+     "enunciado": "<p>Augusto trabalha no setor de energia e concentra 65% da carteira em ações de uma única companhia do segmento. Ele afirma que sua experiência profissional permite antecipar contratos e resultados, considera a empresa excepcionalmente segura e rejeita definir um limite de exposição. A renda mensal e a participação nos lucros de Augusto também dependem do mesmo setor. Quando a assessora pede um cenário desfavorável, ele responde que conhece o negócio e que a hipótese merece ser descartada. A posição acumula ganho recente, usado por Augusto como prova de sua precisão. O recurso financia um objetivo previsto para oito anos. A assessora dispõe do objetivo, do prazo e da dependência econômica consolidada do cliente. Avalie os sinais e a resposta profissional.</p>",
+     "alternativas": {
+      "a": "A experiência e o lucro confirmam habilidade persistente, permitindo tratar a concentração como extensão técnica do conhecimento profissional do cliente.",
+      "b": "A certeza, o descarte do cenário adverso e a concentração sugerem excesso de confiança; a assessora deve testar hipóteses e impacto sobre os objetivos.",
+      "c": "A renda ligada ao setor diversifica a posição acionária, pois salário e participação nos lucros possuem natureza distinta dos investimentos financeiros.",
+      "d": "O ganho recente elimina a necessidade de limite, desde que Augusto mantenha conhecimento superior sobre contratos e resultados da companhia."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-03-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A convicção em capacidade superior pode levar a maior giro e subestimação de custos e erros. Lucro recente precisa ser analisado com contexto e risco.</p><p>A alternativa C usa frequência como prova de precisão. A alternativa B trata reconhecimento de custos como validação da previsão. A alternativa D confunde excesso de confiança com aversão à perda.</p><p>Regra de bolso: antes de atribuir lucro à habilidade, recupere a hipótese original, o risco corrido e as explicações alternativas.</p>",
+     "enunciado": "<p>Depois de acertar três operações de curto prazo, Camila passa a negociar várias vezes por semana. Ela acredita identificar movimentos antes do mercado, reduz o tempo dedicado à análise e trata cada lucro como confirmação de habilidade. Os custos de negociação aumentaram, a exposição diária ficou instável e parte dos ganhos surgiu em período favorável ao segmento escolhido. As ordens usam uma parcela antes destinada ao objetivo previdenciário. Camila insiste que a quantidade de acertos prova capacidade permanente e quer dobrar o volume das ordens. O assessor recupera as justificativas registradas antes das operações, os riscos assumidos, os custos e explicações alternativas para o desempenho. Analise a relação entre excesso de confiança e negociação excessiva.</p>",
+     "alternativas": {
+      "a": "A crença em previsão superior pode estimular giro, custos e exposição a erros; o resultado recente deve ser comparado ao raciocínio e ao risco anteriores.",
+      "b": "Os lucros recentes permitem ampliar o volume, desde que Camila reconheça os custos e preserve a mesma classe de ativos nas operações seguintes.",
+      "c": "A frequência maior confirma precisão, porque cada negociação cria nova observação independente e reduz a influência do cenário favorável sobre os resultados.",
+      "d": "O excesso de confiança aparece apenas após prejuízo, quando a cliente insiste em negociar para recuperar o preço usado como referência inicial."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-03-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Vender vencedores e manter perdedores pode sugerir efeito disposição, mas o padrão não substitui a análise econômica e das condições do cliente.</p><p>A alternativa A cria regra inversa baseada no resultado passado. A alternativa C classifica manutenção arriscada como aversão ao risco. A alternativa B usa consciência do viés para ignorar deterioração.</p><p>Regra de bolso: o efeito disposição orienta a pergunta; perspectivas e objetivos orientam a operação.</p>",
+     "enunciado": "<p>Leandro vendeu uma ação com ganho de 12% para “garantir o lucro” e manteve outra com perda de 18% porque deseja voltar ao preço de compra. A posição vencedora ainda apresentava perspectivas compatíveis com a estratégia, enquanto a perdedora sofreu deterioração relevante. Custos, prazo e consequências tributárias também diferem entre elas. O objetivo e a necessidade de liquidez permanecem estáveis desde a montagem da carteira. Um colega classifica o caso como efeito disposição e propõe a regra inversa: conservar posições com ganho e vender posições com perda. Leandro gosta da simplicidade dessa orientação e pede execução. O profissional precisa usar o padrão comportamental como pista sem transformá-lo em regra automática de operação. Avalie a decisão.</p>",
+     "alternativas": {
+      "a": "O efeito disposição torna correta a regra inversa, pois o sinal do resultado passado determina se a posição merece venda ou manutenção.",
+      "b": "A deterioração da perdedora deixa de importar porque reconhecer o efeito disposição permite aguardar a recuperação com consciência do viés.",
+      "c": "A venda com ganho prova racionalidade, enquanto manter a perdedora demonstra aversão ao risco e preferência por menor incerteza.",
+      "d": "A tendência aparece na justificativa, mas cada posição exige análise de perspectivas, função, custos, prazo e alternativas antes da decisão."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-03-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. A certeza sobre o momento da recuperação sugere excesso de confiança, e a tentativa de apagar o prejuízo indica aversão à perda. A liquidez próxima limita a exposição.</p><p>A alternativa B confunde preço médio com redução do capital exposto. A alternativa C usa lucro passado como prova e rebaixa o objetivo. A alternativa D chama aumento de risco de proteção conservadora.</p><p>Regra de bolso: quando recuperação e certeza aparecem juntas, separe o desejo de voltar ao preço do dinheiro que precisa estar disponível.</p>",
+     "enunciado": "<p>Sônia teve ganho expressivo em uma estratégia e passou a afirmar que conhece o momento exato das oscilações. Após uma queda, decide usar R$ 70.000 reservados para a entrada de um imóvel em dez meses para aumentar a posição e reduzir o preço médio. Ela insiste que recuperará o prejuízo antes do pagamento e considera a perda uma situação temporária que desaparecerá com a compra adicional. A estratégia apresenta oscilação incompatível com a certeza expressa, e a entrada do imóvel depende desses recursos para ser paga. As demais reservas estão comprometidas com despesas familiares. O assessor dispõe de cenários em que uma nova queda compromete o objetivo. Avalie as influências comportamentais e a resposta ao pedido resistente.</p>",
+     "alternativas": {
+      "a": "A previsão precisa sugere excesso de confiança e a urgência de recuperar indica aversão à perda; o assessor deve separar a liquidez do objetivo e reavaliar a exposição.",
+      "b": "A redução do preço médio diminui o capital total em risco, tornando a operação compatível com o imóvel desde que a posição volte ao valor inicial em dez meses.",
+      "c": "A experiência lucrativa transfere evidência para a previsão atual, e a destinação próxima pode ser tratada como cenário secundário diante da convicção de Sônia.",
+      "d": "A aversão à perda demonstra perfil conservador, de modo que aumentar a posição protege a entrada do imóvel contra a realização do prejuízo e preserva o planejamento de liquidez."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-03-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. A perda de valor já existe, mas venda ou manutenção dependem da comparação atual entre perspectivas, alternativas e condições do cliente, incluindo custos e tributos.</p><p>A alternativa C transforma reconhecimento em venda obrigatória. A alternativa B atribui ao mercado obrigação de recuperar o preço. A alternativa D usa custos para descartar influência comportamental.</p><p>Regra de bolso: pergunte se a exposição seria escolhida hoje, considerando alternativas e custos reais de mudar.</p>",
+     "enunciado": "<p>Henrique mantém uma posição em queda e afirma que vendê-la criaria a perda. O valor de mercado já diminuiu, mas ele usa o preço pago como referência e evita comparar o investimento com alternativas atuais. Ao mesmo tempo, custos de saída e consequências tributárias tornam uma troca imediata potencialmente onerosa, e a análise fundamental ainda apresenta cenários defensáveis de manutenção. Um atendente propõe vender por causa da queda; outro propõe manter até o preço de compra. Henrique pede uma regra simples que encerre a discussão. O profissional possui dados de objetivo, prazo, risco, custos e perspectivas. Avalie a manutenção da posição sem confundir redução patrimonial, realização e aversão à perda.</p>",
+     "alternativas": {
+      "a": "A decisão deve partir das perspectivas atuais, alternativas, custos, tributos e objetivo; a queda passada e o preço pago entram como dados, não como regras.",
+      "b": "O preço de compra determina manutenção porque o mercado preserva a obrigação econômica de devolver o capital inicial ao investidor.",
+      "c": "A queda determina venda porque reconhecer a redução patrimonial exige transformar o valor de mercado em resultado realizado imediatamente, apesar dos custos, tributos e fundamentos atuais.",
+      "d": "A presença de custos comprova racionalidade da manutenção e elimina a influência do ponto de referência sobre a avaliação de Henrique."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-03-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. A cobertura da despesa remove uma restrição relevante, e a análise atualizada melhora a proposta, mas não comprova a previsão nem torna a concentração adequada por si.</p><p>A alternativa A confunde liquidez com acerto de mercado. A alternativa B congela o diagnóstico apesar de fatos novos. A alternativa D trata cenários como prova de precisão.</p><p>Regra de bolso: mudança de restrição permite nova análise; ela não transforma convicção em certeza.</p>",
+     "enunciado": "<p>Em nova reunião, Sônia informa que a entrada do imóvel passou a ter cobertura por outra fonte de recursos. Ela apresenta estudo atualizado, descreve dois cenários desfavoráveis, limita o tamanho da posição e explica o impacto de nova queda sobre o objetivo de longo prazo. O novo aporte viria de uma parcela destinada ao horizonte longo. Ainda demonstra convicção de que o mercado se recuperará, mas aceita critérios que contrariariam sua hipótese. Um colega afirma que a mudança da liquidez comprova a previsão e autoriza a concentração; outro mantém a recusa anterior sem examinar as novas informações. A proposta deixou de ameaçar a despesa próxima, embora incerteza e risco permaneçam. Analise como as mudanças afetam a avaliação profissional.</p>",
+     "alternativas": {
+      "a": "A nova fonte de recursos confirma a previsão de recuperação, permitindo ampliar a posição até o limite desejado pela cliente.",
+      "b": "A influência comportamental anterior fixa a decisão, e informações posteriores sobre liquidez e cenários ficam fora da análise da mesma proposta.",
+      "c": "A restrição de liquidez mudou e as novas evidências permitem reexaminar a proposta, mas ainda cabe avaliar previsão, limite e adequação da exposição.",
+      "d": "A descrição de cenários elimina o excesso de confiança, pois admitir perdas possíveis comprova precisão nas estimativas de mercado apresentadas."
+     },
+     "gabarito": "c"
+    }
+   ],
+   "Framing, confirmação, autoatribuição, status quo e efeito manada": [
+    {
+     "id": "cpror-rel-04-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Confirmação seleciona evidências compatíveis, autoatribuição usa critérios diferentes para acertos e erros, e manada substitui análise pela decisão do grupo.</p><p>A alternativa B troca confirmação, manada e status quo. A alternativa C mistura framing, autoatribuição e status quo. A alternativa D inverte os três mecanismos.</p><p>Regra de bolso: forma é framing, fonte seletiva é confirmação, explicação desigual é autoatribuição, inércia é status quo e imitação é manada.</p>",
+     "enunciado": "<p>Uma analista relaciona justificativas de clientes aos mecanismos comportamentais estudados. Identifique a associação correta.</p>",
+     "alternativas": {
+      "a": "Confirmação privilegia evidências favoráveis; autoatribuição explica ganhos e perdas por critérios assimétricos; manada segue o grupo.",
+      "b": "Framing seleciona fontes favoráveis; confirmação segue o grupo; manada privilegia a carteira atual por inércia.",
+      "c": "Status quo muda a decisão pela redação; framing atribui acertos à habilidade; autoatribuição evita comparar alternativas.",
+      "d": "Manada mantém a situação atual; confirmação altera a percepção por equivalência; status quo acompanha decisões alheias."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-04-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Manter pode resultar de comparação econômica ou de inércia; o raciocínio usado, e não a permanência isolada, diferencia as situações.</p><p>A alternativa B transforma o resultado em diagnóstico. A alternativa C atribui mecanismos sem apoio nas justificativas. A alternativa A exclui indevidamente decisões de manutenção.</p><p>Regra de bolso: permanecer é decisão; status quo aparece quando a pessoa permanece sem comparar.</p>",
+     "enunciado": "<p>Dois investidores mantêm a mesma aplicação: um comparou custos e alternativas; o outro recusou avaliar mudanças porque já possuía o produto. Compare as decisões.</p>",
+     "alternativas": {
+      "a": "As duas decisões ficam fora da análise comportamental, porque vieses aparecem somente quando há compra, venda ou troca de produto.",
+      "b": "As duas permanências comprovam status quo, pois manter o produto atual expressa preferência pela situação existente.",
+      "c": "A primeira decisão representa manada, enquanto a segunda representa confirmação por preservar uma crença sem novas fontes.",
+      "d": "A permanência do primeiro pode ter fundamento econômico; a do segundo sugere status quo pela ausência de comparação."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-04-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Preservar R$ 17.100 de R$ 18.000 e perder R$ 900 descrevem o mesmo resultado. A mudança associada à forma sugere framing.</p><p>A alternativa B trata redações equivalentes como riscos diferentes. A alternativa A presume seleção de fontes e crença anterior ausentes no caso. A alternativa D presume imitação sem evidência.</p><p>Regra de bolso: compare valor, base, prazo e condições; se forem iguais e só a forma mudar, investigue framing.</p>",
+     "enunciado": "<p>Uma plataforma apresenta a mesma alternativa a dois grupos de clientes. Para o primeiro, informa que uma oscilação desfavorável preservaria R$ 17.100 de um capital de R$ 18.000. Para o segundo, informa que a mesma oscilação produziria perda de R$ 900 sobre os R$ 18.000. Os grupos receberam as mensagens pelo mesmo canal e na mesma etapa da contratação. Prazo, probabilidade, custos e demais condições permanecem iguais, mas o primeiro grupo aceita a alternativa com frequência superior. A equipe comercial afirma que as mensagens descrevem riscos diferentes porque uma destaca preservação e a outra menciona perda. O responsável pela revisão precisa decidir se a apresentação permite comparação equilibrada. Analise a equivalência e o mecanismo que merece investigação.</p>",
+     "alternativas": {
+      "a": "A diferença caracteriza confirmação, já que cada grupo seleciona a frase compatível com a opinião que possuía antes de conhecer a alternativa.",
+      "b": "A primeira mensagem possui risco inferior, pois preservar R$ 17.100 é economicamente diferente de perder R$ 900 sobre o capital informado.",
+      "c": "As condições são equivalentes, e a mudança de escolha pela ênfase em preservar ou perder sugere framing; os dois lados devem usar a mesma base e prazo.",
+      "d": "A aceitação superior comprova manada, pois os integrantes do primeiro grupo observam a reação coletiva antes de formar sua preferência individual."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-04-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Daniela pesquisa, mas escolhe fontes para defender uma conclusão prévia e impede que evidências comparáveis testem a tese.</p><p>A alternativa A confunde volume com diversidade de evidências. A alternativa B introduz inércia e custos ausentes. A alternativa D descreve explicação assimétrica de resultados, que o caso não apresenta.</p><p>Regra de bolso: pesquisa deixa de testar a tese quando nenhuma evidência tem permissão para contrariá-la.</p>",
+     "enunciado": "<p>Daniela decidiu investir em uma empresa antes de iniciar a pesquisa. Durante duas semanas, leu relatórios, assistiu a entrevistas e montou uma planilha extensa, mas incluiu somente fontes que defendiam sua tese. Um documento com dados contrários foi descartado por ser “pessimista”, embora tivesse metodologia comparável às demais fontes. A posição consumiria metade do aporte anual reservado para renda variável. Quando o assessor pergunta qual informação a faria rever a conclusão, Daniela responde que o mercado perceberá a oportunidade depois, apesar das evidências desfavoráveis. Ela usa o volume de leitura como prova de neutralidade e pede que o assessor reconheça a qualidade do processo. Avalie o mecanismo predominante e a intervenção útil.</p>",
+     "alternativas": {
+      "a": "A pesquisa extensa afasta confirmação, pois quantidade de fontes favoráveis substitui a necessidade de examinar evidências contrárias de qualidade semelhante.",
+      "b": "O descarte do relatório caracteriza status quo, porque Daniela mantém a carteira atual e evita custos associados a uma mudança de posição.",
+      "c": "A seleção sugere confirmação; o assessor deve pedir critérios de revisão da tese e confrontar contrapontos com qualidade e metodologia comparáveis.",
+      "d": "A confiança na planilha caracteriza autoatribuição, pois Daniela credita os relatórios favoráveis à própria habilidade e as fontes contrárias ao grupo."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-04-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Vicente credita ganhos à habilidade e perdas a causas externas, usando critérios diferentes. Registros anteriores permitem avaliar o processo com simetria.</p><p>A alternativa A transforma fatores externos em explicação suficiente. A alternativa C confunde explicação de resultados com seleção de evidências. A alternativa D trata narrativa causal como mudança econômica do resultado.</p><p>Regra de bolso: compare o que foi previsto antes com o que ocorreu depois usando o mesmo padrão para ganhos e perdas.</p>",
+     "enunciado": "<p>Em uma revisão de desempenho, Vicente apresenta seis operações de valores próximos. Para as três lucrativas, afirma que sua leitura de mercado foi superior. Para as três deficitárias, atribui o resultado exclusivamente a decisões inesperadas de terceiros e recusa comparar as hipóteses registradas antes das ordens. Alguns eventos externos realmente afetaram os preços, mas também ocorreram erros nas premissas usadas por Vicente. Ele conclui que os ganhos demonstram habilidade e que as perdas nada ensinam sobre seu processo. A gerente recupera os registros anteriores, o risco assumido e o contexto de cada resultado para aplicar o mesmo critério de avaliação. Identifique o mecanismo e a resposta adequada.</p>",
+     "alternativas": {
+      "a": "A existência de eventos externos valida as explicações, pois fatores de mercado retiram dos resultados deficitários qualquer informação sobre a análise original.",
+      "b": "A assimetria sugere autoatribuição; comparar justificativas anteriores e resultados pelo mesmo critério permite reconhecer fatores externos e revisar falhas.",
+      "c": "Os lucros caracterizam confirmação, porque Vicente seleciona operações positivas como fontes favoráveis e mantém as perdas fora da carteira analisada.",
+      "d": "As perdas caracterizam framing, porque apresentá-las como eventos externos transforma economicamente o resultado e altera o valor disponível nas posições."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-04-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A preferência pelo atual sem comparação sugere status quo. A permanência pode ser válida quando uma avaliação documentada mostra fundamento econômico e adequação.</p><p>A alternativa A usa antiguidade no lugar da análise. A alternativa C classifica desconforto como equivalência de apresentação. A alternativa D cria regra automática de troca.</p><p>Regra de bolso: manutenção deixa de ser inércia quando alternativas e custos foram examinados com a situação atual do cliente.</p>",
+     "enunciado": "<p>Márcia mantém há oito anos um fundo que deixou de combinar com seu objetivo após a aproximação da aposentadoria. Ela rejeita abrir a comparação com outros fundos porque já conhece o aplicativo e prefere evitar documentos novos. Custos de saída, tributação e prazo poderiam favorecer a permanência, mas aguardam levantamento. O gerente chama a manutenção de escolha prudente e usa a antiguidade como prova de adequação. Márcia insiste que mudar produziria desconforto, mesmo que uma alternativa apresentasse risco, custo e liquidez compatíveis com a fase atual. A instituição possui dados para comparar as opções e registrar os efeitos de permanecer ou trocar. Avalie o raciocínio e a forma de distinguir inércia de manutenção justificada.</p>",
+     "alternativas": {
+      "a": "A antiguidade comprova adequação, pois o período mantido incorpora custos, prazo e tributação ao produto e reduz a utilidade de alternativas recentes.",
+      "b": "A recusa em comparar sugere status quo; levantar custos, tributação, prazo, risco e benefício esperado permite verificar se permanecer possui fundamento.",
+      "c": "O desconforto com documentos caracteriza framing, já que a forma de apresentar a troca modifica as condições econômicas do fundo atual.",
+      "d": "A manutenção deve ser recusada porque proximidade da aposentadoria exige troca, ainda que custos e riscos indiquem vantagem econômica do produto existente."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-04-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Nuno usa a decisão alheia como justificativa, enquanto os demais podem ter chegado ao mesmo resultado por análise própria suficiente.</p><p>A alternativa B diagnostica pelo resultado comum. A alternativa C trata popularidade como redução da concentração individual. A alternativa D presume seleção de fontes ausente no caso.</p><p>Regra de bolso: decisão igual pode ser análise convergente ou manada; descubra se a pessoa consegue sustentar a própria escolha.</p>",
+     "enunciado": "<p>Um grupo de profissionais compra o mesmo título depois de analisar o relatório do emissor, o prazo, o risco e a taxa oferecida. A oferta foi disponibilizada no mesmo dia e sob as mesmas condições para o grupo. Nuno também compra, mas explica que desconhece o produto e decidiu acompanhar os colegas porque “tantas pessoas devem estar certas”. A carteira de Nuno já possui exposição elevada ao mesmo emissor, informação que ele considera secundária diante da popularidade da oferta. O assessor observa que decisões iguais podem nascer de processos diferentes e pede a Nuno que apresente sua própria justificativa. Nuno insiste que a quantidade de compradores funciona como selo de segurança. Compare a conclusão dos profissionais com a justificativa de Nuno.</p>",
+     "alternativas": {
+      "a": "A decisão de Nuno sugere manada pela dependência da escolha alheia; os demais podem ter conclusão legítima baseada na mesma informação analisada.",
+      "b": "As compras do grupo comprovam efeito manada, porque investidores que chegam ao mesmo produto compartilham uma decisão coletiva independentemente das análises individuais.",
+      "c": "A popularidade reduz o risco do emissor para Nuno, pois a presença de vários compradores distribui sua concentração pessoal entre os participantes da oferta.",
+      "d": "A diferença decorre de confirmação, já que Nuno procura colegas favoráveis e os profissionais mantêm fontes contrárias fora do relatório do emissor."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-04-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. O caso reúne framing, confirmação, manada e autoatribuição. A resposta reconstrói a comparação com informações equilibradas, riscos, custos e objetivo.</p><p>A alternativa B usa os vieses para decidir produto e manutenção. A alternativa C reduz influências distintas a status quo. A alternativa D transforma repetição e resultado passado em evidência suficiente.</p><p>Regra de bolso: vários vieses pedem várias perguntas, e nenhum rótulo substitui a análise das duas alternativas.</p>",
+     "enunciado": "<p>Otávio mantém uma carteira antiga sem revisão. Um colega oferece novo fundo destacando somente ganhos possíveis, e Otávio busca vídeos que defendem a oferta. Ele afirma que precisa acompanhar amigos que já investiram e explica que seus lucros anteriores vieram de talento, enquanto as perdas decorreram de interferências externas. O novo fundo possui riscos, custos e liquidez ainda desconhecidos. A troca usaria a parcela principal da reserva de longo prazo. Otávio resiste a perguntas, diz que os sinais apontam para a mesma conclusão e exige substituir a carteira antiga. A assessora percebe mecanismos distintos, mas também sabe que a antiguidade da carteira, isoladamente, é insuficiente para demonstrar inércia. Avalie os indícios e a condução que reconstrói a decisão.</p>",
+     "alternativas": {
+      "a": "O destaque unilateral sugere framing, os vídeos confirmação, os amigos manada e a explicação desigual autoatribuição; a assessora deve equilibrar informações e comparar alternativas.",
+      "b": "A presença de quatro mecanismos comprova que o fundo é inadequado e que a carteira antiga deve ser mantida sem avaliar custos, riscos ou objetivo atual.",
+      "c": "A decisão representa apenas status quo, pois trocar uma carteira antiga por produto popular preserva a preferência de Otávio pela situação já conhecida.",
+      "d": "Os vídeos e amigos formam evidência independente, e os lucros anteriores validam a troca desde que Otávio aceite receber depois da aplicação informações sobre risco, custo, liquidez e função do fundo."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-04-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Preservar 94% e perder 6% podem ser formas equivalentes, mas prazo e custos distintos alteram economicamente as opções e podem justificar a escolha.</p><p>A alternativa A ignora diferenças reais. A alternativa C chama adequação de prazo de inércia. A alternativa B trata uma restrição concreta como seleção enviesada de evidência.</p><p>Regra de bolso: framing exige equivalência econômica; padronize condições antes de atribuir a escolha à forma.</p>",
+     "enunciado": "<p>Aline recebe duas simulações de um produto. A primeira usa prazo de doze meses e destaca preservar 94% do capital num cenário desfavorável. A segunda usa prazo de vinte e quatro meses, inclui custo adicional de saída e informa perda possível de 6% do capital. As probabilidades apresentadas coincidem. Aline escolhe a primeira e um atendente atribui a mudança exclusivamente ao framing, alegando que preservar 94% e perder 6% são expressões equivalentes. Entretanto, os documentos apresentam prazos e custos diferentes. Aline também menciona que a primeira opção combina com sua necessidade de caixa no fim do ano. O supervisor precisa avaliar a apresentação e as condições econômicas antes de classificar a escolha. Analise a conclusão do atendente.</p>",
+     "alternativas": {
+      "a": "A equivalência dos percentuais basta para confirmar framing, pois prazo, custo e necessidade de caixa ficam fora da comparação entre preservar e perder.",
+      "b": "A preferência caracteriza confirmação porque a necessidade de caixa funciona como fonte favorável escolhida para defender a primeira simulação.",
+      "c": "A escolha caracteriza status quo porque Aline prefere o prazo conhecido e evita analisar a alternativa com duração superior e custo de saída.",
+      "d": "A forma pode influenciar, mas condições diferentes também justificam escolhas diferentes; é preciso padronizar base, prazo e custos antes de isolar framing."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-04-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A conversa precisa verificar a justificativa econômica da manutenção e a autonomia da nova escolha, reconstruindo a decisão com o cliente.</p><p>A alternativa A diagnostica pelos resultados. A alternativa C abandona a formação da decisão. A alternativa D transforma acolhimento em aceitação sem análise.</p><p>Regra de bolso: investigue a justificativa antes de nomear o mecanismo e use o diagnóstico para perguntar, não para encerrar a conversa.</p>",
+     "enunciado": "<p>Durante a revisão, o gerente diz a Bruno que ele está “cheio de vieses” porque manteve um fundo antigo e demonstrou interesse por uma oferta popular. Bruno se sente desconsiderado e encerra a explicação. Antes da interrupção, relatou que a permanência pode decorrer de custo tributário elevado, enquanto o interesse surgiu após leitura de relatório utilizado por outros investidores. Essas informações ainda carecem de verificação, e o fundo atual também precisa ser comparado com objetivo, risco e liquidez. Bruno aceita retomar se puder explicar seu raciocínio. A supervisora propõe nova conversa sem usar rótulos como sentença, pedindo que ele exponha motivos e evidências. Avalie a abordagem que melhora a análise e preserva a participação do cliente.</p>",
+     "alternativas": {
+      "a": "A supervisora deve confirmar status quo e manada antes da conversa, pois manutenção e interesse coletivo permitem definir os mecanismos pelo resultado observado.",
+      "b": "A supervisora deve investigar custos da permanência, fundamento do relatório e análise própria de Bruno, comparando opções sem usar o rótulo para invalidá-lo.",
+      "c": "A supervisora deve evitar comportamento e discutir apenas rentabilidade, já que perguntar sobre justificativas aumenta o desconforto e reduz a objetividade.",
+      "d": "A supervisora deve aceitar as duas justificativas como adequadas, pois questionar custo tributário ou relatório popular equivaleria a desconsiderar a preferência do cliente."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Emoções, ESG e comportamento individual e institucional": [
+    {
+     "id": "cpror-rel-05-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A emoção participa da decisão e pode revelar uma restrição real ou uma reação sem vínculo econômico direto, o que precisa ser investigado.</p><p>A alternativa A trata emoção como invalidação. A alternativa C transforma sentimento em diagnóstico completo. A alternativa B elimina informação relevante sobre a cliente.</p><p>Regra de bolso: reconheça o sentimento e descubra qual condição concreta o acompanha.</p>",
+     "enunciado": "<p>Uma cliente demonstra medo após uma queda na carteira. Identifique como a emoção deve entrar na análise profissional.</p>",
+     "alternativas": {
+      "a": "O medo invalida a decisão da cliente, pois emoção e avaliação financeira ocupam posições incompatíveis no atendimento.",
+      "b": "O medo deve ser ignorado para preservar objetividade, deixando a conversa restrita à rentabilidade e aos preços observados.",
+      "c": "O medo comprova baixa tolerância ao risco, independentemente do objetivo, da liquidez e da capacidade financeira da cliente.",
+      "d": "O medo deve ser reconhecido e investigado, porque pode refletir necessidade concreta ou reação sem ligação direta com a carteira."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-05-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. ESG, ou ASG em português, reúne aspectos ambientais, sociais e de governança, relevantes para análise econômica e preferências.</p><p>A alternativa B apresenta categorias diferentes. A alternativa A inventa outra decomposição das siglas. A alternativa D associa sustentabilidade a garantia e impacto comprovado.</p><p>Regra de bolso: ESG descreve dimensões de análise e preferência; a sigla, isolada, não define risco nem resultado.</p>",
+     "enunciado": "<p>Uma apresentação usa as siglas ESG e ASG ao descrever critérios de investimento. Identifique os aspectos abrangidos por essas siglas.</p>",
+     "alternativas": {
+      "a": "Econômico, sistêmico e geográfico, usados para classificar liquidez, volatilidade e origem dos emissores da carteira.",
+      "b": "Atuarial, securitário e gerencial, voltados a definir prazo de resgate, garantia de capital e remuneração esperada.",
+      "c": "Ambientais, sociais e de governança, que podem envolver riscos, oportunidades econômicas e preferências da pessoa investidora.",
+      "d": "Estratégico, sustentável e garantido, que identificam produtos com baixo risco e comprovação de impacto socioambiental."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-05-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O medo coincide com perda de renda, reserva curta e descasamento de liquidez. A análise precisa tratar essas restrições antes de decidir como movimentar a carteira.</p><p>A alternativa B usa emoção para ignorar fatos. A alternativa C transforma notícias em previsão sobre os ativos. A alternativa D exclui dados centrais da capacidade financeira.</p><p>Regra de bolso: a mesma ansiedade pode ser ruído ou alerta; confirme renda, despesas e liquidez para diferenciá-los.</p>",
+     "enunciado": "<p>Após uma semana de notícias sobre demissões, Laura fica ansiosa e pede o resgate de investimentos de longo prazo. Durante a conversa, revela que seu contrato de trabalho será encerrado em dois meses e que a reserva de emergência cobre somente seis semanas de despesas. Parte dos investimentos possui prazo de liquidação incompatível com as contas previstas. As despesas incluem aluguel, plano de saúde e parcelas com datas definidas. Um atendente classifica a solicitação como reação emocional à imprensa e recomenda manter a estratégia. Laura insiste que precisa de caixa enquanto procura novo emprego. O profissional possui o orçamento, as datas de liquidação e os objetivos da carteira. Avalie como o medo e a condição financeira devem ser tratados.</p>",
+     "alternativas": {
+      "a": "A emoção acompanha uma necessidade concreta de liquidez; o profissional deve revisar caixa, prazos e impactos antes de definir movimentações.",
+      "b": "A presença de medo torna o pedido comportamental, e a estratégia de longo prazo deve ser preservada até a cliente recuperar tranquilidade.",
+      "c": "As notícias determinam o resgate, pois repetição de demissões no mercado comprova que os investimentos perderão valor durante a transição.",
+      "d": "O encerramento do contrato altera apenas a disposição emocional, enquanto reserva, liquidação e orçamento permanecem externos à adequação da carteira."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-05-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A emoção merece reconhecimento, mas a decisão precisa retornar à finalidade do dinheiro, ao prazo, à liquidez e aos riscos da estratégia.</p><p>A alternativa B usa alta recente para validar urgência. A alternativa C transforma emoção em veto ao produto. A alternativa D trata aceitação momentânea como substituta do objetivo.</p><p>Regra de bolso: entusiasmo pode iniciar a conversa, mas objetivo e restrições determinam qual dinheiro pode assumir o risco.</p>",
+     "enunciado": "<p>Depois de quatro meses de alta em um setor, Roberto demonstra entusiasmo e quer transferir a parcela destinada à educação da filha para um fundo concentrado naquele tema. O pagamento da primeira mensalidade ocorrerá em catorze meses, enquanto o fundo apresenta oscilação e prazo de resgate superiores ao que Roberto havia aceitado no planejamento. A carteira inicial separava esse objetivo da reserva de longo prazo. Ele afirma que a sequência recente torna a oportunidade urgente e que revisar hipóteses faria perder parte da valorização. O gerente possui dados de prazo, risco e liquidez e considera o entusiasmo uma informação a investigar, junto das demais condições. Roberto pede execução no mesmo dia. Avalie a resposta profissional.</p>",
+     "alternativas": {
+      "a": "O gerente deve reconhecer o entusiasmo e confrontar tese, risco, liquidez e data da educação, preservando o objetivo antes de comparar alternativas.",
+      "b": "A alta recente valida a urgência, pois entusiasmo acompanha informação positiva e permite usar recursos com data definida enquanto a tendência persiste.",
+      "c": "A emoção exige recusa do fundo, ainda que outra parcela de longo prazo, com capacidade de perda, pudesse comportar a estratégia após análise.",
+      "d": "O prazo de catorze meses perde relevância quando o cliente aceita verbalmente a volatilidade depois de observar uma sequência de resultados favoráveis."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-05-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A preferência ambiental deve ser compreendida e integrada à análise, enquanto critérios, risco, impacto e liquidez exigem verificação própria.</p><p>A alternativa A trata valores como erro. A alternativa C usa comunicação como comprovação de impacto. A alternativa D confunde preferência com capacidade de suportar perda.</p><p>Regra de bolso: alinhe valores e finanças, confirmando separadamente o que o produto faz e se ele serve ao objetivo.</p>",
+     "enunciado": "<p>Cristina procura uma aplicação que exclua atividades incompatíveis com seus valores ambientais. A preferência está registrada e ela aceita comparar produtos. Uma oferta usa nome associado à preservação, identidade visual verde e mensagem sobre futuro sustentável. Cristina conclui que o fundo possui baixo risco e impacto comprovado, embora ainda desconheça a estratégia, as exposições, os critérios de seleção e o prazo de resgate. O assessor tem acesso ao regulamento, à política e aos materiais que descrevem os critérios usados. O recurso será usado em três anos, e ela rejeita oscilações que comprometam o valor planejado. O assessor quer respeitar a exclusão desejada sem transformar afinidade com a causa em prova das demais características. Analise a orientação.</p>",
+     "alternativas": {
+      "a": "A preferência ambiental deve ser afastada porque valores pessoais introduzem emoção e impedem a comparação financeira entre produtos disponíveis.",
+      "b": "A preferência é legítima, mas o assessor deve verificar critérios, estratégia, riscos, liquidez e objetivo, pois afinidade não comprova segurança ou impacto.",
+      "c": "A linguagem sustentável comprova impacto quando o nome e a comunicação mantêm coerência, cabendo avaliar apenas se o prazo de três anos atende ao resgate.",
+      "d": "A rejeição de atividades define capacidade financeira, de modo que o fundo alinhado aos valores pode assumir a oscilação recusada em outros produtos."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-05-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Integrar riscos, selecionar ativos por critérios e buscar impacto são abordagens distintas. A comparação ainda precisa de política, risco, custo, prazo e adequação.</p><p>A alternativa A equipara propósitos diferentes. A alternativa C atribui dispensa de análise ao impacto. A alternativa B usa nome e preferência para substituir características do produto.</p><p>Regra de bolso: pergunte qual abordagem o fundo usa, como a executa e o que declara entregar antes de comparar alternativas ESG.</p>",
+     "enunciado": "<p>Uma instituição oferece três fundos com linguagem sustentável. O primeiro integra riscos ambientais e sociais à análise financeira. O segundo seleciona ativos por critérios específicos de exclusão. O terceiro declara intenção de produzir impacto mensurável. Paulo considera as três propostas equivalentes e escolhe pelo nome mais atraente, deixando política, exposição e objetivo declarado fora de sua comparação. A assessora explica que as propostas representam abordagens distintas, embora possam coexistir numa mesma estratégia. Paulo insiste que a sigla ESG padroniza o resultado entregue e pede que a instituição trate os fundos como substitutos. Considere que custos, prazos e riscos também diferem entre eles. Compare as abordagens e indique a análise adequada.</p>",
+     "alternativas": {
+      "a": "A sigla torna os fundos substitutos, porque integração de risco, seleção por critérios e intenção de impacto descrevem etapas equivalentes da mesma estratégia.",
+      "b": "O nome mais atraente expressa a preferência sustentável e basta para escolher, pois política e risco importam somente em produtos sem temática ESG.",
+      "c": "A intenção de impacto elimina a necessidade de examinar exposições, enquanto integração e exclusão exigem apenas confirmação da preferência pessoal.",
+      "d": "As abordagens possuem propósitos distintos; a assessora deve esclarecer critérios e objetivo declarado e depois comparar risco, prazo, custo e adequação."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-05-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Conhecimento, disposição emocional e capacidade financeira precisam ser avaliados separadamente, junto de objetivos e restrições individuais.</p><p>A alternativa A reduz o diagnóstico a idade e patrimônio. A alternativa B troca conhecimento e ansiedade por capacidade financeira. A alternativa D usa experiência pessoal para excluir dados objetivos.</p><p>Regra de bolso: saber, sentir e poder suportar são perguntas diferentes no diagnóstico do investidor individual.</p>",
+     "enunciado": "<p>Fábio e Helena possuem a mesma idade e patrimônio semelhante. Fábio conhece produtos complexos, mas depende de parte da carteira para despesas familiares próximas e mantém reserva equivalente a dois meses. Helena demonstra ansiedade com oscilações, porém sua reserva cobre doze meses e o objetivo está distante. Fábio aceita volatilidade, enquanto Helena prefere compreender cenários antes de decidir. Um gerente decide atribuir a ambos a mesma carteira, usando idade e patrimônio como resumo do perfil. Ele também presume que conhecimento técnico de Fábio comprova capacidade financeira e que ansiedade de Helena impede exposição a risco. Os clientes apresentam objetivos, restrições e experiências pessoais diferentes. Avalie como a decisão individual deve ser analisada.</p>",
+     "alternativas": {
+      "a": "Idade e patrimônio semelhantes permitem carteira comum, pois diferenças emocionais e familiares tendem a desaparecer diante da mesma capacidade econômica.",
+      "b": "O conhecimento de Fábio compensa a necessidade próxima, enquanto a ansiedade de Helena define baixa capacidade de perda apesar da reserva e do prazo.",
+      "c": "Conhecimento, estado emocional e capacidade financeira são dimensões distintas; objetivos, liquidez e consequências da perda devem ser levantados para cada pessoa.",
+      "d": "A experiência pessoal deve prevalecer sobre dados financeiros, porque investidores individuais decidem principalmente a partir de projetos familiares e emoções."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-05-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. Comitês continuam sujeitos a incentivos, pressão e opinião dominante. Controles ajudam quando produzem confronto real, registro e revisão independente.</p><p>A alternativa A confunde existência com efetividade do processo. A alternativa C usa preferência temática para julgar o produto. A alternativa D trata consenso como substituto da análise.</p><p>Regra de bolso: controle formal reduz viés quando cria espaço e registro para evidências contrárias.</p>",
+     "enunciado": "<p>Um comitê institucional avalia fundo temático ligado à transição energética. A diretora defende a aprovação e sua remuneração depende do desempenho anual da carteira. Analistas identificam concentração, liquidez limitada e critérios de impacto pouco claros, mas evitam registrar discordância por receio de contrariá-la. A ata resume a decisão como consenso e o checklist formal aparece preenchido. A diretora afirma que equipe, comitê e documentos tornam a instituição imune a vieses individuais. O mandato admite investimentos ESG, desde que risco e processo sejam documentados. Um membro pede revisão independente antes da votação. Avalie a influência organizacional e a utilidade dos controles existentes.</p>",
+     "alternativas": {
+      "a": "A estrutura formal elimina influência comportamental, e o checklist preenchido comprova confronto das hipóteses mesmo sem registro das discordâncias.",
+      "b": "Pressão hierárquica e incentivo podem reforçar a opinião dominante; registro de discordâncias e revisão independente tornam o controle efetivo.",
+      "c": "A preferência da diretora invalida o fundo temático, pois interesse por transição energética caracteriza emoção incompatível com decisão institucional.",
+      "d": "O consenso da ata substitui a análise dos riscos, porque responsabilidade coletiva distribui entre os membros a consequência de uma decisão equivocada."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-05-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. Investidores individuais e institucionais enfrentam contextos diferentes, mas ambos dependem da qualidade do processo, dos incentivos e do confronto de evidências.</p><p>A alternativa A presume neutralização pela equipe. A alternativa C separa artificialmente emoção e instituição. A alternativa D trata experiências e pressões como conclusões automáticas.</p><p>Regra de bolso: compare como a decisão é produzida, e não qual tipo de investidor a produz.</p>",
+     "enunciado": "<p>Uma gestora individual e um fundo institucional analisam o mesmo ativo. A gestora relaciona a possível perda ao projeto educacional dos filhos e consulta relatos de conhecidos. O fundo possui equipe e política escrita, mas seus profissionais enfrentam pressão para acompanhar concorrentes e receiam apresentar projeção divergente da liderança. Ambos recebem os mesmos dados financeiros. Um consultor conclui que a instituição decidirá de forma superior porque distribui tarefas, enquanto a pessoa física ficará dominada pela experiência pessoal. Os dois processos ainda precisam ser examinados quanto a objetivos, incentivos, qualidade da análise e responsabilidade. Compare as condições comportamentais dos investidores.</p>",
+     "alternativas": {
+      "a": "A equipe institucional assegura superioridade porque divisão de tarefas neutraliza emoções, incentivos e comparação com concorrentes na decisão coletiva.",
+      "b": "Os dois podem sofrer influências distintas; a qualidade depende de processo, incentivos, restrições e confronto de hipóteses, e não do rótulo do investidor.",
+      "c": "A pessoa individual decide por emoção, enquanto a instituição decide por evidência, pois políticas escritas separam julgamento humano e análise financeira.",
+      "d": "A experiência familiar invalida a decisão individual, enquanto pressão por concorrentes torna legítima a escolha institucional por refletir prática do mercado."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-05-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. A preferência social é legítima, mas segurança, impacto, prazo e risco exigem evidência própria e precisam caber no objetivo de Renata.</p><p>A alternativa C subordina adequação à preferência. A alternativa B transforma afinidade em veto. A alternativa D usa campanha e causa como prova de impacto e redução de risco.</p><p>Regra de bolso: acolha o valor pessoal, confirme o que o produto entrega e preserve as condições financeiras do objetivo.</p>",
+     "enunciado": "<p>Renata procura investimento associado à inclusão social e se identifica com a campanha de um fundo. Ela pretende usar o dinheiro para abrir um negócio em vinte meses, mas o regulamento indica prazo de resgate extenso e exposição a ativos voláteis. O material promocional concentra-se na mensagem social e oferece poucos detalhes sobre a carteira. Renata afirma que questionar o produto equivale a rejeitar a causa e insiste que algo socialmente positivo deve proteger seu capital. O assessor respeita a preferência, pede os critérios usados pelo fundo e apresenta risco, liquidez e cenários de perda. Renata solicita que ele execute a aplicação antes de avaliar alternativas, receosa de perder a oferta. Avalie a resposta que acolhe os valores sem permitir que afinidade substitua análise e adequação.</p>",
+     "alternativas": {
+      "a": "O assessor deve distinguir a preferência da inferência de segurança, verificar critérios e impacto e comparar alternativas compatíveis com prazo e risco.",
+      "b": "O assessor deve rejeitar produtos ESG para Renata, pois a identificação com a causa impede uma decisão financeira válida sobre o recurso do negócio.",
+      "c": "O assessor deve executar porque a preferência social pertence à cliente, e prazo, risco e liquidez ficam subordinados aos valores declarados na contratação.",
+      "d": "O assessor deve tratar a campanha como prova de impacto e discutir apenas liquidez, já que a coerência social do produto reduz a volatilidade relevante."
+     },
+     "gabarito": "a"
+    }
+   ],
+   "Bolhas, crises e arquitetura de escolhas: nudging e sludging": [
+    {
+     "id": "cpror-rel-06-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Volatilidade mede oscilações, bolha envolve dinâmica de expectativas possivelmente afastada dos fundamentos e crise pode reunir restrições financeiras e transmissão entre agentes.</p><p>A alternativa A usa velocidade e prejuízo como provas. A alternativa C define bolha pelo histórico e reduz crise à emoção. A alternativa D equipara conceitos distintos.</p><p>Regra de bolso: oscilação mede movimento, bolha discute preço e fundamentos, e crise envolve funcionamento financeiro e econômico.</p>",
+     "enunciado": "<p>Um ativo apresenta forte oscilação durante uma semana. Compare volatilidade, bolha especulativa e crise financeira.</p>",
+     "alternativas": {
+      "a": "A volatilidade comprova bolha quando os preços mudam depressa, e a bolha se transforma em crise quando algum investidor realiza prejuízo.",
+      "b": "A volatilidade mede a intensidade das oscilações; bolha envolve afastamento dos fundamentos; crise pode incluir falta de liquidez e contágio.",
+      "c": "A bolha corresponde a qualquer valorização superior ao histórico, enquanto a crise descreve somente a reação emocional dos investidores à queda.",
+      "d": "Os três conceitos descrevem o mesmo fenômeno em etapas diferentes, variando apenas conforme a duração do movimento observado no mercado."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-06-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Arquitetura de escolhas é a organização do ambiente decisório, incluindo ordem, linguagem, padrões e etapas.</p><p>A alternativa B pressupõe imitação. A alternativa C transforma apresentação em dinâmica de preços. A alternativa D atribui a organização ao peso assimétrico das perdas.</p><p>Regra de bolso: arquitetura de escolhas é o desenho do caminho pelo qual a decisão acontece.</p>",
+     "enunciado": "<p>Uma instituição reorganiza ordem, linguagem, padrões e etapas de uma jornada financeira. Identifique o conceito aplicado ao ambiente da decisão.</p>",
+     "alternativas": {
+      "a": "Arquitetura de escolhas, porque a organização do ambiente influencia o que a pessoa percebe e faz ao decidir.",
+      "b": "Efeito manada, porque a posição das opções mostra ao cliente qual escolha recebeu maior adesão de outras pessoas.",
+      "c": "Bolha especulativa, porque uma opção pré-selecionada aumenta demanda e afasta o preço dos fundamentos econômicos.",
+      "d": "Aversão à perda, porque reduzir etapas impede que o cliente reconheça o custo associado à alternativa abandonada."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-06-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Compras motivadas pela própria alta podem reforçar o movimento, mas fundamentos também importam e a velocidade isolada não confirma bolha.</p><p>A alternativa A usa alta como prova suficiente. A alternativa B exclui coexistência entre fundamentos e expectativas. A alternativa D confunde dinâmica especulativa com crise financeira.</p><p>Regra de bolso: investigue expectativas e fundamentos; a trajetória do preço, sozinha, descreve o movimento, mas não fecha o diagnóstico.</p>",
+     "enunciado": "<p>As cotas de um segmento sobem 45% em oito meses. Novos compradores afirmam que a própria valorização prova novas altas e entram com a intenção de revender depois. Os aportes reforçam o preço e a narrativa, mas, no mesmo período, resultados das empresas e taxas de juros também mudaram. Um cliente chama o movimento de bolha confirmada apenas pela velocidade da alta. Outro sustenta que a existência de fundamentos torna impossível haver amplificação por expectativas. O primeiro pretende concentrar nesse segmento uma reserva antes distribuída entre classes. A assessora possui dados econômicos, fluxos e relatos dos participantes, mas reconhece a dificuldade de estimar valor durante a formação do movimento. Avalie as duas conclusões e o diagnóstico possível.</p>",
+     "alternativas": {
+      "a": "A alta de 45% comprova bolha, pois a velocidade do preço substitui a estimativa dos fundamentos e da intenção de revenda dos participantes.",
+      "b": "Mudanças em resultados e juros afastam dinâmica especulativa, porque preço sustentado por informação econômica deixa de responder aos novos compradores.",
+      "c": "Fundamentos e expectativas podem atuar juntos; a retroalimentação merece análise, mas a alta isolada é insuficiente para confirmar uma bolha.",
+      "d": "A intenção de revenda comprova crise, pois expectativas de valorização produzem dificuldade de financiamento e vendas forçadas durante a alta."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-06-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Emoções podem ampliar o movimento, enquanto chamadas de margem, vendas forçadas, restrição de crédito e falta de liquidez produzem efeitos econômicos concretos.</p><p>A alternativa A reduz restrições a emoção. A alternativa C usa velocidade como causa suficiente. A alternativa B transforma confiança em solução automática para condições financeiras.</p><p>Regra de bolso: numa crise, investigue comportamento e restrições de balanço, financiamento e liquidez.</p>",
+     "enunciado": "<p>Durante uma queda acentuada, fundos alavancados recebem chamadas de margem e vendem ativos para levantar caixa. Instituições reduzem financiamento, a liquidez piora e perdas são transmitidas a outros agentes e mercados. Notícias alarmantes também elevam o medo dos investidores. Um comentarista resume o episódio como pânico irracional e afirma que as restrições desapareceriam se as pessoas recuperassem a confiança. Uma gerente observa contratos, necessidade de caixa, vencimentos próximos e deterioração das condições econômicas, além da reação emocional. Os clientes pedem que ela explique por que volatilidade, medo e crise podem aparecer juntos sem serem sinônimos. Analise a explicação adequada.</p>",
+     "alternativas": {
+      "a": "A queda constitui volatilidade e, por isso, chamadas de margem, financiamento e liquidez representam apenas efeitos emocionais da mesma oscilação de preços.",
+      "b": "A confiança restaura financiamento e liquidez por definição, de modo que condições econômicas ficam subordinadas à expectativa coletiva dos agentes.",
+      "c": "A crise decorre da velocidade da queda, e a presença de contratos financeiros perde relevância quando vários investidores vendem no mesmo período.",
+      "d": "Medo pode intensificar vendas, mas alavancagem, caixa, crédito e transmissão são restrições reais que impedem reduzir a crise a pânico."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-06-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O lembrete facilita uma intenção existente, mantém alternativas, informa o que ocorrerá e permite edição e recusa simples.</p><p>A alternativa B equipara sugestão modificável a obrigação. A alternativa C chama confirmação transparente de obstáculo excessivo. A alternativa A ignora que ordem e padrão também influenciam escolhas.</p><p>Regra de bolso: nudge facilita sem aprisionar, e a pessoa precisa compreender, alterar e recusar com facilidade.</p>",
+     "enunciado": "<p>Uma cooperativa quer ajudar associados a manter contribuições mensais já planejadas. A tela envia lembrete antes da data, mostra o objetivo vinculado, sugere R$ 350 com base no plano registrado e permite editar o valor, dispensar a mensagem ou cancelar a contribuição em poucos passos. Custos e destino aparecem antes da confirmação. Um associado interpreta a sugestão como obrigação e pergunta se a arquitetura retirou sua liberdade. A equipe mede cliques e volume, mas também registra alterações, recusas e compreensão. Considere que o incentivo econômico permanece igual e que as alternativas continuam acessíveis. Avalie se o desenho pode funcionar como nudge e quais condições sustentam essa classificação.</p>",
+     "alternativas": {
+      "a": "O desenho é neutro porque arquitetura de escolhas surge somente quando uma instituição oculta alternativas ou dificulta o cancelamento do produto.",
+      "b": "O valor sugerido cria obrigação, pois uma opção apresentada antes das demais elimina a liberdade mesmo quando o associado consegue editar, dispensar e cancelar a contribuição em jornada simples.",
+      "c": "A tela é sludge porque contém etapas de confirmação, embora elas revelem custo, destino e valor antes de uma operação financeira relevante.",
+      "d": "O lembrete pode ser nudge porque facilita uma intenção, informa a ação e preserva edição e recusa, sem proibir alternativas ou alterar incentivos de forma relevante."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-06-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Uma interface curta pode ocultar informação e dificultar a recusa. O desenho precisa ser transparente, compreensível e modificável de forma acessível.</p><p>A alternativa A usa facilidade para tolerar omissão. A alternativa C trata possibilidade técnica como liberdade efetiva. A alternativa D reduz sucesso ao volume contratado.</p><p>Regra de bolso: conte cliques, mas também descubra o que ficou escondido e quanto esforço custa dizer não.</p>",
+     "enunciado": "<p>Um aplicativo pré-seleciona um fundo para novos clientes. A tela destaca rentabilidade, deixa custos em página secundária e posiciona a opção de recusa num menu pouco visível. A instituição argumenta que a jornada possui poucos cliques e, por isso, representa simplificação benéfica. O cliente consegue trocar o padrão depois, mas só encontra essa possibilidade após concluir cadastro e responder a diversas telas. A confirmação ocorre antes de aparecer uma comparação entre o fundo e outras opções disponíveis. A equipe comercial mede sucesso pelo aumento de aplicações e desconhece quantos clientes compreenderam a escolha. O responsável por conduta avalia objetivo do desenho, transparência, quem se beneficia e facilidade de alteração. Analise a qualidade dessa arquitetura.</p>",
+     "alternativas": {
+      "a": "Poucos cliques bastam para caracterizar nudge, pois facilidade operacional compensa custo disperso e recusa pouco visível na escolha padrão.",
+      "b": "A jornada pode influenciar de forma prejudicial: simplicidade aparente não substitui transparência, compreensão e possibilidade acessível de recusar ou alterar.",
+      "c": "A opção pré-selecionada preserva liberdade em qualquer desenho, já que a existência técnica de um menu posterior afasta pressão sobre a decisão inicial.",
+      "d": "O aumento do volume comprova sucesso do nudge, enquanto compreensão e adequação pertencem à avaliação do produto depois da contratação."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-06-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Sludge pode resultar de processo mal desenhado sem intenção prejudicial. Redundância e assimetria precisam ser justificadas por finalidade proporcional.</p><p>A alternativa A exige intenção que o conceito dispensa. A alternativa B chama obstáculo excessivo de facilitação. A alternativa D presume que acumular controles garante proporcionalidade.</p><p>Regra de bolso: compare o esforço para entrar e sair e pergunte qual risco concreto justifica cada etapa adicional.</p>",
+     "enunciado": "<p>Simone contratou um serviço financeiro em quatro etapas digitais. Para cancelar, precisa localizar um telefone fora do aplicativo, aguardar atendimento, repetir dados já fornecidos, imprimir um formulário e enviá-lo por canal distinto. A instituição informa que o processo surgiu de sistemas antigos e que ninguém desenhou as etapas com intenção de impedir saídas. Simone deseja encerrar o serviço e já confirmou sua identidade por meios equivalentes aos usados na contratação. O setor responsável defende a jornada porque alguma fricção pode proteger clientes contra cancelamento acidental. A auditoria compara finalidade, redundância e proporcionalidade das exigências. Avalie a presença de sludge.</p>",
+     "alternativas": {
+      "a": "A ausência de intenção maliciosa afasta sludge, pois o conceito exige que a instituição crie obstáculos deliberadamente para manter a contratação.",
+      "b": "A jornada é nudge porque mantém o serviço ativo como padrão e influencia Simone sem proibir formalmente o pedido de cancelamento.",
+      "c": "As etapas redundantes e assimétricas podem ser sludge mesmo sem intenção, e a proteção alegada deve ser comparada à necessidade e à proporcionalidade.",
+      "d": "A confirmação de identidade torna proporcionais impressão, canal externo e repetição de dados, pois controles cumulativos ampliam a proteção por definição."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-06-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. A confirmação clara e rápida protege diante de uma operação relevante, enquanto redundância e canal restrito podem impor esforço desproporcional à tarefa simples.</p><p>A alternativa B classifica pela existência de etapa. A alternativa C presume benefício da dificuldade. A alternativa D confunde confirmação com proibição.</p><p>Regra de bolso: fricção protetiva tem finalidade clara e esforço proporcional; sludge acrescenta custo sem proteção equivalente.</p>",
+     "enunciado": "<p>Uma corretora exige segunda confirmação antes de ordem que compromete 80% da carteira em ativo volátil. A tela resume valor, concentração e possibilidade de perda, e o cliente pode voltar ou confirmar em menos de um minuto. Em outra jornada, a instituição solicita três confirmações idênticas para atualizar endereço, repete perguntas já validadas e exige contato telefônico em horário restrito. A mudança de endereço já foi autenticada pelo mesmo mecanismo usado em outras alterações cadastrais. A diretoria propõe eliminar as duas fricções para tornar o aplicativo mais rápido. Um cliente apoia a retirada porque considera qualquer etapa adicional um obstáculo indevido. A área de risco precisa distinguir proteção proporcional de sludge. Compare os dois desenhos.</p>",
+     "alternativas": {
+      "a": "A confirmação da ordem pode proteger de erro de modo proporcional; redundância e canal restrito na atualização sugerem fricção excessiva sem função equivalente.",
+      "b": "As duas jornadas são sludge porque qualquer confirmação acrescenta esforço, ainda que uma delas apresente consequência relevante antes de ordem concentrada.",
+      "c": "As duas jornadas são controles de segurança, pois repetição e dificuldade elevam atenção e reduzem a chance de decisões impulsivas em qualquer tarefa.",
+      "d": "A concentração da ordem elimina a liberdade de escolha, de modo que a confirmação funciona como proibição e deixa de integrar arquitetura de escolhas."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-06-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. Uma ferramenta pode começar como apoio e passar a pressionar quando insiste após recusas, usa culpa e dificulta a saída.</p><p>A alternativa A congela a avaliação na intenção inicial. A alternativa C chama pressão de proteção. A alternativa D confunde existência formal da recusa com facilidade e respeito à escolha.</p><p>Regra de bolso: a arquitetura deve acompanhar a decisão atual do cliente e oferecer saída clara quando a intervenção perdeu sua função.</p>",
+     "enunciado": "<p>Débora recusou três vezes um lembrete para elevar aportes. Mesmo assim, o aplicativo continua exibindo a mensagem a cada acesso, usa frases sobre “fracassar no futuro” e coloca o botão de recusa em posição menos visível. A configuração permite dispensar uma ocorrência, mas a mensagem retorna na sessão seguinte. Ela mantém seu plano original porque passou a sustentar um familiar e pede o encerramento dos avisos. A equipe afirma que o primeiro desenho foi criado para apoiar intenções de poupança e chama qualquer lembrete de nudge. Débora insiste que a repetição e a culpa pressionam uma decisão já revista. O responsável possui o histórico de recusas e a mudança de orçamento. Avalie como o comportamento posterior da ferramenta altera sua qualidade.</p>",
+     "alternativas": {
+      "a": "A origem como lembrete preserva a classificação de nudge, pois a finalidade inicial define o desenho mesmo após recusas e mudança do orçamento.",
+      "b": "A insistência, a culpa e a recusa pouco visível comprometem autonomia e transparência; o desenho deve respeitar a decisão atual e permitir desligamento simples.",
+      "c": "A mudança do orçamento transforma o lembrete em controle de segurança, porque pressionar aportes reduz o risco de a cliente abandonar seu objetivo previdenciário.",
+      "d": "O histórico de recusas é irrelevante, pois a alternativa de dispensar ainda existe e mantém liberdade formal suficiente para caracterizar apoio à decisão."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-06-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. O sucesso de um nudge envolve compreensão, adequação e controle do cliente, além do comportamento observado e da possibilidade de corrigir a decisão.</p><p>A alternativa B reduz o resultado a volume. A alternativa C confunde influência com defeito inevitável. A alternativa D usa incentivos iguais para ignorar apresentação e percepção.</p><p>Regra de bolso: nudge de qualidade facilita a ação consciente e continua fácil de recusar, alterar e corrigir.</p>",
+     "enunciado": "<p>Um banco testa uma jornada que apresenta custos lado a lado, sugere contribuição compatível com a meta registrada e permite editar ou recusar na mesma tela. Após o lançamento, o volume aplicado sobe 30%, mas reclamações mostram que parte dos clientes confundiu sugestão com recomendação personalizada. A diretoria considera o aumento suficiente para declarar sucesso e quer destacar ainda mais o botão de confirmação. A área de conduta propõe medir compreensão, adequação, alterações realizadas, recusas e facilidade de corrigir decisões. O histórico também permite identificar cancelamentos logo após a escolha. Os incentivos econômicos dos produtos permanecem iguais. Avalie quais critérios permitem julgar o nudge e preservar liberdade de escolha.</p>",
+     "alternativas": {
+      "a": "A avaliação deve incluir compreensão, adequação e facilidade de editar, recusar e corrigir; volume isolado não demonstra que a escolha foi consciente.",
+      "b": "O aumento de 30% confirma sucesso, pois o objetivo de uma arquitetura é modificar comportamento e o volume revela que a influência funcionou.",
+      "c": "A confusão exige retirar custos comparáveis e sugestão da mesma tela, porque arquitetura de escolhas deve evitar qualquer influência sobre a decisão.",
+      "d": "A manutenção dos incentivos prova transparência, tornando desnecessário verificar como destaque, linguagem e padrão afetaram a percepção dos clientes."
+     },
+     "gabarito": "a"
+    }
+   ],
+   "Apostas online: comportamento, orçamento e distinção de investimentos": [
+    {
+     "id": "cpror-rel-07-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A loteria se associa a sorteio e regras de premiação, a aposta esportiva depende de eventos de competições e das condições contratadas, e o jogo online segue a mecânica própria do jogo.</p><p>A alternativa B transforma prêmio em critério de investimento. A alternativa C usa o canal digital para apagar diferenças de mecânica. A alternativa A trata conhecimento esportivo como determinante e classifica jogo como posição financeira.</p><p>Regra de bolso: internet é canal; sorteio, evento esportivo e mecânica de jogo identificam modalidades diferentes.</p>",
+     "enunciado": "<p>Um cliente acessa pela internet uma loteria, um palpite sobre uma partida e um jogo digital. Compare as três modalidades.</p>",
+     "alternativas": {
+      "a": "A aposta esportiva depende somente do conhecimento do participante, a loteria depende de sorteio e o jogo online funciona como posição financeira.",
+      "b": "A loteria e a aposta esportiva são aplicações quando oferecem prêmio em dinheiro, enquanto o jogo online constitui gasto de entretenimento.",
+      "c": "As três operações pertencem à mesma modalidade econômica, pois o acesso pela internet uniformiza probabilidades, regras e riscos envolvidos.",
+      "d": "A loteria se liga a sorteio e premiação; a aposta esportiva depende de competição e condições contratadas; o jogo online segue sua mecânica digital."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-07-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A natureza da operação, a origem do resultado e sua função no planejamento distinguem o prêmio condicionado a evento ou jogo de uma posição econômica ou contratual.</p><p>A alternativa A erra ao reservar a possibilidade de perda à aposta. A alternativa C toma a interface como classificação econômica. A alternativa D converte conhecimento esportivo em previsibilidade de renda.</p><p>Regra de bolso: observe o direito adquirido e a origem do resultado, em vez da aparência da tela ou da existência de risco.</p>",
+     "enunciado": "<p>Uma plataforma de apostas exibe saldo, gráficos e botões semelhantes aos de um banco. Identifique o critério que a separa de um investimento.</p>",
+     "alternativas": {
+      "a": "A possibilidade de perda caracteriza a aposta, enquanto a posição financeira preserva o capital aplicado durante o prazo contratado.",
+      "b": "A distinção vem da natureza da operação: a aposta condiciona prêmio a evento ou jogo, e o investimento representa posição econômica ou contratual.",
+      "c": "A aparência do aplicativo define a categoria, de modo que saldo e gráficos convertem o valor apostado em aplicação financeira.",
+      "d": "O conhecimento do usuário sobre esporte altera a natureza da operação, pois domínio do evento produz uma fonte previsível de renda."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-07-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Raul participa de sorteio, Cíntia vincula o prêmio a um evento esportivo e Murilo usa a mecânica de um jogo digital; o celular é apenas o canal comum.</p><p>A alternativa B transforma conhecimento esportivo em posição econômica. A alternativa A confunde mecanismos distintos por causa da incerteza e do canal. A alternativa D chama a roleta de evento esportivo e converte bilhete de loteria em aplicação.</p><p>Regra de bolso: classifique pela mecânica que produz o resultado, e não pelo aparelho usado para participar.</p>",
+     "enunciado": "<p>Durante uma reunião de educação financeira na empresa, a analista Denise ouve três relatos. Raul compra pela internet um bilhete vinculado a um sorteio. Cíntia escolhe o resultado de uma partida e aceita as condições de premiação exibidas antes do evento. Murilo acessa pelo celular uma roleta digital regida pelas regras do próprio jogo. Um participante afirma que as três atividades formam uma categoria única chamada jogo online, pois o celular é o meio de acesso. Outro defende que o palpite de Cíntia é investimento, porque ela acompanha campeonatos e analisa o desempenho das equipes. Denise quer corrigir as classificações sem discutir estratégias de aposta nem presumir probabilidades iguais. Analise os relatos e indique a classificação sustentada pelas características das operações.</p>",
+     "alternativas": {
+      "a": "Os três participam de loteria digital, porque sorteio, partida e roleta distribuem prêmio incerto por meio de uma plataforma conectada.",
+      "b": "Raul e Murilo participam de jogos online, enquanto Cíntia realiza investimento, pois análise esportiva cria posição econômica sobre a competição.",
+      "c": "Raul participa de loteria, Cíntia faz aposta esportiva e Murilo joga online; o canal digital compartilhado preserva as diferenças de mecânica.",
+      "d": "Cíntia e Murilo fazem apostas esportivas, pois ambos escolhem um resultado, enquanto Raul adquire uma aplicação ligada ao sorteio contratado."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-07-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Com saldos inicial e final nulos, a saída líquida é R$ 900 menos R$ 350, o que resulta em R$ 550. A retirada reduz a perda, mas o valor isolado não prova lucro.</p><p>A alternativa A exclui depósitos do fluxo e chama a retirada de lucro. A alternativa C ignora o dinheiro efetivamente devolvido à conta. A alternativa D trata o encerramento da posição como neutralização dos depósitos.</p><p>Regra de bolso: some depósitos, subtraia retiradas e confira os saldos antes de chamar um prêmio de lucro.</p>",
+     "enunciado": "<p>Ao revisar o orçamento mensal, a gerente Paula recebe de André um extrato de uma plataforma. Ele destaca uma retirada de R$ 350 e afirma ter obtido lucro, porque o valor entrou em sua conta depois de um palpite esportivo. Os registros mostram cinco depósitos que somam R$ 900, a retirada destacada e saldo inicial e final iguais a zero. O extrato bancário confirma que os depósitos saíram da renda do mês e que a retirada foi o único crédito recebido da plataforma. Ele pretende registrar os R$ 350 como renda extraordinária e usar essa conclusão para manter o mesmo valor mensal de apostas. Paula precisa reconstruir o efeito líquido antes de discutir o orçamento e a repetição do gasto. Calcule a saída líquida de recursos e indique como a retirada deve aparecer na análise.</p>",
+     "alternativas": {
+      "a": "O lucro foi de R$ 350; depósitos representam transferências internas e ficam fora do orçamento depois que a plataforma reconhece um prêmio.",
+      "b": "A saída líquida foi de R$ 550; os R$ 350 reduziram o desembolso do período, mas não constituíram lucro diante dos R$ 900 depositados.",
+      "c": "A saída líquida foi de R$ 900; retirada de aposta não retorna ao orçamento, pois sua origem impede que compense os depósitos realizados.",
+      "d": "O resultado ficou em zero; a retirada encerrou o risco da operação, e o restante dos depósitos corresponde ao custo já absorvido pela plataforma."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-07-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O valor recuperado economicamente soma R$ 500 retirados e R$ 300 de saldo final, totalizando R$ 800; diante de R$ 1.400 depositados, a perda é R$ 600. Para o caixa bancário, apenas R$ 500 voltaram, e o saldo remanescente depende das condições de saque.</p><p>A alternativa A calcula R$ 900 ao excluir o saldo final do resultado econômico. A alternativa C troca perda por lucro e desconsidera os depósitos. A alternativa D subtrai o saldo dos depósitos, mas trata a retirada como renda sem ligá-la ao fluxo completo.</p><p>Regra de bolso: saldo no aplicativo participa do resultado econômico, mas retirada é o que já regressou ao caixa bancário.</p>",
+     "enunciado": "<p>A planejadora Elaine recebe de Vítor o relatório de um aplicativo referente a um mês. Partindo de saldo inicial nulo, ele depositou R$ 1.400, retirou R$ 500 para a conta bancária e terminou com R$ 300 ainda exibidos na plataforma. Vítor chama os R$ 500 de lucro e inclui também os R$ 300 como renda disponível para pagar o condomínio, antes de solicitar o saque ou verificar suas condições. O relatório confirma que esse foi o fluxo completo do período. O condomínio vence em três dias, e a conta bancária contém somente o valor já retirado. Elaine quer apurar o resultado econômico do período e, ao mesmo tempo, distinguir esse cálculo do caixa que já retornou à conta bancária. Calcule os valores e indique como os R$ 300 devem ser tratados no diagnóstico.</p>",
+     "alternativas": {
+      "a": "A perda econômica é de R$ 900, pois somente a retirada reduz os depósitos; o saldo da plataforma fica fora do cálculo até aparecer na conta bancária.",
+      "b": "A perda econômica é de R$ 600, considerando retirada e saldo final; apenas R$ 500 retornaram à conta, e os R$ 300 exigem exame separado de saque.",
+      "c": "O lucro econômico é de R$ 800, somando retirada e saldo final; os depósitos representam valores já convertidos em créditos dentro do aplicativo.",
+      "d": "A perda econômica é de R$ 1.100, porque o saldo final pertence ao aplicativo; os R$ 500 retirados são renda nova e não afetam o custo das apostas."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-07-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O uso de dinheiro essencial, a dívida para apostar e o aumento dos desembolsos para recuperar perdas são sinais de comprometimento; o atendimento deve reorganizar o orçamento, acolher o cliente e indicar apoio especializado quando ele relata perda de controle.</p><p>A alternativa C altera a natureza do gasto para evitar desconforto. A alternativa B aceita dívida como fonte para nova tentativa. A alternativa D transforma conhecimento esportivo em receita provável e oculta a despesa essencial.</p><p>Regra de bolso: proteja despesas essenciais, pare de tratar recuperação como renda e acolha sem converter a entrevista em diagnóstico clínico.</p>",
+     "enunciado": "<p>Fábio procura a consultora Lúcia depois de atrasar a conta de energia. Ele relata que separou R$ 700 para a fatura, perdeu R$ 300 em apostas e usou os R$ 400 restantes em novas rodadas para tentar recuperar o valor. Em seguida, tomou R$ 600 no crédito rotativo e depositou parte desse dinheiro na plataforma. Fábio insiste que a próxima aposta resolverá a conta e a dívida, pois conhece bem o campeonato. Ele se mostra constrangido e pede que as operações sejam registradas como investimento de curto prazo, evitando que apareçam como gasto no orçamento familiar. Lúcia precisa responder ao pedido, reorganizar as prioridades financeiras e acolher o relato sem realizar diagnóstico clínico. Indique a conduta que atende ao problema apresentado.</p>",
+     "alternativas": {
+      "a": "Separar as apostas como desembolso, priorizar energia e dívida, interromper a tentativa de recuperação e orientar apoio especializado se houver perda de controle.",
+      "b": "Tratar o valor como entretenimento mantém neutralidade; a dívida pode financiar nova tentativa desde que Fábio estabeleça uma meta de retirada antecipada.",
+      "c": "Registrar como investimento preserva a confiança do cliente; depois, a consultora pode limitar o aporte à parcela financiada e acompanhar o campeonato.",
+      "d": "Manter a classificação pedida e retirar o gasto essencial da análise, pois o conhecimento esportivo permite projetar o prêmio como receita provável do mês."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-07-q7",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Cada taxa geracional usa o respectivo grupo como denominador; os dados populacionais ajudam a orientar perguntas e ações, mas não diagnosticam a conduta de uma pessoa.</p><p>A alternativa A interpreta adesão interna como composição dos apostadores. A alternativa C usa a taxa geral como diagnóstico individual. A alternativa B soma percentuais calculados sobre grupos distintos.</p><p>Regra de bolso: percentual por grupo descreve frequência dentro do grupo; para conhecer o cliente, investigue o caso concreto.</p>",
+     "enunciado": "<p>Uma equipe prepara uma ação de educação financeira usando a pesquisa citada na aula. O levantamento ouviu pessoas de 16 anos ou mais e apontou apostas online no ano para 17% do universo pesquisado. Dentro das gerações, a adesão informada foi de 27% na Geração Z, 22% entre millennials, 10% na Geração X e 4% entre boomers. Um gerente conclui que 27% dos apostadores pertencem à Geração Z e propõe abordar qualquer cliente jovem como provável apostador. Outra gerente afirma que as taxas ajudam a planejar perguntas, mas dependem do denominador de cada grupo e são insuficientes para classificar uma pessoa específica. A equipe precisa decidir como usar os dados na ação e no atendimento individual. Avalie as interpretações e indique a leitura compatível com a pesquisa.</p>",
+     "alternativas": {
+      "a": "Os 27% descrevem a composição do conjunto de apostadores, por isso a ação pode tratar essa geração como responsável por cerca de um quarto das apostas.",
+      "b": "As taxas geracionais podem ser somadas para estimar 63% de adesão entre pessoas pesquisadas, mantendo o percentual geral apenas como referência secundária.",
+      "c": "Os 17% permitem diagnosticar qualquer grupo sem entrevista, porque a proporção geral substitui diferenças de idade, motivação e orçamento individual.",
+      "d": "Os percentuais medem adesão dentro de cada geração; orientam educação e perguntas, mas o comportamento do cliente depende da investigação de seu caso."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-07-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. A pesquisa descreve motivações e percepções do público, sem diagnosticar Joel nem transformar aposta em investimento; o atendimento examina seus fluxos, dívidas, recursos essenciais e controle relatado.</p><p>A alternativa A cria a categoria de investimento recreativo a partir do motivo e do limite. A alternativa B usa percepção e interface para mudar a natureza da operação. A alternativa D transforma dado populacional em diagnóstico pessoal.</p><p>Regra de bolso: pesquisa sugere perguntas; natureza da operação e situação concreta sustentam a orientação individual.</p>",
+     "enunciado": "<p>No atendimento digital, a especialista Renata conversa com Joel, que declarou apostar online. Ele diz buscar diversão, relata depósitos mensais previamente limitados e apresenta despesas essenciais pagas, ausência de dívida ligada ao jogo e registros de depósitos, retiradas e saldo. Em outra tela, a pesquisa usada pela instituição informa que parte dos participantes aposta para obter dinheiro rapidamente diante de necessidade e que parte percebe a atividade como forma de investir. Um colega de Renata propõe classificar Joel como financeiramente fragilizado apenas por pertencer ao público pesquisado. Outro sugere aceitar a autodeclaração de investimento, já que o aplicativo contém saldo e gráficos. Renata precisa interpretar a pesquisa e conduzir a entrevista individual. Analise o caso e indique a conclusão aplicável.</p>",
+     "alternativas": {
+      "a": "A motivação de diversão torna a operação um investimento recreativo, desde que Joel registre o limite mensal e mantenha as contas essenciais pagas.",
+      "b": "A percepção registrada na pesquisa valida a classificação financeira, pois a existência de saldo e histórico cria posição econômica no aplicativo.",
+      "c": "A pesquisa orienta perguntas, mas o caso exige análise própria; a atividade continua sendo aposta, e orçamento, dívida e controle precisam ser verificados.",
+      "d": "A taxa populacional confirma fragilidade individual; o orçamento organizado apenas reduz a urgência de encaminhamento para apoio especializado."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-07-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Vinte depósitos de R$ 30 somam R$ 600; subtraídas as retiradas de R$ 180, a saída líquida é R$ 420. O uso do dinheiro do mercado e a tentativa de recuperar perdas exigem reorganização, sem projetar o prêmio como renda.</p><p>A alternativa B chama R$ 180 de perda e de renda provável, sem fechar o fluxo. A alternativa C ignora retiradas efetivamente recebidas. A alternativa D separa prêmio e depósitos e exclui pequenos valores do orçamento.</p><p>Regra de bolso: frequência transforma pequenos depósitos em valor relevante, e o resultado nasce do fluxo completo.</p>",
+     "enunciado": "<p>Ao levar sua planilha à agência, Marta afirma que apostas de R$ 30 são pequenas demais para afetar o orçamento. No mês, o extrato mostra vinte depósitos desse valor, duas retiradas que somam R$ 180 e saldo final nulo. A cliente destaca uma das retiradas como prêmio e omite que parcelou a compra de alimentos depois de consumir o dinheiro reservado para o mercado. Ela pede ao gerente Davi que projete R$ 180 mensais como renda complementar e afirma que fará novos depósitos para recuperar o restante. Davi percebe que o valor unitário reduz a percepção do total e que a retirada isolada domina a narrativa da cliente. Ele precisa apresentar o efeito acumulado e reenquadrar a expectativa sem constrangê-la. Calcule o resultado do mês e indique a resposta profissional.</p>",
+     "alternativas": {
+      "a": "Os depósitos somam R$ 600 e a saída líquida é R$ 420; Davi trata o valor como gasto, protege o orçamento essencial e rejeita a retirada como renda recorrente.",
+      "b": "Os depósitos somam R$ 600 e a perda é R$ 180; Davi mantém essa retirada como renda provável, mas reduz a projeção pelo risco de novas apostas.",
+      "c": "A saída líquida é R$ 600; Davi desconsidera as retiradas porque prêmio de aposta não retorna ao orçamento e prioriza apenas a dívida alimentar.",
+      "d": "O resultado é lucro de R$ 180; Davi separa o prêmio dos depósitos, pois valores unitários de R$ 30 representam entretenimento fora do fluxo mensal."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-07-q10",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Aposta e investimento podem envolver perda, mas diferem pela natureza da operação e pela origem do resultado; um prêmio condicionado ao evento não oferece renda previsível para financiar uma meta com data.</p><p>A alternativa B usa limite e estatística para projetar prêmio como retorno de carteira. A alternativa C classifica a operação pela interface. A alternativa D faz a intenção do usuário alterar a natureza da aposta.</p><p>Regra de bolso: risco existe nas duas atividades, mas aposta não cria a posição econômica que sustenta um investimento.</p>",
+     "enunciado": "<p>Depois de receber o décimo terceiro, Sérgio informa ao assessor Natan que pretende reservar R$ 2.000 para apostas esportivas. Ele chama o valor de carteira de alta volatilidade e argumenta que investimentos também podem perder, portanto as operações seriam equivalentes. Sérgio acompanha estatísticas dos campeonatos, acredita que isso torna os ganhos previsíveis e quer incluir prêmios futuros no financiamento de uma viagem marcada para quatro meses. Seu orçamento cobre as despesas atuais, mas a viagem ainda depende desse valor incerto. Quando Natan sugere separar entretenimento de planejamento, Sérgio insiste que o aplicativo oferece gráficos parecidos com os da corretora. Natan precisa responder sem afirmar que investimentos são isentos de risco nem usar a aparência da plataforma como critério. Explique a distinção aplicável ao plano de Sérgio.</p>",
+     "alternativas": {
+      "a": "A aposta condiciona prêmio ao evento e não cria posição econômica contratual; a viagem pede recursos planejados sem depender de prêmio incerto.",
+      "b": "A perda possível aproxima as atividades; com estatísticas esportivas e limite de R$ 2.000, os prêmios podem compor a meta como retorno esperado da carteira.",
+      "c": "A interface bancária transforma o saldo em investimento; Natan pode separar apenas a parcela destinada à viagem e manter o restante como carteira especulativa.",
+      "d": "A finalidade de entretenimento define a categoria; caso Sérgio passe a buscar renda, a mesma operação se torna investimento sujeito a oscilação e perda."
+     },
+     "gabarito": "a"
+    }
+   ],
+   "Finanças comportamentais na estratégia e na gestão de risco": [
+    {
+     "id": "cpror-rel-08-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Disciplina aplica critérios justificáveis e os revisa diante de mudança nas premissas, enquanto rigidez preserva a conduta apesar de uma alteração relevante.</p><p>A alternativa B confunde disciplina com manutenção mecânica e limita rigidez a compras após altas. A alternativa A vincula os conceitos apenas a emoção e conhecimento. A alternativa D usa o resultado para nomear o processo.</p><p>Regra de bolso: disciplina preserva o processo; mudança de premissa exige revisão do processo.</p>",
+     "enunciado": "<p>Uma regra de investimento foi definida antes das oscilações do mercado. Compare disciplina e rigidez na aplicação dessa regra.</p>",
+     "alternativas": {
+      "a": "Disciplina depende da tolerância emocional do cliente, enquanto rigidez decorre da falta de conhecimento sobre produtos financeiros.",
+      "b": "Disciplina preserva a decisão inicial durante quedas, enquanto rigidez aparece somente quando o cliente aumenta a exposição após uma alta.",
+      "c": "Disciplina segue critérios justificáveis e admite revisão quando as premissas mudam; rigidez insiste na regra apesar de mudança relevante.",
+      "d": "Disciplina e rigidez descrevem o mesmo procedimento, mas recebem nomes diferentes conforme o resultado positivo ou negativo da carteira."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-08-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Regras e listas podem reduzir a influência de erros previsíveis, mas não eliminam vieses e perdem qualidade quando viram mera formalidade.</p><p>A alternativa A promete eliminação pelo preenchimento. A alternativa C troca objetivos e revisão por automatismo. A alternativa B atribui às ferramentas a previsão do mercado.</p><p>Regra de bolso: procedimento ajuda a mitigar viés; reflexão e acompanhamento dão utilidade ao procedimento.</p>",
+     "enunciado": "<p>Uma instituição usa listas de verificação e regras prévias para lidar com vieses. Identifique o alcance dessas ferramentas.</p>",
+     "alternativas": {
+      "a": "As ferramentas eliminam os vieses quando o cliente preenche os campos e confirma que compreendeu os riscos da carteira.",
+      "b": "As ferramentas servem para prever o humor do mercado, permitindo que o investidor antecipe movimentos coletivos de preço.",
+      "c": "As ferramentas substituem a avaliação de objetivos, pois transformam decisões emocionais em procedimentos automáticos e estáveis.",
+      "d": "As ferramentas mitigam erros previsíveis, mas dependem da análise das respostas e da revisão quando as condições mudam."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-08-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Diante de possível confirmação, o procedimento é explicitar uma hipótese contrária, procurar evidência confiável e respeitar o limite enquanto se reexaminam as premissas.</p><p>A alternativa A usa valorização como confirmação suficiente e abandona o limite. A alternativa C transforma o viés em prova de perda de fundamento. A alternativa D preserva a regra de modo rígido e ignora informação relevante.</p><p>Regra de bolso: contra confirmação, formule a tese oposta e procure evidência capaz de testar a convicção atual.</p>",
+     "enunciado": "<p>A assessora Joana atende Raul, que deseja elevar de 10% para 35% a participação de uma empresa em sua carteira. Ele leu relatórios favoráveis, acompanha analistas que defendem a ação e descartou duas análises contrárias por considerá-las pessimistas. Raul afirma que a valorização recente confirma sua tese e pede execução imediata. A política registrada limita cada emissor a 15% e prevê revisão das hipóteses diante de informação nova. Joana encontra dados confiáveis sobre perda de um contrato relevante, mas Raul insiste que notícias desfavoráveis apenas revelam incompreensão do mercado. Ela precisa lidar com possível confirmação sem tratar a regra como barreira burocrática. Indique o procedimento coerente com a estratégia comportamental.</p>",
+     "alternativas": {
+      "a": "Elevar a posição para 35%, pois a valorização confirma a hipótese inicial e torna o limite anterior incompatível com o comportamento observado.",
+      "b": "Manter o limite de 15%, registrar uma hipótese contrária e confrontar a tese com evidências confiáveis antes de qualquer revisão da exposição.",
+      "c": "Reduzir a posição para zero, porque a rejeição de relatórios contrários comprova que a tese perdeu fundamento econômico e exige saída imediata.",
+      "d": "Manter 15% sem examinar o contrato perdido, pois uma política prévia funciona apenas quando permanece imune a informações surgidas depois."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-08-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O aporte programado ajuda a executar uma intenção, mas precisa continuar compatível com renda, despesas essenciais, liquidez e objetivos; a perda de renda altera as premissas e justifica revisão.</p><p>A alternativa A trata autorização passada como prevalente e usa risco para compensar renda. A alternativa C confunde revisão com abandono definitivo e promete eliminar influência comportamental. A alternativa D consome a reserva para manter o automatismo.</p><p>Regra de bolso: automatize a execução, acompanhe as condições e revise quando o orçamento mudar.</p>",
+     "enunciado": "<p>Seis meses atrás, Bianca autorizou aporte programado de R$ 1.200 por mês para uma meta de longo prazo. Na ocasião, a renda líquida era de R$ 9.000, as despesas estavam cobertas e havia reserva para imprevistos. Agora ela perdeu uma fonte de renda, passou a receber R$ 5.500 e começou a usar a reserva para despesas essenciais. O aplicativo manteve os débitos, e Bianca pede ao gerente que preserve a programação porque interrompê-la demonstraria falta de disciplina. Ela acredita que o mecanismo automático protege a decisão contra emoções e deseja compensar a redução da renda com exposição superior a risco. O gerente precisa distinguir execução da intenção, orçamento atual e revisão das premissas. Analise o pedido e indique a conduta aplicável.</p>",
+     "alternativas": {
+      "a": "Preservar o aporte e elevar o risco mantém a disciplina, porque a autorização anterior prevalece sobre alterações temporárias de renda e liquidez.",
+      "b": "Reavaliar valor e frequência do aporte diante da renda e das despesas atuais, pois automatização exige acompanhamento e mudança relevante admite revisão.",
+      "c": "Suspender a programação em caráter definitivo elimina a influência comportamental, pois automatização e revisão de orçamento são incompatíveis.",
+      "d": "Usar a reserva até recompor a renda sustenta a estratégia, desde que a programação permaneça ativa e a carteira conserve o horizonte de longo prazo."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-08-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A capacidade financeira depende de liquidez, concentração, obrigações e necessidade de recursos; a disposição emocional declarada não remove o vencimento do imóvel nem cria tempo para recuperar perdas.</p><p>A alternativa D usa serenidade como substituta da capacidade. A alternativa B transfere o prazo da parcela previdenciária para outro objetivo. A alternativa C trata concentração e regra única como redução de risco.</p><p>Regra de bolso: pergunte se o cliente aceita a oscilação e se o dinheiro pode permanecer investido durante ela.</p>",
+     "enunciado": "<p>Durante a revisão anual, o planejador Caio apresenta a Leila uma carteira cuja oscilação projetada parece compatível com o perfil declarado. Leila diz aceitar uma queda de 20% e afirma que manteria a estratégia. No levantamento financeiro, porém, R$ 180.000 dos R$ 300.000 investidos serão usados para quitar a parcela final de um imóvel em nove meses. Os outros R$ 120.000 têm horizonte de quinze anos. Leila insiste em aplicar a carteira inteira na mesma estratégia, pois considera sua tranquilidade emocional prova de que suporta o risco. Caio precisa avaliar a possibilidade prática de manter a posição e separar disposição psicológica de condição financeira. Analise os dados e indique a leitura que orienta a gestão do risco.</p>",
+     "alternativas": {
+      "a": "A parcela do imóvel tem restrição de prazo e liquidez própria; disposição para oscilar não substitui capacidade de cumprir a obrigação próxima.",
+      "b": "O horizonte de quinze anos se estende ao patrimônio inteiro, pois a finalidade previdenciária compensa o vencimento próximo da parcela do imóvel.",
+      "c": "A concentração numa estratégia reduz o risco comportamental, já que uma única regra de manutenção evita decisões diferentes entre objetivos.",
+      "d": "A tolerância declarada autoriza a estratégia para os R$ 300.000, porque a serenidade diante da perda substitui a análise de liquidez da carteira."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-08-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Relatos recentes podem ativar disponibilidade; sem mudança nos objetivos ou urgência, cabe retomar o plano, testar as notícias contra dados e premissas e usar uma pausa para decisões não urgentes.</p><p>A alternativa B usa alívio emocional como critério de venda. A alternativa C transforma calendário em rigidez e bloqueia informação relevante. A alternativa D promete recuperação que a estratégia não garante.</p><p>Regra de bolso: sem urgência concreta, pause, compare relatos com dados e volte às premissas registradas.</p>",
+     "enunciado": "<p>Na semana seguinte a uma queda expressiva, Mauro telefona para a especialista Elisa e pede a venda de sua carteira diversificada. Ele passou o dia acompanhando relatos de perdas nas redes sociais e afirma que as histórias recentes provam a continuidade da queda. O plano registrado prevê horizonte de doze anos, revisão trimestral e ausência de retiradas nos próximos cinco anos. Mauro confirma que renda, objetivos e necessidade de liquidez permanecem iguais, mas insiste em vender naquele momento para aliviar a preocupação. A revisão marcada ocorrerá em dez dias, e qualquer obrigação concreta que demande caixa surgirá depois desse prazo. Elisa precisa responder ao impulso e verificar se as informações alteram as premissas. Indique a atuação coerente com o processo estabelecido.</p>",
+     "alternativas": {
+      "a": "Retomar objetivos e critérios, comparar relatos com dados relevantes, examinar as premissas e propor uma pausa curta antes da decisão sem urgência.",
+      "b": "Executar a venda para reduzir a ansiedade e recomprar na revisão trimestral, pois a reação emocional protege a capacidade de manter a estratégia depois.",
+      "c": "Recusar qualquer revisão até o trimestre, porque seguir o calendário significa preservar a alocação mesmo diante de informação capaz de alterar a tese.",
+      "d": "Prometer recuperação no horizonte de doze anos e manter a carteira, pois prazo longo transforma a perda intermediária em oscilação reversível."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-08-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A regra anterior ajuda a reduzir manada e entusiasmo após altas, mas sua aplicação ainda considera custos, liquidez e objetivos e não transforma rebalanceamento em garantia de lucro.</p><p>A alternativa B usa comportamento dos colegas para invalidar o limite. A alternativa A transforma desvio de peso em diagnóstico de bolha e exige saída integral. A alternativa D promete ganho a partir da realização e dos custos.</p><p>Regra de bolso: rebalancear restaura a exposição planejada; resultado futuro continua incerto.</p>",
+     "enunciado": "<p>O consultor Henrique revisa a carteira de Sônia depois de uma alta prolongada em determinado setor. A participação planejada para o setor era de 20%, mas chegou a 34% com a valorização. Sônia quer manter o peso porque colegas também compraram e porque vender parte do ativo vencedor parece abrir mão de ganhos futuros. A política prevê revisão quando o peso ultrapassa 25%, considerando custos, liquidez e mudanças nos objetivos. Os objetivos permanecem iguais, há liquidez para negociar e os custos da operação entram na decisão. Sônia afirma que o rebalanceamento assegurará lucro caso seja realizado no momento previsto pela regra. A decisão de Henrique envolve aplicar o procedimento sem prometer resultado. Indique a orientação compatível com a política e com as limitações da ferramenta.</p>",
+     "alternativas": {
+      "a": "Vender a posição inteira porque o afastamento do peso revela bolha, e a regra de rebalanceamento identifica o momento de saída do setor.",
+      "b": "Manter 34% porque a adesão dos colegas confirma o setor, e o limite de 25% perde validade quando o mercado recompensa a concentração.",
+      "c": "Revisar a exposição pelo limite definido e considerar custos e liquidez; o rebalanceamento reduz dependência do entusiasmo, mas não assegura lucro.",
+      "d": "Rebalancear para 20% garante ganho ao realizar parte da alta, desde que os custos sejam inferiores à valorização acumulada pela carteira."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-08-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. O comportamento pode contribuir para desvios, mas não revela automaticamente valor ou momento de reversão; custos, perdas intermediárias, fundamentos e capacidade de sustentar a tese limitam sua execução.</p><p>A alternativa C transforma pessimismo em medida de valor e ignora custos. A alternativa B trata oposição à maioria como prova de análise superior. A alternativa D exclui a hipótese comportamental em vez de reconhecer seus limites.</p><p>Regra de bolso: comportamento pode formular uma hipótese; valor, prazo, custo e limite de perda decidem se ela pode ser executada.</p>",
+     "enunciado": "<p>Um comitê estuda uma estratégia contrária baseada na hipótese de pessimismo exagerado em um segmento. Os preços caíram durante oito meses, e a equipe acredita que o comportamento coletivo contribuiu para o desvio. A análise apresenta três fragilidades: há ampla faixa de estimativas para o valor econômico, o custo de manter a posição cresce com o tempo e uma perda adicional poderia superar o limite definido pelo fundo. Um diretor sustenta que identificar pessimismo basta para provar preço inadequado e reversão próxima. Outro lembra que a maioria pode estar refletindo fundamentos ainda incompletos e que o movimento pode persistir além da capacidade de execução. O comitê precisa decidir o alcance da hipótese comportamental. Avalie as posições e indique a conclusão sustentada pelo caso.</p>",
+     "alternativas": {
+      "a": "A hipótese pode integrar a análise, mas não define valor nem prazo; persistência, custos, fundamentos e limite de perda condicionam a execução.",
+      "b": "A queda prolongada valida a compra, porque contrariar a maioria demonstra análise independente e reduz o risco de seguir narrativas dominantes.",
+      "c": "O pessimismo observado determina o valor adequado, e os custos intermediários perdem relevância quando a tese contrária possui horizonte suficiente para a reversão.",
+      "d": "A incerteza sobre o valor impede usar comportamento em estratégia, pois desvios de preço só podem ser avaliados depois de sua reversão completa."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-08-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. O preço de compra pode funcionar como âncora; a análise deve usar condições atuais, custos, liquidez e alternativas futuras, além de separar o recurso com obrigação próxima da parcela com horizonte longo.</p><p>A alternativa A transforma a âncora em referência objetiva e chama manutenção de disciplina. A alternativa B confunde preenchimento com exame das respostas. A alternativa C promete eliminar o viés por meio da venda integral.</p><p>Regra de bolso: contra ancoragem, avalie o que existe hoje e o que cada objetivo exigirá daqui para frente.</p>",
+     "enunciado": "<p>A gerente Patrícia revisa a posição de Gilberto em um fundo que caiu 18% desde a aplicação. Ele usa o preço de compra como referência e recusa qualquer mudança até recuperar o valor nominal. Metade do recurso será usada em quatro meses para pagar uma obrigação contratada. O restante pode permanecer por dez anos. A lista da instituição pede registrar alternativas futuras, custos de saída, liquidez e cenários de erro. Gilberto aceita preencher os campos, mas exige que Patrícia marque manutenção da posição como conclusão automática, pois vender abaixo do preço de compra lhe parece admitir uma decisão ruim. O fundo possui liquidez compatível com o prazo da obrigação, mas o valor futuro permanece incerto. Patrícia precisa evitar que a lista vire formalidade e separar as duas finalidades. Analise o caso e indique a conduta aplicável.</p>",
+     "alternativas": {
+      "a": "Manter a posição inteira preserva a disciplina, porque o preço de compra é a referência objetiva para distinguir perda temporária de prejuízo realizado.",
+      "b": "Preencher a lista e aceitar a conclusão de Gilberto mitiga o viés, pois registrar sua preferência torna a decisão justificável perante o plano.",
+      "c": "Vender a posição inteira elimina a ancoragem, porque qualquer manutenção abaixo do preço de compra conserva a influência da referência passada.",
+      "d": "Refazer a avaliação com condições atuais, examinar custos e alternativas futuras e separar o recurso da obrigação da parcela de longo prazo."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-08-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. Cenários de erro e limites de exposição ajudam a mitigar excesso de confiança; retornos recentes e disposição psicológica não eliminam concentração, horizonte da meta ou capacidade financeira.</p><p>A alternativa A usa reserva e tranquilidade para justificar concentração. A alternativa C escolhe um meio-termo sem vínculo com as restrições. A alternativa D trata a venda anterior como neutralização do viés e libera a mesma concentração.</p><p>Regra de bolso: contra excesso de confiança, teste o cenário de erro e limite o dano antes de discutir o ganho esperado.</p>",
+     "enunciado": "<p>O assessor Daniel atende Helena, que obteve retorno elevado em três operações concentradas e passou a atribuir o resultado à própria capacidade de antecipar o mercado. Ela quer comprometer 60% da carteira em uma nova tese e afirma que diversificação reduziria o ganho que espera. O plano limita a exposição a 20%, mantém reserva para despesas de doze meses e prevê cenários adversos antes de mudanças relevantes. Helena insiste que sua tranquilidade diante de perdas comprova capacidade para a concentração e pede que Daniel suspenda o limite apenas nesta oportunidade. A renda da cliente cobre as despesas correntes, mas metade do patrimônio financia uma meta com data em dois anos. Daniel precisa abordar excesso de confiança, risco financeiro e validade das regras anteriores. Avalie o pedido e indique a resposta coerente com a estratégia.</p>",
+     "alternativas": {
+      "a": "Elevar para 60% reconhece a experiência recente, e a reserva de doze meses converte tolerância emocional em capacidade para concentrar a meta de dois anos.",
+      "b": "Manter o limite, testar cenários de erro e separar a meta de dois anos; retornos recentes e tranquilidade não removem concentração nem restrição financeira.",
+      "c": "Ampliar para 40% equilibra convicção e prudência, porque o ponto intermediário reduz o excesso de confiança sem abandonar a oportunidade percebida.",
+      "d": "Encerrar as posições anteriores neutraliza a autoatribuição, e a nova tese pode então receber 60% porque deixa de estar ligada aos acertos passados."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Ativos reais e financeiros: diferenças na decisão do cliente": [
+    {
+     "id": "cpror-rel-09-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Imóvel e veículo são bens reais, enquanto o título cria direito de crédito e a ação representa participação no capital de uma companhia.</p><p>A alternativa B classifica pela geração de renda e expressão monetária. A alternativa A trata participação societária como bem real. A alternativa D usa negociação e existência de contrato para inverter as categorias.</p><p>Regra de bolso: bem e utilidade econômica indicam ativo real; posição monetária ou direito econômico indicam ativo financeiro.</p>",
+     "enunciado": "<p>Uma cliente possui um imóvel, um veículo, um título de dívida e ações. Classifique essas posições pela natureza do ativo.</p>",
+     "alternativas": {
+      "a": "Imóvel, veículo e ações são ativos reais por integrarem o patrimônio; somente o título de dívida constitui posição financeira contratual.",
+      "b": "Imóvel e ações são ativos reais porque podem gerar renda; veículo e título de dívida são financeiros porque possuem valor expresso em moeda.",
+      "c": "Imóvel e veículo são ativos reais; título de dívida e ações são ativos financeiros que representam direitos econômicos ou contratuais.",
+      "d": "Veículo e ações são ativos financeiros por admitirem negociação; imóvel e título de dívida são reais por dependerem de um contrato específico."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-09-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Moeda oferece exposição cambial, título de renda fixa representa direito econômico e ativos de bolsa são posições financeiras com características próprias.</p><p>A alternativa A usa forma física, financiamento e preço para classificá-los como reais. A alternativa C transforma categoria financeira em liquidez imediata. A alternativa D faz finalidade e rendimento mudarem a natureza da posição.</p><p>Regra de bolso: posição financeira descreve exposição ou direito; isso não promete rendimento nem liquidez.</p>",
+     "enunciado": "<p>Um investidor mantém moeda estrangeira, título de renda fixa e ativo negociado em bolsa. Identifique o que essas posições representam.</p>",
+     "alternativas": {
+      "a": "São bens reais, pois a moeda pode existir fisicamente, o título financia atividade produtiva e o ativo de bolsa possui preço de mercado.",
+      "b": "São posições financeiras; a moeda gera exposição cambial, o título cria direito econômico e o ativo de bolsa segue as características contratadas.",
+      "c": "São posições financeiras com liquidez imediata, porque moeda, renda fixa e bolsa possuem referência pública de preço ou remuneração.",
+      "d": "São bens de consumo quando adquiridos para proteção patrimonial e passam a ativos financeiros somente depois de produzirem rendimento."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-09-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O computador é um ativo real cuja utilidade pode aumentar a produtividade, mas esse benefício não garante preço de revenda; desgaste, obsolescência e demanda influenciam o valor futuro.</p><p>A alternativa A transforma utilidade em posição financeira e liga renda ao preço de revenda. A alternativa C usa valor e durabilidade como garantia de preservação. A alternativa D exclui um benefício operacional relevante.</p><p>Regra de bolso: utilidade pode justificar o bem, enquanto retorno de revenda exige uma análise separada.</p>",
+     "enunciado": "<p>A designer Marina pretende comprar um computador de R$ 18.000 para executar projetos incompatíveis com seu equipamento atual. Ela estima que a nova máquina reduza o tempo de entrega e permita aceitar trabalhos adicionais, mas afirma que o computador também será um investimento porque espera revendê-lo por R$ 22.000 após três anos. O vendedor menciona alta demanda pelo modelo atual, enquanto Marina desconsidera desgaste, obsolescência e lançamentos futuros. Sua reserva de emergência permanecerá preservada, e a compra cabe no caixa profissional. O consultor precisa separar a utilidade operacional da expectativa de retorno sem ignorar o benefício para o trabalho. Analise a decisão e indique a classificação aplicável.</p>",
+     "alternativas": {
+      "a": "A capacidade de gerar trabalhos converte o computador em ativo financeiro, e a renda adicional sustenta o preço de revenda projetado por Marina.",
+      "b": "A utilidade produtiva pode justificar a compra, mas não assegura valorização na revenda; desgaste, obsolescência e demanda futura afetam o preço.",
+      "c": "O valor de R$ 18.000 torna o equipamento investimento, pois bens duráveis preservam preço quando atendem a uma atividade profissional relevante.",
+      "d": "A compra é consumo sem efeito econômico, porque utilidade operacional e ganho de produtividade ficam fora da análise patrimonial do equipamento."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-09-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Dos R$ 36.000 de receita projetada, subtraem-se R$ 5.000, R$ 3.000 e R$ 2.000, chegando a R$ 26.000 antes de eventual vacância. O preço anunciado também não garante o valor obtido na venda.</p><p>A alternativa A confunde receita bruta com resultado e capitaliza custos. A alternativa B desconta apenas manutenção e chega a R$ 31.000. A alternativa C desconta R$ 8.000, mas exclui a intermediação sem fundamento.</p><p>Regra de bolso: aluguel é receita; retorno exige descontar custos e considerar períodos sem ocupação e condições de saída.</p>",
+     "enunciado": "<p>Roberto avalia um apartamento para locação e mostra ao assessor uma projeção de R$ 36.000 em aluguéis durante o primeiro ano. Para defender que esse valor representa o retorno do imóvel, ele deixa fora da planilha R$ 5.000 de manutenção, R$ 3.000 de tributos e R$ 2.000 de intermediação previstos para o período. A projeção pressupõe ocupação durante os doze meses, embora imóveis semelhantes tenham passado algum tempo vagos. Roberto também pretende usar o preço anunciado por outro proprietário como valor de venda disponível. O assessor quer separar receita bruta, resultado após os custos informados e riscos da estimativa. Calcule o resultado projetado antes de eventual vacância e indique o ajuste necessário à análise.</p>",
+     "alternativas": {
+      "a": "O resultado projetado é R$ 36.000, pois manutenção, tributos e intermediação integram o valor patrimonial e só afetam o preço numa venda futura.",
+      "b": "O resultado projetado é R$ 31.000, descontando manutenção; tributos e intermediação ficam ligados à propriedade e não à geração da renda.",
+      "c": "O resultado projetado é R$ 28.000, descontando manutenção e tributos; intermediação representa investimento na liquidez e preserva a receita.",
+      "d": "O resultado projetado é R$ 26.000 após os três custos; vacância e diferença entre preço anunciado e obtido ainda precisam ser examinadas."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-09-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O valor afetivo pode justificar a manutenção de parte da coleção, mas a parcela tratada como investimento depende de autenticidade, conservação, custos de intermediação e existência de compradores no prazo.</p><p>A alternativa D transforma valor cultural em demanda e disponibilidade. A alternativa B classifica avaliação como direito financeiro. A alternativa C exclui a conservação das peças oferecidas à venda.</p><p>Regra de bolso: apreço pessoal explica a utilidade; preço realizável exige documentação, conservação, custos e comprador.</p>",
+     "enunciado": "<p>Depois de receber uma coleção de quadros, Alice procura a gerente Fabiana e mostra avaliações feitas por uma galeria. Ela atribui aos bens valor afetivo, deseja conservar duas obras na família e pretende vender as demais em seis meses para financiar um curso. A galeria informa preços anunciados de peças semelhantes, cobra comissão e solicita documentação de autenticidade e avaliação do estado de conservação. Alice acredita que o valor cultural garante comprador no prazo e pede que a gerente registre a coleção pelo total anunciado como recurso disponível para a matrícula. Fabiana precisa respeitar a finalidade afetiva e avaliar a parcela tratada como investimento. Analise os elementos do caso e indique a leitura aplicável.</p>",
+     "alternativas": {
+      "a": "A utilidade afetiva é distinta do retorno; autenticidade, conservação, comissão, compradores e prazo de venda condicionam o recurso esperado.",
+      "b": "As obras são ativos financeiros porque a galeria produz avaliação monetária, e a documentação converte o preço anunciado em direito de recebimento.",
+      "c": "Conservação interessa somente às peças mantidas na família; as destinadas à venda dependem do preço de mercado divulgado pela intermediária.",
+      "d": "Valor cultural e afetivo demonstram demanda, de modo que o total anunciado pode financiar o curso depois de descontada apenas a comissão da galeria."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-09-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Liquidez depende de conversão em dinheiro no prazo e em condições aceitáveis; o bem tem incerteza de venda e desconto, enquanto o título possui carência além da obrigação.</p><p>A alternativa B trata natureza financeira como liquidez e ignora a carência. A alternativa C transforma interessados e renúncia à remuneração em saídas previstas. A alternativa D usa igualdade de valor como igualdade de liquidez.</p><p>Regra de bolso: categoria não paga a conta; prazo, carência, negociação e desconto determinam a liquidez útil.</p>",
+     "enunciado": "<p>O gerente Eduardo compara duas alternativas para a reserva de uma obrigação que vence em cinco meses. A primeira é um bem oferecido por R$ 140.000, com interessados ocasionais e histórico de vendas concluídas entre quatro e nove meses, às vezes com desconto. A segunda é um título financeiro com valor de R$ 140.000, mas cujo contrato estabelece carência de doze meses e ausência de negociação frequente antes do vencimento. A cliente Neide afirma que o título é líquido por ser financeiro e que o bem também é líquido porque existem compradores no mercado. Ela quer escolher entre as opções usando apenas suas categorias. Eduardo precisa relacionar o prazo da obrigação às condições reais de conversão em dinheiro. Compare as alternativas e indique a conclusão sustentada pelos dados.</p>",
+     "alternativas": {
+      "a": "As duas alternativas apresentam restrições para o prazo de cinco meses: o bem pode exigir tempo ou desconto, e o título possui carência superior à meta.",
+      "b": "O título possui liquidez por natureza, e a carência afeta apenas sua remuneração; o bem depende de negociação e por isso fica fora da comparação.",
+      "c": "A existência de interessados torna o bem disponível em cinco meses, enquanto a categoria financeira permite resgatar o título mediante renúncia à remuneração.",
+      "d": "As alternativas têm a mesma liquidez porque possuem o mesmo valor de R$ 140.000, cabendo comparar somente os riscos de crédito e conservação."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-09-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A falta de cotação diária apenas reduz a visibilidade da oscilação; o valor do imóvel pode mudar, e sua utilidade para a meta depende de prazo de venda, desconto, riscos e custos.</p><p>A alternativa A transforma registro antigo em estabilidade e cotação em perda definitiva. A alternativa B associa negociação frequente a segurança e falta de tela a risco por si só. A alternativa D inventa igualdade de oscilação.</p><p>Regra de bolso: preço ausente da tela continua podendo variar; compare condições econômicas, e não a frequência da cotação.</p>",
+     "enunciado": "<p>Durante uma conversa familiar, César compara uma ação que aparece diariamente no aplicativo com uma casa herdada cuja última avaliação ocorreu há quatro anos. A ação oscilou 12% no mês, enquanto a casa continua registrada pelo mesmo valor no controle patrimonial. César conclui que a casa é estável e segura porque sua tela exibe a mesma avaliação antiga, e pretende concentrar nela o dinheiro destinado a uma meta próxima. Um corretor estima que a venda poderia levar vários meses e exigir desconto se fosse urgente. A ação possui negociação frequente, mas também riscos próprios. A assessora Lívia precisa explicar o que a visibilidade dos preços permite concluir e quais fatores entram na comparação. Avalie o raciocínio de César e indique a leitura aplicável.</p>",
+     "alternativas": {
+      "a": "O registro estável comprova preservação econômica da casa, enquanto a cotação diária da ação demonstra perda patrimonial mesmo antes da venda.",
+      "b": "A ação oferece segurança porque negocia com frequência, e a casa oferece risco porque depende de corretor e carece de atualização diária do preço.",
+      "c": "Ausência de cotação esconde possíveis variações da casa; prazo de venda, desconto, riscos e custos devem ser comparados com a alternativa financeira.",
+      "d": "A casa e a ação apresentam a mesma oscilação, pois ativos com igual valor patrimonial convergem quando o preço do imóvel recebe nova avaliação."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-09-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. A cota de fundo imobiliário é uma posição financeira regida por suas próprias regras, cuja exposição indireta ao setor não equivale à propriedade de um imóvel nem dispensa a análise de liquidez para a meta.</p><p>A alternativa B atribui propriedade direta e comportamento idêntico à cota. A alternativa C presume disponibilidade pelo mercado e exclui o imóvel da comparação. A alternativa D usa o setor comum para projetar uma posição pela outra.</p><p>Regra de bolso: imóvel é propriedade direta; cota é posição financeira exposta ao setor, com preço, riscos e liquidez próprios.</p>",
+     "enunciado": "<p>A investidora Paula possui um apartamento alugado em um bairro comercial e avalia vender aplicações para comprar cotas de um fundo imobiliário que investe em empreendimentos de várias cidades. Ela argumenta que as cotas equivalem a adquirir frações dos imóveis e que, por isso, reproduzirão o preço, o aluguel e a liquidez de seu apartamento. O fundo tem regras próprias, cotação em mercado e carteira de ativos que pode mudar. Paula deseja usar as cotas para uma despesa prevista em oito meses e considera o histórico do apartamento suficiente para estimar o comportamento do fundo. O assessor Murilo precisa separar exposição imobiliária indireta, propriedade direta e compatibilidade da posição financeira com a meta. Analise a comparação e indique a conclusão aplicável.</p>",
+     "alternativas": {
+      "a": "A cota é posição financeira com regras e riscos próprios; exposição imobiliária indireta não reproduz um imóvel específico, e sua liquidez precisa ser examinada.",
+      "b": "A cota transfere a Paula propriedade proporcional dos empreendimentos, de modo que aluguel, preço e prazo de venda seguem os imóveis da carteira.",
+      "c": "A negociação em mercado torna a cota equivalente a dinheiro para oito meses, enquanto o apartamento permanece fora da análise por ser ativo real.",
+      "d": "O histórico do apartamento estima o fundo porque ambos dependem do setor imobiliário, e a diversificação geográfica reduz a diferença entre as posições."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-09-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. Salário, bônus, aluguéis e crédito corporativo podem depender do mesmo setor e região; a análise patrimonial precisa agregar essas exposições apesar de suas formas jurídicas diferentes.</p><p>A alternativa A trata contratos separados como diversificação econômica. A alternativa D confunde reserva de emergência com neutralização de concentração. A alternativa C isola o crédito corporativo do ambiente que afeta o emissor.</p><p>Regra de bolso: some as exposições pelo fator econômico comum, e não apenas pelo nome do ativo ou do contrato.</p>",
+     "enunciado": "<p>O engenheiro Flávio trabalha para uma construtora regional, recebe bônus ligados às vendas locais e possui a moradia e dois imóveis alugados na mesma cidade. Ao revisar os investimentos, ele propõe direcionar R$ 400.000 para títulos de dívida emitidos por outra empresa do setor de construção que atua principalmente na região. Flávio afirma que a carteira ficará diversificada porque salário, imóveis e títulos pertencem a categorias jurídicas diferentes. Sua reserva de emergência está coberta, mas os aluguéis sustentam parte relevante das despesas familiares. A analista Rebeca precisa avaliar o patrimônio total, a origem da renda e os fatores econômicos compartilhados antes de discutir o título. Analise a proposta e indique o diagnóstico aplicável.</p>",
+     "alternativas": {
+      "a": "As categorias diferentes produzem diversificação, pois renda profissional, imóveis e direito de crédito respondem a contratos e fontes de pagamento separados.",
+      "b": "Renda, imóveis e título compartilham setor e região; a análise conjunta revela concentração que os rótulos jurídicos isolados podem esconder.",
+      "c": "O emissor distinto separa o risco do salário e dos aluguéis, porque a dívida corporativa depende do crédito da empresa e não do mercado regional.",
+      "d": "A reserva coberta neutraliza a concentração, já que o caixa de emergência protege despesas enquanto setor e região atravessam eventual queda de demanda."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-09-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A utilidade operacional muda a finalidade da compra, mas a decisão ainda examina preço de saída, custos, impacto no caixa e concentração; a categoria financeira também não dispensa análise de condições reais.</p><p>A alternativa A transforma economia operacional em garantia de revenda. A alternativa C presume superioridade da posição financeira e ignora a utilidade produtiva. A alternativa B usa o caixa separado para apagar riscos do próprio bem.</p><p>Regra de bolso: compare a função de cada alternativa e suas condições concretas de risco, liquidez, custo e concentração.</p>",
+     "enunciado": "<p>A empresária Renata dispõe de R$ 500.000 e pretende comprar um galpão para instalar uma nova linha de produção. A expansão pode reduzir despesas logísticas, e os recursos para impostos e folha dos próximos doze meses permanecem separados. Renata, porém, chama o galpão de aplicação sem risco, pois consegue tocar o bem e acredita que poderá vendê-lo pelo preço anunciado caso o projeto mude. Uma alternativa financeira também foi apresentada, mas possui condições de resgate e risco de crédito que ainda serão examinados. Renata insiste que o assessor escolha apenas pela oposição entre bem físico e papel financeiro. O assessor precisa incorporar a utilidade operacional sem presumir valorização ou segurança e comparar o efeito no caixa e na concentração. Avalie o pedido e indique a orientação aplicável.</p>",
+     "alternativas": {
+      "a": "A utilidade operacional favorece a compra e também garante o preço de saída, pois economia logística cria valor de revenda independente da demanda pelo galpão.",
+      "b": "A separação de impostos e folha torna o galpão seguro, pois a existência de caixa externo ao bem elimina risco de perda de valor e demora na venda.",
+      "c": "A alternativa financeira deve prevalecer porque direitos contratuais possuem preço verificável, enquanto um ativo real serve apenas ao consumo ou à produção.",
+      "d": "O galpão pode gerar utilidade, mas exige avaliar venda, custos, caixa e concentração; a alternativa financeira também depende de resgate, crédito e custos."
+     },
+     "gabarito": "d"
+    }
+   ],
+   "Poupança no Brasil: objetivos, inflação e barreiras para investir": [
+    {
+     "id": "cpror-rel-10-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Poupar é separar recursos do consumo atual; esses valores podem ser guardados ou destinados a bens, negócios e produtos financeiros, cada qual com efeitos próprios.</p><p>A alternativa B reduz poupança à caderneta e investimento ao ganho positivo. A alternativa C equipara decisões distintas. A alternativa D transforma preservação nominal em remuneração e proteção inflacionária.</p><p>Regra de bolso: primeiro a pessoa separa o recurso; depois escolhe onde e como ele ficará.</p>",
+     "enunciado": "<p>Uma pessoa reduz o consumo do mês e separa parte da renda. Compare poupar, guardar dinheiro e investir em produto financeiro.</p>",
+     "alternativas": {
+      "a": "Poupar é separar recursos do consumo; guardá-los é um destino possível; investir envolve escolher uma aplicação com características próprias.",
+      "b": "Poupar significa depositar na caderneta; guardar é manter moeda física; investir começa quando o saldo produz rendimento nominal positivo.",
+      "c": "Poupar e investir descrevem a mesma decisão, enquanto guardar dinheiro se limita ao período anterior à escolha de uma meta financeira.",
+      "d": "Guardar dinheiro constitui aplicação financeira, porque preservar valor nominal já cria remuneração e proteção contra a inflação do período."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-10-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A finalidade altera prazo, liquidez e risco suportável, por isso o atendimento investiga uso, data e consequências de indisponibilidade ou perda antes de escolher a aplicação.</p><p>A alternativa B limita a decisão a montante e taxa. A alternativa C transforma dado populacional em diagnóstico individual. A alternativa D impõe uma finalidade diferente da informada pelo cliente.</p><p>Regra de bolso: para cada recurso, pergunte para quê, quando e o que ocorre se faltar dinheiro na data.</p>",
+     "enunciado": "<p>Um cliente separou R$ 20.000 e pergunta qual aplicação escolher. Identifique as informações que precisam orientar essa decisão.</p>",
+     "alternativas": {
+      "a": "Objetivo, data de uso, necessidade de acesso e consequência de indisponibilidade ou perda de valor, além das características da alternativa.",
+      "b": "Valor separado e retorno anunciado, pois o montante define a capacidade de risco e a taxa permite escolher o destino dos recursos.",
+      "c": "Produto utilizado por pessoas da mesma renda, porque dados populacionais substituem perguntas sobre finalidade e condição financeira individual.",
+      "d": "Índice geral de inflação e prazo de aposentadoria, mesmo quando o recurso se destina a outra finalidade e possui data própria de utilização."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-10-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Guardar, realizar investimento no ano e possuir aplicação no momento são medidas diferentes e potencialmente sobrepostas; recursos poupados também podem seguir destinos fora de produtos financeiros.</p><p>A alternativa B equipara guardar e investir e reduz posse a vencimento. A alternativa C soma grupos possivelmente sobrepostos. A alternativa A presume que a aplicação atual foi adquirida no mesmo ano e veio de economia registrada naquele período.</p><p>Regra de bolso: fluxo de economia, decisão de investir e estoque de aplicações respondem a perguntas diferentes.</p>",
+     "enunciado": "<p>Uma equipe prepara uma campanha a partir da pesquisa brasileira citada na aula. O relatório separa três medidas: pessoas que guardaram dinheiro, pessoas que realizaram investimentos durante o ano e pessoas que possuíam aplicações na data da entrevista. Um analista propõe somar os três percentuais para calcular a parcela da população investidora. Outro afirma que quem guardou dinheiro necessariamente comprou produto financeiro, pois o recurso saiu do consumo. A coordenadora lembra que as economias podem permanecer sem aplicação ou ser destinadas a bens e negócios, e que uma pessoa pode aparecer em medidas diferentes. A equipe precisa interpretar os indicadores antes de definir as mensagens. Avalie as propostas e indique a leitura aplicável.</p>",
+     "alternativas": {
+      "a": "A posse atual reúne as outras medidas, pois a pessoa com aplicação necessariamente guardou dinheiro e realizou investimento dentro do mesmo ano pesquisado.",
+      "b": "Guardar dinheiro e investir durante o ano são medidas equivalentes, enquanto possuir aplicação indica apenas que o produto ainda não venceu na entrevista.",
+      "c": "A soma dos percentuais mede a população investidora, porque cada entrevistado pertence a uma única etapa entre economia, compra e posse de aplicação.",
+      "d": "As três medidas descrevem momentos e condutas distintos e podem se sobrepor; guardar recursos não comprova aquisição nem posse atual de produto financeiro."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-10-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O cálculo exato é 1,10 dividido por 1,06 menos 1, que resulta em aproximadamente 0,0377, ou 3,77% de ganho real no período. O dado passado não assegura repetição nem substitui prazo, risco e liquidez.</p><p>A alternativa C usa subtração, que fornece aproximação. A alternativa B multiplica os fatores e soma efeitos. A alternativa D divide apenas a taxa percentual pelo fator de inflação e ignora outras características da decisão.</p><p>Regra de bolso: retorno real compara fatores do mesmo período: divida um mais o retorno nominal por um mais a inflação e subtraia um.</p>",
+     "enunciado": "<p>Ao encerrar o ano, a planejadora Cíntia revisa uma aplicação de Mauro destinada a uma meta futura. Depois dos custos e tributos considerados no caso, o saldo apresentou retorno nominal de 10% no período. A inflação da cesta de referência no mesmo intervalo foi de 6%. Mauro subtrai as duas taxas, registra ganho real exato de 4% e conclui que a aplicação preservará esse resultado nos anos seguintes. O produto admite resgate em seis meses, enquanto a meta vence em quatro anos, e seu risco permanece sujeito às condições contratadas. Cíntia quer corrigir o cálculo sem transformar o dado histórico em promessa nem ignorar prazo de resgate e risco. Use a relação entre os fatores de retorno nominal e inflação, calcule o retorno real aproximado do período e indique a interpretação aplicável.</p>",
+     "alternativas": {
+      "a": "O retorno real foi de 3,77%, pois 1,10 dividido por 1,06 menos 1 resulta em cerca de 0,0377; trata-se do período observado, sem garantia futura.",
+      "b": "O retorno real foi de 16,60%, obtido multiplicando 1,10 por 1,06; o resultado mede a soma do ganho financeiro com a variação dos preços.",
+      "c": "O retorno real foi de 4,00%, obtido por 10% menos 6%; a taxa exata confirma proteção futura enquanto a inflação permanecer abaixo do retorno nominal.",
+      "d": "O retorno real foi de 9,43%, pois 10% dividido por 1,06 ajusta a taxa nominal; custos e riscos deixam de importar depois desse cálculo líquido."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-10-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Com retorno nominal de zero, o cálculo é 1 dividido por 1,04 menos 1, resultando em cerca de menos 0,0385, ou perda real aproximada de 3,85%, embora o saldo continue em R$ 8.000.</p><p>A alternativa A confunde estabilidade nominal com estabilidade real. A alternativa D trata preservação da quantia como ganho. A alternativa C usa a subtração como resultado exato, quando ela é apenas aproximação.</p><p>Regra de bolso: dinheiro parado pode conservar o número no saldo e perder capacidade de compra.</p>",
+     "enunciado": "<p>Durante quatro meses, Daniela manteve R$ 8.000 em dinheiro, sem remuneração, para uma compra futura. O valor nominal continuou em R$ 8.000, enquanto a inflação do mesmo período foi de 4%. Daniela afirma que o resultado real foi zero porque a quantidade de reais permaneceu igual e que o dinheiro guardado protegeu o poder de compra. A compra ainda pode ser adiada, mas o preço do bem acompanhado por ela também subiu no intervalo. O dinheiro ficou separado da conta usada nas despesas, e o extrato confirma ausência de entradas ou saídas durante os quatro meses. O orientador precisa mostrar a diferença entre saldo nominal e capacidade de consumo usando os fatores do período. Considere retorno nominal de 0%, calcule o retorno real aproximado e indique o efeito sobre o poder de compra.</p>",
+     "alternativas": {
+      "a": "O retorno real foi zero, pois o saldo nominal permaneceu em R$ 8.000 e inflação só altera o preço do bem na data efetiva da compra.",
+      "b": "O retorno real foi aproximadamente negativo em 3,85%, pois 1 dividido por 1,04 menos 1 reduz o poder de compra apesar do saldo nominal igual.",
+      "c": "O retorno real foi negativo em 4%, obtido por 0% menos 4%, e essa subtração representa o resultado exato entre fatores do período.",
+      "d": "O retorno real foi positivo em 4%, porque conservar a quantia evita perda financeira e permite comprar o mesmo número de unidades monetárias."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-10-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A aplicação superou a inflação da cesta geral, mas rendeu abaixo da alta do custo diretamente ligado à meta; o acompanhamento precisa observar o preço específico da educação.</p><p>A alternativa B usa o ganho frente ao índice geral como prova de avanço da meta. A alternativa A transforma a mensalidade em inflação de toda a família. A alternativa D descarta o preço efetivamente associado ao objetivo.</p><p>Regra de bolso: índice geral mede uma cesta; meta concreta deve acompanhar o custo do que será comprado.</p>",
+     "enunciado": "<p>A família de Pedro investe para pagar a faculdade da filha daqui a três anos. No último período, a aplicação rendeu 7% após os custos considerados, e o índice geral de inflação ficou em 5%. As mensalidades do curso pretendido, porém, aumentaram 11% no mesmo intervalo. Pedro comemora ganho real em relação ao índice geral e conclui que a meta educacional avançou na mesma proporção. A assessora confirma que o retorno superou a cesta de referência, mas observa que o preço ligado ao objetivo seguiu dinâmica própria. Pedro insiste em usar apenas o índice geral porque ele aparece nos relatórios da aplicação. A assessora precisa explicar a relação entre inflação geral, gasto específico e progresso da meta. Analise o caso e indique a leitura aplicável.</p>",
+     "alternativas": {
+      "a": "A mensalidade substitui o índice geral no cálculo econômico do país, e a diferença de 4 pontos representa a inflação efetiva da família inteira.",
+      "b": "O retorno de 7% superou a inflação de 5%, por isso a meta avançou em termos reais mesmo que a mensalidade tenha subido 11% no período.",
+      "c": "A aplicação teve ganho frente ao índice geral, mas perdeu terreno diante do custo educacional; a evolução da meta precisa considerar seu preço específico.",
+      "d": "O índice geral define o custo da educação no prazo de três anos, enquanto a alta de 11% descreve uma variação temporária sem efeito na meta."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-10-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Produtos podem oferecer remuneração, organização e condições de acesso, mas essas vantagens variam; adequação exige examinar objetivo, liquidez, risco, custos e retorno real sem promessa futura.</p><p>A alternativa A promete proteção pela remuneração e ignora a reserva. A alternativa C presume superioridade pela categoria e pelo acesso limitado. A alternativa D transforma taxas atuais em garantia futura e usa simples diferença.</p><p>Regra de bolso: uma vantagem só existe para o cliente quando as condições do produto servem ao objetivo dele.</p>",
+     "enunciado": "<p>A gerente Lúcia apresenta a Renato uma aplicação que organiza aportes por objetivos e oferece remuneração. O produto possui prazo de resgate incompatível com a reserva que ele pode precisar na semana seguinte e está sujeito a riscos que Renato ainda está conhecendo. Ele argumenta que receber remuneração já torna a aplicação superior a manter dinheiro disponível e pede garantia de ganho acima da inflação. Lúcia dispõe de alternativas com condições diferentes de acesso, custos e risco, e ainda está concluindo o levantamento da situação financeira. Renato insiste que produtos financeiros compartilham a vantagem de proteger o poder de compra. A decisão envolve explicar o alcance possível das aplicações sem prometer proteção automática. Indique a orientação aplicável.</p>",
+     "alternativas": {
+      "a": "A remuneração assegura proteção inflacionária, e a incompatibilidade de resgate pode ser compensada pela organização dos aportes em uma reserva separada.",
+      "b": "Organização e remuneração podem ser vantagens, mas dependem do produto; resgate, risco, custos, objetivo e retorno real precisam ser avaliados.",
+      "c": "A categoria financeira torna a aplicação superior ao dinheiro disponível, pois acesso limitado reduz impulsos e preserva o rendimento contratado.",
+      "d": "A garantia pode ser dada após comparar a taxa anunciada com a inflação atual, porque o resultado real futuro decorre dessa diferença entre percentuais."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-10-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. Renda instável, déficit e uso de crédito para despesas essenciais indicam barreira financeira; apresentar produto ou automatizar aporte não cria a sobra necessária para investir.</p><p>A alternativa A chama déficit de falta de informação. A alternativa B atribui ao débito automático e ao retorno a criação de capacidade. A alternativa D usa interesse e risco para substituir fluxo disponível.</p><p>Regra de bolso: quando falta sobra, organize o orçamento; quando falta compreensão, organize a informação.</p>",
+     "enunciado": "<p>A consultora Marisa atende Jorge, motorista por aplicativo, cuja renda varia a cada mês. Nos últimos três meses, despesas essenciais e parcelas de dívidas superaram os recebimentos, e ele usou crédito para completar aluguel e alimentação. Jorge afirma que seu problema decorre da falta de conhecimento sobre investimentos e pede uma aplicação de retorno elevado para criar uma sobra ausente no orçamento atual. Um colega sugere começar com aportes automáticos, acreditando que o compromisso mensal forçará a economia. Jorge demonstra interesse, mas explica que sequer consegue prever o valor disponível na próxima semana. Marisa precisa identificar a barreira dominante e responder sem culpa ou promessa. Analise o quadro e indique a orientação compatível com a realidade apresentada.</p>",
+     "alternativas": {
+      "a": "A barreira é informacional, e uma explicação sobre rendimento e resgate permite iniciar aportes, mesmo com déficit, desde que o produto aceite valores variáveis.",
+      "b": "A automatização cria capacidade de poupança ao reservar o aporte antes das despesas, e o retorno elevado pode absorver a diferença entre renda e gastos.",
+      "c": "A barreira principal é financeira; reorganizar déficit, despesas e dívidas antecede o investimento, pois uma aplicação não cria recursos disponíveis.",
+      "d": "O interesse de Jorge demonstra capacidade financeira, e a oscilação da renda pode ser compensada por uma aplicação com risco alinhado ao retorno pretendido."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-10-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. Sílvia apresenta sobra e objetivo, mas precisa compreender condições de acesso, custos e riscos; a resposta enfrenta a barreira informacional sem prometer superação da inflação.</p><p>A alternativa A confunde saldo nominal com proteção da meta. A alternativa C usa taxa anunciada para prometer ganho real. A alternativa D exige domínio técnico em vez de oferecer explicação compreensível.</p><p>Regra de bolso: capacidade sem compreensão pede clareza; clareza não transforma resultado futuro em garantia.</p>",
+     "enunciado": "<p>A analista Renata recebe Sílvia, que mantém sobra mensal de R$ 1.500, possui reserva para imprevistos e deseja acumular recursos para uma especialização em dois anos. Sílvia guarda a sobra em conta porque desconfia de aplicações e diz que os termos sobre carência, resgate, custos e riscos são difíceis de entender. Ela aceita investir depois de compreender quando poderá usar o dinheiro e qual variação pode enfrentar, mas pede uma promessa de saldo acima da inflação para se sentir segura. Renata identifica capacidade financeira atual e uma barreira ligada à informação e à confiança. A profissional precisa construir uma decisão compreensível sem transformar explicação em garantia. Analise o caso e indique a conduta aplicável.</p>",
+     "alternativas": {
+      "a": "Manter o dinheiro em conta resolve a barreira informacional, porque preservar o valor nominal protege a meta durante os dois anos de acumulação.",
+      "b": "Explicar em linguagem clara resgate, custos e riscos, comparar opções com o prazo da meta e esclarecer que remuneração não assegura ganho real futuro.",
+      "c": "Oferecer o produto com remuneração anunciada elevada supera a desconfiança, pois a taxa permite prometer saldo acima da inflação até a especialização.",
+      "d": "Adiar a decisão até Sílvia dominar a terminologia técnica transfere a responsabilidade corretamente e evita discutir alternativas antes do conhecimento completo."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-10-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A pesquisa ajuda a preparar hipóteses e perguntas, mas o atendimento identifica a barreira individual e combina a resposta ao problema concreto, sem rótulo ou oferta automática.</p><p>A alternativa A usa renda para diagnosticar e padronizar produto. A alternativa B presume desinteresse e reduz a resposta à motivação. A alternativa C transforma frequência populacional em conclusão individual.</p><p>Regra de bolso: pesquisa abre a conversa; orçamento, compreensão e operação definem a orientação.</p>",
+     "enunciado": "<p>Um banco planeja uma ação para pessoas de determinada faixa de renda depois de ler a pesquisa brasileira. A equipe observa que condições financeiras desfavoráveis aparecem entre os motivos de quem deixou de guardar recursos. O gerente comercial conclui que o grupo precisa de educação sobre aplicações e propõe oferecer o mesmo produto como solução inicial. A especialista Camila lembra que dados populacionais orientam perguntas, enquanto cada cliente pode enfrentar renda insuficiente, dívida, instabilidade, desconfiança, falta de informação ou dificuldade operacional. A instituição quer abordar o público sem presumir desinteresse e sem oferecer produto antes do diagnóstico. Avalie as propostas e indique como a pesquisa pode apoiar o atendimento individual.</p>",
+     "alternativas": {
+      "a": "A faixa de renda identifica a barreira predominante, e o mesmo produto pode ser oferecido depois de uma explicação padronizada sobre retorno e inflação.",
+      "b": "A ausência de economia revela desinteresse, e a pesquisa permite concentrar a conversa em benefícios para aumentar a motivação do grupo abordado.",
+      "c": "Os dados substituem a entrevista quando a condição financeira aparece como motivo frequente, pois a média descreve a dificuldade provável de cada cliente.",
+      "d": "Os dados orientam perguntas, e o atendimento investiga a barreira concreta para combinar reorganização financeira, explicação ou apoio operacional ao caso."
+     },
+     "gabarito": "d"
+    }
+   ],
+   "Bancos digitais, gerações e fontes de informação": [
+    {
+     "id": "cpror-rel-11-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O vídeo apresenta o tema, o telefone serve ao esclarecimento e o aplicativo efetiva a operação, correspondendo a informação, atendimento e contratação.</p><p>A alternativa B troca as funções dos canais. A alternativa C chama descoberta e dúvida de contratação. A alternativa A usa a circulação de dados para apagar etapas distintas da jornada.</p><p>Regra de bolso: descubra onde o cliente conheceu, onde esclareceu e onde executou.</p>",
+     "enunciado": "<p>Uma cliente conhece um investimento em um vídeo, esclarece dúvidas por telefone e conclui a operação no aplicativo. Classifique os três canais.</p>",
+     "alternativas": {
+      "a": "Os três são canais de informação, pois cada etapa fornece algum dado que participa da decisão financeira da cliente.",
+      "b": "O vídeo é canal de atendimento, o telefone é canal de contratação e o aplicativo é canal de informação.",
+      "c": "O vídeo e o telefone são canais de contratação, enquanto o aplicativo é canal de atendimento pela interface digital.",
+      "d": "O vídeo é canal de informação, o telefone é canal de atendimento e o aplicativo é canal de contratação."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-11-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O acesso digital reduz fricções, facilita acompanhamento e pequenos aportes, mas pode acelerar impulsos quando conteúdo e oferta aparecem no mesmo ambiente.</p><p>A alternativa B confunde habilidade operacional com compreensão. A alternativa C presume que conveniência substitui esclarecimento. A alternativa D atribui ao canal a redução dos riscos do produto.</p><p>Regra de bolso: o canal digital muda velocidade e acesso; análise, compreensão e risco continuam necessários.</p>",
+     "enunciado": "<p>Um banco oferece abertura de conta e contratação pelo celular. Identifique um efeito possível desse acesso sobre a jornada da pessoa investidora.</p>",
+     "alternativas": {
+      "a": "A redução de etapas pode facilitar pequenos aportes e consultas, mas também acelerar decisões impulsivas quando oferta e informação aparecem juntas.",
+      "b": "A interface digital comprova autonomia decisória, pois quem conclui a contratação pelo celular já demonstrou compreensão financeira suficiente.",
+      "c": "A contratação digital elimina a necessidade de atendimento, porque comparação, explicação e execução passam a ocorrer na mesma tela do aplicativo.",
+      "d": "O acesso pelo celular reduz os riscos da aplicação, já que notificações frequentes permitem corrigir perdas antes que afetem o objetivo do cliente."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-11-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Geração oferece uma pista para perguntas, mas preferência e compreensão são individuais; Lucas e a irmã também mostram que cada etapa da jornada pode ocorrer em canal diferente.</p><p>A alternativa B transforma média em regra e rebaixa a preferência declarada. A alternativa C estende habilidade com pagamentos à compreensão de investimentos. A alternativa D usa execução por telefone como medida de autonomia.</p><p>Regra de bolso: geração sugere a pergunta; o cliente informa como prefere aprender, conversar e contratar.</p>",
+     "enunciado": "<p>Uma cooperativa prepara atendimento para novos clientes e recebe um relatório indicando uso frequente de serviços digitais entre pessoas jovens. O coordenador propõe direcionar esse grupo exclusivamente ao aplicativo, dispensando a pergunta sobre preferência. Na primeira entrevista, Lucas, de 24 anos, conta que opera pagamentos pelo celular, usa computador no trabalho e tem acesso estável à internet, mas prefere discutir investimentos presencialmente porque deseja comparar riscos com calma. Sua irmã, de 51 anos, consome relatórios técnicos pela internet e executa ordens pelo telefone. A equipe precisa decidir como usar o recorte geracional sem transformar a média em regra individual. Analise os relatos e indique a abordagem aplicável.</p>",
+     "alternativas": {
+      "a": "A geração ajuda a formular perguntas, mas a equipe deve confirmar a preferência e reconhecer que informação, atendimento e execução podem ocorrer em canais distintos.",
+      "b": "O relatório define o canal principal de Lucas, enquanto a preferência da irmã é exceção que pode ser tratada depois da contratação por aplicativo.",
+      "c": "A habilidade de Lucas com pagamentos confirma familiaridade com investimentos, e a conversa presencial serve apenas para apresentar produtos disponíveis no aplicativo.",
+      "d": "A irmã demonstra baixa autonomia ao executar por telefone, mesmo consumindo relatórios técnicos, pois o canal de contratação mede a compreensão da decisão."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-11-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Renda pode influenciar acesso e capacidade de poupança, mas não revela experiência, finalidade, prazo ou reação a perdas; Tiago e Fátima exigem análises individuais.</p><p>A alternativa A transforma renda em prova de compreensão e tolerância. A alternativa C usa renda para apagar a data da despesa. A alternativa B troca experiência e renda por medidas que elas não representam.</p><p>Regra de bolso: renda é uma informação financeira; conhecimento, objetivo e tolerância precisam de perguntas próprias.</p>",
+     "enunciado": "<p>A gerente Soraia atende dois clientes com renda mensal de R$ 18.000. Tiago investe há dez anos, conhece oscilações e busca uma meta de longo prazo. Fátima começou a poupar recentemente, depende do dinheiro para uma despesa em oito meses e relata desconforto diante de perdas. Um colega defende oferecer a ambos a mesma carteira sofisticada, alegando que renda semelhante indica conhecimento, tolerância e capacidade financeira equivalentes. Soraia sabe que a renda pode influenciar acesso e capacidade de poupança e ainda está levantando patrimônio, objetivos, prazos e experiência de cada um. A decisão envolve definir o papel da renda sem ignorar as diferenças já coletadas. Avalie a proposta e indique a conclusão aplicável.</p>",
+     "alternativas": {
+      "a": "A renda igual sustenta a mesma carteira, porque acesso financeiro e capacidade de poupança comprovam experiência e reação semelhante às perdas.",
+      "b": "A experiência de Tiago define sua capacidade financeira, enquanto a renda de Fátima define seu conhecimento por ser a informação comum aos dois clientes.",
+      "c": "O prazo de Fátima deixa de limitar a carteira porque sua renda permite recompor eventual perda antes da despesa programada para oito meses.",
+      "d": "A renda situa parte da condição financeira, mas não mede experiência, objetivo ou tolerância; os dados individuais podem levar a decisões diferentes."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-11-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A pessoa pode manter relações com bancos digitais e tradicionais ao mesmo tempo e distribuir informação, atendimento e contratação entre canais conforme sua conveniência.</p><p>A alternativa B transforma guarda da reserva em exclusividade. A alternativa C chama comparação de execução. A alternativa D usa recebimento do salário para apagar outras relações e operações.</p><p>Regra de bolso: mapear a jornada exige perguntar a função de cada instituição e canal.</p>",
+     "enunciado": "<p>Na atualização cadastral, Eduardo informa que recebe salário em um banco tradicional, mantém reserva em uma instituição digital e usa outro aplicativo para comparar investimentos. Ele procura atendimento presencial no banco em que recebe e, depois de esclarecer suas dúvidas, costuma executar operações pelo celular da instituição escolhida. A atendente conclui que a abertura da conta digital substituiu a relação tradicional e registra o aplicativo de comparação como canal de contratação. Eduardo corrige a informação e explica que utiliza cada serviço para uma função. A equipe precisa representar a jornada e as relações simultâneas sem presumir exclusividade. Analise o caso e indique o registro coerente.</p>",
+     "alternativas": {
+      "a": "Eduardo mantém relações simultâneas com instituições distintas; comparação, atendimento e contratação podem ocorrer em canais diferentes conforme a etapa.",
+      "b": "A instituição digital concentra a relação financeira porque guarda a reserva, enquanto salário e atendimento presencial são operações auxiliares sem vínculo bancário.",
+      "c": "O aplicativo de comparação é canal de contratação, pois a escolha começa nele e a execução posterior apenas confirma a decisão já concluída pelo cliente.",
+      "d": "O banco tradicional é a relação dominante por receber o salário, e os aplicativos funcionam como fontes de informação sem participação na contratação."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-11-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A fonte precisa ser examinada por autoria, evidência, atualização e interesse econômico; divergências são esclarecidas com documentos verificáveis e ligação entre riscos, liquidez e objetivo.</p><p>A alternativa A usa popularidade para compensar falhas relevantes. A alternativa C troca uma autoridade informal por outra. A alternativa D transforma conflito em prova automática de falsidade em vez de avaliar as afirmações.</p><p>Regra de bolso: alcance chama atenção; autoria, evidência, atualização e interesse sustentam confiança.</p>",
+     "enunciado": "<p>A cliente Aline envia ao assessor Bruno uma publicação com milhões de visualizações que recomenda um investimento para objetivos de curto prazo. O autor aparece apenas pelo nome do canal, o conteúdo foi publicado há três anos, cita resultados sem indicar documentos e oferece um código remunerado para contratação. Aline afirma que a popularidade comprova a qualidade e que comentários positivos dispensam nova verificação. Bruno encontra o documento atual do produto, que apresenta condições de saída e riscos ausentes da publicação. Aline resiste à consulta porque considera o material oficial difícil de ler. Bruno precisa avaliar a fonte sem constranger a cliente e relacionar a informação ao objetivo dela. Indique a conduta aplicável.</p>",
+     "alternativas": {
+      "a": "Aceitar a publicação como fonte principal, pois alcance e avaliações positivas compensam autoria incompleta e atualização antiga quando o produto continua disponível.",
+      "b": "Examinar autoria, evidência, data e remuneração, explicar o documento atual em linguagem clara e comparar riscos e saída com o objetivo de curto prazo.",
+      "c": "Enviar outro vídeo com opinião contrária, porque duas fontes populares equilibram os interesses econômicos e permitem que Aline escolha pela preferência pessoal.",
+      "d": "Desconsiderar o conteúdo apenas por existir código remunerado, pois conflito de interesse torna as informações apresentadas tecnicamente inválidas."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-11-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Pedir explicação com palavras próprias testa compreensão de riscos, saída e limites da conclusão sem confundir navegação rápida com conhecimento financeiro.</p><p>A alternativa A toma habilidade operacional como autonomia decisória. A alternativa C mede uso do aplicativo em vez de entendimento do produto. A alternativa D substitui confirmação da compreensão pela simples disponibilidade do documento.</p><p>Regra de bolso: observar cliques mede operação; ouvir o cliente explicar mede compreensão.</p>",
+     "enunciado": "<p>Durante uma contratação assistida, o especialista Renato apresenta a Célia um produto pelo aplicativo. Ela navega com rapidez, localiza documentos e conclui simulações sem ajuda, mas responde de forma vaga quando questionada sobre perdas e resgate. Célia pede que Renato avance porque sua habilidade com a tela demonstraria compreensão suficiente. O especialista sabe que a interface reúne explicação e oferta e que a cliente pode executar a operação com poucos toques. Antes de prosseguir, ele quer confirmar se a facilidade operacional corresponde à compreensão do conteúdo, mantendo a conversa respeitosa. Célia insiste que repetir os termos exibidos na tela seria uma formalidade. Indique a verificação compatível com o atendimento.</p>",
+     "alternativas": {
+      "a": "Prosseguir com a contratação, pois localizar documentos e concluir simulações demonstra autonomia decisória mesmo quando riscos e saída são descritos de forma vaga.",
+      "b": "Pedir que Célia explique com palavras próprias os riscos, o resgate e o cenário em que a conclusão mudaria, esclarecendo lacunas antes da operação.",
+      "c": "Aplicar um teste sobre recursos do aplicativo, porque domínio da navegação mede a familiaridade necessária para compreender o produto oferecido digitalmente.",
+      "d": "Enviar os documentos e encerrar o atendimento, pois a possibilidade de leitura transfere à cliente a verificação de riscos antes de confirmar a contratação."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-11-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. Uso frequente do aplicativo não prova compreensão; cabe respeitar o canal de atendimento preferido, explicar as condições e confirmar com palavras da própria cliente antes da contratação.</p><p>A alternativa A usa acesso e ajuda familiar como prova de autonomia. A alternativa B substitui a cliente pelo filho. A alternativa D elimina um canal útil por causa de uma dificuldade específica.</p><p>Regra de bolso: adapte a explicação ao cliente, preserve sua decisão e confirme o que ele entendeu.</p>",
+     "enunciado": "<p>A aposentada Marlene usa dois bancos tradicionais, abriu uma conta digital por indicação do filho e acompanha o saldo pelo celular. Para interpretar relatórios e confirmar operações, costuma pedir ajuda ao filho, mas prefere conversar com a gerente por telefone antes de investir. Uma campanha automática identifica acessos frequentes ao aplicativo e classifica Marlene como autônoma digital, enviando ofertas com contratação em uma etapa. Ela recebe uma notificação sobre produto com carência e toca no botão por curiosidade, sem compreender que a tela seguinte inicia a operação. Ao procurar a gerente, afirma que usar o aplicativo diariamente deveria bastar para provar experiência. A gerente precisa reconstruir a jornada, adaptar a comunicação e confirmar entendimento antes de avançar. Analise o caso e indique a conduta aplicável.</p>",
+     "alternativas": {
+      "a": "Manter a classificação de autonomia, pois frequência de acesso e confirmação com o filho mostram que Marlene possui suporte suficiente para contratar pela tela curta.",
+      "b": "Transferir o atendimento ao filho, porque depender de ajuda para relatórios impede que Marlene participe da decisão sobre o produto oferecido no aplicativo.",
+      "c": "Separar habilidade operacional de compreensão, explicar carência no canal preferido e pedir que Marlene descreva riscos e saída antes de decidir.",
+      "d": "Cancelar o canal digital da cliente e concentrar operações no telefone, pois a dificuldade em uma oferta revela incompatibilidade com aplicativos bancários."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-11-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. Divergências entre fontes pedem comparação de premissas e documento verificável; os riscos e a saída precisam então ser ligados ao objetivo de dez meses.</p><p>A alternativa A usa disponibilidade no aplicativo como selo de adequação. A alternativa C troca audiência por qualidade e mantém o foco no gráfico. A alternativa D presume independência pelo conhecido e ignora liquidez e risco.</p><p>Regra de bolso: confirme a informação no documento e teste o produto contra prazo, liquidez e risco da meta.</p>",
+     "enunciado": "<p>O empresário Vítor leva ao consultor uma recomendação recebida em um grupo de mensagens. A postagem afirma que determinado investimento serve para reserva porque apresentou gráfico ascendente, foi compartilhado por um conhecido e pode ser contratado no banco digital usado por Vítor. Os recursos serão usados para pagar equipamentos em dez meses, e Vítor desconhece as regras de resgate. O consultor encontra opiniões divergentes em portais e o documento atual do produto, que informa oscilação e possibilidade de indisponibilidade no prazo da meta. Vítor insiste que a presença no aplicativo de seu banco comprova segurança e que outra opinião favorável encerraria a dúvida. A análise envolve tratar as fontes e a adequação sem substituir um influenciador por outro. Avalie o caso e indique a abordagem aplicável.</p>",
+     "alternativas": {
+      "a": "A presença no aplicativo valida a recomendação, porque a instituição já avaliou a compatibilidade do produto com reservas e objetivos de dez meses.",
+      "b": "Comparar premissas com o documento atual, esclarecer oscilação e resgate e relacionar essas condições ao prazo dos equipamentos antes da decisão.",
+      "c": "Uma segunda opinião favorável resolve a divergência, desde que venha de portal com audiência ampla e utilize gráfico do mesmo período apresentado no grupo.",
+      "d": "O compartilhamento por conhecido elimina conflito comercial, e o consultor pode concentrar a análise na rentabilidade mostrada pelo gráfico ascendente."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-11-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. Dados de grupo orientam perguntas, enquanto a jornada individual mapeia informação, atendimento e contratação e confirma compreensão, objetivo, risco, liquidez e preferência.</p><p>A alternativa A transforma médias em recomendação inicial. A alternativa B força exclusividade inexistente entre instituições. A alternativa D equipara contratação digital a autonomia e renda a conhecimento.</p><p>Regra de bolso: pesquisa organiza o roteiro; respostas individuais organizam a decisão.</p>",
+     "enunciado": "<p>Uma instituição analisa dados segundo os quais clientes de determinada geração e faixa de renda usam bancos digitais com frequência. O time comercial propõe recomendar produtos exclusivamente pelo aplicativo e reduzir explicações, supondo que acesso digital e renda indiquem conhecimento. No piloto, alguns clientes pesquisam em redes sociais, esclarecem dúvidas presencialmente e contratam pelo celular; outros consomem materiais técnicos na internet e preferem executar por telefone. Há também pessoas com contas digitais e tradicionais mantidas simultaneamente. A responsável pelo projeto precisa transformar o retrato populacional em um roteiro individual sem perder eficiência. Avalie a proposta e indique como estruturar a jornada de atendimento.</p>",
+     "alternativas": {
+      "a": "Usar geração e renda para definir produto e canal, reservando perguntas individuais apenas aos clientes que recusarem a contratação sugerida pelo aplicativo.",
+      "b": "Separar clientes por banco digital ou tradicional, pois relações simultâneas dificultam identificar qual instituição responde pela análise de adequação.",
+      "c": "Usar os dados para formular perguntas sobre fontes, preferência e compreensão, mapear cada etapa da jornada e confirmar objetivo, risco e liquidez.",
+      "d": "Tratar contratação digital como prova de autonomia e concentrar a entrevista em renda, já que a navegação registra a experiência operacional do cliente."
+     },
+     "gabarito": "c"
+    }
+   ],
+   "Aposentadoria e estresse financeiro no relacionamento": [
+    {
+     "id": "cpror-rel-12-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A aposentadoria é uma necessidade futura de renda e requer data, padrão de gastos, fontes, margem atual, liquidez e critérios de revisão antes da seleção detalhada de produtos.</p><p>A alternativa B reduz o objetivo a previdência privada e idade. A alternativa C começa pelo retorno e adia informações centrais. A alternativa D usa contribuição e prazo para ignorar o orçamento atual.</p><p>Regra de bolso: primeiro desenhe a renda futura e as fontes; depois avalie os instrumentos que podem compor o plano.</p>",
+     "enunciado": "<p>Uma cliente afirma que deseja investir para a aposentadoria. Identifique como esse objetivo deve ser organizado antes da escolha de produtos.</p>",
+     "alternativas": {
+      "a": "Traduzir a intenção em data provável, padrão de gastos, fontes de renda, margem de poupança, liquidez e revisões necessárias ao longo do plano.",
+      "b": "Escolher uma previdência privada pela idade da cliente, pois aposentadoria e produto previdenciário representam a mesma decisão financeira.",
+      "c": "Projetar o retorno da aplicação e usar o valor final como renda desejada, deixando orçamento atual e fontes futuras para a etapa de resgate.",
+      "d": "Definir uma contribuição elevada para compensar o tempo transcorrido, porque o longo prazo absorve impactos sobre despesas e reserva imediata."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-12-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Previdência social, plano patrocinado, previdência individual, aplicações, aluguéis e trabalho têm riscos e características diferentes, e nenhuma fonte deve ter suficiência presumida.</p><p>A alternativa A presume suficiência da previdência social. A alternativa C transforma aluguel e trabalho em garantias. A alternativa D trata o plano patrocinado como substituto automático da análise completa.</p><p>Regra de bolso: liste cada fonte, estime sua contribuição e registre a incerteza associada.</p>",
+     "enunciado": "<p>Um cliente espera contar com previdência social, plano patrocinado, aplicações, aluguel e trabalho parcial na aposentadoria. Avalie essas fontes.</p>",
+     "alternativas": {
+      "a": "A previdência social funciona como fonte suficiente, e as demais podem ser tratadas apenas como proteção adicional contra inflação e longevidade.",
+      "b": "As fontes possuem características e riscos distintos, por isso precisam ser estimadas e combinadas sem presumir que alguma delas será suficiente isoladamente.",
+      "c": "Aluguel e trabalho parcial são fontes garantidas por dependerem de ativos reais e capacidade profissional, enquanto aplicações permanecem incertas.",
+      "d": "O plano patrocinado substitui a formação de reserva individual, porque a contribuição ligada ao emprego já vincula a renda futura ao padrão atual."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-12-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Os sinais indicam pressão relevante para o atendimento, mas não autorizam diagnóstico clínico; a profissional organiza urgências, reduz a carga da conversa e evita prometer que investimento tratará o estresse.</p><p>A alternativa A ultrapassa o limite de atuação. A alternativa B usa retorno como tratamento e adiciona risco ao quadro. A alternativa D abandona a organização financeira em vez de conduzi-la com clareza e respeito.</p><p>Regra de bolso: reconheça a pressão, simplifique a decisão financeira e preserve a fronteira com a área de saúde.</p>",
+     "enunciado": "<p>Durante uma reunião, a consultora Janaína atende Paulo, que relata preocupação persistente com contas, conflitos familiares sobre dinheiro, dificuldade para dormir e uso frequente de crédito para despesas do mês. Ele pede uma carteira de retorno elevado e afirma que um investimento rentável resolverá também seu estado emocional. Janaína observa renda instável, parcelas em atraso e ausência de recursos líquidos para imprevistos. Paulo insiste que deseja receber uma avaliação sobre a gravidade de sua saúde antes de reorganizar as finanças. A consultora precisa acolher o relato, reconhecer os sinais relevantes para a decisão e respeitar os limites de sua atuação. Indique a conduta aplicável ao atendimento.</p>",
+     "alternativas": {
+      "a": "Classificar clinicamente o nível de estresse e usar essa conclusão para definir a exposição ao risco e o prazo de resgate da carteira recomendada.",
+      "b": "Recomendar a carteira de retorno elevado como instrumento de resiliência, pois a expectativa positiva pode reduzir os conflitos e a preocupação com as contas.",
+      "c": "Organizar contas urgentes, dívidas, renda e liquidez com explicações curtas, acolher o relato e evitar diagnóstico de saúde ou promessa de solução por investimento.",
+      "d": "Adiar a conversa financeira até cessarem os sinais emocionais, porque decisões sobre orçamento e dívida dependem primeiro de uma conclusão clínica formal."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-12-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A renda de R$ 12.000 menos R$ 8.200, R$ 2.100 e R$ 700 deixa R$ 1.000 antes de imprevistos. A contribuição desejada supera a margem e ainda consumiria uma reserva pequena.</p><p>A alternativa A exclui a dívida e chega a R$ 3.100. A alternativa B exclui o dependente para chegar a R$ 1.700 e usa a reserva como complemento recorrente. A alternativa C considera apenas despesas essenciais e transfere compromissos ao retorno incerto.</p><p>Regra de bolso: contribuição sustentável nasce depois de despesas, dívidas e dependentes, preservando espaço para imprevistos.</p>",
+     "enunciado": "<p>A planejadora Márcia recebe os dados mensais de Leandro: renda líquida de R$ 12.000, despesas essenciais de R$ 8.200, parcelas de dívidas de R$ 2.100 e apoio regular de R$ 700 a um dependente. Ele possui saldo líquido de R$ 3.000 para imprevistos e deseja aportar R$ 3.500 por mês para se aposentar em dez anos. As despesas e parcelas vencem antes do recebimento seguinte, e a renda informada é sua única entrada regular. Nos meses anteriores, uma despesa extraordinária levou ao uso de crédito, e Leandro quer manter o aporte pretendido cortando a reserva imediata. Márcia precisa calcular a margem antes de despesas imprevistas e avaliar a sustentabilidade da contribuição sem confundir ambição com capacidade atual. Calcule a margem mensal informada e indique a leitura aplicável.</p>",
+     "alternativas": {
+      "a": "A margem é R$ 3.100, porque parcelas de dívida formam patrimônio futuro e ficam fora das despesas usadas para avaliar a contribuição mensal.",
+      "b": "A margem é R$ 1.700, pois o apoio ao dependente fica fora do orçamento previdenciário e pode ser compensado por retiradas da reserva de R$ 3.000.",
+      "c": "A margem é R$ 3.800, obtida pela diferença entre renda e despesas essenciais; dívida e dependente podem ser cobertos pelo retorno da contribuição.",
+      "d": "A margem é R$ 1.000 antes de imprevistos; o aporte de R$ 3.500 excede o fluxo atual e fragiliza a liquidez já reduzida."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-12-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Pressão financeira depende do conjunto de renda, estabilidade, despesas, dívidas, dependentes, liquidez e compromissos, e não apenas do valor mensal recebido.</p><p>A alternativa A trata despesas e dependentes como escolhas irrelevantes. A alternativa C interpreta renda variável como diversificação suficiente e ignora dívidas. A alternativa D usa renda para apagar crédito recorrente e falta de folga.</p><p>Regra de bolso: renda mostra entrada; pressão aparece quando entradas, obrigações, estabilidade e liquidez são vistas juntas.</p>",
+     "enunciado": "<p>O gerente André atende duas profissionais com renda líquida mensal de R$ 25.000. Elisa possui despesas de R$ 11.000, reserva para imprevistos, emprego estável e nenhum dependente. Clara sustenta três familiares, mantém despesas rígidas de R$ 19.000, paga dívidas caras e recebe parte relevante da renda por projetos incertos. Um colega considera ambas livres de pressão financeira por estarem no mesmo estrato de renda e recomenda contribuições idênticas para aposentadoria. Clara relata preocupação constante com vencimentos e uso recorrente de crédito nos meses de receita reduzida. André precisa avaliar o grau de pressão sem usar renda isolada como diagnóstico. Analise as situações e indique a conclusão aplicável.</p>",
+     "alternativas": {
+      "a": "A renda igual determina pressão equivalente, e a contribuição pode ser a mesma porque despesas e dependentes afetam apenas o padrão de consumo escolhido.",
+      "b": "Clara apresenta pressão superior apesar da renda, pois despesas rígidas, dependentes, dívida, instabilidade e pouca folga alteram sua condição financeira.",
+      "c": "Elisa enfrenta pressão superior por depender de um único emprego, enquanto a renda por projetos de Clara diversifica o fluxo e compensa as dívidas caras.",
+      "d": "O estrato de renda elimina a relevância do crédito recorrente, pois o valor recebido permite reorganizar vencimentos sem rever contribuição ou liquidez."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-12-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Investimentos contribuem para resiliência quando cabem no fluxo e nos objetivos; dívida mantida, falta de reserva, concentração e prazo de saída inadequado podem aumentar a pressão financeira.</p><p>A alternativa A usa retorno esperado como substituto da reserva. A alternativa B trata dívida e renda variável como suporte ao investimento. A alternativa C confunde sensação positiva com tolerância e ignora o caixa.</p><p>Regra de bolso: investimento fortalece quando apoia o plano; fragiliza quando compete com dívida, urgência e liquidez.</p>",
+     "enunciado": "<p>Após receber um bônus, Silvana procura o especialista Rogério para decidir entre formar uma reserva líquida e concentrar o valor em uma aplicação de longo prazo com oscilação. Ela mantém dívidas de curto prazo, possui renda variável e costuma recorrer ao cheque especial quando surge manutenção em casa. Silvana afirma que observar uma aplicação de retorno esperado elevado lhe dará sensação de progresso e reduzirá sua preocupação financeira. O produto possui saída incompatível com despesas imediatas e pode apresentar perdas no período. Rogério reconhece que investimentos podem financiar objetivos, mas também ampliar a pressão quando faltam liquidez e capacidade de suportar oscilações. Silvana insiste na concentração. Avalie o papel do investimento no caso e indique a orientação aplicável.</p>",
+     "alternativas": {
+      "a": "Concentrar o bônus cria resiliência porque o horizonte longo protege a cliente de usar o dinheiro e o retorno esperado substitui a reserva para manutenção.",
+      "b": "Manter dívidas para investir amplia o patrimônio, e a renda variável permite ajustar pagamentos enquanto a aplicação atravessa períodos de oscilação.",
+      "c": "A sensação de progresso demonstra tolerância, e a indisponibilidade do produto reduz decisões impulsivas sem alterar a pressão do fluxo de curto prazo.",
+      "d": "Priorizar estabilidade, dívida e liquidez reduz vulnerabilidade; concentração e saída incompatível podem agravar a pressão em vez de tratá-la."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-12-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Pessoas da mesma idade podem ter datas de transição, despesas, dependentes, fontes e necessidades de liquidez distintas, e esses dados sustentam a decisão individual.</p><p>A alternativa A transforma idade em horizonte e limita os demais dados ao aporte. A alternativa B usa idade como data presumida. A alternativa D iguala capacidade pelo patrimônio e garante renda futura do trabalho.</p><p>Regra de bolso: idade abre a pergunta sobre o horizonte; a resposta do cliente define o horizonte real.</p>",
+     "enunciado": "<p>Em uma ação com clientes de 60 anos, a instituição considera usar a idade para presumir aposentadoria imediata e recomendar a mesma redução de risco. Na entrevista, Alberto pretende continuar trabalhando por mais oito anos, possui despesas cobertas e reserva líquida. Nádia deseja encerrar a atividade em dois anos, sustenta um dependente e usará parte das aplicações para complementar renda. Os dois têm a mesma idade e patrimônio semelhante, mas objetivos, fontes e necessidade de recursos são diferentes. A coordenadora quer substituir o roteiro padronizado por perguntas sobre transição profissional, gastos e renda esperada. A equipe precisa avaliar o papel da idade e das condições individuais. Analise os casos e indique a abordagem aplicável.</p>",
+     "alternativas": {
+      "a": "A idade comum define horizonte equivalente, e a diferença entre trabalho e dependente altera somente o valor da contribuição, sem afetar liquidez ou risco.",
+      "b": "A proximidade dos 60 anos exige a mesma redução de risco, porque o planejamento previdenciário utiliza idade como medida da data provável de aposentadoria.",
+      "c": "A idade é uma pista, mas horizonte, trabalho, dependentes, gastos, fontes e liquidez sustentam decisões que podem divergir entre Alberto e Nádia.",
+      "d": "O patrimônio semelhante iguala a capacidade financeira, e a intenção de trabalhar de Alberto pode ser tratada como renda garantida durante oito anos."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-12-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A sequência começa pelas urgências, separa curto e longo prazo, identifica a margem real e transforma o plano em decisões pequenas, compreensíveis e revisáveis.</p><p>A alternativa A usa projeção como motivação antes do diagnóstico. A alternativa C aumenta a carga cognitiva em momento de pressão. A alternativa D apaga o objetivo e proíbe até uma contribuição que poderia ser sustentável após a organização.</p><p>Regra de bolso: estabilize o presente, preserve o objetivo futuro e avance uma decisão verificável por vez.</p>",
+     "enunciado": "<p>A consultora Beatriz recebe Renato, que deseja iniciar um plano de aposentadoria e apresenta cinco simulações de renda futura. Durante a conversa, ele revela aluguel atrasado, saldo crescente no cartão, ausência de reserva e uma cirurgia provável na família nos próximos meses. Renato se mostra sobrecarregado, pede que Beatriz escolha rapidamente a projeção com saldo final elevado e afirma que detalhes sobre inflação, longevidade e variação das contribuições podem ser discutidos depois. Sua renda permite alguma reorganização, mas o valor efetivamente disponível para poupar ainda é desconhecido. Beatriz precisa reduzir a carga da conversa e ordenar decisões sem abandonar o objetivo de longo prazo. Analise o caso e indique a sequência de atendimento aplicável.</p>",
+     "alternativas": {
+      "a": "Escolher a projeção elevada cria motivação para resolver as contas, e o aporte correspondente pode ser ajustado depois que a cirurgia e as dívidas forem conhecidas.",
+      "b": "Mapear urgências, dívida, despesas e liquidez; separar o curto prazo da aposentadoria; apurar margem sustentável e registrar a próxima decisão revisável.",
+      "c": "Apresentar as cinco projeções completas preserva autonomia, pois reduzir informações poderia impedir Renato de comparar rentabilidade, inflação e longevidade.",
+      "d": "Suspender o objetivo de aposentadoria até a quitação integral das dívidas, porque pressão financeira impede qualquer registro ou contribuição de longo prazo."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-12-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. O horizonte de sete anos não cria liquidez ou capacidade de perda; a relação começa pelo orçamento, dependente, dívida, reserva, renda desejada e fontes antes de definir contribuição e risco.</p><p>A alternativa D usa prazo e retorno para encobrir dados ausentes. A alternativa B consome a reserva e mantém crédito para preservar aporte. A alternativa C reduz o objetivo ao produto e promete aliviar pressão sem reorganizar o fluxo.</p><p>Regra de bolso: atraso percebido pede planejamento, e não risco usado para compensar fragilidade financeira.</p>",
+     "enunciado": "<p>O bancário Felipe atende Vera, de 47 anos, que deseja reduzir o trabalho em sete anos. Ela possui renda de R$ 14.000, sustenta a mãe, acumula parcelas no cartão e mantém apenas R$ 4.000 disponíveis para imprevistos. Vera propõe investir R$ 4.500 por mês em uma carteira concentrada para recuperar o tempo, embora use crédito quando surgem despesas médicas. Ela argumenta que sete anos constituem prazo longo e insiste que risco elevado é a única forma de alcançar renda suficiente. Felipe ainda precisa estimar o padrão de gastos futuro e as fontes esperadas, mas já identifica conflito entre a contribuição pretendida, liquidez atual e dívida recorrente. Avalie o pedido e indique a resposta coerente com o relacionamento.</p>",
+     "alternativas": {
+      "a": "Mapear gastos, fontes, dívida e imprevistos, formar liquidez e definir contribuição sustentável antes de discutir exposição compatível com o plano.",
+      "b": "Manter R$ 4.500 e usar a reserva em despesas médicas, pois a disciplina previdenciária exige preservar a contribuição mesmo com crédito recorrente.",
+      "c": "Escolher previdência privada resolve a incompatibilidade, porque o produto transforma aposentadoria em objetivo de longo prazo e reduz a pressão mensal.",
+      "d": "Aceitar a concentração porque sete anos permitem atravessar oscilações, e o retorno esperado pode compensar a ausência de estimativa da renda futura."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-12-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Projeções dependem de variáveis que mudam; cenários, explicação curta, confirmação de compreensão e critérios revisáveis organizam o plano sem garantir saldo futuro.</p><p>A alternativa B promete o valor central e atribui aos aportes a absorção das incertezas. A alternativa C promete eliminar oscilação e presume resultado previsível. A alternativa D transforma reação ao mercado em rotina sem verificar critérios ou orçamento.</p><p>Regra de bolso: projeção é cenário, contribuição é compromisso revisável e compreensão sustenta a permanência no plano.</p>",
+     "enunciado": "<p>A especialista Camila acompanha Jonas, que começou a formar reserva para a aposentadoria há um ano. Ele possui orçamento equilibrado, liquidez para imprevistos e contribuição mensal compatível com a renda, mas ficou ansioso depois de uma oscilação da carteira. Jonas pede garantia de que o saldo alcançará a projeção apresentada e relata que pretende dobrar a contribuição em cada queda do mercado. A projeção depende de inflação, rentabilidade, contribuições, longevidade e padrão de gastos. Camila quer explorar cenários sem prometer resultado, confirmar a compreensão das oscilações e distinguir um ajuste planejado de uma reação emocional. Jonas insiste em receber uma resposta única para o valor futuro. Analise a conversa e indique a condução aplicável.</p>",
+     "alternativas": {
+      "a": "Mostrar cenários, explicar as variáveis, pedir que Jonas descreva o que compreendeu e manter critérios revisáveis para contribuição e risco.",
+      "b": "Garantir o valor central da projeção preserva a confiança, e variações de inflação e longevidade podem ser absorvidas pela contribuição dobrada durante quedas.",
+      "c": "Retirar a oscilação da carteira elimina a ansiedade, pois orçamento estável e reserva suficiente permitem escolher uma alternativa de resultado previsível.",
+      "d": "Dobrar aportes durante quedas constitui rotina adequada, porque preço reduzido transforma a reação emocional em estratégia de aposentadoria disciplinada."
+     },
+     "gabarito": "a"
+    }
+   ],
+   "Educação financeira, responsabilidade profissional e finfluencers": [
+    {
+     "id": "cpror-rel-13-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Educação financeira fornece linguagem, comparação e perguntas que ajudam o cliente a compreender consequências, preservando a decisão em vez de empurrar contratação.</p><p>A alternativa B confunde educação com excesso de conceitos. A alternativa C usa ensino como ferramenta de venda. A alternativa D trata conteúdo geral como substituto da análise individual.</p><p>Regra de bolso: educar é dar critérios para decidir, e não escolher pelo cliente.</p>",
+     "enunciado": "<p>Um profissional realiza uma conversa de educação financeira com clientes. Identifique a função dessa atividade no relacionamento.</p>",
+     "alternativas": {
+      "a": "Oferecer linguagem, comparações e perguntas para compreender consequências e decidir, sem transformar a explicação em indução à contratação.",
+      "b": "Apresentar conceitos técnicos em grande volume para que o cliente escolha o produto cuja descrição pareça compatível com seu conhecimento.",
+      "c": "Demonstrar os benefícios de uma alternativa e conduzir a contratação, pois educação financeira serve para reduzir resistência comercial.",
+      "d": "Substituir a análise individual por conteúdo padronizado, já que pessoas instruídas conseguem avaliar objetivo, risco e liquidez sem atendimento."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-13-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Conscientização liga o conceito ao impacto concreto sobre a meta e exige conferir se a pessoa compreendeu as consequências possíveis.</p><p>A alternativa A reduz compreensão à definição e ao registro. A alternativa C promete eliminar perda pelo produto simples. A alternativa D usa projeção positiva e adia a informação decisiva.</p><p>Regra de bolso: conhecimento define o risco; conscientização mostra o que ele pode mudar na vida do cliente.</p>",
+     "enunciado": "<p>Uma cliente sabe definir risco, mas ainda o trata como conceito distante de seus objetivos. Explique o papel da conscientização financeira.</p>",
+     "alternativas": {
+      "a": "Confirmar que a cliente decorou a definição e registrar a apresentação, pois o domínio do conceito já comprova decisão consciente.",
+      "b": "Relacionar a oscilação a consequências pessoais, como adiar uma compra ou vender em momento desfavorável, e verificar o que ela compreendeu.",
+      "c": "Eliminar a possibilidade de perda pela escolha de um produto simples, permitindo que o risco permaneça como conceito apenas educacional.",
+      "d": "Apresentar projeções positivas para aumentar o interesse, deixando as consequências pessoais para depois da primeira experiência com o produto."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-13-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Certificação demonstra qualificação dentro de um escopo; o profissional mantém deveres de atualização, exatidão, comunicação de incertezas, revelação de conflitos e encaminhamento do que excede sua atuação.</p><p>A alternativa B transforma conteúdo educativo em ampliação de escopo e aceita fonte antiga. A alternativa C usa certificação para ocultar conflito. A alternativa D confunde clareza com retirada de informações decisivas.</p><p>Regra de bolso: certificação comprova qualificação delimitada; fonte, conflito, incerteza e escopo continuam sob responsabilidade do profissional.</p>",
+     "enunciado": "<p>A gerente Denise possui certificação profissional e grava um vídeo para clientes sobre investimentos. Durante a preparação, um colega afirma que a certificação torna suas explicações infalíveis e permite responder dúvidas pertencentes a outras atividades profissionais. O roteiro usa dados de dois anos atrás, omite a incerteza das projeções e apresenta uma alternativa como resultado garantido. Denise identifica ainda vínculo comercial da instituição com o produto, ausente da apresentação. Ela quer adaptar a linguagem ao público sem esconder fatos que mudam a decisão e respeitar os limites de sua função. Avalie o alcance da certificação e indique a conduta compatível com a responsabilidade profissional.</p>",
+     "alternativas": {
+      "a": "Denise deve atualizar fontes, comunicar riscos e incertezas, revelar o conflito relevante e encaminhar dúvidas que ultrapassem sua atividade profissional.",
+      "b": "A certificação autoriza ampliar o escopo quando o conteúdo é educativo, e os dados antigos podem ser mantidos se o produto conservar o mesmo nome comercial.",
+      "c": "A qualificação elimina a necessidade de revelar o vínculo, pois o dever de exatidão garante independência suficiente para apresentar o produto.",
+      "d": "Simplificar exige retirar projeções e riscos do roteiro, deixando custos e conflitos nos documentos disponíveis depois da manifestação de interesse."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-13-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Ensinar características de forma geral difere de declarar adequação universal e propor alocação sem conhecer a situação da pessoa, o que extrapola a explicação educativa.</p><p>A alternativa B usa alcance público para validar indicação universal. A alternativa A chama regra genérica de análise completa. A alternativa D transforma informação relevante em recomendação por si só.</p><p>Regra de bolso: conteúdo geral explica como funciona; recomendação relaciona a alternativa à situação de uma pessoa.</p>",
+     "enunciado": "<p>Uma instituição publica uma aula aberta que explica o funcionamento de uma classe de ativos, seus custos, riscos e condições de liquidez. Ao final, a apresentadora afirma que a classe serve para qualquer pessoa com prazo superior a três anos e convida cada espectador a aplicar 30% da carteira. O material desconhece renda, patrimônio, objetivos e capacidade de perda de quem assiste. A aula será exibida dentro do aplicativo antes da tela de contratação. A equipe de revisão considera a primeira parte educativa, mas discute se a orientação final mantém natureza geral ou se avança para indicação individual. O responsável quer separar ensino de adequação sem impedir comunicação acessível sobre produtos. Analise o material e indique a distinção aplicável.</p>",
+     "alternativas": {
+      "a": "O percentual de 30% transforma a aula em análise profissional completa, pois uma regra numérica substitui a coleta de objetivo, risco e situação financeira.",
+      "b": "A aula inteira permanece educação porque foi publicada para público amplo, e orientação individual só existe quando o nome do cliente aparece na mensagem.",
+      "c": "Explicar funcionamento e riscos é educação geral; declarar adequação universal e percentual de carteira ultrapassa o conteúdo geral sem analisar a pessoa.",
+      "d": "A explicação de custos e liquidez já constitui recomendação individual, porque esses elementos influenciam a contratação de quem assiste ao conteúdo."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-13-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Finfluencers podem ampliar alcance, traduzir linguagem e despertar interesse, mas suas conclusões ainda precisam ser avaliadas por autoria, evidência, atualização, premissas, riscos e interesses.</p><p>A alternativa C elimina o valor educacional pela origem digital. A alternativa B usa audiência como validação e adia conflitos. A alternativa D presume incompatibilidade entre despertar interesse e explicar produtos.</p><p>Regra de bolso: reconheça o que ajudou o cliente e verifique o que sustenta a conclusão.</p>",
+     "enunciado": "<p>O assessor Mateus recebe uma cliente que começou a poupar depois de acompanhar uma criadora de conteúdo. Os vídeos traduziram vocabulário, mostraram como organizar objetivos e despertaram interesse por investimentos. Um colega de Mateus propõe ridicularizar o canal porque a criadora é finfluencer e afirma que conteúdo de plataforma digital carece de utilidade educacional. Outro colega quer aceitar as mensagens por causa do grande número de seguidores e da edição profissional. A cliente se mostra aberta a verificar as informações, mas teme ser julgada pela fonte que utilizou. Mateus precisa reconhecer o valor do alcance sem converter popularidade em qualidade técnica. Avalie as posições e indique a abordagem aplicável.</p>",
+     "alternativas": {
+      "a": "Reconhecer o estímulo à poupança e, em seguida, verificar autoria, fontes, data, premissas, riscos e remuneração antes de usar as conclusões.",
+      "b": "Validar o conteúdo pela audiência preserva o diálogo, e eventuais conflitos podem ser avaliados apenas quando existir divergência com a instituição.",
+      "c": "Desqualificar o canal protege a cliente, pois conteúdo digital breve possui finalidade comercial e fica fora da educação financeira responsável.",
+      "d": "Separar educação e investimento exige abandonar os vídeos, pois a mesma pessoa que desperta interesse fica impedida de explicar produtos financeiros."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-13-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A avaliação crítica observa autoria, qualificação, evidência, atualização, premissas, riscos e interesse econômico e depois compara as condições com o objetivo do cliente.</p><p>A alternativa A toma alcance e edição como prova técnica. A alternativa B transforma conflito em falsidade automática. A alternativa D procura promessa em vez de evidência e adequação.</p><p>Regra de bolso: primeiro verifique quem afirma, com base em quê, quando e com qual interesse; depois teste para quem a tese serve.</p>",
+     "enunciado": "<p>Leandro envia à especialista Patrícia um vídeo curto que recomenda uma estratégia com base em valorização recente. O perfil possui 800 mil seguidores, boa produção visual e linguagem segura. Na descrição há um código de indicação pouco destacado, o autor cita apenas sua experiência pessoal e a publicação ocorreu antes de uma mudança relevante nas condições do produto. O produto continua disponível para contratação na plataforma indicada. Leandro afirma que seguidores e comentários positivos comprovam independência e atualização. Patrícia deseja avaliar a mensagem sem rejeitá-la pela origem nem aceitá-la pelo alcance. Ela também precisa descobrir se a tese se aplica ao objetivo e ao prazo do cliente. Indique o conjunto de verificações coerente com essa análise.</p>",
+     "alternativas": {
+      "a": "Confirmar seguidores, comentários e qualidade de edição, pois esses elementos medem a aceitação pública e compensam a ausência de documentos técnicos.",
+      "b": "Rejeitar a estratégia pelo código de indicação, porque interesse comercial torna inválidas as informações técnicas apresentadas no mesmo conteúdo.",
+      "c": "Examinar autoria, qualificação, evidências, data, premissas, riscos e remuneração, comparando a tese atualizada com a situação de Leandro.",
+      "d": "Pedir ao autor uma promessa escrita de desempenho, pois a responsabilização pública corrige simplificação, desatualização e conflito de interesse."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-13-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A comunicação pode reduzir jargão e usar exemplos, mas precisa manter riscos, custos, liquidez e limites que alteram a decisão.</p><p>A alternativa A omite informações e transfere a busca ao cliente. A alternativa C preserva termos sem adaptar a compreensão. A alternativa D apresenta consequências decisivas somente depois da escolha.</p><p>Regra de bolso: simplifique a forma, preserve o conteúdo que pode mudar a decisão.</p>",
+     "enunciado": "<p>Uma equipe adapta para linguagem simples a apresentação de um produto. O texto original informa possibilidade de perda, custo de saída, prazo de resgate e condições em que a projeção deixa de valer. A versão resumida mantém apenas uma frase sobre rentabilidade e diz que detalhes poderiam confundir o público iniciante. O redator argumenta que os documentos completos continuarão disponíveis em outro menu e que a simplificação aumentará a contratação. A apresentação será usada antes da oferta digital. A revisora defende frases curtas e exemplos, preservando os elementos capazes de mudar a escolha do cliente. A equipe precisa decidir o limite entre clareza e omissão. Compare as versões e indique a solução compatível com a responsabilidade profissional.</p>",
+     "alternativas": {
+      "a": "Manter apenas a rentabilidade torna a mensagem clara, e a disponibilidade dos documentos transfere ao cliente a decisão de buscar riscos, custos e resgate.",
+      "b": "Usar linguagem simples e exemplos, preservando perda, custo, resgate e limites da projeção, pois simplificar não autoriza retirar condições decisivas.",
+      "c": "Restaurar o texto técnico integral evita omissões, ainda que o vocabulário impeça o público iniciante de compreender as consequências apresentadas.",
+      "d": "Dividir o conteúdo em benefícios antes da contratação e riscos depois dela equilibra clareza comercial e responsabilidade sobre a decisão financeira."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-13-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A abordagem acolhe a origem da conversa sem validar a promessa, identifica o interesse, verifica evidências e documentos e testa risco e liquidez contra a reforma em nove meses.</p><p>A alternativa A julga apenas pela origem e deixa de ensinar critérios. A alternativa C usa audiência e redução do valor para compensar problemas técnicos. A alternativa B substitui uma autoridade informal por outra.</p><p>Regra de bolso: acolha a pergunta, verifique a tese e conecte risco e saída à função daquele dinheiro.</p>",
+     "enunciado": "<p>A gerente Isabela atende Rosa, que deseja usar R$ 70.000 reservados para uma reforma prevista em nove meses. A cliente viu um finfluencer apresentar uma estratégia como apropriada para qualquer investidor e destacar ganho de 35% em determinado intervalo. O vídeo exibe código de indicação, omite o período completo de desempenho e trata a liquidez em uma frase breve. Rosa insiste na adoção da recomendação porque o autor fala com segurança e acumula grande audiência. Isabela encontra o documento atual, que mostra oscilação e possibilidade de saída incompatível com a data da reforma. A decisão envolve preservar o diálogo, ensinar critérios de verificação e relacionar o produto à finalidade do dinheiro. Analise o caso e indique a condução aplicável.</p>",
+     "alternativas": {
+      "a": "Proibir a estratégia pela condição de finfluencer protege a reforma, e a origem digital basta para concluir que o investimento é inadequado.",
+      "b": "Enviar um vídeo contrário preserva a autonomia, porque Rosa poderá escolher entre duas opiniões populares sem depender de documentos difíceis.",
+      "c": "Aceitar a recomendação pela audiência, mas reduzir o valor aplicado, pois a alocação parcial compensa publicidade, recorte de desempenho e baixa liquidez.",
+      "d": "Reconhecer a tese como ponto de partida, revelar o conflito potencial, verificar desempenho e documentos e comparar oscilação e saída com os nove meses."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-13-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Rafael pode explicar o que pertence à sua atividade, comunicar os limites e encaminhar dúvidas que exigem especialistas de outras áreas, protegendo a qualidade da decisão.</p><p>A alternativa A usa o rótulo educativo para ampliar o escopo. A alternativa C abandona inclusive a parte financeira autorizada. A alternativa B estende um resumo financeiro a conclusões que ele não sustenta.</p><p>Regra de bolso: atenda bem dentro do escopo e encaminhe com clareza o que exige outra especialidade.</p>",
+     "enunciado": "<p>Durante o planejamento patrimonial, o profissional Rafael recebe perguntas de Nádia sobre investimento, efeitos tributários de uma estrutura e validade de uma cláusula contratual. Rafael possui certificação para sua atividade de investimentos, conhece conceitos gerais das outras áreas e acredita que uma resposta rápida aumentaria a confiança da cliente. O material institucional disponível resume riscos e custos financeiros, mas a conclusão tributária e a interpretação jurídica dependem de análises fora de seu escopo. Nádia pede que ele resolva tudo na mesma reunião e argumenta que a certificação comprova capacidade para temas relacionados ao patrimônio. Rafael precisa manter a utilidade do atendimento sem ultrapassar sua função ou apresentar opinião como verdade técnica. Indique a conduta aplicável.</p>",
+     "alternativas": {
+      "a": "Responder às três áreas como educação geral, pois a certificação permite opiniões amplas quando o profissional avisa que a decisão final pertence à cliente.",
+      "b": "Usar o resumo institucional para concluir os efeitos tributários e jurídicos, pois materiais da instituição compartilham a responsabilidade pela exatidão.",
+      "c": "Recusar qualquer explicação sobre a estrutura, porque a presença de dúvidas externas ao escopo impede tratar também seus aspectos financeiros.",
+      "d": "Explicar riscos e custos dentro de seu escopo, declarar os limites e encaminhar as questões tributária e jurídica aos profissionais correspondentes."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-13-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A repetição de termos não comprova compreensão; explicar com palavras próprias permite verificar custos, perdas e saída, corrigir lacunas e sustentar uma decisão autônoma.</p><p>A alternativa A substitui a escolha da cliente pela de Caio. A alternativa C usa apresentação e memorização como prova suficiente. A alternativa D elimina uma opção e ainda deixa as lacunas de compreensão sem resposta.</p><p>Regra de bolso: informe, peça ao cliente que explique o impacto e preserve a decisão depois que as consequências estiverem claras.</p>",
+     "enunciado": "<p>O especialista Caio apresenta a Irene duas alternativas para recursos sem uso previsto no longo prazo. Ele explica rentabilidade possível, perdas, custos e condições de saída e informa que a instituição recebe remuneração em uma delas. Irene repete os nomes técnicos corretamente, mas afirma que custo significa apenas taxa cobrada na compra e que poderá resgatar qualquer alternativa no dia seguinte sem variação. Caio percebe que ela memorizou termos, porém mantém compreensão incompleta das consequências. Irene pede que ele escolha por ela, pois considera cansativo rever a explicação. Caio quer confirmar entendimento, corrigir as lacunas e preservar a autonomia da cliente antes de avançar. Avalie a situação e indique a condução aplicável.</p>",
+     "alternativas": {
+      "a": "Escolher a alternativa com remuneração menor para a instituição preserva a autonomia de Irene, porque reduz o conflito sem exigir nova explicação.",
+      "b": "Pedir que Irene explique custos, perdas e saída com palavras próprias, corrigir as lacunas e deixá-la decidir com base nas consequências compreendidas.",
+      "c": "Registrar que os termos foram apresentados e executar a opção indicada por Caio, pois a memorização demonstra ciência suficiente para delegar a decisão.",
+      "d": "Retirar da comparação a alternativa remunerada elimina o conflito e torna desnecessário conferir a compreensão sobre resgate, variação e custos."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Funil de prospecção: da primeira reunião ao acompanhamento": [
+    {
+     "id": "cpror-rel-14-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O funil mapeia contatos por etapas, permite localizar descontinuidades, distribuir esforço e melhorar a experiência até a manutenção do relacionamento.</p><p>A alternativa B reduz o funil à contagem de vendas. A alternativa C troca análise individual por indicadores. A alternativa D usa aceitação rápida e elimina descoberta e acompanhamento.</p><p>Regra de bolso: o funil mostra onde o relacionamento está e onde o processo pede investigação.</p>",
+     "enunciado": "<p>Uma equipe acompanha contatos desde a abordagem inicial até o relacionamento ativo. Explique a função profissional do funil de prospecção.</p>",
+     "alternativas": {
+      "a": "Organizar etapas e critérios, localizar perdas, distribuir esforço e melhorar a experiência durante a formação e manutenção do relacionamento.",
+      "b": "Contar vendas concluídas e ordenar profissionais pelo volume, usando o resultado final como explicação das perdas ocorridas nas etapas anteriores.",
+      "c": "Substituir a análise individual por taxas de conversão, porque o comportamento do grupo indica qual solução deve ser apresentada a cada prospect.",
+      "d": "Concentrar contatos em pessoas propensas a aceitar na primeira reunião, reduzindo o tempo destinado a dúvidas e ao acompanhamento posterior."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-14-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Agendamento requer compromisso definido, apresentação não equivale a aceite, implementação depende da execução e ativação abrange implementação e acompanhamento.</p><p>A alternativa A antecipa cada marco. A alternativa C chama reunião de ativação. A alternativa D trata cadastro vazio como execução e exclui acompanhamento da ativação.</p><p>Regra de bolso: resposta, reunião, compreensão, decisão, execução e acompanhamento são marcos distintos.</p>",
+     "enunciado": "<p>Um prospect responde a uma mensagem, conversa com o profissional, recebe uma estratégia e abre cadastro sem movimentação. Classifique os marcos do processo.</p>",
+     "alternativas": {
+      "a": "A resposta já constitui agendamento, a conversa representa aceite, a apresentação inicia implementação e o cadastro vazio conclui a ativação.",
+      "b": "Agendamento exige compromisso definido; apresentação difere de aceite; implementação exige execução, e ativação inclui acompanhamento.",
+      "c": "A conversa transforma o prospect em cliente ativo, porque as etapas posteriores apenas registram estratégia, cadastro e contatos de manutenção.",
+      "d": "O cadastro aberto comprova implementação, enquanto a movimentação e o acompanhamento pertencem a uma etapa comercial posterior à ativação."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-14-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Cada passagem possui resultado verificável: compromisso definido, estratégia conectada e explicada e execução efetiva da decisão, evitando registros baseados em expectativa.</p><p>A alternativa B mantém os três marcos antecipados. A alternativa C usa percepção de conversão no lugar de critério comum. A alternativa A concentra o funil na reunião e infere etapas posteriores.</p><p>Regra de bolso: uma etapa só avança quando seu resultado observável aconteceu e foi registrado.</p>",
+     "enunciado": "<p>A supervisora Carla encontra registros inconsistentes no sistema. Um assessor marca “reunião agendada” quando o prospect apenas responde que possui interesse. Outro registra “estratégia apresentada” depois de enviar um folheto genérico. Um terceiro considera “implementada” a abertura de cadastro sem movimentação. Como resultado, profissionais diferentes colocam situações iguais em etapas distintas, e as taxas deixaram de representar a jornada. Esses registros alimentam metas semanais, previsão de demanda e distribuição do trabalho entre os assessores. Carla quer estabelecer resultados observáveis sem transformar o funil em pressão por aceite. Analise os três registros e indique os critérios capazes de corrigir a medição.</p>",
+     "alternativas": {
+      "a": "A reunião define a única etapa observável, enquanto apresentação, implementação e acompanhamento podem ser inferidos pela abertura e pelo uso posterior da conta.",
+      "b": "Interesse respondido basta para agendamento, folheto enviado comprova apresentação e cadastro aberto conta como implementação se o prospect já recebeu a proposta.",
+      "c": "O assessor escolhe a etapa conforme a probabilidade percebida de conversão, e a supervisão corrige apenas casos que permanecerem sem avanço por trinta dias.",
+      "d": "Agendamento requer data, canal e propósito aceitos; apresentação exige estratégia ligada ao objetivo com riscos e custos; implementação exige execução da decisão."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-14-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. As perdas são 45, 6, 9, 6 e 2; o volume dominante ocorre entre contato e agendamento. Esse número indica onde investigar, enquanto origem, respostas, canal e momento ajudam a explicar a causa.</p><p>A alternativa A identifica a perda de 9, mas ela fica abaixo de 45 e não comprova causa. A alternativa C identifica 6 e propõe pressão. A alternativa D acerta o valor final, porém ignora o maior volume anterior.</p><p>Regra de bolso: subtraia etapas vizinhas para localizar a perda; use registros para descobrir o motivo.</p>",
+     "enunciado": "<p>No fechamento do mês, a equipe de Joana registra 75 contatos legítimos, 30 reuniões agendadas, 24 reuniões realizadas, 15 apresentações de estratégia, 9 decisões de implementar e 7 ativações concluídas. O diretor observa os números e afirma que o principal problema é a execução final, pois duas pessoas ficaram entre decisão e ativação. Joana prefere comparar as perdas absolutas entre etapas e depois consultar origem dos contatos, respostas, objeções e registros operacionais. Os registros usam os mesmos critérios durante o mês. Ela sabe que uma perda numerosa aponta prioridade de investigação e deixa a causa em aberto. Calcule a perda em cada passagem, identifique o volume dominante e indique a interpretação aplicável.</p>",
+     "alternativas": {
+      "a": "A perda de 9 entre reunião e apresentação domina o volume e comprova falha de descoberta por superar as perdas das etapas seguintes.",
+      "b": "A perda de 45 antes do agendamento domina o volume; ela localiza a investigação em público, mensagem, canal e momento sem provar a causa.",
+      "c": "A perda de 6 entre apresentação e decisão domina o volume e demonstra inadequação, justificando pedir aceite durante a própria reunião.",
+      "d": "A perda de 2 entre decisão e ativação domina por ocorrer perto do resultado final e possui prioridade sobre as 45 perdas anteriores."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-14-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. No Norte, 10 dividido por 20 resulta em 50%; no Sul, 12 dividido por 16 resulta em 75%. A diferença localiza a atenção do Norte após o agendamento, coerente com os registros de horário e confirmação.</p><p>A alternativa A divide reuniões pelos contatos iniciais e calcula 20% e 30%. A alternativa C transporta a taxa da etapa anterior. A alternativa B acerta o Norte, mas usa denominador inadequado e erra o Sul.</p><p>Regra de bolso: cada taxa usa como base a etapa imediatamente anterior para mostrar onde a continuidade mudou.</p>",
+     "enunciado": "<p>Dois escritórios comparam etapas do mesmo mês. No escritório Norte, 50 contatos geraram 20 agendamentos, dos quais 10 viraram reuniões realizadas. No escritório Sul, 40 contatos geraram 16 agendamentos, dos quais 12 viraram reuniões realizadas. Ambos converteram 40% dos contatos em agendamentos, mas o gestor diz que a continuidade após marcar reunião também é igual. Os registros do Norte citam horários inconvenientes e falta de confirmação; os do Sul registram comparecimento e remarcações resolvidas no prazo. A coordenadora quer calcular a taxa de realização sobre reuniões agendadas e escolher onde aprofundar o diagnóstico de ausência. Calcule as duas taxas e indique a conclusão sustentada pelos dados.</p>",
+     "alternativas": {
+      "a": "Norte realizou 20% e Sul 30%, porque a taxa usa os contatos iniciais; o gargalo dos dois permanece no agendamento pela conversão comum de 40%.",
+      "b": "Norte realizou 50% e Sul 60%, porque reuniões realizadas devem ser divididas pelos contatos que responderam antes do agendamento formal.",
+      "c": "Norte realizou 40% e Sul 40%, pois os dois escritórios converteram a mesma parcela dos contatos e a etapa seguinte preserva essa taxa.",
+      "d": "Norte realizou 50% e Sul 75% dos agendamentos; o Norte pede investigação de confirmação, horário e clareza do compromisso."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-14-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O aceite está presente, mas a implementação depende da execução; pendências e próximo passo precisam ser transparentes, e o acompanhamento passa a integrar a ativação após a movimentação.</p><p>A alternativa B antecipa o marco para proteger indicador. A alternativa C transforma falha operacional em falta de compreensão. A alternativa D chama pendência de perda definitiva e encerra o relacionamento.</p><p>Regra de bolso: decisão é intenção registrada; implementação é estratégia executada.</p>",
+     "enunciado": "<p>Depois de uma apresentação, o prospect Raul informa que compreendeu a estratégia e deseja implementá-la. O cadastro está completo, mas um documento obrigatório permanece pendente e a transferência solicitada retorna por divergência de titularidade. O assessor registra ativação para preservar a meta semanal e promete corrigir os detalhes depois. A movimentação permanece pendente, Raul acompanha o caso pelo aplicativo e pede atualização sobre o prazo. A supervisora encontra casos semelhantes em que aceite verbal e cadastro aberto foram contabilizados como resultado concluído. Ela precisa registrar a etapa correta, tratar o impedimento e separar decisão do cliente de execução efetiva. Analise o caso e indique a conduta aplicável.</p>",
+     "alternativas": {
+      "a": "Manter o caso entre decisão e implementação, registrar pendências e próximo passo e contar ativação após execução, iniciando então o acompanhamento.",
+      "b": "Contar ativação pelo aceite, porque documento e transferência são questões operacionais posteriores que não alteram a decisão já tomada pelo prospect.",
+      "c": "Voltar o caso à apresentação, pois a falha documental demonstra que Raul ainda não compreendeu riscos, custos e condições da estratégia.",
+      "d": "Encerrar como perda comercial, porque uma estratégia aceita que não movimenta no mesmo período deixa de pertencer ao funil de relacionamento."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-14-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A meta e o prazo promocional não substituem conhecimento do cliente, compreensão e adequação; a continuidade pode ser preservada com dados pendentes e próximo passo registrado.</p><p>A alternativa A decide antes da análise. A alternativa B introduz produto predeterminado na descoberta. A alternativa D trata pedido legítimo de tempo como perda e encerra o relacionamento.</p><p>Regra de bolso: avanço válido ocorre quando o cliente compreende e a solução encontra suporte nos dados coletados.</p>",
+     "enunciado": "<p>A equipe de Marcelo recebe a meta de elevar ativações no trimestre. Uma prospect, Lígia, comparece à reunião, fornece parte das informações e pede tempo para reunir dados sobre renda, patrimônio e necessidade de liquidez. O gerente sugere apresentar imediatamente o produto com taxa promocional e solicitar decisão na reunião para impedir que o caso esfrie. Marcelo observa que o objetivo da prospect ainda está pouco definido, o perfil permanece incompleto e a oferta expira em dois dias. Lígia afirma sentir pressão e pergunta se a promoção prova que a solução é apropriada. Marcelo precisa separar avanço comercial de compreensão e adequação, preservando a continuidade do contato. Indique a conduta aplicável.</p>",
+     "alternativas": {
+      "a": "Solicitar o aceite com condição suspensiva, pois a promoção preserva a oportunidade e os dados restantes podem confirmar a adequação depois da decisão.",
+      "b": "Apresentar o produto sem pedir aceite, porque exposição antecipada não interfere na descoberta e ajuda Lígia a definir objetivo e tolerância.",
+      "c": "Concluir a coleta, esclarecer que prazo comercial não prova adequação, registrar o próximo contato e apresentar estratégia apenas com base suficiente.",
+      "d": "Retirar Lígia do funil, pois pedir tempo e relatar pressão demonstram ausência de interesse comercial e impedem acompanhamento produtivo."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-14-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. O pedido de reflexão impede contar aceite, o cadastro vazio não é implementação e faltam registros relevantes; o caso permanece em análise até decisão válida, execução e acompanhamento.</p><p>A alternativa A soma atividades sem observar os critérios de passagem. A alternativa B trata cadastro como parte executada da estratégia. A alternativa D apaga eventos reais em vez de corrigir os registros e o estágio atual.</p><p>Regra de bolso: corrija o estágio pelo último resultado efetivamente alcançado e registre o próximo passo verificável.</p>",
+     "enunciado": "<p>A coordenadora Teresa audita o histórico de um prospect. A primeira mensagem recebeu resposta, porém data e canal da conversa ficaram abertos. Uma reunião ocorreu depois de troca informal de mensagens, e as anotações registram apenas “cliente interessado”. Na apresentação, o profissional mostrou uma estratégia, mas omitiu a alternativa rejeitada e marcou aceite apesar do pedido de dois dias para refletir. O cadastro foi aberto sem movimentação, e o sistema exibe o caso como ativado. Após três semanas, nenhum contato de acompanhamento foi programado. Teresa quer corrigir o estágio, reconstruir os próximos passos e recuperar transparência sem pressionar o prospect. Analise o histórico e indique o tratamento coerente.</p>",
+     "alternativas": {
+      "a": "Manter ativação porque reunião, apresentação e cadastro ocorreram, registrando a falta de movimentação como assunto do primeiro acompanhamento.",
+      "b": "Classificar implementação parcial, pois o cadastro executa a parte inicial da estratégia e o prazo de reflexão afeta apenas a alocação posterior.",
+      "c": "Manter o caso em análise, documentar informações e alternativa omitidas, confirmar a decisão e avançar depois com execução e acompanhamento.",
+      "d": "Retornar ao contato inicial porque o agendamento foi informal, descartando reunião e apresentação até que data, canal e propósito sejam formalizados."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-14-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A taxa localiza a perda, e os registros apontam falhas de descoberta e casos legítimos de falta de aderência; a melhoria atua na coleta e na qualidade da proposta, sem pressão.</p><p>A alternativa A interpreta a taxa como prova de demora e incentiva antecipação. A alternativa C melhora o número sem corrigir a experiência. A alternativa D padroniza proposta antes de avaliar adequação.</p><p>Regra de bolso: indicador aponta a etapa; objeções e registros separam falha do processo de decisão legítima do prospect.</p>",
+     "enunciado": "<p>Uma área comercial observa queda entre reuniões realizadas e apresentações de estratégia. O painel mostra que 70% dos prospects comparecem, mas somente 35% das reuniões geram proposta. A direção conclui que os profissionais precisam pedir decisão cedo e cria recompensa para apresentação feita durante a primeira conversa. Nos registros qualitativos, muitos prospects relatam perguntas genéricas, pouca exploração de objetivos e ausência de informações suficientes para formular estratégia. Outros casos indicam legitimamente falta de aderência ao serviço. A equipe quer melhorar o indicador sem fabricar propostas ou converter desinteresse legítimo em falha. Avalie o diagnóstico e indique a intervenção coerente com o funil.</p>",
+     "alternativas": {
+      "a": "Recompensar propostas na primeira reunião corrige o gargalo, pois a taxa de 35% prova que o problema está na demora em apresentar a solução comercial.",
+      "b": "Treinar descoberta e registro, separar dados insuficientes de ausência de aderência e medir se propostas posteriores conectam solução, riscos e objetivos.",
+      "c": "Retirar do denominador os prospects sem aderência eleva a taxa e demonstra que o processo funciona, dispensando revisão das perguntas usadas nas reuniões.",
+      "d": "Apresentar uma estratégia padrão em cada reunião cria resultado observável, permitindo que adequação seja verificada apenas entre aceite e implementação."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-14-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. O acompanhamento integra a ativação, verifica coerência da execução e das condições e retroalimenta decisões quando vida, objetivos ou experiência mudam.</p><p>A alternativa C rompe artificialmente o histórico. A alternativa B reduz acompanhamento à satisfação e congela adequação. A alternativa D antecipa produto antes de atualizar as informações.</p><p>Regra de bolso: implementação inicia a experiência; acompanhamento verifica, registra e orienta a próxima decisão.</p>",
+     "enunciado": "<p>Seis meses depois da implementação, a assessora Flávia contata Gustavo conforme o calendário combinado. A estratégia foi executada, mas ele mudou de emprego, passou a sustentar um familiar e pretende antecipar uma compra. Gustavo afirma que a ativação já encerrou o trabalho e que o acompanhamento serviria apenas para oferecer novos produtos. No sistema, o último registro contém a movimentação inicial, sem informação sobre experiência, execução posterior ou mudanças de objetivo. Flávia identifica que a nova necessidade pode alterar liquidez e contribuições e quer atualizar o relacionamento sem tratar a etapa como nova prospecção desconectada do histórico. Analise a função do acompanhamento e indique a conduta aplicável.</p>",
+     "alternativas": {
+      "a": "Atualizar condições e objetivo, verificar execução e experiência, registrar ajustes e alimentar novas decisões dentro do relacionamento ativo.",
+      "b": "Usar o contato apenas para confirmar satisfação, preservando a estratégia porque a implementação anterior já validou sua adequação ao cliente.",
+      "c": "Encerrar o funil após a implementação e abrir novo prospect para a compra, pois mudanças de emprego e dependentes pertencem a outro ciclo comercial.",
+      "d": "Oferecer um produto de liquidez antes da atualização, porque a compra antecipada cria oportunidade objetiva e dispensa revisar a estratégia existente."
+     },
+     "gabarito": "a"
+    }
+   ],
+   "Canais de prospecção, parcerias e base pessoal de contatos": [
+    {
+     "id": "cpror-rel-15-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Online amplia alcance, presencial favorece interação e parceria aproxima públicos, mas a utilidade de cada canal depende de público, mensagem, confiança e próximo passo.</p><p>A alternativa B fixa funções e permite recomendação pelo parceiro. A alternativa A presume confiança pelo encontro e reduz os outros canais a volume. A alternativa D transforma relação do parceiro em interesse comprovado.</p><p>Regra de bolso: canal bom é o que combina público, mensagem, contexto e próximo passo.</p>",
+     "enunciado": "<p>Uma equipe pode prospectar por redes sociais, eventos presenciais e parcerias. Compare a contribuição desses canais para iniciar relacionamentos.</p>",
+     "alternativas": {
+      "a": "Encontros presenciais produzem confiança suficiente, enquanto canais online e parcerias dependem apenas do volume de pessoas alcançadas.",
+      "b": "Redes sociais servem à contratação, encontros presenciais à educação e parcerias à recomendação individual feita por quem indicou o prospect.",
+      "c": "Canais online ampliam alcance, encontros favorecem interação aprofundada e parcerias aproximam públicos por uma relação existente, conforme o contexto.",
+      "d": "Parcerias substituem a escolha do público, pois a relação anterior do parceiro comprova interesse e permite iniciar a oferta diretamente."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-15-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O vínculo pessoal não torna a pessoa prospect disponível; a abordagem começa com contexto, interesse e permissão e respeita uma recusa sem pressão.</p><p>A alternativa A presume autorização pelo vínculo. A alternativa C permite reutilização livre de dados pessoais. A alternativa D interpreta presença na agenda e silêncio como disponibilidade comercial.</p><p>Regra de bolso: conhecer alguém abre a possibilidade de perguntar, e não a autorização para vender.</p>",
+     "enunciado": "<p>Um conhecido integra a base pessoal de contatos de uma profissional. Identifique a condição necessária antes de iniciar uma conversa comercial.</p>",
+     "alternativas": {
+      "a": "O vínculo anterior já autoriza a abordagem, desde que a mensagem cite a amizade e ofereça uma forma simples de recusa depois da apresentação.",
+      "b": "A profissional explica sua atuação, pergunta se o tema interessa e obtém permissão, aceitando a negativa sem explorar a relação pessoal.",
+      "c": "O histórico de convivência permite usar informações financeiras conhecidas, porque a origem pessoal dos dados dispensa nova contextualização.",
+      "d": "A inclusão na agenda do telefone caracteriza interesse potencial, cabendo insistir até que a pessoa confirme ou rejeite expressamente a oferta."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-15-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Comentário público não é espaço para dados financeiros ou recomendação individual; cabe proteger a exposição, explicar a finalidade e migrar para canal privado com concordância.</p><p>A alternativa A recomenda antes da análise e trata privacidade depois. A alternativa B amplia a coleta sensível no espaço público. A alternativa D abandona uma transição de canal que poderia ser feita com transparência.</p><p>Regra de bolso: conteúdo público apresenta o tema; dados pessoais e análise individual migram para conversa privada consentida.</p>",
+     "enunciado": "<p>Uma publicação educativa sobre reserva de emergência recebe comentário de Bianca: ela informa renda, valor das dívidas, saldo bancário e pede indicação de produto para contratação. O perfil é público, o comentário permanece visível e outras pessoas começam a opinar sobre a situação. O assessor Guilherme quer responder com rapidez para aproveitar o interesse, mas reconhece que a postagem apresentou apenas um problema geral e que o comentário expôs dados sensíveis. Bianca aguarda explicação sobre a finalidade de eventual conversa e sobre o uso das informações fornecidas. Guilherme quer preservar o contexto educativo, evitar recomendação pública e oferecer um próximo passo transparente. Indique a conduta aplicável.</p>",
+     "alternativas": {
+      "a": "Responder com o produto sugerido e apagar depois os valores do comentário, pois Bianca pediu orientação espontaneamente no canal em que recebeu o conteúdo.",
+      "b": "Solicitar no próprio comentário outros dados sobre despesas e dependentes, completando o diagnóstico antes de migrar a contratação para mensagem privada.",
+      "c": "Orientar Bianca a retirar os dados sensíveis, explicar o propósito de uma conversa privada e pedir concordância antes de coletar informações e analisar opções.",
+      "d": "Ignorar a pergunta para preservar a privacidade, pois responder em público impediria qualquer contato posterior sobre o tema iniciado pela própria cliente."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-15-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A inscrição autoriza o uso explicado no formulário; uma conversa posterior pode ser oferecida de modo claro e voluntário, e o escopo só se amplia com nova escolha.</p><p>A alternativa A presume interesse em produtos diversos. A alternativa C converte pergunta em pedido de recomendação. A alternativa D impede uma continuação legítima e consentida.</p><p>Regra de bolso: use os dados para a finalidade apresentada e peça nova escolha antes de ampliar a abordagem.</p>",
+     "enunciado": "<p>Uma instituição promove webinar gratuito sobre organização financeira. O formulário informa que nome e e-mail serão usados para enviar acesso, gravação e material complementar. Após o evento, o time comercial planeja adicionar os inscritos a campanhas sobre vários investimentos, supondo que a participação demonstre interesse amplo. Alguns participantes fizeram perguntas sobre orçamento, enquanto outros apenas assistiram à gravação. A coordenadora Helena lembra que o convite delimitou tema e uso dos dados e propõe oferecer, no próprio retorno, uma opção voluntária de conversa relacionada ao assunto. A equipe precisa decidir como preservar contexto e escolha ao passar da educação para prospecção. Analise o plano e indique a abordagem aplicável.</p>",
+     "alternativas": {
+      "a": "Incluir os inscritos nas campanhas, pois a entrega do e-mail e a presença no webinar comprovam interesse financeiro além do tema específico informado.",
+      "b": "Enviar o material prometido e oferecer adesão clara a uma conversa sobre o tema, preservando o uso informado e ampliando o contato apenas com nova escolha.",
+      "c": "Separar quem fez perguntas e enviar ofertas apenas a esse grupo, porque interação durante o webinar equivale a pedido de recomendação individual.",
+      "d": "Evitar qualquer retorno depois do material, pois uma atividade educativa perde legitimidade quando apresenta opção voluntária de contato profissional."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-15-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O retorno respeita o pedido de slides e pode oferecer conversa voluntária ligada ao tema; comparecimento ou lista de presença não equivalem a interesse comercial.</p><p>A alternativa B presume permissão pela presença. A alternativa C transforma solicitação de material em aceite de proposta. A alternativa D atribui à associação uma permissão que cada participante precisa manifestar.</p><p>Regra de bolso: retome o assunto aceito, identifique a origem e ofereça uma saída simples antes de qualquer avanço.</p>",
+     "enunciado": "<p>O consultor Renato participa de uma palestra para comerciantes sobre planejamento de caixa. Ao final, alguns participantes entregam cartões para receber os slides, e outros apenas permanecem na lista de presença organizada pela associação local. Uma semana depois, Renato pretende telefonar para a lista inteira e apresentar uma aplicação, alegando que a participação no encontro demonstra abertura comercial. A associação sugere mencionar que os comerciantes foram selecionados como clientes potenciais. O convite original tratava apenas da palestra e dos materiais. Renato quer dar continuidade ao assunto sem distorcer a finalidade do encontro nem pressionar quem compareceu. Avalie os grupos e indique a condução aplicável.</p>",
+     "alternativas": {
+      "a": "Enviar slides a quem os solicitou e oferecer opção de conversa coerente com o tema; presença isolada na lista não comprova interesse em abordagem comercial.",
+      "b": "Telefonar para a lista inteira, porque a presença em evento presencial cria confiança e permite uma oferta quando o contato menciona a origem da palestra.",
+      "c": "Apresentar a aplicação apenas a quem entregou cartão, pois pedir material educativo equivale a consentimento para receber proposta relacionada a investimentos.",
+      "d": "Usar a indicação da associação como permissão coletiva, já que a entidade conhece os participantes e pode definir quais deles possuem perfil de prospect."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-15-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Parceria útil define papéis, impede promessa não confirmada, revela incentivo relevante e assegura que o prospect conheça a origem, a finalidade e a relação entre os envolvidos.</p><p>A alternativa A posterga correção de promessa e aceita dados sem contexto. A alternativa C reduz conflito a pagamento e mantém os demais problemas. A alternativa B presume autorização pela relação contábil.</p><p>Regra de bolso: parceiro apresenta com contexto; profissional confirma necessidade e solução sem herdar promessas.</p>",
+     "enunciado": "<p>Uma empresa de contabilidade propõe parceria com a assessora Larissa. O contador apresentará empresários e receberá incentivo por contatos que avancem, mas já divulga aos clientes que Larissa garantirá redução de custos e retorno superior ao banco atual. Ele pretende enviar planilhas financeiras completas sem explicar aos empresários por que os dados serão compartilhados. Larissa reconhece o potencial de alcançar um público aderente, porém a confirmação de situação, objetivo e solução permanece pendente para cada pessoa. A parceria precisa definir papéis, mensagem, expectativa, transparência do incentivo e forma de encaminhamento antes do primeiro contato. Analise a proposta e indique a organização aplicável.</p>",
+     "alternativas": {
+      "a": "Aceitar a promessa do contador como apresentação comercial, pois Larissa poderá ajustar expectativas na reunião e validar a solução depois de receber as planilhas.",
+      "b": "Receber as planilhas antes do contato melhora a aderência, porque a relação contábil existente autoriza reutilizar informações para selecionar investimentos.",
+      "c": "Eliminar o incentivo encerra os riscos da parceria, permitindo que o contador envie dados e antecipe resultados por atuar sem remuneração econômica.",
+      "d": "Alinhar que o parceiro apenas contextualiza a apresentação, retirar promessas, dar transparência ao incentivo e compartilhar dados conforme finalidade conhecida pelo prospect."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-15-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Qualidade considera aderência, contexto, confiança e continuidade, e o aprendizado pode ser devolvido de forma agregada sem expor casos individuais.</p><p>A alternativa A prioriza alcance apesar das reclamações e baixa aderência. A alternativa C compartilha informações individuais para ajustar parceria. A alternativa B apaga diferenças de origem e preferência.</p><p>Regra de bolso: indicação boa chega contextualizada, reconhecida e ligada a interesse real, mesmo em volume reduzido.</p>",
+     "enunciado": "<p>Duas parcerias enviam contatos ao escritório de Mauro. A parceria Alfa encaminha 100 nomes por mês, mas poucos reconhecem a origem do contato, muitos pertencem a público distante do serviço e surgem reclamações sobre mensagens inesperadas. A parceria Beta envia 20 pessoas que solicitaram conversa sobre o tema, informaram o canal preferido e conhecem o papel de cada envolvido. O diretor quer manter apenas a Alfa porque seu volume alimenta o topo do funil. Mauro pretende comparar aderência, confiança e continuidade e devolver aos parceiros aprendizado agregado sobre o perfil atendido, preservando informações individuais. Analise os resultados e indique a decisão coerente com qualidade da indicação.</p>",
+     "alternativas": {
+      "a": "Priorizar Alfa pelo volume, pois a quantidade inicial compensa baixa aderência e permite corrigir contexto depois que a pessoa responder à primeira mensagem.",
+      "b": "Somar as duas bases e usar abordagem única reduz custo, porque origem, preferência de canal e aderência podem ser tratados após o agendamento.",
+      "c": "Compartilhar com Alfa nomes e motivos de recusa ajuda a qualificar a lista, pois detalhes individuais são necessários para corrigir público e mensagem.",
+      "d": "Avaliar Beta como fonte de qualidade superior pela origem clara e pelo interesse manifestado, usando dados agregados para ajustar a seleção das parcerias."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-15-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Vínculo pessoal e silêncio não equivalem a permissão, e informação obtida no ambiente familiar não deve ser explorada para personalizar uma oferta; a retomada exige contexto legítimo.</p><p>A alternativa C reutiliza dado íntimo sem permissão. A alternativa B converte falta de resposta em justificativa para insistência. A alternativa D amplia a exposição e tenta obter autorização por terceiro.</p><p>Regra de bolso: relação pessoal permite uma pergunta respeitosa; interesse e dados comerciais dependem da escolha da própria pessoa.</p>",
+     "enunciado": "<p>Ao iniciar nova atividade profissional, Camila seleciona antigos colegas e familiares em sua agenda. Ela envia a um primo uma mensagem explicando sua atuação e pergunta se o tema de investimentos interessa. O primo visualiza e permanece em silêncio. Camila sabe, por conversas familiares, que ele recebeu uma herança e considera usar essa informação para enviar uma proposta personalizada. Um supervisor sugere insistir semanalmente, argumentando que a proximidade familiar torna o silêncio ambíguo e que a proposta demonstrará cuidado. Camila deseja registrar a origem, o interesse e o próximo contato sem explorar intimidade ou transformar lealdade em obrigação comercial. Avalie o caso e indique a conduta aplicável.</p>",
+     "alternativas": {
+      "a": "Tratar o silêncio como ausência de interesse manifestado, evitar usar a herança e retomar apenas se houver permissão ou novo contexto legítimo.",
+      "b": "Repetir a mensagem até obter resposta, porque silêncio em vínculo próximo indica dúvida e pode ser convertido em permissão por uma abordagem cuidadosa.",
+      "c": "Enviar a proposta com referência à herança, pois o dado surgiu na família e permite tornar a conversa pertinente sem pedir nova informação financeira.",
+      "d": "Pedir a outro familiar que confirme a necessidade do primo, pois a mediação pessoal reduz pressão direta e autoriza uma proposta ajustada à herança."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-15-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. A base antiga permanece vinculada à finalidade comunicada, enquanto o novo formulário pode construir contexto e escolha claros para eventual conversa posterior.</p><p>A alternativa B usa descadastro como substituto da permissão. A alternativa C transfere a mensagem à plataforma sem resolver a ampliação de finalidade. A alternativa D soma presenças em conteúdos a um interesse comercial presumido.</p><p>Regra de bolso: finalidade antiga limita a base antiga; nova interação pode colher nova escolha com transparência.</p>",
+     "enunciado": "<p>Uma plataforma educacional compartilha com o profissional Otávio uma lista de participantes de um curso sobre empreendedorismo realizado no ano anterior. A inscrição autorizava avisos do curso, e parte dos nomes teve somente a relação educacional com a plataforma. A plataforma propõe enviar oferta de investimentos em nome dele e permitir descadastro depois, alegando que empreendedores formam público aderente. Otávio também realizará um novo webinar sobre caixa empresarial, com formulário que pode explicar tema, uso dos dados e opção de conversa posterior. Ele precisa decidir como tratar a base antiga e estruturar a nova captação sem presumir interesse amplo nem perder a oportunidade educativa. Analise os dois fluxos e indique a abordagem aplicável.</p>",
+     "alternativas": {
+      "a": "Restringir a base antiga à finalidade informada e, no novo webinar, apresentar uso dos dados e opção voluntária de contato ligada ao tema.",
+      "b": "Usar a base antiga com descadastro e aplicar o novo formulário apenas a participantes que recusarem, pois aderência do público torna a oferta compatível com o curso.",
+      "c": "Solicitar que a plataforma envie a oferta elimina a reutilização por Otávio, porque o controlador original mantém liberdade para ampliar a finalidade comercial.",
+      "d": "Combinar as listas depois do webinar cria contexto atualizado, pois participar de curso ou evento empresarial demonstra interesse comum em investimentos."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-15-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A estratégia preserva o contexto de cada canal, pede escolha para o próximo passo, protege dados sensíveis e deixa claros os papéis nas parcerias.</p><p>A alternativa A apaga origem e posterga transparência. A alternativa C solicita informação sensível publicamente e presume interesse. A alternativa D cria hierarquia de permissão pelo canal e pela intermediação.</p><p>Regra de bolso: amplie alcance com canais diversos e preserve contexto, escolha e registro em cada passagem.</p>",
+     "enunciado": "<p>Uma assessoria lança campanha para profissionais autônomos. Nas redes sociais, publica conteúdo geral e convida para webinar; em uma associação, realiza palestra; e por parceria, recebe indicações de contadores. O time comercial quer enviar a mesma oferta a quem curtiu a publicação, apareceu na lista da palestra, preencheu o webinar ou foi indicado, sem registrar a origem. Também planeja pedir em comentários públicos renda e patrimônio para priorizar contatos. A líder do projeto propõe mensagens e próximos passos diferentes conforme contexto, além de registro de origem, interesse e canal combinado. Ela precisa integrar alcance, interação e parceria sem transformar contato em permissão universal. Avalie os planos e indique a estrutura aplicável.</p>",
+     "alternativas": {
+      "a": "Unificar a oferta aumenta consistência e permite comparar conversão entre canais, deixando origem e consentimento para registro após a primeira resposta.",
+      "b": "Distinguir cada origem, explicar propósito, oferecer adesão ao próximo passo, levar dados sensíveis ao canal privado e alinhar papéis com parceiros.",
+      "c": "Usar interação pública como interesse inicial e pedir renda no comentário reduz contatos sem aderência antes de migrar a conversa para canal privado.",
+      "d": "Priorizar indicações de contadores e participantes presenciais, pois relações intermediadas e presença física fornecem permissão superior à interação online."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Indicadores comerciais: esforço, conversão e diagnóstico do funil": [
+    {
+     "id": "cpror-rel-16-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Esforço representa atividade controlável, resultado registra o avanço produzido e conversão divide resultados válidos pelas oportunidades que poderiam gerá-los.</p><p>A alternativa B inverte esforço e resultado e soma grandezas. A alternativa C chama volumes de taxas e taxa de quantidade. A alternativa A atribui aos indicadores uma conclusão individual de qualidade.</p><p>Regra de bolso: esforço é o que a equipe faz, resultado é o que avança e conversão mede a relação entre ambos.</p>",
+     "enunciado": "<p>Uma equipe registra contatos realizados, reuniões agendadas e clientes ativados. Compare indicadores de esforço, resultado e conversão.</p>",
+     "alternativas": {
+      "a": "Esforço mede qualidade da solução, resultado mede adequação individual e conversão demonstra se cada ativação permaneceu apropriada ao cliente.",
+      "b": "Esforço mede clientes ativados, resultado mede contatos iniciados e conversão soma os dois volumes para representar produtividade comercial.",
+      "c": "Esforço e resultado são taxas, enquanto conversão corresponde à quantidade absoluta de pessoas que passou pela última etapa do funil.",
+      "d": "Esforço mede atividade controlável, resultado mede o avanço ocorrido e conversão relaciona resultados válidos às oportunidades válidas."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-16-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Uma conversão coerente exige resultado definido e oportunidades da mesma etapa, período e critério, com regra declarada e consistente.</p><p>A alternativa A permite resultado indefinido. A alternativa C mistura eventos diferentes no denominador. A alternativa D cruza períodos sem tratar a duração da jornada.</p><p>Regra de bolso: nomeie o avanço e alinhe etapa, período e critério antes de dividir.</p>",
+     "enunciado": "<p>Um relatório calcula conversão comercial. Identifique a condição necessária para que numerador e denominador produzam uma taxa coerente.</p>",
+     "alternativas": {
+      "a": "O numerador pode vir de qualquer etapa, desde que o denominador seja o volume de contatos do período e a taxa receba o nome de conversão total.",
+      "b": "Resultados e oportunidades precisam compartilhar etapa, período e critério, com o avanço medido explicitamente e a regra aplicada de modo consistente.",
+      "c": "O denominador deve conter agendamentos e reuniões realizadas juntos, pois ambos tiveram oportunidade de gerar ativação durante a jornada comercial.",
+      "d": "O numerador deve usar o mês da ativação e o denominador o mês do primeiro contato, mesmo quando a jornada atravessa vários períodos de análise."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-16-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Reuniões realizadas sobre prospects são 60 dividido por 150, ou 40%; ativações sobre reuniões realizadas são 18 dividido por 60, ou 30%; ativações sobre prospects são 18 dividido por 150, ou 12%.</p><p>A alternativa A usa agendamentos e calcula 50%, 24% e 12%. A alternativa C apresenta 40%, 24% e 30%, mas troca o nome das duas últimas bases. A alternativa D acerta a taxa de reuniões para ativações, porém usa 75 sobre 150 e 18 sobre 90 para os outros percentuais.</p><p>Regra de bolso: escreva o nome da taxa como uma fração antes de substituir os números.</p>",
+     "enunciado": "<p>No trimestre, a equipe de Débora trabalhou com 150 prospects válidos. Setenta e cinco reuniões foram agendadas, 60 ocorreram e 18 clientes concluíram a ativação. As quatro quantidades pertencem à mesma coorte, usam critérios estáveis e foram fechadas depois do prazo necessário para concluir a jornada. Cancelamentos ficaram fora das reuniões realizadas. O painel exibe três campos: conversão de prospect em reunião realizada, conversão de reunião realizada em ativação e conversão total de prospect em ativação. Um analista usa os 75 agendamentos no segundo campo e chama o resultado de conversão de reunião. Débora quer recalcular cada indicador usando apenas as oportunidades que correspondem ao avanço nomeado. Calcule as três taxas e indique a sequência correta para o painel.</p>",
+     "alternativas": {
+      "a": "50%, 24% e 12%, usando agendamentos para medir o primeiro avanço e também como base da ativação após a reunião.",
+      "b": "40%, 30% e 12%, dividindo 60 por 150, 18 por 60 e 18 por 150, respectivamente.",
+      "c": "40%, 24% e 30%, dividindo reuniões por prospects, ativações por agendamentos e ativações por reuniões realizadas.",
+      "d": "50%, 30% e 20%, pois as taxas devem seguir agendamentos, reuniões e ativações em relação à etapa imediatamente anterior."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-16-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A base da conversão após a conversa contém 42 reuniões realizadas; 14 dividido por 42 resulta em 33,33%. Os oito cancelamentos devem aparecer em indicador separado.</p><p>A alternativa A usa os 50 agendamentos e chega a 28%. A alternativa B calcula a parcela de reuniões sem ativação, 28 sobre 42. A alternativa D inverte numerador e denominador e ainda apresenta percentual incompatível com 50 sobre 14.</p><p>Regra de bolso: reunião em conversão significa reunião ocorrida; cancelamento mede outra passagem do funil.</p>",
+     "enunciado": "<p>Uma filial registra 50 reuniões agendadas para o mês. Oito foram canceladas antes do horário, 42 ocorreram e 14 clientes ativaram a estratégia após essas conversas. Os 14 ativados pertencem ao grupo das 42 pessoas que compareceram, e os eventos usam o mesmo período e critério. O gerente divide 14 por 50 e informa conversão de reuniões em ativação de 28%. A analista Priscila observa que o nome do indicador se refere a reuniões efetivamente realizadas e que os cancelamentos podem formar outra taxa. Os critérios do painel exigem arredondamento para duas casas decimais. Ela precisa corrigir o denominador sem apagar o dado de cancelamento. Calcule a conversão de reunião realizada em ativação e indique a leitura coerente.</p>",
+     "alternativas": {
+      "a": "A conversão é 28,00%, pois reuniões agendadas representam oportunidades de ativação mesmo quando foram canceladas antes da conversa.",
+      "b": "A conversão é 66,67%, obtida por 42 menos 14 sobre 42; a parcela sem ativação mede o resultado positivo da reunião realizada.",
+      "c": "A conversão é 33,33%, obtida por 14 sobre 42; os oito cancelamentos pertencem a um indicador próprio de comparecimento ou cancelamento.",
+      "d": "A conversão é 71,43%, obtida por 50 sobre 14; o valor acima de 50% mostra que agendamentos produziram oportunidades suficientes."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-16-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O critério conhecido deixa 60 oportunidades válidas, e 15 dividido por 60 resulta em 25%. Os 20 excluídos continuam úteis para avaliar qualidade da origem, sem entrar silenciosamente na taxa de conversão válida.</p><p>A alternativa A divide por 80 e obtém 18,75%, misturando registros inválidos. A alternativa C calcula a proporção válida da lista, 60 sobre 80. A alternativa D usa 75 sem relação coerente com oportunidades válidas e apresenta 20%.</p><p>Regra de bolso: limpe a base com critério prévio, calcule sobre oportunidades válidas e analise os excluídos como sinal de qualidade.</p>",
+     "enunciado": "<p>Uma parceria enviou ao escritório 80 registros durante a campanha. Antes da abertura, o critério já excluía contatos repetidos, registros sem informação para retorno e pessoas fora do público definido. A auditoria encontrou 10 repetições, 6 registros sem contato e 4 pessoas fora do público, sem sobreposição entre os grupos. Restaram 60 oportunidades válidas, das quais 15 chegaram à ativação. O parceiro calcula 18,75% usando os 80 registros e afirma que eliminar inválidos esconderia o esforço de indicação. O escritório quer medir a qualidade e o aproveitamento das oportunidades reconhecidas pelo critério prévio. Calcule a conversão de indicações válidas em ativação e indique o uso dos registros excluídos.</p>",
+     "alternativas": {
+      "a": "A conversão é 18,75%, porque o volume bruto representa o esforço do parceiro e deve permanecer como base da qualidade das indicações.",
+      "b": "A conversão é 25%, pois 15 ativações divididas por 60 oportunidades válidas; os 20 excluídos ajudam a diagnosticar a origem e a seleção.",
+      "c": "A conversão é 75%, pois 60 indicações válidas divididas por 80 registros medem o resultado comercial obtido após a limpeza da base.",
+      "d": "A conversão é 20%, pois 15 ativações divididas pelos 75 registros que não ativaram evita retirar da taxa os contatos de baixa qualidade."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-16-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A diferença direta entre 20% e 16% é 4 pontos percentuais; a variação relativa é 4 dividido por 16, resultando em 25%.</p><p>A alternativa B troca as duas medidas. A alternativa C divide 4 pela taxa final e chega a 20%. A alternativa D usa a razão 1,25 como se fosse diferença em pontos percentuais.</p><p>Regra de bolso: pontos percentuais subtraem taxas; variação relativa divide a diferença pela taxa inicial.</p>",
+     "enunciado": "<p>A conversão de uma equipe passou de 16% em abril para 20% em maio, usando o mesmo público, período de duração, etapa e critério. Os relatórios exibem as taxas com o mesmo padrão e preservam a definição de oportunidade válida nos dois meses. Na reunião, o supervisor afirma que a melhora foi de 4% e pretende comunicar esse número como crescimento relativo. A analista Luana diferencia a distância direta entre as taxas da comparação proporcional com a base inicial. Ela também confirma que os volumes permaneceram suficientes para a regra interna e que o conceito usado no relatório precisa ser nomeado corretamente. Calcule a mudança em pontos percentuais e a variação percentual relativa e indique como os resultados devem ser comunicados.</p>",
+     "alternativas": {
+      "a": "A taxa subiu 4 pontos percentuais e 25% em termos relativos, pois a diferença de 4 é dividida pela taxa inicial de 16%.",
+      "b": "A taxa subiu 25 pontos percentuais e 4% em termos relativos, porque a distância entre 16 e 20 corresponde à nova taxa dividida pela anterior.",
+      "c": "A taxa subiu 4 pontos percentuais e 20% em termos relativos, pois a diferença deve ser dividida pela taxa final para evitar usar período antigo.",
+      "d": "A taxa subiu 1,25 ponto percentual e 25% em termos relativos, porque 20 dividido por 16 fornece as duas medidas do crescimento."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-16-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. As divisões consecutivas são 54 sobre 90, ou 60%; 36 sobre 54, ou 66,67%; e 9 sobre 36, ou 25%. A terceira passagem orienta a investigação de proposta, decisão e implementação.</p><p>A alternativa B usa bases iniciais para apresentação e ativação e escolhe perda absoluta. A alternativa A trata quantidades como taxas. A alternativa D desloca denominadores e mistura conversão consecutiva com total.</p><p>Regra de bolso: compare etapas vizinhas para localizar o gargalo e só depois use registros para explicar a perda.</p>",
+     "enunciado": "<p>O painel de uma equipe mostra 90 prospects válidos, 54 reuniões realizadas, 36 estratégias apresentadas e 9 clientes ativados. A direção quer ampliar imediatamente a quantidade de prospects, mas a coordenadora Elisa prefere comparar cada passagem consecutiva: reuniões sobre prospects, apresentações sobre reuniões e ativações sobre apresentações. Os registros indicam que parte das propostas ficou incompleta e que alguns clientes enfrentaram dificuldade documental depois de decidir. A equipe manteve os mesmos critérios no período. Elisa precisa localizar a etapa com taxa reduzida e escolher onde investigar antes de aumentar o esforço inicial. Calcule as três conversões e indique o foco coerente.</p>",
+     "alternativas": {
+      "a": "As taxas são 54%, 36% e 9%; o painel já apresenta percentuais e mostra queda uniforme que deve ser corrigida com mais prospects.",
+      "b": "As taxas são 60%, 40% e 10%; a passagem de prospect para reunião é o gargalo porque contém a perda absoluta de 36 pessoas.",
+      "c": "As taxas são 60%, 66,67% e 25%; a última passagem pede análise de proposta, decisão e implementação.",
+      "d": "As taxas são 66,67%, 25% e 10%; a apresentação é a etapa crítica porque deve ser dividida pelo total de prospects válidos."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-16-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Com jornada longa, atividade e resultado mensal podem ser acompanhados separadamente, enquanto a conversão precisa ligar resultados às oportunidades que os originaram por coorte ou regra temporal consistente.</p><p>A alternativa A confunde coincidência de mês com mesma oportunidade. A alternativa B encerra como perda casos ainda em andamento. A alternativa C amplia o denominador sem identificar quais contatos produziram as ativações.</p><p>Regra de bolso: em jornada longa, acompanhe o mês e calcule conversão com vínculo entre origem e resultado.</p>",
+     "enunciado": "<p>Um relatório de setembro divide 22 ativações concluídas no mês por 100 contatos iniciados também em setembro e divulga conversão de 22%. A jornada costuma durar de seis a dez semanas, e 17 das ativações vieram de contatos iniciados em julho ou agosto. Dos 100 contatos de setembro, apenas 5 já chegaram à ativação até o fechamento; os demais permanecem em etapas intermediárias. O sistema conserva a data de origem e o estágio atual de cada contato. O gestor compara o número com agosto, quando outra regra usou ativações de uma coorte completa sobre os contatos que as originaram. A analista Bruna precisa corrigir a leitura sem perder o acompanhamento mensal de atividade e resultado. Avalie as bases e indique uma regra coerente para o indicador.</p>",
+     "alternativas": {
+      "a": "Manter 22% porque numerador e denominador pertencem ao mesmo mês calendário, mesmo que representem grupos diferentes dentro de uma jornada longa.",
+      "b": "Usar 5% como conversão definitiva de setembro, pois os contatos ainda em andamento contam como perdas quando o relatório mensal é encerrado.",
+      "c": "Somar contatos de julho a setembro no denominador e manter as 22 ativações, pois ampliar o período corrige automaticamente a diferença de origem.",
+      "d": "Acompanhar esforço e ativações do mês separadamente e calcular conversão por coorte ou regra temporal declarada, aplicada do mesmo modo nas comparações."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-16-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. A taxa de Aurora usa base pequena e público diferente, e as reversões questionam a qualidade; volume, origem, período e permanência precisam integrar a comparação.</p><p>A alternativa C ignora base, origem e inadequações. A alternativa B substitui taxa por volume e ainda desconsidera critérios distintos. A alternativa D usa média simples para ocultar diferenças em vez de analisá-las.</p><p>Regra de bolso: compare taxas apenas com contexto semelhante e mantenha qualidade ao lado de esforço e resultado.</p>",
+     "enunciado": "<p>A equipe Aurora ativou 7 de 10 oportunidades válidas em uma semana, enquanto a equipe Horizonte ativou 100 de 200 oportunidades em um trimestre. O diretor declara Aurora superior pela taxa de 70% contra 50% e planeja copiar sua abordagem. A auditoria mostra que Aurora recebeu indicações já interessadas, Horizonte trabalhou contatos frios e os períodos têm durações diferentes. Duas ativações de Aurora foram revertidas após identificação de incompatibilidade, enquanto Horizonte registra acompanhamento e adequação satisfatórios. O diretor quer usar apenas a taxa para premiar o time e pressionar decisões rápidas. A analista precisa combinar volume, origem, período e qualidade antes de recomendar mudança de processo. Avalie a comparação e indique a leitura aplicável.</p>",
+     "alternativas": {
+      "a": "As taxas isoladas são insuficientes: base pequena, origem, período e reversões alteram a leitura, e qualidade precisa acompanhar o resultado comercial.",
+      "b": "Horizonte é superior porque realizou 100 ativações, e o volume absoluto substitui a taxa quando os períodos e as origens dos contatos são diferentes.",
+      "c": "Aurora demonstra eficiência superior porque 70% supera 50%, e reversões posteriores pertencem ao acompanhamento, fora do indicador de conversão comercial.",
+      "d": "As equipes podem ser comparadas pela média de 60%, que neutraliza diferenças de volume, duração, origem e qualidade entre os dois processos."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-16-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Reuniões sobre prospects são 96 dividido por 320, ou 30%; ativações sobre reuniões são 24 dividido por 96, ou 25%. As duas taxas caíram, a base contém duplicidades e os registros apontam baixa aderência e mensagem genérica.</p><p>A alternativa B divide 96 por 200 e 24 por 200, misturando bases de períodos. A alternativa C repete taxas antigas apesar dos novos volumes. A alternativa D calcula corretamente 30% e a conversão total de 7,5%, mas chama a segunda de taxa consecutiva e restringe o diagnóstico.</p><p>Regra de bolso: antes de aumentar esforço, limpe a base, recalcule etapas vizinhas e ataque o gargalo indicado pelos dados e registros.</p>",
+     "enunciado": "<p>Uma campanha elevou contatos de 200 para 320 e reuniões realizadas de 80 para 96, mas as ativações permaneceram em 24. O gerente comemora o crescimento do esforço e propõe ampliar novamente a lista. No período anterior, a conversão de prospect em reunião era 40% e a de reunião em ativação era 30%. Os dois períodos usam a mesma definição de reunião e ativação. No período atual, os registros mostram público com pouca aderência, mensagem genérica e a mesma quantidade de ativações, sem melhora documentada de qualidade. A equipe também identificou contatos repetidos dentro dos 320, ainda pendentes de exclusão. A coordenadora precisa decidir se aumenta o volume ou revisa público, base e processo. Calcule as taxas atuais e indique o ajuste coerente.</p>",
+     "alternativas": {
+      "a": "As taxas atuais são 30% e 25%; cabe limpar duplicidades e revisar público e mensagem antes de ampliar esforço, investigando também a passagem após a reunião.",
+      "b": "As taxas atuais são 48% e 12%; o aumento de reuniões comprova melhora na mensagem, e a estabilidade das ativações exige apenas volume adicional.",
+      "c": "As taxas atuais são 40% e 30%, porque indicadores preservam as taxas anteriores quando a quantidade absoluta de ativações permanece em 24.",
+      "d": "As taxas atuais são 30% e 7,5%; o gargalo está apenas na ativação total sobre prospects, dispensando análise das etapas consecutivas."
+     },
+     "gabarito": "a"
+    }
+   ],
+   "Competências comerciais: comunicação, organização e ética": [
+    {
+     "id": "cpror-rel-17-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Assertividade combina clareza, respeito e objetividade; didática parte do repertório da pessoa, usa exemplos úteis e verifica a compreensão.</p><p>A alternativa B confunde volume e jargão com domínio. A alternativa A transforma clareza em imposição. A alternativa D retira riscos e custos da explicação principal.</p><p>Regra de bolso: fale com clareza, organize pelo que o cliente conhece e peça que ele explique o que entendeu.</p>",
+     "enunciado": "<p>Um profissional explica uma decisão financeira e deseja comunicar-se de forma assertiva e didática. Identifique as características dessa comunicação.</p>",
+     "alternativas": {
+      "a": "Apresentar a conclusão com firmeza e pedir aceite, porque assertividade reduz dúvidas e didática simplifica a decisão até restar uma alternativa.",
+      "b": "Usar vocabulário técnico e explicação extensa, pois quantidade de informação demonstra domínio e transfere ao cliente a responsabilidade pela compreensão.",
+      "c": "Transmitir mensagem clara, direta e respeitosa, partir do repertório do cliente, usar exemplos pertinentes e confirmar o que ele compreendeu.",
+      "d": "Adaptar a mensagem ao produto, mantendo exemplos positivos e encaminhando riscos e custos para leitura posterior nos documentos entregues."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-17-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Marketing pessoal torna competência e proposta reconhecíveis, e a reputação depende de coerência, honestidade e respeito aos limites profissionais.</p><p>A alternativa A privilegia aparência e adia limites. A alternativa C usa reconhecimento para ampliar escopo. A alternativa D aceita omissão na comunicação pública.</p><p>Regra de bolso: reputação sustentável surge quando a imagem pública corresponde à conduta no atendimento.</p>",
+     "enunciado": "<p>Uma assessora constrói sua presença profissional em eventos e canais digitais. Explique a relação entre marketing pessoal, reputação e limites.</p>",
+     "alternativas": {
+      "a": "Marketing pessoal destaca resultados e aparência, enquanto limites profissionais podem ser explicados apenas quando o cliente solicita orientação específica.",
+      "b": "A reputação nasce da coerência entre competência, proposta e conduta, com comunicação honesta sobre resultados, incertezas e limites de atuação.",
+      "c": "A autoridade pública amplia o escopo da assessora, pois reconhecimento de clientes e seguidores comprova capacidade para responder temas relacionados.",
+      "d": "A divulgação profissional pode omitir fragilidades das alternativas, desde que a conversa individual apresente riscos antes da contratação efetiva."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-17-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Adaptabilidade muda forma, ritmo e sequência conforme o repertório, mas mantém conteúdo decisivo e confirma a compreensão das duas pessoas.</p><p>A alternativa A omite risco do iniciante. A alternativa C confunde igualdade de conteúdo com identidade de apresentação. A alternativa D deixa a experiência retirar informações essenciais.</p><p>Regra de bolso: adapte como explicar, preserve o que o cliente precisa entender para decidir.</p>",
+     "enunciado": "<p>O especialista Hugo fará duas conversas sobre a mesma estratégia. Vera investe há quinze anos e pede que ele vá diretamente às premissas, cenários e custos. Daniel está começando e solicita exemplos ligados à reserva e aos objetivos familiares. As duas reuniões terão a mesma duração e serão registradas pelo mesmo procedimento da instituição. Um colega sugere retirar detalhes de risco da conversa com Daniel para evitar sobrecarga e usar a apresentação técnica integral com Vera para demonstrar domínio. Hugo quer adaptar canal, ritmo, vocabulário e sequência, preservando as condições capazes de alterar a decisão. Ao final, ambos deverão explicar riscos, custos e restrições com suas próprias palavras. Compare as necessidades e indique a condução aplicável.</p>",
+     "alternativas": {
+      "a": "Retirar riscos da conversa com Daniel e aprofundá-los depois do interesse, enquanto Vera recebe o conteúdo integral por possuir experiência comprovada.",
+      "b": "Usar premissas técnicas com Vera e exemplos graduais com Daniel, mantendo riscos, custos e restrições em ambas as conversas e confirmando entendimento.",
+      "c": "Aplicar a mesma apresentação aos dois preserva tratamento justo, pois alterar vocabulário e sequência produz diferenças indevidas na informação recebida.",
+      "d": "Permitir que Vera dispense custos e restrições acelera a análise, enquanto Daniel recebe apenas conceitos essenciais até demonstrar familiaridade com produtos."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-17-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Capacidade analítica conecta dados, formula perguntas e compara alternativas; aqui, finalidade e horizonte distintos pedem separar as parcelas e justificar cada solução.</p><p>A alternativa B usa retorno e horizonte médio para misturar metas. A alternativa C acumula opções sem organizar a decisão. A alternativa D transfere o prazo longo para um recurso com uso próximo.</p><p>Regra de bolso: análise transforma dados em relações, perguntas e alternativas ligadas ao objetivo.</p>",
+     "enunciado": "<p>A consultora Raquel recebe de Sérgio os seguintes dados: renda estável, despesas controladas, reserva para seis meses, baixa experiência com oscilações e uso de R$ 160.000 para a entrada de um imóvel em onze meses. Outros R$ 90.000 podem permanecer investidos por doze anos. Sérgio pede uma única carteira para os R$ 250.000 porque considera trabalhoso separar objetivos. Raquel poderia produzir uma comparação extensa de produtos, mas prefere começar pelas relações entre finalidade, horizonte, liquidez e capacidade de enfrentar perdas. Ela precisa transformar os dados em perguntas e alternativas compreensíveis, sem criar complexidade desnecessária. Analise o caso e indique a aplicação da capacidade analítica.</p>",
+     "alternativas": {
+      "a": "Perguntar sobre flexibilidade da compra e reação a perdas, separar os dois horizontes e comparar alternativas justificadas pelas necessidades de cada parcela.",
+      "b": "Concentrar a análise no retorno dos R$ 250.000, pois renda e reserva permitem que um horizonte médio represente os dois objetivos em uma carteira única.",
+      "c": "Listar produtos disponíveis por ordem de rentabilidade e deixar Sérgio escolher, porque análise profissional preserva autonomia ao evitar recomendação explícita.",
+      "d": "Usar os doze anos como horizonte da carteira inteira, pois a parcela de longo prazo amplia a capacidade de recuperação dos recursos do imóvel."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-17-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Patrícia antecipa necessidade legítima, explica o motivo e respeita o tempo; prazo artificial e insistência servem ao interesse comercial e configuram pressão.</p><p>A alternativa B equipara meta do vendedor à necessidade do cliente. A alternativa C inverte propósito e transparência das condutas. A alternativa D transforma respeito ao tempo em abandono do acompanhamento combinado.</p><p>Regra de bolso: proatividade prepara e informa; pressão cria urgência para beneficiar quem vende.</p>",
+     "enunciado": "<p>A gerente Patrícia combinou com Otávio uma revisão para o início do mês. Dois dias antes, identifica documento pendente e uma mudança de regra que pode afetar a estratégia atual. Ela envia mensagem explicando o motivo do contato, oferece horários para revisar o caso e informa que a decisão continuará com o cliente depois da análise. O supervisor comercial sugere acrescentar prazo artificial de poucas horas e ligar repetidamente até obter aceite, porque a carteira do mês está abaixo da meta. Otávio pede tempo para reunir informações e confirma uma data na semana seguinte. Patrícia precisa distinguir antecipação de necessidade legítima de aceleração pelo interesse do vendedor. Avalie as condutas e indique a leitura aplicável.</p>",
+     "alternativas": {
+      "a": "A mensagem de Patrícia é proativa porque antecipa revisão e pendência com transparência; urgência artificial e insistência para cumprir meta caracterizam pressão.",
+      "b": "As duas condutas são proativas, pois tanto a mudança de regra quanto a meta comercial representam necessidades reais que justificam acelerar a resposta.",
+      "c": "A mensagem é pressão porque ocorreu antes da reunião, enquanto ligações repetidas são proativas por aumentarem a chance de o cliente receber a informação.",
+      "d": "O pedido de tempo encerra a proatividade, e Patrícia deve aguardar iniciativa de Otávio para evitar qualquer influência sobre a decisão financeira."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-17-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Organização registra fatos pertinentes, origem, versão, consentimento e próximos passos, além de cumprir prazos; rótulos subjetivos contaminam decisões futuras.</p><p>A alternativa A preserva comentário depreciativo e origem implícita. A alternativa B trata acúmulo como qualidade. A alternativa D troca compromisso combinado por conveniência interna.</p><p>Regra de bolso: registre o necessário com contexto e deixe o próximo passo claro para qualquer profissional autorizado continuar.</p>",
+     "enunciado": "<p>Após uma reunião, o assessor Marcelo registra que a cliente “é confusa e pouco comprometida”, copia informações financeiras sem indicar a origem e deixa o próximo contato sem data. Na semana seguinte, outra profissional assume o caso, repete perguntas já respondidas e usa o comentário subjetivo para reduzir o tempo da conversa. A cliente havia consentido com o levantamento para uma meta específica e aguardava uma comparação prometida até sexta-feira. A supervisora quer organizar agenda e dados para preservar continuidade, contexto e cuidado, sem acumular informação sem finalidade. Ela precisa corrigir o registro e definir o retorno acordado. Indique a prática compatível com organização profissional.</p>",
+     "alternativas": {
+      "a": "Manter a avaliação subjetiva ajuda a preparar o próximo atendimento, e a origem dos dados pode ser inferida pelo nome do assessor que fez o registro.",
+      "b": "Copiar o máximo de informações disponíveis evita nova coleta, mesmo quando parte delas pertence a outros objetivos ou carece de uso definido.",
+      "c": "Registrar fatos, dúvidas, consentimento, finalidade, origem, versão e ação combinada, removendo rótulos depreciativos e agendando o retorno prometido.",
+      "d": "Deixar a agenda aberta aumenta flexibilidade, porque a profissional seguinte pode escolher o momento conforme a prioridade comercial da carteira."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-17-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Ética orienta a forma de comunicar, prospectar, analisar, registrar e acompanhar, impedindo que eficiência ou meta legitimem condutas inadequadas em qualquer etapa.</p><p>A alternativa A isola ética na aprovação final. A alternativa C restringe conflito e deveres à recomendação. A alternativa B posterga princípios que já se aplicam desde o primeiro contato.</p><p>Regra de bolso: ética define como cada competência é exercida, e não apenas se a operação final será aprovada.</p>",
+     "enunciado": "<p>Uma instituição inclui uma verificação ética apenas na aprovação final da operação. Nas etapas anteriores, a campanha exagera resultados, a prospecção reutiliza dados sem contexto, a análise omite um conflito de interesse e os registros recebem comentários depreciativos. O diretor afirma que a etapa final poderá corrigir eventuais problemas antes da assinatura. A responsável por conduta defende que honestidade, tratamento justo, confidencialidade e transparência orientem cada competência desde o primeiro contato. Ela também observa que uma operação recusada ao final ainda pode ter causado exposição e pressão durante a jornada. Avalie as posições e indique o papel da ética no processo comercial.</p>",
+     "alternativas": {
+      "a": "A revisão final basta porque ética funciona como controle de aprovação, enquanto comunicação, prospecção e registro seguem critérios próprios de eficiência.",
+      "b": "A ética deve ser aplicada depois da conversão, quando já existem dados e operação suficientes para avaliar confidencialidade, justiça e transparência.",
+      "c": "A ética pertence à análise de adequação, pois somente a recomendação de produto pode produzir conflito entre interesse comercial e necessidade do cliente.",
+      "d": "A ética é transversal e orienta comunicação, prospecção, análise, dados e acompanhamento, limitando meios e objetivos ao longo da relação."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-17-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A meta e o incentivo não podem comandar recomendação incompatível; Fernanda precisa comunicar conflito, risco e restrição, oferecer solução ligada ao prazo e confirmar compreensão.</p><p>A alternativa A confunde confiança com informação e oculta interesse. A alternativa C mantém parte do dinheiro incompatível com a obra para atender à meta. A alternativa D chega a solução coerente, mas esconde conflito e comparação relevante.</p><p>Regra de bolso: quando meta e cliente apontam direções diferentes, o interesse do cliente orienta a recomendação e o conflito deve ser administrado com transparência.</p>",
+     "enunciado": "<p>A assessora Fernanda precisa cumprir uma meta até sexta-feira. Seu cliente Joel mantém R$ 180.000 destinados ao pagamento de uma obra em cinco meses e afirma que assinará a alternativa escolhida por ela sem ler. O produto com incentivo comercial elevado possui prazo de saída superior ao da obra e risco de oscilação. Outra alternativa apresenta liquidez compatível, remunera menos a instituição e atende à finalidade informada. O gerente sugere registrar a confiança de Joel como ciência suficiente e argumenta que a meta é legítima. Fernanda identifica conflito entre incentivo, prazo e interesse do cliente e deseja preservar a relação sem esconder sua posição comercial. Analise o caso e indique a conduta aplicável.</p>",
+     "alternativas": {
+      "a": "Aceitar a assinatura porque Joel delegou a escolha, registrando a confiança como compreensão e o incentivo como informação interna da instituição.",
+      "b": "Explicar a incompatibilidade, comunicar riscos e interesse relevante, apresentar alternativa coerente, confirmar entendimento e registrar a decisão.",
+      "c": "Dividir os R$ 180.000 entre os produtos equilibra meta e liquidez, pois a parcela disponível em cinco meses protege o pagamento da obra.",
+      "d": "Apresentar apenas o produto líquido evita o conflito, dispensando explicar o incentivo e a alternativa rejeitada porque a solução final atende ao prazo."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-17-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. Adaptabilidade inclui rever hipóteses diante de dados novos; queda de renda, dependente e necessidade próxima alteram a análise e podem exigir abandonar a proposta original.</p><p>A alternativa A muda apenas o valor e preserva premissas contraditas. A alternativa C adapta a forma, mas mantém conteúdo incompatível. A alternativa B confunde incerteza com impossibilidade de reorganizar prioridades.</p><p>Regra de bolso: flexibilidade acompanha a evidência, mesmo quando ela invalida uma solução já preparada.</p>",
+     "enunciado": "<p>O consultor Leandro preparou uma proposta para aposentadoria com base em renda estável e horizonte de quinze anos. Antes da apresentação, a cliente Marta informa que perdeu parte da renda, assumiu despesas de um familiar e poderá precisar de recursos dentro de oito meses. Leandro já investiu horas no material e recebe comissão superior se a proposta original for implementada. Ele considera manter a recomendação e apenas reduzir o valor, alegando que flexibilidade significa ajustar detalhes sem abandonar o trabalho feito. Marta demonstra preocupação e pede uma explicação simples sobre as novas prioridades. Leandro precisa decidir como adaptar o atendimento diante de evidências que contradizem sua hipótese inicial. Avalie a situação e indique a conduta aplicável.</p>",
+     "alternativas": {
+      "a": "Reduzir o valor preserva a proposta e demonstra flexibilidade, pois horizonte previdenciário continua válido apesar da nova necessidade de curto prazo.",
+      "b": "Adiar a conversa até a renda se estabilizar evita conflito comercial, pois dados em mudança impedem qualquer análise ou organização financeira útil.",
+      "c": "Apresentar a proposta original com linguagem simplificada respeita o trabalho analítico e permite que Marta decida se aceita o risco de manter o plano.",
+      "d": "Rever a hipótese, atualizar renda, despesas e liquidez, reorganizar prioridades e formular alternativa compatível, mesmo que a proposta original seja descartada."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-17-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Organização preserva prazos e contexto, análise exclui a opção incompatível, adaptação ajusta a forma, encaminhamento respeita escopo e comunicação confirma entendimento sem pressão.</p><p>A alternativa B usa volume de texto e urgência para converter. A alternativa C reduz a decisão a um único fator. A alternativa D confunde autonomia com ausência de proatividade legítima.</p><p>Regra de bolso: competência comercial resulta da combinação entre clareza, análise, organização, iniciativa legítima e ética.</p>",
+     "enunciado": "<p>A equipe de Bianca acompanha uma empresária que prefere mensagens curtas, possui conhecimento técnico e está analisando três alternativas. O sistema registra uma dúvida tributária fora do escopo da equipe, documento vencendo em dez dias, reunião de revisão sem horário e objetivo de liquidez que elimina uma das opções. Um profissional propõe enviar uma recomendação extensa naquele dia para demonstrar iniciativa e garantir a conversão antes do vencimento. Bianca quer organizar os dados, encaminhar a questão externa, confirmar agenda e apresentar comparação concisa que preserve riscos, custos e justificativa. A cliente pede decisão rápida, mas ainda confunde prazo documental com urgência para contratar. Analise como as competências devem atuar em conjunto.</p>",
+     "alternativas": {
+      "a": "Confirmar prazo e reunião, encaminhar a dúvida, adaptar a forma sem omitir conteúdo, excluir opção incompatível e verificar compreensão antes da decisão.",
+      "b": "Enviar a recomendação extensa demonstra proatividade, e a cliente técnica pode separar a urgência documental das condições do produto durante a leitura.",
+      "c": "Escolher a opção de liquidez encerra a análise, porque o objetivo elimina as demais e torna custos, riscos e dúvida tributária aspectos secundários.",
+      "d": "Esperar a cliente solicitar cada providência preserva autonomia, pois agenda, documento e encaminhamento antecipados poderiam pressionar a contratação."
+     },
+     "gabarito": "a"
+    }
+   ],
    "Código de Distribuição: abrangência, canais digitais e remuneração": [
     {
      "id": "cpror-rel-20-q1",
