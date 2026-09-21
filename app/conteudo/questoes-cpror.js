@@ -1,5 +1,5 @@
 /* GERADO por outputs/questoes_para_js.py. NAO editar a mao.
-   Fonte: _conteudo/cpror/questoes/**.yaml  ·  1109 questoes em 118 topicos
+   Fonte: _conteudo/cpror/questoes/**.yaml  ·  1179 questoes em 124 topicos
    Para mudar uma questao, edite o YAML e rode o script de novo. */
 window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
  "cproRAnbima": {
@@ -13591,6 +13591,902 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "gabarito": "b"
     }
    ],
+   "Câmbio e contas internacionais: paridade e remessa de recursos": [
+    {
+     "id": "cpror-inv-33-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Em R$ 5,20 por USD 1, uma unidade de dólar é cotada pelo preço de R$ 5,20.</p><p>A alternativa A inverte as unidades. A alternativa C confunde paridade com tarifa. A alternativa D cria uma unidade conjunta que a cotação cambial não possui.</p><p>Regra de bolso: leia as unidades como uma fração, reais por dólar indicam quantos reais correspondem a um dólar.</p>",
+     "enunciado": "<p>Uma tela apresenta a cotação R$ 5,20 por USD 1. Explique o significado dessa paridade para o cliente que lê o preço em reais.</p>",
+     "alternativas": {
+      "a": "Cada real compra USD 5,20, pois a moeda brasileira aparece primeiro na forma usada para apresentar a cotação.",
+      "b": "Cada dólar corresponde a R$ 5,20, pois a unidade da moeda cotada é expressa pelo valor indicado em reais.",
+      "c": "As duas moedas possuem o mesmo valor econômico, e R$ 5,20 representa apenas a tarifa aplicada à conversão.",
+      "d": "Um dólar e um real formam uma unidade conjunta de R$ 5,20, antes da inclusão do spread e dos demais encargos."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-33-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O dólar ficou caro em reais, portanto se valorizou frente ao real; simultaneamente, o real perdeu poder de compra em dólares.</p><p>A alternativa A inverte a valorização. A alternativa C atribui o mesmo sentido às duas moedas do par. A alternativa D confunde desembolso elevado com desvalorização do dólar.</p><p>Regra de bolso: em um par, valorização de uma moeda corresponde à desvalorização da outra.</p>",
+     "enunciado": "<p>A cotação passa de R$ 5,10 para R$ 5,35 por USD 1. Identifique o movimento das duas moedas dentro desse par.</p>",
+     "alternativas": {
+      "a": "O real se valoriza perante o dólar, pois a nova cotação apresenta quantidade superior de reais na relação de troca.",
+      "b": "O dólar se valoriza perante o real e o real se desvaloriza perante o dólar, duas leituras do mesmo movimento.",
+      "c": "As duas moedas se valorizam, pois o número da cotação aumenta e ele representa o preço conjunto do par cambial.",
+      "d": "O dólar se desvaloriza perante o real, pois o cliente passa a entregar quantidade superior de moeda brasileira na compra."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-33-q3",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A cotação inversa é 1 ÷ 5,25, que resulta em aproximadamente USD 0,1905 por real.</p><p>A alternativa A repete a cotação direta. A alternativa B apenas desloca a vírgula. A alternativa C usa os centavos da cotação sem relação com a inversão.</p><p>Regra de bolso: para inverter a perspectiva do mesmo par, calcule o recíproco da cotação.</p>",
+     "enunciado": "<p>Se USD 1 corresponde a R$ 5,25, calcule aproximadamente quantos dólares são comprados por R$ 1 na cotação inversa.</p>",
+     "alternativas": {
+      "a": "USD 5,2500, obtido ao repetir o valor em reais como se as duas formas de cotação fossem equivalentes.",
+      "b": "USD 0,5250, obtido ao deslocar uma casa decimal na cotação direta de R$ 5,25 por dólar.",
+      "c": "USD 0,2500, obtido ao considerar apenas os centavos que excedem R$ 5,00 na cotação apresentada.",
+      "d": "USD 0,1905, obtido aproximadamente por 1 dividido por 5,25 e expresso em dólares por real."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-33-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. R$ 5,10 por dólar multiplicado por USD 1,08 por euro resulta em R$ 5,508 por euro; multiplicado por 4.000, resulta em R$ 22.032.</p><p>A alternativa B divide cotações cujas unidades pedem multiplicação. A alternativa C soma relações de troca. A alternativa D calcula euros por real e aplica a perspectiva inversa ao valor cobrado.</p><p>Regra de bolso: organize as unidades para que a moeda intermediária se cancele e reste a unidade solicitada.</p>",
+     "enunciado": "<p>Patrícia precisa estimar em reais a mensalidade de uma instituição europeia antes de contratar a remessa. A cobrança é de EUR 4.000 e vence em vinte dias, sem possibilidade de parcelamento. Na tela usada como referência, EUR 1 corresponde a USD 1,08 e USD 1 corresponde a R$ 5,10. O aplicativo também mostra a cotação inversa como dado adicional. A escola receberá o valor em euros, embora a relação entre euro e real seja construída por meio do dólar. Patrícia ainda comparará tarifas e taxa efetiva na contratação; nesta etapa, deseja apenas construir a paridade cruzada de referência. Seu gerente orienta que ela acompanhe as unidades para evitar multiplicar ou dividir na direção errada. Calcule o valor de EUR 1 em reais e o valor de referência dos EUR 4.000.</p>",
+     "alternativas": {
+      "a": "EUR 1 corresponde a R$ 5,508 e EUR 4.000 correspondem a R$ 22.032, pela multiplicação de 1,08 por 5,10 e depois por 4.000.",
+      "b": "EUR 1 corresponde a R$ 4,722 e EUR 4.000 correspondem a R$ 18.888, pela divisão de 5,10 por 1,08 para eliminar os dólares.",
+      "c": "EUR 1 corresponde a R$ 6,180 e EUR 4.000 correspondem a R$ 24.720, pela soma das duas cotações antes da conversão.",
+      "d": "EUR 1 corresponde a R$ 0,1816 e EUR 4.000 correspondem a R$ 726,22, pelo inverso da paridade em reais por euro."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-33-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Os nomes seguem a perspectiva da instituição: ela vende moeda estrangeira na remessa e compra a moeda estrangeira recebida para entregar reais.</p><p>A alternativa A usa a perspectiva do cliente e aplica uma taxa às duas situações. A alternativa B ignora que a instituição recebe dólares na segunda operação. A alternativa D inverte exatamente as duas taxas.</p><p>Regra de bolso: pergunte se a instituição está comprando ou vendendo a moeda estrangeira.</p>",
+     "enunciado": "<p>O atendente Fábio acompanha duas operações do mesmo cliente. Na primeira, o cliente envia reais para comprar USD 6.000 e pagar uma despesa no exterior. Na segunda, recebe USD 3.000 por um serviço prestado e solicita conversão do valor para reais. As operações serão liquidadas no mesmo dia, e os documentos identificam remetente, beneficiário e finalidade. A instituição divulga taxa de compra e taxa de venda, além de tarifas e encargos próprios de cada operação. O cliente acredita que os nomes compra e venda descrevem sua própria ação e, por isso, escolhe a taxa de compra para estimar a remessa. Fábio precisa explicar a perspectiva adotada sem misturar o sentido das duas operações. Compare as situações e indique as taxas cambiais aplicáveis.</p>",
+     "alternativas": {
+      "a": "A taxa de compra atende à remessa e ao recebimento, pois o cliente compra dólares na primeira operação e compra reais na segunda.",
+      "b": "A taxa de venda atende às duas operações, pois a instituição entrega moeda ao cliente em ambos os lados da conversão cambial.",
+      "c": "Na remessa, a instituição vende dólares e aplica a taxa de venda; no recebimento convertido, compra dólares e aplica a taxa de compra.",
+      "d": "Na remessa aplica-se a taxa de compra e no recebimento a taxa de venda, pois os nomes seguem a ação realizada pelo cliente."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-33-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Alfa custa 8.000 × R$ 5,14 = R$ 41.120. Beta custa 8.000 × R$ 5,06 + R$ 320 = R$ 40.800. A Ptax é referência e tarifa zero não elimina spread.</p><p>A alternativa B impõe a referência como taxa de contratação. A alternativa C subtrai uma tarifa que aumenta o débito. A alternativa D iguala estruturas com taxas e cobranças diferentes.</p><p>Regra de bolso: compare o débito total e o VET; tarifa e spread são componentes distintos do custo.</p>",
+     "enunciado": "<p>Um cliente compara duas instituições para enviar USD 8.000. A referência de mercado apresentada é R$ 5,00 por dólar. A instituição Alfa anuncia tarifa zero e taxa de venda de R$ 5,14. A instituição Beta cobra tarifa de R$ 320 e oferece taxa de venda de R$ 5,06. As duas liquidam no mesmo prazo e confirmam entrega integral dos USD 8.000 ao beneficiário, sem despesa de intermediário. Ambas ainda apresentarão os tributos e o VET antes da contratação. O cliente escolhe Alfa apenas pela promessa de tarifa zero e afirma que a Ptax obrigaria Beta a converter pela referência. A assessora deseja corrigir essas duas conclusões e comparar o desembolso conhecido antes dos tributos. Analise as propostas e indique a leitura aplicável.</p>",
+     "alternativas": {
+      "a": "Alfa debita R$ 41.120 e Beta R$ 40.800; tarifa zero pode conter custo no spread, e a referência de mercado não é preço obrigatório ao cliente.",
+      "b": "Alfa debita R$ 40.000 e Beta R$ 40.320, pois a referência substitui a taxa de venda quando a instituição divulga tarifa separada.",
+      "c": "Alfa debita R$ 41.120 e Beta R$ 40.480, pois a tarifa de Beta deve ser subtraída do valor convertido antes da remessa ao beneficiário.",
+      "d": "Alfa e Beta debitam R$ 41.120, pois a diferença entre tarifa e spread desaparece quando o valor da operação e a moeda são iguais."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-33-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. USD 3.000 × R$ 5,12 = R$ 15.360; somando R$ 180, o débito é R$ 15.540. Dividido por USD 3.000, resulta em R$ 5,18, ou R$ 540 acima da referência.</p><p>A alternativa A soma apenas parte dos encargos. A alternativa B exclui tarifas e tributos do débito. A alternativa C calcula o débito, mas divide de forma incompleta e reduz o acréscimo à soma das cobranças fixas.</p><p>Regra de bolso: VET nasce do débito total dividido pela moeda adquirida, com taxa, tributos e tarifas.</p>",
+     "enunciado": "<p>Marina contratará uma remessa de USD 3.000 para pagar um curso. A taxa de venda oferecida é R$ 5,12 por dólar, enquanto a referência de mercado está em R$ 5,00. A instituição cobra R$ 45 de tarifa e informa R$ 135 em tributos e demais encargos. O beneficiário receberá os USD 3.000 sem desconto no destino. O pagamento será debitado de uma vez e a instituição confirma que nenhuma cobrança posterior será lançada no Brasil. Marina quer saber o débito total, o custo efetivo em reais por dólar adquirido e quanto desembolsará acima da conversão pela referência. Ela já recebeu os componentes que formam o custo da operação e usará os resultados para comparar o VET com outra proposta. Calcule os três valores e indique a alternativa correta.</p>",
+     "alternativas": {
+      "a": "Débito de R$ 15.495, custo de R$ 5,165 por dólar e acréscimo de R$ 495, pois apenas a tarifa integra o valor convertido.",
+      "b": "Débito de R$ 15.360, custo de R$ 5,12 por dólar e acréscimo de R$ 360, pois tarifas e encargos ficam fora do custo cambial.",
+      "c": "Débito de R$ 15.540, custo de R$ 5,12 por dólar e acréscimo de R$ 180, pois o spread já absorve a tarifa e os encargos informados.",
+      "d": "Débito de R$ 15.540, custo de R$ 5,18 por dólar e acréscimo de R$ 540 frente aos R$ 15.000 calculados pela referência."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-33-q8",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. R$ 25.700 divididos por USD 4.975 resultam em aproximadamente R$ 5,17 por dólar efetivamente entregue, acima dos R$ 5,16 da outra proposta.</p><p>A alternativa A ignora o valor líquido recebido. A alternativa B reduz o custo ao reduzir o denominador. A alternativa D converte o desconto e o soma ao débito já conhecido, duplicando seu efeito.</p><p>Regra de bolso: para comparar entrega, divida o débito total pela moeda que chega ao beneficiário.</p>",
+     "enunciado": "<p>Gustavo envia uma remessa cujo débito total em reais é de R$ 25.700 para uma ordem de USD 5.000. O comprovante informa que um banco intermediário poderá descontar USD 25, e a instituição destinatária confirma que o beneficiário receberá USD 4.975. O pagamento possui data fixa e o fornecedor exige comprovação do valor líquido creditado. Gustavo havia comparado propostas usando apenas R$ 25.700 dividido por USD 5.000, chegando a R$ 5,14 por dólar. A outra proposta garante valor líquido no destino e apresenta custo de R$ 5,16 por dólar entregue. Para decidir, ele precisa medir esta operação pela quantia efetivamente recebida, mantendo separados o custo contratado e o desconto externo. Calcule o custo por dólar entregue e compare a conclusão anterior.</p>",
+     "alternativas": {
+      "a": "O custo permanece em R$ 5,14, pois o desconto ocorre fora do Brasil e não altera o débito registrado pela instituição remetente.",
+      "b": "O custo cai para cerca de R$ 5,11, pois os USD 25 descontados reduzem a base estrangeira e o valor econômico da operação.",
+      "c": "O custo sobe para cerca de R$ 5,17 por dólar entregue, tornando a proposta de R$ 5,16 economicamente inferior neste critério.",
+      "d": "O custo sobe para R$ 5,65, pois os USD 25 devem ser convertidos pela taxa de R$ 5,14 e somados novamente ao débito total."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-33-q9",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Uma remessa pontual atende ao pagamento definido sem exigir conta permanente, e os documentos mostram que a conta global seria juridicamente mantida no exterior.</p><p>A alternativa A presume elegibilidade ampla para conta doméstica em dólar. A alternativa C deixa a interface definir a jurisdição. A alternativa D cria estrutura permanente para uma necessidade isolada.</p><p>Regra de bolso: finalidade eventual favorece remessa; a entidade que mantém o saldo define onde a conta está.</p>",
+     "enunciado": "<p>A cliente Sônia fará um pagamento único de EUR 7.000 a uma escola estrangeira e pretende apenas concluir essa despesa, sem manter saldo ou contratar investimentos fora do país. A escola já forneceu a conta do beneficiário e fixou prazo de quinze dias para o crédito. Um aplicativo brasileiro oferece uma “conta global”, mas informa nos documentos que o saldo ficaria em entidade do grupo situada no exterior. O gerente também menciona uma conta de depósito em dólar mantida por banco brasileiro, cuja abertura depende de enquadramento entre os titulares admitidos pela regulamentação. Sônia é pessoa física residente e acredita que o nome em português transforma a conta global em conta doméstica. Compare os três caminhos e indique a solução coerente com a finalidade informada.</p>",
+     "alternativas": {
+      "a": "Abrir a conta doméstica em dólar, pois pessoa física residente pode usá-la para despesas educacionais mediante indicação da finalidade ao banco.",
+      "b": "Comparar remessas pontuais para a escola, incluindo VET, prazo, rastreamento e valor entregue; a conta global descrita mantém saldo no exterior.",
+      "c": "Abrir a conta global e tratá-la como saldo no Brasil, pois atendimento e conversão pelo aplicativo brasileiro definem a jurisdição da conta.",
+      "d": "Manter euros em conta no exterior antes do pagamento, pois uma despesa isolada exige estrutura permanente para identificar o beneficiário da remessa."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-33-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A recorrência pode favorecer uma conta, mas a decisão exige custo completo, prazo, utilidade, entidade mantenedora, jurisdição, proteção, documentos e obrigações.</p><p>A alternativa A reduz a decisão à tarifa. A alternativa B deixa a recorrência apagar riscos e responsabilidades. A alternativa C posterga fatores que definem a própria escolha.</p><p>Regra de bolso: conta internacional é uma relação contínua; compare operação, instituição e jurisdição, não apenas cada conversão.</p>",
+     "enunciado": "<p>Ricardo recebe pagamentos mensais de clientes estrangeiros, paga fornecedores no mesmo país e deseja manter parte do saldo em moeda local para despesas futuras. Duas plataformas apresentam custos parecidos. A primeira mantém a conta em instituição estrangeira e cobra manutenção, conversão e encerramento. A segunda atua apenas com remessas pontuais, cobra tarifa fixa por operação e entrega os recursos ao beneficiário em até três dias. Ricardo valoriza conciliação dos fluxos, mas ainda desconhece o supervisor da conta estrangeira, a proteção aplicável ao depósito, os documentos solicitados e as obrigações de informação no Brasil. Ele pede recomendação baseada somente na tarifa de cada envio. Avalie a decisão e indique a análise aplicável.</p>",
+     "alternativas": {
+      "a": "Escolher remessas pontuais pela tarifa visível, pois manutenção de saldo e pagamentos recorrentes podem ser conciliados pelos comprovantes de cada operação.",
+      "b": "Escolher a conta estrangeira pela recorrência dos fluxos, pois uso frequente elimina a relevância de jurisdição, proteção, encerramento e informação.",
+      "c": "Somar tarifas anuais de cada caminho e escolher o valor reduzido, deixando prazo, proteção e documentação para análise depois da abertura.",
+      "d": "Comparar custo total, prazo e utilidade, verificar entidade, jurisdição, supervisão, proteção e obrigações e então decidir se a conta facilita os fluxos recorrentes."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-33-q11",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Os limites consideram o conjunto dos ativos no exterior: USD 1.050.000 supera o patamar anual, enquanto o trimestral parte de USD 100 milhões.</p><p>A alternativa B fragmenta o patrimônio por instituição. A alternativa C troca os patamares e cria critério por conta. A alternativa D substitui o estoque na data-base pelo fluxo de remessas.</p><p>Regra de bolso: some os ativos externos nas datas-base e aplique o limite correspondente à declaração anual ou trimestral.</p>",
+     "enunciado": "<p>No encerramento do ano, uma família residente no Brasil possui USD 620.000 em conta estrangeira, USD 260.000 em investimentos mantidos por outra instituição fora do país e participação societária no exterior avaliada em USD 170.000. Cada posição isolada fica abaixo de USD 1 milhão, e o responsável acredita que a declaração anual de capitais brasileiros no exterior analisa cada conta separadamente. Os extratos e a avaliação societária correspondem à mesma data-base. O total dos ativos na data-base de 31 de dezembro é de USD 1.050.000. Nenhuma das datas-base trimestrais apresentou patrimônio externo próximo de USD 100 milhões. Com base apenas nos limites descritos na aula, avalie a obrigação de informação.</p>",
+     "alternativas": {
+      "a": "O total conjunto supera USD 1 milhão na data-base e alcança a CBE anual; a CBE trimestral exige patamar de USD 100 milhões nas datas previstas.",
+      "b": "A CBE anual deixa de ser exigida porque cada instituição mantém valor abaixo de USD 1 milhão e as posições possuem naturezas distintas.",
+      "c": "A CBE trimestral é exigida porque o total ultrapassa USD 1 milhão, enquanto a anual se aplica apenas a uma conta individual nesse valor.",
+      "d": "A obrigação depende do fluxo enviado no ano, e o saldo de 31 de dezembro serve apenas para calcular o custo cambial das remessas realizadas."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-33-q12",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. A ampliação citada é condicionada e dirigida a certas pessoas jurídicas; ela não cria acesso geral, e a conta global permanece onde está a entidade que mantém o saldo.</p><p>A alternativa A amplia o acesso da pessoa física e elimina condições da exportadora. A alternativa B deixa interface e presença comercial definirem jurisdição. A alternativa D iguala enquadramentos distintos e faz a moeda enviada mudar o local da conta.</p><p>Regra de bolso: elegibilidade define a conta doméstica; entidade e país definem a conta no exterior.</p>",
+     "enunciado": "<p>Em setembro de 2026, uma agência prepara orientação para três interessados: uma pessoa física residente que deseja guardar dólares no banco brasileiro, uma exportadora de bens que avalia conta doméstica em moeda estrangeira e uma pessoa que abriu pelo celular uma conta mantida por entidade do grupo nos Estados Unidos. A equipe menciona que a Resolução BCB 575/2026 produzirá ampliação a partir de 1º de outubro de 2026 para determinadas pessoas jurídicas, sob condições específicas. Um gerente propõe divulgar que o novo marco liberou contas bancárias domésticas em dólares para o público residente e que aplicativos brasileiros mantêm os saldos sob jurisdição nacional. Analise a proposta e indique a orientação coerente.</p>",
+     "alternativas": {
+      "a": "A pessoa física residente recebe acesso geral com o novo marco, enquanto a exportadora depende apenas de contratar a conta depois de 1º de outubro.",
+      "b": "As três contas ficam no sistema brasileiro quando abertura, atendimento ou conversão ocorrem por aplicativo ou instituição presente no país.",
+      "c": "A conta doméstica segue restrita a titulares admitidos; a ampliação citada alcança certas pessoas jurídicas, e a entidade mantenedora define a jurisdição da conta global.",
+      "d": "A exportadora e a pessoa física possuem o mesmo enquadramento, enquanto a conta nos Estados Unidos muda de jurisdição quando recebe remessa em reais ou usa atendimento brasileiro."
+     },
+     "gabarito": "c"
+    }
+   ],
+   "Renda fixa internacional: Treasuries, bonds, CDs, CPs e repos": [
+    {
+     "id": "cpror-inv-34-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O Treasury Bill é curto e não paga cupom periódico; comprado por USD 975 para receber USD 1.000, gera ganho bruto de USD 25.</p><p>A alternativa A chama o desconto de cupom. A alternativa B atribui ao Bill o ajuste do TIPS. A alternativa C inventa juros mensais e separa indevidamente o valor de face.</p><p>Regra de bolso: no Bill, compare preço de compra e valor de face; a diferença concentra o retorno.</p>",
+     "enunciado": "<p>Um investidor compra por USD 975 um Treasury Bill que pagará USD 1.000 em 26 semanas. Identifique a forma de remuneração e calcule o ganho bruto no vencimento.</p>",
+     "alternativas": {
+      "a": "O Bill paga cupons semestrais de USD 25 e devolve os USD 975 investidos ao término das 26 semanas.",
+      "b": "O Bill ajusta o principal pelo CPI e entrega USD 25 como correção monetária no vencimento da aplicação.",
+      "c": "O Bill paga juros mensais que somam USD 25 e mantém o valor de face sujeito à cotação no vencimento.",
+      "d": "O Bill concentra o retorno no desconto e paga USD 1.000 no vencimento, produzindo ganho bruto de USD 25."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-34-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O TIPS ajusta o principal pelo CPI norte-americano e calcula juros sobre esse principal, mas câmbio e preço de mercado continuam relevantes para o brasileiro.</p><p>A alternativa B troca CPI por IPCA. A alternativa C transforma proteção do principal no vencimento em garantia em reais. A alternativa D deixa o principal fixo, contrariando o mecanismo do TIPS.</p><p>Regra de bolso: TIPS protege inflação dos Estados Unidos na moeda do título, não o poder de compra brasileiro.</p>",
+     "enunciado": "<p>Uma cliente brasileira procura proteção contra a inflação e acredita que o TIPS acompanha o IPCA. Explique o alcance da proteção desse título.</p>",
+     "alternativas": {
+      "a": "O principal acompanha o CPI dos Estados Unidos e os juros incidem sobre o valor ajustado, sem garantir poder de compra em reais ou preço de venda antecipada.",
+      "b": "O principal acompanha o IPCA convertido em dólares, enquanto o cupom varia conforme a inflação brasileira acumulada no período.",
+      "c": "O título preserva o principal em reais durante o prazo, pois a proteção no vencimento elimina a influência cambial para o investidor brasileiro.",
+      "d": "O cupom acompanha o CPI, mas o principal permanece fixo, de modo que a proteção inflacionária ocorre apenas nos pagamentos semestrais."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-34-q3",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A moeda dos fluxos não muda quem deve: a empresa brasileira continua responsável pelo crédito, enquanto o dólar traz exposição cambial.</p><p>A alternativa A transfere a dívida ao governo dos Estados Unidos. A alternativa B deixa o mercado substituir o emissor. A alternativa D transforma dívida corporativa em obrigação soberana.</p><p>Regra de bolso: identifique primeiro o devedor; depois analise moeda, mercado e jurisdição.</p>",
+     "enunciado": "<p>Uma empresa brasileira emite bond em dólares para investidores internacionais. Identifique o risco de crédito e o papel da moeda nessa emissão.</p>",
+     "alternativas": {
+      "a": "O risco passa ao governo norte-americano porque os pagamentos são em dólares, enquanto a empresa responde apenas pela colocação inicial.",
+      "b": "O risco pertence ao mercado que negociará o papel, e a identidade brasileira do emissor perde relevância depois da emissão.",
+      "c": "O risco de crédito continua ligado à empresa brasileira, e a denominação em dólares acrescenta a dimensão cambial aos fluxos.",
+      "d": "O risco torna-se soberano brasileiro porque empresas nacionais emitindo fora do país integram a dívida externa da República."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-34-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O Global Bond alcança euromercado e mercados domésticos com fungibilidade; o Eurobond é definido pela emissão fora do mercado doméstico da moeda, sem exigir Europa ou euro.</p><p>A alternativa A troca as classificações. A alternativa C usa a nacionalidade para apagar o local de emissão. A alternativa D generaliza o conceito de Eurobond e ignora a estrutura de colocação.</p><p>Regra de bolso: Global descreve alcance entre mercados; Eurobond descreve emissão fora do mercado doméstico da moeda.</p>",
+     "enunciado": "<p>Uma mesa oferece dois papéis de uma companhia brasileira. O primeiro é colocado simultaneamente no euromercado e em mercados domésticos, com títulos fungíveis entre os ambientes e acesso a bases distintas de investidores. O segundo é denominado em dólares e colocado no mercado internacional fora do mercado doméstico norte-americano. Ambos possuem a mesma companhia como devedora, mas seguem estruturas de distribuição diferentes. Um cliente conclui que o primeiro só pode ser chamado de Eurobond por circular em vários países e que o segundo precisaria ser emitido na Europa ou em euros para receber esse nome. O assessor deve corrigir as classificações preservando a identidade do emissor e as características de colocação. Compare os papéis e indique a leitura aplicável.</p>",
+     "alternativas": {
+      "a": "O primeiro é Eurobond por alcançar diversos mercados, e o segundo é Global Bond porque usa dólares fora dos Estados Unidos.",
+      "b": "O primeiro apresenta estrutura de Global Bond; o segundo pode ser Eurobond porque foi emitido fora do mercado doméstico da moeda de denominação.",
+      "c": "Os dois são títulos domésticos brasileiros, pois a nacionalidade da companhia define o mercado da emissão e substitui o local de colocação.",
+      "d": "Os dois são Eurobonds, pois qualquer bond de empresa brasileira colocado no exterior pertence ao euromercado, independentemente da estrutura."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-34-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. CD é depósito a prazo e expõe ao banco depositário; proteção depende de condições locais e não cobre automaticamente perda de preço numa venda antecipada.</p><p>A alternativa B troca o devedor pelo distribuidor. A alternativa C presume seguro e cobertura de mercado. A alternativa D equipara negociabilidade a liquidez garantida pelo valor esperado.</p><p>Regra de bolso: em CD, verifique banco, prazo, saída e proteção efetivamente aplicável.</p>",
+     "enunciado": "<p>A cliente Denise avalia um Certificate of Deposit emitido por banco estrangeiro, com vencimento em dezoito meses e possibilidade de negociação antes da data. O distribuidor menciona que CDs podem contar com seguro de depósitos na jurisdição local, mas a confirmação de elegibilidade da cliente, limite, titularidade e cobertura específica continua pendente. O emissor informa que eventual saída ocorrerá por negociação no mercado secundário. Denise pretende usar o valor em nove meses e acredita que o nome CD garante resgate pelo preço de compra. A taxa oferecida supera a de um depósito com liquidez diária, e ela pede decisão baseada apenas nessa diferença. Analise o instrumento e indique os riscos que precisam ser esclarecidos.</p>",
+     "alternativas": {
+      "a": "O risco central é do banco depositário; proteção depende das regras locais, e venda antecipada pode ocorrer abaixo do preço de compra.",
+      "b": "O risco pertence à empresa que distribui o CD, enquanto o banco emissor responde apenas pelo registro e pela custódia do depósito.",
+      "c": "O seguro de depósitos cobre a negociação antecipada, e a cliente pode vender o CD pelo principal acrescido da remuneração do período.",
+      "d": "O prazo de dezoito meses perde relevância porque o mercado secundário transforma o depósito em recurso com liquidez e valor previamente definidos."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-34-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. O Commercial Paper financia necessidades temporárias, mas o investidor assume risco de crédito e de refinanciamento, especialmente sem garantia específica.</p><p>A alternativa A confunde menor sensibilidade a taxas com ausência de inadimplência. A alternativa B trata emissão futura como garantia. A alternativa D transforma valor de face prometido em pagamento garantido.</p><p>Regra de bolso: prazo curto reduz exposição a taxas, mas a capacidade de pagamento continua dependendo da empresa.</p>",
+     "enunciado": "<p>Uma empresa de varejo emite Commercial Paper com prazo de 120 dias para financiar estoques sazonais. O papel é vendido com desconto, é emitido sem garantia específica e será pago com o caixa das vendas ou com nova captação. A companhia já renovou dívidas curtas em dois trimestres e concentra recebimentos nas últimas semanas do ciclo. O vencimento ocorrerá logo depois da temporada de vendas. Um investidor argumenta que o prazo curto elimina o risco de inadimplência e que a possibilidade de nova emissão assegura recursos para quitar o papel atual. Uma frustração de receita poderia dificultar o refinanciamento. O assessor precisa explicar como prazo, garantia, emissor e fonte de pagamento afetam a decisão. Avalie a emissão e indique a leitura aplicável.</p>",
+     "alternativas": {
+      "a": "O prazo curto elimina inadimplência, pois oscilações de taxa afetam apenas bonds com cupons e vencimentos distantes.",
+      "b": "A emissão futura funciona como garantia do CP atual, pois o mercado fornece recursos quando a empresa mantém atividade operacional.",
+      "c": "O CP é dívida corporativa curta e sem garantia específica; crédito e refinanciamento dependem da qualidade do emissor e da geração de caixa.",
+      "d": "O desconto transfere o risco ao investidor apenas se houver venda antecipada, enquanto o valor de face permanece garantido no vencimento."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-34-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A venda com compromisso de recompra funciona economicamente como financiamento com colateral; o nome muda conforme o lado observado.</p><p>A alternativa A ignora o compromisso que une as etapas. A alternativa B transforma repo em Commercial Paper e remuneração em cupom. A alternativa C confunde a operação com depósito e elimina risco.</p><p>Regra de bolso: quem capta caixa e promete recomprar faz repo; quem aplica caixa e promete revender faz reverse repo.</p>",
+     "enunciado": "<p>Uma tesouraria entrega títulos e recebe USD 2 milhões, comprometendo-se a recomprar os ativos no dia seguinte por USD 2.000.200. A contraparte desembolsa o caixa, recebe os títulos e aceita revendê-los pelo preço pactuado. A operação serve para cobrir uma necessidade de caixa de uma noite e os mesmos ativos estão identificados no compromisso de recompra. Nenhuma das partes pretende manter exposição econômica permanente aos títulos depois da liquidação combinada. Um analista chama a operação de compra definitiva de títulos corporativos e trata a diferença de USD 200 como dividendo. Outro afirma que os nomes repo e reverse repo dependem do lado observado. A documentação define os ativos entregues, o prazo e os preços de venda e recompra. Explique a natureza econômica da operação e a denominação de cada lado.</p>",
+     "alternativas": {
+      "a": "É compra definitiva para quem entrega caixa e venda definitiva para quem entrega títulos, porque a recompra futura constitui nova decisão independente.",
+      "b": "É emissão de CP garantida por títulos, e a diferença de preços funciona como cupom corporativo pago pela empresa emissora dos ativos.",
+      "c": "É depósito bancário de um dia, no qual os títulos substituem seguro local e eliminam a necessidade de analisar a contraparte.",
+      "d": "É financiamento garantido por títulos; para quem vende e recompra é repo, e para quem compra e revende é reverse repo."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-34-q8",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O haircut exige colateral acima do caixa e absorve parte da oscilação, mas não elimina falha da contraparte, mercado, liquidez, documentação ou liquidação.</p><p>A alternativa A fixa um valor que o mercado pode reduzir. A alternativa C ignora a contraparte do repo. A alternativa D transforma a margem inicial em limite garantido de perda.</p><p>Regra de bolso: colateral e haircut reduzem exposição; execução e valor dos ativos determinam a proteção efetiva.</p>",
+     "enunciado": "<p>Um fundo realiza reverse repo e entrega USD 9,5 milhões em troca de títulos avaliados em USD 10 milhões, criando diferença de USD 500 mil entre o caixa e o colateral. A equipe chama essa margem de haircut e considera a operação livre de risco por haver ativos vinculados. Antes do vencimento, a contraparte enfrenta dificuldade financeira, os títulos passam a ser cotados por USD 9,55 milhões e o mercado oferece poucas ordens de compra. O fundo possui obrigação de caixa no dia seguinte e dependeria da venda dos ativos caso a recompra falhasse. A documentação contém dúvida sobre o procedimento e o prazo para execução dos ativos. O gestor precisa avaliar o efeito da margem e os riscos remanescentes para o fundo. Analise a estrutura e indique a interpretação aplicável.</p>",
+     "alternativas": {
+      "a": "O haircut garante recuperação de USD 10 milhões, pois a avaliação inicial do colateral fixa o preço de venda durante a execução.",
+      "b": "O haircut cria margem de proteção, mas contraparte, queda do colateral, liquidez, documentação e liquidação ainda podem gerar perda.",
+      "c": "A presença de títulos transfere o risco ao emissor do colateral e retira da análise a contraparte que recebeu os USD 9,5 milhões.",
+      "d": "A perda fica limitada a USD 500 mil, pois a diferença inicial entre colateral e caixa estabelece o valor econômico da garantia no vencimento."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-34-q9",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O preço de títulos emitidos cai quando a taxa exigida sobe, e fluxos distantes ampliam a sensibilidade; na venda antecipada, vale o preço de mercado.</p><p>A alternativa A exclui Notes e Bonds da marcação. A alternativa C troca prazo original por remanescente. A alternativa D elimina riscos e custos que persistem mesmo no carregamento.</p><p>Regra de bolso: prazo longo aumenta sensibilidade a taxas; manter até o vencimento muda a relevância da oscilação, não sua existência.</p>",
+     "enunciado": "<p>Sérgio compara um Treasury Note original de cinco anos e um Treasury Bond original de trinta anos. Ambos pagam juros semestrais, foram emitidos quando as taxas exigidas eram inferiores às atuais e poderão ser vendidos antes do vencimento para financiar um objetivo em dois anos. A data do objetivo é fixa, e Sérgio ainda desconhece o preço que receberia na saída. O Bond mantém fluxos por período distante, enquanto o Note encerra pagamentos antes. Sérgio acredita que obrigações do Tesouro norte-americano conservam preço até o vencimento e que o prazo original só altera o nome do papel. A assessora precisa explicar a classificação e a reação de mercado sem confundir risco de crédito com oscilação de preço. Avalie os títulos e indique a leitura aplicável.</p>",
+     "alternativas": {
+      "a": "Note e Bond conservam preço porque pagam cupons; a elevação das taxas afeta apenas Bills vendidos com desconto e sem juros periódicos.",
+      "b": "Taxas exigidas em alta reduzem preços; o Bond longo tende a reagir com intensidade, e a venda antecipada realiza o valor de mercado.",
+      "c": "O Bond recebe o nome pelo cupom semestral e o Note pelo prazo remanescente, de modo que a classificação muda conforme a data de venda.",
+      "d": "Manter até o vencimento elimina custo de oportunidade, reinvestimento e inflação, restando ao investidor brasileiro somente o risco cambial."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-34-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. A composição é 1,07 × 1,09 - 1 = 0,1663, ou 16,63%, resultado 0,63 ponto percentual acima da soma simples.</p><p>A alternativa B usa soma e ignora o efeito cruzado. A alternativa C divide fatores que atuam na mesma direção. A alternativa D multiplica percentuais sem convertê-los em fatores.</p><p>Regra de bolso: retorno em reais é o produto dos fatores do papel e do câmbio, menos um.</p>",
+     "enunciado": "<p>Uma investidora converte reais e compra um bond em dólares. Durante o período, o papel rende 7% na moeda estrangeira e o dólar se valoriza 9% frente ao real. O investimento começa com o equivalente a R$ 100.000, e a conversão final ocorrerá na data de avaliação. Ela ignora custos, custódia e tributação para isolar apenas os dois efeitos e conclui que o retorno em reais será de 16%, pela soma das taxas. O assessor explica que a valorização cambial também incide sobre o ganho produzido pelo título, de modo que os fatores precisam ser multiplicados. A investidora deseja comparar o cálculo correto com sua soma e verificar a diferença causada pela composição. Calcule o retorno do papel em reais e a diferença em relação aos 16% estimados.</p>",
+     "alternativas": {
+      "a": "O retorno é 16,63%, por 1,07 × 1,09 menos 1, ficando 0,63 ponto percentual acima da soma de 16%.",
+      "b": "O retorno é 16,00%, porque rendimento do papel e variação cambial incidem sobre bases independentes e devem ser somados.",
+      "c": "O retorno é 15,37%, por 1,07 dividido por 1,09 menos 1, com ajuste posterior da diferença cambial positiva.",
+      "d": "O retorno é 63,00%, pois o produto entre 7 e 9 representa o ganho adicional produzido pela valorização do dólar."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-34-q11",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. O retorno em reais é 1,05 × 0,93 - 1 = -0,0235, ou perda de 2,35%, ainda que o título tenha rendido em dólares.</p><p>A alternativa A soma magnitudes como ganho. A alternativa B usa soma simples. A alternativa C divide os fatores e altera o sentido econômico da desvalorização.</p><p>Regra de bolso: ganho na moeda do título pode virar perda na moeda do objetivo quando o câmbio se move contra o investidor.</p>",
+     "enunciado": "<p>Paulo mantém um Treasury Note que rende 5% em dólares durante o período. Ao converter o valor final, verifica que o dólar se desvalorizou 7% perante o real. O título cumpriu seus pagamentos em moeda estrangeira e foi mantido até a data planejada, mas Paulo esperava resultado positivo em reais por se tratar de renda fixa. Seu objetivo financeiro e suas despesas permanecem denominados em reais, e a conversão ocorrerá ao fim do período. Para isolar o efeito, ele desconsidera custos de conversão, custódia e tributação. Sua planilha soma 5% com menos 7% e aponta perda de 2%. O consultor precisa demonstrar a composição dos fatores e esclarecer a diferença entre remuneração em dólares e resultado na moeda do objetivo. Calcule o retorno em reais.</p>",
+     "alternativas": {
+      "a": "O retorno é positivo em 12,35%, pois o rendimento do título compensa a queda cambial quando os percentuais têm sinais opostos.",
+      "b": "O retorno é negativo em 2,00%, pois a soma de 5% com menos 7% reproduz a conversão do principal e dos juros.",
+      "c": "O retorno é positivo em 2,15%, por 1,05 dividido por 0,93 menos 1 e posterior inversão do sinal do câmbio.",
+      "d": "O retorno é negativo em 2,35%, por 1,05 × 0,93 menos 1, apesar do ganho de 5% medido em dólares."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-34-q12",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. A indicação precisa reunir devedor, prazo, crédito, liquidez, proteção efetiva, mercado de saída e composição cambial frente ao objetivo em reais.</p><p>A alternativa A reduz a análise às taxas e presume efeito cambial idêntico. A alternativa B transforma spread em ganho garantido. A alternativa D atribui ao prazo longo redução da sensibilidade a taxas.</p><p>Regra de bolso: renda fixa internacional exige comparar o papel na moeda de emissão e o resultado na moeda em que o cliente usará o dinheiro.</p>",
+     "enunciado": "<p>A gerente Laura atende um empresário brasileiro que usará reais em data fixa dentro de três anos e quer aplicar dólares recebidos pela venda de um ativo. Ele compara um Treasury Bond de trinta anos, um bond em dólares de empresa brasileira com spread sobre Treasury, um CD bancário com prazo de três anos e um CP de 90 dias. O cliente considera o spread do bond corporativo ganho garantido, presume proteção automática e ilimitada no CD e acredita que a moeda estrangeira torna os emissores equivalentes. Também aceita vender qualquer papel quando precisar dos reais, sem avaliar preço, liquidez e custo de conversão. Laura deve estruturar a comparação antes de indicar uma alternativa. Analise o caso e indique os fatores decisivos.</p>",
+     "alternativas": {
+      "a": "Comparar apenas taxas em dólares, pois o prazo do objetivo coincide com o CD e a conversão futura afeta os instrumentos da mesma forma.",
+      "b": "Escolher o bond corporativo pelo spread, pois a remuneração adicional compensa crédito, liquidez e prazo e permanece contratada na venda antecipada.",
+      "c": "Comparar emissor, prazo, crédito, liquidez, proteção ou colateral, preço de saída e câmbio, relacionando cada fluxo à necessidade futura em reais.",
+      "d": "Escolher o Treasury Bond pela referência soberana, pois o prazo de trinta anos reduz a oscilação de preço diante de mudanças nas taxas exigidas."
+     },
+     "gabarito": "c"
+    }
+   ],
+   "Ações no exterior: ADR, GDR, índices e cenário internacional": [
+    {
+     "id": "cpror-inv-35-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. No ciclo T+1, a negociação executada na segunda-feira costuma liquidar na terça-feira útil; execução e liquidação são momentos diferentes.</p><p>A alternativa A confunde execução com entrega. A alternativa B acrescenta dois dias ao negócio. A alternativa D transforma o ciclo de mercado em escolha do investidor.</p><p>Regra de bolso: T é a data do negócio; T+1 é o dia útil seguinte para a liquidação padrão.</p>",
+     "enunciado": "<p>Um investidor vende na segunda-feira útil ações negociadas nos Estados Unidos pelo ciclo padrão T+1. Explique quando ocorre a liquidação esperada.</p>",
+     "alternativas": {
+      "a": "Na própria segunda-feira, pois a execução da ordem transfere de imediato os ativos e os recursos entre as partes.",
+      "b": "Na quarta-feira útil, pois a letra T representa o primeiro dia e o número 1 acrescenta outro dia após a execução.",
+      "c": "Na terça-feira útil, pois a execução fixa o negócio e a liquidação padrão ocorre um dia útil depois.",
+      "d": "Na data escolhida pelo investidor, pois o ciclo T+1 funciona apenas como prazo máximo para entrega dos recursos."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-35-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O ADR é recibo emitido por depositário e representa uma ou várias ações, ou fração de ação, mantidas por custodiante.</p><p>A alternativa B confunde recibo com ação direta. A alternativa C transforma o ADR em dívida do depositário. A alternativa D trata o programa como fundo.</p><p>Regra de bolso: quem compra ADR possui o recibo e os direitos transmitidos pelo programa, não a ação direta em seu nome.</p>",
+     "enunciado": "<p>Uma cliente compra ADR de companhia estrangeira negociado em dólares nos Estados Unidos. Identifique o instrumento que ela passa a possuir.</p>",
+     "alternativas": {
+      "a": "Um recibo emitido por depositário que representa ações mantidas por custodiante, com direitos transmitidos conforme o programa.",
+      "b": "A ação estrangeira registrada diretamente em seu nome no país de origem, apenas convertida para cotação em dólares.",
+      "c": "Uma dívida do banco depositário cujo pagamento acompanha o preço das ações mantidas pela companhia emissora no exterior.",
+      "d": "Uma cota de fundo norte-americano que reúne ações da companhia e transfere ao investidor os eventos societários locais."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-35-q3",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O ADR Nível 3 acrescenta oferta pública para captação à listagem em bolsa e às exigências completas de registro e divulgação.</p><p>A alternativa A permite balcão sem captação. A alternativa B lista em bolsa sem oferta pública naquele programa. A alternativa C descreve colocação privada restrita.</p><p>Regra de bolso: Nível 2 lista; Nível 3 lista e capta por oferta pública.</p>",
+     "enunciado": "<p>Uma companhia estrangeira deseja listar ADRs em bolsa norte-americana e fazer oferta pública para captar recursos. Identifique o nível compatível.</p>",
+     "alternativas": {
+      "a": "Nível 1, porque a negociação em balcão permite captar recursos com exigências informacionais reduzidas.",
+      "b": "Nível 2, porque a listagem em bolsa inclui oferta pública de novos recibos no mesmo programa.",
+      "c": "Regra 144A, porque a colocação privada para institucionais qualificados equivale à oferta pública em bolsa.",
+      "d": "Nível 3, porque combina listagem em bolsa, captação pública e exigências completas de registro e divulgação."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-35-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A Regra 144A é colocação privada voltada a investidores institucionais qualificados, e não um quarto nível de varejo posterior ao Nível 3.</p><p>A alternativa A converte colocação restrita em oferta pública. A alternativa C iguala estruturas diferentes. A alternativa D atribui captação ao Nível 2 e troca listagem por restrição.</p><p>Regra de bolso: 144A é rota privada institucional; os níveis 1, 2 e 3 formam outra classificação.</p>",
+     "enunciado": "<p>O diretor de uma companhia estrangeira avalia quatro caminhos para recibos nos Estados Unidos. Ele deseja alcançar investidores institucionais qualificados por colocação privada, fora da oferta pública comum ao varejo. Um consultor sugere chamar a estrutura de ADR Nível 4 e afirma que ela seria o degrau posterior ao Nível 3. Outro explica que a classificação segue uma regra própria, com negociação restrita, e que os níveis 1, 2 e 3 tratam de balcão, listagem e captação pública. A companhia ainda definirá depositário, razão dos recibos e documentos para os compradores. A distribuição será apresentada apenas ao grupo institucional elegível e ficará fora dos canais comuns de varejo. Compare as propostas e indique a classificação coerente.</p>",
+     "alternativas": {
+      "a": "Usar Nível 3, pois a presença de investidores institucionais transforma qualquer colocação privada em oferta pública completa.",
+      "b": "Usar a Regra 144A, destinada a colocação privada para institucionais qualificados e distinta de um novo degrau aberto ao varejo.",
+      "c": "Usar Nível 1, pois balcão e colocação privada possuem o mesmo público, as mesmas exigências e a mesma finalidade de captação.",
+      "d": "Usar Nível 2, pois a restrição aos compradores substitui a listagem em bolsa e autoriza a companhia a captar naquele programa."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-35-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Três ações valem EUR 96; multiplicadas por USD 1,12 por euro, resultam em USD 107,52. USD 110,88 ÷ USD 107,52 - 1 = 3,125%.</p><p>A alternativa A omite a conversão cambial. A alternativa C divide quando deveria multiplicar. A alternativa D ignora a razão de três ações na formação do valor do recibo.</p><p>Regra de bolso: valor do recibo começa pela razão vezes o preço da ação vezes a cotação entre as moedas.</p>",
+     "enunciado": "<p>Um ADR representa três ações de uma empresa europeia. Cada ação vale EUR 32 no mercado de origem, e EUR 1 corresponde a USD 1,12. As duas cotações foram observadas no mesmo instante, durante a sobreposição dos horários de negociação. Antes de custos, diferenças de mercado e restrições de criação ou cancelamento, o cliente deseja estimar o valor de referência do recibo. O ADR está sendo negociado a USD 110,88 e possui volume inferior ao da ação subjacente. Ele acredita que basta comparar USD 110,88 com EUR 32, ignorando a razão e a conversão, e trata qualquer diferença como arbitragem imediata. O assessor precisa calcular o valor de referência e o prêmio observado, deixando claro que custos, liquidez, prazos e eventos podem explicar desvios. Calcule os dois resultados.</p>",
+     "alternativas": {
+      "a": "Referência de USD 96,00 e prêmio de 15,50%, pois as três ações são somadas antes de considerar apenas a cotação do ADR.",
+      "b": "Referência de USD 107,52 e prêmio de 3,125%, por 3 × EUR 32 × USD 1,12 e depois USD 110,88 dividido por USD 107,52 menos 1.",
+      "c": "Referência de USD 102,86 e prêmio de 7,80%, pela divisão de EUR 96 por USD 1,12 antes da comparação com o recibo.",
+      "d": "Referência de USD 35,84 e prêmio de 209,38%, pois o cálculo usa uma ação convertida e a razão do programa apenas no pagamento de dividendos."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-35-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. ADR e GDR são recibos ligados a ativos depositados; diferem principalmente pelo mercado e regime do programa, mantendo riscos da companhia e do país de origem.</p><p>A alternativa A transforma diferenças de negociação em novo emissor. A alternativa B inverte os mercados dos recibos. A alternativa D usa alcance internacional para apagar riscos do subjacente.</p><p>Regra de bolso: o recibo muda o canal de acesso, não a empresa representada nem seus riscos econômicos.</p>",
+     "enunciado": "<p>A investidora Paula encontra recibos da mesma companhia asiática em dois centros financeiros. Um deles foi estruturado para o mercado dos Estados Unidos e negocia em dólares. O outro pode circular em mais de um mercado internacional, possui depositário estrangeiro e também está denominado em dólares. Os programas usam custodiante para manter as ações, mas apresentam razões de conversão, horários, tarifas e volumes próprios. Paula conclui que o segundo recibo representa empresa diferente porque possui preço distinto, e acredita que a palavra global elimina o risco do país de origem. Os documentos identificam a mesma companhia e os mesmos papéis subjacentes nos dois casos. Compare as estruturas e indique a interpretação aplicável.</p>",
+     "alternativas": {
+      "a": "Os dois recibos representam empresas diferentes quando preços e volumes divergem, pois cada depositário cria um novo emissor para o mercado local.",
+      "b": "O ADR pode circular em vários centros e o GDR fica restrito aos Estados Unidos, enquanto a moeda determina o país econômico da companhia.",
+      "c": "ADR é desenhado para o mercado norte-americano; GDR busca distribuição internacional, e ambos preservam vínculos e riscos do ativo subjacente.",
+      "d": "GDR elimina risco do país da empresa por distribuir o recibo globalmente, embora mantenha tarifas e liquidez próprias em cada mercado."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-35-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O Dow é ponderado pelo preço, então USD 200 exerce cerca do dobro do peso de USD 100; o S&amp;P 500 usa capitalização ajustada pelo free float.</p><p>A alternativa B troca os métodos e cria pesos iguais. A alternativa C atribui preço ao S&amp;P 500. A alternativa D trata os dois como índices de capitalização e reduz a diferença à quantidade.</p><p>Regra de bolso: composição diz quem entra; ponderação diz quanto cada componente influencia.</p>",
+     "enunciado": "<p>Em um pregão, uma ação cotada a USD 200 sobe 4%, enquanto outra cotada a USD 100 cai 2%. A primeira companhia possui capitalização ajustada pelo free float inferior à segunda, embora sua ação tenha preço unitário elevado. As duas empresas participam dos índices analisados naquele pregão, e os demais componentes permanecem estáveis no exemplo. Um cliente pergunta por que o Dow Jones e o S&amp;P 500 podem reagir de forma diferente ao mesmo dia e acredita que ambos atribuem peso pela quantidade de empresas. O assessor informa que o Dow reúne 30 grandes companhias e é ponderado pelo preço, enquanto o S&amp;P 500 reúne 500 grandes companhias e usa capitalização ajustada pelo free float. Compare os índices e indique a explicação correta.</p>",
+     "alternativas": {
+      "a": "No Dow, a ação de USD 200 exerce aproximadamente o dobro da influência da ação de USD 100; no S&amp;P 500, a capitalização ajustada define os pesos.",
+      "b": "No Dow, a empresa de capitalização elevada domina o cálculo; no S&amp;P 500, cada uma das 500 companhias recebe peso idêntico.",
+      "c": "Os dois índices usam preço das ações, mas o S&amp;P 500 divide o resultado pelo free float para neutralizar empresas de grande porte.",
+      "d": "Os dois índices usam capitalização, e a diferença do pregão surge apenas porque o Dow possui 30 empresas e o S&amp;P reúne 500."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-35-q8",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Cada índice responde a um universo: listados elegíveis na Nasdaq, mercados desenvolvidos e mercados emergentes, respectivamente.</p><p>A alternativa A restringe o Nasdaq a tecnologia e inclui emergentes no World. A alternativa B confunde Composite com Nasdaq-100 e distorce os MSCI. A alternativa C troca regiões e classificações.</p><p>Regra de bolso: nome amplo não basta; confirme bolsa, desenvolvimento, porte e metodologia de cada índice.</p>",
+     "enunciado": "<p>Um comitê procura referências para três parcelas: empresas listadas na Nasdaq, mercados desenvolvidos e mercados emergentes. Os mandatos serão avaliados separadamente, e cada referência precisa corresponder ao universo declarado ao cliente. Um membro propõe usar o Nasdaq Composite como carteira exclusiva de tecnologia e o MSCI World como índice mundial completo, incluindo emergentes. Outro lembra que o Nasdaq Composite contém ações e instrumentos elegíveis de empresas domésticas e estrangeiras listados na Nasdaq, com inclinação tecnológica, e que o MSCI World cobre grande e média capitalização de mercados desenvolvidos. O grupo também avalia o MSCI Emerging Markets para separar o bloco emergente. Analise os universos e indique a seleção coerente.</p>",
+     "alternativas": {
+      "a": "Nasdaq Composite representa apenas tecnologia; MSCI World cobre desenvolvidos e emergentes; MSCI Emerging Markets repete o bloco já incluído.",
+      "b": "Nasdaq Composite equivale ao Nasdaq-100; MSCI World mede empresas globais listadas nos Estados Unidos; MSCI Emerging Markets cobre pequenas empresas.",
+      "c": "Nasdaq Composite cobre desenvolvidos; MSCI World cobre apenas zona do euro; MSCI Emerging Markets reúne companhias norte-americanas emergentes.",
+      "d": "Nasdaq Composite mede elegíveis listados na Nasdaq e tem inclinação tecnológica; MSCI World cobre desenvolvidos e MSCI Emerging Markets cobre emergentes."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-35-q9",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. O EURO STOXX 50 representa líderes da zona do euro, o MSCI World cobre desenvolvidos, e índices são referências acessadas por veículos com método e custos próprios.</p><p>A alternativa A amplia o EURO STOXX e troca emergentes por desenvolvidos. A alternativa B inclui países fora do euro e restringe o World. A alternativa D iguala universos diferentes.</p><p>Regra de bolso: escolha o índice pelo universo e o veículo pela forma de acesso; índice não é produto negociado diretamente.</p>",
+     "enunciado": "<p>Uma cliente deseja medir ações líderes da zona do euro e, em outra parcela, acompanhar companhias de mercados desenvolvidos em escala ampla. Os dois mandatos terão veículos próprios e relatórios comparados com referências distintas. Seu gerente sugere o EURO STOXX 50 para representar o continente europeu, incluindo países fora da união monetária, e o MSCI Emerging Markets para cobrir os mercados desenvolvidos. A cliente também pergunta se poderia comprar os índices diretamente em bolsa, como se fossem ações. O assessor precisa separar abrangência, classificação e veículo, pois fundos, ETFs, derivativos e carteiras podem apenas reproduzir ou usar índices como referência, com custos e diferenças de acompanhamento. Avalie a proposta e indique a correção.</p>",
+     "alternativas": {
+      "a": "EURO STOXX 50 cobre o continente europeu e MSCI Emerging Markets cobre desenvolvidos; ambos podem ser comprados diretamente pelo valor divulgado no fechamento.",
+      "b": "EURO STOXX 50 cobre países europeus fora do euro e MSCI World cobre apenas Estados Unidos; ETFs transformam os índices em ações sem custo de acompanhamento.",
+      "c": "EURO STOXX 50 reúne líderes da zona do euro; MSCI World cobre mercados desenvolvidos, e o acesso ocorre por veículos que buscam reproduzir índices.",
+      "d": "EURO STOXX 50 e MSCI World possuem a mesma abrangência regional, diferindo apenas no número de empresas e na moeda usada para divulgar o desempenho."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-35-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. O cenário chega por canais distintos e interligados; juros, moeda, atividade chinesa, custos e concentração precisam ser ligados a cada exposição da carteira.</p><p>A alternativa B deixa o dólar compensar automaticamente outros efeitos. A alternativa C reduz o cenário a juros. A alternativa D substitui análise de exposições por desempenho recente.</p><p>Regra de bolso: cenário não recebe um sinal único; ele é traduzido em canais que atingem receitas, custos, taxas, moedas e fluxos.</p>",
+     "enunciado": "<p>Uma carteira brasileira possui ações de mineradoras e exportadoras, além de uma parcela internacional concentrada em grandes empresas norte-americanas de crescimento. Surge um cenário de alta inesperada dos juros nos Estados Unidos, fortalecimento do dólar, desaceleração chinesa e encarecimento do frete. O cliente pede que o profissional classifique o efeito como positivo ou negativo para o conjunto da carteira, usando apenas a direção do dólar. A parcela externa está sem proteção cambial, as mineradoras dependem da demanda chinesa e as empresas de crescimento têm lucros esperados em períodos distantes. O profissional precisa mapear os canais e reconhecer que correlações podem aumentar em crise. Analise o cenário e indique a abordagem aplicável.</p>",
+     "alternativas": {
+      "a": "Mapear juros, dólar, demanda chinesa, frete, receitas e concentração por setor, testando efeitos conjuntos e a possibilidade de quedas simultâneas.",
+      "b": "Classificar o cenário como positivo porque o dólar forte beneficia a parcela externa e as exportadoras, compensando impactos sobre juros, demanda e frete.",
+      "c": "Classificar o cenário como negativo porque juros elevados reduzem ações de crescimento, tornando irrelevantes câmbio, commodities e receitas dolarizadas.",
+      "d": "Usar o desempenho recente do índice norte-americano como síntese dos canais, pois preços incorporam os efeitos antes da recomendação ao cliente."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-35-q11",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa D está correta. A composição é 1,05 × 0,92 - 1 = -3,40%; R$ 80.000 × 0,966 resulta em R$ 77.280.</p><p>A alternativa A inverte o efeito da queda do dólar. A alternativa B transforma a perda em ganho. A alternativa C usa soma simples e chega a saldo diferente do efeito composto.</p><p>Regra de bolso: converta retorno do índice e variação cambial em fatores, multiplique e subtraia um.</p>",
+     "enunciado": "<p>Marcelo investe o equivalente a R$ 80.000 em carteira que acompanha um índice estrangeiro sem proteção cambial. No início, o índice está em 100 pontos e a cotação é de R$ 5,00 por dólar. No fim, o índice chega a 105 pontos e a cotação cai para R$ 4,60, movimentos equivalentes a alta de 5% nas ações e queda de 8% do dólar frente ao real. O relatório apresenta separadamente desempenho das ações e moeda, sem incluir custos e tributação. Marcelo soma 5% com menos 8% e estima perda de 3%, mas a gestora informa que os fatores devem ser compostos. A dúvida de Marcelo envolve o resultado em reais, o saldo final e a razão de uma alta do índice terminar negativa na moeda de seu objetivo. Calcule o retorno composto e o valor final aproximado.</p>",
+     "alternativas": {
+      "a": "Retorno de 13,40% e saldo de R$ 90.720, pois a queda do dólar é convertida em ganho ao investidor que já possui ativos estrangeiros.",
+      "b": "Retorno de 3,00% e saldo de R$ 82.400, pois o desempenho do índice compensa parte da queda cambial por soma direta.",
+      "c": "Retorno de menos 3,00% e saldo de R$ 77.600, pois a soma dos percentuais reproduz o efeito sobre principal e ganho.",
+      "d": "Retorno de menos 3,40% e saldo de R$ 77.280, por 1,05 × 0,92 menos 1 aplicado aos R$ 80.000."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-35-q12",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A alocação internacional deve preencher uma exposição necessária na carteira e ser avaliada por composição, concentração, veículo, moeda, horizonte e tolerância.</p><p>A alternativa A usa alta recente e chama Nasdaq de diversificação mundial. A alternativa C transforma S&amp;P 500 em mercado global e proteção cambial. A alternativa D deixa o recibo apagar o risco da empresa e do país.</p><p>Regra de bolso: comece pela exposição que falta à carteira, não pelo índice que apareceu em destaque.</p>",
+     "enunciado": "<p>A cliente Renata concentra a carteira em ações brasileiras de bancos e commodities. Após ver forte alta do Nasdaq Composite, exige transferir a parcela destinada a ações para um único ETF ligado ao índice, afirmando que obterá diversificação mundial e exposição exclusiva às empresas tecnológicas vencedoras. Ela também acredita que a cotação em dólares elimina riscos do Brasil presentes em ADRs de companhias nacionais. O assessor identifica que o objetivo é diversificação geográfica e setorial, mas ainda precisa avaliar horizonte, tolerância a perdas, concentração do índice, veículo, moeda e exposições que já existem nas empresas brasileiras. Renata insiste em usar o desempenho recente como critério decisivo. Avalie o pedido e indique a condução aplicável.</p>",
+     "alternativas": {
+      "a": "Atender ao pedido porque o Nasdaq Composite reúne empresas globais, e a alta recente confirma diversificação geográfica e capacidade de reduzir perdas da carteira.",
+      "b": "Reenquadrar a decisão pela exposição que falta, esclarecer composição, moeda, veículo e riscos, testar concentração e relacionar a parcela ao horizonte e à tolerância.",
+      "c": "Substituir o índice pelo S&amp;P 500 resolve a concentração, pois suas 500 companhias representam o mercado mundial e neutralizam o risco cambial.",
+      "d": "Usar ADRs de empresas brasileiras preserva a diversificação exterior, pois depositário e negociação em dólares retiram o risco econômico do país de origem."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Investimentos no exterior e offshore: tributação e obrigações": [
+    {
+     "id": "cpror-inv-36-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Na aplicação direta, juros são tributáveis quando recebidos; os fatos realizados do ano são reunidos na DAA seguinte e pagos no ajuste anual.</p><p>A alternativa A desloca o fato gerador e cria carnê-leão. A alternativa C tributa a abertura e transfere a responsabilidade à corretora. A alternativa D trata remessa como renda e cria antecipação mensal.</p><p>Regra de bolso: aplicação direta segue caixa durante o ano e acerto na DAA seguinte.</p>",
+     "enunciado": "<p>Uma pessoa física residente recebe juros de aplicação financeira no exterior em março de 2025. Identifique quando ocorre o fato gerador e como o regime criado pela Lei 14.754/2023 leva o rendimento ao pagamento no Brasil.</p>",
+     "alternativas": {
+      "a": "O fato gerador ocorre em 31 de dezembro, e o imposto é recolhido por carnê-leão no último mês do próprio ano.",
+      "b": "O fato gerador ocorre no recebimento em março, e o rendimento entra na DAA entregue no ano seguinte, com pagamento no ajuste anual.",
+      "c": "O fato gerador ocorre quando a aplicação é aberta, e a corretora estrangeira recolhe o imposto brasileiro antes de creditar os juros.",
+      "d": "O fato gerador ocorre no envio dos recursos ao exterior, e o imposto é antecipado mensalmente até a liquidação da aplicação."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-36-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Ativo financeiro detido diretamente segue regime de caixa; valorização sem realização ou recebimento não basta para criar o fato gerador.</p><p>A alternativa A tributa apenas a alta do ativo. A alternativa B tributa câmbio sem realização. A alternativa C aplica à titularidade direta a lógica anual de certas controladas.</p><p>Regra de bolso: preço e câmbio em 31 de dezembro só entram no ativo direto quando o resultado é realizado.</p>",
+     "enunciado": "<p>Em 31 de dezembro, uma ação estrangeira detida diretamente valorizou-se e o dólar subiu, mas a investidora manteve o papel e recebeu nenhum rendimento. Avalie o fato gerador.</p>",
+     "alternativas": {
+      "a": "A alta da ação gera rendimento tributável, enquanto a variação cambial fica suspensa até a alienação do papel.",
+      "b": "A alta do dólar gera ganho tributável sobre o custo, enquanto a valorização da ação depende de venda ou liquidação.",
+      "c": "As duas valorizações entram na DAA porque a data de 31 de dezembro encerra a apuração anual das aplicações diretas.",
+      "d": "A valorização ainda não realizada não gera imposto por si; o ganho entra quando houver evento como venda, resgate ou liquidação."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-36-q3",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O custo é USD 8.000 × R$ 4,90 = R$ 39.200; o recebido é USD 9.500 × R$ 5,20 = R$ 49.400; a diferença de R$ 10.200 gera IRPF de R$ 1.530.</p><p>A alternativa B ignora o câmbio do principal. A alternativa C usa apenas a variação cambial e despreza o ativo. A alternativa D apura base e imposto em dólares.</p><p>Regra de bolso: converta custo e recebimento pelas cotações próprias, compare em reais e aplique 15%.</p>",
+     "enunciado": "<p>Uma aplicação direta foi comprada por USD 8.000 com câmbio de compra de R$ 4,90 e vendida por USD 9.500 com câmbio de venda de R$ 5,20. Calcule o rendimento tributável em reais e o IRPF de 15%.</p>",
+     "alternativas": {
+      "a": "Rendimento de R$ 10.200 e IRPF de R$ 1.530, comparando R$ 49.400 recebidos com custo fiscal de R$ 39.200.",
+      "b": "Rendimento de R$ 7.800 e IRPF de R$ 1.170, aplicando o câmbio da venda apenas ao ganho nominal de USD 1.500.",
+      "c": "Rendimento de R$ 12.000 e IRPF de R$ 1.800, usando a diferença cambial sobre os USD 8.000 como única base.",
+      "d": "Rendimento de USD 1.500 e IRPF de USD 225, mantendo base e imposto na moeda em que a aplicação foi negociada."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-36-q4",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Perda realizada e comprovada pode compensar rendimentos financeiros externos no período, depois resultados abrangidos de controladas e eventual saldo em períodos posteriores.</p><p>A alternativa A leva a perda à renda do trabalho. A alternativa B usa a mesma perda mais de uma vez. A alternativa D restringe a compensação ao ativo e elimina o transporte permitido.</p><p>Regra de bolso: documente, use uma vez e respeite a ordem de compensação do regime.</p>",
+     "enunciado": "<p>Uma investidora realizou perda comprovada em aplicação financeira no exterior e possui outros rendimentos abrangidos pelo regime no mesmo ano. Identifique o tratamento possível para essa perda.</p>",
+     "alternativas": {
+      "a": "Deduzir a perda da renda do trabalho na DAA e transportar o restante para qualquer obrigação tributária futura.",
+      "b": "Usar a perda em duas aplicações diferentes quando cada compensação ficar abaixo do valor originalmente documentado.",
+      "c": "Compensar rendimentos financeiros externos do ano, depois lucros e dividendos de controladas do período e transportar eventual saldo abrangido.",
+      "d": "Compensar apenas ganho do mesmo ativo e encerrar o saldo no fim do ano, pois aplicações diferentes possuem bases independentes e impedem transporte para outro período."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-36-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. O tributo passível de restituição fica fora do crédito; os R$ 11.000 definitivos são inferiores ao limite brasileiro de R$ 12.000, restando R$ 1.000.</p><p>A alternativa B usa imposto recuperável. A alternativa C excede o IRPF do rendimento e transfere crédito. A alternativa D desconta os R$ 3.000 duas vezes e reduz indevidamente o valor elegível.</p><p>Regra de bolso: crédito externo exige tratado ou reciprocidade, exclui valor restituível e para no imposto brasileiro daquele rendimento.</p>",
+     "enunciado": "<p>Teresa apura R$ 80.000 de rendimento em aplicação financeira no exterior, gerando IRPF brasileiro de R$ 12.000 pela alíquota de 15%. O país de origem reteve o equivalente a R$ 14.000. Desse valor, R$ 3.000 podem ser restituídos no exterior; os R$ 11.000 restantes atendem à condição de tratado aplicável ou reciprocidade. O comprovante estrangeiro identifica a aplicação, o rendimento, a retenção definitiva e o pedido de restituição. Teresa possui outro rendimento externo tributável e quer transferir eventual excesso de crédito para ele. Ela recebeu os dois rendimentos no mesmo ano e mantém os informes separados por fonte. Os documentos distinguem o valor definitivo do valor recuperável. Calcule o crédito utilizável contra esse rendimento e o saldo de IRPF brasileiro correspondente.</p>",
+     "alternativas": {
+      "a": "Crédito de R$ 11.000 e saldo brasileiro de R$ 1.000, pois o valor restituível fica fora e o crédito se limita ao imposto incidente nesse rendimento.",
+      "b": "Crédito de R$ 12.000 e saldo brasileiro zero, usando parte do imposto restituível até alcançar o limite do IRPF calculado no Brasil.",
+      "c": "Crédito de R$ 14.000 e saldo credor de R$ 2.000, que pode reduzir o imposto do outro rendimento externo informado na DAA.",
+      "d": "Crédito de R$ 9.000 e saldo brasileiro de R$ 3.000, pois o valor recuperável deve ser descontado também do imposto devido no Brasil."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-36-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. Controle pode decorrer de preponderância e poder sobre administradores, sozinho ou com vinculados; renda ativa inferior a 60% inclui a controlada no teste anual.</p><p>A alternativa A olha apenas capital individual. A alternativa C condiciona o regime anual à distribuição. A alternativa D restringe controle a capital e cria mudança de alíquota ausente na aula.</p><p>Regra de bolso: primeiro verifique poder de controle; depois jurisdição e proporção de renda ativa.</p>",
+     "enunciado": "<p>Maurício possui 45% do capital de entidade estrangeira, e uma pessoa vinculada detém outros 10%. O acordo entre eles assegura a Maurício preponderância nas deliberações e poder de eleger a maioria dos administradores. A entidade concentra receitas em juros e dividendos, de modo que sua renda ativa própria corresponde a 35% da renda total. Ela está fora de jurisdição favorecida, mas o contador afirma que participação individual inferior à metade afasta controle e tributação anual. As atas confirmam o poder de Maurício, e as demonstrações separam renda ativa e rendimentos financeiros. O lucro de 2026 permaneceu reinvestido na carteira da entidade, sem uso para despesas do sócio. Analise controle e enquadramento com base nos critérios da aula.</p>",
+     "alternativas": {
+      "a": "A entidade fica fora do regime anual porque Maurício possui 45% isoladamente e a participação da pessoa vinculada pertence a outro titular.",
+      "b": "Há controle pelos direitos e pelas participações com pessoa vinculada, e renda ativa de 35% fica abaixo do teste de 60% do regime anual.",
+      "c": "Há controle, mas a ausência de distribuição afasta o regime anual porque os lucros reinvestidos só entram quando chegam à pessoa física.",
+      "d": "A renda passiva da entidade altera a alíquota, mas controle continua limitado a participação individual superior a 50% do capital social."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-36-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A parcela de Beatriz é USD 24.000; convertida por R$ 5,10, gera R$ 122.400 e IRPF de R$ 18.360, mesmo sem distribuição.</p><p>A alternativa A atribui 100% do lucro. A alternativa B deixa de converter dólares em reais. A alternativa C calcula a base, mas adia imposto que nasce no balanço anual.</p><p>Regra de bolso: no regime anual, participação vezes lucro vezes câmbio de fechamento forma a base em reais.</p>",
+     "enunciado": "<p>Beatriz detém 80% de uma controlada enquadrada no regime anual. Em 31 de dezembro, a entidade apura lucro de USD 30.000 antes do imposto sobre a renda devido no exterior. A cotação de fechamento para venda divulgada para a data é R$ 5,10. O balanço foi encerrado nessa data, e os USD 30.000 correspondem ao resultado integral do exercício antes de qualquer distribuição. O lucro permanece aplicado na própria empresa e nenhum dividendo é pago. Beatriz acredita que a ausência de distribuição transfere o fato gerador para o ano em que o dinheiro chegar à conta pessoal. As demonstrações identificam sua participação, a moeda funcional e o lucro do exercício. Calcule o lucro atribuído em reais e o IRPF de 15% no ajuste anual.</p>",
+     "alternativas": {
+      "a": "Lucro atribuído de R$ 153.000 e IRPF de R$ 22.950, pois o balanço inteiro pertence ao controlador mesmo com participação de 80%.",
+      "b": "Lucro atribuído de R$ 120.000 e IRPF de R$ 18.000, usando USD 30.000 multiplicados apenas pela participação de 80%.",
+      "c": "Lucro atribuído de R$ 122.400 e imposto suspenso, pois a conversão ocorre no balanço, mas o pagamento depende da distribuição.",
+      "d": "Lucro atribuído de R$ 122.400 e IRPF de R$ 18.360, por USD 30.000 × 80% × R$ 5,10 e aplicação de 15%."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-36-q8",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O lucro já tributado aumenta o custo do crédito e sua distribuição não sofre nova incidência; a diferença cambial posterior também não é tributável nem dedutível.</p><p>A alternativa A tributa duas vezes o lucro. A alternativa B cria ganho ou perda cambial posterior. A alternativa C duplica o imposto e ainda separa diferença cambial fora da regra apresentada.</p><p>Regra de bolso: marque o lucro tributado no custo para reconhecer a distribuição futura sem nova incidência.</p>",
+     "enunciado": "<p>Uma controlada enquadrada atribuiu à sócia residente R$ 200.000 de lucro em 31 de dezembro de 2024, valor incluído na DAA e tributado a 15%. A quantia elevou o custo fiscal do crédito de dividendo a receber e permaneceu registrada separadamente de lucros posteriores. Em 2026, a empresa distribui essa parcela, que chega à sócia por R$ 225.000 em razão da mudança cambial entre o balanço e o pagamento. A deliberação societária e o extrato vinculam o pagamento à parcela de 2024. A cliente acredita que os R$ 225.000 sofrerão nova tributação como dividendo e que eventual movimento cambial contrário geraria perda dedutível. Os registros identificam que a distribuição corresponde exatamente ao lucro já tributado. Analise o tratamento da parcela.</p>",
+     "alternativas": {
+      "a": "Tributar R$ 225.000 a 15%, pois distribuição é fato novo e o custo fiscal registra apenas o capital colocado inicialmente na offshore.",
+      "b": "Tributar R$ 25.000 como ganho cambial e manter R$ 200.000 isentos, permitindo dedução se a diferença cambial tiver sinal contrário.",
+      "c": "Tributar novamente R$ 200.000 e deixar R$ 25.000 para ganho de capital, pois lucro contábil e recebimento possuem bases separadas.",
+      "d": "Evitar nova tributação da parcela já alcançada; a diferença cambial até o recebimento também fica sem tributação ou dedução nesse tratamento."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-inv-36-q9",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Prejuízo da própria controlada, apurado desde 2024 sob controle, pode reduzir lucros futuros da mesma entidade, sem livre transferência para outra offshore.</p><p>A alternativa A usa a perda duas vezes e entre entidades. A alternativa B leva o prejuízo à Beta. A alternativa D consolida empresas distintas sem base na regra apresentada.</p><p>Regra de bolso: prejuízo contábil da controlada acompanha a própria entidade.</p>",
+     "enunciado": "<p>Uma pessoa física controla duas entidades estrangeiras sujeitas ao regime anual. A Offshore Alfa apura prejuízo contábil de R$ 70.000 em 2024 e lucro de R$ 90.000 em 2025. A Offshore Beta apura lucro de R$ 100.000 em 2024. As empresas possuem balanços, patrimônios e carteiras separados, e nenhuma delas distribuiu valores nesses períodos. O controlador pretende usar o prejuízo da Alfa primeiro contra o lucro da Beta e depois novamente contra o lucro futuro da própria Alfa. Os demonstrativos permitem identificar resultados e participação desde 2024, e o controle foi mantido nos períodos. O consultor precisa explicar o alcance do prejuízo da controlada e impedir duplicidade entre entidades. Avalie a compensação.</p>",
+     "alternativas": {
+      "a": "Usar R$ 70.000 contra Beta em 2024 e contra Alfa em 2025, pois cada entidade possui período e lucro tributável próprios.",
+      "b": "Usar R$ 70.000 apenas contra Beta, pois o prejuízo deve compensar primeiro a controlada que apresentou lucro no mesmo exercício.",
+      "c": "Manter o prejuízo na Alfa e usá-lo contra lucro futuro dessa mesma entidade, sem deslocá-lo livremente para o resultado da Beta.",
+      "d": "Somar resultados das duas offshores em cada ano e aplicar 15% ao saldo consolidado, tratando o controlador como uma única entidade econômica."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-36-q10",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Lucro, benefício pessoal e capital do sócio são camadas distintas: o lucro segue o balanço, a despesa pessoal disponibiliza recursos e o principal pode gerar ganho de capital.</p><p>A alternativa B mistura as três naturezas. A alternativa C deixa gastos pessoais reduzirem lucro e chama capital de aplicação direta. A alternativa D usa local do pagamento para afastar disponibilização e confunde custos fiscais.</p><p>Regra de bolso: separe lucro da empresa, benefício entregue ao sócio e capital investido por ele.</p>",
+     "enunciado": "<p>O sócio de uma offshore sujeita ao regime anual investiu capital para formar a carteira da empresa. No ano seguinte, a controlada apura lucro financeiro e paga diretamente hotel, passagens e fatura particular do sócio, registrando os gastos como despesas administrativas. As notas identificam o hóspede, o passageiro e o cartão pessoal, sem relação com a atividade da entidade. Depois, a offshore devolve parte do capital originalmente aportado quando a cotação da moeda está diferente da usada no aporte. O sócio trata lucro, pagamento pessoal e devolução de capital como um único fluxo submetido ao balanço anual de 15%. O contador possui documentos que separam aporte, lucro, distribuição e despesas pessoais. Analise as camadas tributárias descritas na aula.</p>",
+     "alternativas": {
+      "a": "O lucro segue o regime anual; despesas pessoais representam disponibilização ao sócio; ganho cambial do principal pode seguir ganho de capital na devolução.",
+      "b": "Os três fluxos seguem o lucro anual da controlada, pois pagamentos realizados pela empresa perdem a natureza pessoal ou patrimonial do sócio.",
+      "c": "A devolução de capital segue o regime de caixa das aplicações diretas, enquanto hotel e passagens reduzem o lucro antes de sua atribuição anual.",
+      "d": "As despesas pessoais ficam fora da tributação por serem pagas no exterior, e o principal recebe o mesmo custo fiscal do lucro já tributado."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-inv-36-q11",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Na transparência, a pessoa física informa ativos e obrigações como diretamente detidos, aloca o custo e mantém a opção irrevogável e irretratável durante a participação.</p><p>A alternativa A mantém o bloco e cria isenção. A alternativa B escolhe apenas itens favoráveis. A alternativa D transforma uma opção permanente em escolha anual e preserva a declaração opaca.</p><p>Regra de bolso: transparência desfaz o bloco fiscal e leva cada ativo, obrigação, custo e rendimento à pessoa física.</p>",
+     "enunciado": "<p>Helena controla entidade estrangeira que mantém ações, títulos e saldo bancário adquiridos em datas e moedas diferentes. A offshore também possui obrigação contratual registrada no balanço. Ela avalia a opção pela transparência fiscal para o IRPF e acredita que poderá alternar anualmente entre declarar a participação como um bloco e declarar os ativos individualmente, escolhendo o formato conforme o resultado. O assessor explica que a escolha muda a forma de informar bens, direitos, obrigações, custos e rendimentos enquanto a participação for mantida. O custo atual está registrado apenas na participação societária, sem divisão entre os itens da carteira. Helena também precisará alocar esse custo aos ativos subjacentes. Compare a estrutura opaca com a opção transparente e indique o efeito desta opção.</p>",
+     "alternativas": {
+      "a": "A entidade continua declarada como bloco, mas seus lucros deixam de seguir o balanço e passam a ser isentos até a distribuição ao sócio.",
+      "b": "A pessoa física declara apenas os ativos com rendimento, mantendo dívidas e custos na offshore para evitar mistura com o patrimônio pessoal.",
+      "c": "Os bens, direitos e obrigações passam a ser tratados como detidos diretamente, com alocação de custo e opção irrevogável enquanto durar a participação.",
+      "d": "A transparência pode ser revertida em cada DAA e serve somente para trocar o momento do imposto sem alterar a declaração dos ativos subjacentes."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-inv-36-q12",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A pessoa física residente apura e paga no ajuste anual; informe externo dá suporte, e a CBE do Banco Central permanece separada da DAA da Receita Federal.</p><p>A alternativa A transfere a apuração e elimina a DAA. A alternativa C usa prazo de outro regime e faz a CBE substituir patrimônio fiscal. A alternativa D trata obrigações diferentes como alternativas.</p><p>Regra de bolso: DAA apura e informa o imposto; CBE presta informação ao Banco Central quando o limite é alcançado.</p>",
+     "enunciado": "<p>Carlos vende aplicação financeira no exterior em agosto, recebe informe da corretora estrangeira e possui imposto retido no país de origem. A operação gerou rendimento realizado, e nenhum intermediário assumiu a obrigação de calcular o IRPF brasileiro. Seus ativos externos também alcançam o limite da CBE anual em 31 de dezembro. A corretora afirma que o informe substitui a apuração brasileira, e Carlos acredita que enviar a CBE ao Banco Central elimina a necessidade de registrar o ativo, o rendimento, a perda compensada e o imposto estrangeiro na DAA. Ele também planeja pagar o IRPF no mês seguinte à venda, como faria em certos ganhos de capital. Os documentos permitem reconstruir aquisição, câmbio, venda e retenção. Analise responsabilidades, prazo e declarações.</p>",
+     "alternativas": {
+      "a": "A corretora estrangeira calcula o IRPF brasileiro, e Carlos entrega apenas a CBE porque o ativo já foi informado ao Banco Central.",
+      "b": "Carlos apura como pessoa física, informa na DAA e paga no ajuste anual; a CBE é obrigação distinta e o informe estrangeiro apenas sustenta os cálculos.",
+      "c": "Carlos paga no mês seguinte à venda e usa a DAA apenas para confirmar o recolhimento, enquanto a CBE substitui a ficha patrimonial.",
+      "d": "Carlos escolhe entre DAA e CBE conforme o valor do imposto, pois ambas comunicam ao governo brasileiro o mesmo patrimônio e rendimento."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-36-q13",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. Os ativos são agregados: USD 1,05 milhão alcança o limite anual; USD 102 milhões na data-base de março alcança o trimestral; a documentação fica por dez anos.</p><p>A alternativa A fragmenta posições e usa média. A alternativa C faz uma declaração absorver a outra. A alternativa D ignora a data-base trimestral específica.</p><p>Regra de bolso: some os ativos em cada data-base e compare separadamente com USD 1 milhão e USD 100 milhões.</p>",
+     "enunciado": "<p>Uma família residente mantém USD 700.000 em aplicações diretas e participação em offshore avaliada em USD 350.000 na data-base de 31 de dezembro. Os extratos e a avaliação societária estão expressos na mesma moeda e pertencem aos membros considerados na obrigação informada. Em 31 de março do ano seguinte, os ativos externos totalizam USD 102 milhões após uma operação societária; em 30 de junho, retornam a USD 80 milhões. O responsável arquiva documentos de cada posição, mas considera apenas cada conta individual e pretende conservá-los por cinco anos. Ele pergunta quais declarações ao Banco Central são alcançadas pelos valores agregados e por quanto tempo a documentação indicada na aula deve permanecer guardada. Avalie os limites e indique a obrigação.</p>",
+     "alternativas": {
+      "a": "A CBE anual fica dispensada porque cada posição está abaixo de USD 1 milhão, e a trimestral considera a média das três datas-base.",
+      "b": "A CBE anual alcança USD 1,05 milhão em 31 de dezembro, a trimestral alcança USD 102 milhões em 31 de março e os documentos ficam por dez anos.",
+      "c": "Somente a CBE trimestral é exigida, pois o patamar de USD 100 milhões absorve a obrigação anual quando ocorre no exercício seguinte.",
+      "d": "Somente a CBE anual é exigida, pois a operação societária de março precisa permanecer até 31 de dezembro para entrar no patrimônio externo."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-inv-36-q14",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. O direto segue realização e recebimento; a controlada enquadrada tributa o lucro anual; a transparência trata ativos subjacentes como diretos e muda a escrituração fiscal.</p><p>A alternativa B tributa valorização não realizada e adia o regime anual. A alternativa C iguala fatos geradores diferentes. A alternativa D iguala transparência e opacidade e cria carnê-leão no investimento direto.</p><p>Regra de bolso: estrutura define quem possui o ativo, qual evento tributa e quais controles sustentam a declaração.</p>",
+     "enunciado": "<p>A empresária Lúcia quer investir no exterior e compara três estruturas para um patrimônio de longo prazo. Na primeira, deterá títulos diretamente. Na segunda, uma offshore controlada e enquadrada no regime anual manterá a carteira sem distribuir lucros. Na terceira, usará a mesma entidade com opção pela transparência fiscal. Um consultor diz que as três estruturas produzem fato gerador apenas quando Lúcia recebe dinheiro e que a alíquota de 15% torna custos societários, escrituração e governança irrelevantes. Lúcia pretende manter vários ativos e admite dificuldade para controlar câmbio, lucros já tributados e documentos de aquisição. As propostas apresentam custos de manutenção diferentes e exigem registros compatíveis com cada estrutura. Compare fato gerador, declaração e operação e indique a análise aplicável.</p>",
+     "alternativas": {
+      "a": "No direto, eventos realizados seguem caixa; na offshore anual, o balanço de 31 de dezembro atribui lucro; na transparente, ativos seguem tratamento direto, com custos e obrigações próprios.",
+      "b": "No direto e na transparente, a valorização de 31 de dezembro gera imposto; na offshore opaca, a tributação espera a distribuição ao sócio.",
+      "c": "Nas três estruturas, o recebimento pessoal cria o fato gerador, e a diferença fica restrita à entidade ou instituição que envia os informes, mantém a custódia e converte os valores.",
+      "d": "A offshore opaca e a transparente usam o mesmo balanço anual, enquanto o investimento direto segue carnê-leão mensal para cada rendimento."
+     },
+     "gabarito": "a"
+    }
+   ],
    "Previdência social e estimativa da necessidade de renda complementar": [
     {
      "id": "cpror-inv-37-q1",
@@ -19036,6 +19932,364 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "b": "Enviar a recomendação extensa demonstra proatividade, e a cliente técnica pode separar a urgência documental das condições do produto durante a leitura.",
       "c": "Escolher a opção de liquidez encerra a análise, porque o objetivo elimina as demais e torna custos, riscos e dúvida tributária aspectos secundários.",
       "d": "Esperar a cliente solicitar cada providência preserva autonomia, pois agenda, documento e encaminhamento antecipados poderiam pressionar a contratação."
+     },
+     "gabarito": "a"
+    }
+   ],
+   "Entrevista do cliente: objetivos de curto, médio e longo prazo": [
+    {
+     "id": "cpror-rel-18-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Curto, médio e longo prazo organizam a conversa, mas a decisão depende da data de uso, das etapas de pagamento e da flexibilidade da meta.</p><p>A alternativa A deixa uma categoria pessoal definir liquidez e risco. A alternativa B cria fronteiras universais que a aula rejeita. A alternativa C faz o produto redefinir a necessidade.</p><p>Regra de bolso: transforme o rótulo de prazo em datas e usos concretos antes de discutir investimentos.</p>",
+     "enunciado": "<p>Durante a entrevista, uma cliente chama de médio prazo qualquer objetivo situado entre dois e cinco anos. Explique como o profissional deve interpretar essa classificação.</p>",
+     "alternativas": {
+      "a": "Aplicar a faixa declarada a cada meta da cliente, pois a classificação pessoal define também a liquidez necessária e o risco aceitável.",
+      "b": "Substituir a classificação pessoal por limites padronizados, pois curto, médio e longo prazo possuem fronteiras universais de investimento.",
+      "c": "Usar a categoria para escolher primeiro o vencimento do produto e, depois, ajustar a data em que o recurso será utilizado.",
+      "d": "Tratar a categoria como organização didática e confirmar a data de uso, os pagamentos previstos e a flexibilidade de cada objetivo."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-18-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. A necessidade define o prazo do objetivo, enquanto vencimento e condições de resgate pertencem ao produto e precisam ser confrontados com a data de uso.</p><p>A alternativa A altera a necessidade para encaixar a aplicação. A alternativa C usa retorno para afastar a data de pagamento. A alternativa D ignora que negociação pode envolver prazo e custo de saída.</p><p>Regra de bolso: primeiro vem a data em que o dinheiro cumpre sua finalidade; depois se verifica se o produto cabe nela.</p>",
+     "enunciado": "<p>Um cliente precisará pagar uma despesa em oito meses e considera um produto com vencimento em três anos. Explique a distinção entre o prazo do objetivo e o prazo do produto.</p>",
+     "alternativas": {
+      "a": "O prazo do objetivo acompanha o vencimento escolhido, desde que o cliente aceite manter a aplicação durante os três anos.",
+      "b": "O objetivo vence em oito meses; o produto possui prazo próprio e precisa oferecer condições de saída compatíveis com essa necessidade.",
+      "c": "Os dois prazos podem ser tratados como três anos quando a rentabilidade esperada compensar a espera pela disponibilidade do recurso.",
+      "d": "A diferença entre os prazos desaparece quando o produto admite negociação, ainda que preço e tempo de saída permaneçam incertos."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-18-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. A entrevista precisa separar metas, levantar recursos já disponíveis, aportes, forma de pagamento, flexibilidade e prioridade, além de confirmar o entendimento com André.</p><p>A alternativa A usa o prazo distante para comandar a carteira antes de esclarecer a reserva. A alternativa B cria um horizonte médio que apaga datas distintas. A alternativa D faz uma subtração útil, mas encerra a coleta com dados relevantes em aberto.</p><p>Regra de bolso: cada meta recebe finalidade, valor, data, financiamento, flexibilidade e prioridade próprias.</p>",
+     "enunciado": "<p>A gerente Camila entrevista André, que possui R$ 84.000 e declara três desejos: trocar o telhado por R$ 16.000 em cinco meses, iniciar uma especialização estimada em R$ 28.000 daqui a dois anos e formar patrimônio para a aposentadoria. Ele consegue aportar R$ 1.200 por mês, porém ainda desconhece se o curso permite pagamento parcelado e se parte do saldo funciona como reserva para imprevistos. A obra possui data fixa por causa do período de chuvas, enquanto a especialização admite adiamento. André pede uma carteira única voltada à aposentadoria, alegando que o horizonte distante permitirá recuperar oscilações. Camila precisa organizar os objetivos antes de discutir produtos e devolver ao cliente um resumo para confirmação. Indique a condução da entrevista.</p>",
+     "alternativas": {
+      "a": "Usar a aposentadoria como horizonte da carteira, reservar os aportes para o telhado e tratar a especialização quando a forma de pagamento estiver definida.",
+      "b": "Calcular retorno para os R$ 84.000, escolher um horizonte médio entre as três metas e confirmar depois quais retiradas André pretende realizar.",
+      "c": "Separar finalidade, valor e data de cada meta, esclarecer reserva e parcelamento, registrar aportes e flexibilidade e confirmar a prioridade entre elas.",
+      "d": "Destinar R$ 44.000 ao telhado e ao curso, aplicar o saldo para aposentadoria e considerar encerrada a entrevista porque os valores principais já foram informados."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-18-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Recursos comprometidos precisam ser separados e o saldo de R$ 50.000 existe uma vez; Renata deve decidir se o prioriza ou divide, considerando também a possível queda de renda.</p><p>A alternativa A duplica o mesmo saldo em duas metas. A alternativa B trata aporte e horizonte distante como solução automática. A alternativa D transforma flexibilidade de data em autorização para mudar a finalidade do recurso.</p><p>Regra de bolso: dinheiro contado em uma meta só pode aparecer em outra depois de uma escolha explícita de prioridade ou divisão.</p>",
+     "enunciado": "<p>Renata leva ao assessor uma planilha com R$ 110.000 disponíveis. Ela reservará R$ 22.000 para uma cirurgia programada em quatro meses e estima R$ 38.000 para a entrada de um imóvel em dezoito meses. Os R$ 50.000 restantes aparecem em duas linhas: aposentadoria e abertura de um negócio, pois Renata acredita que o mesmo saldo pode sustentar as duas metas até decidir qual seguirá. Sua renda permite aportar R$ 1.500 por mês, mas cairia se ela abrisse a empresa. A cirurgia possui data fixa; o imóvel pode esperar seis meses. O negócio exigiria desembolso único, enquanto a aposentadoria receberia contribuições mensais. O assessor precisa identificar a disponibilidade real dos recursos e confirmar escolhas em caso de conflito. Analise a planilha e indique a próxima etapa.</p>",
+     "alternativas": {
+      "a": "Manter os R$ 50.000 nas duas linhas preserva opções, e os aportes futuros poderão ser divididos depois que Renata decidir entre aposentadoria e negócio.",
+      "b": "Somar os R$ 1.500 mensais ao saldo permite financiar as duas metas, desde que a carteira use o prazo da aposentadoria para absorver oscilações.",
+      "c": "Registrar R$ 22.000 e R$ 38.000 como comprometidos, tratar R$ 50.000 como um único saldo e pedir que Renata priorize ou divida esse recurso entre as duas finalidades.",
+      "d": "Usar a flexibilidade do imóvel para direcionar seus R$ 38.000 ao negócio, mantendo cirurgia e aposentadoria como metas com recursos exclusivos."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-18-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Esses campos transformam uma intenção ampla em objetivo com finalidade, valor, prazo, financiamento, prioridade e flexibilidade, incluindo possíveis saques em etapas.</p><p>A alternativa B começa pelo produto e pela rentabilidade. A alternativa C posterga valor e calendário, que são decisivos. A alternativa D permite que a solução escolhida determine a necessidade da família.</p><p>Regra de bolso: um objetivo útil informa o que será feito, quanto custa, quando ocorre, de onde vem o dinheiro e o que pode mudar.</p>",
+     "enunciado": "<p>Na primeira conversa, o consultor Paulo ouve de Luciana que ela deseja “investir para os filhos” e busca boa rentabilidade. Ela possui R$ 42.000, faz depósitos irregulares e imagina utilizar parte do dinheiro para educação, mas ainda desconhece o valor, a data e se haverá pagamentos em etapas. Também menciona uma possível mudança de cidade, que poderia consumir parte do saldo. Paulo dispõe de produtos com diferentes vencimentos e pensa em apresentar uma comparação, porém percebe que a intenção ainda permite várias interpretações. Ele quer transformar o desejo em objetivo utilizável sem induzir Luciana a escolher a solução disponível. Indique o conjunto de informações que deve orientar a continuação da entrevista.</p>",
+     "alternativas": {
+      "a": "Finalidade e itens incluídos, valor estimado, calendário de uso, saldo reservado, aportes viáveis, prioridade e flexibilidade de data e valor.",
+      "b": "Rentabilidade desejada, produto preferido, vencimento aceito e parcela do saldo que Luciana admite manter aplicada caso a mudança ocorra.",
+      "c": "Idade dos filhos, experiência de Luciana e retorno histórico das alternativas, deixando valor e calendário para a etapa de contratação.",
+      "d": "Valor atual e frequência dos depósitos, pois a finalidade ampla permite que prazo e prioridade sejam definidos pela solução financeira escolhida."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-18-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. O profissional acolhe o pedido, mas precisa converter possibilidades em objetivos com uso, prazo, valor, consequência e prioridade antes de discutir a solução.</p><p>A alternativa A transforma taxa em objetivo e mantém as metas vagas. A alternativa B presume prioridade que Sérgio ainda precisa definir. A alternativa C usa o produto para inferir necessidades que deveriam vir da entrevista.</p><p>Regra de bolso: desejo de retorno não substitui a pergunta central, que função o dinheiro precisa cumprir e quando.</p>",
+     "enunciado": "<p>Durante uma videochamada, Sérgio insiste que sua única meta é “obter 15% ao ano” e pede ao assessor que pule perguntas pessoais. Ele possui R$ 70.000 e comenta apenas que talvez use o dinheiro para quitar uma parcela imobiliária, ajudar a mãe ou viajar. As três possibilidades podem ocorrer em datas diferentes, e Sérgio admite que uma delas seria cancelada se a renda diminuísse. O assessor explica que a taxa desejada, isoladamente, deixa sem resposta quando o saldo será usado e quais consequências surgem se faltar dinheiro. Sérgio reage dizendo que uma carteira rentável resolverá qualquer escolha futura. O profissional precisa reenquadrar a conversa com respeito e sem moldar as metas aos produtos da instituição. Avalie a situação e indique a resposta aplicável.</p>",
+     "alternativas": {
+      "a": "Registrar 15% ao ano como objetivo e selecionar aplicações com diferentes vencimentos, pois a variedade permite atender às três possibilidades sem detalhá-las.",
+      "b": "Tratar a parcela imobiliária como prioridade presumida e distribuir o restante entre ajuda familiar e viagem, reduzindo a necessidade de perguntas pessoais.",
+      "c": "Apresentar cenários de rentabilidade primeiro e pedir que Sérgio escolha um produto, usando a preferência revelada para inferir prazo e flexibilidade.",
+      "d": "Explicar que rentabilidade é atributo da solução, pedir finalidade, valor, data, consequência e flexibilidade de cada possibilidade e confirmar prioridades."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-18-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. O novo calendário e a queda dos aportes alteram o objetivo e sua liquidez; isso precisa ser registrado e confirmado sem presumir mudança emocional diante do risco.</p><p>A alternativa A troca o produto sem atualizar premissas. A alternativa C confunde necessidade financeira com tolerância. A alternativa D mantém um prazo que deixou de representar o uso do dinheiro.</p><p>Regra de bolso: mudança de data, valor ou renda atualiza o objetivo; mudança de perfil exige evidência própria.</p>",
+     "enunciado": "<p>Há três meses, Beatriz informou que pagaria R$ 30.000 por uma pós-graduação em dois anos e aceitaria oscilações moderadas nesse recurso. Agora, recebe uma bolsa parcial condicionada ao pagamento de R$ 12.000 em seis semanas. Ao mesmo tempo, uma redução temporária de renda limita seus aportes e ela pede que o gerente apenas troque o produto, mantendo o restante da ficha como estava. O gerente sabe que a oportunidade mudou a data, o valor, os aportes e a necessidade imediata de disponibilidade, mas ainda carece de evidência de alteração na tolerância emocional de Beatriz. Ele precisa registrar a nova situação e evitar atribuir cada ajuste de estratégia a uma mudança de perfil. Analise o caso e indique a atualização necessária.</p>",
+     "alternativas": {
+      "a": "Alterar apenas o produto para um vencimento curto preserva a ficha, pois a redução do valor compensa o encurtamento do prazo e a queda dos aportes.",
+      "b": "Atualizar valor, data, prioridade, aportes e liquidez da meta, confirmar os dados com Beatriz e distinguir essas mudanças de eventual alteração na aceitação de risco.",
+      "c": "Registrar um perfil conservador para os R$ 12.000, pois qualquer antecipação de uso demonstra redução da tolerância da cliente a oscilações.",
+      "d": "Manter o horizonte de dois anos no cadastro e anotar a bolsa como exceção operacional, evitando que um evento temporário altere o planejamento original."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-18-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. Dos R$ 146.000, R$ 26.000, R$ 54.000 e R$ 30.000 já cumprem funções distintas, restando R$ 36.000 para iniciar a meta distante; aportes e flexibilidade também devem ficar registrados.</p><p>A alternativa B conta a reserva como aposentadoria apesar de sua finalidade. A alternativa C transforma aportes incertos em substituição da proteção atual. A alternativa D muda a destinação do saldo sem confirmar essa prioridade com o casal.</p><p>Regra de bolso: disponibilidade resulta do patrimônio menos cada recurso comprometido, inclusive valores reservados para proteção financeira.</p>",
+     "enunciado": "<p>O casal Nara e Vicente apresenta R$ 146.000 em aplicações e planeja pagar R$ 26.000 por uma mudança em quatro meses e R$ 54.000 pela entrada de um apartamento em quatorze meses. Também deseja iniciar uma reserva para aposentadoria. A planilha registra os R$ 146.000 como patrimônio disponível, mas o casal revela que R$ 30.000 representam sua única proteção para perda de renda. Nara aceita adiar a compra por seis meses; Vicente considera a mudança inadiável. A família consegue aportar R$ 2.000 por mês enquanto ambos estiverem empregados. Um assessor sugere considerar R$ 66.000 disponíveis para aposentadoria após subtrair apenas mudança e entrada, mantendo a reserva na mesma estratégia de longo prazo. Examine os recursos e indique a leitura coerente com a entrevista.</p>",
+     "alternativas": {
+      "a": "Separar R$ 26.000, R$ 54.000 e R$ 30.000 conforme suas funções; tratar R$ 36.000 como saldo inicial da aposentadoria e registrar aportes e flexibilidade da compra.",
+      "b": "Destinar R$ 66.000 à aposentadoria é coerente, pois a reserva permanece contabilizada no patrimônio e pode acompanhar o horizonte distante até ocorrer emergência.",
+      "c": "Reservar R$ 80.000 para mudança e imóvel e aplicar R$ 66.000 para aposentadoria, usando os aportes mensais como substitutos progressivos da proteção de renda.",
+      "d": "Usar R$ 36.000 para antecipar a entrada reduz o valor futuro da compra, enquanto a aposentadoria pode começar depois que a renda familiar aumentar."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-18-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. Um objetivo com saques em etapas possui várias necessidades de liquidez; cada uma deve ser esclarecida e comparada com as condições reais de saída do produto.</p><p>A alternativa A deixa o vencimento final apagar retiradas anteriores. A alternativa B escolhe produtos antes de confirmar flexibilidade e financiamento. A alternativa D elimina compromissos informados com base em receita futura ainda incerta.</p><p>Regra de bolso: compare o produto com cada data de uso, não apenas com o encerramento do projeto.</p>",
+     "enunciado": "<p>A empresária Joana pretende retirar R$ 20.000 em nove meses, R$ 35.000 seis meses depois e R$ 45.000 ao final do segundo ano para ampliar seu consultório. O banco oferece uma aplicação com vencimento em dois anos e possibilidade de venda antes da data, sujeita a preço e tempo de negociação. Joana afirma que o vencimento coincide com a última retirada e, por isso, considera o produto compatível com o projeto inteiro. O gerente observa que a primeira e a segunda saídas ocorrem antes, mas também sabe que uma divisão automática em três aplicações ignoraria a flexibilidade das despesas e os aportes previstos. Ele precisa concluir a entrevista antes de avaliar a solução. Analise a afirmação de Joana e indique a providência aplicável.</p>",
+     "alternativas": {
+      "a": "Aceitar o vencimento de dois anos como prazo do projeto, pois a última retirada encerra a ampliação e as vendas anteriores cobrem as parcelas intermediárias.",
+      "b": "Dividir desde já os valores em três produtos com vencimentos próximos das retiradas, pois o calendário informado torna dispensável investigar flexibilidade e aportes.",
+      "c": "Registrar cada retirada, investigar flexibilidade, aportes e custo da falta de recursos e confrontar cada etapa com resgate, negociação e vencimento do produto.",
+      "d": "Considerar apenas a retirada de nove meses como objetivo e revisar as demais depois, pois pagamentos posteriores podem ser financiados pela atividade empresarial."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-18-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. A dependência familiar, a nova data, o bônus e a possível redução dos aportes alteram recursos e prioridades; a entrevista deve esclarecer e confirmar esses elementos antes da carteira.</p><p>A alternativa A presume que aportes cobrirão uma despesa desconhecida. A alternativa C redistribui recursos sem decisão do cliente. A alternativa D ignora que o auxílio já pode ter mudado liquidez e financiamento das metas.</p><p>Regra de bolso: evento de vida pede nova entrevista quando muda datas, recursos, aportes, liquidez ou prioridade.</p>",
+     "enunciado": "<p>Eduardo havia definido duas metas: R$ 48.000 para um intercâmbio da filha em dez meses e aposentadoria em doze anos. Ele separou R$ 48.000 para a primeira e R$ 120.000 para a segunda. Após uma mudança familiar, a viagem foi adiada por um ano, seu pai passou a depender de auxílio mensal e Eduardo recebeu um bônus de R$ 24.000. Ele pede à assessora que some o bônus à aposentadoria e mantenha a carteira, pois o intercâmbio continua previsto. A assessora ainda desconhece o custo e a duração do auxílio, a flexibilidade da nova data e o efeito da despesa sobre aportes futuros. O bônus permanece em conta sem destinação registrada. Eduardo demonstra pressa e diz que alterações frequentes prejudicam a disciplina. Avalie os fatos e indique como conduzir a revisão.</p>",
+     "alternativas": {
+      "a": "Manter as duas parcelas e aplicar o bônus para aposentadoria preserva disciplina, enquanto o auxílio pode ser coberto pelos aportes previstos até que seu custo fique estável.",
+      "b": "Atualizar calendário, auxílio, aportes e flexibilidade, verificar se o bônus recebeu outra finalidade, reorganizar prioridades e confirmar o resumo antes de alterar a carteira.",
+      "c": "Transferir parte dos R$ 48.000 ao auxílio e o bônus ao intercâmbio conserva o valor das metas, dispensando uma nova ordem de prioridade entre elas.",
+      "d": "Adiar qualquer revisão por um ano respeita o novo prazo do intercâmbio, pois a carteira de aposentadoria mantém horizonte e finalidade sem alteração declarada."
+     },
+     "gabarito": "b"
+    }
+   ],
+   "Levantamento financeiro: liquidez, experiência, renda e dependentes": [
+    {
+     "id": "cpror-rel-19-q1",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Reserva disponível exige valor acessível e prazo de uso compatível, e sua suficiência depende das despesas, da estabilidade da renda, dos dependentes e dos riscos pessoais.</p><p>A alternativa A confunde patrimônio com liquidez. A alternativa B usa retorno para medir proteção imediata. A alternativa D transforma uma referência em regra universal.</p><p>Regra de bolso: patrimônio informa quanto existe; reserva informa quanto pode ser usado quando o imprevisto acontece.</p>",
+     "enunciado": "<p>Uma cliente declara possuir reserva de emergência formada por um imóvel, limite de crédito e uma aplicação com carência. Identifique o dado que o levantamento ainda precisa esclarecer.</p>",
+     "alternativas": {
+      "a": "O valor de mercado do patrimônio, pois a soma dos bens e do crédito determina a proteção disponível para imprevistos.",
+      "b": "A rentabilidade esperada da aplicação, pois o retorno projetado indica se a reserva conseguirá cobrir despesas essenciais.",
+      "c": "O valor efetivamente acessível e o tempo para utilizá-lo, confrontados com despesas, renda, dependentes e riscos pessoais.",
+      "d": "A quantidade de salários representada pelos ativos, pois essa proporção estabelece a suficiência da reserva para qualquer perfil familiar."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-19-q2",
+     "tipo": "multipla",
+     "nivel": 1,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. Conhecimento é investigado pela experiência efetiva com produtos e operações e pela capacidade de explicar riscos, perdas e condições de saída.</p><p>A alternativa B deixa o diploma substituir familiaridade. A alternativa C generaliza uma experiência específica. A alternativa D transforma a coleta em prova técnica e despreza o comportamento real.</p><p>Regra de bolso: experiência é específica, contextual e demonstrada pelo que a pessoa fez e compreendeu.</p>",
+     "enunciado": "<p>Um engenheiro informa que já aplicou em produto pós-fixado e, por isso, considera conhecer derivativos e fundos com cotização. Explique como investigar sua experiência.</p>",
+     "alternativas": {
+      "a": "Perguntar produtos utilizados, frequência, prazo, valores, forma de decisão e compreensão sobre perdas e condições de saída em cada experiência.",
+      "b": "Usar a formação acadêmica como evidência de compreensão financeira e confirmar apenas se ele leu os documentos dos novos produtos.",
+      "c": "Registrar a experiência com o produto pós-fixado como conhecimento geral, complementando a ficha com a tolerância declarada a oscilações.",
+      "d": "Aplicar um questionário de termos técnicos e dispensar o histórico de operações quando o cliente obtiver resultado suficiente na avaliação."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-19-q3",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa A está correta. A venda explica a origem do patrimônio, mas renda ativa exige apurar os ingressos líquidos e recorrentes da atividade atual, incluindo sazonalidade e despesas.</p><p>A alternativa B transforma evento patrimonial em renda mensal. A alternativa C usa cadastro antigo e ignora a atividade informada. A alternativa D conclui irregularidade apenas pela magnitude da transferência.</p><p>Regra de bolso: origem responde de onde veio o dinheiro; renda ativa responde como o cliente recebe hoje pelo trabalho ou atividade.</p>",
+     "enunciado": "<p>A gerente Lívia recebe Marcelo, que transferiu R$ 310.000 para a conta e declarou renda mensal de R$ 28.000 no cadastro. Ele explica que o saldo veio da venda de uma sala comercial herdada e que atualmente trabalha como fotógrafo, com recebimentos sazonais. A sala estava quitada e deixou de gerar despesas após a transferência. Parte do dinheiro será usada para comprar equipamentos e pagar tributos da venda. O movimento é compatível com o documento apresentado, mas difere do padrão anterior da conta. Marcelo pede que o valor transferido seja tratado como prova de renda recorrente e capacidade de aporte. Lívia precisa registrar a natureza de cada informação e seguir os procedimentos da instituição sem presumir irregularidade pelo valor. Indique a condução aplicável.</p>",
+     "alternativas": {
+      "a": "Registrar a venda como origem do saldo, levantar os compromissos ligados ao valor e apurar separadamente renda líquida, sazonalidade e despesas da atividade atual.",
+      "b": "Tratar os R$ 310.000 como renda do mês, descontar equipamentos e tributos e usar a diferença como referência de aporte recorrente do fotógrafo.",
+      "c": "Manter a renda cadastrada de R$ 28.000 como capacidade atual, pois a origem documentada do saldo dispensa esclarecer os recebimentos sazonais.",
+      "d": "Classificar a transferência elevada como sinal de irregularidade e suspender a coleta financeira até que Marcelo comprove renda mensal equivalente ao saldo e ao cadastro anterior."
+     },
+     "gabarito": "a"
+    },
+    {
+     "id": "cpror-rel-19-q4",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. A coleta precisa registrar renda por natureza e estabilidade, além de despesas, dependentes, dívidas, previdência e obrigações relevantes, mesmo quando variáveis.</p><p>A alternativa A apaga destinações por variarem. A alternativa B transforma bônus condicionado em renda recorrente antes da investigação. A alternativa C trata contribuição já destinada como dinheiro livre.</p><p>Regra de bolso: disponibilidade financeira nasce depois de mapear cada entrada e cada compromisso, inclusive os irregulares.</p>",
+     "enunciado": "<p>Durante a atualização cadastral, Juliana informa salário líquido de R$ 11.000, prestação habitacional, escola de dois filhos, contribuição previdenciária e gastos frequentes com medicamentos do pai. Ela chama apenas moradia e escola de compromissos, pois a previdência seria investimento e os medicamentos variam entre os meses. Os remédios custaram entre R$ 400 e R$ 1.100 nos últimos quatro meses. Também possui dívida com três parcelas restantes e recebe bônus anual condicionado ao desempenho da empresa, que deixou de ser pago no ano anterior. O assessor quer levantar quanto da renda já possui destinação sem tratar gastos variáveis ou obrigações familiares como inexistentes. Analise os dados e indique como organizar a coleta.</p>",
+     "alternativas": {
+      "a": "Considerar moradia, escola e dívida, deixando previdência, medicamentos e bônus fora da ficha porque seus valores ou datas apresentam variação e dificultam a projeção mensal.",
+      "b": "Registrar o salário e anualizar o bônus, comparando o total com moradia e escola antes de investigar outras destinações da renda.",
+      "c": "Somar previdência ao patrimônio investível, pois a contribuição aumenta os ativos e pode ser redirecionada para qualquer objetivo atual.",
+      "d": "Separar renda recorrente e eventual, despesas fixas e variáveis, dívida, previdência, dependentes e obrigação familiar, com valores e vencimentos."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-19-q5",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa B está correta. R$ 12.800 menos R$ 6.100, R$ 1.400 e R$ 700 resulta em R$ 4.600, mas faltam gastos variáveis, apoio à filha e a recorrência da renda.</p><p>A alternativa A chega a R$ 5.300 ao excluir a previdência já destinada. A alternativa C chega a R$ 5.400 ao retirar as prestações do cálculo. A alternativa D apenas repete o valor da reserva e confunde proteção com aporte.</p><p>Regra de bolso: sobra aritmética com dados incompletos é ponto de investigação, não promessa de aporte mensal.</p>",
+     "enunciado": "<p>O autônomo Caio recebeu R$ 12.800 líquidos no último mês. Informou R$ 6.100 de despesas essenciais, R$ 1.400 em prestações e R$ 700 de contribuição previdenciária. Ele também sustenta uma filha, possui gastos variáveis ainda sem média e afirma que os próximos recebimentos dependem de contratos em negociação. Nos seis meses anteriores, sua renda líquida oscilou entre R$ 7.600 e R$ 14.200. Sua reserva acessível é de R$ 7.000. Caio calcula que pode investir R$ 4.600 por mês e pede aplicação com baixa liquidez, pois aceita oscilações. A consultora precisa conferir a aritmética e interpretar o resultado à luz da sazonalidade, dos dependentes e dos dados ainda ausentes. Calcule a diferença entre os valores informados e indique seu significado.</p>",
+     "alternativas": {
+      "a": "A diferença é R$ 5.300 e representa aporte recorrente, pois a contribuição previdenciária compõe investimento e pode ser somada ao valor disponível.",
+      "b": "A diferença é R$ 4.600, mas constitui saldo parcial de um mês; gastos variáveis, dependência, sazonalidade e reserva impedem tratá-la como aporte garantido.",
+      "c": "A diferença é R$ 5.400 e mede a capacidade de risco, pois as prestações possuem vencimento definido e podem ficar fora da renda comprometida.",
+      "d": "A diferença é R$ 7.000 e coincide com a reserva acessível, de modo que esse valor pode funcionar como aporte enquanto os contratos são negociados."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-19-q6",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa C está correta. Apenas R$ 6.000 têm uso imediato; a necessidade de proteção ainda depende de renda variável, despesas essenciais, apoio familiar e liquidez dos demais ativos.</p><p>A alternativa A equipara patrimônio a reserva acessível. A alternativa B ignora a carência de oito meses. A alternativa D apaga os ativos em vez de classificá-los e investigar sua disponibilidade.</p><p>Regra de bolso: registre quanto está acessível hoje e compare com a proteção exigida pela vida financeira do cliente.</p>",
+     "enunciado": "<p>A corretora recebe a ficha de Amanda, profissional com renda baseada em comissões e responsável pelas despesas de uma avó. Ela declara reserva de R$ 96.000, composta por R$ 72.000 em um terreno, R$ 18.000 em aplicação com carência de oito meses e R$ 6.000 em conta com uso imediato. Suas despesas essenciais mensais são de R$ 4.200, sem incluir o apoio familiar variável. Nos últimos cinco meses, as comissões oscilaram e houve um mês sem recebimento. Amanda considera a reserva concluída porque o patrimônio supera vinte meses de despesas e deseja comprometer os R$ 6.000 em uma aplicação de longo prazo. A profissional precisa distinguir patrimônio, reserva acessível e proteção necessária antes de avaliar produtos. Analise a composição e indique o registro coerente.</p>",
+     "alternativas": {
+      "a": "Registrar R$ 96.000 como reserva, pois terreno e aplicação podem ser convertidos no futuro e o valor patrimonial supera as despesas declaradas.",
+      "b": "Registrar R$ 24.000 como reserva, somando conta e aplicação com carência, e usar o terreno como proteção adicional contra meses sem comissão.",
+      "c": "Registrar R$ 6.000 como valor acessível, levantar estabilidade das comissões, apoio familiar e tempo de saída dos ativos e apontar eventual lacuna de proteção.",
+      "d": "Registrar ausência de reserva porque Amanda pretende investir os R$ 6.000, desconsiderando terreno e aplicação até que seus valores estejam disponíveis para retirada imediata."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-19-q7",
+     "tipo": "multipla",
+     "nivel": 2,
+     "usar_em": [
+      "simulado",
+      "revisao"
+     ],
+     "comentario": "<p>A alternativa D está correta. Vontade de aceitar incerteza não cria capacidade financeira; aluguel, atrasos, renda variável e falta de reserva limitam o que Vinícius pode perder ou deixar indisponível.</p><p>A alternativa A usa ciência do risco para ignorar necessidades. A alternativa B escolhe uma divisão sem completar o levantamento. A alternativa C confunde consumo de informação com experiência e separa dados financeiros essenciais.</p><p>Regra de bolso: disposição responde quanto desconforto o cliente aceita; capacidade responde quanto sua vida financeira suporta.</p>",
+     "enunciado": "<p>Após assistir a vídeos sobre investimentos, Vinícius procura sua gerente e declara disposição para perder metade dos R$ 15.000 que recebeu como comissão. Ele deseja uma aplicação sujeita a oscilação e saída incerta. Durante a conversa, revela aluguel vencendo em quinze dias, ausência de reserva, duas prestações atrasadas e renda variável. A comissão é sua única entrada prevista para aquele mês. Vinícius insiste que a coragem diante de perdas comprova perfil suficiente e diz que aceitará por escrito os riscos. A gerente reconhece sua disposição emocional, mas precisa avaliar se uma perda ou indisponibilidade afetaria necessidades relevantes e se ele compreende o produto além dos vídeos. Avalie a situação e indique a conduta aplicável.</p>",
+     "alternativas": {
+      "a": "Aceitar a declaração escrita permite usar os R$ 15.000, pois disposição expressa transfere ao cliente a decisão sobre comprometer aluguel e prestações.",
+      "b": "Aplicar metade do valor equilibra entusiasmo e obrigações, mantendo outra metade para aluguel, dívidas e formação futura da reserva de emergência.",
+      "c": "Confirmar os vídeos assistidos e a tolerância a perdas basta para validar experiência, enquanto renda e dívidas pertencem ao diagnóstico posterior.",
+      "d": "Separar disposição de capacidade, levantar obrigações e proteção, investigar experiência efetiva e evitar comprometer recursos necessários no curto prazo."
+     },
+     "gabarito": "d"
+    },
+    {
+     "id": "cpror-rel-19-q8",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa B está correta. R$ 180.000 menos R$ 15.000 e R$ 65.000 resulta em R$ 100.000, saldo patrimonial que continua distinto da renda recorrente da atividade.</p><p>A alternativa A desconta apenas os tributos e ignora a reposição necessária. A alternativa C mistura a margem de R$ 11.000 com o compromisso patrimonial. A alternativa D soma essa margem ao saldo e chama evento de venda de renda mensal.</p><p>Regra de bolso: venda de bem altera o patrimônio; capacidade recorrente depende da renda líquida produzida pela atividade atual.</p>",
+     "enunciado": "<p>A dentista Helena recebe R$ 180.000 pela venda de um equipamento antigo e solicita que o banco registre esse valor como renda do mês. Ela precisa pagar R$ 15.000 de tributos ligados à venda e comprar outro equipamento por R$ 65.000 para manter a capacidade de atendimento. A clínica fatura R$ 32.000 por mês, porém consome R$ 21.000 em aluguel, equipe, materiais e demais custos antes das despesas pessoais. Nos seis meses anteriores, o faturamento variou entre R$ 27.000 e R$ 35.000. Helena possui uma reserva separada, apresenta o contrato da venda e o orçamento de reposição e pergunta se os R$ 180.000 demonstram capacidade recorrente de investir. Calcule o saldo após os compromissos informados e indique sua interpretação.</p>",
+     "alternativas": {
+      "a": "Restam R$ 165.000, pois a compra do novo equipamento é despesa da clínica e deve ser descontada do faturamento dos meses seguintes.",
+      "b": "Restam R$ 100.000 após tributos e equipamento; o valor é patrimonial disponível após esses compromissos, sem provar capacidade recorrente de aporte.",
+      "c": "Restam R$ 111.000, pois a margem mensal de R$ 11.000 pode ser abatida do custo do equipamento antes de calcular a disponibilidade da venda e a renda recorrente.",
+      "d": "Restam R$ 121.000, somando a margem de R$ 11.000 ao saldo da venda, e esse total representa renda investível do mês da clínica."
+     },
+     "gabarito": "b"
+    },
+    {
+     "id": "cpror-rel-19-q9",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa C está correta. Objetivos, situação financeira e conhecimento integram a análise, mas a exigência de formação acadêmica e experiência profissional citada na aula não se aplica à pessoa jurídica.</p><p>A alternativa A transfere requisitos da pessoa natural e deixa qualificação substituir experiência real. A alternativa B exclui a situação financeira. A alternativa D generaliza experiência e posterga compreensão da saída.</p><p>Regra de bolso: para pessoa jurídica, investigue decisão, objetivos, finanças e conhecimento, respeitando o recorte próprio dos dados pessoais.</p>",
+     "enunciado": "<p>Uma empresa familiar abre conta para investir o caixa temporariamente disponível. O representante informa objetivo de preservar recursos para a folha, posição financeira, experiência anterior com aplicações bancárias e compreensão limitada de resgates sujeitos à cotização. O formulário usado pelo atendente exige que ele informe também sua formação acadêmica e experiência profissional como se esses dados pessoais comprovassem o conhecimento da pessoa jurídica. O diretor financeiro questiona a pertinência dessas perguntas, mas aceita explicar como as decisões da empresa são tomadas e quais produtos ela utilizou. Com base no recorte da Resolução CVM 30 apresentado na aula, avalie a coleta e indique o ajuste aplicável.</p>",
+     "alternativas": {
+      "a": "Manter formação e experiência do representante como requisitos da pessoa jurídica e dispensar o histórico de aplicações quando ele possuir qualificação financeira.",
+      "b": "Retirar a situação financeira da análise, pois o caixa pertence à empresa e a finalidade informada para a folha já define a disponibilidade dos recursos.",
+      "c": "Levantar objetivos, situação financeira e conhecimento da pessoa jurídica, sem aplicar a ela a exigência de formação acadêmica e experiência profissional.",
+      "d": "Usar a experiência bancária anterior como conhecimento suficiente, pois cotização é condição operacional que pode ser explicada depois da escolha do fundo."
+     },
+     "gabarito": "c"
+    },
+    {
+     "id": "cpror-rel-19-q10",
+     "tipo": "multipla",
+     "nivel": 3,
+     "usar_em": [
+      "simulado"
+     ],
+     "comentario": "<p>A alternativa A está correta. O caso mantém em aberto a função do saldo, a renda líquida, os compromissos, a reserva necessária, a experiência efetiva e a capacidade de suportar perdas ou indisponibilidade.</p><p>A alternativa B usa prazo e vontade antes de completar a coleta. A alternativa C calcula sobre renda bruta incompleta e presume proteção dos dependentes. A alternativa D generaliza experiência e ignora dados financeiros decisivos.</p><p>Regra de bolso: levantamento consistente conecta origem, renda, compromissos, liquidez, experiência e capacidade antes da indicação.</p>",
+     "enunciado": "<p>A consultora Marina atende Roberto, que recebeu R$ 240.000 pela venda de um imóvel e pretende aplicar o valor por cinco anos. Ele declara renda bruta de R$ 18.000 como prestador de serviços, mas ainda pagará tributos e despesas da atividade. Sustenta dois familiares, contribui para previdência, possui financiamento e mantém R$ 9.000 disponíveis para emergências. Roberto já investiu em produto pós-fixado e afirma aceitar risco elevado, embora descreva como garantida a recuperação de qualquer perda no prazo. Parte do saldo da venda poderá financiar uma mudança em oito meses, com data já reservada. Ele pede contratação imediata para aproveitar uma oferta. Analise o conjunto de informações e indique a próxima condução.</p>",
+     "alternativas": {
+      "a": "Detalhar o uso do saldo, apurar renda líquida e compromissos, comparar reserva e proteção, investigar experiência e separar capacidade financeira de disposição para risco.",
+      "b": "Usar o horizonte de cinco anos e a aceitação declarada para indicar a oferta, reservando R$ 9.000 e registrando a mudança como possível resgate antecipado sujeito às condições do produto.",
+      "c": "Descontar financiamento e previdência da renda bruta, tratar a diferença como aporte e considerar o patrimônio da venda suficiente para os dependentes.",
+      "d": "Investigar apenas o valor da mudança e o vencimento da oferta, pois origem documentada, renda elevada e experiência pós-fixada resolvem os demais pontos."
      },
      "gabarito": "a"
     }
