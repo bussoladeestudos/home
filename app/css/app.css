@@ -1333,6 +1333,22 @@ body.aguardando-auth > *:not(#loginScreen) { visibility:hidden !important; point
 @keyframes syncPulse { 0%,100%{opacity:.45} 50%{opacity:1} }
 .sync-dot.sync { animation:syncPulse 1s ease-in-out infinite; }
 .sync-dot.err { color:#F2B8AC; }
+/* Aviso de falha na nuvem (21/09). Ambar, e nao vermelho: o aluno nao fez
+   nada de errado e nada foi perdido ainda. A cor pede atencao, nao panico.
+   Fica no topo do conteudo e nao cobre nada, porque ele precisa conseguir
+   continuar estudando neste aparelho, que e justamente o recomendado. */
+.sync-aviso { display:flex; align-items:center; gap:1rem; margin:0 0 1rem; padding:.85rem 1.1rem; background:var(--yellow-pale); border:1px solid var(--yellow-mid); border-left:4px solid var(--yellow-viv); border-radius:var(--radius-md); color:var(--gray-800); }
+.sync-aviso[hidden] { display:none; }
+.sync-aviso-txt { flex:1; min-width:0; }
+.sync-aviso-txt strong { display:block; font-family:'Bricolage Grotesque',sans-serif; font-size:.95rem; color:var(--gray-800); }
+.sync-aviso-txt p { margin:.25rem 0 0; font-size:.82rem; line-height:1.5; color:var(--gray-700); }
+.sync-aviso-motivo { font-weight:600; color:var(--yellow) !important; }
+.sync-aviso-acoes { display:flex; gap:.5rem; flex-shrink:0; }
+.sync-aviso-btn { min-height:40px; padding:8px 16px; border:none; border-radius:var(--radius-sm); background:var(--navy); color:var(--white); font-family:'Bricolage Grotesque',sans-serif; font-size:.82rem; font-weight:700; cursor:pointer; }
+.sync-aviso-btn:hover { background:var(--green); }
+.sync-aviso-fechar { min-height:40px; padding:8px 14px; border:1.5px solid var(--yellow-mid); border-radius:var(--radius-sm); background:transparent; color:var(--gray-700); font-family:inherit; font-size:.8rem; font-weight:600; cursor:pointer; }
+.sync-aviso :is(button):focus-visible { outline:3px solid var(--yellow-viv); outline-offset:2px; }
+@media(max-width:600px){ .sync-aviso { flex-direction:column; align-items:stretch; gap:.7rem; } .sync-aviso-acoes button { flex:1; } }
 
 /* ════════════════════════════════════════════════════════════════
    RESPONSIVIDADE MOBILE — bloco consolidado (≤768px)
