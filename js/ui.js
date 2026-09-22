@@ -4,7 +4,7 @@
 /* Preco: PRICE e o que o aluno paga hoje, PRICE_DE e o valor cheio que fica
    riscado ao lado. Os dois saem daqui e entram no HTML por [data-price] e
    [data-price-de], entao trocar de promocao e mexer em uma linha so. */
-const PRICE='R$ 29,90', PRICE_DE='R$ 299,90', CHECKOUT='https://pay.hotmart.com/N106305634J';
+const PRICE='R$ 49,90', PRICE_DE='R$ 199,90', CHECKOUT='https://pay.hotmart.com/N106305634J';
 const certs=window.CERTIFICACOES_DATA||[];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const clean=s=>String(s||'').replace(/\s*—\s*/g,': ');
