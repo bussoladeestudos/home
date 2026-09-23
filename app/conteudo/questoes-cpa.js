@@ -3786,11 +3786,11 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "A identificação é da CVM e garante mérito, mas o suitability continua obrigatório.",
       "b": "A identificação é da Anbima e permite dispensar suitability quando o cliente prefere sustentabilidade.",
       "c": "A identificação garante impacto socioambiental, mas não garante rentabilidade superior.",
-      "d": "A regra é autorregulação da Anbima, não é selo de mérito e não elimina o suitability."
+      "d": "A identificação IS é autorregulação da Anbima, não é selo de mérito e não elimina o suitability."
      },
      "gabarito": "d",
      "feedback": {
-      "a": "A regra de identificação apresentada é de autorregulação da Anbima e não representa avaliação de mérito.",
+      "a": "A identificação IS é de autorregulação da Anbima e não representa avaliação de mérito da CVM.",
       "b": "A preferência por sustentabilidade não substitui a análise de classe, risco, liquidez e perfil do cliente.",
       "c": "A identificação atesta enquadramento metodológico e não constitui garantia de impacto."
      }
@@ -3802,7 +3802,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "usar_em": [
       "simulado"
      ],
-     "comentario": "<p>A alternativa B está correta. A identificação IS é privativa do fundo que possui a sustentabilidade como objetivo declarado no regulamento e cumpre os requisitos de coerência, metodologia e monitoramento.</p><p>A A transforma obrigações acessórias em substitutas do requisito principal. A C volta a confundir técnica de gestão com objetivo do produto. A D relaciona o uso da identificação a rentabilidade e à CVM, embora a regra seja de autorregulação da Anbima.</p><p>Regra de bolso: quem só integra ASG pode dizer que integra; não pode se chamar IS.</p>",
+     "comentario": "<p>A alternativa B está correta. A identificação IS é privativa do fundo que possui a sustentabilidade como objetivo declarado no regulamento e cumpre os requisitos de coerência, metodologia e monitoramento.</p><p>A A transforma obrigações acessórias em substitutas do requisito principal. A C volta a confundir técnica de gestão com objetivo do produto. A D relaciona o uso da identificação a rentabilidade e à CVM, embora a identificação IS seja de autorregulação da Anbima.</p><p>Regra de bolso: quem só integra ASG pode dizer que integra; não pode se chamar IS.</p>",
      "enunciado": "<p>Um fundo que apenas integra questões ASG deseja usar a sigla IS no nome porque mantém metodologia documentada e divulga relatórios periódicos. Sua carteira, entretanto, tem objetivo financeiro comum e a sustentabilidade não aparece como propósito no regulamento. A utilização da identificação é:</p>",
      "alternativas": {
       "a": "Permitida, porque metodologia e divulgação substituem a necessidade de objetivo sustentável.",
@@ -5682,7 +5682,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "simulado",
       "revisao"
      ],
-     "comentario": "<p>A alternativa B está correta. O produto não possui cobrança de taxa de administração para ninguém, mas a isenção de Imposto de Renda e IOF é exclusiva para investidores classificados como pessoa física (e entidades sem fins lucrativos). A pessoa jurídica comum, que visa lucro, paga o imposto normalmente.</p><p>A alternativa A cai na pegadinha da Anbima de generalizar o benefício, tratando a isenção como algo do papel e não de quem investe. A C erra ao manter isenção de IOF para a empresa. A D inventa um formato de cobrança de imposto baseado no ganho acima da inflação, o que não ocorre na caderneta.</p>",
+     "comentario": "<p>A alternativa B está correta. O produto não possui cobrança de taxa de administração para ninguém, mas a isenção de Imposto de Renda alcança a pessoa física. O IOF não incide sobre a caderneta para nenhum investidor, porque ela é conta de depósito, e não aplicação resgatada em título. A pessoa jurídica com fins lucrativos paga o Imposto de Renda normalmente.</p><p>A alternativa A cai na pegadinha da Anbima de generalizar o benefício, tratando a isenção como algo do papel e não de quem investe. A C acerta que a empresa não paga IOF, mas erra ao transformar o Imposto de Renda em cobrança anual: os rendimentos entram na apuração da empresa como qualquer receita financeira. A D inventa um formato de cobrança de imposto baseado no ganho acima da inflação, o que não ocorre na caderneta.</p>",
      "enunciado": "<p>Você atende dois clientes que desejam abrir contas de poupança. O primeiro é uma pessoa física assalariada e o segundo é o dono de uma padaria, que pretende investir pelo CNPJ da sua empresa (com fins lucrativos). Ao explicar os custos e a tributação da caderneta de poupança para eles, você afirma que:</p>",
      "alternativas": {
       "a": "Ambos os clientes estão isentos do Imposto de Renda, pois a isenção é uma característica do produto.",
@@ -5693,7 +5693,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "gabarito": "b",
      "feedback": {
       "a": "A isenção não é do produto em si, mas atrelada ao perfil do investidor, beneficiando a pessoa física.",
-      "c": "A pessoa jurídica com fins lucrativos não possui o benefício tributário na poupança.",
+      "c": "O IOF realmente não alcança a poupança de ninguém; o erro está em descrever o Imposto de Renda da empresa como uma cobrança anual à parte.",
       "d": "A tributação não é calculada com base no ganho real contra a inflação, e a PF é sempre isenta."
      }
     },
@@ -6030,7 +6030,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "simulado",
       "revisao"
      ],
-     "comentario": "<p>A alternativa C está correta. A lista do art. 32 do Decreto 6.306 blinda expressamente com alíquota zero de IOF as operações de renda variável realizadas em bolsa, bem como os fundos de ações e alguns ativos securitizados.</p><p>A alternativa A relata um erro sutil, pois a LCI escapa do IOF na prática devido ao fato de sua carência impedir resgates curtos (seis meses), e não por isenção explícita no texto da lei de IOF. A B inverte tudo e taxa com o IOF os fundos de ações listados com alíquota zero. A D traz a distratora de estender os benefícios das debêntures incentivadas para a as de infraestrutura.</p>",
+     "comentario": "<p>A alternativa C está correta. A lista do art. 32 do Decreto 6.306 blinda expressamente com alíquota zero de IOF as operações de renda variável realizadas em bolsa, bem como os fundos de ações e alguns ativos securitizados.</p><p>A alternativa A relata um erro sutil, pois a LCI escapa do IOF na prática porque o prazo mínimo de vencimento de seis meses impede resgates curtos, e não por isenção explícita no texto da lei do IOF. A B inverte tudo e taxa com o IOF os fundos de ações listados com alíquota zero. A D estende à debênture de infraestrutura a isenção de Imposto de Renda que é da debênture incentivada da Lei 12.431/2011; o IOF de alíquota zero, esse sim, vale para as duas.</p>",
      "enunciado": "<p>O mapa das isenções tributárias atende a lógicas diferentes. Ao comparar as regras aplicadas pelo Decreto 6.306/2007 (IOF) e a norma de isenção fiscal do Imposto de Renda (IR), verifica-se que uma isenção não garante automaticamente a outra. Nesse contexto:</p>",
      "alternativas": {
       "a": "A Letra de Crédito Imobiliário (LCI) é isenta tanto de IR quanto de IOF por força de decreto expresso, igualando as regras da Receita Federal.",
@@ -6040,9 +6040,9 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      },
      "gabarito": "c",
      "feedback": {
-      "a": "A LCI não possui isenção expressa na lista da lei do IOF, ela escapa da tributação devido à existência do prazo de carência longo.",
+      "a": "A LCI não possui isenção expressa na lista da lei do IOF; ela escapa da tributação porque o prazo mínimo de vencimento, hoje de seis meses, impede o resgate curto.",
       "b": "A tributação está invertida: fundos de ações possuem alíquota zero de IOF expressa na lei, mas pagam Imposto de Renda no lucro de cota.",
-      "d": "As debêntures de infraestrutura cobram IR normalmente da pessoa física e concedem o benefício apenas para as entidades emissoras da dívida."
+      "d": "O IOF dessas debêntures é de alíquota zero, mas o Imposto de Renda continua: a pessoa física paga pela tabela regressiva, e o benefício da Lei 14.801/2024 fica com o emissor."
      }
     },
     {
@@ -6365,9 +6365,9 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      },
      "gabarito": "b",
      "feedback": {
-      "a": "O limite legal impede que as ações preferenciais assumam 100% da emissão, protegendo o arranjo e a distribuição de votos.",
+      "a": "O limite legal impede que as preferenciais sem voto ou com voto restrito assumam 100% da emissão, protegendo a distribuição de votos.",
       "c": "As Units são apenas pacotes comerciais compostos de ações e não alteram o teto legal de emissão de preferenciais sem voto.",
-      "d": "A lei permite que a emissão de preferenciais alcance até a metade (50%) do capital total, e não apenas um terço."
+      "d": "A lei permite que as preferenciais sem voto ou com voto restrito alcancem até a metade do total das ações emitidas, e não apenas um terço."
      }
     },
     {
@@ -6452,13 +6452,13 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "Apresenta prejuízo contábil ao longo de três trimestres consecutivos, mas perderá o voto imediatamente assim que o caixa voltar a dar lucro.",
       "b": "Deixa de repassar os dividendos fixos ou mínimos pelo prazo fixado no estatuto, cujo teto da lei é limitado a três exercícios consecutivos.",
       "c": "Deixa de pagar a modalidade de dividendo ordinário durante o prazo exato de um exercício fiscal e financeiro completo.",
-      "d": "Emite novas ações no mercado primário que venham a violar e ultrapassar o limite de 50% de capital composto por ações da classe preferencial."
+      "d": "Emite novas ações no mercado primário que ultrapassem o limite de 50% do total de ações para as preferenciais sem voto ou com voto restrito."
      },
      "gabarito": "b",
      "feedback": {
       "a": "A métrica de aquisição não tem foco no balanço de prejuízo ou retorno de caixa livre, mas sim na inadimplência perante o acionista.",
       "c": "O direito ganho pela PN está atrelado apenas à falta de pagamento dos dividendos rotulados como fixos ou mínimos, e não aos proventos ordinários da ON.",
-      "d": "Emitir mais da metade do capital em preferenciais configura infração e erro societário perante o teto da lei, não sendo o gatilho formal do ganho de voto."
+      "d": "Emitir preferenciais sem voto acima da metade do total de ações configura infração ao teto da lei, mas não é o gatilho formal do ganho de voto."
      }
     }
    ],
@@ -7342,19 +7342,19 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "simulado",
       "revisao"
      ],
-     "comentario": "<p>A alternativa A está correta. No condomínio aberto, o investidor tem liberdade para aplicar e pedir resgate a qualquer momento, variando o patrimônio com esse fluxo. No condomínio fechado, não há resgate direto no caixa do fundo; para sair antes do prazo final, o cotista precisa negociar suas cotas no mercado secundário.</p><p>As alternativas B, C e D distorcem as regras de movimentação, liquidez e negociação de cada modalidade de condomínio.</p>",
-     "enunciado": "<p>Ao comparar as características operacionais entre um fundo constituído sob a forma de condomínio aberto e um de condomínio fechado, verifica-se que:</p>",
+     "comentario": "<p>A alternativa A está correta. Na classe aberta, o investidor tem liberdade para aplicar e pedir resgate a qualquer momento, e o patrimônio varia com esse fluxo. Na classe fechada não há resgate direto no caixa do fundo; para sair antes do prazo final, o cotista precisa negociar suas cotas no mercado secundário. Pela Resolução CVM 175, aberta e fechada são atributos da classe de cotas, e não do fundo.</p><p>As alternativas B, C e D distorcem as regras de movimentação, liquidez e negociação de cada tipo de classe.</p>",
+     "enunciado": "<p>Ao comparar as características operacionais de uma classe de cotas aberta e de uma classe fechada, na forma da Resolução CVM 175, verifica-se que:</p>",
      "alternativas": {
-      "a": "O condomínio aberto permite que o investidor solicite o resgate de suas cotas a qualquer tempo, enquanto o fechado não admite resgates diretos no caixa do fundo antes do prazo final ou amortizações.",
-      "b": "O condomínio fechado garante liquidez diária com resgates instantâneos, ao passo que o aberto exige venda em bolsa de valores.",
+      "a": "A classe aberta permite que o investidor solicite o resgate de suas cotas a qualquer tempo, enquanto a fechada não admite resgates diretos no caixa do fundo antes do prazo final ou das amortizações.",
+      "b": "A classe fechada garante liquidez diária com resgates instantâneos, ao passo que a aberta exige venda em bolsa de valores.",
       "c": "Ambos impedem qualquer movimentação de saída até o vencimento programado do exercício fiscal.",
-      "d": "O condomínio aberto possui cotas negociadas exclusivamente no mercado secundário da B3."
+      "d": "A classe aberta possui cotas negociadas exclusivamente no mercado secundário da B3."
      },
      "gabarito": "a",
      "feedback": {
-      "b": "Os conceitos operacionais foram invertidos, pois o aberto possui liquidez de resgate e o fechado exige o mercado secundário.",
-      "c": "O condomínio aberto permite resgates periódicos conforme o regulamento, desmentindo o bloqueio total.",
-      "d": "As cotas de condomínios abertos são movimentadas diretamente com o administrador do fundo, e não no pregão da B3."
+      "b": "Os conceitos operacionais foram invertidos, pois a classe aberta tem resgate e a fechada exige o mercado secundário.",
+      "c": "A classe aberta permite resgates conforme o regulamento, o que desmente o bloqueio total.",
+      "d": "As cotas de classe aberta são movimentadas diretamente com o administrador do fundo, e não no pregão da B3."
      }
     },
     {
@@ -10583,8 +10583,8 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "usar_em": [
       "simulado"
      ],
-     "comentario": "<p>A alternativa B está correta. A margem consignável limita a 40% da remuneração o desconto em folha, sendo 35% destinados a empréstimos e 5% ao cartão de crédito consignado.</p><p>A A considera apenas a parcela dos empréstimos e ignora os 5% destinados ao cartão. A C transforma a margem consignável em teto geral de endividamento, o que o texto rejeita. A D toma apenas a parcela do cartão como se fosse a margem completa.</p><p>Regra de bolso: margem consignável é 40%, divididos em 35% mais 5%, e não teto do endividamento total.</p>",
-     "enunciado": "<p>Um cliente informa que parte relevante de sua remuneração já está comprometida com crédito consignado e cartão consignado. O gerente cita a margem consignável como referência. Qual explicação está de acordo com o texto?</p>",
+     "comentario": "<p>A alternativa B está correta. Para o trabalhador celetista, a margem consignável limita a 40% da remuneração o desconto em folha, sendo 35% destinados a empréstimos e 5% ao cartão de crédito consignado. Aposentados e pensionistas do INSS seguem outra regra, com margem maior.</p><p>A A considera apenas a parcela dos empréstimos e ignora os 5% destinados ao cartão. A C transforma a margem consignável em teto geral de endividamento, o que o texto rejeita. A D toma apenas a parcela do cartão como se fosse a margem completa.</p><p>Regra de bolso: no celetista, a margem consignável é 40%, divididos em 35% mais 5%, e ela não é teto do endividamento total.</p>",
+     "enunciado": "<p>Um cliente celetista informa que parte relevante de sua remuneração já está comprometida com crédito consignado e cartão consignado. O gerente cita a margem consignável como referência. Qual explicação está de acordo com o texto?</p>",
      "alternativas": {
       "a": "O limite é de 35%, integralmente destinado a empréstimos consignados.",
       "b": "O limite é de 40%, sendo 35% para empréstimos e 5% para cartão consignado.",
@@ -13708,19 +13708,19 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "simulado",
       "revisao"
      ],
-     "comentario": "<p>A alternativa D está correta. As comunicações por parâmetro objetivo decorrem do simples atingimento do critério normativo, prescindindo de juízo de valor. Já as comunicações por suspeita dependem da conclusão da análise atípica, devendo ser encaminhadas no prazo de 24 horas contadas da data em que se concluiu a referida análise.</p><p>As alternativas A, B e C erram ao exigir aviso ou autorização do cliente (conduta expressamente vedada), errar a contagem do prazo de 24 horas ou citar prazos incorretos para a declaração de não ocorrência.</p>",
-     "enunciado": "<p>Uma instituição financeira analisa dois tipos de movimentações financeiras para fins de cumprimento das obrigações de comunicação de prevenção à lavagem de dinheiro: 1. Uma operação de depósito em espécie de valor elevado que atingiu exatamente o parâmetro objetivo estipulado pela norma do regulador. 2. Uma operação atípica fracionada cuja análise técnica interna foi concluída confirmando a atipicidade e a suspeita de lavagem.</p><p>À luz dos prazos e ritos normativos, as comunicações dos casos 1 e 2 devem ser efetuadas, respectivamente:</p>",
+     "comentario": "<p>A alternativa D está correta. A comunicação por parâmetro objetivo decorre do simples atingimento do critério da norma, sem juízo de valor. A comunicação por suspeita depende da conclusão da análise e, no banco supervisionado pelo Banco Central, vai até o dia útil seguinte à decisão de comunicar, pela Circular BCB 3.978/2020. Na CVM o prazo é de 24 horas, e por isso o enunciado diz qual regulador se aplica.</p><p>As alternativas A, B e C erram ao exigir aviso ou autorização do cliente (conduta expressamente vedada), errar a contagem do prazo de 24 horas ou citar prazos incorretos para a declaração de não ocorrência.</p>",
+     "enunciado": "<p>Um banco supervisionado pelo Banco Central analisa dois tipos de movimentações financeiras para fins de cumprimento das obrigações de comunicação de prevenção à lavagem de dinheiro: 1. Uma operação de depósito em espécie de valor elevado que atingiu exatamente o parâmetro objetivo estipulado pela norma do regulador. 2. Uma operação atípica fracionada cuja análise técnica interna foi concluída confirmando a atipicidade e a suspeita de lavagem.</p><p>À luz dos prazos e ritos normativos, as comunicações dos casos 1 e 2 devem ser efetuadas, respectivamente:</p>",
      "alternativas": {
       "a": "Apenas se houver ordem do Poder Judiciário e no prazo anual fixado para a declaração de não ocorrência até o último dia útil de janeiro.",
       "b": "Após autorização prévia do cliente em ambos os casos e no prazo de 24 horas contadas estritamente da data da realização da operação.",
       "c": "Em até 30 dias úteis após a operação e mediante notificação por carta registrada enviada ao titular da conta bancária.",
-      "d": "Por parâmetro objetivo, sem análise de suspeita, e em 24 horas contadas da conclusão da análise que caracterizou a atipicidade."
+      "d": "Por parâmetro objetivo, sem análise de suspeita, e até o dia útil seguinte à conclusão da análise que caracterizou a atipicidade."
      },
      "gabarito": "d",
      "feedback": {
-      "a": "As comunicações obrigatórias independem de ordem judicial, e a declaração de não ocorrência da CVM tem prazo até o último dia útil de abril.",
-      "b": "É vedado dar ciência ao cliente sobre a comunicação, e o prazo de 24 horas para suspeitas conta-se da conclusão da análise, não da operação.",
-      "c": "O prazo de comunicação por suspeita não é de 30 dias e é sumariamente proibido notificar o titular da conta sobre o envio do reporte."
+      "a": "As comunicações obrigatórias independem de ordem judicial, e a declaração de não ocorrência é outro rito: no banco ela vai em janeiro, e na CVM até o último dia útil de abril.",
+      "b": "É vedado dar ciência ao cliente sobre a comunicação, e o prazo para suspeitas conta-se da conclusão da análise, não da data da operação.",
+      "c": "O prazo de comunicação por suspeita não é de 30 dias, e notificar o titular da conta sobre o envio do reporte é proibido."
      }
     },
     {
@@ -13985,7 +13985,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "usar_em": [
       "simulado"
      ],
-     "comentario": "<p>A alternativa C está correta. Conhecer o cliente e comunicar ao Coaf são etapas distintas do processo. A inconsistência entre o volume movimentado e a capacidade financeira aciona a etapa de análise interna, cabendo ao banco solicitar documentos que comprovem a origem do dinheiro; somente após a conclusão dessa análise que caracterizar a atipicidade/suspeita é que se realiza a comunicação ao Coaf em até 24 horas.</p><p>As alternativas A, B e D erram ao pular a etapa de análise técnica, prever apreensão imediata do dinheiro sem o devido processo ou adulterar o cadastro para ocultar alertas do monitoramento.</p>",
+     "comentario": "<p>A alternativa C está correta. Conhecer o cliente e comunicar ao Coaf são etapas distintas do processo. A inconsistência entre o volume movimentado e a capacidade financeira aciona a etapa de análise interna, cabendo ao banco solicitar documentos que comprovem a origem do dinheiro; somente após a conclusão dessa análise, quando ela caracterizar a atipicidade, é que se comunica ao Coaf: no banco supervisionado pelo Banco Central, até o dia útil seguinte à decisão.</p><p>As alternativas A, B e D erram ao pular a etapa de análise técnica, prever apreensão imediata do dinheiro sem o devido processo ou adulterar o cadastro para ocultar alertas do monitoramento.</p>",
      "enunciado": "<p>Um cliente com renda mensal cadastrada e comprovada de R$ 5.000,00 realizou um depósito em espécie de R$ 400.000,00 na sua conta corrente. O sistema de monitoramento gerou um alerta automático devido ao forte descompasso entre a movimentação financeira e a capacidade informada no cadastro. Diante desse cenário e do fluxo normativo das ações de KYC e PLD/FTP, a conduta correta e imediata da instituição deve ser:</p>",
      "alternativas": {
       "a": "Encerrar sumariamente a conta do cliente no mesmo dia e enviar os recursos para uma conta de depósitos judiciais da União.",
