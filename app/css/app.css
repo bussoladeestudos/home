@@ -2287,3 +2287,33 @@ button.md-patente:focus-visible,button.md-selo:focus-visible{outline:2px solid #
 .rcc-nota { font-family:'Bricolage Grotesque',sans-serif; font-size:.72rem; font-weight:800; color:#1C7A4B;
   background:#E4F4EA; border:1px solid #A6E2BE; border-radius:999px; padding:2px 9px; white-space:nowrap; }
 @media (max-width:420px){ .rcc-nota { font-size:.68rem; padding:2px 7px } }
+/* Revisão Geral C-Pro R: prova cronometrada (23/09/2026). */
+.prova-card{background:#fff;border:1px solid #b8d6c5;border-radius:18px;padding:clamp(1rem,3vw,1.8rem);margin:1.25rem 0;color:#183e2e;box-shadow:0 6px 24px #173e2c09}
+.prova-card h2{font-size:1.3rem;margin:.7rem 0}
+.prova-card p{font-size:.9rem;line-height:1.65;margin:.7rem 0}
+.prova-etiqueta{display:inline-block;background:#e4f4ea;color:#165735;border-radius:20px;padding:.3rem .7rem;font-size:.75rem;font-weight:700}
+.prova-card .prova-destaque{font-size:1.2rem;font-weight:800}.prova-destaque span{padding:0 .45rem;color:#72897b}
+.prova-distribuicao{list-style:none;margin:1rem 0;padding:0}.prova-distribuicao li{display:flex;gap:1rem;justify-content:space-between;padding:.65rem 0;border-bottom:1px solid #e5eee9;font-size:.85rem}.prova-distribuicao strong{white-space:nowrap}
+.prova-aviso{background:#fff4d9;border-radius:10px;padding:.75rem;color:#73520b}
+.prova-ajuda{font-size:.9rem;line-height:1.6;color:#44594b}
+.prova-topo{display:flex;align-items:center;justify-content:space-between;gap:.7rem;position:sticky;top:0;background:#fff;z-index:2;padding:.6rem 0;border-bottom:1px solid #e5eee9;flex-wrap:wrap}
+#provaRelogio{display:inline-block;font-variant-numeric:tabular-nums;font-size:1.2rem;background:#173e2c;color:#fff;padding:.4rem .65rem;border-radius:8px;margin-left:.35rem}
+.prova-grade{display:flex;flex-wrap:wrap;gap:.35rem;margin:1rem 0}.prova-grade button{min-width:38px;min-height:40px;border:1px solid #becdc3;border-radius:7px;background:#fff;color:#173e2c;font:inherit;cursor:pointer}.prova-grade .respondida{background:#e4f4ea;border-color:#488465}.prova-grade .atual{outline:2px solid #173e2c;outline-offset:1px;font-weight:800}
+.prova-texto{white-space:pre-line}.prova-run .ex-alt-txt{white-space:pre-line}.prova-run .ex-alt:disabled{opacity:1;cursor:default}.prova-card button:focus-visible{outline:3px solid #bc8828;outline-offset:3px}
+@media(max-width:520px){.prova-distribuicao li{font-size:.8rem;gap:.5rem}.prova-topo{font-size:.8rem}.prova-run .ex-acoes{flex-wrap:wrap}.prova-card .ex-btn,.prova-card .ex-btn-sec{min-height:44px}}
+
+/* Atendimentos interativos */
+.atendimento-grade{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:1rem}
+.atendimento-grade article{border:1px solid #d4e2db;border-radius:14px;padding:1rem;display:flex;flex-direction:column;align-items:flex-start;background:#fff}
+.atendimento-grade h3{font-size:1.05rem;margin:.8rem 0 .3rem}.atendimento-grade button{margin-top:auto}
+.atendimento-contexto{border-left:3px solid #b48a40;padding:.5rem 1rem;background:#f4f8f5;border-radius:0 10px 10px 0}
+.atendimento-run{max-width:850px;margin-left:auto;margin-right:auto}
+.atendimento-run progress{width:100%;height:8px;accent-color:#22573e;margin-bottom:1rem}
+.atendimento-fala{background:#eaf3ee;border:1px solid #cdded4;padding:1rem;border-radius:4px 16px 16px 16px;margin:1rem 0;line-height:1.6}
+.atendimento-fala>span{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em}.atendimento-fala p{margin:.3rem 0}
+.atendimento-opcoes{display:grid;gap:.7rem}.atendimento-opcao{display:flex;align-items:flex-start;gap:.8rem;text-align:left;padding:1rem;border:1px solid #cbd9d1;border-radius:12px;background:#fff;color:#183e2e;font:inherit;line-height:1.55;cursor:pointer;width:100%}
+.atendimento-opcao:hover{border-color:#427957;background:#f4f8f5}.atendimento-opcao.selecionada{border:2px solid #24663e;background:#edf6ef;padding:calc(1rem - 1px)}
+.atendimento-letra{border:1px solid #a8c0b2;border-radius:50%;width:30px;height:30px;display:grid;place-items:center;flex-shrink:0;font-weight:700}
+.atendimento-opcao.selecionada .atendimento-letra{background:#24663e;color:white}.atendimento-run button:focus-visible{outline:3px solid #ad7928;outline-offset:3px}
+.atendimento-acoes{display:flex;flex-wrap:wrap;gap:.7rem}.atendimento-run button{min-height:44px}.atendimento-run button:disabled{opacity:.5;cursor:not-allowed}
+.atendimento-nota{color:#52685a;font-size:.82rem!important}.atendimento-progresso{font-weight:700}.atendimento-correcao{border-top:1px solid #d4e2db;margin:1.5rem 0;padding-top:1rem}.atendimento-correcao h3{font-size:1rem}.atendimento-acerto{color:#21623b;font-weight:700}.atendimento-erro{color:#80551d;font-weight:700}
