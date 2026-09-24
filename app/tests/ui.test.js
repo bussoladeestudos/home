@@ -8,12 +8,13 @@ const fs=require("fs"), path=require("path");
 const read=f=>fs.readFileSync(path.join(__dirname,"..",f),"utf8");
 
 const html=read("index.html"), ui=read("js/ui.js"), pomo=read("js/pomodoro.js"),
-      state=read("js/state.js"), engine=read("js/engine.js");
+      state=read("js/state.js"), engine=read("js/engine.js"), simulados=read("js/simulados-cpror.js");
 
 function acoesUsadas(){
   const re=/data-action="(\w+)"/g, set=new Set();
-  for(const src of [html,ui,pomo]) for(const m of src.matchAll(re)) set.add(m[1]);
+  for(const src of [html,ui,pomo,simulados]) for(const m of src.matchAll(re)) set.add(m[1]);
   for(const m of ui.matchAll(/btnAction:"(\w+)"/g)) set.add(m[1]); // dinâmicas
+  for(const m of simulados.matchAll(/btnAction:"(\w+)"/g)) set.add(m[1]);
   for(const m of ui.matchAll(/\bacao:"(\w+)"/g)) set.add(m[1]);    // dinâmicas (cfg dos simulados)
   return set;
 }
@@ -38,7 +39,7 @@ test("nenhum handler órfão em ACTIONS (código morto)",()=>{
 
 test("cada handler de ACTIONS chama função que existe",()=>{
   const {bloco}=acoesRegistradas();
-  const tudo=ui+state+engine+html+pomo;
+  const tudo=ui+state+engine+html+pomo+simulados;
   const chamadas=new Set([...bloco.matchAll(/(?:=>|\{)\s*(\w+)\(/g)].map(m=>m[1]));
   chamadas.delete("document");
   const faltando=[...chamadas].filter(f=>!new RegExp("function "+f+"\\s*\\(").test(tudo));
@@ -50,6 +51,7 @@ test("zero handlers inline residuais (onclick= etc.)",()=>{
   assert.equal((html.match(re)||[]).length,0,"handler inline no index.html");
   assert.equal((ui.match(re)||[]).length,0,"handler inline nos templates do ui.js");
   assert.equal((pomo.match(re)||[]).length,0,"handler inline no pomodoro.js");
+  assert.equal((simulados.match(re)||[]).length,0,"handler inline nos simulados mistos");
 });
 
 test("esc() aplicado nos pontos alimentados por backup (B10)",()=>{
