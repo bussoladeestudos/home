@@ -1153,7 +1153,10 @@ function apagarHistoricoExercicios(periodo,hojeRef){
       delete d.revisaoGeralFeita;delete d.revisaoGeralScore;delete d.revisaoGeralResultadoId;
     }
   });
-  if(periodo==="sempre"){ STATE.questoes={}; STATE.exDias={}; STATE.revisoesResultados={}; return true; }
+  if(STATE.provaCpror&&STATE.provaCpror.resultado&&dentro(STATE.provaCpror.resultado.dia)) delete STATE.provaCpror;
+  if(STATE.provaMistaCpror&&STATE.provaMistaCpror.resultado&&dentro(STATE.provaMistaCpror.resultado.dia)) delete STATE.provaMistaCpror;
+  if(STATE.miniMistoCpror&&STATE.miniMistoCpror.resultado&&dentro(STATE.miniMistoCpror.resultado.dia)) delete STATE.miniMistoCpror;
+  if(periodo==="sempre"){ delete STATE.provaCprorUso; delete STATE.casosCprorUso; STATE.questoes={}; STATE.exDias={}; STATE.revisoesResultados={}; return true; }
   Object.keys(STATE.revisoesResultados||{}).forEach(k=>{
     if(dentro(STATE.revisoesResultados[k].dia)) delete STATE.revisoesResultados[k];
   });

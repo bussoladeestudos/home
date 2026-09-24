@@ -33,6 +33,20 @@ function abrirSuporte(){
 
 /* ── Registro central de ações (data-action → função) ── */
 const ACTIONS={
+  mixGeralIniciar:()=>mixGeralIniciar(),
+  mixRetomar:d=>mixRetomar(d.modo),
+  mixResponder:d=>mixResponder(d.token,d.op),
+  mixCasoEscolher:d=>mixCasoEscolher(d.token,d.no,d.op),
+  mixCasoConfirmar:d=>mixCasoConfirmar(d.token,d.no),
+  mixNavegar:d=>mixNavegar(+d.i),
+  mixEntregar:()=>mixEntregar(),
+  mixVoltar:()=>mixVoltar(),
+  provaIniciar:()=>provaIniciar(),
+  provaRetomar:()=>provaRetomar(),
+  provaResponder:d=>provaResponder(d.id,d.op),
+  provaNavegar:d=>provaNavegar(+d.i),
+  provaEntregar:()=>provaEntregar(),
+  provaVoltar:()=>{_provaAberta=false;renderSimuladoPage();},
   // navegação e layout
   navTo:d=>navTo(d.page),
   irParaHojeCronograma:()=>irParaHojeCronograma(),
@@ -2916,6 +2930,12 @@ function toggleStatusCard(id){
 function renderSimuladoPage(){
   const el=document.getElementById("simuladoConteudo");
   if(!el) return;
+  const completa=STATE.prefeitura==="cproRAnbima";
+  if(completa){
+    mixVerificarPrazo();
+    if(_mixAberto&&mixSessao()) return renderMixCpror();
+    if(!STATE.inicio||!STATE.prova){el.innerHTML=mixCartaoHtml();return;}
+  }
   if(!STATE.inicio||!STATE.prova){ el.innerHTML=`<div style="text-align:center;padding:3rem 1rem;color:var(--gray-400)"><div style="font-size:2rem;margin-bottom:.5rem">📝</div><div style="font-weight:700;color:var(--gray-600);margin-bottom:.3rem">Configure o cronograma</div><div style="font-size:.83rem">Defina início e data da prova para gerar os simulados.</div></div>`; return; }
   const hoje=new Date(); hoje.setHours(0,0,0,0);
   const diasLivres=STATE.diasLivres||[];
@@ -2928,7 +2948,7 @@ function renderSimuladoPage(){
     }
     d.setDate(d.getDate()+1);
   }
-  if(simulados.length===0){
+  if(simulados.length===0&&!completa){
     el.innerHTML=`<div style="text-align:center;padding:3rem 1rem;color:var(--gray-400)"><div style="font-size:2rem;margin-bottom:.5rem">⏳</div><div style="font-weight:700;color:var(--gray-600);margin-bottom:.3rem">Ainda não há simulados</div><div style="font-size:.83rem">Os simulados aparecem após cada 3 ciclos de revisão completados.</div></div>`;
     return;
   }
@@ -2944,7 +2964,8 @@ function renderSimuladoPage(){
   </div>`;
 
   // Instrução de uso — o app monta a pauta; as questões são resolvidas por fora
-  html+=`<div style="display:flex;gap:.6rem;align-items:flex-start;background:#FBF6EA;border:1px solid #F2E2AE;border-radius:12px;padding:.75rem .9rem;margin-bottom:1.2rem;font-size:.8rem;color:#6B5512;line-height:1.55"><span style="flex-shrink:0">💡</span><span><strong>Como funciona:</strong> quem monta a prova é a Bússola. O Mini Simulado sorteia até <strong>30 questões</strong> entre os tópicos que você já estudou nas revisões que ele cobre, e a Revisão Geral sorteia até <strong>50</strong> entre todos os tópicos do edital que você já estudou. Matéria que você ainda não viu não entra na prova. Você não escolhe a quantidade de propósito: o que se treina aqui é o ritmo de prova, responder tudo de uma vez, sem pausa e sem consultar. A nota é salva ao concluir. Cada simulado abre na data prevista, ou antes disso se você já tiver concluído as revisões que ele cobre. Se preferir usar material externo, dá para registrar o resultado à mão.</span></div>`;
+  if(completa) html+=`<p class="prova-ajuda">Os Mini Simulados acompanham seus estudos. A Revisão Geral da C-Pro R fica disponível abaixo, com 45 questões de todo o edital e tempo máximo de 2h30.</p>`;
+  else html+=`<div style="display:flex;gap:.6rem;align-items:flex-start;background:#FBF6EA;border:1px solid #F2E2AE;border-radius:12px;padding:.75rem .9rem;margin-bottom:1.2rem;font-size:.8rem;color:#6B5512;line-height:1.55"><span style="flex-shrink:0">💡</span><span><strong>Como funciona:</strong> quem monta a prova é a Bússola. O Mini Simulado sorteia até <strong>30 questões</strong> entre os tópicos que você já estudou nas revisões que ele cobre, e a Revisão Geral sorteia até <strong>50</strong> entre todos os tópicos do edital que você já estudou. Matéria que você ainda não viu não entra na prova. Você não escolhe a quantidade de propósito: o que se treina aqui é o ritmo de prova, responder tudo de uma vez, sem pausa e sem consultar. A nota é salva ao concluir. Cada simulado abre na data prevista, ou antes disso se você já tiver concluído as revisões que ele cobre. Se preferir usar material externo, dá para registrar o resultado à mão.</span></div>`;
 
   // ── 1. Mini Simulados (lista principal) ──
   html+=`<div style="font-family:'Bricolage Grotesque',sans-serif;font-size:.82rem;font-weight:700;color:#6B6155;margin:0 0 .7rem;padding-left:.1rem">Mini Simulados</div>`;
@@ -2970,7 +2991,8 @@ function renderSimuladoPage(){
   const provaD=parseDate(STATE.prova);
   const rvD=new Date(provaD); rvD.setDate(rvD.getDate()-7);
   const rvKey=fmt(rvD);
-  if(rvKey>=STATE.inicio){
+  if(completa){html+=mixCartaoHtml();}
+  if(!completa&&rvKey>=STATE.inicio){
     const rvEst=STATE.dias[rvKey]||{};
     const rvFeita=!!rvEst.revisaoGeralFeita;
     const rvScore=rvEst.revisaoGeralScore!=null?rvEst.revisaoGeralScore:null;
@@ -5469,6 +5491,8 @@ function applyRecovery(){
 
 /* Descarta sessão transitória de exercícios ao trocar a identidade. */
 function resetAccountUI(){
+  _provaAberta=false;
+  if(typeof _mixAberto!=="undefined") _mixAberto=null;
   _exSessao=null; _exLista=[]; _exBuscaTop="";
   _exFiltro={materia:"",topicos:[],niveis:[],soErradas:false,soNaoRespondidas:false};
   _exPeriodo="7"; _exQuantidade=""; _revCicloAberto.clear();
@@ -5761,12 +5785,19 @@ function _simSortear(grupos,limite){
   }
   return _embaralhar(out);
 }
-function _simPlano(bloco){
+function _simPlanoBase(bloco){
   const grupos=revTopicos(bloco),vistos=new Set();
   grupos.forEach(g=>g.itens.forEach(it=>vistos.add(it.q.id)));
   const limite=SIM_LIMITE[bloco.tipo]||SIM_LIMITE.mini;
   const disponiveis=vistos.size;
   return {grupos,disponiveis,limite,total:Math.min(limite,disponiveis)};
+}
+function _simPlano(bloco){
+  const p=_simPlanoBase(bloco);
+  if(STATE.prefeitura!=="cproRAnbima"||bloco.tipo!=="mini"||typeof mixCasosElegiveis!=="function") return p;
+  p.casos=mixCasosElegiveis(bloco.topicos);
+  p.total=p.casos.length?Math.min(p.limite,p.disponiveis+3):0;
+  return p;
 }
 function _simMinutos(n){ return Math.max(5,n*SIM_MIN_POR_QUESTAO); }
 /* Lista por tópico enquanto couber na tela. Acima de 12 tópicos, que é o
@@ -5809,10 +5840,11 @@ function simConfiguracaoHtml(bloco,cfg){
   }
   const p=_simPlano(bloco);
   const tem=p.total>0;
+  const interativo=STATE.prefeitura==="cproRAnbima"&&bloco.tipo==="mini";
   const formato=tem
-    ?(p.disponiveis>=p.limite
-      ?`<p class="sim-formato">Esta prova tem <strong>${esc(p.total)} questões</strong>, sorteadas pelo sistema ${esc(cfg.escopo)}. A cada tentativa o sorteio é novo.</p>`
-      :`<p class="sim-formato">Esta prova tem <strong>${esc(p.total)} ${p.total===1?"questão":"questões"}</strong>, que é tudo o que existe publicado ${esc(cfg.escopo)}. O formato comporta até ${esc(p.limite)}, e a prova cresce sozinha conforme o banco aumenta.</p>`)
+    ?(p.total>=p.limite
+      ?`<p class="sim-formato">Esta prova tem <strong>${esc(p.total)} questões</strong>, sorteadas pelo sistema ${esc(cfg.escopo)}. ${interativo?"Um bloco interativo conta como três questões: uma árvore completa e duas questões objetivas. ":""}A cada tentativa o sorteio é novo.</p>`
+      :`<p class="sim-formato">Esta prova tem <strong>${esc(p.total)} ${p.total===1?"questão":"questões"}</strong>, que é tudo o que existe publicado ${esc(cfg.escopo)}. ${interativo?"Três pontos vêm de um bloco interativo vinculado aos conteúdos estudados. ":""}O formato comporta até ${esc(p.limite)}, e a prova cresce sozinha conforme o banco aumenta.</p>`)
     :"";
   const ritmo=tem
     ?`<p class="sim-ritmo">Simulado não serve só para medir o que você sabe. Ele treina o que o estudo de conteúdo não treina: ler o enunciado uma vez, decidir, marcar e seguir para a próxima sem voltar atrás. Quem nunca fez isso chega na prova sabendo a matéria e perdendo tempo. Resolva as ${esc(p.total)} questões de uma vez só, sem pausa e sem consultar o material. Como referência de ritmo, reserve cerca de <strong>${esc(_simMinutos(p.total))} minutos</strong>, na conta de dois minutos por questão.</p>`
@@ -5822,7 +5854,7 @@ function simConfiguracaoHtml(bloco,cfg){
     ${formato}${ritmo}
     <p>${esc(cfg.lista)} (<strong>${esc(p.grupos.length)}</strong>):</p>${_simListaTopicos(p.grupos)}
     <button class="ex-btn" type="button" data-action="${esc(cfg.acao)}" data-key="${esc(bloco.key)}"${tem?"":" disabled"}>${resultado?"↻ "+esc(cfg.refazer||cfg.rotulo):esc(cfg.rotulo)}</button>
-    <p class="rev-ajuda">${tem?"Questões embaralhadas, sem repetição na mesma prova. Ao responder todas, a nota é salva e o dia entra no histórico do cronograma. Refazer substitui a nota anterior.":"Ainda não há questões publicadas para estes tópicos. Você pode fazer o simulado no seu material e registrar o resultado pelo botão do cartão."}</p>
+    <p class="rev-ajuda">${tem?"Questões embaralhadas, sem repetição na mesma prova. Ao responder todas, a nota é salva e o dia entra no histórico do cronograma. Refazer substitui a nota anterior.":(interativo&&p.disponiveis?"Ainda não há árvore publicada para os tópicos estudados neste bloco. O mini simulado será liberado quando o banco interativo cobrir um desses conteúdos.":"Ainda não há questões publicadas para estes tópicos. Você pode fazer o simulado no seu material e registrar o resultado pelo botão do cartão.")}</p>
   </section>`;
 }
 function iniciarSimulado(bloco){
@@ -5849,7 +5881,11 @@ function miniConfiguracaoHtml(key){
     refazer:"Refazer o Mini Simulado"
   });
 }
-function miniIniciarQuestoes(key){ iniciarSimulado(miniBloco(key)); }
+function miniIniciarQuestoes(key){
+  const bloco=miniBloco(key);
+  if(STATE.prefeitura==="cproRAnbima") return mixMiniIniciar(bloco);
+  iniciarSimulado(bloco);
+}
 
 /* A Revisão Geral é o ensaio da prova, então sorteia de TODO o edital, não
    só do que já foi estudado. Faltar assunto no ensaio é informação: mostra
@@ -5865,6 +5901,7 @@ function rgBloco(key){
   return {tipo:"geral",num:key,key,topicos:_simFiltrarEstudados(rgTopicosEdital()),isFutura:futura};
 }
 function rgConfiguracaoHtml(key){
+  if(STATE.prefeitura==="cproRAnbima") return mixCartaoHtml();
   return simConfiguracaoHtml(rgBloco(key),{
     titulo:"Revisão Geral: simulado completo",
     escopo:"entre todos os tópicos do edital que você já estudou",
@@ -5876,7 +5913,156 @@ function rgConfiguracaoHtml(key){
     refazer:"Refazer a Revisão Geral"
   });
 }
-function rgIniciarQuestoes(key){ iniciarSimulado(rgBloco(key)); }
+function rgIniciarQuestoes(key){ if(STATE.prefeitura==="cproRAnbima") return mixGeralIniciar(); iniciarSimulado(rgBloco(key)); }
+
+/* Prova completa C-Pro R: prazo absoluto, estado por aluno e entrega única.
+   A sessão guarda IDs, não cópias do banco, para não inflar o Firestore. */
+let _provaAberta=false;
+const PROVA_CPROR_MS=150*60*1000;
+const PROVA_CPROR_MATERIAS=[
+  {mat:"Prospecção e relacionamento com a pessoa investidora",qtd:9},
+  {mat:"Análise de informações do cliente",qtd:9},
+  {mat:"Indicação de investimentos",qtd:18},
+  {mat:"Análise de portfólio e monitoramento da carteira",qtd:9}
+];
+function provaBanco(){
+  const ids=new Set();
+  return listarQuestoes("cproRAnbima",{niveis:[2,3],usarEm:"simulado"}).filter(it=>{
+    if(ids.has(it.q.id)) return false;
+    ids.add(it.q.id);return true;
+  });
+}
+function provaPlano(){
+  const banco=provaBanco();
+  return PROVA_CPROR_MATERIAS.map(m=>({...m,itens:banco.filter(it=>it.mat===m.mat)}));
+}
+function provaSortear(plano){
+  const uso=STATE.provaCprorUso||{},out=[];
+  plano.forEach(m=>{
+    // Menor exposição primeiro; empate sorteado. Inclui questões em branco
+    // da tentativa anterior, pois já foram apresentadas ao aluno.
+    const candidatos=_embaralhar(m.itens).sort((a,b)=>(uso[a.q.id]||0)-(uso[b.q.id]||0));
+    out.push(...candidatos.slice(0,m.qtd));
+  });
+  return _embaralhar(out);
+}
+function provaTempo(s){
+  const n=Math.max(0,Math.ceil((s.fimEm-Date.now())/1000));
+  return [Math.floor(n/3600),Math.floor(n%3600/60),n%60].map(x=>String(x).padStart(2,"0")).join(":");
+}
+function provaCartaoHtml(){
+  const s=STATE.provaCpror,plano=provaPlano(),faltas=plano.filter(m=>m.itens.length<m.qtd);
+  return `<section class="prova-card" aria-label="Revisão Geral C-Pro R">
+    <span class="prova-etiqueta">Disponível a qualquer momento</span>
+    <h2>Revisão Geral · C-Pro R</h2>
+    <p class="prova-destaque">45 questões <span>·</span> 2h30 de prova</p>
+    <p>Treine com todo o edital, inclusive assuntos que ainda não estudou. Questões de nível médio e difícil, com um novo sorteio a cada tentativa.</p>
+    <ul class="prova-distribuicao">${plano.map(m=>`<li><span>${esc(m.mat)}</span><strong>${esc(m.qtd)} questões</strong></li>`).join("")}</ul>
+    <p>O relógio continua contando se você sair ou fechar a página. Ao terminar o prazo, a prova é corrigida automaticamente. Questões em branco contam como erro.</p>
+    ${s&&!s.resultado?`<p class="prova-aviso">Você tem uma prova em andamento. Tempo restante: ${esc(provaTempo(s))}.</p><button class="ex-btn" data-action="provaRetomar">Continuar simulado</button>`:
+      `${s&&s.resultado?revResultadoHtml(s.resultado)+`<button class="ex-btn-sec" data-action="provaRetomar">Ver correção</button> `:""}<button class="ex-btn" data-action="provaIniciar"${faltas.length?" disabled":""}>${s?"Fazer novo simulado":"Iniciar simulado"}</button>`}
+    ${faltas.length?`<p class="prova-aviso">Banco insuficiente para a distribuição completa: ${faltas.map(m=>esc(m.mat)+" ("+esc(m.itens.length)+" de "+esc(m.qtd)+")").join("; ")}. Aguarde a publicação de mais questões.</p>`:""}
+  </section>`;
+}
+function provaIniciar(){
+  if(STATE.prefeitura!=="cproRAnbima") return;
+  if(STATE.provaCpror&&!STATE.provaCpror.resultado) return provaRetomar();
+  const plano=provaPlano();
+  if(plano.some(m=>m.itens.length<m.qtd)){showToast("O banco ainda não comporta a distribuição completa.");return;}
+  if(!confirm("Você terá 2h30 para responder 45 questões de nível médio e difícil. O tempo começa agora e não pausa ao sair. A correção aparece somente ao entregar ou quando o prazo terminar. Iniciar?")) return;
+  const itens=provaSortear(plano),agora=Date.now();
+  STATE.provaCpror={ids:itens.map(it=>it.q.id),respostas:{},i:0,inicioEm:agora,fimEm:agora+PROVA_CPROR_MS};
+  if(!STATE.provaCprorUso) STATE.provaCprorUso={};
+  itens.forEach(it=>STATE.provaCprorUso[it.q.id]=(STATE.provaCprorUso[it.q.id]||0)+1);
+  save();provaRetomar();
+}
+function provaRetomar(){
+  if(STATE.prefeitura!=="cproRAnbima"||!STATE.provaCpror) return;
+  _provaAberta=true;navTo("simulado");window.scrollTo(0,0);
+}
+function provaItens(s){
+  const banco=new Map(provaBanco().map(it=>[it.q.id,it]));
+  return s.ids.map(id=>banco.get(id)||{mat:"Questão indisponível",top:"",q:{id,alternativas:{},enunciado:"Esta questão não está disponível nesta versão do banco."}});
+}
+function provaVerificarPrazo(){
+  const s=STATE.provaCpror;
+  if(!s||s.resultado||Date.now()<s.fimEm) return false;
+  provaFinalizar(true);return true;
+}
+function provaResponder(id,op){
+  if(STATE.prefeitura!=="cproRAnbima"||provaVerificarPrazo()) return renderSimuladoPage();
+  const s=STATE.provaCpror;
+  if(!s||s.resultado||s.ids[s.i]!==id) return;
+  const it=provaItens(s)[s.i];
+  if(!Object.prototype.hasOwnProperty.call(it.q.alternativas,op)) return;
+  s.respostas[id]=op;save();renderProvaCpror();
+}
+function provaNavegar(i){
+  const s=STATE.provaCpror;
+  if(STATE.prefeitura!=="cproRAnbima"||!s||!Number.isInteger(i)||i<0||i>=s.ids.length) return;
+  provaVerificarPrazo();s.i=i;save();renderProvaCpror();window.scrollTo(0,0);
+}
+function provaEntregar(){
+  const s=STATE.provaCpror;
+  if(STATE.prefeitura!=="cproRAnbima"||!s||s.resultado) return;
+  if(provaVerificarPrazo()) return renderProvaCpror();
+  const brancas=s.ids.filter(id=>!s.respostas[id]).length;
+  if(!confirm("Entregar o simulado agora? "+(brancas?brancas+" questões estão em branco e contarão como erro.":"Todas as questões foram respondidas."))) return;
+  provaFinalizar(Date.now()>=s.fimEm);renderProvaCpror();window.scrollTo(0,0);
+}
+function provaFinalizar(prazo){
+  const s=STATE.provaCpror;if(!s||s.resultado) return;
+  const encerradaEm=Math.min(Date.now(),s.fimEm),dia=fmt(new Date(encerradaEm));
+  const itens=provaItens(s),materias=[];let acertos=0;
+  itens.forEach(it=>{
+    let m=materias.find(m=>m.mat===it.mat);
+    if(!m){m={mat:it.mat,total:0,acertos:0};materias.push(m);}
+    const op=s.respostas[it.q.id],ok=!!op&&op===it.q.gabarito;
+    m.total++;if(ok){m.acertos++;acertos++;}
+    registrarResposta(it.q.id,op||"",ok,dia);
+  });
+  materias.forEach(m=>m.pct=Math.round(100*m.acertos/m.total));
+  s.resultado={dia,total:s.ids.length,acertos,pct:Math.round(100*acertos/s.ids.length),nota:(10*acertos/s.ids.length).toFixed(1),materias,prazo:!!prazo,brancas:s.ids.filter(id=>!s.respostas[id]).length};
+  s.encerradaEm=encerradaEm;
+  if(!STATE.revisoesResultados) STATE.revisoesResultados={};
+  STATE.revisoesResultados['prova-cpror']=s.resultado;
+  // Treino livre não conclui antecipadamente um marco futuro do cronograma.
+  save();
+}
+function provaTexto(html){
+  const area=document.createElement("textarea");
+  area.innerHTML=String(html||"").replace(/<\/(p|li|div)>|<br\s*\/?\s*>/gi,"\n").replace(/<[^>]*>/g,"");
+  return esc(area.value);
+}
+function renderProvaCpror(){
+  const el=document.getElementById("simuladoConteudo"),s=STATE.provaCpror;
+  if(!el||!s||STATE.prefeitura!=="cproRAnbima") return;
+  provaVerificarPrazo();
+  const itens=provaItens(s),i=Math.max(0,Math.min(s.i||0,itens.length-1)),it=itens[i],q=it.q,r=s.resultado;
+  const respondidas=s.ids.filter(id=>s.respostas[id]).length;
+  el.innerHTML=`<section class="prova-card prova-run">
+    <div class="prova-topo"><button class="ex-btn-sec" data-action="provaVoltar">← Simulados</button><strong>${r?"Prova encerrada":`Tempo restante <span id="provaRelogio" role="timer">${esc(provaTempo(s))}</span>`}</strong></div>
+    <h2>${r?"Resultado":"Revisão Geral"} · C-Pro R</h2>
+    ${r?`<p>${r.prazo?"Tempo esgotado. Correção automática concluída.":"Simulado entregue e corrigido."} ${esc(r.brancas)} questões em branco.</p>${revResultadoHtml(r)}`:`<p>${esc(respondidas)} de 45 respondidas. Você pode rever suas respostas antes de entregar.</p>`}
+    <nav class="prova-grade" aria-label="Questões do simulado">${itens.map((x,n)=>`<button type="button" data-action="provaNavegar" data-i="${esc(n)}" class="${n===i?"atual ":""}${s.respostas[x.q.id]?"respondida":""}" aria-label="Questão ${esc(n+1)}, ${s.respostas[x.q.id]?"respondida":"em branco"}"${n===i?' aria-current="step"':""}>${esc(n+1)}</button>`).join("")}</nav>
+    <div class="ex-migalha">Questão ${esc(i+1)} · ${esc(it.mat)} · ${esc(_exNivelLabel(q.nivel))}</div>
+    <div class="ex-enunciado prova-texto">${provaTexto(q.enunciado)}</div>
+    <div class="ex-alts">${Object.entries(q.alternativas).map(([op,txt])=>`<button type="button" class="ex-alt ${r?(op===q.gabarito?"certa":s.respostas[q.id]===op?"errada":""):s.respostas[q.id]===op?"escolhida":""}" data-action="provaResponder" data-id="${esc(q.id)}" data-op="${esc(op)}" aria-pressed="${s.respostas[q.id]===op}"${r?" disabled":""}><span class="ex-alt-letra">${esc(op.toUpperCase())}</span><span class="ex-alt-txt">${provaTexto(txt)}</span></button>`).join("")}</div>
+    ${r?`<p>Sua resposta: ${esc(s.respostas[q.id]?s.respostas[q.id].toUpperCase():"em branco")}. Gabarito: ${esc((q.gabarito||"").toUpperCase())}.</p><div class="ex-coment prova-texto">${provaTexto(q.comentario)}</div>`:""}
+    <div class="ex-acoes"><button class="ex-btn-sec" data-action="provaNavegar" data-i="${esc(i-1)}"${i===0?" disabled":""}>Anterior</button>${i<itens.length-1?`<button class="ex-btn" data-action="provaNavegar" data-i="${esc(i+1)}">Próxima</button>`:""}${!r?`<button class="ex-btn-sec" data-action="provaEntregar">Entregar simulado</button>`:""}</div>
+  </section>`;
+}
+function provaTick(){
+  const terminou=provaVerificarPrazo();
+  if(terminou&&STATE.prefeitura==="cproRAnbima"&&STATE.pagina==="simulado") renderSimuladoPage();
+  const el=document.getElementById("provaRelogio");
+  if(el&&STATE.provaCpror&&!STATE.provaCpror.resultado) el.textContent=provaTempo(STATE.provaCpror);
+}
+if(typeof window!=="undefined"&&typeof window.addEventListener==="function"){
+  setInterval(provaTick,1000);
+  window.addEventListener("focus",provaTick);
+  document.addEventListener("visibilitychange",provaTick);
+}
 
 function renderTopicosHoje(key,topicos){
   if(!topicos.length) return "Nenhum conteúdo novo previsto. Consulte o cronograma para a atividade do dia.";
