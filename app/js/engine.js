@@ -169,10 +169,10 @@ function _densityFor(todos){
     }
     totalContent=Math.max(1,totalContent);
   } else { totalContent=Math.max(1,todos.length); }
-  // Base de 45 min por topico (revisto pelo dono em 31/08/2026 apos testar):
-  // 30 min nao cobre ler o conteudo mais revisar e fazer exercicio, e 4 topicos
-  // em 2h ficou denso demais. Com 45 min, 2h/dia = 2 topicos, 3h = 4, 4h = 5.
-  // Sem teto arbitrario — quem limita e a hora disponivel, nao um numero magico.
+  // Base de 30 min por topico (decisao do dono em 28/09/2026, substituindo os
+  // 45 min adotados em 31/08/2026). Com 30 min: 1h/dia = 2 topicos, 2h = 4,
+  // 3h = 6, 4h = 8, 6h = 12.
+  // Sem teto arbitrario: quem limita e a hora disponivel, nao um numero magico.
   const maxByHoras=Math.max(1,Math.floor((STATE.horasDia||3)/MIN_POR_TOPICO_H));
   /* Densidade = CAPACIDADE da hora, e nao o minimo necessario para caber no
      prazo (decisao do dono em 31/08/2026). O objetivo e terminar o conteudo o
@@ -183,10 +183,10 @@ function _densityFor(todos){
   return maxByHoras;
 }
 
-/* Horas por topico: 45 min, cobrindo leitura + revisao + exercicio.
+/* Horas por topico: 30 min, cobrindo leitura + revisao + exercicio.
    Fonte unica: mudou aqui, mudou no agendamento, no esperado do mapa de calor
    e no diagnostico de cobertura. */
-const MIN_POR_TOPICO_H=0.75;
+const MIN_POR_TOPICO_H=0.5;
 
 /* Quando o conteudo termina, e ate quando a prova poderia ser antecipada.
    Com a densidade na capacidade da hora, quem estuda bastante fecha o edital

@@ -5412,7 +5412,7 @@ function renderOpcoesRecuperacao(){
     dTit.textContent="Intensificar os próximos dias";
     if(a.cabe){
       dDesc.textContent=`${alvo} nos próximos dias, um por dia, até ${ate}. `
-        +`São cerca de 45 min a mais por dia e a data da prova continua a mesma.`;
+        +`São cerca de 30 min a mais por dia e a data da prova continua a mesma.`;
     } else {
       dDesc.textContent=`${alvo} um por dia, mas ${so===1?"1 não cabe":so+" não cabem"} antes da `
         +`Revisão Geral e ${so===1?"vai":"vão"} para a fila do Retorno Técnico. `
