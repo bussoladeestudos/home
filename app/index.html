@@ -17,7 +17,7 @@
 <!-- ?v= força o navegador a buscar a versão nova a cada publicação.
      Sem isso o GitHub Pages entrega o arquivo do cache por até 10 minutos,
      e o aluno vê o HTML novo com o CSS velho, que é tela quebrada. -->
-<link rel="stylesheet" href="css/app.css?v=20260923-atendimentos">
+<link rel="stylesheet" href="css/app.css?v=20260928-dashview">
 <!-- Firebase Auth SDK (compat) -->
 <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
@@ -453,6 +453,11 @@ function fazerLogout() {
 
   <!-- PAGE: DASHBOARD -->
   <div class="page active" id="page-dashboard">
+    <!-- Modo de visualização: alguns alunos preferem ver o dashboard como ele
+         aparece no computador. O botão só aparece em tela estreita. -->
+    <div class="dash-view-bar">
+      <button class="dash-view-btn" id="dashViewBtn" type="button" data-action="toggleDashView">⊞ Visualizar em painel</button>
+    </div>
     <!-- Cabeçalho do dashboard: a bússola do rumo substitui saudação e subtítulo -->
     <div class="dash-saudacao">
       <div id="bussolaRumo"></div>
@@ -793,7 +798,7 @@ function fazerLogout() {
 <script src="js/engine.js?v=20260928-topico30min"></script>
 <script src="conteudo/atendimentos-cpror.js?v=20260924-caso5"></script>
 
-<script src="js/ui.js?v=20260928-topico30min"></script>
+<script src="js/ui.js?v=20260928-dashview"></script>
 <script src="js/simulados-cpror.js?v=20260924-arvores-simulados"></script>
 <script src="js/pomodoro.js?v=20260911"></script>
 
