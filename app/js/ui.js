@@ -57,6 +57,7 @@ const ACTIONS={
   navegarMes:d=>navegarMes(+d.dir),
   toggleSidebar:()=>toggleSidebar(),
   togglePainel:()=>togglePainel(),
+  toggleDashView:()=>toggleDashView(),
   toggleInfo511:()=>toggleInfo511(),
   // autenticação
   fazerLogin:()=>fazerLogin(),
@@ -1317,6 +1318,65 @@ function adiarPwa(){
 }
 
 /* ── NAVEGAÇÃO ── */
+/* ── Modo de visualização do dashboard ──────────────────────────
+   Pedido do dono em 28/09/2026: alguns alunos gostaram do dashboard
+   como ele aparece no computador, outros do celular. O botão deixa o
+   aluno escolher.
+
+   Como funciona: em vez de duplicar as dezenas de media queries do
+   dashboard, o modo computador reescreve a largura do viewport. O
+   navegador passa a calcular TODAS as media queries em 1100px e
+   desenha exatamente o layout do computador, reduzido para caber na
+   tela. É o mesmo mecanismo do "Solicitar site para computador" do
+   navegador, só que ligado por dentro do app.
+
+   Vale só enquanto o dashboard está aberto: ao navegar para outra
+   página o viewport volta ao normal, porque o pedido foi de trocar a
+   visualização do dashboard, e não do app inteiro.
+
+   Fica no localStorage, e não no STATE: é preferência do APARELHO,
+   não da conta. Quem estuda no celular e no computador não quer a
+   escolha de um valendo no outro. Se o localStorage estiver bloqueado
+   (aba anônima), o modo automático assume e nada quebra. */
+const DASH_VIEW_KEY="bussola:dashView";
+const DASH_VIEW_LARGURA=1100;
+const VIEWPORT_AUTO="width=device-width, initial-scale=1.0";
+
+function getDashView(){
+  try { return localStorage.getItem(DASH_VIEW_KEY)==="pc"?"pc":"auto"; }
+  catch(e){ return "auto"; }
+}
+function setDashView(v){
+  try { localStorage.setItem(DASH_VIEW_KEY,v); } catch(e){}
+}
+/* Chamada em toda troca de página e na carga: o modo computador só
+   pode estar ligado com o dashboard na tela. */
+function aplicarDashView(){
+  const meta=document.querySelector('meta[name="viewport"]');
+  if(document.body){
+    const toque=!!(window.matchMedia&&window.matchMedia("(pointer:coarse)").matches);
+    document.body.classList.toggle("toque",toque);
+  }
+  const pc=getDashView()==="pc"&&STATE.pagina==="dashboard";
+  if(meta){
+    const alvo=pc?("width="+DASH_VIEW_LARGURA):VIEWPORT_AUTO;
+    if(meta.getAttribute("content")!==alvo) meta.setAttribute("content",alvo);
+  }
+  if(document.body) document.body.classList.toggle("dash-pc",pc);
+  const btn=document.getElementById("dashViewBtn");
+  if(btn){
+    btn.textContent=pc?"☰ Visualizar em coluna":"⊞ Visualizar em painel";
+    btn.setAttribute("aria-pressed",pc?"true":"false");
+    btn.title=pc?"Volta os blocos do dashboard para uma coluna só, um embaixo do outro"
+                :"Mostra os blocos do dashboard lado a lado, como no computador";
+  }
+}
+function toggleDashView(){
+  setDashView(getDashView()==="pc"?"auto":"pc");
+  aplicarDashView();
+  window.scrollTo(0,0);
+}
+
 function navTo(pg){
   STATE.pagina=pg; save();
   document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
@@ -1344,6 +1404,8 @@ function navTo(pg){
   if(pg==="agenda")     renderAgendaPage();
   // fechar sidebar no mobile
   closeSidebarMobile();
+  // o modo computador vale só no dashboard: sair da tela devolve o viewport
+  aplicarDashView();
 }
 
 function toggleSidebar(){
