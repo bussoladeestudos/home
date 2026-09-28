@@ -389,6 +389,27 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
 .dash-saudacao { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); align-items:stretch; gap:.8rem; margin-bottom:0; }
 .dash-saudacao > #bussolaRumo { display:flex; justify-content:flex-start; }
 @media(max-width:1024px){ .dash-saudacao { grid-template-columns:1fr; } }
+
+/* ── Modo de visualização do dashboard ──────────────────────────
+   Alguns alunos preferem ver o dashboard como ele aparece no
+   computador, com a bússola e a galeria lado a lado. O botão troca a
+   largura do viewport enquanto o dashboard está aberto (ver
+   aplicarDashView no ui.js), então quem manda no layout continua
+   sendo a media query: aqui só cuidamos do botão.
+   Em tela larga ele não aparece, porque lá o dashboard já é o layout
+   do computador. Em modo computador o celular desenha 1100px na tela
+   inteira e encolhe tudo: por isso o botão de voltar cresce, senão
+   ficaria pequeno demais para o aluno achar e tocar. */
+.dash-view-bar { display:none; justify-content:flex-end; margin:0 0 .6rem; }
+.dash-view-btn { display:inline-flex; align-items:center; gap:.4rem; background:var(--white); border:1px solid var(--gray-200); border-radius:99px; padding:.45rem .85rem; font-size:.75rem; font-weight:700; color:var(--navy); cursor:pointer; min-height:38px; }
+.dash-view-btn:hover { background:var(--blue-pale); border-color:var(--blue-border); }
+/* body.toque = aparelho de toque (pointer:coarse). O modo computador
+   depende da meta viewport, que só vale em navegador de celular ou
+   tablet: no computador ela é ignorada e o botão não faria nada. */
+@media(max-width:1024px){ body.toque .dash-view-bar { display:flex; } }
+body.dash-pc .dash-view-bar { display:flex; }
+body.dash-pc .dash-view-btn { font-size:1.9rem; padding:1rem 1.8rem; min-height:78px; border-width:3px; border-radius:99px; }
+
 /* ── Galeria de medalhas (topo do dashboard, ao lado da bússola) ──
    Cor por nível da medalha: 1 bronze, 2 prata, 3 ouro. Bloqueadas ficam
    em cinza, para o aluno ver o que ainda dá para conquistar. O nível do
