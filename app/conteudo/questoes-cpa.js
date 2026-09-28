@@ -2773,7 +2773,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa B está correta. O MRP ressarce prejuízo decorrente de ação ou omissão do intermediário, como uma venda não autorizada, mas não cobre a desvalorização de um ativo decorrente de risco de mercado.</p><p>A A usa o limite de R$ 200 mil como se ele ampliasse a natureza da cobertura. A C ignora que falhas do intermediário estão justamente entre as hipóteses que podem gerar ressarcimento. A D troca os eventos cobertos e não cobertos.</p><p>Regra de bolso: MRP cobre falha do intermediário, não risco de mercado nem risco de crédito.</p>",
      "enunciado": "<p>Um investidor apresenta duas situações. Na primeira, uma ação comprada por decisão própria perde valor porque a empresa teve desempenho ruim. Na segunda, o operador da corretora vende ativos do cliente sem autorização e causa prejuízo. Considerando o Mecanismo de Ressarcimento de Prejuízos, a conclusão correta é:</p>",
      "alternativas": {
-      "a": "O MRP pode cobrir as duas situações, até o limite de R$ 200 mil por reclamação.",
+      "a": "O MRP pode cobrir as duas situações, até o limite de R$ 200 mil por ocorrência.",
       "b": "O MRP pode cobrir a falha do intermediário, mas não a perda causada pelo mercado.",
       "c": "O MRP não cobre nenhuma das situações, porque todo investimento financeiro envolve risco.",
       "d": "O MRP cobre a queda da ação, mas não a venda feita sem a autorização do cliente."
@@ -2793,19 +2793,19 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "simulado",
       "revisao"
      ],
-     "comentario": "<p>A alternativa C está correta. O investidor profissional é dispensado do dever de verificação de adequação, o suitability, porque a regulação presume nele a maior capacidade de avaliar risco. A lógica das categorias é essa: quanto maior a capacidade de avaliar risco, menor a tutela regulatória.</p><p>A A troca a regra da norma por um documento assinado no balcão. A B estende ao qualificado uma dispensa que é só do profissional. A D nega a existência da dispensa.</p><p>Regra de bolso: só o profissional dispensa suitability; o qualificado continua sujeito a ele.</p>",
-     "enunciado": "<p>Ao distribuir um produto de investimento, um assessor precisa saber para qual categoria a verificação de adequação do produto ao perfil, o suitability, é dispensada. De acordo com o material, a dispensa alcança:</p>",
+     "comentario": "<p>A alternativa C está correta. A Resolução CVM 30 dispensa a verificação de adequação quando o cliente é investidor qualificado, e ressalva dessa dispensa a pessoa natural que se enquadrou por volume de recursos, seja como qualificada acima de R$ 1 milhão, seja como profissional acima de R$ 10 milhões, e a que se enquadrou por certificação ou exame de qualificação técnica. Segue dispensada a pessoa natural registrada na CVM como assessor de investimento, administrador de carteiras, analista ou consultor, quanto aos próprios recursos.</p><p>A A troca a regra da norma por um documento assinado no balcão. A B aplica a dispensa exatamente ao caso ressalvado. A D confunde item da análise de perfil com causa de dispensa.</p><p>Regra de bolso: a dispensa é do qualificado, e a pessoa natural que chegou lá por dinheiro ou por certificado continua sujeita ao suitability.</p>",
+     "enunciado": "<p>Ao distribuir um produto de investimento, um assessor precisa saber em que situação a verificação de adequação do produto ao perfil, o suitability, fica dispensada. De acordo com o material, a dispensa alcança:</p>",
      "alternativas": {
       "a": "Qualquer investidor que assine um termo de ciência de risco na instituição.",
-      "b": "O investidor qualificado e também o investidor profissional, pelo volume aplicado.",
-      "c": "Apenas o investidor profissional, por presunção de capacidade de avaliar risco.",
-      "d": "Nenhuma categoria, porque a verificação de adequação vale para todos os clientes."
+      "b": "O cliente pessoa natural que se tornou qualificado por ter mais de R$ 1 milhão aplicado.",
+      "c": "O investidor qualificado, salvo a pessoa natural enquadrada por volume de recursos ou por certificação.",
+      "d": "Todo cliente que declare no cadastro já ter operado o produto oferecido."
      },
      "gabarito": "c",
      "feedback": {
       "a": "A assinatura de um termo pelo cliente não substitui a verificação de adequação.",
-      "b": "A dispensa não alcança o qualificado, e sim apenas a categoria do profissional.",
-      "d": "A dispensa existe e está prevista justamente para o investidor profissional."
+      "b": "A dispensa do qualificado para justamente na pessoa natural enquadrada por volume de recursos.",
+      "d": "Experiência declarada pelo cliente é um dos itens analisados no suitability, e não uma causa de dispensa."
      }
     },
     {
