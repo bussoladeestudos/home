@@ -908,3 +908,105 @@ test("calcExercicios: sem semana anterior, a variação é nula em vez de infini
   assert.strictEqual(r.variacao,null);
   assert.strictEqual(r.mediaDiaria,1);
 });
+
+/* ── Poda do histórico por dia (21/09/2026) ─────────────────────────────
+   O documento do aluno no Firestore tem teto fixo de 1 MiB. A poda junta
+   as linhas por dia com mais de uma semana num saldo (`legado`). Os testes
+   garantem as três coisas que não podem quebrar: os totais, o botão de
+   apagar os últimos 7 dias e o tamanho parando de crescer. */
+function diaMais(base,n){ const d=new Date(base+"T12:00:00"); d.setDate(d.getDate()+n); return d.toISOString().slice(0,10); }
+
+test("poda: linhas com mais de 7 dias viram saldo e os totais não mudam",()=>{
+  const E=freshEngine(baseState({questoes:{},exDias:{}}),FIX_EDITAIS);
+  E.registrarResposta("q1","c",false,"2026-07-03");
+  E.registrarResposta("q1","b",true ,"2026-07-15");
+  E.registrarResposta("q1","b",true ,"2026-08-02");
+  E.registrarResposta("q1","c",false,"2026-08-20");
+  E.registrarResposta("q1","b",true ,"2026-09-18");
+  const r=E.statusQuestao("q1");
+  assert.strictEqual(r.n,5); assert.strictEqual(r.ok,3);
+  assert.strictEqual(r.ultima,"2026-09-18"); assert.strictEqual(r.ultimaCerta,true);
+  assert.deepStrictEqual(Object.keys(r.porDia),["2026-09-18"]);
+  assert.strictEqual(r.legado.n,4); assert.strictEqual(r.legado.ok,2);
+  assert.strictEqual(r.legado.ultima,"2026-08-20"); assert.strictEqual(r.legado.ultimaOpcao,"c");
+});
+
+test("poda: a semana mais recente continua em detalhe, dia a dia",()=>{
+  const E=freshEngine(baseState({questoes:{},exDias:{}}),FIX_EDITAIS);
+  for(let i=0;i<=7;i++) E.registrarResposta("q1","a",true,diaMais("2026-09-10",i));
+  const dias=Object.keys(E.statusQuestao("q1").porDia).sort();
+  assert.strictEqual(dias.length,8);                       // hoje-7 até hoje
+  assert.strictEqual(dias[0],"2026-09-10"); assert.strictEqual(dias[7],"2026-09-17");
+  assert.strictEqual(E.statusQuestao("q1").legado,undefined);
+});
+
+test("poda: apagar os últimos 7 dias continua certo depois da poda",()=>{
+  const st=baseState({questoes:{},exDias:{}});
+  const E=freshEngine(st,FIX_EDITAIS);
+  E.registrarResposta("q1","c",false,"2026-08-01");
+  E.registrarResposta("q1","b",true ,"2026-08-20");
+  E.registrarResposta("q1","d",false,"2026-09-15");
+  E.registrarResposta("q1","b",true ,"2026-09-18");
+  assert.strictEqual(E.apagarHistoricoExercicios("7","2026-09-18"),true);
+  const r=E.statusQuestao("q1");
+  assert.strictEqual(r.n,2); assert.strictEqual(r.ok,1);   // sobra o que foi podado
+  assert.strictEqual(r.ultima,"2026-08-20");               // restaurado a partir do saldo
+  assert.strictEqual(r.ultimaOpcao,"b"); assert.strictEqual(r.ultimaCerta,true);
+  assert.strictEqual(Object.keys(st.exDias).includes("2026-09-15"),false);
+  assert.strictEqual(Object.keys(st.exDias).includes("2026-08-20"),true);
+});
+
+test("poda: apagar hoje depois da poda preserva o saldo",()=>{
+  const E=freshEngine(baseState({questoes:{},exDias:{}}),FIX_EDITAIS);
+  E.registrarResposta("q1","a",true ,"2026-08-01");
+  E.registrarResposta("q1","c",false,"2026-09-18");
+  assert.strictEqual(E.apagarHistoricoExercicios("hoje","2026-09-18"),true);
+  const r=E.statusQuestao("q1");
+  assert.strictEqual(r.n,1); assert.strictEqual(r.ultima,"2026-08-01"); assert.strictEqual(r.ultimaCerta,true);
+});
+
+test("poda: quem já tinha meses acumulados é podado na primeira resposta do dia",()=>{
+  // histórico antigo, gravado antes desta versão: várias linhas velhas em muitas questões
+  const antigo={};
+  for(let q=0;q<50;q++){
+    const porDia={};
+    for(let k=0;k<30;k++) porDia[diaMais("2026-04-01",k*3)]={n:1,ok:1,ultimaOpcao:"a",ultimaCerta:true};
+    antigo["q"+q]={n:30,ok:30,ultima:diaMais("2026-04-01",87),ultimaOpcao:"a",ultimaCerta:true,porDia};
+  }
+  const st=baseState({questoes:antigo,exDias:{}});
+  const E=freshEngine(st,FIX_EDITAIS);
+  E.registrarResposta("outra","a",true,"2026-09-20");      // uma resposta qualquer, de outra questão
+  for(let q=0;q<50;q++){
+    const r=st.questoes["q"+q];
+    assert.strictEqual(Object.keys(r.porDia).length,0,"q"+q+" ficou com linhas velhas");
+    assert.strictEqual(r.n,30); assert.strictEqual(r.legado.n,30);
+  }
+  assert.strictEqual(st._podaEm,"2026-09-20");
+});
+
+test("poda: o tamanho para de crescer, mesmo respondendo por um ano",()=>{
+  const st=baseState({questoes:{},exDias:{}});
+  const E=freshEngine(st,FIX_EDITAIS);
+  const ids=Array.from({length:300},(_,i)=>"q"+i);
+  const medir=()=>JSON.stringify(st.questoes).length;
+  let c=0,aos90=0;
+  for(let d=0;d<365;d++){
+    const dia=diaMais("2026-01-01",d);
+    for(let j=0;j<40;j++){ E.registrarResposta(ids[c%ids.length],"a",c%3!==0,dia); c++; }
+    if(d===89) aos90=medir();
+  }
+  const aos365=medir();
+  // cada questão respondida a cada ~7 dias: sem poda seriam ~52 linhas por questão ao fim do ano
+  assert.ok(aos365<aos90*1.15, "cresceu de "+aos90+" para "+aos365);
+  Object.values(st.questoes).forEach(r=>assert.ok(Object.keys(r.porDia).length<=8));
+});
+
+test("poda: filtros de erradas e não respondidas enxergam o saldo",()=>{
+  const E=freshEngine(baseState({questoes:{},exDias:{}}),FIX_EDITAIS);
+  E.registrarResposta("q1","c",false,"2026-06-01");         // errou e nunca mais respondeu
+  E.registrarResposta("q2","a",true ,"2026-09-18");          // dispara a varredura do dia
+  const r=E.statusQuestao("q1");
+  assert.strictEqual(Object.keys(r.porDia).length,0);
+  assert.strictEqual(r.ultimaCerta,false);                   // "só as que errei" continua pegando
+  assert.ok(E.statusQuestao("q1"));                          // e ela segue contando como respondida
+});
