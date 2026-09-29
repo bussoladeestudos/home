@@ -36,14 +36,25 @@ test("o modo computador só liga com o dashboard na tela",()=>{
     "precisa restaurar o viewport padrão quando o modo está desligado");
 });
 
-test("a preferência é do aparelho, não da conta",()=>{
-  assert.ok(/localStorage\.getItem\(DASH_VIEW_KEY\)/.test(ui),
-    "a escolha fica no localStorage");
+test("o painel é momentâneo: o dashboard é primariamente em coluna",()=>{
+  // guardar a escolha fazia o aluno voltar ao dashboard já em painel,
+  // com o menu ocupando parte da tela quando ele esperava a coluna
+  assert.ok(/let _dashView="auto";/.test(ui),"o estado vive em memória");
+  assert.ok(!/localStorage[^\n]*dashView/i.test(ui),
+    "a escolha não pode ser salva: ela zera ao sair da tela");
   assert.ok(!/STATE\.dashView/.test(ui),
-    "não pode ir para o STATE: o STATE sincroniza e levaria a escolha do celular para o computador");
-  // localStorage bloqueado (aba anônima) não pode derrubar o app
-  assert.ok(/catch\(e\)\{ return "auto"; \}/.test(ui),
-    "getDashView precisa cair no modo automático se o localStorage falhar");
+    "e muito menos no STATE, que sincroniza entre aparelhos");
+  const f=ui.match(/function aplicarDashView\(\)\{[\s\S]*?\n\}/);
+  assert.ok(f&&/if\(STATE\.pagina!=="dashboard"\) _dashView="auto"/.test(f[0]),
+    "sair do dashboard precisa devolver o modo coluna");
+});
+
+test("o viewport volta antes de o menu ser fechado",()=>{
+  const m=ui.match(/function navTo\(pg\)\{([\s\S]*?)\n\}/);
+  assert.ok(m,"navTo não encontrada");
+  const i=m[1].indexOf("aplicarDashView()"), j=m[1].indexOf("closeSidebarMobile()");
+  assert.ok(i>=0&&j>=0&&i<j,
+    "closeSidebarMobile consulta window.innerWidth; na ordem inversa ele media os 1100px do painel, concluía que não era celular e deixava o menu aberto por cima do conteúdo");
 });
 
 test("o botão de voltar continua visível em modo computador",()=>{
