@@ -410,6 +410,49 @@ body { font-family:'Hanken Grotesque',sans-serif; background:var(--gray-50); col
 body.dash-pc .dash-view-bar { display:flex; }
 body.dash-pc .dash-view-btn { font-size:1.9rem; padding:1rem 1.8rem; min-height:78px; border-width:3px; border-radius:99px; }
 
+/* ── MENU EM TRILHO, NO MODO PAINEL ─────────────────────────────
+   No modo painel o celular desenha 1100px na tela inteira, e a barra
+   lateral de 248px come quase um quarto dela. Como o modo só existe
+   no dashboard, a barra vira um trilho de ícones: o aluno continua
+   navegando sem abrir nada e o dashboard fica com a largura.
+
+   O trilho expande por cima do conteúdo, e não empurrando: a margem
+   do .main continua na largura estreita, então nada reflui quando o
+   menu abre. Em mouse abre no hover; em tela de toque não há hover,
+   então o logo vira o botão que abre e fecha (body.rail-aberto).
+   Os rótulos continuam no DOM e são apenas recortados, para o leitor
+   de tela e o Tab continuarem enxergando o menu inteiro. */
+body.dash-pc { --sidebar-w:62px; }
+body.dash-pc .sidebar { width:var(--sidebar-w); overflow-x:hidden; transition:width .22s cubic-bezier(.4,0,.2,1); }
+body.dash-pc .sidebar:hover,
+body.dash-pc.rail-aberto .sidebar { width:248px; box-shadow:12px 0 32px rgba(0,0,0,.28); }
+/* o que é texto some enquanto o trilho está estreito */
+body.dash-pc .nav-label,
+body.dash-pc .sidebar-section-label,
+body.dash-pc .sidebar-brand > div:last-child,
+body.dash-pc .sidebar-footer { opacity:0; transition:opacity .16s; white-space:nowrap; }
+body.dash-pc .sidebar:hover .nav-label,
+body.dash-pc .sidebar:hover .sidebar-section-label,
+body.dash-pc .sidebar:hover .sidebar-brand > div:last-child,
+body.dash-pc .sidebar:hover .sidebar-footer,
+body.dash-pc.rail-aberto .nav-label,
+body.dash-pc.rail-aberto .sidebar-section-label,
+body.dash-pc.rail-aberto .sidebar-brand > div:last-child,
+body.dash-pc.rail-aberto .sidebar-footer { opacity:1; transition-delay:.06s; }
+body.dash-pc .sidebar-footer { pointer-events:none; }
+body.dash-pc .sidebar:hover .sidebar-footer,
+body.dash-pc.rail-aberto .sidebar-footer { pointer-events:auto; }
+/* o logo é o botão de abrir e fechar em tela de toque */
+body.dash-pc .sidebar-brand { cursor:pointer; }
+/* contador vira ponto sobre o ícone enquanto o rótulo está recortado */
+body.dash-pc .nav-item { position:relative; }
+body.dash-pc .nav-badge { position:absolute; left:30px; top:5px; margin-left:0; min-width:8px; height:8px; padding:0; font-size:0; line-height:0; border-radius:99px; transition:all .16s; }
+body.dash-pc .sidebar:hover .nav-badge,
+body.dash-pc.rail-aberto .nav-badge { position:static; margin-left:auto; height:auto; min-width:0; padding:1px 7px; font-size:.65rem; line-height:normal; }
+@media(prefers-reduced-motion:reduce){
+  body.dash-pc .sidebar, body.dash-pc .nav-label, body.dash-pc .nav-badge { transition:none; }
+}
+
 /* ── Galeria de medalhas (topo do dashboard, ao lado da bússola) ──
    Cor por nível da medalha: 1 bronze, 2 prata, 3 ouro. Bloqueadas ficam
    em cinza, para o aluno ver o que ainda dá para conquistar. O nível do
@@ -724,6 +767,9 @@ body.dash-pc .dash-view-btn { font-size:1.9rem; padding:1rem 1.8rem; min-height:
 .ps-depois:hover { color:#173E2C; }
 /* ── Balão de instalação do PWA (bolha de chat do Coach) ── */
 .pwa-balao { position:fixed; right:12px; top:74px; left:12px; z-index:1100; display:flex; gap:.6rem; align-items:flex-start; background:#F4EEE4; border:1px solid #E5DAC8; border-radius:4px 16px 16px 16px; padding:.8rem .9rem; box-shadow:0 12px 32px rgba(23,62,44,.28); animation:pbSobe .35s cubic-bezier(.34,1.56,.64,1); max-width:420px; margin-left:auto; }
+/* Enquanto o balão está na tela, a página reserva a altura dele: ele é
+   fixed e cobria o topo do dashboard, inclusive o botão de visualização. */
+body.pwa-balao-visivel .main { padding-top:calc(1.5rem + var(--pwa-balao-h,0px)); }
 @keyframes pbSobe { from{transform:translateY(-20px);opacity:0} to{transform:none;opacity:1} }
 .pb-avatar { width:38px; height:38px; border-radius:50%; background:#173E2C; display:flex; align-items:center; justify-content:center; font-size:1.15rem; flex-shrink:0; box-shadow:0 2px 6px rgba(23,62,44,.3); }
 .pb-corpo { flex:1; min-width:0; }
@@ -1022,6 +1068,135 @@ body.dash-pc .dash-view-btn { font-size:1.9rem; padding:1rem 1.8rem; min-height:
 /* Na tela Hoje o bloco vive dentro do subtítulo da missão */
 .hoje-sub .aula-bloco { margin-top:.6rem; }
 .restart-section { margin-top:1.25rem; border-top:1px solid var(--gray-200); padding-top:1rem; }
+
+/* ── CONFIGURAÇÃO: ASSISTENTE EM TRÊS ETAPAS ────────────────────
+   A tela era uma coluna longa com nome, datas, dias de descanso e o
+   diagnóstico de prazo ao mesmo tempo. Virou um assistente de três
+   etapas, na ordem em que os dados dependem uns dos outros:
+   1 certificação, 2 rotina, 3 prazo (a conta que sai das duas).
+
+   Visual próprio, pedido do dono em 29/09/2026: tons de areia, só o
+   logo e o nome em verde, sem texto explicativo. Quem explica é o
+   rótulo do campo e o nome da etapa; se precisar de um parágrafo para
+   o aluno entender, o campo está errado. Por isso as regras aqui são
+   quase todas escopadas em .modal-setup: o resto do app continua com
+   o visual antigo.
+
+   O deslize é um translateX no trilho, e não troca de display: o
+   movimento lateral diz ao aluno que ele avançou dentro do mesmo
+   formulário. A altura do palco acompanha a etapa ativa, senão o
+   modal pularia de tamanho. A etapa que sai fica visível durante o
+   deslize e só some depois (visibility com delay), para não piscar no
+   meio do movimento e para o Tab não alcançar campo escondido. */
+.setup-backdrop { background:rgba(44,36,26,.55); }
+.modal-setup {
+  --areia:#FBF7EF; --areia-campo:#FFFFFF; --areia-borda:#E6DCC9;
+  --areia-linha:#EFE7D8; --areia-txt:#4A4339; --areia-fraco:#9A9080;
+  --mata:#173E2C; --mata-viva:#2FB374;
+  background:var(--areia); border:1px solid var(--areia-borda);
+  padding:1.9rem 1.9rem 1.6rem; width:min(430px,92vw);
+  box-shadow:0 18px 60px rgba(44,36,26,.22);
+}
+
+/* marca */
+.su-marca { display:flex; align-items:center; gap:.55rem; margin-bottom:1.6rem; }
+.su-logo { width:22px; height:22px; color:var(--mata); flex-shrink:0; }
+.su-logo svg { width:100%; height:100%; display:block; }
+.su-nome { font-family:'Bricolage Grotesque',sans-serif; font-size:.95rem; font-weight:700; color:var(--mata); letter-spacing:-.01em; }
+.su-fechar { margin-left:auto; width:26px; height:26px; border:none; background:none; color:var(--areia-fraco); font-size:.9rem; cursor:pointer; border-radius:50%; line-height:1; }
+.su-fechar:hover { background:var(--areia-linha); color:var(--areia-txt); }
+
+/* trilha: três traços e o nome da etapa */
+.su-trilha { display:grid; grid-template-columns:repeat(3,1fr); gap:.5rem; margin-bottom:1.5rem; }
+.su-passo { display:block; background:none; border:none; padding:0; text-align:left; cursor:default; font-family:'Hanken Grotesque',sans-serif; }
+.su-traco { display:block; height:2px; border-radius:2px; background:var(--areia-borda); transition:background .25s; }
+.su-lbl { display:block; margin-top:.45rem; font-size:.7rem; font-weight:600; color:var(--areia-fraco); letter-spacing:.01em; transition:color .25s; }
+.su-passo.feito .su-traco { background:var(--mata-viva); }
+.su-passo.ativo .su-traco { background:var(--mata); }
+.su-passo.ativo .su-lbl { color:var(--mata); font-weight:700; }
+.su-trilha.navegavel .su-passo { cursor:pointer; }
+.su-trilha.navegavel .su-passo:hover .su-lbl { color:var(--areia-txt); }
+.su-passo:focus-visible { outline:2px solid var(--mata-viva); outline-offset:4px; border-radius:4px; }
+
+/* palco e trilho */
+.setup-palco { overflow:hidden; transition:height .32s cubic-bezier(.4,0,.2,1); }
+.setup-trilho { display:flex; align-items:flex-start; transition:transform .32s cubic-bezier(.4,0,.2,1); }
+.setup-etapa { flex:0 0 100%; min-width:100%; visibility:hidden; transition:visibility 0s linear .32s; }
+.setup-etapa.ativa { visibility:visible; transition-delay:0s; }
+.setup-etapa .form-row:last-child { margin-bottom:0; }
+
+/* campos em tom de areia */
+.modal-setup .form-row { margin-bottom:1.1rem; }
+.modal-setup .form-label { font-size:.74rem; font-weight:600; color:var(--areia-fraco); letter-spacing:.02em; margin-bottom:.4rem; }
+.modal-setup .form-label span { font-weight:400; }
+.modal-setup .form-input,
+.modal-setup .concurso-trigger {
+  border:1px solid var(--areia-borda); border-radius:10px; padding:11px 13px;
+  font-size:.9rem; color:var(--areia-txt); background:var(--areia-campo);
+  box-shadow:none; transition:border-color .15s,box-shadow .15s;
+}
+.modal-setup .form-input:focus,
+.modal-setup .concurso-trigger:hover,
+.modal-setup .concurso-trigger.open {
+  border-color:var(--mata-viva); box-shadow:0 0 0 3px rgba(47,179,116,.13);
+}
+.modal-setup .concurso-trigger-placeholder { color:var(--areia-fraco); }
+.modal-setup .concurso-trigger-arrow { color:var(--areia-fraco); }
+.modal-setup .concurso-dropdown { border:1px solid var(--areia-borda); border-radius:10px; box-shadow:0 10px 30px rgba(44,36,26,.14); background:var(--areia-campo); }
+.modal-setup .pref-grupo { padding:.55rem .85rem .3rem; font-size:.66rem; font-weight:700; color:var(--areia-fraco); letter-spacing:.06em; text-transform:uppercase; }
+.modal-setup .pref-btn { border:none; border-bottom:1px solid var(--areia-linha); background:none; }
+.modal-setup .pref-btn:last-child { border-bottom:none; }
+.modal-setup .pref-btn:hover { background:var(--areia); }
+.modal-setup .pref-btn.selected { background:rgba(47,179,116,.1); }
+.modal-setup .pref-btn-name { font-size:.85rem; font-weight:600; color:var(--areia-txt); }
+.modal-setup .form-grid { gap:.7rem; }
+
+/* dias de descanso: sem vermelho de alerta, só a marcação */
+.modal-setup .dow-grid { gap:5px; }
+.modal-setup .dow-btn { border:1px solid var(--areia-borda); background:var(--areia-campo); border-radius:8px; padding:8px 2px; font-size:.7rem; font-weight:600; color:var(--areia-fraco); }
+.modal-setup .dow-btn.dow-livre { background:var(--mata); border-color:var(--mata); color:#fff; }
+
+/* o diagnóstico de prazo, no mesmo tom */
+.modal-setup .prazo-hint { background:rgba(47,179,116,.09); border:1px solid rgba(47,179,116,.28); border-radius:10px; color:var(--areia-txt); font-size:.8rem; }
+.modal-setup .prazo-hint strong { color:var(--mata); }
+.modal-setup .prazo-hint.alerta { background:rgba(232,148,58,.1); border-color:rgba(232,148,58,.32); color:#7A4A12; }
+.modal-setup .prazo-hint.alerta strong { color:#7A4A12; }
+.modal-setup .prova-hint { font-size:.73rem; color:var(--areia-fraco); }
+.modal-setup .prova-hint b { color:var(--areia-txt); }
+#provaLockSpan { font-weight:400; color:var(--areia-fraco); }
+.modal-setup .form-input.travado { background:var(--areia-linha); color:var(--areia-fraco); cursor:default; }
+
+/* navegação */
+.su-nav { display:flex; align-items:center; gap:.6rem; margin-top:1.6rem; }
+.su-avancar { flex:1; background:var(--mata); color:#fff; border:none; border-radius:10px; padding:13px; font-family:'Bricolage Grotesque',sans-serif; font-size:.9rem; font-weight:700; cursor:pointer; transition:background .18s; }
+.su-avancar:hover { background:#1F5540; }
+.su-avancar:disabled { opacity:.5; cursor:default; }
+.su-voltar { background:none; border:none; padding:13px 4px; font-family:'Hanken Grotesque',sans-serif; font-size:.85rem; font-weight:600; color:var(--areia-fraco); cursor:pointer; flex-shrink:0; }
+.su-voltar:hover { color:var(--areia-txt); }
+
+/* zona de risco: fora do fluxo, atrás de um link */
+.su-gerenciar { display:block; width:100%; margin-top:1.2rem; background:none; border:none; font-family:'Hanken Grotesque',sans-serif; font-size:.72rem; font-weight:600; color:var(--areia-fraco); cursor:pointer; }
+.su-gerenciar:hover { color:var(--areia-txt); text-decoration:underline; text-underline-offset:3px; }
+.modal-setup .restart-section { margin-top:.9rem; border-top:1px solid var(--areia-linha); padding-top:.9rem; }
+/* Os dois botões de risco no tom da tela: contorno em vez de bloco de cor.
+   O vermelho fica só no que apaga dados, e só na borda e no texto. */
+.modal-setup .btn-restart-soft,
+.modal-setup .btn-restart-hard { border-radius:10px; padding:10px; font-size:.78rem; font-weight:600; background:none; }
+.modal-setup .btn-restart-soft { border:1px solid var(--areia-borda); color:var(--areia-txt); }
+.modal-setup .btn-restart-soft:hover { background:var(--areia-linha); color:var(--areia-txt); }
+.modal-setup .btn-restart-hard { border:1px solid rgba(181,72,63,.4); color:#B5483F; }
+.modal-setup .btn-restart-hard:hover { background:rgba(181,72,63,.08); color:#B5483F; }
+
+@media(prefers-reduced-motion:reduce){
+  .setup-palco, .setup-trilho { transition:none; }
+  .setup-etapa { transition-delay:0s; }
+}
+@media(max-width:420px){
+  .modal-setup { padding:1.5rem 1.35rem 1.3rem; }
+  .su-lbl { font-size:.65rem; }
+}
+}
+
 .restart-title { font-size:.78rem; font-weight:700; color:var(--gray-500); margin-bottom:.6rem; text-transform:uppercase; letter-spacing:.05em; }
 .btn-restart-soft { width:100%; padding:9px; border:1.5px solid var(--yellow-viv); background:var(--yellow-pale); border-radius:var(--radius-md); font-size:.8rem; font-weight:700; color:#92400E; cursor:pointer; margin-bottom:.5rem; transition:all .15s; }
 .btn-restart-soft:hover { background:var(--yellow-viv); color:#fff; }
