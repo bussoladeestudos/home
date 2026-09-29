@@ -58,6 +58,11 @@ const ACTIONS={
   toggleSidebar:()=>toggleSidebar(),
   togglePainel:()=>togglePainel(),
   toggleDashView:()=>toggleDashView(),
+  toggleRail:()=>toggleRail(),
+  irEtapa:d=>irEtapaSetup(+d.etapa),
+  etapaProxima:()=>etapaSetup(+1),
+  etapaAnterior:()=>etapaSetup(-1),
+  toggleGerenciar:()=>toggleGerenciar(),
   toggleInfo511:()=>toggleInfo511(),
   // autenticação
   fazerLogin:()=>fazerLogin(),
@@ -67,7 +72,7 @@ const ACTIONS={
   openSetupModal:()=>openSetupModal(),
   fecharModal:()=>fecharModal(),
   toggleConcursoDropdown:()=>toggleConcursoDropdown(),
-  selecionarGrupo:d=>selecionarGrupo(d.grupo,true),
+  selecionarEdital:d=>selecionarEdital(d.key),
   toggleDow:d=>toggleDow(+d.i),
   usarPrazoSugerido:()=>usarPrazoSugerido(),
   exSetPeriodo:d=>exSetPeriodo(d.p),
@@ -557,9 +562,13 @@ window.addEventListener("DOMContentLoaded",async ()=>{
   } else {
     navTo("dashboard");
     selecionarPref(Object.keys(EDITAIS)[0], false);
-    // Primeiro acesso: mostra boas-vindas; depois disso, o setup
+    // Primeiro acesso: mostra boas-vindas; depois disso, o setup.
+    /* Abrir pelo openSetupModal, e não pela classe: o modal precisa ser
+       populado a partir do STATE. Abrindo só pela classe, o select de horas
+       ficava no primeiro item, 1h, em vez do padrão de 3h, e as etapas não
+       eram inicializadas. */
     if(!onboardDone()) showWelcome();
-    else document.getElementById("setupModal").classList.add("open");
+    else openSetupModal();
   }
   setTopbarDate();
   // Fechar modal Revisão Geral com Escape
@@ -586,12 +595,27 @@ function getGrupos(){
 let _grupoSelecionado=null;
 let _prefSelecionada=Object.keys(EDITAIS||{})[0]||"cpaAnbima";
 
+/* A lista mostra os EXAMES, e não os grupos. Antes eram dois campos em
+   sequência, "Certificação: Certificações" e depois "Exame: CPA Anbima",
+   o que fazia o aluno escolher duas vezes a mesma coisa e lia como
+   repetição. Agora a escolha é uma só; o grupo virou cabeçalho da lista,
+   que é o papel que ele realmente tem. O select #inputCargo continua no
+   DOM, escondido, porque iniciarBússola e o resto do app leem o edital
+   dali. */
 function renderPrefButtons(){
   const grid=document.getElementById("prefGrid");
   const grupos=getGrupos();
-  grid.innerHTML=Object.keys(grupos).map(g=>`<button class="pref-btn${_grupoSelecionado===g?" selected":""}" id="grupo-btn-${CSS.escape(g)}" data-action="selecionarGrupo" data-grupo="${esc(g)}" role="option" aria-selected="${_grupoSelecionado===g}" type="button">
-      <span class="pref-btn-name">${g}</span>
-    </button>`).join("");
+  grid.innerHTML=Object.entries(grupos).map(([g,items])=>
+    `<div class="pref-grupo">${esc(g)}</div>`+
+    items.map(({key,ed})=>{
+      const nome=(ed.cargos&&ed.cargos[0])?ed.cargos[0]:ed.nome;
+      return `<button class="pref-btn${_prefSelecionada===key?" selected":""}" id="edital-btn-${CSS.escape(key)}" data-action="selecionarEdital" data-key="${esc(key)}" role="option" aria-selected="${_prefSelecionada===key}" type="button"><span class="pref-btn-name">${esc(nome)}</span></button>`;
+    }).join("")
+  ).join("");
+}
+function selecionarEdital(key){
+  selecionarPref(key,true);
+  closeConcursoDropdown();
 }
 
 function _setupCargoOnChange(){
@@ -609,16 +633,17 @@ function _setupCargoOnChange(){
 function atualizarModoProva(isCert){
   const provaEl=document.getElementById("inputProva");
   const lockSpan=document.getElementById("provaLockSpan");
+  // estilo por classe, e não inline: o campo tem paleta própria no modal
   if(isCert){
     provaEl.removeAttribute("readonly");
-    provaEl.style.background="";provaEl.style.color="";provaEl.style.cursor="";
+    provaEl.classList.remove("travado");
     provaEl.title="Defina a data do seu exame";
-    if(lockSpan){lockSpan.textContent="📅 você define a data";lockSpan.style.color="#2563EB";}
+    if(lockSpan) lockSpan.textContent="você define";
   } else {
     provaEl.setAttribute("readonly","");
-    provaEl.style.background="#f8fafc";provaEl.style.color="#64748b";provaEl.style.cursor="default";
+    provaEl.classList.add("travado");
     provaEl.title="Data fixada pelo edital";
-    if(lockSpan){lockSpan.textContent="🔒 fixada pelo edital";lockSpan.style.color="#2FB374";}
+    if(lockSpan) lockSpan.textContent="fixada pelo edital";
   }
   atualizarPrazoSetup();
 }
@@ -650,6 +675,7 @@ function calcPrazoDoFormulario(){
   if(!inicioEl||!horasEl) return null;
   const inicio=inicioEl.value;
   if(!inicio) return null;
+  if(!horasEl.value) return null;   // horas em branco: não há prazo a calcular
   const editKey=(cargoEl&&cargoEl.value)||_prefSelecionada;
   if(!editKey||!EDITAIS[editKey]) return null;
   const _prev={inicio:STATE.inicio,horasDia:STATE.horasDia,
@@ -663,6 +689,25 @@ function calcPrazoDoFormulario(){
   return r;
 }
 
+/* O diagnóstico de prazo mora na etapa 3, mas quem mexe nas horas está
+   na etapa 2 e precisa ver o efeito na hora. A etapa 2 recebe só a
+   frase curta, "6 tópicos por dia"; a conta inteira fica na 3. */
+function espelharPrazoRotina(hintEl){
+  const eco=document.getElementById("prazoHintRotina");
+  if(!eco) return;
+  if(!hintEl||hintEl.hidden){ eco.hidden=true; ajustarAlturaSetup(); return; }
+  const forte=hintEl.querySelector("strong");
+  if(!forte){ eco.hidden=true; ajustarAlturaSetup(); return; }
+  eco.className=hintEl.className;
+  // o <strong> da etapa 3 termina em ponto ("6 tópicos por dia."); aqui a
+  // frase continua, então o ponto sai
+  const nucleo=forte.textContent.replace(/\.\s*$/,"");
+  eco.innerHTML='<span class="ph-ic">'+(hintEl.classList.contains("alerta")?"⏳":"⚡")+'</span>'
+    +"<span><strong>"+nucleo+"</strong> nesse ritmo.</span>";
+  eco.hidden=false;
+  ajustarAlturaSetup();
+}
+
 function atualizarPrazoSetup(){
   const hintEl=document.getElementById("prazoHint");
   const provaEl=document.getElementById("inputProva");
@@ -672,9 +717,9 @@ function atualizarPrazoSetup(){
   const cargoEl=document.getElementById("inputCargo");
   const ed=EDITAIS[(cargoEl&&cargoEl.value)||_prefSelecionada];
   // Concurso com data fixada pelo edital: nao ha o que sugerir.
-  if(ed&&ed.dataProva){ hintEl.hidden=true; provaHint.hidden=true; return; }
+  if(ed&&ed.dataProva){ hintEl.hidden=true; provaHint.hidden=true; espelharPrazoRotina(null); return; }
   const r=calcPrazoDoFormulario();
-  if(!r){ hintEl.hidden=true; provaHint.hidden=true; return; }
+  if(!r){ hintEl.hidden=true; provaHint.hidden=true; espelharPrazoRotina(null); return; }
 
   const longo=r.diasCorridos>120;   // acima de ~4 meses vale sugerir mais horas
   hintEl.className="prazo-hint"+(longo?" alerta":"");
@@ -686,16 +731,17 @@ function atualizarPrazoSetup(){
     +(longo?" Aumentar as horas por dia encurta bastante esse prazo.":"")
     +`</span>`;
   hintEl.hidden=false;
+  espelharPrazoRotina(hintEl);
 
   if(_provaAuto){
     provaEl.value=r.provaSugerida;
-    if(lockSpan){ lockSpan.textContent="🧭 sugerida pela Bússola"; lockSpan.style.color="#2FB374"; }
-    provaHint.innerHTML="Já tem data marcada para o exame? Troque aqui e a Bússola reajusta o ritmo.";
+    if(lockSpan) lockSpan.textContent="sugerida";
+    provaHint.innerHTML="Já tem data marcada? Troque aqui e o ritmo se reajusta.";
     provaHint.hidden=false;
     return;
   }
 
-  if(lockSpan){ lockSpan.textContent="📅 você definiu"; lockSpan.style.color="#2563EB"; }
+  if(lockSpan) lockSpan.textContent="você definiu";
   const escolhida=provaEl.value;
   const btn=`<button type="button" class="btn-prazo" data-action="usarPrazoSugerido">usar ${_dataBR(r.provaSugerida)}</button>`;
   if(escolhida&&escolhida<r.provaSugerida){
@@ -720,29 +766,6 @@ function provaManual(){ _provaAuto=false; atualizarPrazoSetup(); }
 /* Volta para a data calculada pela Bussola. */
 function usarPrazoSugerido(){ _provaAuto=true; atualizarPrazoSetup(); }
 
-function selecionarGrupo(grupo, userAction){
-  _grupoSelecionado=grupo;
-  document.querySelectorAll(".pref-btn").forEach(b=>{b.classList.remove("selected");b.setAttribute("aria-selected","false");});
-  const btn=document.getElementById("grupo-btn-"+CSS.escape(grupo));
-  if(btn){btn.classList.add("selected");btn.setAttribute("aria-selected","true");}
-  const triggerText=document.getElementById("concursoTriggerText");
-  if(triggerText){triggerText.textContent=grupo;triggerText.classList.remove("concurso-trigger-placeholder");}
-  closeConcursoDropdown();
-  const grupos=getGrupos();
-  const items=grupos[grupo]||[];
-  const cargoSel=document.getElementById("inputCargo");
-  cargoSel.innerHTML=items.map(({key,ed})=>`<option value="${key}">${ed.cargos&&ed.cargos[0]?ed.cargos[0]:ed.nome}</option>`).join("");
-  _prefSelecionada=cargoSel.value;
-  const firstEd=EDITAIS[_prefSelecionada];
-  const isCertGrupo=!firstEd||!firstEd.dataProva;
-  if(firstEd&&firstEd.dataProva) document.getElementById("inputProva").value=firstEd.dataProva;
-  else if(isCertGrupo) document.getElementById("inputProva").value="";
-  atualizarModoProva(isCertGrupo);
-  document.getElementById("cargoRow").style.display="block";
-  _setupCargoOnChange();
-  renderCursinhoSelect();
-  if(userAction&&STATE.inicio) document.getElementById("inputNome").value=STATE.nome||"";
-}
 
 /* backward-compat: dado key do edital, restaura grupo+cargo corretos */
 function selecionarPref(key, userAction){
@@ -755,20 +778,29 @@ function selecionarPref(key, userAction){
   const btn=document.getElementById("grupo-btn-"+CSS.escape(grupo));
   if(btn){btn.classList.add("selected");btn.setAttribute("aria-selected","true");}
   const triggerText=document.getElementById("concursoTriggerText");
-  if(triggerText){triggerText.textContent=grupo;triggerText.classList.remove("concurso-trigger-placeholder");}
+  const nomeExame=(ed.cargos&&ed.cargos[0])?ed.cargos[0]:ed.nome;
+  if(triggerText){triggerText.textContent=nomeExame;triggerText.classList.remove("concurso-trigger-placeholder");}
   const grupos=getGrupos();
   const items=grupos[grupo]||[];
   const cargoSel=document.getElementById("inputCargo");
   cargoSel.innerHTML=items.map(({key:k,ed:e})=>`<option value="${k}"${k===key?" selected":""}>${e.cargos&&e.cargos[0]?e.cargos[0]:e.nome}</option>`).join("");
   cargoSel.value=key;
+  document.querySelectorAll(".pref-btn").forEach(b=>{
+    const sel=b.id==="edital-btn-"+key;
+    b.classList.toggle("selected",sel); b.setAttribute("aria-selected",sel?"true":"false");
+  });
   const isCertPref=!ed.dataProva;
   if(ed.dataProva) document.getElementById("inputProva").value=ed.dataProva;
   else document.getElementById("inputProva").value=STATE.prova||"";
   atualizarModoProva(isCertPref);
-  document.getElementById("cargoRow").style.display="block";
+  // o exame já aparece no próprio seletor: a linha extra seria repetição
+  document.getElementById("cargoRow").style.display="none";
   _setupCargoOnChange();
   renderCursinhoSelect();
   if(userAction&&STATE.inicio) document.getElementById("inputNome").value=STATE.nome||"";
+  if(userAction) _prefEscolhida=true;
+  // cargo e cursinho aparecem/somem conforme a certificação: a etapa muda de altura
+  ajustarAlturaSetup();
 }
 
 function toggleConcursoDropdown(){
@@ -780,6 +812,7 @@ function toggleConcursoDropdown(){
     dd.classList.add("open");
     trigger.classList.add("open");
     trigger.setAttribute("aria-expanded","true");
+    ajustarAlturaSetup();
   }
 }
 function closeConcursoDropdown(){
@@ -787,6 +820,7 @@ function closeConcursoDropdown(){
   const trigger=document.getElementById("concursoTrigger");
   if(dd){ dd.classList.remove("open"); }
   if(trigger){ trigger.classList.remove("open"); trigger.setAttribute("aria-expanded","false"); }
+  ajustarAlturaSetup();
 }
 // Close dropdown on outside click
 document.addEventListener("click",function(e){
@@ -934,6 +968,144 @@ function renderCursinhoNota(){
     : `Ainda não há aulas vinculadas ao ${esc(p.nome)} neste edital. Assim que houver, elas aparecem sozinhas nos tópicos.`;
 }
 
+/* ── CONFIGURAÇÃO EM ETAPAS ─────────────────────────────────────
+   Três etapas: 1 certificação, 2 rotina, 3 prazo. A ordem não é
+   estética: a etapa 3 só tem o que dizer depois que a 1 e a 2 foram
+   respondidas, porque o prazo é calculado a partir delas.
+
+   O deslize é um translateX no trilho. A altura do palco é escrita
+   aqui, em pixel, porque `overflow:hidden` é o que impede a etapa
+   vizinha de aparecer de lado, e com overflow escondido a altura
+   precisa ser dada. medirEtapa devolve a altura da etapa ativa já
+   contando o dropdown de certificação, que é absoluto e seria
+   cortado pelo overflow se ele não entrasse na conta.
+
+   _setupNavegavel: aluno já configurado pode pular direto para a
+   etapa que quer mudar; aluno novo segue a ordem, senão chegaria na
+   etapa 3 sem ter dito nem qual é a certificação. */
+let _setupEtapa=1, _setupNavegavel=false;
+/* Diz se o aluno ESCOLHEU a certificação, e não apenas se existe uma
+   selecionada: o boot já pré-seleciona a primeira da lista. */
+let _prefEscolhida=false;
+const SETUP_ETAPAS=3;
+
+function medirEtapaSetup(el){
+  if(!el) return 0;
+  let h=el.offsetHeight;
+  // dropdown de certificação aberto: é absolute, então não entra no
+  // offsetHeight da etapa, mas seria cortado pelo overflow do palco.
+  const dd=el.querySelector(".concurso-dropdown.open");
+  if(dd){
+    /* offsetTop do gatilho é relativo ao .concurso-picker, que é
+       position:relative, e não à etapa: media quase zero e a lista saía
+       cortada. Medir pelo retângulo na tela resolve, e já inclui a
+       rolagem interna do dropdown. */
+    const topo=el.getBoundingClientRect().top;
+    const fim=dd.getBoundingClientRect().bottom;
+    h=Math.max(h,Math.ceil(fim-topo)+8);
+  }
+  return h;
+}
+function ajustarAlturaSetup(){
+  const palco=document.getElementById("setupPalco");
+  if(!palco) return;
+  const ativa=palco.querySelector('.setup-etapa[data-etapa="'+_setupEtapa+'"]');
+  const h=medirEtapaSetup(ativa);
+  if(h) palco.style.height=h+"px";
+}
+function pintarTrilhaSetup(){
+  const trilha=document.getElementById("setupTrilha");
+  if(!trilha) return;
+  trilha.classList.toggle("navegavel",_setupNavegavel);
+  trilha.querySelectorAll(".su-passo").forEach(b=>{
+    const n=+b.dataset.etapa;
+    b.classList.toggle("ativo",n===_setupEtapa);
+    b.classList.toggle("feito",n<_setupEtapa);
+    b.setAttribute("aria-selected",n===_setupEtapa?"true":"false");
+    b.disabled=!_setupNavegavel&&n!==_setupEtapa;
+  });
+}
+function irEtapaSetup(n,semFoco){
+  if(n<1||n>SETUP_ETAPAS) return;
+  if(n!==_setupEtapa&&!_setupNavegavel&&n>_setupEtapa&&!validarEtapaSetup(_setupEtapa)) return;
+  closeConcursoDropdown();
+  _setupEtapa=n;
+  const trilho=document.getElementById("setupTrilho");
+  if(trilho){
+    trilho.style.transform="translateX(-"+((n-1)*100)+"%)";
+    trilho.querySelectorAll(".setup-etapa").forEach(s=>{
+      s.classList.toggle("ativa",+s.dataset.etapa===n);
+    });
+  }
+  pintarTrilhaSetup();
+  // a etapa 3 é a conta: recalcula antes de medir, senão a altura sai errada
+  if(n===SETUP_ETAPAS) atualizarPrazoSetup();
+  ajustarAlturaSetup();
+  const voltar=document.getElementById("btnSetupVoltar");
+  const avancar=document.getElementById("btnSetupAvancar");
+  const salvar=document.getElementById("btnIniciarBússola");
+  if(voltar)  voltar.style.visibility=n>1?"visible":"hidden";
+  if(avancar) avancar.style.display=n<SETUP_ETAPAS?"block":"none";
+  if(salvar)  salvar.style.display=n===SETUP_ETAPAS?"block":"none";
+  if(!semFoco){
+    const alvo=document.querySelector('.setup-etapa[data-etapa="'+n+'"] .form-input, .setup-etapa[data-etapa="'+n+'"] .concurso-trigger');
+    if(alvo&&window.innerWidth>768) setTimeout(()=>{try{alvo.focus({preventScroll:true});}catch(e){}},340);
+  }
+}
+function etapaSetup(passo){ irEtapaSetup(_setupEtapa+passo); }
+/* Girar o celular ou redimensionar a janela muda a altura da etapa:
+   sem remedir, o palco corta o conteúdo ou sobra espaço em branco. */
+window.addEventListener("resize",()=>{
+  const m=document.getElementById("setupModal");
+  if(m&&m.classList.contains("open")) ajustarAlturaSetup();
+});
+
+/* Só barra o avanço no que impede a etapa seguinte de fazer sentido.
+   Nome em branco não barra: iniciarBússola já assume "Candidato". */
+function validarEtapaSetup(n){
+  if(n===1){
+    /* O app pré-seleciona a primeira certificação da lista no boot, então
+       checar só _prefSelecionada deixaria passar quem nunca abriu o
+       seletor e levaria o aluno para o edital errado calado. _prefEscolhida
+       só fica true quando o aluno escolhe, ou quando o plano já existe. */
+    if(!_prefEscolhida){
+      showToast("Escolha a certificação para continuar.");
+      const trig=document.getElementById("concursoTrigger");
+      if(trig) try{ trig.focus({preventScroll:true}); }catch(e){}
+      return false;
+    }
+  }
+  if(n===2){
+    const i=document.getElementById("inputInicio");
+    if(!i||!i.value){ showToast("Informe o dia em que você começa."); return false; }
+    const h=document.getElementById("inputHoras");
+    if(!h||!h.value){ showToast("Escolha quantas horas por dia você tem."); return false; }
+  }
+  return true;
+}
+/* Devolve o seletor de certificação ao estado em branco. O boot chama
+   selecionarPref com a primeira da lista para o app ter um edital de
+   trabalho; isso preenche o gatilho e abre a linha do exame. Para quem
+   nunca configurou, a tela precisa voltar a mostrar "Selecione". */
+function limparSelecaoPref(){
+  const txt=document.getElementById("concursoTriggerText");
+  if(txt){ txt.textContent="Selecione"; txt.classList.add("concurso-trigger-placeholder"); }
+  const cargo=document.getElementById("cargoRow");
+  if(cargo) cargo.style.display="none";
+  const curs=document.getElementById("rowCursinho");
+  if(curs) curs.style.display="none";
+  document.querySelectorAll(".pref-btn").forEach(b=>{
+    b.classList.remove("selected"); b.setAttribute("aria-selected","false");
+  });
+}
+function toggleGerenciar(){
+  const sec=document.getElementById("restartSection");
+  if(!sec) return;
+  const aberto=sec.style.display==="block";
+  if(aberto) cancelarReinicio();
+  sec.style.display=aberto?"none":"block";
+}
+
 function openSetupModal(){
   // Sem data salva = primeira configuracao, a Bussola sugere. Com data salva =
   // decisao do aluno, e ela so muda se ele pedir. Precisa vir ANTES de popular
@@ -949,18 +1121,31 @@ function openSetupModal(){
   document.getElementById("inputProva").value=(_edAtual&&_edAtual.dataProva)||(STATE.prova&&!_isCertAtual?STATE.prova:"")||"";
   atualizarModoProva(_isCertAtual);
   if(STATE.prefeitura&&EDITAIS[STATE.prefeitura]) selecionarPref(STATE.prefeitura,false);
-  document.getElementById("inputHoras").value=String(STATE.horasDia||3);
   const hasInicio=!!STATE.inicio;
-  document.getElementById("restartSection").style.display=hasInicio?"block":"none";
-  document.getElementById("btnFecharModal").style.display=hasInicio?"flex":"none";
+  /* Campo em branco para quem nunca configurou (decisão do dono em
+     29/09/2026). Valor pré-preenchido faz o aluno aceitar uma rotina que
+     não é a dele, e o plano inteiro sai da rotina. Quem já tem cronograma
+     vê o que salvou. */
+  document.getElementById("inputHoras").value=hasInicio?String(STATE.horasDia||3):"";
+  document.getElementById("btnFecharModal").style.display=hasInicio?"block":"none";
   const btnSalvar=document.getElementById("btnIniciarBússola");
-  btnSalvar.textContent=hasInicio?"💾 Salvar Configurações":"⚡ Iniciar Meu Cronograma";
+  btnSalvar.textContent=hasInicio?"Salvar":"Começar";
   btnSalvar.disabled=false;
-  document.getElementById("modalTitle").textContent=hasInicio?"Configurações do Cronograma":"Configure seu Cronograma";
+  // certificação só conta como escolhida quando o plano já existe
+  _prefEscolhida=hasInicio&&!!EDITAIS[STATE.prefeitura];
+  if(!_prefEscolhida) limparSelecaoPref();
   renderDowGrid();
   renderCursinhoSelect();
   atualizarPrazoSetup();
+  // Já configurado: a trilha vira atalho e abre na etapa 1 mesmo assim,
+  // porque o aluno pode ter vindo por qualquer motivo. Novo: trilha travada.
+  _setupNavegavel=hasInicio;
+  document.getElementById("setupGerenciar").style.display=hasInicio?"block":"none";
+  document.getElementById("restartSection").style.display="none";
   document.getElementById("setupModal").classList.add("open");
+  irEtapaSetup(1,true);
+  // o palco só mede direito depois que o modal está na tela
+  requestAnimationFrame(()=>ajustarAlturaSetup());
 }
 function fecharModal(){
   cancelarReinicio();
@@ -983,6 +1168,10 @@ function fecharModalCobertura(){
 function ajustarCronograma(){
   fecharModalCobertura();
   document.getElementById("setupModal").classList.add("open");
+  // o que não coube foi a rotina, e é nela que o aluno tem o que mexer
+  _setupNavegavel=true;
+  irEtapaSetup(2,true);
+  requestAnimationFrame(()=>ajustarAlturaSetup());
 }
 function confirmarCronogramaParcial(){
   fecharModalCobertura();
@@ -1053,7 +1242,9 @@ function showWelcome(){
 }
 function iniciarConfiguracao(){
   document.getElementById("welcomeOverlay").classList.remove("open");
-  setTimeout(()=>{ document.getElementById("setupModal").classList.add("open"); }, 250);
+  // openSetupModal e nao classList: ver o comentario no boot. Aqui nada foi
+  // digitado ainda, entao repovoar a partir do STATE nao perde nada.
+  setTimeout(()=>{ openSetupModal(); }, 250);
 }
 
 const TOUR_STEPS=[
@@ -1279,6 +1470,23 @@ function _montarBalaoPwa(){
       </div>
     </div>`;
   document.body.appendChild(b);
+  _reservarEspacoPwa();
+}
+/* O balão é position:fixed e cobria o topo do dashboard: a bússola do
+   rumo, parte da galeria e o botão de visualização ficavam embaixo dele,
+   sem como serem tocados. Em vez de mexer no z-index, que só trocaria
+   quem fica escondido, a página reserva a altura do balão enquanto ele
+   estiver na tela. */
+function _reservarEspacoPwa(){
+  const b=document.getElementById("pwaBalao");
+  if(!b){
+    document.body.classList.remove("pwa-balao-visivel");
+    document.body.style.removeProperty("--pwa-balao-h");
+    return;
+  }
+  const h=Math.ceil(b.getBoundingClientRect().height)+14;
+  document.body.style.setProperty("--pwa-balao-h",h+"px");
+  document.body.classList.add("pwa-balao-visivel");
 }
 /* Menu Recursos -> "Instalar o App": caminho manual para quem dispensou o
    balão e mudou de ideia (ou quer instalar no computador). */
@@ -1288,7 +1496,7 @@ function menuInstalarApp(){
   try{ localStorage.removeItem("bussola_pwa_adiado"); }catch(e){}
   if(_pwaPromptEvt){ instalarPwa(); return; }
   if(_ehIos()){
-    const b=document.getElementById("pwaBalao"); if(b) b.remove();
+    const b=document.getElementById("pwaBalao"); if(b) b.remove(); _reservarEspacoPwa();
     _montarBalaoPwa();
     instalarPwa();                       // troca o balão pelo passo a passo do Safari
     return;
@@ -1299,7 +1507,7 @@ async function instalarPwa(){
   const b=document.getElementById("pwaBalao");
   if(_pwaPromptEvt){
     const evt=_pwaPromptEvt; _pwaPromptEvt=null;
-    if(b) b.remove();
+    if(b) b.remove(); _reservarEspacoPwa();
     try{
       evt.prompt();
       const r=await evt.userChoice;
@@ -1311,10 +1519,11 @@ async function instalarPwa(){
   if(b) b.querySelector(".pb-corpo").innerHTML=`
     <div class="pb-texto"><strong>No iPhone é assim:</strong><br>1. Toque em <strong>Compartilhar</strong> (□↑) na barra do Safari<br>2. Escolha <strong>"Adicionar à Tela de Início"</strong></div>
     <div class="pb-acoes"><button class="pb-depois" data-action="adiarPwa">Entendi</button></div>`;
+  _reservarEspacoPwa();   // o passo a passo do iPhone deixa o balão mais alto
 }
 function adiarPwa(){
   try{ localStorage.setItem("bussola_pwa_adiado",String(Date.now())); }catch(e){}
-  const b=document.getElementById("pwaBalao"); if(b) b.remove();
+  const b=document.getElementById("pwaBalao"); if(b) b.remove(); _reservarEspacoPwa();
 }
 
 /* ── NAVEGAÇÃO ── */
@@ -1362,7 +1571,10 @@ function aplicarDashView(){
     const alvo=pc?("width="+DASH_VIEW_LARGURA):VIEWPORT_AUTO;
     if(meta.getAttribute("content")!==alvo) meta.setAttribute("content",alvo);
   }
-  if(document.body) document.body.classList.toggle("dash-pc",pc);
+  if(document.body){
+    document.body.classList.toggle("dash-pc",pc);
+    if(!pc) document.body.classList.remove("rail-aberto");
+  }
   const btn=document.getElementById("dashViewBtn");
   if(btn){
     btn.textContent=pc?"☰ Visualizar em coluna":"⊞ Visualizar em painel";
@@ -1371,6 +1583,14 @@ function aplicarDashView(){
                 :"Mostra os blocos do dashboard lado a lado, como no computador";
   }
 }
+/* O trilho de ícones abre no hover do mouse, que tela de toque não tem.
+   Aqui o logo faz o papel do hover. Só vale no modo painel: fora dele o
+   menu é o de sempre e o clique no logo não faz nada. */
+function toggleRail(){
+  if(!document.body.classList.contains("dash-pc")) return;
+  document.body.classList.toggle("rail-aberto");
+}
+
 function toggleDashView(){
   setDashView(getDashView()==="pc"?"auto":"pc");
   aplicarDashView();
