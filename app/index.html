@@ -17,7 +17,7 @@
 <!-- ?v= força o navegador a buscar a versão nova a cada publicação.
      Sem isso o GitHub Pages entrega o arquivo do cache por até 10 minutos,
      e o aluno vê o HTML novo com o CSS velho, que é tela quebrada. -->
-<link rel="stylesheet" href="css/app.css?v=20260928-dashview">
+<link rel="stylesheet" href="css/app.css?v=20260929-trilho">
 <!-- Firebase Auth SDK (compat) -->
 <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
@@ -247,76 +247,107 @@ function fazerLogout() {
 </div>
 
 <!-- MODAL -->
-<div class="modal-backdrop" id="setupModal" role="dialog" aria-modal="true" aria-label="Configurar cronograma">
-  <div class="modal">
-    <div class="modal-logo">
-      <div class="modal-logo-icon">🧭</div>
-      <div><div class="modal-logo-name">Bússola de Estudos</div><div class="modal-logo-sub">Coach Digital para Certificações</div></div>
+<div class="modal-backdrop setup-backdrop" id="setupModal" role="dialog" aria-modal="true" aria-label="Configurar cronograma">
+  <div class="modal modal-setup">
+    <!-- Cabeçalho: só a marca. Sem subtítulo, sem título de tela: quem diz
+         onde o aluno está é a trilha logo abaixo. -->
+    <header class="su-marca">
+      <span class="su-logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2.1 5-5 2.1 2.1-5z"/>
+        </svg>
+      </span>
+      <span class="su-nome">Bússola de Estudos</span>
+      <button id="btnFecharModal" class="su-fechar" data-action="fecharModal" style="display:none" title="Fechar sem salvar" aria-label="Fechar sem salvar">✕</button>
+    </header>
+
+    <!-- Trilha: três traços e o nome da etapa. Viram atalho quando o
+         cronograma já existe. -->
+    <div class="su-trilha" id="setupTrilha" role="tablist" aria-label="Etapas da configuração">
+      <button type="button" class="su-passo ativo" data-action="irEtapa" data-etapa="1" role="tab" aria-selected="true"><span class="su-traco"></span><span class="su-lbl">Certificação</span></button>
+      <button type="button" class="su-passo" data-action="irEtapa" data-etapa="2" role="tab" aria-selected="false"><span class="su-traco"></span><span class="su-lbl">Rotina</span></button>
+      <button type="button" class="su-passo" data-action="irEtapa" data-etapa="3" role="tab" aria-selected="false"><span class="su-traco"></span><span class="su-lbl">Prazo</span></button>
     </div>
-    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0;">
-      <div class="modal-title" id="modalTitle" style="margin-bottom:0;">Configure seu Cronograma</div>
-      <button id="btnFecharModal" data-action="fecharModal" style="display:none;align-items:center;justify-content:center;width:32px;height:32px;border:none;background:#f1f5f9;border-radius:50%;cursor:pointer;font-size:1.1rem;color:#64748b;flex-shrink:0;" title="Fechar sem salvar">✕</button>
-    </div>
-    <div class="modal-desc">Escolha sua certificação e informe seus dados. A Bússola distribui o conteúdo automaticamente por peso de questões.</div>
-    <div class="form-row">
-      <label class="form-label">Seu nome</label>
-      <input class="form-input" id="inputNome" type="text" placeholder="Ex: João Ribeiro">
-    </div>
-    <div class="form-row">
-      <label class="form-label">Certificação</label>
-      <div class="concurso-picker">
-        <button type="button" class="concurso-trigger" id="concursoTrigger" data-action="toggleConcursoDropdown" aria-haspopup="listbox" aria-expanded="false">
-          <span class="concurso-trigger-text concurso-trigger-placeholder" id="concursoTriggerText">Selecione ▾</span>
-          <span class="concurso-trigger-arrow">▼</span>
-        </button>
-        <div class="concurso-dropdown" id="concursoDropdown" role="listbox">
-          <div id="prefGrid"></div>
-        </div>
+
+    <div class="setup-palco" id="setupPalco">
+      <div class="setup-trilho" id="setupTrilho">
+
+        <section class="setup-etapa ativa" data-etapa="1" role="tabpanel" aria-label="Certificação">
+          <div class="form-row">
+            <label class="form-label" for="inputNome">Seu nome</label>
+            <input class="form-input" id="inputNome" type="text" autocomplete="name" placeholder="">
+          </div>
+          <div class="form-row">
+            <label class="form-label">Certificação</label>
+            <div class="concurso-picker">
+              <button type="button" class="concurso-trigger" id="concursoTrigger" data-action="toggleConcursoDropdown" aria-haspopup="listbox" aria-expanded="false">
+                <span class="concurso-trigger-text concurso-trigger-placeholder" id="concursoTriggerText">Selecione</span>
+                <span class="concurso-trigger-arrow">▾</span>
+              </button>
+              <div class="concurso-dropdown" id="concursoDropdown" role="listbox">
+                <div id="prefGrid"></div>
+              </div>
+            </div>
+          </div>
+          <div class="form-row" id="cargoRow" style="display:none">
+            <label class="form-label" for="inputCargo">Exame</label>
+            <select class="form-input" id="inputCargo"></select>
+          </div>
+          <div class="form-row" id="rowCursinho" style="display:none">
+            <label class="form-label" for="selCursinho">Cursinho <span>opcional</span></label>
+            <select class="form-input" id="selCursinho" data-change="salvarCursinho"></select>
+            <div class="cursinho-nota" id="cursinhoNota"></div>
+          </div>
+        </section>
+
+        <section class="setup-etapa" data-etapa="2" role="tabpanel" aria-label="Rotina">
+          <div class="form-grid">
+            <div class="form-row">
+              <label class="form-label" for="inputInicio">Começo</label>
+              <input class="form-input" id="inputInicio" type="date" data-change="recalcularPlano">
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="inputHoras">Horas por dia</label>
+              <select class="form-input" id="inputHoras" data-change="recalcularPlano"><option value="">Selecione</option><option value="1">1h</option><option value="1.5">1h30min</option><option value="2">2h</option><option value="2.5">2h30min</option><option value="3">3h</option><option value="3.5">3h30min</option><option value="4">4h</option><option value="4.5">4h30min</option><option value="5">5h</option><option value="5.5">5h30min</option><option value="6">6h</option></select>
+            </div>
+          </div>
+          <div class="form-row">
+            <label class="form-label">Dias de descanso <span>até 4</span></label>
+            <div class="dow-grid" id="dowGrid"></div>
+          </div>
+          <div class="prazo-hint" id="prazoHintRotina" hidden></div>
+        </section>
+
+        <section class="setup-etapa" data-etapa="3" role="tabpanel" aria-label="Prazo">
+          <div class="prazo-hint" id="prazoHint" hidden></div>
+          <div class="form-row">
+            <label class="form-label" for="inputProva">Dia da prova <span id="provaLockSpan"></span></label>
+            <input class="form-input" id="inputProva" type="date" readonly title="Data fixada pelo edital" data-change="provaManual">
+            <div class="prova-hint" id="provaHint" hidden></div>
+          </div>
+        </section>
+
       </div>
     </div>
-    <div class="form-row" id="cargoRow" style="display:none">
-      <label class="form-label">Cargo / Vaga</label>
-      <select class="form-input" id="inputCargo"></select>
+
+    <div class="su-nav">
+      <button type="button" class="su-voltar" id="btnSetupVoltar" data-action="etapaAnterior" style="visibility:hidden">Voltar</button>
+      <button type="button" class="su-avancar" id="btnSetupAvancar" data-action="etapaProxima">Continuar</button>
+      <button class="su-avancar" id="btnIniciarBússola" data-action="iniciarBussola" style="display:none">Começar</button>
     </div>
-    <div class="form-grid">
-      <div class="form-row">
-        <label class="form-label">Data de Início</label>
-        <input class="form-input" id="inputInicio" type="date" data-change="recalcularPlano">
-      </div>
-      <div class="form-row">
-        <label class="form-label">Horas por dia <span>(meta)</span></label>
-        <select class="form-input" id="inputHoras" data-change="recalcularPlano"><option value="1">1h</option><option value="1.5">1h30min</option><option value="2">2h</option><option value="2.5">2h30min</option><option value="3">3h</option><option value="3.5">3h30min</option><option value="4">4h</option><option value="4.5">4h30min</option><option value="5">5h</option><option value="5.5">5h30min</option><option value="6">6h</option></select>
-      </div>
-    </div>
-    <div class="prazo-hint" id="prazoHint" hidden></div>
-    <div class="form-row">
-      <label class="form-label">Dias de descanso <span>(marque até 4 dias que NÃO vai estudar)</span></label>
-      <div class="dow-grid" id="dowGrid"></div>
-    </div>
-    <div class="form-row">
-      <label class="form-label">Data da Prova <span id="provaLockSpan" style="color:#2FB374;font-size:.7rem;font-weight:700">🔒 fixada pelo edital</span></label>
-      <input class="form-input" id="inputProva" type="date" readonly style="background:#f8fafc;color:#64748b;cursor:default;" title="Data fixada pelo edital" data-change="provaManual">
-      <div class="prova-hint" id="provaHint" hidden></div>
-    </div>
-    <div class="form-row" id="rowCursinho" style="display:none">
-      <label class="form-label" for="selCursinho">Meu cursinho <span>(opcional — libera o link das aulas nos tópicos)</span></label>
-      <select class="form-input" id="selCursinho" data-change="salvarCursinho"></select>
-      <div class="cursinho-nota" id="cursinhoNota"></div>
-    </div>
-    <button class="btn-start" id="btnIniciarBússola" data-action="iniciarBussola">⚡ Iniciar Meu Cronograma</button>
+
+    <button type="button" class="su-gerenciar" id="setupGerenciar" data-action="toggleGerenciar" style="display:none">Gerenciar cronograma</button>
     <div id="restartSection" class="restart-section" style="display:none">
-      <div class="restart-title">⚙️ Gerenciar Cronograma</div>
-      <button class="btn-restart-soft" data-action="reprocessarFaltantes">↩ Reprocessar matérias faltantes</button>
-      <button class="btn-restart-hard" data-action="confirmarReinicio">🗑️ Reiniciar cronograma completo</button>
+      <button class="btn-restart-soft" data-action="reprocessarFaltantes">Reprocessar matérias faltantes</button>
+      <button class="btn-restart-hard" data-action="confirmarReinicio">Reiniciar cronograma completo</button>
       <div id="reinicioWarning" style="display:none;color:#b91c1c;font-size:0.85rem;margin-top:8px;padding:8px;background:#fef2f2;border-radius:6px;">
-        ⚠️ Isso apaga as <strong>estrelas, os dias marcados e a fila de recuperação</strong>. Suas anotações da semana e o histórico de exercícios continuam. Tem certeza?
+        Isso apaga as <strong>estrelas, os dias marcados e a fila de recuperação</strong>. Suas anotações da semana e o histórico de exercícios continuam. Tem certeza?
         <div style="margin-top:8px;display:flex;gap:8px;">
           <button id="btnConfirmReinicio" class="btn-restart-hard" style="display:none" data-action="reiniciarCompleto">Sim, reiniciar tudo</button>
           <button id="btnCancelReinicio" class="btn-restart-soft" style="display:none" data-action="cancelarReinicio">Cancelar</button>
         </div>
       </div>
     </div>
-    <div class="modal-note">☁️ Seus dados são salvos na nuvem e sincronizados entre os seus aparelhos.</div>
   </div>
 </div>
 
@@ -400,7 +431,7 @@ function fazerLogout() {
 
 <!-- SIDEBAR -->
 <aside class="sidebar" id="sidebar">
-  <div class="sidebar-brand">
+  <div class="sidebar-brand" data-action="toggleRail" role="button" tabindex="0" aria-label="Abrir ou recolher o menu">
     <div class="brand-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.6 8.4-2.3 5.5-5.5 2.3 2.3-5.5z"/></svg></div>
     <div><div class="brand-name">Bússola</div><div class="brand-sub">de Estudos</div></div>
   </div>
@@ -798,7 +829,7 @@ function fazerLogout() {
 <script src="js/engine.js?v=20260928-topico30min"></script>
 <script src="conteudo/atendimentos-cpror.js?v=20260924-caso5"></script>
 
-<script src="js/ui.js?v=20260928-dashview"></script>
+<script src="js/ui.js?v=20260929-trilho"></script>
 <script src="js/simulados-cpror.js?v=20260924-arvores-simulados"></script>
 <script src="js/pomodoro.js?v=20260911"></script>
 
