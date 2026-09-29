@@ -576,7 +576,7 @@ test("indexarAgendaTopicos: cobre todo o edital e guarda a 1ª ocorrência",()=>
 });
 
 test("indexarAgendaTopicos: confiança vem de percepcoes[i] em dia multi-tópico",()=>{
-  // 3h/dia com a base de 45 min dá densidade 4: o dia é multi-tópico.
+  // 3h/dia com a base de 30 min dá densidade 6: o dia é multi-tópico.
   const E=freshEngine(baseState({dias:{"2026-01-06":{percepcoes:{0:"alta",1:"baixa"}}}}),FIX_EDITAIS);
   const tops=E.getTopicosDoDia("2026-01-06");
   assert.ok(tops.length>1,"o cenário do teste precisa de dia multi-tópico");
@@ -588,7 +588,8 @@ test("indexarAgendaTopicos: confiança vem de percepcoes[i] em dia multi-tópico
 });
 
 test("indexarAgendaTopicos: dia de tópico único lê est.percepcao",()=>{
-  const E=freshEngine(baseState({horasDia:1,dias:{"2026-01-06":{percepcao:"media"}}}),FIX_EDITAIS);
+  // Com a base de 30 min, 30 min/dia é o que dá densidade 1.
+  const E=freshEngine(baseState({horasDia:0.5,dias:{"2026-01-06":{percepcao:"media"}}}),FIX_EDITAIS);
   const tops=E.getTopicosDoDia("2026-01-06");
   assert.strictEqual(tops.length,1);
   const idx=E.indexarAgendaTopicos();
@@ -748,16 +749,18 @@ test("calcRevisoes: recuperado também alimenta a revisão de 30 dias",()=>{
 
 /* ── calcPrazoConteudo: a Bússola sugere a data da prova a partir do plano ── */
 
-test("calcPrazoConteudo: densidade é a capacidade da hora (45 min por tópico)",()=>{
-  assert.strictEqual(freshEngine(baseState({horasDia:1}),FIX_EDITAIS).calcPrazoConteudo().density,1);
-  assert.strictEqual(freshEngine(baseState({horasDia:3}),FIX_EDITAIS).calcPrazoConteudo().density,4);
-  assert.strictEqual(freshEngine(baseState({horasDia:6}),FIX_EDITAIS).calcPrazoConteudo().density,8);
+test("calcPrazoConteudo: densidade é a capacidade da hora (30 min por tópico)",()=>{
+  assert.strictEqual(freshEngine(baseState({horasDia:0.5}),FIX_EDITAIS).calcPrazoConteudo().density,1);
+  assert.strictEqual(freshEngine(baseState({horasDia:1}),FIX_EDITAIS).calcPrazoConteudo().density,2);
+  assert.strictEqual(freshEngine(baseState({horasDia:3}),FIX_EDITAIS).calcPrazoConteudo().density,6);
+  assert.strictEqual(freshEngine(baseState({horasDia:6}),FIX_EDITAIS).calcPrazoConteudo().density,12);
 });
 
 test("calcPrazoConteudo: prova sugerida é o fim do conteúdo mais 8 dias",()=>{
-  // 15 tópicos, 4 por dia = 4 dias de conteúdo. Início seg 05/01 não conta
-  // (Orientações do Coach), então o conteúdo fecha na sexta 09/01.
-  const E=freshEngine(baseState({horasDia:3}),FIX_EDITAIS);
+  // 15 tópicos, 4 por dia = 4 dias de conteúdo. Com a base de 30 min, são 2h/dia.
+  // Início seg 05/01 não conta (Orientações do Coach), então o conteúdo fecha
+  // na sexta 09/01.
+  const E=freshEngine(baseState({horasDia:2}),FIX_EDITAIS);
   const r=E.calcPrazoConteudo();
   assert.strictEqual(r.total,15);
   assert.strictEqual(r.diasConteudo,4);
@@ -793,8 +796,9 @@ test("calcPrazoConteudo: devolve null sem início e sem dia de estudo",()=>{
 /* ── calcAdiamentoProva: quanto a prova precisa andar para o perdido caber ── */
 
 test("calcAdiamentoProva: cabendo no prazo, a prova não muda",()=>{
-  // 15 tópicos, 4 por dia. Perdeu só a terça 06/01 (4 tópicos) e a prova é longe.
-  const E=freshEngine(baseState({horasDia:3,prova:"2026-04-01"}),FIX_EDITAIS);
+  // 15 tópicos, 4 por dia (2h/dia na base de 30 min). Perdeu só a terça 06/01
+  // (4 tópicos) e a prova é longe.
+  const E=freshEngine(baseState({horasDia:2,prova:"2026-04-01"}),FIX_EDITAIS);
   const r=E.calcAdiamentoProva(["2026-01-06"],"2026-01-08");
   assert.strictEqual(r.topicos,4);
   assert.strictEqual(r.cabe,true);
@@ -804,7 +808,7 @@ test("calcAdiamentoProva: cabendo no prazo, a prova não muda",()=>{
 
 test("calcAdiamentoProva: sem vaga suficiente, empurra a prova e diz quantos dias",()=>{
   // Prova colada: a Revisão Geral cai em 09/01, sobrando quase nenhuma vaga.
-  const E=freshEngine(baseState({horasDia:3,prova:"2026-01-16"}),FIX_EDITAIS);
+  const E=freshEngine(baseState({horasDia:2,prova:"2026-01-16"}),FIX_EDITAIS);
   const r=E.calcAdiamentoProva(["2026-01-06","2026-01-07"],"2026-01-08");
   assert.strictEqual(r.topicos,8);
   assert.strictEqual(r.cabe,false);
@@ -826,9 +830,9 @@ test("calcAdiamentoProva: mais dias perdidos empurram mais a prova",()=>{
 test("calcAdiamentoProva: pula dia já estudado e dia que já tem extra",()=>{
   // 08 e 09/01 são conteúdo (posições 3 e 4); 13 e 14/01 reabrem o ciclo.
   // Ocupando 08 e 13, o quarto tópico é empurrado para o dia seguinte livre.
-  const livre=freshEngine(baseState({horasDia:3,prova:"2026-01-30"}),FIX_EDITAIS)
+  const livre=freshEngine(baseState({horasDia:2,prova:"2026-01-30"}),FIX_EDITAIS)
     .calcAdiamentoProva(["2026-01-06"],"2026-01-08");
-  const ocupado=freshEngine(baseState({horasDia:3,prova:"2026-01-30",
+  const ocupado=freshEngine(baseState({horasDia:2,prova:"2026-01-30",
       dias:{"2026-01-08":{percepcao:"alta"}},
       extrasPorDia:{"2026-01-13":[{mat:"Mat A",top:"A1"}]}}),FIX_EDITAIS)
     .calcAdiamentoProva(["2026-01-06"],"2026-01-08");
