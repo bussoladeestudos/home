@@ -178,7 +178,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa C está correta. A lei descrita no material exclui do regime de valores mobiliários os títulos da dívida pública e os títulos de responsabilidade de instituição financeira, com exceção das debêntures. Por isso o CDB fica fora do regime da CVM.</p><p>A A inverte a regra. A B restringe indevidamente a lista de valores mobiliários. A D reduz o campo de atuação da CVM, que também supervisiona fundos, bolsa, distribuidores e auditores independentes.</p><p>Regra de bolso: CDB e títulos públicos ficam fora da CVM; a fronteira deve ser analisada pelo tipo de título.</p>",
      "enunciado": "<p>Um investidor pergunta por que um CDB não é tratado como valor mobiliário pela CVM. Considerando a fronteira apresentada no material, qual resposta está correta?</p>",
      "alternativas": {
-      "a": "Porque todo título emitido por instituição financeira é necessariamente um valor mobiliário.",
+      "a": "Porque o título emitido por instituição financeira integra o regime de valores mobiliários.",
       "b": "Porque apenas as ações e as debêntures podem ser consideradas valores mobiliários pela lei.",
       "c": "Porque título de responsabilidade de instituição financeira fica fora, salvo a debênture.",
       "d": "Porque a CVM supervisiona apenas produtos oferecidos por companhias abertas."
@@ -382,8 +382,8 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa D está correta. O texto estabelece expressamente que a instituição de pagamento não é instituição financeira. Ela mantém conta de pagamento, que não é conta corrente, e não pode captar depósitos nem conceder empréstimos com recursos de clientes.</p><p>A A confunde conta de pagamento com conta corrente. A B cria uma regra que não existe no texto. A C elimina as instituições de pagamento do sistema, contrariando sua própria função.</p><p>Regra de bolso: instituição de pagamento viabiliza pagamentos, mas não é banco.</p>",
      "enunciado": "<p>Um cliente utiliza um aplicativo de pagamentos e pergunta se a empresa que mantém sua conta de pagamento é uma instituição financeira. Considerando o conteúdo estudado, a resposta correta é:</p>",
      "alternativas": {
-      "a": "Sim, porque toda conta de pagamento é uma conta corrente bancária comum.",
-      "b": "Sim, porque toda instituição que movimenta dinheiro é instituição financeira.",
+      "a": "Sim, porque a conta de pagamento é uma conta corrente bancária comum.",
+      "b": "Sim, porque quem movimenta dinheiro de clientes é instituição financeira.",
       "c": "Não, porque apenas os bancos podem oferecer serviços de pagamento.",
       "d": "Não, porque instituição de pagamento não é instituição financeira."
      },
@@ -703,7 +703,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "simulado"
      ],
      "comentario": "<p>A alternativa D está correta. O SPB reúne regras, procedimentos e sistemas para liquidar transferências com segurança e reduzir o risco de que a falha de uma instituição contamine as demais.</p><p>A A atribui ao SPB uma garantia contra falências que ele não oferece. A C transforma redução de risco em eliminação, contrariando expressamente o texto. A B confunde a infraestrutura de pagamentos com a função estatal do Banco Central.</p><p>Regra de bolso: o SPB reduz o risco sistêmico, mas não elimina esse risco.</p>",
-     "enunciado": "<p>Uma instituição financeira realiza diversas transferências de recursos com outras instituições ao longo do dia. Em uma situação de falha, existe preocupação de que o problema se espalhe para as demais instituições. Considerando a função do Sistema de Pagamentos Brasileiro, a explicação mais adequada ao cliente é:</p>",
+     "enunciado": "<p>Uma instituição financeira realiza diversas transferências de recursos com outras instituições ao longo do dia. Em uma situação de falha, existe preocupação de que o problema se espalhe para as demais instituições. Considerando a função do Sistema de Pagamentos Brasileiro, a explicação correta ao cliente é:</p>",
      "alternativas": {
       "a": "O SPB garante que nenhuma instituição financeira poderá sofrer falência.",
       "b": "O SPB substitui o Banco Central na supervisão das instituições financeiras.",
@@ -733,7 +733,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "Retirar a poupança do circuito da renda para reduzir o consumo das famílias.",
       "b": "Recolher a poupança e devolvê-la ao circuito como crédito e investimento.",
       "c": "Substituir as empresas na produção de bens e serviços, de modo a gerar renda.",
-      "d": "Concentrar toda a renda poupada do país em operações de curtíssimo prazo."
+      "d": "Concentrar a renda poupada do país em operações de curtíssimo prazo."
      },
      "gabarito": "b",
      "feedback": {
@@ -755,7 +755,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "No crédito, a empresa capta diretamente do investidor; nos capitais, o banco assume a dívida.",
       "b": "No crédito não há instituição financeira; nos capitais, ela garante o pagamento ao investidor da dívida.",
-      "c": "No crédito, a operação é sempre de longo prazo; nos capitais, ela é sempre de curtíssimo prazo.",
+      "c": "No crédito, a operação é de longo prazo; nos capitais, ela é de curtíssimo prazo.",
       "d": "No crédito, o banco fica no meio e assume o risco; nos capitais, o investidor assume o risco do emissor."
      },
      "gabarito": "d",
@@ -861,17 +861,17 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "simulado",
       "revisao"
      ],
-     "comentario": "<p>A alternativa C está correta. Pelo art. 19 da Lei de Responsabilidade Fiscal, a despesa total com pessoal não pode exceder 50% da receita corrente líquida na União e 60% nos estados e nos municípios.</p><p>A B inverte os percentuais entre a União e os demais entes. A A uniformiza o limite em 50% para todos, quando estados e municípios têm 60%. A D troca a base de cálculo, que é sempre a receita corrente líquida.</p><p>Regra de bolso: 50% na União e 60% nos estados e municípios, sempre sobre a receita corrente líquida.</p>",
+     "comentario": "<p>A alternativa C está correta. Pelo art. 19 da Lei de Responsabilidade Fiscal, a despesa total com pessoal não pode exceder 50% da receita corrente líquida na União e 60% nos estados e nos municípios.</p><p>A B inverte os percentuais entre a União e os demais entes. A A uniformiza o limite em 50%, quando estados e municípios têm 60%. A D troca a base de cálculo, que é sempre a receita corrente líquida.</p><p>Regra de bolso: 50% na União e 60% nos estados e municípios, sempre sobre a receita corrente líquida.</p>",
      "enunciado": "<p>Um servidor da área de planejamento de um município precisa conferir o limite de despesa total com pessoal previsto na Lei de Responsabilidade Fiscal. Sobre esse limite, é correto afirmar que:</p>",
      "alternativas": {
-      "a": "É de 50% da receita corrente líquida para todos os entes da federação, sem distinção.",
+      "a": "É de 50% da receita corrente líquida para a União, os estados e os municípios, sem distinção.",
       "b": "É de 60% da receita corrente líquida na União e de 50% nos estados e municípios.",
       "c": "É de 50% da receita corrente líquida na União e de 60% nos estados e municípios.",
       "d": "É calculado sobre a receita bruta arrecadada no exercício, e não sobre a corrente líquida."
      },
      "gabarito": "c",
      "feedback": {
-      "a": "O limite não é o mesmo para todos os entes, pois a União fica em 50% e estados e municípios em 60%.",
+      "a": "O limite não é o mesmo para a União e para os demais entes, pois a União fica em 50% e estados e municípios em 60%.",
       "b": "Os percentuais estão invertidos: a União tem limite de 50% e os estados e municípios, de 60%.",
       "d": "A base de cálculo do limite é a receita corrente líquida, e não a receita bruta arrecadada."
      }
@@ -1145,7 +1145,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "O Banco Central perdeu o controle do juro curto, que agora depende apenas das expectativas fiscais do mercado.",
       "b": "O Banco Central controla o juro curto, mas só influencia o longo, que pode subir com a desconfiança fiscal.",
-      "c": "A alta da Selic garante que o juro longo caia, porque os dois movimentos são sempre inversos entre si.",
+      "c": "A alta da Selic garante que o juro longo caia, porque os dois movimentos são inversos entre si.",
       "d": "O Banco Central controla diretamente o juro longo, porque é ele quem define as expectativas do mercado."
      },
      "gabarito": "b",
@@ -1250,7 +1250,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa C está correta. O CDI é o benchmark da renda fixa privada e representa a referência das operações interbancárias com lastro privado.</p><p>A A confunde CDI com a meta Selic, que é definida pelo Copom. A B troca o CDI pela Selic, que remunera o Tesouro Selic. A D atribui ao CMN a definição da taxa, mas a DI é uma média diária apurada pela B3.</p><p>Regra de bolso: CDB e renda fixa privada lembram CDI; Tesouro Selic lembra Selic.</p>",
      "enunciado": "<p>Um cliente pergunta por que o CDI aparece como referência em um CDB anunciado como \"100% do CDI\". Qual explicação está correta?</p>",
      "alternativas": {
-      "a": "O CDI é a meta definida pelo Copom e serve de referência para todos os títulos públicos federais.",
+      "a": "O CDI é a meta definida pelo Copom e serve de referência para os títulos públicos federais.",
       "b": "O CDI é a taxa do Tesouro Selic e representa a remuneração definida pelo Banco Central.",
       "c": "O CDI é o benchmark da renda fixa privada e reflete as operações entre bancos com lastro privado.",
       "d": "O CDI é uma taxa definida pelo CMN para orientar o rendimento dos investimentos privados."
@@ -1390,7 +1390,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Um cliente pretende comprar moeda estrangeira e pergunta se a PTAX representa necessariamente o valor que ele pagará no balcão. Qual orientação está correta?</p>",
      "alternativas": {
       "a": "Sim. A PTAX é o preço final pago pelo cliente em qualquer operação cambial de balcão.",
-      "b": "Sim. A PTAX já incorpora automaticamente todos os tributos e tarifas da operação.",
+      "b": "Sim. A PTAX já incorpora os tributos e as tarifas da operação.",
       "c": "Não. A PTAX é definida pelo Banco Central e não depende das cotações dos dealers.",
       "d": "Não. A PTAX é referência, e o VET reúne câmbio, tributos e tarifas da operação."
      },
@@ -1577,7 +1577,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "O Tesouro Selic tem risco de mercado maior que o do Tesouro Prefixado.",
       "b": "O Tesouro IPCA+ não possui risco de mercado, por acompanhar a inflação.",
-      "c": "O Tesouro Selic apresenta o menor risco de mercado entre os três.",
+      "c": "O Tesouro Selic tem risco de mercado baixo por acompanhar a taxa básica.",
       "d": "Os três títulos públicos possuem um risco de mercado igualmente baixo."
      },
      "gabarito": "c",
@@ -1786,7 +1786,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "No regime simples, o juro incide sobre o montante acumulado; no composto, sobre o capital inicial.",
       "b": "No regime simples, o juro incide sobre o capital inicial; no composto, sobre o saldo acumulado.",
-      "c": "No regime simples, a taxa é sempre anual; no composto, ela é obrigatoriamente mensal.",
+      "c": "No regime simples, a taxa é anual; no composto, ela é mensal.",
       "d": "No regime simples, o prazo altera a taxa; no composto, o prazo não altera o resultado."
      },
      "gabarito": "b",
@@ -1831,7 +1831,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Um cliente precisa converter uma taxa antes de realizar um cálculo e pergunta qual relação deve observar entre taxa proporcional e taxa equivalente. A orientação correta é:</p>",
      "alternativas": {
       "a": "A taxa proporcional pertence ao composto e a equivalente pertence ao simples.",
-      "b": "As duas taxas pertencem ao simples e são convertidas sempre por divisão.",
+      "b": "As duas taxas pertencem ao simples e são convertidas por divisão.",
       "c": "A taxa proporcional e a equivalente são usadas apenas quando o prazo é anual.",
       "d": "A taxa proporcional pertence ao simples; a equivalente pertence ao composto."
      },
@@ -1872,12 +1872,12 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "usar_em": [
       "simulado"
      ],
-     "comentario": "<p>A alternativa D está correta. Em um único período, os dois regimes produzem exatamente o mesmo resultado, pois o efeito de incorporar juros anteriores à base ainda não aparece.</p><p>A A atribui a igualdade a uma conversão de taxa, quando ela decorre do próprio prazo de um período. A B usa a palavra sempre e ignora a exceção expressamente apresentada no tópico. A C inverte o resultado do caso de um período.</p><p>Regra de bolso: o composto se diferencia do simples quando existe período anterior para gerar juros sobre juros; com um único período, os dois coincidem.</p>",
+     "comentario": "<p>A alternativa D está correta. Em um único período, os dois regimes produzem exatamente o mesmo resultado, pois o efeito de incorporar juros anteriores à base ainda não aparece.</p><p>A A atribui a igualdade a uma conversão de taxa, quando ela decorre do próprio prazo de um período. A B ignora a exceção expressamente apresentada no tópico. A C inverte o resultado do caso de um período.</p><p>Regra de bolso: o composto se diferencia do simples quando existe período anterior para gerar juros sobre juros; com um único período, os dois coincidem.</p>",
      "enunciado": "<p>Um cliente afirma que a capitalização composta sempre entrega um montante maior que a simples. Ao analisar uma aplicação em que o prazo é de um único período, qual orientação está correta?</p>",
      "alternativas": {
       "a": "Os dois regimes só coincidem quando a taxa é convertida por divisão.",
-      "b": "O composto sempre supera o simples, independentemente do prazo.",
-      "c": "O simples sempre supera o composto quando há apenas um período.",
+      "b": "O composto supera o simples, independentemente do prazo.",
+      "c": "O simples supera o composto quando há apenas um período.",
       "d": "Os dois regimes entregam exatamente o mesmo resultado."
      },
      "gabarito": "d",
@@ -1901,7 +1901,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Durante um atendimento, um cliente compara valores que serão recebidos em datas diferentes. Qual orientação está de acordo com o conceito de valor presente?</p>",
      "alternativas": {
       "a": "Valores em datas diferentes podem ser somados diretamente, sem nenhum ajuste.",
-      "b": "O maior valor nominal é sempre a melhor alternativa para o cliente.",
+      "b": "O valor nominal indica qual alternativa é vantajosa para o cliente.",
       "c": "Valores em datas diferentes devem ser trazidos para a mesma data.",
       "d": "O valor futuro não precisa considerar a taxa de desconto do período."
      },
@@ -1923,7 +1923,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa D está correta. Capitalizar leva o valor para frente multiplicando por (1 + i)ⁿ, enquanto descontar traz o valor futuro para hoje dividindo pelo mesmo fator.</p><p>A A atribui a divisão também à capitalização. A B ignora que desconto e capitalização são operações inversas da mesma equação. A C separa indevidamente os conceitos, pois valor presente e futuro aparecem relacionados nas duas operações.</p><p>Regra de bolso: para ir para frente, multiplique pelo fator; para voltar, divida pelo fator.</p>",
      "enunciado": "<p>Um cliente quer entender a diferença entre capitalizar um valor e descontar um valor futuro. Qual comparação está correta?</p>",
      "alternativas": {
-      "a": "Capitalizar e descontar são operações que sempre dividem pelo mesmo fator.",
+      "a": "Capitalizar e descontar são operações que dividem pelo mesmo fator.",
       "b": "Capitalizar e descontar são operações independentes, sem relação matemática.",
       "c": "Capitalizar usa apenas o valor presente; descontar usa apenas o valor futuro.",
       "d": "Capitalizar multiplica pelo fator; descontar divide pelo mesmo fator."
@@ -2017,7 +2017,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Durante uma análise de investimento, um cliente pergunta o que representa a Taxa Interna de Retorno. Considerando o conceito apresentado no material, a definição correta é:</p>",
      "alternativas": {
       "a": "O retorno da melhor alternativa deixada de lado pelo investidor.",
-      "b": "A taxa de mercado usada para descontar todos os fluxos.",
+      "b": "A taxa de mercado usada para descontar os fluxos.",
       "c": "A taxa de desconto que faz o VPL do fluxo do projeto ser igual a zero.",
       "d": "A taxa livre de risco usada como referência para qualquer investimento."
      },
@@ -2040,8 +2040,8 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Uma empresa está comparando um projeto com seu custo de oportunidade. Em determinada análise, a TIR do projeto é de 10,1331% ao ano. Sobre a decisão, é correto afirmar que:</p>",
      "alternativas": {
       "a": "O projeto deve ser aceito se a TIR superar o custo de oportunidade.",
-      "b": "O projeto deve ser rejeitado sempre que seu VPL for positivo.",
-      "c": "O projeto deve ser aceito sempre que sua TIR for positiva.",
+      "b": "O projeto deve ser rejeitado quando seu VPL for positivo.",
+      "c": "O projeto deve ser aceito quando sua TIR for positiva.",
       "d": "O projeto é indiferente somente quando a TIR for maior que o custo."
      },
      "gabarito": "a",
@@ -2108,7 +2108,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Um cliente compara títulos de mesmo prazo e observa que um deles paga cupons durante a vida do investimento, enquanto o outro não paga cupons. Ele quer saber qual tende a apresentar maior sensibilidade a variações de juros. Considerando o conceito de duration, a explicação correta é:</p>",
      "alternativas": {
       "a": "O título com cupom tende a ter maior duration porque recebe fluxos antes do vencimento.",
-      "b": "O título com cupom sempre tem duration igual ao prazo de vencimento.",
+      "b": "O título com cupom tem duration igual ao prazo de vencimento.",
       "c": "Os dois títulos têm a mesma duration quando possuem o mesmo prazo.",
       "d": "O título sem cupom tende a ter maior duration e maior sensibilidade a juros."
      },
@@ -2220,11 +2220,11 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "usar_em": [
       "simulado"
      ],
-     "comentario": "<p>A alternativa C está correta. O desconto é de R$ 600,00 e o cliente recebe R$ 9.400,00. O custo efetivo do período é 6,383%, que corresponde a 3,1421% ao mês em termos equivalentes.</p><p>A A confunde a taxa de desconto anunciada com o custo efetivo da operação. A B apresenta o custo efetivo de todo o período, não sua equivalência mensal. A D apenas dobra a taxa de desconto para dois meses e não calcula o custo sobre o valor efetivamente recebido.</p><p>Regra de bolso: no desconto bancário, compare o desconto com o dinheiro que efetivamente entrou no caixa. Por isso o custo efetivo supera a taxa de desconto anunciada.</p>",
+     "comentario": "<p>A alternativa C está correta. O desconto é de R$ 600,00 e o cliente recebe R$ 9.400,00. O custo efetivo do período é 6,383%, que corresponde a 3,1421% ao mês em termos equivalentes.</p><p>A A confunde a taxa de desconto anunciada com o custo efetivo da operação. A B apresenta o custo efetivo do período de 60 dias, não sua equivalência mensal. A D apenas dobra a taxa de desconto para dois meses e não calcula o custo sobre o valor efetivamente recebido.</p><p>Regra de bolso: no desconto bancário, compare o desconto com o dinheiro que efetivamente entrou no caixa. Por isso o custo efetivo supera a taxa de desconto anunciada.</p>",
      "enunciado": "<p>Uma empresa possui uma duplicata de R$ 10.000,00 para 60 dias e precisa antecipar o recebimento. O banco informa uma taxa de desconto de 3% ao mês. Aplicando o desconto bancário apresentado no material, qual é o custo efetivo mensal aproximado da operação?</p>",
      "alternativas": {
       "a": "3,0000% ao mês, pois essa é a taxa que o banco anunciou na operação.",
-      "b": "6,3830% ao mês, porque esse é o custo efetivo de todo o período.",
+      "b": "6,3830% ao mês, porque esse é o custo efetivo do período.",
       "c": "3,1421% ao mês, porque o custo incide sobre o valor recebido.",
       "d": "6,0000% ao mês, porque a taxa de 3% incide durante dois meses."
      },
@@ -2384,13 +2384,13 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "simulado",
       "revisao"
      ],
-     "comentario": "<p>A alternativa D está correta. Ao se interpor na operação, a CCP passa a ser a compradora de todo vendedor e a vendedora de todo comprador, cortando o vínculo direto entre as duas pontas.</p><p>A A confunde CCP com depositário central. A B erra ao dizer que a CCP elimina qualquer risco, pois ela mitiga o risco de crédito e concentra esse risco nela mesma. A C confunde risco de crédito com risco de mercado, que continua sendo do investidor.</p><p>Regra de bolso: CCP entra no meio da operação para mitigar risco de crédito, não para garantir o preço do ativo.</p>",
+     "comentario": "<p>A alternativa D está correta. Ao se interpor na operação, a CCP passa a ser a compradora do vendedor e a vendedora do comprador, cortando o vínculo direto entre as duas pontas.</p><p>A A confunde CCP com depositário central. A B erra ao dizer que a CCP elimina qualquer risco, pois ela mitiga o risco de crédito e concentra esse risco nela mesma. A C confunde risco de crédito com risco de mercado, que continua sendo do investidor.</p><p>Regra de bolso: CCP entra no meio da operação para mitigar risco de crédito, não para garantir o preço do ativo.</p>",
      "enunciado": "<p>Um investidor pergunta o que muda quando uma câmara atua como contraparte central (CCP) em uma operação. Qual explicação está correta?</p>",
      "alternativas": {
       "a": "A CCP apenas registra a titularidade dos ativos negociados pelo investidor.",
       "b": "A CCP elimina qualquer risco de crédito e de mercado associado à operação realizada.",
       "c": "A CCP protege o investidor contra a queda de preço do ativo negociado.",
-      "d": "A CCP passa a ser compradora de todo vendedor e vendedora de todo comprador."
+      "d": "A CCP passa a ser a compradora do vendedor e a vendedora do comprador."
      },
      "gabarito": "d",
      "feedback": {
@@ -2571,10 +2571,10 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa C está correta. O banco não saca livremente o compulsório. Se a base de depósitos diminui, a exigência cai e recursos são liberados automaticamente; além disso, o Banco Central pode reduzir as alíquotas e devolver liquidez ao sistema.</p><p>A A transforma o compulsório em recurso livremente disponível ao banco. A B atribui ao Comef uma função operacional que o texto não estabelece. A D ignora que o recolhimento é calculado sobre a base de depósitos e, portanto, pode diminuir junto com ela.</p><p>Regra de bolso: compulsório não é caixa livre do banco; a liberação ocorre pela queda da base ou pela redução de alíquotas pelo Banco Central.</p>",
      "enunciado": "<p>Durante uma corrida bancária, um cliente afirma que o banco pode simplesmente sacar livremente o valor recolhido como compulsório no Banco Central para pagar os depositantes. Qual explicação está de acordo com o material?</p>",
      "alternativas": {
-      "a": "O banco pode sacar o compulsório livremente sempre que houver aumento dos saques na agência.",
+      "a": "O banco pode sacar o compulsório livremente quando houver aumento dos saques na agência.",
       "b": "O compulsório é liberado apenas pelo Comef, que define a quantidade disponível.",
       "c": "A exigência cai quando os depósitos caem, e o Banco Central pode reduzir alíquotas.",
-      "d": "O compulsório permanece sempre inalterado, mesmo quando cai a base de depósitos."
+      "d": "O compulsório permanece inalterado, mesmo quando cai a base de depósitos."
      },
      "gabarito": "c",
      "feedback": {
@@ -2679,12 +2679,12 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "simulado",
       "revisao"
      ],
-     "comentario": "<p>A alternativa C está correta. Todo investidor profissional também é considerado investidor qualificado, pois as categorias funcionam como círculos concêntricos e não como grupos excludentes.</p><p>A A inverte a relação entre as categorias. A B trata os grupos como independentes, contrariando o texto. A D afirma que o investidor perderia a condição de qualificado justamente quando passa a integrar também a categoria profissional.</p><p>Regra de bolso: profissional está dentro de qualificado.</p>",
+     "comentario": "<p>A alternativa C está correta. O investidor profissional também é considerado investidor qualificado, pois as categorias funcionam como círculos concêntricos e não como grupos excludentes.</p><p>A A inverte a relação entre as categorias. A B trata os grupos como independentes, contrariando o texto. A D afirma que o investidor perderia a condição de qualificado justamente quando passa a integrar também a categoria profissional.</p><p>Regra de bolso: profissional está dentro de qualificado.</p>",
      "enunciado": "<p>A Resolução CVM 30/2021 organiza os investidores em diferentes categorias. Considerando a relação entre investidor profissional e investidor qualificado, é correto afirmar que:</p>",
      "alternativas": {
-      "a": "Todo investidor qualificado é necessariamente investidor profissional.",
-      "b": "Profissional e qualificado são categorias totalmente independentes.",
-      "c": "Todo investidor profissional é também considerado investidor qualificado.",
+      "a": "O investidor qualificado é enquadrado também como investidor profissional.",
+      "b": "Profissional e qualificado são categorias independentes.",
+      "c": "O investidor profissional é também considerado investidor qualificado.",
       "d": "O investidor profissional deixa de ser qualificado quando supera R$ 10 milhões."
      },
      "gabarito": "c",
@@ -2729,9 +2729,9 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Ao comparar Anbima e BSM, um profissional precisa distinguir a natureza e a atuação de cada entidade. Qual alternativa apresenta corretamente essa diferença?</p>",
      "alternativas": {
       "a": "A Anbima autorregula os aderentes por contrato, e a BSM supervisiona os mercados da B3.",
-      "b": "A Anbima possui poder de polícia, e a BSM regula diretamente todo o sistema financeiro nacional.",
+      "b": "A Anbima possui poder de polícia, e a BSM regula diretamente o sistema financeiro nacional.",
       "c": "A Anbima cassa autorizações bancárias, e a BSM substitui a CVM nas normas de valores mobiliários.",
-      "d": "A Anbima alcança todas as instituições por força de lei, e a BSM atua apenas sobre investidores."
+      "d": "A Anbima alcança as instituições por força de lei, e a BSM atua apenas sobre investidores."
      },
      "gabarito": "a",
      "feedback": {
@@ -2775,7 +2775,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "O MRP pode cobrir as duas situações, até o limite de R$ 200 mil por ocorrência.",
       "b": "O MRP pode cobrir a falha do intermediário, mas não a perda causada pelo mercado.",
-      "c": "O MRP não cobre nenhuma das situações, porque todo investimento financeiro envolve risco.",
+      "c": "O MRP não cobre nenhuma das situações, porque o investimento financeiro envolve risco.",
       "d": "O MRP cobre a queda da ação, mas não a venda feita sem a autorização do cliente."
      },
      "gabarito": "b",
@@ -2799,7 +2799,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "Qualquer investidor que assine um termo de ciência de risco na instituição.",
       "b": "O cliente pessoa natural que se tornou qualificado por ter mais de R$ 1 milhão aplicado.",
       "c": "O investidor qualificado, salvo a pessoa natural enquadrada por volume de recursos ou por certificação.",
-      "d": "Todo cliente que declare no cadastro já ter operado o produto oferecido."
+      "d": "O cliente que declare no cadastro já ter operado o produto oferecido."
      },
      "gabarito": "c",
      "feedback": {
@@ -2933,7 +2933,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Um analista compara dois marcos históricos da integração dos fatores ESG ao mercado financeiro: o relatório Who Cares Wins e os Princípios para o Investimento Responsável. Qual relação está correta?</p>",
      "alternativas": {
       "a": "O PRI surgiu em 2004 como norma obrigatória e o Who Cares Wins foi publicado em 2006.",
-      "b": "Os dois surgiram em 2006 e estabeleceram obrigações legais para todos os investidores.",
+      "b": "Os dois surgiram em 2006 e estabeleceram obrigações legais aos investidores signatários.",
       "c": "O Who Cares Wins surgiu em 2004 e o PRI em 2006, sendo a adesão ao PRI voluntária.",
       "d": "O Who Cares Wins surgiu em 2006 e o PRI em 2004, ambos sob adesão obrigatória."
      },
@@ -3003,7 +3003,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "É ISR, porque o fundo passou a excluir empresas com base em critérios morais.",
       "b": "Há greenwashing, e a adoção de ESG não garante rentabilidade superior.",
       "c": "É filantropia, porque a carteira mantém ativos enquanto financia causas ambientais.",
-      "d": "É materialidade, porque todo produto ESG deve apresentar retorno acima do mercado."
+      "d": "É materialidade, porque o produto ESG rotulado deve apresentar retorno acima do mercado."
      },
      "gabarito": "b",
      "feedback": {
@@ -3141,7 +3141,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "Como filantropia, pois inclusão financeira não possui interesse econômico para a instituição.",
       "b": "Como risco físico, pois amplia a exposição da instituição a diferentes regiões.",
-      "c": "Como greenwashing, pois toda expansão para novos públicos exigiria finalidade exclusivamente social.",
+      "c": "Como greenwashing, pois a ampliação do acesso a novos públicos é apenas comunicação sem efeito social.",
       "d": "Como inclusão financeira, que combina pauta social com expansão da base de clientes."
      },
      "gabarito": "d",
@@ -3232,7 +3232,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Em uma companhia aberta, os acionistas fornecem capital, mas a administração cotidiana é exercida por gestores que possuem mais informações sobre a operação. Qual problema de governança surge dessa separação?</p>",
      "alternativas": {
       "a": "O conflito de agência, agravado pela assimetria de informação entre gestores e acionistas.",
-      "b": "O tag along, que surge sempre que os administradores conhecem mais a operação.",
+      "b": "O tag along, que surge da assimetria de informação entre gestores e acionistas.",
       "c": "O risco climático, decorrente da separação entre propriedade e administração.",
       "d": "O conflito de listagem, causado pela existência simultânea de assembleia e de conselho fiscal."
      },
@@ -3302,7 +3302,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "O mínimo legal do tag along é 100%, e a adesão aos segmentos especiais é obrigatória.",
       "b": "O tag along existe apenas no Novo Mercado, e os demais segmentos não possuem regras contratuais próprias.",
-      "c": "O mínimo legal é 80% para todas as preferenciais, e os segmentos são definidos obrigatoriamente pela CVM.",
+      "c": "O mínimo legal é 80% para as ações preferenciais, e os segmentos são definidos obrigatoriamente pela CVM.",
       "d": "O mínimo legal é 80% para ação com voto, e os segmentos são contratos de adesão voluntária à B3."
      },
      "gabarito": "d",
@@ -3394,7 +3394,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "O mandato concedido pelo grande alocador institucional.",
       "b": "O rating de crédito atribuído ao fundo de pensão.",
-      "c": "A exclusão automática de todos os setores controversos.",
+      "c": "A exclusão automática dos setores controversos da carteira.",
       "d": "A auditoria independente das demonstrações do gestor."
      },
      "gabarito": "a",
@@ -3412,13 +3412,13 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "simulado",
       "revisao"
      ],
-     "comentario": "<p>A alternativa C está correta. Um melhor perfil ESG pode estar associado a menor risco percebido e menor custo de capital, mas isso depende de o fator ser material para o setor e constitui tendência empírica, não uma lei.</p><p>A A ignora tanto a materialidade quanto a ausência de garantia. A B transforma simples divulgação em causa suficiente para baratear o capital. A D nega completamente uma relação que o texto apresenta como possível e observada.</p><p>Regra de bolso: ESG pode influenciar o custo de capital quando o fator é material, mas tendência não é garantia.</p>",
+     "comentario": "<p>A alternativa C está correta. Um melhor perfil ESG pode estar associado a menor risco percebido e menor custo de capital, mas isso depende de o fator ser material para o setor e constitui tendência empírica, não uma lei.</p><p>A A ignora tanto a materialidade quanto a ausência de garantia. A B transforma simples divulgação em causa suficiente para baratear o capital. A D nega uma relação que o texto apresenta como possível e observada.</p><p>Regra de bolso: ESG pode influenciar o custo de capital quando o fator é material, mas tendência não é garantia.</p>",
      "enunciado": "<p>Uma empresa melhora um indicador ESG pouco relevante para seu setor e afirma que, por isso, seu custo de capital necessariamente cairá. Como essa afirmação deve ser avaliada?</p>",
      "alternativas": {
       "a": "Está correta, pois qualquer melhoria ESG reduz automaticamente o retorno exigido.",
       "b": "Está correta, desde que o indicador tenha sido divulgado pela própria empresa.",
       "c": "Está incorreta, porque o efeito depende da materialidade e é tendência, não garantia.",
-      "d": "Está incorreta, porque os fatores ESG nunca afetam o risco percebido pelos investidores."
+      "d": "Está incorreta, porque os fatores ESG não influenciam o risco percebido pelos investidores."
      },
      "gabarito": "c",
      "feedback": {
@@ -3509,7 +3509,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "No investidor de varejo, que passou a cobrar produtos sustentáveis nas agências.",
       "b": "Nos grandes alocadores institucionais, com passivo longo de trinta ou quarenta anos.",
       "c": "Nas agências de rating ESG, que condicionaram a nota à adesão dos gestores ao PRI.",
-      "d": "Na autorregulação da Anbima, que tornou a integração ESG obrigatória a todos os aderentes."
+      "d": "Na autorregulação da Anbima, que tornou a integração ESG obrigatória às gestoras aderentes."
      },
      "gabarito": "b",
      "feedback": {
@@ -3579,7 +3579,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "Exclusão, porque a empresa permanece investível quando o risco já está no preço.",
       "b": "Integração ESG, porque os fatores entram na análise financeira sem filtro prévio.",
       "c": "Screening positivo, porque uma nota ESG baixa não interfere na seleção dos ativos.",
-      "d": "Best-in-class, porque toda empresa permanece investível desde que esteja descontada."
+      "d": "Best-in-class, porque a empresa permanece investível desde que esteja descontada."
      },
      "gabarito": "b",
      "feedback": {
@@ -3644,7 +3644,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa C está correta. Debênture incentivada e debênture verde são categorias diferentes: a primeira decorre do enquadramento em infraestrutura prioritária e benefício tributário ao investidor, enquanto o rótulo verde é uma camada adicional e voluntária. Em ambos os casos, o risco de crédito permanece sendo o do emissor.</p><p>A A transforma infraestrutura prioritária em atributo ambiental automático. A B reconhece apenas parte do erro e trata a rotulagem verde como obrigação legal. A D atribui à revisão externa o poder de eliminar o risco de crédito.</p><p>Regra de bolso: incentivo fiscal não é selo verde, e selo verde não muda quem deve pagar a dívida.</p>",
      "enunciado": "<p>Um cliente analisa uma debênture incentivada destinada a projeto prioritário de infraestrutura e conclui que ela necessariamente é uma debênture verde, possui menor risco de crédito e decorre de uma obrigação legal de rotulagem ambiental. Qual orientação está correta?</p>",
      "alternativas": {
-      "a": "A conclusão é correta, pois toda infraestrutura prioritária recebe automaticamente o rótulo verde da emissão.",
+      "a": "A conclusão é correta, pois o projeto de infraestrutura prioritária recebe o rótulo verde na emissão.",
       "b": "A conclusão é incorreta apenas quanto ao risco, porque a rotulagem verde é exigência legal para debêntures incentivadas.",
       "c": "A conclusão é incorreta, pois incentivo e rótulo verde são categorias distintas e o risco é do emissor.",
       "d": "A conclusão é correta desde que a emissão tenha revisão externa, pois isso eliminaria o risco de crédito do papel."
@@ -3762,7 +3762,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "Metodologia documentada, carteira alinhada ao propósito e monitoramento contínuo.",
       "b": "Relatório publicitário, liberdade total de carteira e verificação apenas na criação do fundo.",
-      "c": "Exclusão obrigatória de todos os setores intensivos em carbono e ausência de índice de referência.",
+      "c": "Exclusão obrigatória dos setores intensivos em carbono e ausência de índice de referência.",
       "d": "Garantia de impacto, retorno superior e revisão da carteira apenas quando houver reclamação."
      },
      "gabarito": "a",
@@ -3900,7 +3900,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "Redes permissionadas permitem conciliar registro compartilhado com sigilo, KYC e prevenção à lavagem.",
       "b": "Redes públicas impedem qualquer participante de ler ou validar transações sem autorização da instituição.",
-      "c": "Redes permissionadas tornam todos os dados anônimos e dispensam identificação dos participantes.",
+      "c": "Redes permissionadas tornam os dados anônimos e dispensam identificação dos participantes.",
       "d": "Redes públicas são proibidas porque não utilizam mecanismo de consenso para validar novos blocos."
      },
      "gabarito": "a",
@@ -3921,7 +3921,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa C está correta. O mecanismo de consenso estabelece a regra pela qual os nós aceitam novos blocos, permitindo que a rede convirja para uma única história e evitando problemas como o gasto duplo.</p><p>A A confunde integridade do registro com veracidade do dado. A B atribui ao consenso funções de regulação e solvência que não lhe pertencem. A D introduz uma autoridade central incompatível com o problema que o consenso busca resolver.</p><p>Regra de bolso: consenso troca confiança numa instituição por confiança numa regra comum.</p>",
      "enunciado": "<p>Em uma rede sem autoridade central, vários nós precisam concordar sobre qual bloco será aceito como válido. Qual é a função do mecanismo de consenso?</p>",
      "alternativas": {
-      "a": "Garantir que toda informação inserida na rede seja verdadeira antes de entrar no bloco.",
+      "a": "Garantir que a informação inserida na rede seja verdadeira antes de entrar no bloco.",
       "b": "Substituir a regulação prudencial e assegurar a solvência dos participantes da rede.",
       "c": "Fazer os nós convergirem para uma história comum e dificultar o gasto duplo.",
       "d": "Permitir que uma instituição central reverta qualquer transação considerada incorreta."
@@ -4035,8 +4035,8 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Fernanda, profissional certificada CPA em uma instituição financeira, atende um pequeno empreendedor que buscou crédito em um banco tradicional (TradFi) para expandir seu negócio. O pedido foi negado porque o valor era considerado baixo em relação aos custos administrativos. O cliente ficou frustrado e perguntou se existem alternativas que poderiam atender sua necessidade. Sabendo que esse cliente tinha criptoativos na carteira, Fernanda explicou que uma opção moderna são as finanças descentralizadas (DeFi), que utilizam contratos em blockchain para automatizar operações e ampliar o acesso a serviços.</p><p>Para auxiliar mais o cliente, Fernanda também explicou que essa opção oferece:</p>",
      "alternativas": {
       "a": "oferta de crédito direcionada a corporações que atuam como validadores das transações e concentram os recursos disponíveis.",
-      "b": "garantia de que todos os empréstimos sejam subsidiados por governos locais, independentemente do risco assumido pelo tomador.",
-      "c": "dispensa da exigência de sobrecolateralização (overcollateralization) em todos os contratos, o que mantém o crédito mais acessível que no TradFi.",
+      "b": "garantia de que os empréstimos sejam subsidiados por governos locais, independentemente do risco assumido pelo tomador.",
+      "c": "dispensa da exigência de sobrecolateralização (overcollateralization) nos contratos de crédito, o que mantém o crédito mais acessível que no TradFi.",
       "d": "acesso aberto a protocolos de crédito, permitindo empréstimos potencialmente de menor valor sem depender da decisão direta de grandes bancos."
      },
      "gabarito": "d"
@@ -4052,7 +4052,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa B está correta. O caso descreve execução automática, ausência de intermediários e verificação pública das regras, elementos que decorrem da aplicação prática do blockchain como registro distribuído, imutável e auditável.</p><p>Questão oficial do Caderno de Questões da CPA, publicado pela Anbima. Identificação PD 4.4.3, nível cognitivo Aplicação, dificuldade Médio.</p>",
      "enunciado": "<p>Rafael, profissional certificado CPA, acompanha um cliente que realizou uma operação de empréstimo em uma plataforma DeFi. O cliente relata que o contrato foi executado automaticamente quando as condições previstas foram atingidas, sem necessidade de autorização de banco, cartório ou intermediário. Além disso, todas as regras da operação puderam ser verificadas previamente e permanecem registradas mesmo após a liquidação do contrato. O cliente estava acostumado ao sistema financeiro tradicional e pergunta a Rafael se esse tipo de operação é segura.</p><p>Ao analisar a situação apresentada, Rafael esclarece que esse funcionamento é seguro porque o blockchain:</p>",
      "alternativas": {
-      "a": "substitui integralmente as instituições financeiras tradicionais, eliminando a necessidade de regulação ou supervisão sobre as operações.",
+      "a": "substitui as instituições financeiras tradicionais e dispensa a supervisão do Banco Central sobre as operações.",
       "b": "permite o registro imutável e compartilhado das regras e transações, viabilizando a execução automática de contratos e a validação descentralizada.",
       "c": "atua como uma carteira digital centralizada, responsável por armazenar recursos e autorizar cada transação realizada na plataforma.",
       "d": "garante estabilidade de preços e proteção contra perdas financeiras, independentemente das condições de mercado ou do risco da operação."
@@ -4072,8 +4072,8 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "funciona sem custódia centralizada de ativos, reduzindo impactos de ataques a servidores únicos, pois as operações ocorrem diretamente entre usuários.",
       "b": "concentra os ativos dos clientes em servidores privados, permitindo monitoramento contínuo por equipes especializadas em segurança digital.",
-      "c": "depende de autorização prévia de uma instituição responsável por validar e registrar todas as transações realizadas na plataforma.",
-      "d": "mantém controle central dos ativos e oferece mecanismos de recuperação de acesso em caso de falhas operacionais ou invasões. Você chegou ao fim do caderno de questões da certificação CPA. Revisite os conteúdos sempre que precisar, faça os testes e acompanhe as novidades das certificações em nossas redes sociais e no site do ANBIMA Edu. e de decisão 46"
+      "c": "depende de autorização prévia de uma instituição responsável por validar e registrar as transações realizadas na plataforma.",
+      "d": "mantém controle central dos ativos e oferece mecanismos de recuperação de acesso em caso de falhas operacionais ou invasões."
      },
      "gabarito": "a"
     }
@@ -4114,7 +4114,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Um imóvel de alto valor é fracionado em vários tokens. Apesar disso, não surgem compradores interessados no mercado secundário. Qual conclusão está alinhada ao texto?</p>",
      "alternativas": {
       "a": "O fracionamento garante liquidez imediata porque cada token representa parcela menor do imóvel.",
-      "b": "A tokenização elimina a iliquidez do imóvel sempre que houver divisão em unidades menores.",
+      "b": "A tokenização elimina a iliquidez do imóvel ao dividir a propriedade em unidades menores.",
       "c": "O fracionamento cria liquidez potencial, mas sem comprador os tokens podem continuar ilíquidos.",
       "d": "A ausência de comprador deixa de ser relevante porque a rede assume a obrigação de recomprar os tokens."
      },
@@ -4133,19 +4133,19 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "simulado",
       "revisao"
      ],
-     "comentario": "<p>A alternativa B está correta. O NFT representa uma unidade única e sua posse não transfere automaticamente direitos autorais ou de exploração comercial, que dependem de previsão contratual; já unidades substituíveis entre si são fungíveis.</p><p>A A atribui direito autoral automático ao NFT e inverte o conceito de fungibilidade. A C transforma negociabilidade em fungibilidade e nega a possibilidade de direitos previstos em contrato. A D chama de NFT justamente o token intercambiável e novamente presume transferência integral de direitos.</p><p>Regra de bolso: NFT prova titularidade do token; contrato é que diz quais direitos sobre a obra acompanham esse token.</p>",
+     "comentario": "<p>A alternativa B está correta. O NFT representa uma unidade única e sua posse não transfere automaticamente direitos autorais ou de exploração comercial, que dependem de previsão contratual; já unidades substituíveis entre si são fungíveis.</p><p>A A atribui direito autoral automático ao NFT e inverte o conceito de fungibilidade. A C transforma negociabilidade em fungibilidade e nega a possibilidade de direitos previstos em contrato. A D chama de NFT justamente o token intercambiável e novamente presume a transferência automática dos direitos autorais.</p><p>Regra de bolso: NFT prova titularidade do token; contrato é que diz quais direitos sobre a obra acompanham esse token.</p>",
      "enunciado": "<p>Um cliente compra um NFT associado a uma obra digital e afirma ter adquirido automaticamente o direito de reproduzi-la comercialmente. Outro compra unidades de um token em que cada unidade é intercambiável com as demais. Qual explicação está correta?</p>",
      "alternativas": {
       "a": "O NFT transfere automaticamente o direito autoral, e o segundo token é não fungível.",
       "b": "O NFT não transfere direito autoral sem previsão contratual, e o segundo token é fungível.",
-      "c": "Todo NFT é fungível porque pode ser negociado, e direitos autorais nunca podem ser contratados.",
-      "d": "O segundo token é NFT porque representa quantidade, enquanto o primeiro transfere todos os direitos sobre a obra."
+      "c": "O NFT é fungível porque pode ser negociado, e direitos autorais não podem ser previstos em contrato.",
+      "d": "O segundo token é NFT porque representa quantidade, enquanto o primeiro transfere os direitos autorais sobre a obra."
      },
      "gabarito": "b",
      "feedback": {
       "a": "Possuir o NFT não transfere automaticamente direito autoral, e unidades intercambiáveis caracterizam fungibilidade.",
       "c": "NFT é não fungível por representar unidade única, e direitos de uso ou reprodução podem existir quando previstos em contrato.",
-      "d": "Token que representa quantidade por unidades intercambiáveis é fungível, e o NFT não transfere todos os direitos automaticamente."
+      "d": "Token que representa quantidade por unidades intercambiáveis é fungível, e o NFT não transfere automaticamente os direitos autorais."
      }
     },
     {
@@ -4207,13 +4207,13 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "O lastro em reservas tradicionais, porque depende de auditoria da carteira de reservas.",
       "b": "A sobregarantia em criptoativos, porque o colateral cripto supera o valor emitido em token.",
       "c": "O modelo algorítmico, que busca a paridade por regras de emissão e recompra, sem lastro.",
-      "d": "Todos os modelos têm a mesma fragilidade, porque nenhum deles conta com garantia estatal."
+      "d": "Os três modelos têm a mesma fragilidade, porque nenhum deles conta com garantia estatal."
      },
      "gabarito": "c",
      "feedback": {
       "a": "Reservas em ativos tradicionais são o arranjo mais direto, e a auditoria não é o ponto de fragilidade destacado.",
       "b": "A sobregarantia depende de liquidações automáticas funcionarem sob estresse, mas não é o modelo mais frágil.",
-      "d": "A ausência de garantia estatal vale para todos, mas os modelos não têm o mesmo grau de fragilidade."
+      "d": "A ausência de garantia estatal vale para os três arranjos, mas os modelos não têm o mesmo grau de fragilidade."
      }
     },
     {
@@ -4299,13 +4299,13 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "Para o cliente a participação é obrigatória, enquanto para qualquer instituição ela é facultativa.",
       "b": "Para o cliente a participação é voluntária, enquanto S1 e S2 têm participação obrigatória.",
-      "c": "Cliente e instituição participam sempre voluntariamente, independentemente de segmento.",
+      "c": "Cliente e instituição participam de forma voluntária, independentemente de segmento.",
       "d": "Cliente e instituição participam obrigatoriamente quando mantêm conta de pagamento ativa."
      },
      "gabarito": "b",
      "feedback": {
       "a": "O cliente nunca é obrigado a compartilhar seus dados, enquanto instituições S1 e S2 participam obrigatoriamente.",
-      "c": "A participação institucional não é sempre facultativa, pois existe obrigação para os segmentos S1 e S2.",
+      "c": "A participação institucional não é voluntária para os segmentos S1 e S2, que participam obrigatoriamente.",
       "d": "A existência de conta de pagamento não transforma a participação do cliente em obrigatória."
      }
     },
@@ -4454,12 +4454,12 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "simulado",
       "revisao"
      ],
-     "comentario": "<p>A alternativa B está correta. Robo-advisor continua fazendo recomendação, portanto precisa respeitar objetivo, horizonte, tolerância a risco e conhecimento do cliente, mantendo integralmente o dever de suitability.</p><p>A A confunde a ferramenta de coleta do perfil com dispensa da obrigação. A C tenta substituir adequação por autorização genérica do cliente. A D restringe o dever a carteiras de alta volatilidade, embora ele se aplique à recomendação como um todo.</p><p>Regra de bolso: automatizar a recomendação não automatiza uma dispensa regulatória.</p>",
+     "comentario": "<p>A alternativa B está correta. Robo-advisor continua fazendo recomendação, portanto precisa respeitar objetivo, horizonte, tolerância a risco e conhecimento do cliente, mantendo o dever de suitability.</p><p>A A confunde a ferramenta de coleta do perfil com dispensa da obrigação. A C tenta substituir adequação por autorização genérica do cliente. A D restringe o dever a carteiras de alta volatilidade, embora ele se aplique à recomendação como um todo.</p><p>Regra de bolso: automatizar a recomendação não automatiza uma dispensa regulatória.</p>",
      "enunciado": "<p>Um robo-advisor coleta digitalmente o perfil de um investidor e sugere uma carteira com rebalanceamento automático. O gestor argumenta que, por ser uma recomendação automatizada, o suitability deixa de ser necessário. Essa afirmação é:</p>",
      "alternativas": {
       "a": "Correta, porque o questionário digital substitui a obrigação regulatória de adequação.",
-      "b": "Incorreta, porque recomendação automatizada continua sujeita integralmente ao suitability.",
-      "c": "Correta, desde que o cliente aceite previamente todas as carteiras sugeridas pelo sistema.",
+      "b": "Incorreta, porque recomendação automatizada continua sujeita ao dever de suitability.",
+      "c": "Correta, desde que o cliente aceite previamente as carteiras sugeridas pelo sistema.",
       "d": "Incorreta apenas quando a carteira sugerida contiver ativos com volatilidade elevada."
      },
      "gabarito": "b",
@@ -4504,7 +4504,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Um cliente tem seu pedido de crédito negado por um modelo complexo. Ao solicitar explicação, recebe apenas a resposta de que \"o sistema decidiu\". Qual problema aparece nesse caso?</p>",
      "alternativas": {
       "a": "Apenas risco de mercado, porque a decisão automatizada afeta o preço do crédito.",
-      "b": "Ausência de base legal, porque toda decisão automatizada exige obrigatoriamente consentimento.",
+      "b": "Ausência de base legal, porque a decisão automatizada exige consentimento do titular.",
       "c": "Conflito entre opacidade do modelo e o dever de informar ao cliente os fundamentos da decisão.",
       "d": "Violação automática da LGPD, porque decisões automatizadas são proibidas em qualquer situação."
      },
@@ -4547,7 +4547,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa C está correta. O art. 20 da LGPD assegura ao titular o direito de solicitar revisão de decisão tomada unicamente por tratamento automatizado que afete seus interesses, mas a exigência de revisão por pessoa natural foi retirada pela Lei 13.853/2019.</p><p>A A elimina um direito expressamente apresentado no texto. A B usa a redação anterior da lei. A D cria uma condição de prova prévia de discriminação que não consta da regra descrita.</p><p>Regra de bolso: a LGPD garante revisão; não garante que o revisor seja humano.</p>",
      "enunciado": "<p>Uma decisão de crédito foi tomada unicamente por tratamento automatizado. O cliente pede revisão e afirma que a LGPD obriga a instituição a entregar o caso a uma pessoa natural. Qual resposta está de acordo com o art. 20 descrito no texto?</p>",
      "alternativas": {
-      "a": "O cliente não possui direito à revisão, porque decisões de crédito podem ser integralmente automatizadas.",
+      "a": "O cliente não possui direito à revisão, porque decisões de crédito automatizadas ficam fora da LGPD.",
       "b": "O cliente tem direito à revisão, e a LGPD exige expressamente que ela seja feita por pessoa natural.",
       "c": "O cliente tem direito à revisão, mas a lei não exige que o revisor seja uma pessoa natural.",
       "d": "O cliente só tem direito à revisão quando comprovar previamente que houve discriminação."
@@ -4593,9 +4593,9 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa B está correta. A instituição decide contratar e utilizar o algoritmo e, por isso, continua respondendo perante o cliente e o supervisor, ainda que possa regular contratualmente sua relação com o fornecedor.</p><p>A A confunde responsabilidade externa com eventual relação contratual entre instituição e fornecedor. A C transfere ao cliente um risco que continua sendo da instituição. A D trata controles de governança como se eliminassem responsabilização.</p><p>Regra de bolso: terceirizar o algoritmo não terceiriza a responsabilidade.</p>",
      "enunciado": "<p>Um banco contrata de terceiro um algoritmo que analisa crédito e monitora operações suspeitas. Se o sistema falhar, qual princípio de governança permanece aplicável?</p>",
      "alternativas": {
-      "a": "A responsabilidade passa integralmente ao fornecedor porque ele desenvolveu o modelo.",
+      "a": "A responsabilidade passa ao fornecedor porque ele desenvolveu o modelo.",
       "b": "A instituição continua responsável perante cliente e supervisor, mesmo usando algoritmo de terceiro.",
-      "c": "O cliente assume o risco da decisão sempre que souber que o sistema utiliza inteligência artificial.",
+      "c": "O cliente assume o risco da decisão quando é informado de que o sistema utiliza inteligência artificial.",
       "d": "A responsabilidade desaparece quando o algoritmo possui documentação e trilha de auditoria."
      },
      "gabarito": "b",
@@ -4690,7 +4690,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "A SCD usa capital próprio e assume o risco; a SEP intermedia e o risco fica com o credor.",
       "b": "A SCD apenas intermedia credores e devedores; a SEP empresta exclusivamente com capital próprio.",
       "c": "SCD e SEP usam recursos próprios e assumem igualmente o risco de inadimplência do devedor.",
-      "d": "SCD e SEP apenas intermediam operações e nunca possuem exposição ao risco de crédito."
+      "d": "SCD e SEP apenas intermediam operações e transferem o risco de crédito ao investidor."
      },
      "gabarito": "a",
      "feedback": {
@@ -4710,7 +4710,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa C está correta. A SCD não pode captar recursos do público para financiar suas operações, sendo admitida a emissão de ações como forma de capitalização da própria empresa.</p><p>A A transforma a SCD em captadora de depósitos. A B usa uma atividade permitida para criar uma exceção de captação inexistente. A D condiciona a vedação à relação do poupador com a carteira de crédito.</p><p>Regra de bolso: SCD empresta capital próprio e não se financia com depósito de poupador.</p>",
      "enunciado": "<p>Uma SCD pretende financiar sua expansão captando depósitos diretamente de poupadores. A administração argumenta que isso é possível porque a sociedade concede crédito por plataforma eletrônica. Segundo o texto, essa operação é:</p>",
      "alternativas": {
-      "a": "Permitida, porque toda SCD pode captar do público para financiar sua carteira.",
+      "a": "Permitida, porque a SCD pode captar depósitos do público para financiar sua carteira.",
       "b": "Permitida apenas quando os recursos captados forem aplicados em direitos creditórios.",
       "c": "Vedada, pois a SCD não pode captar do público, salvo por emissão de ações.",
       "d": "Vedada apenas quando os poupadores também forem clientes das operações de crédito."
@@ -4757,7 +4757,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "O sistema é um arranjo de pagamento e o instituidor define as regras, sem conceder crédito ao cliente.",
       "b": "O sistema é uma instituição financeira e o instituidor obrigatoriamente empresta aos participantes do arranjo.",
-      "c": "O sistema é uma SEP e o instituidor assume o risco de inadimplência de todos os usuários do serviço.",
+      "c": "O sistema é uma SEP e o instituidor assume o risco de inadimplência dos usuários do serviço.",
       "d": "O sistema é uma SCD e o instituidor precisa financiar as compras com capital próprio."
      },
      "gabarito": "a",
@@ -4779,7 +4779,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "Está correta, pois entrar no sandbox equivale a receber autorização definitiva da autoridade.",
       "b": "Está incorreta, pois o sandbox é temporário, limitado e prevê apenas dispensas específicas.",
-      "c": "Está correta desde que o número de clientes permaneça limitado durante toda a existência da empresa.",
+      "c": "Está correta desde que o número de clientes permaneça limitado durante a operação da empresa.",
       "d": "Está incorreta apenas porque o sandbox existiria exclusivamente dentro do Banco Central."
      },
      "gabarito": "b",
@@ -4876,7 +4876,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "A LFT, porque a Selic reage à inflação e protege o investidor.",
       "b": "A LTN, porque a taxa prefixada já embute a inflação esperada.",
       "c": "A NTN-B, porque corrige o valor pelo IPCA e ainda paga um juro real acima dele.",
-      "d": "Qualquer título público, porque todos têm risco soberano."
+      "d": "A LFT ou a LTN, porque o risco soberano protege o poder de compra."
      },
      "gabarito": "c",
      "feedback": {
@@ -4897,7 +4897,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>A NTN-B existe em duas modalidades que a prova cobra com frequência. Sobre a diferença entre elas, é correto afirmar que:</p>",
      "alternativas": {
       "a": "A NTN-B Principal paga cupons semestrais, e a NTN-B devolve tudo no vencimento.",
-      "b": "A NTN-B paga cupons semestrais, e a NTN-B Principal concentra todo o pagamento no vencimento.",
+      "b": "A NTN-B paga cupons semestrais, e a NTN-B Principal concentra o principal e os juros no vencimento.",
       "c": "As duas pagam cupons semestrais, e a diferença está no indexador de cada uma.",
       "d": "As duas concentram o pagamento no vencimento, e a diferença está no prazo mínimo de aplicação."
      },
@@ -4944,7 +4944,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "A alíquota é de 22,5%, porque o intervalo entre um cupom e outro é inferior a 180 dias.",
       "b": "A alíquota é de 15%, porque o prazo é contado desde a data de aquisição do título.",
       "c": "O cupom é isento de imposto de renda, e a tributação só ocorre no vencimento.",
-      "d": "A alíquota é de 20%, aplicada de forma fixa sobre todos os cupons de qualquer NTN-B."
+      "d": "A alíquota é de 20%, fixa sobre o cupom, sem aplicação da tabela regressiva."
      },
      "gabarito": "b",
      "feedback": {
@@ -4990,7 +4990,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Um cliente pergunta quem garante o dinheiro que ele aplicou pelo Tesouro Direto. A resposta correta é:</p>",
      "alternativas": {
       "a": "O Fundo Garantidor de Créditos (FGC), até R$ 250.000,00 por CPF.",
-      "b": "O próprio governo federal, que é o emissor do título. É o menor risco de crédito da economia, o chamado risco soberano.",
+      "b": "O próprio governo federal, que é o emissor do título. Esse é o chamado risco soberano.",
       "c": "A B3, que faz a custódia dos títulos e responde pelo saldo do investidor.",
       "d": "A instituição financeira que atua como Agente de Custódia da operação."
      },
@@ -5036,7 +5036,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Durante um período de forte estresse no mercado, um cliente pergunta se corre o risco de ficar sem conseguir vender os títulos que comprou pelo Tesouro Direto antes do vencimento. A resposta correta é que:</p>",
      "alternativas": {
       "a": "Sim, porque a venda antecipada depende de encontrar outro investidor interessado no papel.",
-      "b": "Não, porque o próprio Tesouro Nacional garante a recompra dos títulos do programa em todos os dias úteis.",
+      "b": "Não, porque o próprio Tesouro Nacional garante a recompra diária dos títulos do programa.",
       "c": "Não, porque o Tesouro Nacional garante a recompra pelo preço de compra, sem qualquer perda.",
       "d": "Sim, porque a liquidez diária vale apenas para o Tesouro Selic."
      },
@@ -5059,8 +5059,8 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "Em duas parcelas semestrais, no primeiro dia útil de janeiro e de julho.",
       "b": "De forma provisionada diariamente, e debitada apenas quando há movimentação, como resgate antecipado, vencimento ou pagamento de cupom.",
-      "c": "No ato da compra, de uma só vez, sobre todo o período até o vencimento.",
-      "d": "Somente no vencimento do título, nunca antes."
+      "c": "No ato da compra, de uma só vez, calculada até a data de vencimento.",
+      "d": "Somente no vencimento do título, sem cobrança no resgate antecipado."
      },
      "gabarito": "b",
      "feedback": {
@@ -5148,8 +5148,8 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "simulado",
       "revisao"
      ],
-     "comentario": "<p>A alternativa B está correta. Reserva de emergência exige liquidez e baixa oscilação. O CDB com liquidez diária e rentabilidade pós-fixada em percentual do CDI atende as duas condições, porque acompanha a taxa diária da economia e pode ser resgatado quando o cliente precisar.</p><p>As outras três erram por adequação, e não por conceito. A A e a D prendem o dinheiro em prazo longo, justamente o contrário do que uma emergência pede. A C é ainda pior: o RDB é inegociável e intransferível.</p><p>Repare no tipo de questão. A banca não está testando o produto, está testando conduta: a resposta certa não é a mais rentável, é a mais adequada ao objetivo do cliente.</p>",
-     "enunciado": "<p>Uma cliente conservadora quer montar a reserva de emergência e pede um produto de emissão bancária com liquidez e rentabilidade acompanhando a taxa básica do mercado interbancário. A indicação mais adequada é:</p>",
+     "comentario": "<p>A alternativa B está correta. Reserva de emergência exige liquidez e baixa oscilação. O CDB com liquidez diária e rentabilidade pós-fixada em percentual do CDI atende as duas condições, porque acompanha a taxa diária da economia e pode ser resgatado quando o cliente precisar.</p><p>As outras três erram por adequação, e não por conceito. A A e a D prendem o dinheiro em prazo longo, justamente o contrário do que uma emergência pede. A C é ainda pior: o RDB é inegociável e intransferível.</p><p>Repare no tipo de questão. A banca não está testando o produto, está testando conduta: a resposta certa não é a de taxa alta, é a que atende ao objetivo do cliente.</p>",
+     "enunciado": "<p>Uma cliente conservadora quer montar a reserva de emergência e pede um produto de emissão bancária com liquidez e rentabilidade acompanhando a taxa básica do mercado interbancário. A indicação correta é:</p>",
      "alternativas": {
       "a": "Um CDB prefixado de três anos de um banco de menor porte, pela taxa mais alta.",
       "b": "Um CDB com liquidez diária e rentabilidade pós-fixada atrelada ao CDI.",
@@ -5334,10 +5334,10 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "simulado",
       "revisao"
      ],
-     "comentario": "<p>A alternativa B está correta. A confusão entre esses dois papéis é a principal pegadinha atual. Na debênture incentivada, o benefício é do investidor (a pessoa física é isenta de IR). Na debênture de infraestrutura, o benefício é da empresa emissora (que deduz despesas), e a pessoa física paga IR normalmente pela tabela regressiva.</p><p>A alternativa A inventa uma isenção universal inexistente. A alternativa C erra ao igualar as duas pontas da isenção. A alternativa D inverte completamente a mecânica das duas leis.</p><p>Guarde a frase: a incentivada beneficia quem compra, a de infraestrutura beneficia quem emite.</p>",
+     "comentario": "<p>A alternativa B está correta. A confusão entre esses dois papéis é a principal pegadinha atual. Na debênture incentivada, o benefício é do investidor (a pessoa física é isenta de IR). Na debênture de infraestrutura, o benefício é da empresa emissora (que deduz despesas), e a pessoa física paga IR normalmente pela tabela regressiva.</p><p>A alternativa A inventa uma isenção do investidor na de infraestrutura. A alternativa C erra ao igualar as duas pontas da isenção. A alternativa D inverte completamente a mecânica das duas leis.</p><p>Guarde a frase: a incentivada beneficia quem compra, a de infraestrutura beneficia quem emite.</p>",
      "enunciado": "<p>O mercado oferece dois papéis criados para financiar projetos prioritários, mas com estruturas tributárias opostas: a debênture incentivada (Lei 12.431) e a debênture de infraestrutura (Lei 14.801/2024). A principal diferença entre elas é que:</p>",
      "alternativas": {
-      "a": "A de infraestrutura garante isenção total para qualquer investidor, e a incentivada tributa todos pela tabela regressiva.",
+      "a": "A de infraestrutura isenta o investidor pessoa física, e a incentivada tributa esse investidor pela tabela regressiva.",
       "b": "A incentivada isenta o investidor pessoa física, enquanto na de infraestrutura o benefício fiscal fica com a empresa emissora.",
       "c": "Ambas garantem isenção de imposto de renda para a pessoa física, diferenciando-se apenas pelo tipo de garantia real exigida.",
       "d": "A incentivada beneficia a empresa emissora com deduções, obrigando o investidor a recolher imposto na fonte."
@@ -5381,7 +5381,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "revisao"
      ],
      "comentario": "<p>A alternativa D está correta. A legislação divide as garantias em quatro categorias com prioridade estrita de pagamento: a Real trava um bem específico e é a mais forte; a Flutuante dá privilégio geral sobre os bens que restarem; a Quirografária coloca o investidor na vala comum sem privilégios; e a Subordinada é a última a receber, ficando apenas na frente dos acionistas.</p><p>A alternativa A erra ao dar protagonismo à vala comum. A alternativa B inverte a ordem das garantias mais fortes. A alternativa C erra ao colocar os credores subordinados na frente da garantia quirografária.</p>",
-     "enunciado": "<p>Você atende um cliente que pretende investir o dinheiro da venda de um imóvel em debêntures corporativas. Ele demonstra preocupação com o risco de calote e questiona como funciona a proteção do investidor em caso de falência da empresa. Você explica que a ordem de prioridade para pagamento das garantias, da mais forte para a mais fraca, é:</p>",
+     "enunciado": "<p>Você atende um cliente que pretende investir o dinheiro da venda de um imóvel em debêntures corporativas. Ele demonstra preocupação com o risco de calote e questiona como funciona a proteção do investidor em caso de falência da empresa. Você explica que a ordem de prioridade para pagamento das garantias, da primeira à última, é:</p>",
      "alternativas": {
       "a": "Quirografária, Real, Flutuante e Subordinada.",
       "b": "Flutuante, Subordinada, Real e Quirografária.",
@@ -5524,7 +5524,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "O Fundo Garantidor de Créditos devolverá o capital ao investidor, visto que o calote partiu do lastro principal.",
       "b": "O investidor fica protegido contra perdas, pois a securitizadora é obrigada por lei a recomprar o título com seu capital social.",
       "c": "O patrimônio separado é ativado como fundo de liquidez, mantendo os juros estáveis sem perdas ao investidor.",
-      "d": "O investidor assume integralmente o calote, já que o risco de crédito desses papéis recai sobre a inadimplência dos devedores finais."
+      "d": "O investidor arca com o calote, já que o risco de crédito desses papéis recai sobre a inadimplência dos devedores finais."
      },
      "gabarito": "d",
      "feedback": {
@@ -5634,19 +5634,19 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "usar_em": [
       "simulado"
      ],
-     "comentario": "<p>A alternativa B está correta, pois ela é a única falsa (conforme pede o comando \"assinale a incorreta\"). No Brasil, o rodízio de analistas nas agências de classificação de risco não é obrigatório. A norma o trata como opcional, exigindo apenas que a empresa divulgue seus procedimentos caso decida implantá-lo.</p><p>As alternativas A, C e D descrevem vedações reais e exatas impostas pela CVM para impedir que interesses financeiros contaminem a qualidade e a independência da nota divulgada ao mercado.</p>",
-     "enunciado": "<p>A Resolução CVM 9 administra os conflitos de interesses na atuação das agências de classificação de risco no Brasil. De acordo com o texto da norma e as exigências para preservar a independência técnica, assinale a alternativa incorreta:</p>",
+     "comentario": "<p>A alternativa C está correta. A Resolução CVM 9 trata o rodízio de analistas como procedimento opcional e exige apenas que a agência divulgue esse procedimento caso decida adotá-lo. Não existe, na norma brasileira, rodízio obrigatório de agência para emissores recorrentes.</p><p>A alternativa A erra ao atribuir a contratação e o pagamento ao investidor, pois quem assina o contrato e paga a fatura é o próprio emissor da dívida, e daí nasce o conflito de interesses administrado pela norma. A alternativa B erra ao apontar o Banco Central como regulador da atividade, que no Brasil cabe à Comissão de Valores Mobiliários, e ainda supõe uma aprovação prévia de cada nota que a resolução não prevê. A alternativa D erra ao admitir a consultoria à entidade avaliada mediante divulgação, pois a resolução veda essa prestação de serviço, do mesmo modo que veda a participação do analista na negociação do contrato e a remuneração do analista atrelada à receita vinda do cliente avaliado.</p>",
+     "enunciado": "<p>Um assessor de investimentos atende um cliente que mantém debêntures de duas companhias na carteira. O cliente chega com uma reportagem impressa sobre agências de classificação de risco e diz que ficou em dúvida quanto ao grau de confiança que pode depositar nas notas divulgadas ao mercado.</p><p>Na conversa, o cliente destaca três trechos do texto. O primeiro afirma que a agência avalia a emissora e recebe honorários dessa mesma emissora. O segundo cita a Resolução CVM 9 como a norma que organiza o assunto no Brasil. O terceiro traz a fala de um especialista sobre a troca periódica dos analistas responsáveis pelo acompanhamento de cada emissor. O cliente então pergunta quem contrata e remunera a agência, quais condutas a norma veda e se existe regra de troca de analistas para emissores recorrentes. O assessor abre o texto da resolução na tela e organiza a resposta.</p><p>Com base na Resolução CVM 9, indique a alternativa correta sobre o tratamento dos conflitos de interesses nas agências de classificação de risco.</p>",
      "alternativas": {
-      "a": "É vedado à agência prestar serviços de consultoria para a mesma entidade que ela avalia.",
-      "b": "O rodízio periódico de analistas na avaliação das empresas recorrentes é uma medida de caráter obrigatório.",
-      "c": "Os analistas não podem participar da negociação comercial e financeira do contrato de rating com o cliente.",
-      "d": "A remuneração do analista não pode estar atrelada à receita financeira gerada pelo cliente analisado."
+      "a": "A contratação e o pagamento da agência partem do investidor que compra o título avaliado.",
+      "b": "A regulação dessa atividade no Brasil cabe ao Banco Central, que aprova a nota antes da divulgação.",
+      "c": "O rodízio de analistas é opcional, e a agência divulga o procedimento se decidir adotá-lo.",
+      "d": "A agência pode prestar consultoria à entidade que avalia, desde que informe o contrato ao mercado."
      },
-     "gabarito": "b",
+     "gabarito": "c",
      "feedback": {
-      "a": "A norma proíbe a consultoria simultânea para evitar que a agência avalie o próprio serviço que prestou.",
-      "c": "O comercial deve ser segregado para que o analista julgue o risco sem sofrer pressões na negociação dos honorários.",
-      "d": "Atrelar a remuneração do analista aos ganhos do emissor comprometeria a neutralidade exigida pelo regulador."
+      "a": "Quem contrata e remunera a agência é a entidade emissora da dívida, e não o investidor que compra o papel.",
+      "b": "A atividade é regulada pela Comissão de Valores Mobiliários, que não aprova nota por nota antes da divulgação.",
+      "d": "A prestação de consultoria à entidade avaliada é vedada pela norma, e a divulgação do contrato não afasta essa vedação."
      }
     }
    ],
@@ -5709,7 +5709,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Um cliente deposita R$ 5.000,00 na poupança no dia 12 de um determinado mês. No mês seguinte, devido a uma despesa não planejada, ele realiza o resgate total desse valor no dia 11. Em relação à rentabilidade desse período, o investidor:</p>",
      "alternativas": {
       "a": "Recebe o rendimento acumulado de forma proporcional (pro rata) calculado em cima dos dias decorridos.",
-      "b": "Perde integralmente o rendimento do mês, recebendo de volta apenas o valor inicial depositado sem juros.",
+      "b": "Perde o rendimento do mês, recebendo de volta apenas o valor inicial depositado sem juros.",
       "c": "Recebe a remuneração proporcional desde que aceite pagar uma multa pela quebra de carência do depósito.",
       "d": "Garante o rendimento integral, pois a liquidez diária do produto considera uma margem flexível de um dia útil."
      },
@@ -5731,9 +5731,9 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa B está correta. A regra protege de forma vitalícia o \"estoque antigo\" (dinheiro depositado até 3 de maio de 2012), mantendo o rendimento clássico de 0,5% ao mês acrescido da TR em qualquer cenário. O corte da Selic para um patamar igual ou menor que 8,5% ao ano (nesse caso, 7,5%) altera o gatilho apenas para os depósitos novos, que passarão a render 70% da meta da Selic mais TR.</p><p>A alternativa A erra ao submeter o dinheiro antigo à regra nova. A alternativa C erra ao estender a proteção do dinheiro antigo aos depósitos novos. A alternativa D inverte completamente qual saldo é protegido pela exceção da lei.</p>",
      "enunciado": "<p>O Banco Central reduziu a meta da taxa Selic de 9,5% para 7,5% ao ano. Um cliente verifica o saldo da sua caderneta de poupança, que possui recursos aplicados em 2010 (antes das mudanças na regra) e depósitos recentes realizados no ano atual. Diante do novo cenário econômico, a remuneração dessa conta:</p>",
      "alternativas": {
-      "a": "Passará a render 70% da Selic mais a Taxa Referencial em todos os depósitos, unificando a regra.",
+      "a": "Passará a render 70% da Selic mais a Taxa Referencial também sobre o saldo de 2010, unificando a regra.",
       "b": "Manterá os depósitos de 2010 rendendo fixamente 0,5% ao mês mais TR, enquanto os depósitos novos passarão a render 70% da Selic mais TR.",
-      "c": "Garantirá 0,5% ao mês mais TR para todo o patrimônio, pois a trava de queda atua para proteger o poder de compra.",
+      "c": "Garantirá 0,5% ao mês mais TR para o saldo de 2010 e para os depósitos novos, pois a trava de queda atua para proteger o poder de compra.",
       "d": "Terá seus ganhos limitados a 70% da Selic para o saldo antigo e manterá 0,5% ao mês para os depósitos novos."
      },
      "gabarito": "b",
@@ -5754,7 +5754,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Um cliente conservador possui R$ 200 mil aplicados na poupança do Banco Alfa e deposita mais R$ 200 mil na poupança do Banco Beta. Os dois bancos pertencem ao mesmo conglomerado financeiro. Você alerta o investidor que, em caso de quebra simultânea das duas instituições, a proteção do Fundo Garantidor de Créditos (FGC) garantirá:</p>",
      "alternativas": {
       "a": "A devolução de R$ 400 mil, pois o limite de proteção defende até R$ 250 mil de cada instituição bancária separadamente.",
-      "b": "A devolução de R$ 250 mil, pois este é o teto máximo de cobertura aplicável a todo o conglomerado financeiro.",
+      "b": "A devolução de R$ 250 mil, pois este é o teto máximo de cobertura aplicável ao conglomerado financeiro.",
       "c": "Nenhuma cobertura, porque a poupança fica de fora da proteção do FGC por ter recursos compulsoriamente direcionados a imóveis.",
       "d": "A devolução de R$ 400 mil, devido ao teto global do FGC que protege os investidores em até R$ 1 milhão por CPF a cada período de quatro anos."
      },
@@ -5866,19 +5866,19 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "usar_em": [
       "simulado"
      ],
-     "comentario": "<p>A alternativa B está correta, pois ela é a única falsa (conforme pede o comando da questão). A TLP substituiu a TJLP apenas para os contratos <strong>novos</strong> do BNDES, firmados a partir de 2018. A antiga TJLP não foi extinta de forma retroativa, ela permanece válida e em uso para os contratos antigos que ainda estão em fase de amortização.</p><p>As opções A, C e D descrevem fatos perfeitamente verdadeiros e abordam a correta divisão de papéis: a TR lida com poupança e FGTS usando base na captação bancária, enquanto a TLP rege o BNDES usando a inflação e a taxa da NTN-B.</p>",
-     "enunciado": "<p>As diferentes taxas balizadoras possuem finalidades muito específicas e regras de transição dentro do Sistema Financeiro Nacional. Considere as funções da Taxa Referencial (TR) e da Taxa de Longo Prazo (TLP) e assinale a alternativa incorreta:</p>",
+     "comentario": "<p>A alternativa B está correta. A TLP passou a balizar os contratos novos do BNDES a partir de 2018, enquanto a TJLP permanece válida e em uso nos contratos firmados antes dessa data que ainda estão em fase de amortização. A substituição atingiu as novas contratações, sem efeito retroativo sobre as dívidas já assinadas.</p><p>A alternativa A erra ao afirmar a extinção da TJLP com migração forçada dos contratos antigos, pois a taxa continua em vigor nessas operações. A alternativa C erra na composição da taxa, já que a TLP soma a variação do IPCA ao juro real atrelado à NTN-B de cinco anos, e a Selic não entra nesse cálculo. A alternativa D erra ao inverter o efeito da mudança, pois o Congresso Nacional aprovou a TLP justamente para eliminar o subsídio oculto que existia quando a TJLP ficava abaixo do custo de captação do Tesouro Nacional.</p>",
+     "enunciado": "<p>Uma gerente de contas corporativas recebe o diretor financeiro de uma indústria de embalagens. A empresa mantém dois financiamentos em aberto no BNDES. O primeiro foi assinado em 2015, segue em fase de amortização e tem a TJLP como indexador. O segundo foi contratado no ano passado, para a compra de maquinário, e tem a TLP como indexador.</p><p>O diretor coloca sobre a mesa as duas planilhas de parcelas e relata duas informações que recebeu de terceiros. Um consultor lhe disse que a TJLP foi extinta e que o contrato de 2015 teria de ser refeito com a taxa nova. Em um programa de rádio, ouviu que os empréstimos do BNDES acompanham a taxa Selic divulgada pelo Copom. O diretor pede uma explicação sobre a vigência de cada taxa e sobre a composição da TLP antes de decidir se antecipa a dívida antiga. A gerente confere os dois contratos no sistema e abre o demonstrativo de atualização de cada um.</p><p>Com base nas regras de transição entre a TJLP e a TLP, identifique a alternativa correta.</p>",
      "alternativas": {
-      "a": "A TR corrige o saldo do FGTS, compõe a rentabilidade da poupança e atualiza contratos habitacionais do SFH.",
-      "b": "A antiga TJLP deixou de existir, e todos os contratos de financiamento ainda ativos no BNDES foram migrados compulsoriamente para a TLP.",
-      "c": "A TR deriva da TBF após a aplicação de um redutor, utilizando as médias de taxas de CDB e RDB prefixados captados pelos bancos.",
-      "d": "A TLP exige que os clientes corporativos sejam orientados sobre a volatilidade, pois ela carrega o componente da inflação medida pelo IPCA."
+      "a": "A TJLP foi extinta em 2018, e os contratos antigos do BNDES migraram para a TLP por ordem do Congresso.",
+      "b": "A TLP rege os contratos novos do BNDES desde 2018, e a TJLP segue nos contratos antigos em amortização.",
+      "c": "A TLP acompanha a Selic apurada pelo Banco Central, sem vínculo com a inflação oficial do período.",
+      "d": "A adoção da TLP ampliou o subsídio coberto pelo Tesouro Nacional nos financiamentos do BNDES."
      },
      "gabarito": "b",
      "feedback": {
-      "a": "A aplicação estrutural da TR na poupança, no FGTS e nos financiamentos do SFH está correta e vigente.",
-      "c": "A cadeia de formação da TR (captação em CDB e RDB gerando a TBF e, após o redutor, a TR) está perfeitamente descrita.",
-      "d": "A afirmação é verdadeira, pois a TLP atrela os contratos novos do BNDES à oscilação do IPCA e ao rendimento da NTN-B."
+      "a": "A substituição alcançou os contratos novos, e a TJLP permanece válida nos contratos antigos em amortização.",
+      "c": "A TLP resulta da variação do IPCA somada ao juro real da NTN-B de cinco anos, e não do acompanhamento da Selic.",
+      "d": "A criação da TLP teve o objetivo de eliminar o subsídio oculto que o Tesouro cobria com dinheiro público."
      }
     }
    ],
@@ -5985,8 +5985,8 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa D está correta. O pagamento de um cupom é um fato gerador de imposto. A IN 1.585 define que a alíquota do cupom acompanha o tempo decorrido desde a data de aquisição do título. O relógio conta a partir da compra e não zera a cada semestre. Conforme os anos passam, os cupons vão descendo os degraus da tabela até estacionarem em 15%.</p><p>A alternativa A erra ao engessar a tributação em uma alíquota fixa para o ativo. A alternativa B apresenta a pegadinha clássica, na qual o aluno deduz erroneamente que o relógio reinicia a cada saque. A alternativa C erra ao ignorar que o depósito de juros já caracteriza o fato gerador tributável.</p>",
      "enunciado": "<p>Um cliente comprou uma Nota do Tesouro Nacional série B (NTN-B) que distribui juros semestralmente. Ele questiona como funcionará a tributação de Imposto de Renda em cada parcela de juros que cair na sua conta. Você orienta corretamente que o pagamento de cupom:</p>",
      "alternativas": {
-      "a": "Fixa a alíquota em 15% para todos os pagamentos periódicos efetuados, ignorando a tabela regressiva padrão.",
-      "b": "Reinicia o relógio a cada semestre: todos os cupons sofrem a alíquota máxima de 22,5%.",
+      "a": "Fixa a alíquota em 15% desde o primeiro pagamento periódico, ignorando a tabela regressiva padrão.",
+      "b": "Reinicia o relógio a cada semestre: o cupom sofre a alíquota de 22,5%.",
       "c": "Não sofre tributação, pois o fato gerador do tributo limita-se ao resgate antecipado do valor principal.",
       "d": "Acompanha os dias corridos contados desde a data original da aquisição do título, e o relógio não reinicia a cada cupom."
      },
@@ -6011,7 +6011,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>O Imposto sobre Operações Financeiras (IOF) possui uma característica regulatória voltada ao controle de liquidez no sistema bancário. De acordo com a tabela aplicável e as regras de base de cálculo do tributo, verifica-se que:</p>",
      "alternativas": {
       "a": "A alíquota inicial atinge 96% e zera a partir do trigésimo dia útil, incidindo sobre o valor total do resgate.",
-      "b": "A alíquota começa em 96% da rentabilidade e zera totalmente a partir do 30º dia corrido de aplicação.",
+      "b": "A alíquota começa em 96% da rentabilidade e zera a partir do 30º dia corrido de aplicação.",
       "c": "O tributo cobra 1% ao dia sobre o saldo acumulado de principal mais os rendimentos auferidos.",
       "d": "O IOF inicia a cobrança no 30º dia de investimento e estaciona em 15% após completar dois anos de aplicação."
      },
@@ -6098,10 +6098,10 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "usar_em": [
       "simulado"
      ],
-     "comentario": "<p>A alternativa B está correta, e o ponto da questão é que dois produtos chegam ao mesmo resultado por mecanismos distintos.</p><p>A lista de alíquota zero do art. 32, §2º do decreto do IOF alcança, entre outros, as operações de renda variável em bolsa, os fundos e clubes de ações, CDCA, LCA e CRA, debêntures e CRI, ETF de renda fixa em bolsa, FGC e FGCoop. O fundo de ações está nessa lista: a isenção é expressa.</p><p>A LCI e a LCD não estão. Elas escapam do IOF por um caminho indireto: o prazo mínimo de vencimento, seis meses na LCI e doze na LCD, torna impossível o resgate dentro dos 30 dias em que a tabela regressiva incide.</p><p>A distinção importa porque a banca costuma transportar a isenção de Imposto de Renda para o IOF. As duas listas são diferentes, e um produto isento de IR não é automaticamente alcançado pela alíquota zero de IOF.</p>",
+     "comentario": "<p>A alternativa B está correta. O ponto da questão é que dois produtos chegam ao mesmo resultado por mecanismos distintos.</p><p>A lista de alíquota zero do art. 32, §2º do decreto do IOF alcança, entre outros, as operações de renda variável em bolsa, os fundos e clubes de ações, CDCA, LCA e CRA, debêntures e CRI, ETF de renda fixa em bolsa, FGC e FGCoop. O fundo de ações está nessa lista: a isenção é expressa.</p><p>A LCI e a LCD não estão. Elas escapam do IOF por um caminho indireto: o prazo mínimo de vencimento, seis meses na LCI e doze na LCD, torna impossível o resgate dentro dos 30 dias em que a tabela regressiva incide.</p><p>A distinção importa porque a banca costuma transportar a isenção de Imposto de Renda para o IOF. As duas listas são diferentes, e um produto isento de IR não é automaticamente alcançado pela alíquota zero de IOF.</p>",
      "enunciado": "<p>Nem a LCI nem um fundo de ações costumam gerar cobrança de IOF ao investidor, mas o caminho é diferente em cada caso. Sobre esses dois produtos, é correto afirmar que:</p>",
      "alternativas": {
-      "a": "Os dois constam da lista de alíquota zero de IOF do decreto, e por isso nunca sofrem a cobrança.",
+      "a": "Os dois constam da lista de alíquota zero de IOF do decreto, e por isso escapam da cobrança.",
       "b": "O fundo de ações consta da lista de alíquota zero. A LCI não consta, e escapa porque o prazo mínimo de seis meses impede o resgate dentro dos 30 dias da tabela.",
       "c": "A LCI consta da lista de alíquota zero. O fundo de ações escapa porque a renda variável só é alcançada pelo Imposto de Renda.",
       "d": "Nenhum dos dois consta da lista, e os dois escapam apenas pelo prazo mínimo de aplicação."
@@ -6290,7 +6290,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "A S/A Fechada não pode fazer distribuição pública de valores mobiliários e capta apenas junto a investidores privados.",
       "b": "A S/A Fechada é fiscalizada pela CVM da mesma forma que a companhia aberta.",
-      "c": "Toda S/A Aberta com registro aprovado passa automaticamente a ter as ações negociadas na B3.",
+      "c": "A S/A Aberta com registro aprovado passa automaticamente a ter as ações negociadas na B3.",
       "d": "O acionista de uma S/A responde pelas dívidas da companhia com o próprio patrimônio pessoal."
      },
      "gabarito": "a",
@@ -6311,10 +6311,10 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa B está correta. Essa é a principal confusão conceitual cobrada na certificação. A empresa listada é aquela que, além de ser S/A Aberta, deu o passo extra de cadastrar e admitir ativamente suas ações no ambiente da bolsa (B3) para prover liquidez. Portanto, toda listada já cumpriu as obrigações e é uma Aberta. Contudo, o inverso não ocorre: uma S/A Aberta pode emitir apenas debêntures, captando com o público sob regras da CVM, e guardar as ações sem jamais listá-las na B3.</p><p>A alternativa A erra na automação da listagem via balanço contábil. A alternativa C tenta forjar um atalho burlado ignorando o Estado. A alternativa D cria uma restrição inexistente para prazos alongados de debênture.</p>",
      "enunciado": "<p>O mercado financeiro diferencia as categorias das empresas pelas operações que elas desenvolvem junto aos investidores. Avaliando a correlação entre uma S/A Aberta e uma Empresa Listada, identifica-se na norma da CVM que:</p>",
      "alternativas": {
-      "a": "Toda S/A Aberta torna-se uma empresa listada no momento da formalização contábil de sua auditoria.",
-      "b": "Toda empresa listada é obrigatoriamente uma S/A Aberta, mas o inverso não é verdadeiro.",
-      "c": "Toda empresa listada dispensa o registro da CVM se assinar contrato comercial definitivo de serviço com a B3.",
-      "d": "Toda S/A Aberta precisa ser listada caso venda papéis de dívida com vencimentos que superem dez anos."
+      "a": "A S/A Aberta torna-se uma empresa listada no momento da formalização contábil de sua auditoria.",
+      "b": "A empresa listada é obrigatoriamente uma S/A Aberta, mas o inverso não é verdadeiro.",
+      "c": "A empresa listada dispensa o registro da CVM se assinar contrato comercial definitivo de serviço com a B3.",
+      "d": "A S/A Aberta precisa ser listada caso venda papéis de dívida com vencimentos que superem dez anos."
      },
      "gabarito": "b",
      "feedback": {
@@ -6336,7 +6336,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "Quaisquer valores mobiliários, inclusive ações, sem restrição.",
       "b": "Apenas ações preferenciais, já que elas não transferem o controle da companhia.",
       "c": "Apenas títulos atrelados a câmbio e cotas de fundos exclusivos.",
-      "d": "Todos os valores mobiliários, como debêntures e notas comerciais, exceto ações e papéis conversíveis em ações."
+      "d": "Valores mobiliários de dívida, como debêntures e notas comerciais, mas não ações nem conversíveis em ações."
      },
      "gabarito": "d",
      "feedback": {
@@ -6381,10 +6381,10 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa C está correta. As ações ordinárias outorgam o poder político por meio do voto nas assembleias gerais, enquanto as ações preferenciais abrem mão do voto em troca de vantagens econômicas e financeiras (prioridades).</p><p>A alternativa A apresenta a pegadinha clássica invertendo os direitos de cada classe de ação. A alternativa B erra ao atribuir o direito a voto pleno à classe preferencial. A alternativa D erra ao forçar que toda PN possui vantagem dupla (dividendo e reembolso) automaticamente, quando a norma estabelece que o estatuto é quem escolhe entre uma, outra ou ambas as prioridades.</p>",
      "enunciado": "<p>As ações de uma companhia aberta dividem-se em diferentes classes para atrair perfis distintos de investidores. Ao comparar os direitos básicos estruturais das ações ordinárias (ON) e preferenciais (PN), o profissional de investimentos deve informar ao cliente que:</p>",
      "alternativas": {
-      "a": "As ações ordinárias garantem prioridade no reembolso de capital na falência, enquanto as preferenciais asseguram sempre o direito a voto nas assembleias.",
+      "a": "As ações ordinárias garantem prioridade no reembolso de capital na falência, enquanto as preferenciais asseguram o direito a voto nas assembleias.",
       "b": "Ambas as classes conferem direito a voto proporcional ao dinheiro investido, diferenciando-se estritamente na data de distribuição de dividendos.",
       "c": "As ações ordinárias representam o poder político pelo direito a voto, e as preferenciais recebem vantagens financeiras em troca da restrição política.",
-      "d": "Toda ação preferencial garante de forma automática e obrigatória a prioridade simultânea no recebimento do dividendo e no reembolso do capital."
+      "d": "A ação preferencial garante de forma automática e obrigatória a prioridade simultânea no recebimento do dividendo e no reembolso do capital."
      },
      "gabarito": "c",
      "feedback": {
@@ -6523,7 +6523,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "R$ 100 milhões, pois o total da oferta pública de estreia ingressa nas reservas contábeis do emissor.",
       "b": "R$ 40 milhões, correspondendo exclusivamente à fatia negociada pelos acionistas fundadores.",
       "c": "R$ 60 milhões, referentes estritamente à injeção de capital proveniente das novas ações emitidas pela empresa.",
-      "d": "Zero, uma vez que a entrada de recursos em ofertas mistas pertence por lei integralmente aos coordenadores do banco de investimento."
+      "d": "Zero, uma vez que a entrada de recursos em ofertas mistas pertence por lei aos coordenadores do banco de investimento."
      },
      "gabarito": "c",
      "feedback": {
@@ -6546,7 +6546,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "Preço justo respaldado em laudo de avaliação, com possibilidade de os minoritários solicitarem revisão, e aprovação de mais de dois terços das ações em circulação habilitadas para o leilão.",
       "b": "Aprovação unânime do conselho de administração e consentimento prévio do Banco Central do Brasil.",
       "c": "Preço fixado livremente pelo controlador, dispensando laudos de avaliação caso a totalidade das ações ordinárias seja resgatada no mesmo dia.",
-      "d": "Quórum de maioria simples calculado sobre o total absoluto de todas as ações em circulação da companhia, computando obrigatoriamente os acionistas que ficarem em silêncio como votos contrários."
+      "d": "Quórum de maioria simples calculado sobre o conjunto das ações em circulação da companhia, computando os acionistas que ficarem em silêncio como votos contrários."
      },
      "gabarito": "a",
      "feedback": {
@@ -6562,12 +6562,12 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "usar_em": [
       "simulado"
      ],
-     "comentario": "<p>A alternativa B está correta, e ela junta as duas armadilhas do tópico numa situação só.</p><p>Na distribuição secundária a companhia não emite ação nova. Os sócios vendem o que já tinham, e o dinheiro viaja direto para a conta bancária deles. O caixa da empresa não recebe um centavo. Só a distribuição primária capitaliza a companhia, porque nela existem ações novas sendo criadas e vendidas.</p><p>A OPA é o movimento inverso do IPO. Alguém anuncia que quer comprar ações em circulação, seja para fechar o capital, seja porque assumiu o controle. Em nenhuma das hipóteses entra dinheiro na companhia.</p><p>Sobre o caso de setembro: quando um grupo compra o controle de uma listada, a lei obriga o novo dono a lançar OPA para comprar as ações ordinárias dos minoritários. É a proteção conhecida como tag along, e ela é obrigação de quem comprou o controle, não capitalização da empresa.</p><p>A companhia capta dinheiro novo por dois caminhos, e só por eles: IPO primário e follow on primário.</p>",
+     "comentario": "<p>A alternativa B está correta. Ela junta as duas armadilhas do tópico numa situação só.</p><p>Na distribuição secundária a companhia não emite ação nova. Os sócios vendem o que já tinham, e o dinheiro viaja direto para a conta bancária deles. O caixa da empresa não recebe um centavo. Só a distribuição primária capitaliza a companhia, porque nela existem ações novas sendo criadas e vendidas.</p><p>A OPA é o movimento inverso do IPO. Alguém anuncia que quer comprar ações em circulação, seja para fechar o capital, seja porque assumiu o controle. Em nenhuma das hipóteses entra dinheiro na companhia.</p><p>Sobre o caso de setembro: quando um grupo compra o controle de uma listada, a lei obriga o novo dono a lançar OPA para comprar as ações ordinárias dos minoritários. É a proteção conhecida como tag along, e ela é obrigação de quem comprou o controle, não capitalização da empresa.</p><p>A companhia capta dinheiro novo por dois caminhos, e só por eles: IPO primário e follow on primário.</p>",
      "enunciado": "<p>Uma companhia listada aparece duas vezes no noticiário do mesmo semestre. Em março, uma oferta pública em que os sócios fundadores venderam parte das participações que já tinham. Em setembro, uma OPA lançada por um grupo econômico que acabou de comprar o controle da empresa. Um cliente pergunta quanto dinheiro dessas duas operações entrou no caixa da companhia. A resposta correta é:</p>",
      "alternativas": {
-      "a": "O valor integral das duas, porque toda oferta pública movimenta o capital social da companhia.",
+      "a": "O valor integral das duas, porque a oferta pública movimenta o capital social da companhia.",
       "b": "Nada em nenhuma das duas. A oferta de março foi secundária, e a OPA é compra de ações que já existem, não captação.",
-      "c": "Apenas o valor da oferta de março, porque toda oferta subsequente injeta recursos no caixa.",
+      "c": "Apenas o valor da oferta de março, porque a oferta subsequente injeta recursos no caixa.",
       "d": "Apenas o valor da OPA, porque quem assume o controle é obrigado a capitalizar a companhia."
      },
      "gabarito": "b",
@@ -6632,7 +6632,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Na mesa de atendimento, o investidor questiona as diferenças operacionais e tributárias entre o recebimento de dividendos e de Juros sobre Capital Próprio (JCP) distribuídos por uma companhia aberta. Ao comparar as duas formas de remuneração, o profissional esclarece que:</p>",
      "alternativas": {
       "a": "O JCP gera um benefício fiscal corporativo para a empresa emissora ao reduzir seu lucro tributável, mas sofre incidência de Imposto de Renda retido na fonte para o acionista.",
-      "b": "O dividendo é dedutível do Imposto de Renda da empresa, enquanto o JCP é integralmente isento de tributação para a pessoa física em qualquer patamar de valor.",
+      "b": "O dividendo é dedutível do Imposto de Renda da empresa, enquanto o JCP é isento de tributação para a pessoa física.",
       "c": "Ambas as distribuições reduzem a base de cálculo de impostos da companhia e repassam o ganho bruto livre de retenção para a conta do investidor.",
       "d": "O JCP é proibido por lei em companhias listadas, restringindo-se unicamente às Sociedades Anônimas de capital fechado."
      },
@@ -6654,7 +6654,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa C está correta. A partir de 2026, os pagamentos de dividendos efetuados por uma mesma empresa a uma mesma pessoa física que ultrapassarem R$ 50.000,00 em um único mês sofrem retenção na fonte de 10% sobre o <strong>total pago</strong> (e não apenas sobre a diferença excedente).</p><p>A alternativa A erra ao propor a soma generalizada entre empresas diferentes. A alternativa B comete o erro clássico de calcular o imposto só sobre o excedente. A alternativa D confunde a alíquota de 10% dos dividendos com a alíquota de 17,5% do JCP.</p>",
      "enunciado": "<p>Um investidor pessoa física recebeu em um determinado mês o valor bruto de R$ 60.000,00 em dividendos pagos por uma única empresa listada na B3. Considerando as regras vigentes da tributação aplicável aos proventos distribuídos a partir de 2026, o tratamento fiscal para essa operação determina que:</p>",
      "alternativas": {
-      "a": "Todo o montante permanece isento, pois o limite de R$ 50.000,00 mensais é calculado somando os dividendos de todas as empresas da bolsa.",
+      "a": "O montante permanece isento, pois o limite de R$ 50.000,00 mensais soma os dividendos das empresas da carteira.",
       "b": "Incidirá uma retenção de Imposto de Renda na fonte de 10% calculada exclusivamente sobre a parcela excedente de R$ 10.000,00.",
       "c": "Incidirá uma retenção de Imposto de Renda na fonte de 10% calculada sobre o valor total pago de R$ 60.000,00.",
       "d": "O valor total sofrerá retenção antecipada de 17,5% por equiparação às regras aplicadas aos Juros sobre Capital Próprio."
@@ -6855,12 +6855,12 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "simulado",
       "revisao"
      ],
-     "comentario": "<p>A alternativa B está correta. Um índice de mercado é uma carteira teórica que serve de referencial de desempenho (benchmark) para que o investidor e o gestor avaliem se a rentabilidade obtida superou a média do mercado.</p><p>A alternativa A erra ao afirmar que o índice pode ser comprado diretamente no home broker. A alternativa C cai na armadilha de achar que alta do índice significa alta unânime de todos os papéis. A alternativa D inventa custos operacionais fictícios atrelados ao cálculo teórico da B3.</p>",
+     "comentario": "<p>A alternativa B está correta. Um índice de mercado é uma carteira teórica que serve de referencial de desempenho (benchmark) para que o investidor e o gestor avaliem se a rentabilidade obtida superou a média do mercado.</p><p>A alternativa A erra ao afirmar que o índice pode ser comprado diretamente no home broker. A alternativa C cai na armadilha de achar que alta do índice exige valorização simultânea das ações da carteira. A alternativa D inventa custos operacionais fictícios atrelados ao cálculo teórico da B3.</p>",
      "enunciado": "<p>Os índices de mercado desempenham um papel fundamental para a análise financeira, funcionando como carteiras teóricas que medem o comportamento médio do mercado. Sobre a utilidade prática desses índices para o investidor pessoa física, é correto afirmar que:</p>",
      "alternativas": {
       "a": "O investidor pode comprar cotas diretamente do Ibovespa pelo home broker, pagando a taxa de corretagem à vista.",
       "b": "Os índices servem de referencial de desempenho (benchmark), permitindo avaliar se um fundo de ações superou a média do mercado.",
-      "c": "A pontuação de um índice reflete obrigatoriamente a alta simultânea de todas as companhias listadas na bolsa de valores.",
+      "c": "A pontuação de um índice sobe apenas quando as ações da carteira teórica se valorizam no mesmo pregão.",
       "d": "Os índices cobram uma taxa de administração fixa que é repassada pelo operador da B3 trimestralmente."
      },
      "gabarito": "b",
@@ -6949,7 +6949,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa B está correta. Os limitadores de peso exclusivos do Ibovespa incluem o limite por companhia (que impede que a soma de ações de uma mesma empresa ultrapasse 20%) e o limite de liquidez. O IBrX não possui esses dois freios específicos.</p><p>A alternativa A erra a periodicidade, que é quadrimestral. A alternativa C inventa um teto de 15% para o IBrX 50. A alternativa D erra o dia exato de vigência, que começa na primeira segunda-feira dos meses de rebalanceamento.</p>",
      "enunciado": "<p>O comitê da B3 aplica travas específicas de controle para evitar que uma única companhia exerça influência desproporcional sobre a pontuação dos indicadores oficiais. Analisando os limites e os procedimentos de rebalanceamento dessas carteiras teóricas, assinale a alternativa correta:</p>",
      "alternativas": {
-      "a": "O rebalanceamento das carteiras do Ibovespa, IBrX 100 e IBrX 50 ocorre de forma trimestral, sempre no último dia útil de março, junho, setembro e dezembro.",
+      "a": "O rebalanceamento das carteiras do Ibovespa, IBrX 100 e IBrX 50 ocorre de forma trimestral, no último dia útil de março, junho, setembro e dezembro.",
       "b": "O limite de liquidez e o limite por companhia (máximo de 20%) que evitam distorções são restrições metodológicas aplicadas exclusivamente ao Ibovespa.",
       "c": "O IBrX 50 adota um teto rígido que impede que qualquer companhia ultrapasse 15% de participação total na carteira teórica.",
       "d": "A revisão quadrimestral das carteiras entra em vigor na última sexta-feira de cada ciclo avaliado pelos analistas da bolsa."
@@ -7021,7 +7021,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Um investidor avalia os direitos de proteção acionária previstos pela Lei das Sociedades Anônimas e pelas regras diferenciadas da B3. Sobre os percentuais mínimos de tag along assegurados aos minoritários detentores de ações ordinárias, verifica-se que:</p>",
      "alternativas": {
       "a": "A lei geral assegura um piso de tag along de 80% restrito às ações ordinárias, enquanto os segmentos especiais do Nível 2 e do Novo Mercado elevam esse percentual para 100%.",
-      "b": "A lei geral garante obrigatoriamente 100% de tag along para todas as classes, independentemente do segmento da empresa na bolsa.",
+      "b": "A lei geral garante 100% de tag along para ordinárias e preferenciais, independentemente do segmento da empresa na bolsa.",
       "c": "Os segmentos básicos não oferecem nenhuma proteção, exigindo o patamar de 80% exclusivamente nos papéis do Nível 1.",
       "d": "O Novo Mercado estipula um teto de 50% de tag along para as ordinárias e proíbe qualquer ganho adicional de saída."
      },
@@ -7062,19 +7062,19 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "usar_em": [
       "simulado"
      ],
-     "comentario": "<p>A alternativa D está correta, pois trata-se da única alternativa incorreta (atendendo ao comando da questão). O segmento do Novo Mercado <strong>proíbe</strong> terminantemente a emissão de ações preferenciais; o capital social da companhia deve ser composto exclusivamente por ações ordinárias (ON).</p><p>As alternativas A, B e C descrevem perfeitamente conceitos corretos e fiéis às normas de governança: o drag along atua na venda integral, o free float exclui controladores, e o Nível 2 concede direitos estendidos às preferenciais com tag along de 100%.</p>",
-     "enunciado": "<p>Analise os institutos de proteção societária, governança e regras aplicadas aos segmentos de listagem da B3 e assinale a alternativa incorreta:</p>",
+     "comentario": "<p>A alternativa D está correta. O Novo Mercado é o segmento especial de governança da B3, e sua regra central trata da composição do capital social: a companhia emite ações ordinárias e fica proibida de emitir preferenciais, sob o lema de uma ação, um voto.</p><p>A alternativa A erra no cálculo do free float, que mede as ações em livre circulação e deixa de fora as posições de controladores, de administradores e da tesouraria da companhia. A alternativa B erra no percentual, pois o Nível 2 garante tag along de 100% do preço pago ao controlador, para ordinárias e preferenciais, enquanto o piso legal de 80% vale no segmento básico e alcança apenas as ações ordinárias. A alternativa C erra ao trocar os institutos, já que arrastar o minoritário para a venda é efeito do drag along previsto em estatuto ou em acordo de acionistas, ao passo que o tag along funciona como porta de saída do minoritário na troca de controle.</p>",
+     "enunciado": "<p>Um especialista de investimentos atende uma cliente que montou uma carteira com ações de três companhias listadas na B3. Uma delas integra o Novo Mercado, outra está no Nível 2 e a terceira permanece no segmento básico de listagem.</p><p>A cliente conta que participou de uma reunião pública com analistas e voltou com dúvidas de vocabulário. Ela quer entender quais classes de ação cada segmento admite, qual percentual do preço pago ao controlador chega ao acionista minoritário na troca de controle, quais ações entram na conta do free float divulgado pelas companhias e qual é a diferença entre tag along e drag along. Também pergunta se a companhia do Novo Mercado pode emitir ações preferenciais sem direito a voto. O especialista abre o regulamento dos segmentos de listagem da B3 e os estatutos das três companhias, confere a composição do capital social de cada uma e separa os pontos da resposta.</p><p>Com base nas regras dos segmentos de listagem e nos institutos societários, indique a alternativa correta.</p>",
      "alternativas": {
-      "a": "O drag along funciona como o espelho reverso do tag along, permitindo que o acionista controlador obrigue os minoritários a venderem suas fatias junto com o bloco de controle nas mesmas condições.",
-      "b": "O cálculo do free float considera o total de ações em livre circulação, excluindo expressamente os papéis detidos pelo bloco controlador, administradores e em tesouraria.",
-      "c": "O Nível 2 da B3 admite a emissão de ações ordinárias e preferenciais, garantindo que as ações preferenciais ganhem direito de voto em pautas críticas como fusões e incorporações, além de assegurar 100% de tag along para ambas as classes.",
-      "d": "O Novo Mercado permite que a companhia mantenha parte de seu capital composto por ações preferenciais sem direito a voto, desde que o volume financeiro delas não ultrapasse 20% do total emitido."
+      "a": "O free float considera as ações do bloco controlador e as posições mantidas em tesouraria.",
+      "b": "O Nível 2 admite ordinárias e preferenciais, com tag along fixado em 80% para as duas classes.",
+      "c": "O tag along permite ao controlador obrigar o minoritário a vender junto com o bloco de controle.",
+      "d": "No Novo Mercado, o capital reúne ações ordinárias, e a emissão de preferenciais fica vedada."
      },
      "gabarito": "d",
      "feedback": {
-      "a": "A definição do drag along como ferramenta para o controlador arrastar os minoritários na venda total é verídica.",
-      "b": "A exclusão de controladores, administradores e tesouraria no cômputo do free float está correta.",
-      "c": "As características de permissão de PN com voto em pautas críticas e o tag along de 100% para ON e PN no Nível 2 estão perfeitas."
+      "a": "O cálculo do free float exclui as ações de controladores, de administradores e as mantidas em tesouraria.",
+      "b": "O Nível 2 nivela o tag along em 100% do preço pago ao controlador, para ordinárias e preferenciais.",
+      "c": "Arrastar o minoritário na venda do controle é função do drag along, pois o tag along dá saída ao minoritário."
      }
     }
    ],
@@ -7116,7 +7116,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "R$ 5.000,00 no mês, restrito a cotas de Fundos de Investimento Imobiliário.",
       "b": "R$ 10.000,00 no mês, aplicado exclusivamente a operações de day trade em opções.",
       "c": "R$ 20.000,00 no mês em ações no mercado à vista.",
-      "d": "R$ 50.000,00 no mês, somando todas as classes de ativos, incluindo os ETFs de ações."
+      "d": "R$ 50.000,00 no mês, somando ações, FIIs e ETFs de ações."
      },
      "gabarito": "c",
      "feedback": {
@@ -7138,7 +7138,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "15% nas operações comuns e 20% nas operações de day trade.",
       "b": "20% nas operações comuns e 15% nas operações de day trade.",
-      "c": "Alíquota fixa de 17,5% em todas as operações, unificando a regra por equiparação ao JCP.",
+      "c": "Alíquota fixa de 17,5% nas operações comuns e de day trade, unificando a regra por equiparação ao JCP.",
       "d": "Tabela regressiva de 22,5% a 15%, idêntica à aplicada nos títulos de renda fixa privada."
      },
      "gabarito": "a",
@@ -7159,7 +7159,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa C está correta. A legislação estabelece uma barreira rígida de compensação: prejuízos em operações de day trade só podem ser abatidos de ganhos obtidos em operações de day trade, sendo vedado o cruzamento com o resultado de operações comuns.</p><p>As alternativas A, B e D violam as regras de compensação cruzada, prazos de prescrição ou limites de compensação da Receita Federal.</p>",
      "enunciado": "<p>Um cliente obteve um prejuízo de R$ 4.000,00 em operações de day trade no mês de janeiro e, no mês de fevereiro, acumulou um ganho líquido de R$ 6.000,00 em operações comuns no mercado à vista de ações. Ao orientar esse investidor sobre a compensação de perdas na renda variável, você afirma corretamente que:</p>",
      "alternativas": {
-      "a": "O prejuízo do day trade pode ser integralmente abatido do ganho das operações comuns, zerando o imposto de fevereiro.",
+      "a": "O prejuízo do day trade pode ser abatido do ganho das operações comuns, zerando o imposto de fevereiro.",
       "b": "O prejuízo não pode ser compensado, pois a legislação proíbe o uso de créditos fiscais de bolsa de valores em anos-calendário diferentes.",
       "c": "O prejuízo em day trade só pode ser compensado com ganhos em operações da mesma modalidade (day trade), não podendo ser misturado com as operações comuns.",
       "d": "O prejuízo caduca e extingue-se automaticamente caso o cliente não recupere o saldo negativo dentro de um prazo máximo de trinta dias."
@@ -7294,19 +7294,19 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "usar_em": [
       "simulado"
      ],
-     "comentario": "<p>A alternativa A está correta, pois trata-se da única alternativa incorreta (atendendo ao comando da questão). O COE <strong>não possui cobertura do FGC</strong> em hipótese alguma; o investidor assume integralmente o risco de crédito do banco emissor.</p><p>As alternativas B, C e D descrevem fatos perfeitamente exatos e coerentes com a regulação do COE: o Valor Nominal em Risco possui piso definido, a entrega do DIE é obrigatória para o varejo, e as perdas em COE não compensam ganhos de renda variável.</p>",
-     "enunciado": "<p>Analise as características estruturais, os riscos de crédito e as normas de distribuição aplicáveis aos Certificados de Operações Estruturadas (COE) e assinale a alternativa incorreta:</p>",
+     "comentario": "<p>A alternativa C está correta. O COE é emitido por banco, mas não conta com cobertura do Fundo Garantidor de Créditos: quem aplica assume o risco de crédito do emissor, inclusive na modalidade de Valor Nominal Protegido. O adjetivo protegido fala do comportamento do ativo de referência, e não da solvência do banco. Por isso a norma exige a entrega do Documento de Informações Essenciais e o termo de ciência de risco assinado na oferta a investidor não profissional.</p><p>A alternativa A erra porque atribui ao certificado uma garantia do Fundo Garantidor de Créditos que o produto não possui. A alternativa B erra porque a devolução do valor combinado depende de carregar o certificado até o vencimento: na recompra antecipada o emissor paga o valor de mercado do dia, que pode ficar abaixo do aplicado. A alternativa D erra porque o COE é tributado pela tabela regressiva da renda fixa, de 22,5% até 180 dias a 15% acima de 720 dias, com retenção na fonte, seja qual for o ativo de referência.</p>",
+     "enunciado": "<p>Um assessor de investimentos recebe na agência uma cliente que trabalha como veterinária e mantém quatrocentos mil reais aplicados em um CDB de liquidez diária. Ela conta que pretende reservar parte desse valor por três anos e demonstra interesse em um Certificado de Operações Estruturadas atrelado a um índice de ações do exterior, oferecido pelo próprio banco em que ela tem conta há doze anos.</p><p>O assessor entrega o Documento de Informações Essenciais, que descreve a modalidade de Valor Nominal Protegido, o prazo de três anos, o ativo de referência e os cenários de rentabilidade. A cliente lê o documento, assina o termo de ciência de risco e faz duas perguntas ao assessor: o que aconteceria com o dinheiro dela caso o banco emissor entrasse em liquidação antes do vencimento, e quanto receberia caso precisasse do recurso na metade do prazo contratado. Indique a alternativa correta sobre esse certificado.</p>",
      "alternativas": {
-      "a": "O COE conta com a cobertura ordinária do Fundo Garantidor de Créditos (FGC) até o limite de R$ 250 mil por CPF, mitigando integralmente a quebra do banco emissor.",
-      "b": "A modalidade de Valor Nominal em Risco prevê pagamentos mínimos iguais ou superiores a uma parcela previamente definida do investimento inicial, podendo ser inferior a 100%.",
-      "c": "O distribuidor de COE para investidores não profissionais deve entregar obrigatoriamente o Documento de Informações Essenciais (DIE) e colher o termo de ciência de risco assinado.",
-      "d": "As perdas incorridas em operações com COE não podem ser compensadas com ganhos líquidos apurados em operações de renda variável."
+      "a": "A cobertura do Fundo Garantidor de Créditos alcança esse certificado até o limite de R$ 250 mil por CPF.",
+      "b": "O resgate antecipado assegura a devolução do valor aplicado, por se tratar da modalidade de capital protegido.",
+      "c": "O certificado fica fora da cobertura do Fundo Garantidor de Créditos, e a cliente corre o risco do emissor.",
+      "d": "O rendimento apurado no vencimento é tributado à alíquota de 15% da renda variável, por causa do índice de referência."
      },
-     "gabarito": "a",
+     "gabarito": "c",
      "feedback": {
-      "b": "A definição da modalidade de Valor Nominal em Risco com piso pré-definido menor que 100% está inteiramente correta.",
-      "c": "A entrega do DIE e a assinatura do termo de ciência de risco são exigências regulatórias obrigatórias para clientes não profissionais.",
-      "d": "A vedação de compensar perdas de COE com ganhos de renda variável é uma regra tributária válida."
+      "a": "O COE fica fora da cobertura do Fundo Garantidor de Créditos, tanto na modalidade protegida quanto na de valor em risco.",
+      "b": "A devolução do valor combinado na modalidade protegida vale no vencimento; a saída antecipada é marcada a mercado e pode devolver menos do que foi aplicado.",
+      "d": "O rendimento do COE segue a tabela regressiva da renda fixa, de 22,5% a 15% conforme o prazo, e não o regime da renda variável."
      }
     }
    ],
@@ -7393,7 +7393,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "Os ativos do fundo pertencem aos cotistas, possuem CNPJ próprio e não respondem pelas dívidas do administrador falido.",
       "b": "O dinheiro dos fundos é imediatamente confiscado para pagar os credores trabalhistas e fiscais do banco falido.",
-      "c": "Os cotistas perdem todo o capital investido de forma irreversível por causa da ausência de cobertura do FGC.",
+      "c": "Os cotistas perdem o capital investido de forma irreversível por causa da ausência de cobertura do FGC.",
       "d": "O Banco Central assume compulsoriamente a gestão dos ativos e liquida o fundo em cotas de poupança."
      },
      "gabarito": "a",
@@ -7410,19 +7410,19 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "usar_em": [
       "simulado"
      ],
-     "comentario": "<p>A alternativa B está correta, pois trata-se da única alternativa incorreta (atendendo ao comando da questão). Os fundos de investimento <strong>não possuem cobertura do FGC</strong>, pois o produto opera fora do balanço do banco e o cotista assume os riscos dos ativos que compõem a carteira.</p><p>As alternativas A, C e D descrevem fatos plenamente exatos: a existência de classes com patrimônio segregado, a regra de limitação de responsabilidade condicionada ao regulamento, e o patamar mínimo de patrimônio líquido para manutenção do registro na CVM.</p>",
-     "enunciado": "<p>Analise as características estruturais, jurídicas e operacionais dos fundos de investimento e assinale a alternativa incorreta:</p>",
+     "comentario": "<p>A alternativa A está correta. O Fundo Garantidor de Créditos protege o investidor contra a quebra do banco emissor em títulos que ficam no balanço dessa instituição, como o CDB. O fundo de investimento fica fora desse balanço: não há risco de crédito do administrador sobre o patrimônio do fundo e, por isso, não há o que o FGC garantiria. O que a cotista assume é o risco dos ativos da carteira, ou seja, risco de mercado, risco de crédito dos emissores desses ativos e risco de liquidez.</p><p>A alternativa B erra porque estende ao fundo uma cobertura de R$ 250 mil por CPF que existe para depósitos e títulos emitidos pelo banco, e não para cotas de fundo. A alternativa C erra porque inverte a segregação patrimonial: o fundo tem CNPJ próprio, os ativos continuam pertencendo aos cotistas e a assembleia transfere a administração para outra instituição. A alternativa D erra porque o registro na CVM é concedido de forma automática com o envio dos documentos por sistema eletrônico, sem análise prévia da estratégia e sem chancela de rentabilidade.</p>",
+     "enunciado": "<p>Uma gerente de relacionamento atende uma cliente que trabalha como arquiteta e mantém trezentos mil reais em um CDB emitido pelo próprio banco, com vencimento em quarenta dias. A cliente conta que pretende dividir esse dinheiro entre dois produtos e demonstra interesse em um fundo de renda fixa distribuído pela instituição.</p><p>A gerente entrega o regulamento e a lâmina do fundo, que tem CNPJ próprio, classe aberta, resgate em três dias úteis e carteira formada por títulos públicos federais e por debêntures de empresas de saneamento. O regulamento traz cláusula expressa limitando a responsabilidade da cotista ao valor subscrito. A cliente lê o material e faz três perguntas: se a aplicação no fundo teria a mesma garantia que ela enxerga hoje no CDB, o que aconteceria com os ativos da carteira caso o banco administrador fosse liquidado, e o que significa o registro na CVM citado no cabeçalho do regulamento. Indique a alternativa correta sobre as dúvidas da cliente.</p>",
      "alternativas": {
-      "a": "O regulamento de um fundo de investimento pode prever diferentes classes de cotas, exigindo a constituição de um patrimônio segregado para cada classe, de modo que os passivos de uma não contaminem a outra.",
-      "b": "Os fundos de investimento contam com a garantia ordinária do Fundo Garantidor de Créditos (FGC) até o limite de R$ 250 mil por CPF, blindando o cotista contra oscilações de mercado.",
-      "c": "A responsabilidade do cotista restringe-se ao valor subscrito de suas cotas unicamente quando houver previsão expressa nesse sentido no regulamento do fundo.",
-      "d": "Uma classe de cotas aberta que apresentar patrimônio líquido médio diário inferior a R$ 1 milhão por 90 dias consecutivos terá seu registro cancelado pela CVM."
+      "a": "O fundo fica fora da cobertura do Fundo Garantidor de Créditos, e a cliente assume o risco dos ativos da carteira.",
+      "b": "O Fundo Garantidor de Créditos cobre as cotas do fundo até R$ 250 mil por CPF, no mesmo padrão aplicado ao CDB.",
+      "c": "Os credores do banco administrador alcançam os ativos da carteira, que respondem pelas dívidas da instituição.",
+      "d": "O registro do fundo na CVM decorre de análise prévia da estratégia, o que confirma o retorno projetado pelo gestor."
      },
-     "gabarito": "b",
+     "gabarito": "a",
      "feedback": {
-      "a": "A permissão de classes de cotas com patrimônio segregado está correta e descrita na norma.",
-      "c": "A exigência de cláusula expressa no regulamento para limitar a responsabilidade do cotista ao valor subscrito é verdadeira.",
-      "d": "O cancelamento do registro para classes abertas com patrimônio médio abaixo de R$ 1 milhão por 90 dias está correto."
+      "b": "O fundo de investimento não tem cobertura do Fundo Garantidor de Créditos, porque o produto fica fora do balanço do banco emissor.",
+      "c": "O fundo tem CNPJ próprio e patrimônio segregado do administrador, de modo que os credores do banco não alcançam os ativos da carteira.",
+      "d": "O registro na CVM é concedido de forma automática pelo envio eletrônico dos documentos, sem análise da estratégia nem juízo sobre retorno."
      }
     }
    ],
@@ -7461,10 +7461,10 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa B está correta. Na Resolução CVM 175, ser aberta ou fechada deixou de ser característica do fundo e passou a ser atributo da CLASSE de cotas. A classe aberta admite resgate; a fechada não admite, e a saída antes do prazo se dá pela venda das cotas no mercado secundário.</p><p>Na prática isso significa que um mesmo fundo pode abrigar uma classe com liquidez e outra sem, cada uma com o seu público e o seu regulamento.</p><p>A alternativa A descreve o modelo anterior à norma, e é a resposta que um material desatualizado daria. A C confunde regulamento com esforço de venda. A D cria uma relação que não existe entre segregação e liquidez.</p>",
      "enunciado": "<p>Um cliente pergunta se determinado fundo é aberto ou fechado, e você percebe que o fundo tem mais de uma classe de cotas. Sob a Resolução CVM 175, a resposta correta é que:</p>",
      "alternativas": {
-      "a": "Ser aberto ou fechado é atributo do fundo como um todo, então todas as classes seguem a mesma regra.",
+      "a": "Ser aberto ou fechado é atributo do fundo, e as classes de cotas seguem a mesma regra de resgate.",
       "b": "Ser aberta ou fechada passou a ser atributo da classe de cotas, e um mesmo fundo pode ter classe aberta e classe fechada.",
       "c": "A definição cabe ao distribuidor no momento da venda, conforme o perfil de cada cliente.",
-      "d": "Todo fundo com mais de uma classe é obrigatoriamente fechado, para preservar a segregação patrimonial."
+      "d": "O fundo com mais de uma classe de cotas é fechado, para preservar a segregação patrimonial."
      },
      "gabarito": "b",
      "feedback": {
@@ -7481,13 +7481,13 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "simulado",
       "revisao"
      ],
-     "comentario": "<p>A alternativa A está correta. A estrutura multiclasse exige que todas as classes pertençam à mesma categoria do fundo, sendo proibido criar classes que alterem o tratamento tributário aplicável. Além disso, cada classe possui patrimônio segregado que responde apenas pelas suas próprias obrigações.</p><p>As alternativas B, C e D distorcem as regras de categorias, segregação de patrimônio e o papel das subclasses.</p>",
+     "comentario": "<p>A alternativa A está correta. A estrutura multiclasse exige que as classes de um mesmo fundo pertençam à mesma categoria, sendo proibido criar classes que alterem o tratamento tributário aplicável. Além disso, cada classe possui patrimônio segregado que responde apenas pelas suas próprias obrigações.</p><p>As alternativas B, C e D distorcem as regras de categorias, segregação de patrimônio e o papel das subclasses.</p>",
      "enunciado": "<p>Com a introdução da estrutura multiclasse trazida pela Resolução CVM 175, um único fundo de investimento passou a poder abrigar diferentes classes de cotas. Acerca dos limites e das regras impostas a essa estrutura, assinale a alternativa correta:</p>",
      "alternativas": {
-      "a": "Todas as classes do fundo devem pertencer obrigatoriamente à mesma categoria, sendo vedada a criação de classes que alterem o tratamento tributário aplicável.",
+      "a": "As classes de um mesmo fundo devem pertencer à mesma categoria, sendo vedada a criação de classes que alterem o tratamento tributário aplicável.",
       "b": "É permitido misturar classes de renda fixa e de ações sob o mesmo fundo, contanto que o gestor pague uma taxa adicional à CVM.",
       "c": "As subclasses possuem patrimônio segregado entre si de forma isolada, protegendo os investidores do varejo dos cotistas private.",
-      "d": "As classes de cotas não possuem qualquer proteção de blindagem, respondendo coletivamente pelas dívidas de todo o fundo."
+      "d": "As classes de cotas não possuem proteção de blindagem, respondendo em conjunto pelas dívidas do fundo."
      },
      "gabarito": "a",
      "feedback": {
@@ -7507,7 +7507,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa B está correta. As subclasses de cotas não possuem patrimônio segregado e compartilham a mesma carteira. Elas podem se diferenciar exclusivamente por público-alvo, prazos e condições de aplicação e resgate, e taxas de administração, gestão, distribuição, ingresso e saída.</p><p>As alternativas A, C e D erram ao supor isolamento patrimonial nas subclasses, autonomia de alteração de política ou gestão independente concorrente.</p>",
      "enunciado": "<p>Uma instituição financeira estruturou uma classe de cotas de ações e abriu duas portas de entrada comerciais: a Subclasse A para pequenos investidores, com taxa de administração de 2%, e a Subclasse B para clientes de alta renda, com taxa de 1%. Sobre o funcionamento e os limites dessas subclasses, é correto afirmar que:</p>",
      "alternativas": {
-      "a": "As subclasses possuem patrimônios totalmente isolados e independentes no balanço contábil do administrador.",
+      "a": "As subclasses possuem patrimônios isolados e independentes no balanço contábil do administrador.",
       "b": "As subclasses podem ser diferenciadas exclusivamente por aspectos como público-alvo, prazos, condições de resgate e taxas, compartilhando a mesma carteira da classe.",
       "c": "A Subclasse B tem o poder legal de alterar a política de investimento da classe inteira sem consultar a Subclasse A.",
       "d": "As subclasses possuem administrações de gestores concorrentes e independentes entre si."
@@ -7526,19 +7526,19 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "usar_em": [
       "simulado"
      ],
-     "comentario": "<p>A alternativa C está correta, pois trata-se da única alternativa incorreta (atendendo ao comando da questão). A norma proíbe expressamente afetar ou vincular parcela do patrimônio de uma classe a qualquer subclasse, visto que as subclasses não possuem patrimônio segregado.</p><p>As alternativas A, B e D descrevem premissas totalmente verdadeiras e alinhadas à Resolução CVM 175: a limitação de responsabilidade pelo regulamento, a responsabilidade ilimitada em caso de omissão, e o registro automático na CVM.</p>",
-     "enunciado": "<p>Analise o seguinte caso prático regulatório à luz da Resolução CVM 175 e assinale a alternativa incorreta sobre a responsabilidade do cotista e os efeitos da norma:</p>",
+     "comentario": "<p>A alternativa D está correta. Pela Resolução CVM 175, a segregação patrimonial existe entre classes de cotas: o administrador constitui um patrimônio segregado para cada classe, e cada patrimônio responde somente pelas obrigações da sua própria classe. As subclasses ficam abaixo da classe e não têm patrimônio segregado. Elas compartilham a carteira da classe a que pertencem, e a norma veda afetar ou vincular parcela do patrimônio de uma classe a subclasse. Na prática, as duas portas de entrada descritas levam ao mesmo produto.</p><p>A alternativa A erra porque atribui à subclasse uma segregação patrimonial que a norma reserva à classe. A alternativa B erra porque as subclasses podem ser diferenciadas por público-alvo, por prazos e condições de aplicação, amortização e resgate e por taxas de administração, gestão, distribuição, ingresso e saída, sem espaço para política de investimento própria. A alternativa C erra porque inverte a blindagem entre classes: se uma classe acumular dívidas, os credores cobram daquela classe, e o patrimônio das demais permanece protegido.</p>",
+     "enunciado": "<p>Um especialista de produtos apresenta a um cliente do segmento de alta renda a estrutura de um fundo de ações recém-constituído pela instituição. O regulamento prevê classe única de cotas, dividida em duas subclasses. A subclasse destinada ao varejo tem aplicação inicial de mil reais e taxa de administração de 1,5% ao ano. A subclasse destinada à alta renda tem aplicação inicial de duzentos e cinquenta mil reais e taxa de administração de 0,6% ao ano.</p><p>As duas subclasses são atendidas pelo mesmo gestor, seguem a mesma política de investimento e alimentam a carteira da mesma classe. O cliente, que pretende aplicar na subclasse de alta renda, pergunta ao especialista se o patrimônio dessa subclasse fica separado do patrimônio da subclasse de varejo e se as obrigações assumidas em nome de uma delas podem atingir o dinheiro aplicado na outra. Identifique a alternativa correta sobre a segregação patrimonial nessa estrutura.</p>",
      "alternativas": {
-      "a": "O regulamento de um fundo pode limitar expressamente a responsabilidade do cotista ao valor subscrito de suas cotas.",
-      "b": "Caso o regulamento de um fundo seja totalmente omisso quanto à limitação de responsabilidade, o cotista responderá por eventual patrimônio líquido negativo, podendo ser chamado a cobrir o saldo com recursos próprios.",
-      "c": "A subclasse pode ter seu patrimônio parcialmente afetado para garantir obrigações específicas de operações alavancadas de derivativos contratadas exclusivamente por ela.",
-      "d": "O registro do fundo na CVM é automático, concedido pelo envio eletrônico dos documentos pelo administrador, sem análise prévia da estratégia."
+      "a": "A subclasse de alta renda tem patrimônio segregado próprio, que responde apenas pelas obrigações contraídas por ela.",
+      "b": "A subclasse de varejo pode adotar política de investimento própria, distinta da política seguida pela classe a que pertence.",
+      "c": "As dívidas contraídas em nome de uma classe do fundo podem ser cobradas do patrimônio das demais classes do fundo.",
+      "d": "As duas subclasses compartilham a carteira da classe, cujo patrimônio responde pelas obrigações dessa mesma classe."
      },
-     "gabarito": "c",
+     "gabarito": "d",
      "feedback": {
-      "a": "A previsão regulamentar expressa limitando a responsabilidade ao valor subscrito é um direito previsto na norma.",
-      "b": "A regra que torna a responsabilidade ilimitada em caso de omissão do regulamento (exigindo termo de ciência) está correta.",
-      "d": "O registro automático, sem análise de mérito da estratégia, está corretamente descrito."
+      "a": "A segregação patrimonial é atributo da classe: a norma veda afetar ou vincular parcela do patrimônio de uma classe a subclasse.",
+      "b": "As subclasses se diferenciam por público-alvo, por prazos e condições de aplicação, amortização e resgate, e por taxas, e não por política de investimento.",
+      "c": "Cada classe tem patrimônio segregado, e esse patrimônio responde somente pelas obrigações da própria classe."
      }
     },
     {
@@ -7680,10 +7680,10 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa B está correta. O fundo multimercado destaca-se pela alta liberdade de alocação, combinando diversos fatores de risco sem ter compromisso normativo de concentração em nenhum deles.</p><p>As alternativas A, C e D incorrem em erros técnicos ao confundir ações com títulos de dívida (risco de crédito), ignorar a liquidez em fundos abertos ou inverter os custos das taxas de gestão ativa e passiva.</p>",
      "enunciado": "<p>Analise as características, os fatores de risco e a dinâmica de perdas aplicáveis aos diferentes fundos de investimento e assinale a alternativa correta:</p>",
      "alternativas": {
-      "a": "O risco de crédito está presente de forma idêntica em todas as classes, sendo que a falência de uma empresa cujas ações compõem um fundo de ações gera calote direto no principal investido.",
+      "a": "O risco de crédito está presente de forma idêntica nas classes de renda fixa e de ações, sendo que a falência de uma empresa cujas ações compõem um fundo de ações gera calote direto no principal investido.",
       "b": "O fundo multimercado possui vários fatores de risco e caracteriza-se pela ausência de compromisso de concentração obrigatória em nenhum deles.",
       "c": "O risco de liquidez afeta apenas os fundos fechados, visto que os fundos abertos possuem garantia legal de liquidez instantânea pelo Banco Central em qualquer cenário.",
-      "d": "A gestão ativa desfruta sempre de taxas de administração significativamente inferiores às da gestão passiva, por causa da ausência de custos operacionais com pesquisas de mercado."
+      "d": "A gestão ativa cobra taxas de administração abaixo das praticadas pela gestão passiva, por causa da ausência de custos com pesquisas de mercado."
      },
      "gabarito": "b",
      "feedback": {
@@ -7794,7 +7794,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "O multimercado não possui fator de risco predominante, mas a norma impõe tetos estritos de margem bruta, limitando a alavancagem a até 70% do patrimônio líquido para o público em geral.",
       "b": "O multimercado é obrigado por lei a manter pelo menos 50% da carteira atrelada a títulos públicos federais pós-fixados.",
-      "c": "O fundo multimercado possui alavancagem totalmente livre e ilimitada para o varejo, operando sem limites de margem bruta.",
+      "c": "O fundo multimercado possui alavancagem livre para o varejo, operando sem limites de margem bruta.",
       "d": "A classe multimercado exige concentração mínima de 80% em ativos cambiais de alta volatilidade."
      },
      "gabarito": "a",
@@ -7811,19 +7811,19 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "usar_em": [
       "simulado"
      ],
-     "comentario": "<p>A alternativa D está correta, pois trata-se da única alternativa incorreta (atendendo ao comando da questão). A isenção de Imposto de Renda no FI-Infra beneficia exclusivamente a pessoa física, visto que a pessoa jurídica está sujeita à tributação de 15%.</p><p>As alternativas A, B e C descrevem fatos plenamente exatos: a possibilidade de prejuízo em renda fixa, a utilidade do fundo cambial para hedge, e o piso de 67% para a classe de ações.</p>",
-     "enunciado": "<p>Analise as características estruturais, os fatores de risco e os limites regulamentares aplicáveis aos diferentes tipos de fundos de investimento e assinale a alternativa incorreta:</p>",
+     "comentario": "<p>A alternativa B está correta. Pela Lei 12.431/2011, o rendimento distribuído pelo FI-Infra à pessoa física é isento de imposto de renda, enquanto o rendimento distribuído à pessoa jurídica é tributado à alíquota de 15%. Essa assimetria é o atrativo do produto para o investidor individual e explica por que o aporte pelo CPF e o aporte pelo CNPJ recebem tratamentos diferentes.</p><p>A alternativa A erra porque estende à pessoa jurídica um benefício fiscal reservado à pessoa física. A alternativa C erra no percentual e no prazo: o piso é de 85% do patrimônio líquido em ativos incentivados, e o percentual de 67% vale nos dois primeiros anos contados do encerramento da oferta inicial. A alternativa D erra porque o FI-Infra tem liquidez restrita, compatível com o prazo dos projetos financiados, e concentra risco de crédito de longo prazo, o que o afasta da função de reserva de emergência.</p>",
+     "enunciado": "<p>Um assessor atende um cliente que é sócio de uma transportadora e acumula reservas na pessoa física e no caixa da empresa. O cliente procura uma aplicação de longo prazo ligada a projetos de infraestrutura e pergunta se pode dividir o aporte entre o CPF dele e o CNPJ da transportadora.</p><p>O assessor apresenta um FI-Infra que investe em debêntures incentivadas de projetos de energia e de saneamento, com prazo médio dos papéis acima de seis anos. As cotas são negociadas no mercado secundário e a classe não oferece resgate em janelas curtas. O regulamento informa o percentual do patrimônio líquido aplicado em ativos incentivados e reproduz a regra de transição dos dois primeiros anos contados do encerramento da oferta inicial. O cliente pede então que o assessor explique como fica o imposto de renda em cada uma das duas titularidades e se essa aplicação pode ocupar o lugar da reserva de emergência da família. Avalie o caso e indique a alternativa correta.</p>",
      "alternativas": {
-      "a": "Um fundo classificado como renda fixa pode apresentar rendimento negativo, pois está exposto ao risco de mercado decorrente da marcação a mercado e ao risco de crédito de emissores privados.",
-      "b": "O fundo cambial serve primordialmente para proteger o investidor contra a flutuação da moeda estrangeira, não se confundindo com o desempenho financeiro de empresas exportadoras.",
-      "c": "A classe de ações exige uma concentração mínima de 67% do patrimônio em ações e ativos equivalentes negociados em mercado organizado.",
-      "d": "O FI-Infra garante isenção total de Imposto de Renda tanto para investidores pessoas físicas quanto para pessoas jurídicas corporativas sem distinção de alíquotas."
+      "a": "A isenção de imposto de renda alcança a pessoa física e a pessoa jurídica, sem diferença de alíquota entre as duas.",
+      "b": "O rendimento distribuído à pessoa física é isento de imposto de renda, e a pessoa jurídica paga alíquota de 15%.",
+      "c": "O fundo mantém piso de 67% do patrimônio líquido em ativos incentivados ao longo de seu prazo de duração.",
+      "d": "As cotas contam com liquidez diária e se prestam a reserva de emergência, por causa do lastro em infraestrutura."
      },
-     "gabarito": "d",
+     "gabarito": "b",
      "feedback": {
-      "a": "A possibilidade de rendimento negativo por risco de mercado e de crédito em renda fixa é verídica.",
-      "b": "A função de hedge cambial e a separação conceitual frente a ações de empresas exportadoras estão corretas.",
-      "c": "O piso de concentração de 67% para a classe de ações está correto e respaldado pela norma."
+      "a": "A isenção prevista na Lei 12.431/2011 beneficia a pessoa física; a pessoa jurídica recolhe imposto de renda à alíquota de 15%.",
+      "c": "O piso é de 85% do patrimônio líquido em ativos incentivados, e o percentual de 67% vale apenas nos dois primeiros anos após o encerramento da oferta.",
+      "d": "O FI-Infra concentra risco de crédito de emissores privados de longo prazo e tem liquidez restrita, compatível com o prazo das obras financiadas."
      }
     }
    ],
@@ -7863,7 +7863,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Ao analisar a estrutura de custos de um fundo de investimento, o investidor depara-se com o conceito de encargos da classe. Sobre essa lista regulamentada de despesas, é correto afirmar que:</p>",
      "alternativas": {
       "a": "A lista de encargos é taxativa, sendo que as próprias taxas de administração e de gestão figuram entre as despesas que podem ser debitadas da classe.",
-      "b": "Os encargos englobam todas as despesas corporativas, de pessoal, marketing e infraestrutura do administrador do banco.",
+      "b": "Os encargos englobam as despesas corporativas, de pessoal, marketing e infraestrutura do administrador do banco.",
       "c": "A taxa de performance é estipulada como um encargo obrigatório aplicável a qualquer fundo de renda fixa no país.",
       "d": "Despesas não previstas na lista oficial de encargos devem ser rateadas compulsoriamente entre os cotistas por meio de assembleia extraordinária."
      },
@@ -7909,8 +7909,8 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Uma assembleia geral de cotistas foi convocada formalmente para deliberar sobre a aprovação das demonstrações contábeis e a substituição do prestador de serviços essenciais de um fundo. Sobre os quóruns de instalação e funcionamento dessa assembleia, verifica-se que:</p>",
      "alternativas": {
       "a": "A assembleia instala-se com qualquer número de cotistas presentes e as deliberações são tomadas por maioria de votos dos presentes.",
-      "b": "Exige-se a presença física de pelo menos 50% mais um de todos os cotistas inscritos para que a primeira convocação tenha validade jurídica.",
-      "c": "As deliberações exigem aprovação unânime de todos os cotistas do fundo para qualquer mudança estatutária.",
+      "b": "Exige-se a presença física da maioria dos cotistas inscritos para que a primeira convocação tenha validade jurídica.",
+      "c": "As deliberações exigem aprovação unânime dos cotistas presentes para mudanças no regulamento.",
       "d": "O quórum de instalação obriga a presença de cotistas detentores de no mínimo dois terços do patrimônio líquido total."
      },
      "gabarito": "a",
@@ -7927,19 +7927,19 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "usar_em": [
       "simulado"
      ],
-     "comentario": "<p>A alternativa D está correta, pois trata-se da única alternativa incorreta (atendendo ao comando da questão). A norma estipula que a convocação da assembleia por iniciativa dos cotistas exige um grupo que detenha no mínimo 5% do total de cotas emitidas, e não apenas 1%.</p><p>As alternativas A, B e C descrevem premissas totalmente exatas e vigentes na regulação: as restrições e exceções de performance na renda fixa, o uso obrigatório da linha d'água, e as matérias privativas da assembleia de cotistas.</p>",
-     "enunciado": "<p>Analise as regras aplicadas às taxas de performance, à competência privativa de assembleias e às disposições normativas da Resolução CVM 175 e assinale a alternativa incorreta:</p>",
+     "comentario": "<p>A alternativa B está correta. O cotista ou o grupo de cotistas que reúna no mínimo 5% do total de cotas emitidas pode pedir a convocação da assembleia, e o administrador tem até 30 dias para convocá-la, conforme o art. 73 da Resolução CVM 175.</p><p>A alternativa A erra o prazo, porque a convocação observa antecedência mínima de 10 dias da data da reunião (art. 72, § 4º). A alternativa C erra porque a assembleia se instala com o número de cotistas que comparecerem, sem quórum mínimo de presença (art. 74). A alternativa D erra porque a deliberação se dá por maioria de votos dos presentes, com voto proporcional às cotas detidas (art. 76).</p>",
+     "enunciado": "<p>Uma especialista de investimentos atende uma cliente que mantém cotas de uma classe aberta de fundo multimercado desde março do ano passado. A cliente acompanha os informes mensais e registrou queda no patrimônio da classe nos dois semestres seguintes à aplicação. Ela marcou reunião para tratar da substituição do gestor da classe e quer levar o pedido adiante ainda neste trimestre.</p><p>Na conversa, a cliente informa que detém 3,2% das cotas emitidas e que dois amigos, cotistas da mesma classe, detêm 1,4% e 0,9%. Ela pergunta com quanta antecedência a assembleia seria convocada, quantos cotistas precisariam comparecer para que a reunião fosse instalada e como os votos seriam contados na deliberação. A especialista confirma no regulamento que a substituição de prestador de serviço essencial consta entre as competências privativas da assembleia e retoma as regras da Resolução CVM 175. Com base nessas regras, indique a alternativa correta.</p>",
      "alternativas": {
-      "a": "A taxa de performance é vedada em fundos da classe Renda Fixa, com exceção de classes destinadas exclusivamente a investidor qualificado, fundos com compromisso de tratamento fiscal de longo prazo ou a classe Renda Fixa Dívida Externa.",
-      "b": "O cálculo da taxa de performance deve utilizar uma linha d'água (cota base), sendo vedada a cobrança quando o valor da cota estiver abaixo dessa base atualizada pelo índice de referência.",
-      "c": "A aprovação das demonstrações contábeis e o pedido de declaração judicial de insolvência da classe figuram entre as matérias de competência privativa da assembleia de cotistas.",
-      "d": "Um único cotista que detenha 1% do total de cotas emitidas possui o poder legal conferido pela norma para convocar de forma autônoma uma assembleia geral de cotistas."
+      "a": "A convocação da assembleia de cotistas observa antecedência mínima de 30 dias em relação à data da reunião.",
+      "b": "Cotistas que reúnam no mínimo 5% das cotas emitidas podem pedir a convocação da assembleia.",
+      "c": "A instalação da assembleia depende da presença de cotistas que representem metade das cotas emitidas.",
+      "d": "A deliberação da assembleia atribui um voto por cotista presente, sem relação com a quantidade de cotas."
      },
-     "gabarito": "d",
+     "gabarito": "b",
      "feedback": {
-      "a": "A proibição de performance na renda fixa e suas exceções específicas estão corretas.",
-      "b": "A regra da linha d'água vedando a cobrança de performance com cota abaixo da base atualizada é verídica.",
-      "c": "A competência privativa da assembleia engloba contas contábeis e pedidos de insolvência, conforme a norma."
+      "a": "A antecedência mínima da convocação é de 10 dias, e o prazo de 30 dias é o que o administrador tem para convocar depois do pedido.",
+      "c": "A assembleia se instala com o número de cotistas que comparecerem, pois a norma não fixa quórum mínimo de presença.",
+      "d": "O voto na assembleia é proporcional às cotas detidas, e não um voto por cotista presente."
      }
     },
     {
@@ -8044,7 +8044,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "O fundo sofre come-cotas semestral de 15% em maio e novembro e paga alíquota regressiva no resgate.",
       "b": "O fundo não sofre come-cotas semestral, sendo tributado exclusivamente no momento do resgate à alíquota única de 15% sobre o ganho, com IOF zero.",
-      "c": "O ganho obtido é totalmente isento de Imposto de Renda se o total resgatado no mês não ultrapassar o teto de R$ 20.000,00.",
+      "c": "O ganho obtido é isento de Imposto de Renda se o total resgatado no mês não ultrapassar o teto de R$ 20.000,00.",
       "d": "Aplica-se a tabela regressiva de renda fixa de 22,5% a 15%, com retenção de imposto a cada trimestre."
      },
      "gabarito": "b",
@@ -8115,13 +8115,13 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "50% dos lucros apurados em balanços anuais auditados.",
       "b": "75% dos lucros apurados em balancetes mensais.",
       "c": "95% dos lucros apurados com base em balanço ou balancete semestral encerrado em 30 de junho e 31 de dezembro.",
-      "d": "100% de todo o patrimônio líquido acumulado, sem retenção de reservas."
+      "d": "100% do patrimônio líquido acumulado, sem retenção de reservas."
      },
      "gabarito": "c",
      "feedback": {
       "a": "O piso legal de distribuição é bem superior a 50%, fixando-se em no mínimo 95% dos lucros.",
       "b": "A apuração não ocorre de forma mensal para fins do piso legal, mas sim com base semestral.",
-      "d": "A lei exige a distribuição de no mínimo 95% do lucro caixa, e não a totalidade absoluta de 100% do patrimônio líquido."
+      "d": "A lei exige a distribuição de no mínimo 95% do lucro caixa, e não 100% do patrimônio líquido."
      }
     },
     {
@@ -8159,7 +8159,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Um investidor obteve lucro na venda de cotas de um Fundo de Investimento Imobiliário (FII) realizadas no mercado secundário da B3. Sobre a tributação incidente sobre o ganho de capital apurado nessa alienação de cotas, verifica-se que:</p>",
      "alternativas": {
       "a": "Incide alíquota fixa de 20% sobre o ganho de capital, sendo vedada a aplicação da isenção mensal de R$ 20.000,00 aplicada às ações.",
-      "b": "O ganho é totalmente isento de Imposto de Renda para a pessoa física, seguindo a mesma regra dos rendimentos mensais distribuídos.",
+      "b": "O ganho é isento de Imposto de Renda para a pessoa física, seguindo a mesma regra dos rendimentos mensais distribuídos.",
       "c": "Aplica-se a tabela regressiva da renda fixa (22,5% a 15%) de acordo com o prazo em que o investidor permaneceu com a cota.",
       "d": "A operação beneficia-se da isenção total de ganho de capital caso o volume total de vendas no mês permaneça abaixo de R$ 20.000,00."
      },
@@ -8177,19 +8177,19 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "usar_em": [
       "simulado"
      ],
-     "comentario": "<p>A alternativa A está correta, pois trata-se da única alternativa incorreta (atendendo ao comando da questão). Os cotistas de FIIs <strong>não possuem cobertura do FGC</strong>, visto que as cotas são ativos de renda variável negociados em bolsa e operam fora do balanço de instituições bancárias.</p><p>As alternativas B, C e D descrevem fatos plenamente exatos: o risco de vacância nos fundos de tijolo, a compensação de perdas restrita à mesma espécie, e a descaracterização fiscal caso o incorporador concentre mais de 25% das cotas.</p>",
-     "enunciado": "<p>Analise as características estruturais, operacionais e fiscais dos Fundos de Investimento Imobiliário (FIIs) e assinale a alternativa incorreta:</p>",
+     "comentario": "<p>A alternativa C está correta. As cotas de fundo imobiliário são ativos de renda variável negociados em bolsa, e o Fundo Garantidor de Créditos não cobre a queda de preço da cota nem o resultado do fundo, que opera fora do balanço das instituições bancárias.</p><p>A alternativa A erra porque a isenção mensal de R$ 20.000,00 vale para ações e para o ouro ativo financeiro, e o ganho na venda de cotas de FII paga 20% desde o primeiro real. A alternativa B erra a periodicidade, porque a apuração do lucro distribuído é semestral, com balanço encerrado em 30 de junho e em 31 de dezembro. A alternativa D erra o número, porque a isenção dos rendimentos exige no mínimo 100 cotistas.</p>",
+     "enunciado": "<p>Um assessor de investimentos recebe um cliente que comprou 400 cotas de um fundo de investimento imobiliário de tijolo em janeiro, a R$ 98,00 cada, e recebeu rendimentos mensais ao longo do ano. Em agosto, dois inquilinos de um galpão do fundo devolveram os espaços, o rendimento distribuído caiu e a cota passou a ser negociada em bolsa a R$ 81,00.</p><p>O cliente chega à reunião com quatro dúvidas. Ele pergunta se existe garantia bancária que devolva a diferença de preço da cota, com que periodicidade o fundo apura o lucro que distribui aos cotistas, quantas pessoas precisam figurar como cotistas para que os rendimentos cheguem isentos à pessoa física e se o lucro de R$ 6.800,00 que ele teria ao vender as cotas ficaria isento por estar abaixo de R$ 20.000,00 no mês. O assessor abre o regulamento do fundo, o informe mensal e a legislação aplicável. Com base nas regras dos fundos imobiliários, identifique a alternativa correta.</p>",
      "alternativas": {
-      "a": "Os cotistas de FIIs contam com a cobertura do Fundo Garantidor de Créditos (FGC) até o limite de R$ 250 mil por CPF em caso de insolvência do fundo.",
-      "b": "Os fundos de tijolo investem diretamente em imóveis físicos e correm o risco típico de vacância caso os inquilinos devolvam os espaços.",
-      "c": "As perdas apuradas na alienação de cotas de FIIs no mercado secundário possuem segregação estrita, podendo compensar apenas ganhos obtidos na alienação de cotas de fundos da mesma espécie.",
-      "d": "Um FII que aplicar recursos em empreendimentos cujo incorporador ou construtor seja cotista detentor de mais de 25% das cotas perderá seu regime especial, sendo tributado como pessoa jurídica."
+      "a": "O ganho na venda de cotas fica isento de imposto quando as alienações do mês somam até R$ 20.000,00.",
+      "b": "A distribuição mínima de 95% do lucro apurado pelo regime de caixa toma por base um balanço trimestral.",
+      "c": "As cotas de FII são ativos de renda variável e ficam fora da cobertura do Fundo Garantidor de Créditos.",
+      "d": "A isenção dos rendimentos distribuídos à pessoa física exige que o fundo tenha no mínimo 50 cotistas."
      },
-     "gabarito": "a",
+     "gabarito": "c",
      "feedback": {
-      "b": "O conceito de fundos de tijolo focados em imóveis físicos e expostos ao risco de vacância está correto.",
-      "c": "A regra de compensação restrita de prejuízos de FII apenas com ganhos de FII está correta e respaldada pela norma.",
-      "d": "A perda do regime fiscal caso o incorporador detenha mais de 25% das cotas é uma regra de prevenção verídica."
+      "a": "A isenção mensal de R$ 20.000,00 alcança ações no mercado à vista e o ouro ativo financeiro, e não as cotas de FII.",
+      "b": "A apuração do lucro distribuído é semestral, com balanço encerrado em 30 de junho e em 31 de dezembro.",
+      "d": "O piso de cotistas para a isenção dos rendimentos passou a ser de 100 com a Lei 14.754/2023."
      }
     }
    ],
@@ -8230,7 +8230,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "O imposto de renda incide exclusivamente sobre os rendimentos auferidos, isentando o principal aportado.",
       "b": "O imposto de renda incide sobre o valor total resgatado, compreendendo o capital e os rendimentos.",
-      "c": "A operação é totalmente isenta de tributação federal, independentemente do regime escolhido.",
+      "c": "A operação é isenta de tributação federal, independentemente do regime escolhido.",
       "d": "Incide uma alíquota fixa de 10% sobre o saldo total, sem possibilidade de progressividade."
      },
      "gabarito": "b",
@@ -8254,7 +8254,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "Utilizar a declaração simplificada do IRPF e ser isento de contribuições à previdência oficial.",
       "b": "Utilizar a declaração no modelo completo, contribuir para a previdência oficial (INSS) ou regime próprio (ou ser aposentado/pensionista), e respeitar o teto de dedução de 12% da renda bruta tributável.",
       "c": "Optar por qualquer modelo de declaração e realizar aportes ilimitados sem teto máximo dedutível.",
-      "d": "Manter o plano em condomínio fechado de ações e nunca realizar portabilidades entre seguradoras."
+      "d": "Manter o plano em condomínio fechado de ações e abrir mão das portabilidades entre seguradoras."
      },
      "gabarito": "b",
      "feedback": {
@@ -8293,19 +8293,19 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "usar_em": [
       "simulado"
      ],
-     "comentario": "<p>A alternativa C está correta, pois trata-se da única alternativa incorreta (atendendo ao comando da questão). O STF firmou tese de repercussão geral declarando <strong>inconstitucional</strong> a incidência do ITCMD sobre o repasse aos beneficiários de valores de VGBL e PGBL em caso de morte do titular.</p><p>As alternativas A, B e D descrevem fatos plenamente exatos: a isenção de come-cotas na previdência, a indicação correta do VGBL, e a exceção legal para aposentados deduzirem no PGBL.</p>",
-     "enunciado": "<p>Analise as características estruturais, fiscais e sucessórias aplicáveis aos planos de previdência complementar aberta (PGBL e VGBL) e assinale a alternativa incorreta:</p>",
+     "comentario": "<p>A alternativa D está correta. O Supremo Tribunal Federal fixou tese de repercussão geral declarando inconstitucional a incidência do ITCMD sobre o repasse aos beneficiários dos valores e direitos relativos ao VGBL e ao PGBL na hipótese de morte do titular.</p><p>A alternativa A erra porque a portabilidade se dá de PGBL para PGBL e de VGBL para VGBL, sendo vedada a migração cruzada entre as duas modalidades. A alternativa B erra o percentual, porque a dedução do PGBL vai até 12% da renda bruta anual tributável. A alternativa C erra porque os planos de previdência complementar aberta ficam fora do come-cotas de maio e novembro, com o imposto diferido para o resgate ou para a conversão em renda.</p>",
+     "enunciado": "<p>Uma planejadora financeira atende um casal em uma revisão anual de carteira. O marido tem renda bruta anual tributável de R$ 180.000,00, declara o imposto de renda no modelo completo, recolhe ao INSS pela empresa onde trabalha e aportou R$ 14.000,00 em um PGBL no ano passado. A esposa declara no modelo simplificado e mantém um VGBL com saldo de R$ 96.000,00, com os dois filhos indicados como beneficiários.</p><p>O casal traz quatro pontos para a reunião. Eles querem saber até que percentual da renda o aporte no PGBL reduz a base de cálculo do imposto, se o saldo do VGBL da esposa pode ser levado para um PGBL na troca de seguradora, se o saldo dos dois planos sofre a cobrança semestral de imposto que eles viram nos fundos abertos e qual imposto estadual alcançaria o valor pago aos filhos em caso de morte do titular. A planejadora abre as propostas dos planos e a legislação aplicável. Com base nessas regras, indique a alternativa correta.</p>",
      "alternativas": {
-      "a": "Os planos de previdência complementar aberta não sofrem a incidência periódica do come-cotas semestral em maio e novembro.",
-      "b": "O VGBL é o produto adequado para clientes que utilizam a declaração simplificada do IRPF ou que já esgotaram o limite dedutível de 12% no PGBL.",
-      "c": "O Supremo Tribunal Federal (STF) firmou entendimento de que incide o ITCMD sobre o repasse de valores e direitos de VGBL e PGBL aos beneficiários na hipótese de morte do titular.",
-      "d": "Beneficiários de aposentadoria ou pensão concedidas pelo regime geral ou próprio estão dispensados da exigência de contribuir para o INSS para usufruir da dedução do PGBL no modelo completo."
+      "a": "A portabilidade admite levar o saldo de um VGBL para um PGBL quando a troca ocorre na mesma seguradora.",
+      "b": "A dedução das contribuições ao PGBL alcança até 20% da renda bruta anual tributável do participante.",
+      "c": "Os planos de previdência complementar aberta sofrem a antecipação semestral do come-cotas em maio e novembro.",
+      "d": "O repasse aos beneficiários de VGBL e de PGBL na morte do titular fica fora da incidência do ITCMD."
      },
-     "gabarito": "c",
+     "gabarito": "d",
      "feedback": {
-      "a": "A ausência de come-cotas nos planos de previdência aberta é uma característica verdadeira e diferenciada.",
-      "b": "A recomendação do VGBL para declaração simplificada ou excedente dos 12% está correta.",
-      "d": "A exceção legal dispensando aposentados e pensionistas de recolher ao INSS para deduzir no PGBL é verídica."
+      "a": "A portabilidade ocorre entre planos da mesma modalidade, e a migração de VGBL para PGBL é vedada.",
+      "b": "O teto da dedução do PGBL é de 12% da renda bruta anual tributável, e não de 20%.",
+      "c": "A previdência complementar aberta fica fora do come-cotas, e o imposto é diferido para o resgate."
      }
     },
     {
@@ -8378,13 +8378,13 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "Incide uma alíquota fixa e definitiva de 35%, independentemente do valor sacado ou da renda do cliente.",
       "b": "A segregação retém 15% na fonte a título de antecipação do imposto devido, que será objeto de ajuste na declaração anual de IRPF.",
       "c": "Aplica-se a tabela regressiva de 10% a 35% de acordo com o tempo de permanência do recurso.",
-      "d": "Os resgates são totalmente isentos de retenção, cabendo ao banco cobrar o imposto apenas no óbito do titular."
+      "d": "Os resgates são isentos de retenção, cabendo ao banco cobrar o imposto apenas no óbito do titular."
      },
      "gabarito": "b",
      "feedback": {
       "a": "A alíquota fixa de 35% pertence à primeira faixa do regime regressivo, e não ao regime progressivo.",
       "c": "A tabela baseada no tempo de permanência caracteriza o regime regressivo, e não o progressivo.",
-      "d": "Os resgates no regime progressivo sofrem retenção obrigatória de antecipação, não existindo isenção total."
+      "d": "Os resgates no regime progressivo sofrem retenção obrigatória de antecipação, não existindo isenção no resgate."
      }
     },
     {
@@ -8396,7 +8396,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "revisao"
      ],
      "comentario": "<p>A alternativa B está correta. O regime regressivo decresce a cada dois anos de acumulação (35%, 30%, 25%, 20%, 15%) até atingir o piso de 10% para prazos de acumulação superiores a dez anos.</p><p>As alternativas A, C e D citam alíquotas de outras tabelas fiscais que não correspondem ao piso da previdência regressiva.</p>",
-     "enunciado": "<p>O regime de tributação regressivo na previdência complementar é estruturado com alíquotas decrescentes de acordo com o prazo de acumulação dos recursos. A menor alíquota prevista nessa tabela, aplicável aos recursos com prazo de acumulação superior a dez anos, corresponde a:</p>",
+     "enunciado": "<p>O regime de tributação regressivo na previdência complementar é estruturado com alíquotas decrescentes de acordo com o prazo de acumulação dos recursos. A alíquota prevista nessa tabela para os recursos com prazo de acumulação superior a dez anos corresponde a:</p>",
      "alternativas": {
       "a": "7,5%.",
       "b": "10%.",
@@ -8421,10 +8421,10 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa A está correta. Nos resgates de planos de previdência sob o regime regressivo, adota-se o critério PEPS (Primeiro a Entrar, Primeiro a Sair), onde cada aporte possui seu cronômetro próprio e os recursos mais antigos saem primeiro, beneficiando-se das alíquotas menores.</p><p>As alternativas B, C e D erram ao sugerir o rebaixamento de todo o histórico, aplicar regras de renda atuarial a resgates ou inverter o método para o UEPS.</p>",
      "enunciado": "<p>Um cliente acumula recursos em um plano PGBL há vários anos, realizando diversos aportes em datas diferentes, e decide fazer um resgate parcial. Optando pelo regime regressivo de tributação, a apuração do prazo de acumulação aplicável a esse resgate obedece à seguinte regra:</p>",
      "alternativas": {
-      "a": "Utiliza-se o critério PEPS (Primeiro a Entrar, Primeiro a Sair), de modo que os aportes mais antigos são resgatados primeiro e contam com as menores alíquotas.",
-      "b": "O prazo de todos os aportes é zerado no momento em que se faz um novo depósito na conta do plano.",
-      "c": "Aplica-se obrigatoriamente a média ponderada de todos os aportes, independentemente de tratarse de resgate ou de renda atuarial.",
-      "d": "Vigora o critério UEPS (Último a Entrar, Primeiro a Sair), tributando sempre o saldo recente com a alíquota máxima de 35%."
+      "a": "Utiliza-se o critério PEPS (Primeiro a Entrar, Primeiro a Sair), de modo que os aportes mais antigos são resgatados primeiro e contam com alíquotas reduzidas.",
+      "b": "O prazo de contagem é zerado a cada novo depósito feito na conta do plano.",
+      "c": "Aplica-se obrigatoriamente a média ponderada dos aportes, independentemente de tratarse de resgate ou de renda atuarial.",
+      "d": "Vigora o critério UEPS (Último a Entrar, Primeiro a Sair), tributando o saldo recente com a alíquota máxima de 35%."
      },
      "gabarito": "a",
      "feedback": {
@@ -8444,7 +8444,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa B está correta. Por força da legislação atual (Lei 14.803/2024), a opção pelo regime regressivo pode ser exercida até o momento da obtenção do benefício ou da requisição do primeiro resgate, tornando-se irretratável a partir desse marco.</p><p>As alternativas A, C e D distorcem o prazo limite de escolha, ignoram a irretratabilidade ou invertem o padrão automático do progressivo.</p>",
      "enunciado": "<p>No que tange ao momento de escolha e à definitividade da opção pelo regime de tributação (progressivo ou regressivo) em planos de previdência complementar, a legislação atual estabelece que:</p>",
      "alternativas": {
-      "a": "A escolha deve ser feita obrigatoriamente no ato da assinatura da proposta de adesão e nunca mais pode ser alterada.",
+      "a": "A escolha deve ser feita obrigatoriamente no ato da assinatura da proposta de adesão e não pode ser alterada depois.",
       "b": "A opção pelo regime regressivo pode ser exercida até o momento da obtenção do benefício ou da requisição do primeiro resgate, sendo irretratável a partir de então.",
       "c": "O cliente pode alternar livremente entre o regime progressivo e o regressivo a cada ano fiscal, conforme sua conveniência tributária.",
       "d": "Caso o cliente não se manifeste no primeiro ano, o plano é enquadrado de forma automática no regime regressivo definitivo."
@@ -8467,7 +8467,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Analise o caso de um investidor que acumulou recursos em um plano VGBL por um período exato de 18 meses, optando pelo regime regressivo de tributação, e realizou o resgate total do saldo acumulado. Sobre os efeitos fiscais dessa operação, assinale a alternativa correta:</p>",
      "alternativas": {
       "a": "O imposto retido na fonte pela seguradora será definitivo, correspondendo à alíquota de 35%, sem direito a restituição ou ajuste na declaração anual.",
-      "b": "O valor retido poderá ser totalmente restituído na declaração de ajuste anual do IRPF, caso o contribuinte comprove renda isenta.",
+      "b": "O valor retido poderá ser restituído na declaração de ajuste anual do IRPF, caso o contribuinte comprove renda isenta.",
       "c": "O imposto cobrado será recalculado com base na tabela progressiva mensal de salários, gerando complemento a pagar.",
       "d": "A operação será isenta de Imposto de Renda pelo fato de o resgate ter ocorrido dentro do prazo de carência inicial de dois anos."
      },
@@ -8516,7 +8516,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "A portabilidade é tratada como um resgate parcial, sofrendo retenção de 15% de Imposto de Renda na fonte.",
       "b": "A transferência de recursos zera automaticamente o prazo de acumulação para fins de contagem da tabela regressiva de tributação.",
-      "c": "A operação não sofre incidência de Imposto de Renda e o tempo de acumulação anterior é integralmente preservado e transferido para o novo plano.",
+      "c": "A operação não sofre incidência de Imposto de Renda e o tempo de acumulação anterior é preservado e transferido para o novo plano.",
       "d": "A portabilidade pode ser realizada livremente entre planos de modalidades cruzadas, como de PGBL para VGBL."
      },
      "gabarito": "c",
@@ -8538,7 +8538,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Um participante de um plano de previdência complementar deseja converter o saldo acumulado em uma renda mensal vitalícia simples. Sobre a dinâmica atuarial e o risco assumido nessa modalidade, é correto afirmar que:</p>",
      "alternativas": {
       "a": "A seguradora assume o risco de sobrevivência, pagando a renda até o falecimento do titular, sendo que, em caso de morte precoce, o saldo remanescente não vira herança.",
-      "b": "O saldo remanescente retorna integralmente para os herdeiros legais do titular por meio de inventário, caso ele venha a falecer no primeiro mês de benefício.",
+      "b": "O saldo remanescente retorna para os herdeiros legais do titular por meio de inventário, caso ele venha a falecer no primeiro mês de benefício.",
       "c": "A tábua atuarial utilizada é estática e desconsidera a expectativa de sobrevivência da população.",
       "d": "Contratar garantias adicionais de prazo mínimo aumenta o valor da parcela mensal recebida pelo cliente."
      },
@@ -8563,7 +8563,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "Automaticamente para o governo federal por meio de arrecadação de imposto de herança em inventário judicial obrigatório.",
       "b": "Aos beneficiários indicados livremente na proposta de adesão do plano, na proporção definida pelo participante.",
       "c": "Ao Fundo Garantidor de Créditos (FGC) para cobertura de eventuais perdas operacionais do banco distribuidor.",
-      "d": "Exclusivamente à seguradora, que absorve todo o capital sem repassar valores a terceiros."
+      "d": "À seguradora, que absorve o capital acumulado sem repassar valores aos beneficiários."
      },
      "gabarito": "b",
      "feedback": {
@@ -8697,7 +8697,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "A posse dos bens empenhados deve ser transferida fisicamente de forma obrigatória para o cofre do banco credor no ato da contratação.",
       "b": "No penhor rural, industrial, mercantil e de veículos, os bens empenhados permanecem em poder do devedor, que assume a responsabilidade de guardá-los e conservá-los.",
       "c": "O penhor recai exclusivamente sobre bens imóveis urbanos registrados em cartório.",
-      "d": "O credor assume a posse direta imediata de todas as safras e máquinas, interditando o uso produtivo pelo agricultor."
+      "d": "O credor assume a posse direta imediata da safra e dos maquinários, interditando o uso produtivo pelo agricultor."
      },
      "gabarito": "b",
      "feedback": {
@@ -8717,7 +8717,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Um banco concedeu um empréstimo a uma empresa e exigiu um fiador pessoa física. No contrato, o fiador assinou cláusula declarando-se principal pagador e devedor solidário, com renúncia expressa ao benefício de ordem. Vencidas as parcelas sem pagamento, o banco quer cobrar o fiador de imediato, sem antes executar bens da empresa devedora. Sobre essa cobrança, é correto afirmar que:</p>",
      "alternativas": {
       "a": "O banco pode cobrar o fiador de imediato, porque a renúncia expressa ao benefício de ordem afasta a responsabilidade subsidiária que a fiança tem por regra.",
-      "b": "O banco precisa executar antes todos os bens da empresa, porque o benefício de ordem é irrenunciável e protege o fiador em qualquer contrato.",
+      "b": "O banco precisa executar antes os bens da empresa, porque o benefício de ordem é irrenunciável e protege o fiador mesmo com cláusula de renúncia.",
       "c": "A cobrança imediata é possível porque a fiança é solidária por natureza, tornando a cláusula de renúncia um detalhe sem efeito prático.",
       "d": "O banco precisa executar antes um bem do próprio fiador dado em garantia, porque a fiança é uma garantia real sobre o patrimônio dele."
      },
@@ -8790,7 +8790,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "Até o vencimento da fatura subsequente.",
       "b": "Até o limite de 12 meses consecutivos, renováveis mediante nova análise cadastral.",
       "c": "Até o prazo fixo de 30 dias corridos, independentemente da data de emissão das faturas.",
-      "d": "Por tempo indeterminado, desde que o cliente pague o valor mínimo estipulado em todos os ciclos."
+      "d": "Por tempo indeterminado, desde que o cliente pague o valor mínimo estipulado na fatura."
      },
      "gabarito": "a",
      "feedback": {
@@ -8834,7 +8834,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "Incide uma alíquota diária sobre o saldo devedor somada a uma alíquota adicional fixa de 0,38%, calculada sobre o somatório mensal dos acréscimos diários dos saldos devedores.",
       "b": "O IOF é cobrado uma única vez no primeiro dia de utilização, com alíquota fixa de 3%, sem incidência de taxas diárias.",
-      "c": "As operações de cheque especial são totalmente isentas de IOF por constituírem serviços essenciais de conta corrente.",
+      "c": "As operações de cheque especial são isentas de IOF por constituírem serviços essenciais de conta corrente.",
       "d": "A alíquota diária do IOF para pessoa física no cheque especial é de 1% ao dia, sem qualquer limitação de teto anual."
      },
      "gabarito": "a",
@@ -8874,7 +8874,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Em um atendimento presencial, Marcos comentou com Camila, profissional CPA, que precisou usar o cheque especial por 5 dias, e que utilizou o limite, no valor de R$ 800, para cobrir despesas até o recebimento do salário. Ao consultar o extrato, notou que o valor cobrado era maior do que imaginava. Ele acreditava que pagaria apenas os juros sobre os R$ 800 pelo período utilizado, mas percebeu um valor adicional. Pediu, então, que Camila explicasse por que o valor cobrado não correspondia aos juros publicados pelo banco.</p><p>Camila esclareceu que:</p>",
      "alternativas": {
       "a": "os juros são apropriados dia a dia e debitados no ciclo do extrato, enquanto o IOF é cobrado na ativação do limite, sem incidência diária adicional.",
-      "b": "os juros incidem sobre o saldo devedor diário, mas o IOF é recolhido integralmente no primeiro dia de uso, sem componente adicional nos dias seguintes.",
+      "b": "os juros incidem sobre o saldo devedor diário, mas o IOF é recolhido em parcela única no primeiro dia de uso, sem componente adicional nos dias seguintes.",
       "c": "os juros são calculados por dia sobre os valores realmente usados e o IOF inclui um percentual fixo e outro diário, cobrado pelo tempo de utilização do limite.",
       "d": "o valor tem como base o saldo negativo médio do período e o IOF sobre a variação diária do uso, sem componente fixo na contratação."
      },
@@ -8918,7 +8918,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "O banco deve conceder redução proporcional dos juros e demais acréscimos relativos ao período que deixou de existir.",
       "b": "O cliente deve pagar obrigatoriamente a taxa de tarifa por liquidação antecipada fixada em contrato para compensar a perda do banco.",
-      "c": "Os juros totais contratados são mantidos integralmente e cobrados sem qualquer abatimento proporcional de prazo.",
+      "c": "Os juros contratados são mantidos e cobrados sem abatimento proporcional ao prazo antecipado.",
       "d": "A liquidação antecipada é proibida para empréstimos pessoais, sendo permitida apenas em financiamentos imobiliários."
      },
      "gabarito": "a",
@@ -8981,19 +8981,19 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "usar_em": [
       "simulado"
      ],
-     "comentario": "<p>A alternativa C está correta, pois trata-se da única alternativa incorreta (atendendo ao comando da questão). A norma admite expressamente a portabilidade para modalidade de crédito diversa da original, havendo inclusive exceções em que a restrição de prazo não se aplica a essa mudança.</p><p>As alternativas A, B e D descrevem fatos plenamente exatos: o bloqueio por margem consignável, os subtetos do trabalhador celetista, e a isenção de tarifa de quitação antecipada para MPEs.</p>",
-     "enunciado": "<p>Analise as características regulatórias aplicáveis aos limites de endividamento e às operações de crédito consignado e portabilidade e assinale a alternativa incorreta:</p>",
+     "comentario": "<p>A alternativa B está correta. A norma admite a portabilidade para modalidade de crédito diversa da original e, nessa hipótese, a restrição quanto ao prazo da operação deixa de se aplicar.</p><p>A alternativa A erra os subtetos, porque o limite de 40% do celetista se divide em 35% para empréstimos, financiamentos e arrendamento mercantil e 5% para o cartão de crédito consignado. A alternativa C erra o alcance da vedação, porque a proibição de tarifa por liquidação antecipada abrange a pessoa física e também as microempresas e as empresas de pequeno porte. A alternativa D erra porque a portabilidade se dá entre as instituições, com valor e prazo limitados ao saldo devedor e ao prazo remanescente, sem liberação de recurso na conta do cliente.</p>",
+     "enunciado": "<p>Um gerente de relacionamento atende um cliente celetista com remuneração mensal de R$ 6.000,00. O cliente tem um empréstimo consignado contratado há dois anos, com saldo devedor de R$ 18.400,00 e 26 parcelas remanescentes, a uma taxa de 2,3% ao mês. Ele recebeu de outro banco uma proposta de portabilidade a 1,7% ao mês e chegou à agência com a proposta impressa.</p><p>Na conversa, o cliente apresenta quatro pedidos. Ele quer saber quanto da remuneração pode ser comprometido com parcelas de empréstimo consignado e de cartão de crédito consignado, se a portabilidade pode transferir o saldo para uma linha de crédito de outra modalidade, se o banco de origem pode cobrar tarifa quando ele decidir quitar o contrato antes do prazo e se a operação de portabilidade pode liberar R$ 5.000,00 na conta dele. O gerente coloca o Custo Efetivo Total das duas propostas lado a lado. Com base nas regras aplicáveis, indique a alternativa correta.</p>",
      "alternativas": {
-      "a": "A margem consignável estabelece um teto de comprometimento da remuneração ou do benefício, bloqueando novas averbações caso o limite seja atingido.",
-      "b": "No caso de trabalhadores celetistas regidos pela legislação específica, a margem global é de 40%, dividida em subtetos de 35% para empréstimos e 5% para cartão de crédito consignado.",
-      "c": "A portabilidade de crédito é vedada para modalidades de crédito diversas, permitindo a transferência estrita exclusivamente para o mesmo produto idêntico de origem.",
-      "d": "A vedação de cobrança de tarifa por liquidação antecipada aplica-se não apenas a pessoas físicas, mas também a microempresas e empresas de pequeno porte."
+      "a": "O limite global de 40% do trabalhador celetista se divide em 30% para empréstimos e 10% para o cartão consignado.",
+      "b": "A portabilidade para modalidade de crédito diversa da original afasta a restrição quanto ao prazo.",
+      "c": "A vedação de tarifa por liquidação antecipada alcança a pessoa física, e a microempresa segue sujeita a essa cobrança.",
+      "d": "A portabilidade pode liberar ao cliente, em conta, a diferença entre o novo contrato e o saldo devedor de origem."
      },
-     "gabarito": "c",
+     "gabarito": "b",
      "feedback": {
-      "a": "O bloqueio de novas averbações pelo sistema do órgão pagador ao atingir a margem consignável é correto.",
-      "b": "Os limites de 40% globais para celetistas (35% empréstimos e 5% cartão) estão corretos e respaldados pela norma.",
-      "d": "A proibição de tarifa por liquidação antecipada estendida a micro e pequenas empresas é verídica."
+      "a": "Os subtetos do trabalhador celetista são de 35% para empréstimos e de 5% para o cartão de crédito consignado.",
+      "c": "A vedação de tarifa por liquidação antecipada alcança também as microempresas e as empresas de pequeno porte.",
+      "d": "Valor e prazo ficam limitados ao saldo devedor e ao prazo remanescente, e a liberação de recurso em conta caracteriza refinanciamento."
      }
     },
     {
@@ -9005,7 +9005,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "revisao"
      ],
      "comentario": "<p>A alternativa D está correta. O crédito consignado, com desconto em folha, reduz significativamente o risco de inadimplência para o banco. Isso permite a oferta de juros menores e prazos mais longos, especialmente vantajosos para aposentados e pensionistas.</p><p>Questão oficial do Caderno de Questões da CPA, publicado pela Anbima. Identificação PD 2.3.4, nível cognitivo Análise, dificuldade Fácil.</p>",
-     "enunciado": "<p>Carlos, profissional CPA, está auxiliando Joana, aposentada que deseja quitar dívidas atrasadas e reorganizar seu orçamento. Ela identificou disponíveis no seu internet banking: um empréstimo pessoal tradicional de prazo curto; um financiamento de veículo; e um crédito consignado, com parcelas descontadas diretamente do benefício do INSS. Joana perguntou qual dessas propostas oferecia condições mais adequadas em termos de juros e prazo, considerando seu perfil de aposentada.</p><p>Carlos respondeu que, para o perfil da cliente, a proposta mais adequada e que atende às condições que ela ponderou seria:</p>",
+     "enunciado": "<p>Carlos, profissional CPA, está auxiliando Joana, aposentada que deseja quitar dívidas atrasadas e reorganizar seu orçamento. Ela identificou disponíveis no seu internet banking: um empréstimo pessoal tradicional de prazo curto; um financiamento de veículo; e um crédito consignado, com parcelas descontadas diretamente do benefício do INSS. Joana perguntou qual dessas propostas oferecia condições vantajosas em termos de juros e prazo, considerando seu perfil de aposentada.</p><p>Carlos respondeu que, para o perfil da cliente, a proposta que atende às condições que ela ponderou seria:</p>",
      "alternativas": {
       "a": "o financiamento do veículo, pois garante a posse imediata do bem e oferece prazos de pagamento mais extensos que o empréstimo pessoal.",
       "b": "o empréstimo pessoal, pois garante uso livre dos recursos, com taxa reduzida em razão da ausência de garantias.",
@@ -9097,9 +9097,9 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Sobre a cobrança da Tarifa de Cadastro e a incidência do Imposto sobre Operações Financeiras (IOF) em contratos de CDC, a regulamentação vigente determina que:</p>",
      "alternativas": {
       "a": "A Tarifa de Cadastro remunera a pesquisa em serviços de crédito no início do relacionamento e não pode ser cobrada cumulativamente, havendo no IOF diário uma trava limite calculada em 365 dias.",
-      "b": "A Tarifa de Cadastro pode ser cobrada a cada semestre de vigência do contrato, e o IOF diário incide sem limite de prazo por toda a duração de um financiamento de cinco anos.",
+      "b": "A Tarifa de Cadastro pode ser cobrada a cada semestre de vigência do contrato, e o IOF diário incide sem limite de prazo ao longo da duração de um financiamento de cinco anos.",
       "c": "O IOF é isento em qualquer modalidade de CDC, sendo substituído por uma taxa fixa de administração cobrada pelo Banco Central.",
-      "d": "A Tarifa de Cadastro é ilegal e proibida pelo Código de Defesa do Consumidor em todas as operações de crédito do país."
+      "d": "A Tarifa de Cadastro é ilegal e proibida pelo Código de Defesa do Consumidor nas operações de crédito ao consumidor."
      },
      "gabarito": "a",
      "feedback": {
@@ -9192,7 +9192,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "O SFI opera sem teto de valor de imóvel e sem limite regulatório de juros, sendo vedado o uso do FGTS, ao passo que o SFH impõe tetos e permite o FGTS.",
       "b": "O SFI é restrito exclusivamente a imóveis residenciais populares de até R$ 200 mil, enquanto o SFH financia galpões industriais.",
       "c": "Ambos os sistemas exigem obrigatoriamente a utilização de taxas de juros prefixadas limitadas a 8% ao ano.",
-      "d": "O uso do FGTS é obrigatório e compulsório em todas as operações contratadas no SFI."
+      "d": "O uso do FGTS é obrigatório e compulsório nas operações contratadas no SFI."
      },
      "gabarito": "a",
      "feedback": {
@@ -9325,17 +9325,17 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "simulado",
       "revisao"
      ],
-     "comentario": "<p>A alternativa A está correta. Quando a carta de crédito é reajustada, a prestação de todos os participantes do grupo sobe na mesma proporção, abrangendo inclusive os consorciados que já foram contemplados, garantindo recursos para as próximas entregas.</p><p>As alternativas B, C e D isentam indevidamente os contemplados, transferem o encargo para o fundo de reserva ou decretam liquidações falsas.</p>",
+     "comentario": "<p>A alternativa A está correta. Quando a carta de crédito é reajustada, a prestação dos consorciados sobe na mesma proporção, abrangendo inclusive os consorciados que já foram contemplados, garantindo recursos para as próximas entregas.</p><p>As alternativas B, C e D isentam indevidamente os contemplados, transferem o encargo para o fundo de reserva ou decretam liquidações falsas.</p>",
      "enunciado": "<p>Durante a vigência de um grupo de consórcio, a carta de crédito sofre reajustes periódicos para preservar o seu poder de compra (por exemplo, pelo INCC nos imóveis). Quando ocorre esse reajuste no valor da carta de crédito, a consequência prática para os participantes é a de que:</p>",
      "alternativas": {
-      "a": "A parcela mensal de todos os participantes sofre reajuste na mesma proporção, inclusive a dos já contemplados.",
+      "a": "A parcela mensal dos consorciados sofre reajuste na mesma proporção, inclusive a dos já contemplados.",
       "b": "Apenas os consorciados que ainda não foram contemplados pagam o reajuste, ficando os contemplados isentos.",
-      "c": "A administradora absorve todo o impacto financeiro com recursos do fundo de reserva, mantendo as parcelas inalteradas.",
+      "c": "A administradora absorve o impacto financeiro com recursos do fundo de reserva, mantendo as parcelas inalteradas.",
       "d": "O grupo é imediatamente liquidado e extinto pelo Banco Central."
      },
      "gabarito": "a",
      "feedback": {
-      "b": "Os contemplados não ficam isentos, pois o reajuste atinge a parcela de todos para manter o caixa do grupo equilibrado.",
+      "b": "Os contemplados não ficam isentos, pois o reajuste atinge a parcela de contemplados e não contemplados para manter o caixa do grupo equilibrado.",
       "c": "O fundo de reserva serve para cobrir inadimplências, e não para absorver reajustes gerais de cartas de crédito.",
       "d": "O reajuste da carta não provoca a liquidação antecipada compulsória do grupo."
      }
@@ -9447,7 +9447,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "A conta salário possui finalidade exclusiva para depósitos do empregador, sendo vedada a cobrança de tarifa de manutenção e permitida a portabilidade gratuita e integral para conta de mesma titularidade em outro banco.",
       "b": "O trabalhador pode receber livremente depósitos em dinheiro feitos por terceiros e transferir os recursos para contas de qualquer titularidade.",
       "c": "A instituição financeira detém o direito de cobrar uma tarifa mensal de manutenção caso o trabalhador solicite a portabilidade do salário.",
-      "d": "A portabilidade de salário obriga o cliente a transferir os recursos integralmente para uma conta de terceiros indicada pelo empregador."
+      "d": "A portabilidade de salário obriga o cliente a transferir os recursos para uma conta de terceiros indicada pelo empregador."
      },
      "gabarito": "a",
      "feedback": {
@@ -9469,7 +9469,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "A inclusão do emitente no CCF decorre dos motivos 12 (cheque sem fundos na segunda apresentação), 13 (conta encerrada) e 14 (prática espúria), não ocorrendo isoladamente pelo motivo 11 na primeira apresentação.",
       "b": "O emitente é inscrito no CCF de forma automática logo na primeira apresentação do cheque devolvido pelo motivo 11.",
       "c": "O motivo 13 referente a conta encerrada não gera nenhum tipo de restrição cadastral no sistema financeiro ou inclusão no CCF.",
-      "d": "A emissão de cheques sem fundos foi totalmente substituída pelo Pix, extinguindo o CCF e o motivo 11 do sistema bancário brasileiro."
+      "d": "A emissão de cheques sem fundos foi substituída pelo Pix, extinguindo o CCF e o motivo 11 do sistema bancário brasileiro."
      },
      "gabarito": "a",
      "feedback": {
@@ -9506,10 +9506,10 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "simulado",
       "revisao"
      ],
-     "comentario": "<p>A alternativa A está correta. O Pix é um meio de pagamento instantâneo criado, desenvolvido e gerido pelo Banco Central, liquidando transações em segundos, 24 horas por dia, todos os dias da semana.</p><p>As alternativas B, C e D erram ao atribuir a criação a bancos comerciais ou à Febraban, restringir o funcionamento a dias úteis ou relacioná-lo à B3.</p>",
+     "comentario": "<p>A alternativa A está correta. O Pix é um meio de pagamento instantâneo criado, desenvolvido e gerido pelo Banco Central, liquidando transações em segundos, 24 horas por dia, sete dias por semana.</p><p>As alternativas B, C e D erram ao atribuir a criação a bancos comerciais ou à Febraban, restringir o funcionamento a dias úteis ou relacioná-lo à B3.</p>",
      "enunciado": "<p>O Pix é um meio de pagamento instantâneo amplamente utilizado no Brasil. Sobre a origem, a gestão e o funcionamento operacional dessa ferramenta, é correto afirmar que:</p>",
      "alternativas": {
-      "a": "Foi criado, desenvolvido e é gerido integralmente pelo Banco Central do Brasil, operando 24 horas por dia, todos os dias da semana.",
+      "a": "Foi criado, desenvolvido e é gerido pelo Banco Central do Brasil, operando 24 horas por dia, sete dias por semana.",
       "b": "Trata-se de um arranjo privado exclusivo gerido de forma consorciada pelos grandes bancos comerciais privados da Febraban.",
       "c": "Funciona exclusivamente em dias úteis e durante o horário tradicional de expediente bancário das agências físicas.",
       "d": "É um produto financeiro de titularidade da B3, sendo negociado por meio de lotes de liquidação diferida."
@@ -9535,7 +9535,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "DICT (Diretório de Identificadores de Contas Transacionais), base centralizada e gerida pelo Banco Central.",
       "b": "Banco emissor da chave, que mantém um diretório próprio e isolado sem comunicação com as demais instituições.",
       "c": "Comitê Gestor da Internet no Brasil (CGI.br), responsável pelos registros de domínios e chaves digitais.",
-      "d": "Fundo Garantidor de Créditos (FGC), que audita diariamente todas as senhas de segurança dos correntistas."
+      "d": "Fundo Garantidor de Créditos (FGC), que audita diariamente as senhas de segurança dos correntistas."
      },
      "gabarito": "a",
      "feedback": {
@@ -9626,9 +9626,9 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Em relação à cobertura de garantias para recursos depositados em contas internacionais mantidas por residentes do Brasil em instituições financeiras domiciliadas no exterior, é correto afirmar que:</p>",
      "alternativas": {
       "a": "Não existe cobertura do Fundo Garantidor de Créditos (FGC), pois a proteção brasileira cessa quando os recursos cruzam a fronteira nacional.",
-      "b": "O FGC garante integralmente os depósitos em contas internacionais em moeda estrangeira até o limite de R$ 1 milhão por CPF.",
+      "b": "O FGC garante os depósitos em contas internacionais em moeda estrangeira até o limite de R$ 1 milhão por CPF.",
       "c": "Os recursos possuem cobertura automática do Banco Central do Brasil por meio de um fundo soberano de resgate cambial.",
-      "d": "O Tesouro Nacional assume o risco de crédito internacional de todas as contas abertas via aplicativos de fintechs."
+      "d": "O Tesouro Nacional assume o risco de crédito internacional das contas abertas via aplicativos de fintechs."
      },
      "gabarito": "a",
      "feedback": {
@@ -9717,8 +9717,8 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Analise o caso de um residente fiscal no Brasil que realizou diversas operações de remessa de recursos e gastos internacionais utilizando contas globais e cartões. Com base nas normas tributárias e regulatórias brasileiras sobre câmbio, IOF e obrigações acessórias, assinale a alternativa correta:</p>",
      "alternativas": {
       "a": "As remessas destinadas especificamente a investimentos no exterior contam com alíquota reduzida de IOF de 1,10%, diferentemente das transferências simples de disponibilidade que pagam 3,5%.",
-      "b": "Os gastos efetuados com cartões de débito ou crédito internacional em viagens estão totalmente isentos de IOF desde a unificação das alíquotas em 2025.",
-      "c": "A entrega da Declaração de Capitais Brasileiros no Exterior (CBE) substitui integralmente a exigência de declaração de bens no imposto de renda da Receita Federal.",
+      "b": "Os gastos efetuados com cartões de débito ou crédito internacional em viagens estão isentos de IOF desde a unificação das alíquotas em 2025.",
+      "c": "A entrega da Declaração de Capitais Brasileiros no Exterior (CBE) substitui a exigência de declaração de bens no imposto de renda da Receita Federal.",
       "d": "O cliente perde a condição de residente fiscal no Brasil no momento exato em que abre uma conta bancária domiciliada no exterior."
      },
      "gabarito": "a",
@@ -9760,7 +9760,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Em relação à estrutura regulatória do mercado de câmbio brasileiro e às suas nomenclaturas tradicionais, assinale a alternativa correta:</p>",
      "alternativas": {
       "a": "Existe um único Mercado de Câmbio unificado, sendo \"comercial\" e \"turismo\" apenas denominações de cotações para diferentes finalidades.",
-      "b": "O mercado é formalmente dividido em dois subsistemas completamente separados: o Mercado de Taxas Livres e o Mercado de Taxas Flutuantes.",
+      "b": "O mercado é formalmente dividido em dois subsistemas separados: o Mercado de Taxas Livres e o Mercado de Taxas Flutuantes.",
       "c": "As operações de turismo possuem obrigatoriamente taxas subsidiadas e controladas diretamente pelo Tesouro Nacional.",
       "d": "O Banco Central opera de forma isolada, sendo proibido o funcionamento de bancos e corretoras no mercado cambial."
      },
@@ -9783,9 +9783,9 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>A PTAX é uma taxa de câmbio de referência amplamente divulgada pelo Banco Central do Brasil. Sobre a aplicação dessa taxa no atendimento ao cliente de varejo, verifica-se que:</p>",
      "alternativas": {
       "a": "A PTAX serve como taxa de referência estatística e de contratos futuros, não sendo obrigatoriamente a taxa exata que o cliente paga no balcão da instituição.",
-      "b": "A PTAX é a taxa definitiva e obrigatória cobrada em todas as vendas de moeda em espécie realizadas aos viajantes.",
+      "b": "A PTAX é a taxa definitiva e obrigatória cobrada nas vendas de moeda em espécie realizadas aos viajantes.",
       "c": "A PTAX é fixada exclusivamente pelos conselhos de turismo das grandes companhias aéreas internacionais.",
-      "d": "A PTAX zera o spread cambial de todas as corretoras do país por determinação da CVM."
+      "d": "A PTAX zera o spread cambial das corretoras do país por determinação da CVM."
      },
      "gabarito": "a",
      "feedback": {
@@ -9830,7 +9830,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "É permitida a compra e venda de moeda estrangeira em espécie entre pessoas físicas, de forma eventual e não profissional, até o limite de US$ 500 por operação.",
       "b": "O viajante pode portar qualquer montante em espécie ao sair do país, sem limite máximo e sem obrigatoriedade de declaração à Receita Federal.",
-      "c": "Qualquer cidadão comum pode abrir livremente contas correntes denominadas integralmente em moeda estrangeira em bancos comerciais brasileiros.",
+      "c": "O cidadão comum pode abrir livremente contas correntes denominadas em moeda estrangeira em bancos comerciais brasileiros.",
       "d": "A negociação de câmbio entre pessoas físicas pode ser realizada de forma profissional e contínua sem necessidade de autorização do Banco Central."
      },
      "gabarito": "a",
@@ -9967,7 +9967,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Analise o caso de um cliente que contratou um seguro de vida temporário com prazo de vigência de dez anos e cobertura por morte e invalidez decorrente de doença, prevendo cláusula de carência. Com base nas normas regulatórias aplicáveis a esse tipo de contrato, assinale a alternativa correta:</p>",
      "alternativas": {
       "a": "A carência estipulada para os eventos de doença não pode ultrapassar a metade da vigência contratual, e o seguro temporário encerra-se ao fim do prazo sem devolução de prêmios se o segurado sobreviver.",
-      "b": "O cliente que sobreviver ao término dos dez anos do seguro temporário tem direito ao resgate integral e corrigido de todos os prêmios que pagou ao longo do período.",
+      "b": "O cliente que sobreviver ao término dos dez anos do seguro temporário tem direito ao resgate corrigido dos prêmios que pagou ao longo do período.",
       "c": "A seguradora pode fixar livremente um prazo de carência de oito anos para um contrato de dez anos de vigência.",
       "d": "Caso ocorra o falecimento por morte natural após o prazo de carência, a indenização será rateada compulsoriamente com o INSS."
      },
@@ -10062,7 +10062,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "A indenização não pode exceder o valor da garantia contratada, assim como os valores da garantia e da indenização não podem superar o valor do interesse segurado.",
       "b": "O segurado pode receber o dobro do valor de mercado do bem caso contrate apólices em seguradoras diferentes de forma cumulativa.",
-      "c": "A indenização é sempre calculada com base no lucro cessante futuro estimado, independentemente do dano material efetivo.",
+      "c": "A indenização é calculada com base no lucro cessante futuro estimado, independentemente do dano material efetivo.",
       "d": "O valor da apólice é irrelevante, obrigando a seguradora a pagar qualquer prejuízo alegado pelo cliente após o sinistro."
      },
      "gabarito": "a",
@@ -10130,7 +10130,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "A capacidade depende apenas da idade do cliente, enquanto a tolerância depende apenas da renda.",
       "b": "A capacidade envolve situação financeira e prazo, enquanto a tolerância é também psicológica.",
       "c": "A capacidade e a tolerância são determinadas exclusivamente pelo horizonte de investimento.",
-      "d": "A capacidade e a tolerância são equivalentes e produzem sempre o mesmo perfil."
+      "d": "A capacidade e a tolerância são equivalentes e produzem o mesmo perfil."
      },
      "gabarito": "b",
      "feedback": {
@@ -10148,7 +10148,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "revisao"
      ],
      "comentario": "<p>A alternativa A está correta. O conservador prioriza segurança e rejeita volatilidade, enquanto o arrojado aceita oscilações fortes no curto prazo em busca de maior retorno no longo prazo.</p><p>A B classifica como moderado quem rejeita volatilidade e como conservador quem aceita fortes oscilações. A C faz a inversão dos perfis. A D ignora que tolerância ao risco não é determinada apenas por idade e renda.</p><p>Regra de bolso: mesma idade não significa mesmo perfil.</p>",
-     "enunciado": "<p>Dois clientes possuem a mesma idade e renda. O primeiro rejeita oscilações e aceita retorno menor para preservar o capital. O segundo tolera fortes oscilações em busca de maior retorno no longo prazo. A classificação mais adequada é:</p>",
+     "enunciado": "<p>Dois clientes possuem a mesma idade e renda. O primeiro rejeita oscilações e aceita retorno menor para preservar o capital. O segundo tolera fortes oscilações em busca de maior retorno no longo prazo. A classificação correta é:</p>",
      "alternativas": {
       "a": "O primeiro é conservador e o segundo é arrojado.",
       "b": "O primeiro é moderado e o segundo é conservador.",
@@ -10197,7 +10197,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Um cliente conservador procura a instituição e, sem receber recomendação, determina por iniciativa própria a compra de um produto incompatível com seu perfil. Como a instituição deve agir segundo o texto?</p>",
      "alternativas": {
       "a": "Deve executar a ordem sem qualquer alerta, porque a iniciativa partiu do cliente.",
-      "b": "Deve recusar obrigatoriamente a ordem, pois o cliente nunca pode operar fora do perfil.",
+      "b": "Deve recusar obrigatoriamente a ordem, pois o cliente fica impedido de operar fora do perfil.",
       "c": "Pode recomendar o produto e depois colher uma declaração para regularizar a operação.",
       "d": "Deve alertar sobre a inadequação e obter declaração expressa de ciência do cliente."
      },
@@ -10218,7 +10218,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa B está correta. A dispensa atribuída ao investidor qualificado não alcança a pessoa natural que se qualificou por volume de investimentos nem aquela que se qualificou por certificação aprovada pela CVM.</p><p>A A ignora expressamente a ressalva aplicável à pessoa natural. A C usa o prazo de atualização do perfil para criar uma dispensa que não existe. A D erra ao afirmar que pessoa natural não pode ser classificada como investidora qualificada.</p><p>Regra de bolso: pessoa natural qualificada por patrimônio ou certificação continua sujeita ao suitability.</p>",
      "enunciado": "<p>Uma pessoa natural possui mais de R$ 1 milhão em investimentos financeiros e atestou por escrito sua condição de investidor qualificado. A instituição entende que, por isso, ela está automaticamente dispensada do suitability. Considerando a ressalva apresentada no texto, essa conclusão é:</p>",
      "alternativas": {
-      "a": "Correta, porque todo investidor qualificado está dispensado da verificação de adequação.",
+      "a": "Correta, porque o investidor qualificado está dispensado da verificação de adequação.",
       "b": "Incorreta, porque a dispensa não alcança pessoa natural qualificada por volume aplicado.",
       "c": "Correta, desde que o cliente renove o próprio perfil em intervalos máximos de cinco anos.",
       "d": "Incorreta, porque apenas pessoas jurídicas podem ser classificadas como qualificadas."
@@ -10403,7 +10403,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa D está correta. Na preservação, a carteira passa por desriscagem, mas uma aposentadoria longa continua exposta à inflação, o que justifica manter uma âncora em ativos indexados a índices de preços.</p><p>A A transforma desriscagem em concentração absoluta de curto prazo. A B ignora o risco de perda de poder de compra ao longo de décadas. A C propõe elevar justamente a volatilidade que a fase busca reduzir.</p><p>Regra de bolso: preservar é reduzir risco sem abandonar a proteção do poder de compra.</p>",
      "enunciado": "<p>Um cliente entrou na fase de preservação e pretende reduzir o risco da carteira. Ele sugere vender todos os ativos indexados à inflação e concentrar todo o patrimônio em pós-fixados de curto prazo. Qual orientação está alinhada ao texto?</p>",
      "alternativas": {
-      "a": "A estratégia é adequada, pois preservar significa eliminar toda exposição a prazos longos.",
+      "a": "A estratégia é adequada, pois preservar significa eliminar a exposição a prazos longos.",
       "b": "A estratégia é adequada, pois a inflação deixa de ser relevante durante a aposentadoria.",
       "c": "A preservação exige aumentar renda variável para recuperar eventuais perdas antes da aposentadoria.",
       "d": "A desriscagem deve reduzir volatilidade, mas pode manter proteção contra inflação no longo prazo."
@@ -10428,7 +10428,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "O risco central é o de mercado, e VGBL e PGBL sofrem ITCMD no repasse aos beneficiários.",
       "b": "O risco central é o de crédito, e o planejamento sucessório pertence à fase do crescimento.",
       "c": "O risco de longevidade é administrado pela taxa de retirada ou renda vitalícia, e a sucessão pesa.",
-      "d": "O risco de longevidade é eliminado ao concentrar todo o patrimônio em ativos ilíquidos de alto risco."
+      "d": "O risco de longevidade é eliminado ao concentrar o patrimônio em ativos ilíquidos de alto risco."
      },
      "gabarito": "c",
      "feedback": {
@@ -10586,9 +10586,9 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa B está correta. Para o trabalhador celetista, a margem consignável limita a 40% da remuneração o desconto em folha, sendo 35% destinados a empréstimos e 5% ao cartão de crédito consignado. Aposentados e pensionistas do INSS seguem outra regra, com margem maior.</p><p>A A considera apenas a parcela dos empréstimos e ignora os 5% destinados ao cartão. A C transforma a margem consignável em teto geral de endividamento, o que o texto rejeita. A D toma apenas a parcela do cartão como se fosse a margem completa.</p><p>Regra de bolso: no celetista, a margem consignável é 40%, divididos em 35% mais 5%, e ela não é teto do endividamento total.</p>",
      "enunciado": "<p>Um cliente celetista informa que parte relevante de sua remuneração já está comprometida com crédito consignado e cartão consignado. O gerente cita a margem consignável como referência. Qual explicação está de acordo com o texto?</p>",
      "alternativas": {
-      "a": "O limite é de 35%, integralmente destinado a empréstimos consignados.",
+      "a": "O limite é de 35%, destinado a empréstimos consignados.",
       "b": "O limite é de 40%, sendo 35% para empréstimos e 5% para cartão consignado.",
-      "c": "O limite é de 40% e representa o teto legal para todo o endividamento do cliente.",
+      "c": "O limite é de 40% e representa o teto legal do endividamento do cliente.",
       "d": "O limite é de 5%, destinado conjuntamente a empréstimos e cartão consignado."
      },
      "gabarito": "b",
@@ -10726,7 +10726,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Ao estruturar o orçamento doméstico de uma família, o profissional de atendimento deve analisar o comportamento das despesas e sua natureza. Ao comparar os eixos de classificação das contas, constata-se que:</p>",
      "alternativas": {
       "a": "O eixo fixas e variáveis mede a previsibilidade do valor, e o eixo essenciais e supérfluas mede a necessidade para a subsistência.",
-      "b": "Toda despesa fixa é obrigatoriamente uma despesa essencial, de modo que não existe despesa fixa que possa ser classificada como supérflua.",
+      "b": "A despesa fixa é uma despesa essencial, pois seu valor previsível decorre de um compromisso de subsistência.",
       "c": "As despesas variáveis representam compromissos contratuais de valor constante, como as parcelas de financiamento imobiliário e os aluguéis.",
       "d": "O corte orçamentário para geração de caixa deve concentrar-se prioritariamente nas despesas fixas essenciais, como as de saúde e moradia."
      },
@@ -10793,7 +10793,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa C está correta. Orçamento e fluxo de caixa registram variações dinâmicas e movimentações de recursos ao longo de um período de tempo (fluxo), enquanto o balanço patrimonial pessoal consolida os bens, direitos e dívidas em um momento estático específico (estoque).</p><p>As alternativas A, B e D cometem erros conceituais graves ao confundir medição de movimentação temporal (fluxo) com avaliação estática de patrimônio líquido (estoque).</p>",
      "enunciado": "<p>Ao realizar a análise consolidada da situação financeira de um correntista, um profissional de atendimento precisa diferenciar os instrumentos que avaliam o movimento de recursos em um período daqueles que medem a posição estática do patrimônio em uma data específica. Assinale a alternativa que relaciona corretamente os conceitos de fluxo e estoque:</p>",
      "alternativas": {
-      "a": "O fluxo de caixa mede exclusivamente o estoque de ativos ilíquidos, substituindo integralmente a necessidade do balanço patrimonial.",
+      "a": "O fluxo de caixa mede o estoque de ativos ilíquidos, substituindo a necessidade do balanço patrimonial.",
       "b": "O balanço patrimonial pessoal e o orçamento medem o fluxo mensal de receitas, enquanto o fluxo de caixa mede o estoque de imóveis.",
       "c": "Orçamento e fluxo de caixa medem fluxo, isto é, movimentação no período, enquanto o balanço patrimonial pessoal mede estoque.",
       "d": "O orçamento mede a posição de estoque em 31 de dezembro, e o balanço patrimonial mede apenas despesas diárias com alimentação."
@@ -10859,10 +10859,10 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa B está correta. A matemática financeira e a gestão de dívidas determinam que a prioridade de quitação deve seguir a velocidade de corrosão do patrimônio, direcionando todo o caixa excedente para a dívida de maior CET (como rotativo ou cheque especial).</p><p>As alternativas A, C e D falham ao escolher pelo menor saldo nominal, amortizar linhas baratas com garantia imobiliária ou ignorar os encargos cobrados nas linhas mais emergenciais.</p>",
      "enunciado": "<p>Um cliente possui três dívidas ativas de prazos e saldos distintos no mercado financeiro. Ao receber recursos extraordinários para amortizar antecipadamente parte do passivo, a regra prioritária para ordenar a quitação das dívidas é:</p>",
      "alternativas": {
-      "a": "Quitar primeiramente a dívida com o menor saldo devedor absoluto para eliminar o número de carnês.",
+      "a": "Quitar primeiramente a dívida de saldo devedor reduzido para eliminar o número de carnês.",
       "b": "Priorizar a quitação da dívida de maior Custo Efetivo Total (CET), qualquer que seja o seu saldo nominal.",
-      "c": "Priorizar o financiamento imobiliário de taxas subsidiadas e menor custo por ter o maior prazo total.",
-      "d": "Amortizar em partes rigorosamente iguais todas as linhas contratadas, independentemente dos juros cobrados."
+      "c": "Priorizar o financiamento imobiliário de taxas subsidiadas e custo baixo por ter prazo total longo.",
+      "d": "Amortizar em partes rigorosamente iguais as três linhas contratadas, independentemente dos juros cobrados."
      },
      "gabarito": "b",
      "feedback": {
@@ -10882,7 +10882,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa B está correta. A consolidação unifica dívidas pulverizadas contratando uma nova linha de CET mais baixo para quitação das antigas (sem perdão de principal), enquanto a portabilidade transfere a dívida para outro banco respeitando obrigatoriamente as travas de saldo e prazo remanescente do contrato original.</p><p>As alternativas A, C e D erram ao afirmar que há perdão do valor principal, confundir portabilidade com refinanciamento com troco ou exigir garantias públicas.</p>",
      "enunciado": "<p>Ao avaliar a reestruturação de dívidas de um cliente, um gerente de atendimento compara as características da consolidação de dívidas e da portabilidade de crédito. A respeito da diferença regulatória e operacional entre essas modalidades, observa-se que:</p>",
      "alternativas": {
-      "a": "A consolidação perdoa integralmente o saldo devedor principal do cliente, enquanto a portabilidade libera trocos obrigatoriamente.",
+      "a": "A consolidação perdoa o saldo devedor principal do cliente, enquanto a portabilidade libera trocos obrigatoriamente.",
       "b": "A consolidação troca várias dívidas caras por uma nova linha de CET menor, e a portabilidade transfere a mesma operação para outro banco.",
       "c": "A portabilidade permite alongar o prazo e liberar recurso adicional ao cliente, mantendo o nome de portabilidade sem virar refinanciamento.",
       "d": "Ambas as operações exigem a alienação fiduciária compulsória de bens imóveis da União como garantia soberana."
@@ -10905,8 +10905,8 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa D está correta. Em termos práticos, deve-se utilizar o saldo para eliminar a dívida cara do rotativo (cujo custo supera em muito o ganho da aplicação), mas sem zerar totalmente a reserva de emergência, garantindo que imprevistos futuros não façam o cliente recorrer de novo ao crédito rotativo.</p><p>As alternativas A, B e C falham ao zerar totalmente o colchão de liquidez, sugerir especulações de alto risco com dívidas ativas ou travar liquidez em previdência de longo prazo.</p>",
      "enunciado": "<p>Um cliente possui R$ 15 mil aplicados na caderneta de poupança (reserva de emergência) e acumula um saldo devedor de R$ 10 mil no rotativo do cartão de crédito a um CET de 14% ao mês. Ele procura o banco pretendendo zerar integralmente sua reserva para quitar a dívida. A orientação de atendimento correta e tecnicamente adequada é:</p>",
      "alternativas": {
-      "a": "Contratar um plano de previdência PGBL ilíquido de longo prazo usando todo o dinheiro da poupança antes de pagar o cartão.",
-      "b": "Zerar integralmente a aplicação e manter o saldo zerado sem qualquer colchão de liquidez para imprevistos.",
+      "a": "Contratar um plano de previdência PGBL ilíquido de longo prazo usando os R$ 15 mil da poupança antes de pagar o cartão.",
+      "b": "Zerar a aplicação e manter o saldo zerado, ficando sem colchão de liquidez para imprevistos.",
       "c": "Orientar o cliente a manter a dívida no rotativo e aplicar mais recursos em ações de empresas em recuperação judicial.",
       "d": "Utilizar parte do valor aplicado para quitar a dívida do rotativo, preservando o restante como reserva de emergência."
      },
@@ -10928,7 +10928,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Um cliente endividado possui dívidas em linhas de crédito pessoal sem garantia e estuda oferecer um imóvel quitado de sua propriedade em alienação fiduciária para obter uma linha com CET reduzido. Ao analisar os impactos do uso da garantia real de alienação fiduciária em relação ao custo e ao risco patrimonial, verifica-se que:</p>",
      "alternativas": {
       "a": "A garantia real derruba a taxa do empréstimo, mas converte um passivo sem consequência patrimonial direta em dívida que pode custar o imóvel.",
-      "b": "A garantia de alienação fiduciária do imóvel elimina completamente o risco de perda do bem por exigir processo judicial que dura obrigatoriamente mais de 30 anos.",
+      "b": "A garantia de alienação fiduciária do imóvel afasta o risco de perda do bem, pois a execução depende de processo judicial demorado.",
       "c": "A alienação fiduciária de imóveis mantém as taxas de juros idênticas às do cheque especial por determinação do Banco Central.",
       "d": "Ao oferecer o imóvel em garantia, o cliente transfere a propriedade definitiva para o banco, perdendo a posse direta imediatamente no ato da assinatura."
      },
@@ -11087,7 +11087,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Durante o atendimento a um cliente que busca financiamento imobiliário, surge uma dúvida sobre o percentual máximo de comprometimento da renda familiar mensal aceito para aprovação do crédito. A respeito desse limite praticado no mercado financeiro, é correto afirmar que:</p>",
      "alternativas": {
       "a": "A legislação proíbe as instituições financeiras de estabelecerem qualquer limite de comprometimento de renda para o crédito imobiliário.",
-      "b": "O teto de 30% da renda é fixado compulsoriamente por resolução do Banco Central para todas as operações do mercado imobiliário.",
+      "b": "O teto de 30% da renda é fixado compulsoriamente por resolução do Banco Central para as operações do mercado imobiliário.",
       "c": "O limite máximo de comprometimento de renda para imóveis é regido estritamente pelas regras da margem consignável do INSS.",
       "d": "O parâmetro de cerca de 30% da renda é política de crédito de cada instituição, e não norma do Banco Central ou do CMN."
      },
@@ -11109,7 +11109,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa C está correta. O veículo é um bem de consumo durável que deprecia e gera despesas correntes, ao passo que o crédito estudantil constitui investimento em capital humano contraído na fase de acumulação para ampliar o potencial de geração de renda.</p><p>As alternativas A, B e D erram ao qualificar veículos como investimentos rentáveis, citar a carência de 18 meses revogada na reforma do Fies ou permitir o uso descabido do FGTS em veículos.</p>",
      "enunciado": "<p>Ao comparar os impactos financeiros de um financiamento de veículos e de um financiamento para crédito estudantil (Fies), um gerente orienta um cliente jovem em início de carreira. Sobre as diferenças conceituais dessas duas linhas, é correto afirmar que:</p>",
      "alternativas": {
-      "a": "O crédito estudantil conta com carência obrigatória de 18 meses após a formatura em todos os contratos novos regidos pela reforma de 2017.",
+      "a": "O crédito estudantil conta com carência obrigatória de 18 meses após a formatura nos contratos novos regidos pela reforma de 2017.",
       "b": "O financiamento de veículo gera rendimento real atrelado à inflação, enquanto o crédito estudantil exige a alienação fiduciária do diploma.",
       "c": "O veículo é bem de consumo que deprecia com o tempo, enquanto o crédito estudantil é investimento em capital humano.",
       "d": "O financiamento de veículos permite o uso do saldo do FGTS do trabalhador, sem qualquer vinculação ao Sistema Financeiro da Habitação."
@@ -11133,7 +11133,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Um cliente pretende adquirir um veículo de R$ 80 mil e avalia duas propostas de financiamento. A proposta 1 prevê financiamento integral sem entrada em 60 meses, enquanto a proposta 2 exige entrada de R$ 30 mil e prazo de 24 meses. Sob a ótica do planejamento financeiro e do risco de descasamento por depreciação, a orientação adequada é:</p>",
      "alternativas": {
       "a": "Escolher o prazo de 60 meses sem entrada (proposta 1) para reduzir o valor nominal da parcela, visto que veículos valorizam no mercado usado.",
-      "b": "Dar a maior entrada possível e encurtar o prazo, como na proposta 2, evitando que a depreciação do bem supere o saldo devedor.",
+      "b": "Dar uma entrada elevada e encurtar o prazo, como na proposta 2, evitando que a depreciação do bem supere o saldo devedor.",
       "c": "Financiar em 60 meses sem entrada e utilizar o saldo do FGTS do comprador para amortizar as parcelas futuras do contrato.",
       "d": "Escolher a proposta 1 e compensar a depreciação contratando seguro do veículo, o que garantiria a cobertura do saldo devedor em qualquer cenário de venda."
      },
@@ -11157,7 +11157,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "Orientar uma entrada menor e a preservação da reserva de emergência, porque o imóvel é um ativo de altíssima iliquidez.",
       "b": "Orientar o casal a utilizar 100% da poupança na entrada, pois a entrada maior elimina a incidência de juros sobre o saldo financiado.",
-      "c": "Recomendar a utilização de todo o dinheiro da reserva de emergência e o resgate compulsório de fundos de ações fechados para resgate no mesmo dia.",
+      "c": "Recomendar a utilização dos R$ 100 mil da reserva de emergência e o resgate compulsório de fundos de ações fechados para resgate no mesmo dia.",
       "d": "Exigir que a reserva de emergência seja depositada em conta caução do Banco Central como condição para liberação da alienação fiduciária."
      },
      "gabarito": "a",
@@ -11267,7 +11267,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Com a promulgação da Lei 15.364 em 2026, foi criada a categoria de microfinanças no âmbito das operações de microcrédito. Ao comparar o núcleo produtivo tradicional do microcrédito com a nova categoria de microfinanças, verifica-se que:</p>",
      "alternativas": {
       "a": "As microfinanças permitem a liberação de recursos sem teto para consumo, inclusive compra de veículos de luxo e viagens de lazer.",
-      "b": "A nova categoria substituiu integralmente o microcrédito produtivo, proibindo a concessão de recursos para atividades comerciais de microempreendedores.",
+      "b": "A nova categoria substituiu o microcrédito produtivo, proibindo a concessão de recursos para atividades comerciais de microempreendedores.",
       "c": "As microfinanças atendem necessidades essenciais, como moradia de baixo valor, saúde e mobilidade, até 20% do limite do tomador.",
       "d": "A modalidade de microfinanças exige o repasse compulsório de 100% dos depósitos a prazo captados pelos bancos de investimento."
      },
@@ -11382,7 +11382,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa B está correta. O Fundo Garantidor de Créditos (FGC) reduz o risco de crédito em aplicações como CDBs até o limite de R$ 250 mil por CPF em cada conglomerado financeiro, com o teto global de R$ 1 milhão renovável a cada quatro anos.</p><p>As alternativas A, C e D incorrem em erros ao prever coberturas ilimitadas, vincular os limites a contratos individuais ou errar os valores regulamentares do FGC.</p>",
      "enunciado": "<p>Um investidor aplica sua reserva de emergência em um CDB de liquidez diária emitido por um banco de médio porte. A respeito da proteção e da limitação da garantia prestada pelo Fundo Garantidor de Créditos (FGC) a essa aplicação, é correto afirmar que:</p>",
      "alternativas": {
-      "a": "O FGC cobre integralmente e sem limite de valor qualquer aplicação em CDB que seja utilizada para fins de reserva de emergência.",
+      "a": "O FGC cobre sem limite de valor as aplicações em CDB utilizadas para fins de reserva de emergência.",
       "b": "O FGC garante até R$ 250 mil por CPF em cada conglomerado financeiro, limitado ao teto global de R$ 1 milhão a cada quatro anos.",
       "c": "A garantia do FGC para CDBs de liquidez diária é de R$ 250 mil por contrato de aplicação, sem limite de teto quadrienal.",
       "d": "A cobertura do FGC limita-se a R$ 100 mil por CPF, sendo zerada caso o investidor realize o resgate antes de 365 dias."
@@ -11428,7 +11428,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Um investidor precisa alocar sua reserva de emergência e analisa a dinâmica operacional, os tributos incidentes e os riscos de quatro aplicações: Tesouro Selic, caderneta de poupança, fundo de renda fixa DI e ações de empresas de grande porte. Com base nas características técnicas dessas aplicações, assinale a alternativa correta:</p>",
      "alternativas": {
       "a": "As ações de empresas de grande porte são recomendadas para a reserva por apresentarem alta liquidez em bolsa e garantia integral do Tesouro Nacional.",
-      "b": "A caderneta de poupança é o único veículo totalmente imune a perdas de rendimento intramês, pagando juros pro rata die em qualquer data de resgate.",
+      "b": "A caderneta de poupança é um veículo imune a perdas de rendimento intramês, pagando juros pro rata die na data do resgate.",
       "c": "Os fundos DI são isentos de retenção semestral de imposto de renda (come-cotas) e isentos de IOF em resgates inferiores a 30 dias.",
       "d": "O Tesouro Selic e os fundos DI têm baixíssima volatilidade nominal, a poupança perde o rendimento do mês fora do aniversário e as ações são vedadas."
      },
@@ -11546,7 +11546,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "Endividamento e liquidez vêm do balanço; comprometimento de renda e índice de poupança vêm do fluxo de caixa.",
       "b": "Comprometimento de renda e índice de endividamento vêm ambos do balanço, por medirem estoques de dívida em uma data.",
       "c": "O índice de poupança é indicador estático do balanço, e o de liquidez confronta a parcela mensal com a renda líquida.",
-      "d": "Todos os quatro indicadores são mensurados estritamente pelo balanço patrimonial, sendo o fluxo de caixa descartado na análise bancária."
+      "d": "Os quatro indicadores são mensurados estritamente pelo balanço patrimonial, sendo o fluxo de caixa descartado na análise bancária."
      },
      "gabarito": "a",
      "feedback": {
@@ -11707,7 +11707,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa C está correta. Enquanto a aposentadoria aceita flexibilizações de cronograma (adiar a data ou ajustar o valor da renda), o fundo educacional tem data fixa (a matrícula do filho na faculdade aos 18 anos), o que torna indispensável desriscar a carteira anos antes para proteger o capital.</p><p>As alternativas A, B e D erram ao travar a liquidez da aposentadoria na juventude, incentivar renda variável de alto risco às vésperas da faculdade ou negar a necessidade de desriscagem da carteira.</p>",
      "enunciado": "<p>Ao comparar os objetivos de planejamento financeiro para a aposentadoria e para a formação de um fundo educacional para os filhos, constata-se que a diferença estrutural entre as duas metas reside no fato de que:</p>",
      "alternativas": {
-      "a": "O fundo educacional não admite acumulação na renda fixa, devendo ser integralmente constituído por ações de alta volatilidade até o mês de ingresso na faculdade.",
+      "a": "O fundo educacional não admite acumulação na renda fixa, devendo ser constituído por ações de alta volatilidade até o mês de ingresso na faculdade.",
       "b": "A aposentadoria exige 100% de alocação em ativos de liquidez diária desde a juventude, enquanto o fundo educacional opera obrigatoriamente com fundos fechados ilíquidos.",
       "c": "A aposentadoria admite ajuste de prazos, enquanto o fundo educacional tem data rígida e exige reduzir o risco no ciclo final.",
       "d": "Ambas as metas têm a mesma tolerância ao risco e não exigem readequação da carteira conforme a data do usufruto se aproxima."
@@ -11731,9 +11731,9 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Um participante de plano de previdência sob o regime de tributação regressiva acumulou aportes ao longo de 12 anos e decide efetuar o resgate parcial do saldo. Considerando a legislação aplicável à contagem do prazo no resgate e as atualizações trazidas pela Lei 14.803/2024 e pela jurisprudência sobre sucessão, é correto afirmar que:</p>",
      "alternativas": {
       "a": "A alíquota do resgate segue o método PEPS por aporte, e no falecimento do titular o repasse aos beneficiários não paga ITCMD.",
-      "b": "Atingidos dez anos do plano, todos os aportes posteriores recebem automaticamente a alíquota mínima de 10% no resgate imediato.",
+      "b": "Atingidos dez anos do plano, os aportes posteriores recebem automaticamente a alíquota mínima de 10% no resgate imediato.",
       "c": "A opção pelo regime tributário regressivo deve ser feita compulsoriamente no ato da adesão ao plano, sem possibilidade de definição posterior no primeiro resgate.",
-      "d": "A transferência do plano por portabilidade zera a contagem do tempo acumulado dos aportes e tributa todo o saldo em 35%."
+      "d": "A transferência do plano por portabilidade zera a contagem do tempo acumulado dos aportes e tributa o saldo em 35%."
      },
      "gabarito": "a",
      "feedback": {
@@ -11751,7 +11751,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "revisao"
      ],
      "comentario": "<p>A alternativa D está correta. Como o cliente contribui para o INSS, declara no modelo completo e aporta até 12% da renda bruta, o PGBL é o plano ideal. Além disso, como o horizonte é longo (25 anos), o regime regressivo permitirá que os rendimentos e aportes atinjam a alíquota mínima de 10% na fonte.</p><p>As alternativas A, B e C erram ao associar a dedução ao VGBL, atribuir retenção de 15% de antecipação à tabela regressiva ou sugerir o modelo simplificado com PGBL.</p>",
-     "enunciado": "<p>Um cliente de 35 anos entrega a Declaração de Ajuste Anual do IRPF pelo modelo completo e possui renda tributável de R$ 150 mil por ano. Ele contribui para o INSS e deseja alocar R$ 18 mil anuais (12% da sua renda) em previdência complementar visando a aposentadoria em 25 anos. O produto mais adequado e a orientação correta quanto ao regime tributário para esse perfil são:</p>",
+     "enunciado": "<p>Um cliente de 35 anos entrega a Declaração de Ajuste Anual do IRPF pelo modelo completo e possui renda tributável de R$ 150 mil por ano. Ele contribui para o INSS e deseja alocar R$ 18 mil anuais (12% da sua renda) em previdência complementar visando a aposentadoria em 25 anos. O produto indicado e a orientação correta quanto ao regime tributário para esse perfil são:</p>",
      "alternativas": {
       "a": "Sugerir a aplicação em PGBL no modelo simplificado para evitar a tributação do valor total resgatado no futuro.",
       "b": "Recomendar o VGBL no regime progressivo, por ser o único plano que permite abatimento do Imposto de Renda para optantes do modelo completo.",
@@ -11819,8 +11819,8 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>O Imposto de Renda Pessoa Física (IRPF) organiza as receitas do contribuinte nas fichas de rendimentos tributáveis, isentos e de tributação exclusiva na fonte. A respeito da correta classificação dos rendimentos de aplicações financeiras para a pessoa física, é correto afirmar que:</p>",
      "alternativas": {
       "a": "CDBs e Tesouro Direto são tributados exclusivamente na fonte, e LCI, LCA e poupança são isentos de Imposto de Renda.",
-      "b": "Rendimentos de LCI e LCA sofrem tributação exclusiva na fonte de 15%, enquanto CDBs e RDBs são totalmente isentos de Imposto de Renda.",
-      "c": "Todos os rendimentos de renda fixa privada são classificados na ficha de rendimentos tributáveis sujeitos ao ajuste anual na declaração.",
+      "b": "Rendimentos de LCI e LCA sofrem tributação exclusiva na fonte de 15%, enquanto CDBs e RDBs são isentos de Imposto de Renda.",
+      "c": "Os rendimentos de renda fixa privada são classificados na ficha de rendimentos tributáveis sujeitos ao ajuste anual na declaração.",
       "d": "O rendimento da caderneta de poupança é tributado exclusivamente na fonte, pela tabela regressiva da renda fixa."
      },
      "gabarito": "a",
@@ -11888,7 +11888,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Um cliente procurou a agência bancária em 2026 para entender como deve declarar os proventos recebidos de companhias abertas. Ele recebeu R$ 10.000,00 em Juros sobre Capital Próprio (JCP) e R$ 60.000,00 em dividendos pagos no mesmo mês por uma única empresa. O gerente deve orientar o cliente informando que:</p>",
      "alternativas": {
       "a": "O JCP tem retenção exclusiva de 17,5% na fonte, e os dividendos acima de R$ 50 mil no mês por empresa retêm 10% de antecipação.",
-      "b": "Ambos os recebimentos são totalmente isentos de Imposto de Renda e entram sem qualquer retenção na ficha de rendimentos não tributáveis.",
+      "b": "Ambos os recebimentos são isentos de Imposto de Renda e entram sem retenção na ficha de rendimentos não tributáveis.",
       "c": "Os dividendos recebidos sofrem tributação exclusiva e definitiva na fonte de 20%, e o JCP é isento até R$ 20.000,00 no mês.",
       "d": "O JCP e os dividendos são somados para a aplicação da tabela progressiva mensal do IRPF, com restituição integral do retido."
      },
@@ -11996,7 +11996,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "revisao"
      ],
      "comentario": "<p>A alternativa D está correta. Para objetivos de curtíssimo prazo (três meses), a prioridade é a liquidez e a previsibilidade (Tesouro Selic ou CDB com liquidez diária). LCI e LCA não servem para essa meta por possuírem prazo mínimo de vencimento de seis meses (sem atualização por índice de preços), durante o qual o emissor não pode resgatar o papel.</p><p>As alternativas A, B e C ignoram as travas normativas da LCI, indicam renda variável volátil para prazos curtos ou indicam debêntures ilíquidas.</p>",
-     "enunciado": "<p>Um cliente de perfil conservador precisa alocar um valor recebido para quitar a reforma de sua casa que ocorrerá daqui a três meses. O gerente analisa as opções de aplicação considerando a preservação do capital e as travas operacionais de prazos mínimos. A indicação mais adequada para esse objetivo é:</p>",
+     "enunciado": "<p>Um cliente de perfil conservador precisa alocar um valor recebido para quitar a reforma de sua casa que ocorrerá daqui a três meses. O gerente analisa as opções de aplicação considerando a preservação do capital e as travas operacionais de prazos mínimos. A indicação correta para esse objetivo é:</p>",
      "alternativas": {
       "a": "Debênture de longo prazo, sem liquidez diária, emitida por empresa privada de grande porte e bom rating.",
       "b": "Letra de Crédito Imobiliário (LCI) com carência de seis meses, contratando o resgate antecipado mediante desconto administrativo.",
@@ -12018,17 +12018,17 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "simulado",
       "revisao"
      ],
-     "comentario": "<p>A alternativa D está correta. Na recomendação de investimentos, quando há divergência entre a condição financeira objetiva (capacidade) e a disposição emocional (tolerância), deve prevalecer a menor das medidas para preservar o investidor de desconforto incompatível com seu perfil.</p><p>As alternativas A, B e C desrespeitam a tolerância psicológica do cliente, indicam fraude cadastral ou inventam restrições regulatórias por idade.</p>",
+     "comentario": "<p>A alternativa D está correta. Na recomendação de investimentos, quando há divergência entre a condição financeira objetiva (capacidade) e a disposição emocional (tolerância), deve prevalecer a dimensão que restringe o risco para preservar o investidor de desconforto incompatível com seu perfil.</p><p>As alternativas A, B e C desrespeitam a tolerância psicológica do cliente, indicam fraude cadastral ou inventam restrições regulatórias por idade.</p>",
      "enunciado": "<p>Um investidor de 28 anos, com alta estabilidade financeira, patrimônio consolidado e reserva de emergência constituída, declarou no questionário de suitability elevado conhecimento de mercado. No entanto, demonstrou baixa tolerância emocional a oscilações de curto prazo em seu patrimônio. Ao elaborar a recomendação de investimentos, o profissional deve pautar-se pela seguinte regra técnica:</p>",
      "alternativas": {
       "a": "Classificar o cliente como arrojado, porque o elevado conhecimento de mercado declarado prevalece sobre as demais dimensões.",
       "b": "Ignorar a baixa tolerância emocional do cliente e alocar 100% da carteira em ações, pois a sua capacidade financeira e idade prevalecem.",
       "c": "Alterar unilateralmente a declaração de perfil do cliente para arrojado no sistema do banco e alocar recursos em derivativos.",
-      "d": "Respeitar a menor medida entre a capacidade e a tolerância, recomendando uma carteira conservadora ajustada ao seu perfil psicológico."
+      "d": "Respeitar a tolerância emocional, que restringe a capacidade financeira, e recomendar carteira conservadora ajustada ao perfil."
      },
      "gabarito": "d",
      "feedback": {
-      "a": "O conhecimento de mercado é uma das dimensões da análise, e não um critério que se sobreponha à capacidade e à tolerância; o enquadramento respeita a menor das medidas.",
+      "a": "O conhecimento de mercado é uma das dimensões da análise, e não um critério que se sobreponha à capacidade e à tolerância; o enquadramento acompanha a dimensão que restringe o risco.",
       "b": "Forçar renda variável em cliente com baixa tolerância emocional viola o dever de adequação de produtos (suitability).",
       "c": "Adulterar dados no questionário de perfil do cliente é uma falta grave que viola expressamente as normas regulatórias da CVM e Anbima."
      }
@@ -12091,7 +12091,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa B está correta. O IOF para pessoa física no crédito é composto pela alíquota adicional fixa de 0,38% mais a alíquota diária de 0,0082%, sendo que a cobrança da parcela diária é limitada ao teto de 365 dias do contrato.</p><p>As alternativas A, C e D erram ao ignorar a trava de 365 dias do IOF, isentar o crédito pessoal de tributação ou limitar o CET apenas à taxa de juros nominal.</p>",
      "enunciado": "<p>Para comparar propostas de crédito entre instituições financeiras, o cliente deve utilizar o Custo Efetivo Total (CET), que reúne os encargos da operação, incluindo o Imposto sobre Operações Financeiras (IOF). Ao comparar a incidência do IOF no crédito para pessoa física com o das operações comerciais, verifica-se que:</p>",
      "alternativas": {
-      "a": "A alíquota diária do IOF incide continuamente por todo o prazo do contrato, cobrando juros diários por até 60 meses sem trava temporal.",
+      "a": "A alíquota diária do IOF incide continuamente pelo prazo do contrato, cobrando juros diários por até 60 meses sem trava temporal.",
       "b": "O IOF de crédito da pessoa física soma 0,38% fixos e 0,0082% ao dia, com a contagem diária travada em 365 dias.",
       "c": "O IOF é isento nas operações de crédito pessoal sem garantia e cobrado apenas na contratação de crédito habitacional.",
       "d": "O Custo Efetivo Total (CET) é calculado levando em conta apenas a taxa de juros nominal do contrato, descartando impostos e tarifas operacionais."
@@ -12115,7 +12115,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Um cliente celetista com margem consignável disponível e um automóvel próprio quitado precisa de crédito de urgência para cobrir uma despesa médica familiar imprevista. Ele analisa com seu gerente de contas a escolha entre o crédito consignado e o empréstimo com garantia real do veículo (alienação fiduciária). A respeito dos riscos patrimoniais e regulatórios envolvidos, a orientação adequada é:</p>",
      "alternativas": {
       "a": "O consignado para trabalhador celetista não possui limite de margem consignável, permitindo o comprometimento de até 100% do salário bruto.",
-      "b": "A alienação fiduciária de veículo extinguiu totalmente o rito de busca e apreensão judicial, sendo a retomada obrigatoriamente extrajudicial em todos os casos desde 2023.",
+      "b": "A alienação fiduciária de veículo extinguiu o rito de busca e apreensão judicial, sendo a retomada obrigatoriamente extrajudicial desde 2023.",
       "c": "O consignado desconta em folha dentro da margem de 40%, sendo 35% para empréstimo, e a alienação fiduciária arrisca o veículo.",
       "d": "Ambas as operações de crédito apresentam o mesmo risco de perda direta de bens imóveis da família, independentemente do objeto dado em garantia."
      },
@@ -12139,7 +12139,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "O gerente deve pressionar o cliente a utilizar o cheque especial por ser a linha de maior rentabilidade para a meta mensal do banco.",
       "b": "É vedado assediar o consumidor idoso ou vulnerável, e a parcela contratada precisa preservar o mínimo existencial da família.",
-      "c": "O banco está autorizado a omitir o Custo Efetivo Total (CET) sempre que o cliente declarar urgência médica na contratação.",
+      "c": "O banco está autorizado a omitir o Custo Efetivo Total (CET) quando o cliente declarar urgência médica na contratação.",
       "d": "A Lei do Superendividamento proíbe a concessão de qualquer linha de crédito para pessoas físicas com idade superior a 60 anos."
      },
      "gabarito": "b",
@@ -12157,7 +12157,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "simulado"
      ],
      "comentario": "<p>A alternativa C está correta. A hierarquia técnica de socorro financeiro estabelece que o uso deve iniciar pelos recursos próprios da reserva (custo zero), seguir para antecipação de recebíveis certos (como a restituição do IRPF), avançar para o consignado, a linha com garantia mais barata entre as disponíveis a ele, e deixar o rotativo do cartão estritamente como última opção.</p><p>As alternativas A, B e D erram ao priorizar a linha mais cara do rotativo, preterir o uso de recursos próprios de custo zero ou proibir a antecipação de recebíveis do IRPF.</p>",
-     "enunciado": "<p>Analise o caso de um cliente que sofreu um descasamento de caixa e avalia a ordem de acionamento das fontes de recursos para cobrir o déficit. Ele possui reservas no Tesouro Selic, restituição do Imposto de Renda a receber no próximo mês, margem consignável livre no contracheque e limite no rotativo do cartão de crédito. Considerando a hierarquia do socorro financeiro (da fonte mais barata e sustentável para a mais cara), a sequência de utilização correta é:</p>",
+     "enunciado": "<p>Analise o caso de um cliente que sofreu um descasamento de caixa e avalia a ordem de acionamento das fontes de recursos para cobrir o déficit. Ele possui reservas no Tesouro Selic, restituição do Imposto de Renda a receber no próximo mês, margem consignável livre no contracheque e limite no rotativo do cartão de crédito. Considerando a hierarquia do socorro financeiro (que parte do custo zero e deixa o crédito caro por último), a sequência de utilização correta é:</p>",
      "alternativas": {
       "a": "Crédito consignado em primeiro lugar para preservar o saldo do rotativo como limite emergencial permanente.",
       "b": "Rotativo do cartão de crédito, crédito consignado, antecipação do IRPF e, por último, o resgate do Tesouro Selic.",
@@ -12185,7 +12185,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>A gestão de investimentos utiliza estratégias de alocação para manter a aderência da carteira aos objetivos de longo prazo e ao perfil do cliente. A respeito da diferença entre alocação estratégica e alocação tática, é correto afirmar que:</p>",
      "alternativas": {
       "a": "A alocação estratégica é a estrutura de longo prazo por classes de ativos, e a tática faz desvios temporários de cenário.",
-      "b": "A alocação tática define os alvos permanentes da carteira e a alocação estratégica zera mensalmente todas as posições para fugir da tributação de Imposto de Renda.",
+      "b": "A alocação tática define os alvos permanentes da carteira e a alocação estratégica zera mensalmente as posições para fugir da tributação de Imposto de Renda.",
       "c": "Ambas designam o mesmo procedimento e consistem em replicar mensalmente a composição do índice de referência escolhido.",
       "d": "A alocação estratégica muda diariamente conforme as notícias do mercado, e a tática vigora inalterada por trinta anos."
      },
@@ -12231,8 +12231,8 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Ao avaliar a gestão de portfólio de um cliente, um gerente estuda estratégias de rebalanceamento e o impacto tributário do giro de ativos. Para rebalancear a carteira do investidor mitigando a realização de imposto de renda decorrente de resgates, a prática técnica mais recomendada é:</p>",
      "alternativas": {
       "a": "Exigir o resgate total dos ativos com mais de dois anos, de modo a travar a alíquota em 22,5% do Imposto de Renda.",
-      "b": "Vender integralmente a classe de renda fixa a cada 15 dias para comprar opções de compra no mercado futuro.",
-      "c": "Resgatar todas as aplicações no primeiro ano e reinvestir o saldo na poupança sem apuração de rentabilidade.",
+      "b": "Vender a classe de renda fixa a cada 15 dias para comprar opções de compra no mercado futuro.",
+      "c": "Resgatar as aplicações no primeiro ano e reinvestir o saldo na poupança sem apuração de rentabilidade.",
       "d": "Direcionar os novos aportes de recursos para a classe de ativos que ficou abaixo do percentual-alvo estratégico."
      },
      "gabarito": "d",
@@ -12255,7 +12255,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "O cliente está correto, devendo o gestor do fundo DI ser substituído imediatamente por não atingir o desempenho do Ibovespa.",
       "b": "O benchmark deve refletir o risco assumido na alocação estratégica, e comparar um pós-fixado com o Ibovespa é inadequado.",
-      "c": "Todos os produtos de renda fixa e fundos DI possuem a obrigação legal de superarem o Ibovespa em ao menos 5% ao ano.",
+      "c": "Os produtos de renda fixa e fundos DI possuem a obrigação legal de superarem o Ibovespa em ao menos 5% ao ano.",
       "d": "O Ibovespa é o indicador de referência compulsório determinado pela CVM para medir a rentabilidade de cadernetas de poupança e CDBs."
      },
      "gabarito": "b",
@@ -12276,9 +12276,9 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Um investidor costuma realizar constantes trocas de ativos na sua carteira de renda fixa e de fundos de investimento (giro excessivo), buscando migrar quinzenalmente para o ativo de maior retorno recente. Ao analisar os custos operacionais e fiscais recorrentes gerados por essa prática, verifica-se que o giro excessivo corrói o patrimônio do cliente porque:</p>",
      "alternativas": {
       "a": "Trava o Imposto de Renda na faixa de 22,5%, aciona o IOF regressivo abaixo de 30 dias e acumula custos operacionais.",
-      "b": "Isenta o investidor de qualquer retenção de Imposto de Renda na fonte e elimina totalmente as taxas de corretagem da bolsa.",
-      "c": "Aplica a alíquota mínima de 10% de Imposto de Renda a todos os resgates feitos com menos de 15 dias de aplicação.",
-      "d": "Incide IOF regressivo de 30 dias sobre todas as operações de renda variável e sobre resgates em fundos de ações de curto prazo."
+      "b": "Isenta o investidor de retenção de Imposto de Renda na fonte e elimina as taxas de corretagem da bolsa.",
+      "c": "Aplica a alíquota mínima de 10% de Imposto de Renda aos resgates feitos com menos de 15 dias de aplicação.",
+      "d": "Incide IOF regressivo de 30 dias sobre as operações de renda variável e sobre resgates em fundos de ações de curto prazo."
      },
      "gabarito": "a",
      "feedback": {
@@ -12392,7 +12392,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Analise o caso de um segurado que contratou um seguro de vida com prazo de vigência de dois anos. O contrato prevê uma cláusula de carência de 12 meses para eventos de morte decorrentes de enfermidades pré-existentes ou doenças. Durante o sexto mês de vigência, o segurado falece em decorrência de complicações de uma doença cardiovascular grave. Adicionalmente, constata-se que ele havia redigido um testamento três meses antes alterando o beneficiário do seguro sem ter notificado a seguradora. De acordo com a Lei 15.040/2024, o desfecho dessa operação é:</p>",
      "alternativas": {
       "a": "A seguradora responderá por perdas e danos por ter recebido os prêmios e deverá quitar o valor diretamente aos credores do inventário.",
-      "b": "A seguradora é obrigada a pagar integralmente o capital segurado, visto que a Lei 15.040/2024 proíbe cláusula de carência em seguros de vida.",
+      "b": "A seguradora é obrigada a pagar o capital segurado, visto que a Lei 15.040/2024 proíbe cláusula de carência em seguros de vida.",
       "c": "O testamento perde validade jurídica para alteração de beneficiários de seguros de vida, sendo o pagamento revertido compulsoriamente à União.",
       "d": "A seguradora não pagará o capital por ser sinistro dentro da carência, mas devolverá os prêmios ao beneficiário da apólice."
      },
@@ -12439,9 +12439,9 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa B está correta. Na apuração do conhecimento do cliente, a avaliação da formação acadêmica e da experiência profissional é voltada para a pessoa física, constituindo exceção expressa quanto à sua aplicação para clientes pessoa jurídica.</p><p>As alternativas A, C e D erram ao inventar exigências acadêmicas para sócios de empresas, dispensar a verificação de histórico de operações da pessoa física ou igualar integralmente o questionário nos dois casos.</p>",
      "enunciado": "<p>Ao comparar os procedimentos de apuração da dimensão \"conhecimento\" para clientes pessoa física e clientes pessoa jurídica na Análise do Perfil do Investidor, verifica-se que:</p>",
      "alternativas": {
-      "a": "A pessoa jurídica é obrigada a apresentar os diplomas universitários de todos os seus sócios para atestar conhecimento de mercado.",
+      "a": "A pessoa jurídica é obrigada a apresentar os diplomas universitários dos seus sócios para atestar conhecimento de mercado.",
       "b": "Formação acadêmica e experiência profissional compõem o conhecimento da pessoa física, mas não se aplicam à pessoa jurídica.",
-      "c": "O cliente pessoa física está totalmente dispensado da verificação sobre os tipos de produtos com os quais já operou no passado.",
+      "c": "O cliente pessoa física está dispensado da verificação sobre os tipos de produtos com os quais já operou no passado.",
       "d": "Ambas as categorias de clientes possuem exatamente o mesmo roteiro de perguntas sobre formação acadêmica e histórico escolar."
      },
      "gabarito": "b",
@@ -12464,7 +12464,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "Manter a base de segurança em liquidez diária e avançar para produtos com marcação a mercado, buscando ganho real acima do IPCA.",
       "b": "Destinar parcelas expressivas do patrimônio a ações, fundos cambiais e estruturas com capital em risco, aceitando perdas nominais severas no percurso.",
-      "c": "Concentrar a carteira em pós-fixados e abrir mão de retorno em troca de previsibilidade, para nunca ver o saldo cair de um mês para o outro.",
+      "c": "Concentrar a carteira em pós-fixados e abrir mão de retorno em troca de previsibilidade, para não ver o saldo cair de um mês para o outro.",
       "d": "Dividir o patrimônio em exatamente 50% de renda fixa e 50% de renda variável, percentual fixado pela Resolução CVM 30 para o perfil moderado."
      },
      "gabarito": "a",
@@ -12486,7 +12486,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Um cliente de 32 anos foi enquadrado como investidor arrojado por apresentar elevado conhecimento de mercado, patrimônio consolidado e alta tolerância a riscos de mercado. Ele solicita a alocação de 100% dos seus recursos em ações de alta volatilidade. Sob a ótica das boas práticas de gestão de carteiras e montagem do perfil, o gerente de investimentos deve orientar que:</p>",
      "alternativas": {
       "a": "O investidor arrojado é obrigado por norma regulatória a manter a totalidade dos seus bens em renda variável sem qualquer reserva em renda fixa.",
-      "b": "Todo perfil, inclusive o arrojado, precisa de uma parcela em ativos de alta liquidez e baixa oscilação para a reserva.",
+      "b": "O perfil arrojado também precisa de uma parcela em ativos de alta liquidez e baixa oscilação para a reserva.",
       "c": "A alocação integral em ações de alta volatilidade é livre de riscos para clientes que possuem a classificação de perfil arrojado.",
       "d": "A classificação como arrojado garante a rentabilidade positiva da carteira de ações no prazo de até doze meses."
      },
@@ -12623,7 +12623,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa D está correta. As dispensas de suitability aplicam-se a investidores qualificados (com exceção das pessoas naturais qualificadas por volume de recursos ou exames/certificações técnicas), pessoas jurídicas de direito público, clientes com carteira administrada discricionariamente e clientes com perfil já definido por consultor CVM.</p><p>As alternativas A, B e C erram ao conceder dispensa a pessoas naturais qualificadas por R$ 1 milhão ou exames técnicos, ou ao aceitar termos de renúncia geral inválidos perante a CVM.</p>",
      "enunciado": "<p>Um profissional de atendimento analisa as hipóteses em que o dever de verificação de adequação ao perfil do cliente (suitability) é dispensado pela Resolução CVM 30. Ao analisar as situações de diferentes clientes, o gerente conclui corretamente que a dispensa do procedimento de suitability aplica-se a:</p>",
      "alternativas": {
-      "a": "Todo e qualquer cliente que assine um termo prévio de renúncia voluntária às regras de suitability no ato de abertura de conta.",
+      "a": "Cliente que assine um termo prévio de renúncia voluntária às regras de suitability no ato de abertura de conta.",
       "b": "Pessoa natural que possui mais de R$ 1.000.000,00 aplicados e assinou termo de qualificação como investidor qualificado por montante de recursos.",
       "c": "Pessoa natural aprovada em exame de qualificação técnica da CVM e cadastrada como investidora qualificada por conhecimento.",
       "d": "Pessoa jurídica de direito público e investidor com carteira administrada discricionariamente por administrador autorizado pela CVM."
@@ -12667,9 +12667,9 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>No mercado financeiro, a análise dos investimentos envolve a compreensão dos conceitos de risco, retorno e volatilidade. A respeito da definição técnica de risco e da sua relação com o retorno esperado, é correto afirmar que:</p>",
      "alternativas": {
       "a": "Assumir maior risco em uma aplicação financeira elimina a incerteza do resultado e assegura rentabilidade nominal fixa ao investidor.",
-      "b": "Risco refere-se unicamente à perda total do capital investido, garantindo que aplicações mais arriscadas sempre rendam mais que a renda fixa no longo prazo.",
+      "b": "Risco refere-se à perda total do capital investido, e aplicações arriscadas rendem acima da renda fixa no longo prazo.",
       "c": "A volatilidade mede o grau de garantia do FGC concedido a um título e não possui relação com a dispersão dos rendimentos.",
-      "d": "Risco é a possibilidade de o resultado ser diferente do esperado, sendo que o maior risco eleva a expectativa de retorno, mas nunca garante o retorno."
+      "d": "Risco é a possibilidade de o resultado diferir do esperado, e elevar o risco aumenta a expectativa de retorno, sem assegurá-lo."
      },
      "gabarito": "d",
      "feedback": {
@@ -12689,9 +12689,9 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa C está correta. O risco diversificável (não sistemático) reflete os problemas específicos de uma empresa ou setor e é reduzido acrescentando ativos variados na carteira; já o risco não diversificável (sistemático) atinge o mercado como um todo (como grandes crises econômicas) e não é eliminado pela diversificação.</p><p>As alternativas A, B e D erram ao trocar as definições de risco sistemático e não sistemático ou alegar que a diversificação apaga o risco de mercado inteiro.</p>",
      "enunciado": "<p>Ao montar uma carteira de investimentos, o gestor analisa a exposição do portfólio ao risco diversificável (não sistemático) e ao risco não diversificável (sistemático). Ao comparar as duas categorias de risco, verifica-se que:</p>",
      "alternativas": {
-      "a": "O risco não sistemático afeta indistintamente todos os ativos da economia nacional em momentos de recessão ou crises de juros.",
-      "b": "O risco sistemático é exclusivo de uma única companhia e pode ser totalmente eliminado adicionando-se mais ações da mesma empresa na carteira.",
-      "c": "O risco diversificável é específico de uma empresa ou setor e cai com a diversificação, e o sistemático atinge todo o mercado e não sai da carteira.",
+      "a": "O risco não sistemático atinge o conjunto dos ativos da economia nacional em momentos de recessão ou crises de juros.",
+      "b": "O risco sistemático decorre de problemas de uma única companhia e é eliminado adicionando-se mais ações da mesma empresa na carteira.",
+      "c": "O risco diversificável é específico de uma empresa ou setor e cai com a diversificação, e o sistemático vem do mercado e permanece na carteira.",
       "d": "A diversificação de ativos em um mesmo mercado é capaz de eliminar por completo tanto o risco diversificável quanto o risco sistemático da carteira."
      },
      "gabarito": "c",
@@ -12737,7 +12737,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "A debênture tem risco de liquidez, o Tesouro IPCA+ longo tem risco de mercado na venda antecipada e o CDB do banco pequeno tem risco de crédito.",
       "b": "O Tesouro IPCA+ de 30 anos possui risco de crédito soberano elevado, enquanto a debênture privada possui garantia de risco de mercado nulo.",
-      "c": "Os três ativos possuem exatamente a mesma exposição ao risco de crédito, por serem todos classificados como aplicações de renda fixa privada.",
+      "c": "Os três ativos possuem exatamente a mesma exposição ao risco de crédito, por serem classificados como aplicações de renda fixa privada.",
       "d": "O CDB de banco pequeno é isento de risco de crédito por conta do risco soberano, e o Tesouro IPCA+ é imune ao risco de mercado até o vencimento."
      },
      "gabarito": "a",
@@ -12782,7 +12782,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa D está correta. A grande virtude técnica da diversificação é a capacidade de reduzir o risco específico/não sistemático de uma carteira através do uso de ativos não correlacionados, sem necessariamente exigir uma redução no retorno esperado do portfólio.</p><p>As alternativas A, B e C erram ao impor perda obrigatória de retorno esperado, alegar eliminação do risco sistemático de mercado ou promover a extinção de todos os riscos.</p>",
      "enunciado": "<p>A diversificação de carteira é considerada a estratégia central no gerenciamento do risco de portfólios de investimento. A respeito da propriedade fundamental da diversificação e dos riscos por ela alcançados, é correto afirmar que:</p>",
      "alternativas": {
-      "a": "Adicionar mais ativos em uma carteira garante a eliminação integral de todos os riscos de mercado e de crédito do país.",
+      "a": "Adicionar mais ativos em uma carteira garante a eliminação dos riscos de mercado e de crédito do país.",
       "b": "A diversificação exige compulsoriamente a redução do retorno esperado da carteira para promover qualquer redução de risco.",
       "c": "A estratégia de diversificação é capaz de eliminar por completo o risco sistemático do mercado financeiro.",
       "d": "A diversificação permite reduzir o risco não sistemático do portfólio sem obrigatoriamente reduzir o seu retorno esperado."
@@ -12853,7 +12853,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "A conduta está perfeita, visto que quanto maior a quantidade de ações do mesmo setor, menor é o impacto de oscilações no preço dos combustíveis.",
       "b": "Trata-se de pulverização ineficiente, porque concentrar no mesmo setor não protege contra choque setorial e ainda eleva os custos da carteira.",
-      "c": "Ter 80 ações elimina totalmente o risco sistemático do mercado acionário brasileiro e zera os custos operacionais do informe de rendimentos.",
+      "c": "Ter 80 ações elimina o risco sistemático do mercado acionário brasileiro e zera os custos operacionais do informe de rendimentos.",
       "d": "A alocação no setor de aviação confere garantia do Governo Federal, por se tratar de um setor de utilidade pública considerado essencial."
      },
      "gabarito": "b",
@@ -12876,7 +12876,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "O risco da carteira é calculado somando-se as volatilidades dos ativos, enquanto o retorno esperado permanece congelado na taxa livre de risco.",
       "b": "Tanto o retorno esperado quanto o risco da carteira são dados rigorosamente pela média aritmética simples dos ativos, anulando o benefício da diversificação.",
       "c": "O retorno esperado é a média ponderada dos retornos dos ativos, mas o risco da carteira fica abaixo da média ponderada dos riscos.",
-      "d": "A diversificação altera a matemática dos retornos, fazendo com que o retorno da carteira supere a soma dos retornos individuais de todos os ativos."
+      "d": "A diversificação altera a matemática dos retornos, fazendo com que o retorno da carteira supere a soma dos retornos individuais dos ativos."
      },
      "gabarito": "c",
      "feedback": {
@@ -12913,11 +12913,11 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "simulado",
       "revisao"
      ],
-     "comentario": "<p>A alternativa B está correta. A norma define que todo investidor profissional é, por definição, também um investidor qualificado. Por outro lado, a recíproca não é verdadeira: um cliente com R$ 2 milhões aplicados e termo assinado é investidor qualificado, mas não atinge o patamar de profissional (que exige R$ 10 milhões).</p><p>As alternativas A, C e D erram ao inverter a hierarquia do conjunto, julgar os grupos como mutuamente exclusivos ou atribuir maior permissão operacional ao qualificado.</p>",
+     "comentario": "<p>A alternativa B está correta. A norma define que o investidor profissional é, por definição, também um investidor qualificado. Por outro lado, a recíproca não é verdadeira: um cliente com R$ 2 milhões aplicados e termo assinado é investidor qualificado, mas não atinge o patamar de profissional (que exige R$ 10 milhões).</p><p>As alternativas A, C e D erram ao inverter a hierarquia do conjunto, julgar os grupos como mutuamente exclusivos ou atribuir maior permissão operacional ao qualificado.</p>",
      "enunciado": "<p>A Resolução CVM 30 estabelece as categorias de investidor qualificado e investidor profissional para fins de acesso a produtos e regimes regulatórios no mercado financeiro. A respeito da relação conceitual existente entre esses dois grupos, é correto afirmar que:</p>",
      "alternativas": {
-      "a": "Todo investidor qualificado é automaticamente considerado um investidor profissional, sendo as duas nomenclaturas rigorosamente equivalentes na norma.",
-      "b": "Todo investidor profissional é automaticamente considerado um investidor qualificado, mas nem todo investidor qualificado é considerado profissional.",
+      "a": "O investidor qualificado é automaticamente enquadrado como investidor profissional, sendo as duas nomenclaturas rigorosamente equivalentes na norma.",
+      "b": "O investidor profissional é enquadrado como investidor qualificado, mas o investidor qualificado não alcança a condição de profissional.",
       "c": "As categorias de investidores qualificados e profissionais são mutuamente exclusivas, sendo proibida a sobreposição de enquadramentos.",
       "d": "O investidor qualificado possui maior nível de permissões operacionais do que o investidor profissional no mercado de valores mobiliários."
      },
@@ -13034,7 +13034,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "Destina-se exclusivamente às instituições financeiras associadas e aderentes, dispensando o cumprimento de normas da CVM e do Banco Central.",
       "b": "Aplica-se às pessoas candidatas e aos profissionais certificados pela Anbima, e é autorregulação que convive com as normas estatais.",
-      "c": "Substitui compulsoriamente a regulação do Conselho Monetário Nacional (CMN) para todos os profissionais atuantes na distribuição de títulos.",
+      "c": "Substitui compulsoriamente a regulação do Conselho Monetário Nacional (CMN) para os profissionais atuantes na distribuição de títulos.",
       "d": "Aplica-se unicamente a profissionais aprovados que atuem no cargo de diretor estatutário responsável pelo cumprimento de suitability."
      },
      "gabarito": "b",
@@ -13056,9 +13056,9 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Durante o atendimento a um cliente de investimentos, o profissional com certificação Anbima deve pautar suas decisões nos nove princípios éticos do código. Ao comparar as exigências contidas nos princípios de \"Honestidade e equidade\" e \"Responsabilidade e vigilância\", verifica-se que:</p>",
      "alternativas": {
       "a": "Honestidade e equidade exige tratamento equivalente a clientes equivalentes, e responsabilidade e vigilância exige prudência e zelo.",
-      "b": "Responsabilidade e vigilância proíbe a oferta de renda variável, e honestidade e equidade obriga a conceder descontos a todos os correntistas.",
+      "b": "Responsabilidade e vigilância proíbe a oferta de renda variável, e honestidade e equidade obriga a conceder descontos aos correntistas.",
       "c": "Ambos os princípios possuem a mesma definição conceitual e voltam-se exclusivamente à obrigação de guardar sigilo dos dados cadastrais do cliente.",
-      "d": "Honestidade e equidade autoriza conceder privilégios operacionais e tarifários ao cliente que gera o maior volume de comissões para a agência."
+      "d": "Honestidade e equidade autoriza conceder privilégios operacionais e tarifários ao cliente que gera volume elevado de comissões para a agência."
      },
      "gabarito": "a",
      "feedback": {
@@ -13149,7 +13149,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>O Código de Distribuição da Anbima estabelece diretrizes de autorregulação que elevam as exigências em relação à norma estatal de suitability. A respeito das regras exigidas pelo referido Código para o processo de classificação e monitoramento de clientes, é correto afirmar que:</p>",
      "alternativas": {
       "a": "O Código estabelece a obrigatoriedade de classificar os clientes em no máximo dois perfis de investimento, conservador e arrojado.",
-      "b": "As regras de suitability do Código substituem integralmente as resoluções da CVM, isentando as instituições do cumprimento das normas estatais.",
+      "b": "As regras de suitability do Código substituem as resoluções da CVM, isentando as instituições do cumprimento das normas estatais.",
       "c": "A instituição deve classificar os clientes em no mínimo três perfis e avisá-los quando a carteira ficar desenquadrada.",
       "d": "A instituição participante fica dispensada de elaborar política escrita de suitability desde que obtenha autorização expressa do Banco Central."
      },
@@ -13217,7 +13217,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa B está correta. Na execução de ordens inadequadas por iniciativa do cliente, o Código exige alerta com apontamento das causas e declaração expressa de ciência, a qual deve ser exclusiva para cada categoria de ativo e mantida atualizada no intervalo máximo de cinco anos.</p><p>As alternativas A, C e D erram ao aceitar declaração genérica e vitalícia, dispensar a indicação das causas da divergência ou fixar o prazo de validade em 30 dias.</p>",
      "enunciado": "<p>Um cliente ingressa em uma plataforma de investimentos e solicita a contratação de uma aplicação em renda variável por sua própria iniciativa. O sistema detecta que o produto é incompatível com o seu perfil conservador. De acordo com as normas de suitability e o Código de Distribuição da Anbima, a instituição pode efetivar a operação desde que obtenha declaração de ciência do cliente observando que:</p>",
      "alternativas": {
-      "a": "A declaração deve ser genérica para todos os produtos do banco e possui validade vitalícia sem necessidade de renovação.",
+      "a": "A declaração deve ser genérica para os produtos do banco e possui validade vitalícia sem necessidade de renovação.",
       "b": "A declaração deve ser exclusiva para aquela categoria de ativo e possui prazo máximo de atualização de cinco anos.",
       "c": "O termo assinado isenta a instituição da obrigação de alertar o cliente sobre as causas específicas da divergência do perfil.",
       "d": "A declaração perde a validade no prazo improrrogável de 30 dias após a primeira aplicação financeira."
@@ -13306,7 +13306,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "A venda casada é permitida por lei desde que o banco conceda um desconto mínimo de 10% na taxa de juros do contrato de crédito.",
       "b": "A venda casada condiciona a liberação de um produto à compra de outro, e o pacote permite a contratação avulsa pela taxa de balcão.",
-      "c": "A oferta de pacote comercial é proibida pelo Código de Defesa do Consumidor, sendo obrigatória a venda isolada de todos os produtos.",
+      "c": "A oferta de pacote comercial é proibida pelo Código de Defesa do Consumidor, sendo obrigatória a venda isolada dos produtos bancários.",
       "d": "Ambas são denominações idênticas para a exigência de contratação compulsória de seguro residencial na liberação do financiamento."
      },
      "gabarito": "b",
@@ -13327,7 +13327,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa B está correta. Quem distribui produtos domina a mecânica financeira e o cliente comum não, e essa diferença é a matéria-prima da má-fé. Por isso a assinatura de um termo apresentado como simples formalidade não corrige a omissão de risco: o dever é traduzir, explicando como e por que o dinheiro pode ser perdido, em linguagem que aquele cliente consiga entender.</p><p>As alternativas A, C e D erram ao tratar a assinatura como transferência de risco, reduzir o dever de informar à entrega de documentos ou negar a assimetria de informação entre a instituição e o cliente.</p>",
      "enunciado": "<p>Um cliente de varejo, sem experiência em produtos de risco, assina o termo de ciência de risco de um fundo multimercado alavancado depois de ouvir do funcionário da agência que aquilo era \"uma formalidade padrão para abrir a conta\". Meses depois, diante de uma perda relevante, ele reclama alegando que nunca soube que poderia perder parte do capital, e a instituição se defende dizendo que ele assinou o termo. A respeito da assimetria de informação entre a instituição e o cliente, é correto afirmar que:</p>",
      "alternativas": {
-      "a": "A assinatura do termo de ciência transfere integralmente o risco ao cliente e afasta qualquer dever posterior de esclarecimento da instituição.",
+      "a": "A assinatura do termo de ciência transfere o risco ao cliente e afasta o dever posterior de esclarecimento da instituição.",
       "b": "A assinatura do termo não corrige a omissão, pois o dever de quem distribui é traduzir a informação em linguagem que aquele cliente entenda.",
       "c": "O dever de informar cumpre-se com a entrega do regulamento e da lâmina, cabendo ao cliente buscar sozinho o significado dos termos técnicos.",
       "d": "A assimetria de informação é irrelevante no atendimento, porque quem assina um termo de risco é presumido capaz de avaliar produtos alavancados."
@@ -13347,10 +13347,10 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "simulado",
       "revisao"
      ],
-     "comentario": "<p>A alternativa A está correta. Na distribuição de produtos de investimento, o profissional analisa, esclarece, traduz as informações e recomenda. A decisão de investimento e a ordem de execução pertencem sempre ao cliente. Decidir e movimentar ativos discricionariamente pelo investidor exige registro de administrador de carteira perante a CVM e contrato específico.</p><p>As alternativas B, C e D erram ao considerar normal gerir dinheiro alheio no balcão, incentivar a ocultação de custos ou terceirizar a decisão por formulário de caixa eletrônico.</p>",
+     "comentario": "<p>A alternativa A está correta. Na distribuição de produtos de investimento, o profissional analisa, esclarece, traduz as informações e recomenda. A decisão de investimento e a ordem de execução pertencem ao cliente. Decidir e movimentar ativos discricionariamente pelo investidor exige registro de administrador de carteira perante a CVM e contrato específico.</p><p>As alternativas B, C e D erram ao considerar normal gerir dinheiro alheio no balcão, incentivar a ocultação de custos ou terceirizar a decisão por formulário de caixa eletrônico.</p>",
      "enunciado": "<p>Um cliente idoso comparece à agência bancária e é atendido por seu gerente de relacionamento para consultar a posição de suas aplicações de renda fixa. Demonstrando extrema confiança no funcionário, o cliente afirma que prefere não ouvir detalhes explicativos e solicita que o gerente \"decida e faça todas as trocas e alocações de ativos que julgar melhores\" em sua conta corrente. Diante dos limites do atendimento e da ética profissional, o gerente deve orientar que:</p>",
      "alternativas": {
-      "a": "A decisão e a emissão das ordens cabem sempre ao cliente, porque decidir por ele exige contrato de carteira administrada.",
+      "a": "A decisão e a emissão das ordens cabem ao cliente, porque decidir por ele exige contrato de carteira administrada.",
       "b": "A conduta de decidir pelo cliente é a regra geral do atendimento bancário para investidores que declaram baixa instrução financeira.",
       "c": "O gerente deve assinar os termos e efetuar as operações em nome do cliente, mantendo o segredo sobre os custos e taxas do fundo.",
       "d": "A transferência do poder de decisão ao gerente é permitida mediante o preenchimento de uma declaração simples no caixa eletrônico."
@@ -13601,7 +13601,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>Um profissional certificado cometeu uma fraude dolosa ao simular assinaturas em termos de adesão para bater metas comerciais de um fundo restrito e provocou prejuízos financeiros aos clientes afetados. Ele foi demitido por justa causa pela instituição financeira onde trabalhava. A respeito das consequências jurídicas e administrativas da conduta desse profissional, a demissão por justa causa:</p>",
      "alternativas": {
       "a": "Não impede a responsabilização perante a autorregulação e perante o Estado, pois as três esferas são independentes e acumuláveis.",
-      "b": "Extingue integralmente qualquer possibilidade de apuração administrativa pela CVM ou de punição pela autorregulação da Anbima.",
+      "b": "Extingue a possibilidade de apuração administrativa pela CVM ou de punição pela autorregulação da Anbima.",
       "c": "Isenta o profissional de reparação cível do dano aos clientes por ter havido a punição trabalhista máxima na empresa.",
       "d": "Garante a manutenção da validade de sua certificação Anbima por ter sido a infração cometida no exercício do emprego bancário formal."
      },
@@ -13899,7 +13899,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "alternativas": {
       "a": "A identificação responde quem é o cliente, com CPF ou CNPJ, e a qualificação avalia capacidade financeira, renda e patrimônio.",
       "b": "A identificação e a qualificação são termos rigorosamente sinônimos, referindo-se unicamente à coleta do comprovante de residência do titular.",
-      "c": "A qualificação do cliente dispensa a avaliação da capacidade financeira sempre que o correntista for pessoa física de baixa renda.",
+      "c": "A qualificação do cliente dispensa a avaliação da capacidade financeira quando o correntista for pessoa física de baixa renda.",
       "d": "A etapa de identificação do cliente serve para verificar se o produto de investimento é adequado ao seu perfil de risco e horizonte de aplicação."
      },
      "gabarito": "a",
@@ -14014,7 +14014,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>A Lei Geral de Proteção de Dados Pessoais (LGPD - Lei 13.709/2018) estabelece os conceitos fundamentais sobre o tratamento de dados de pessoas naturais. A respeito das definições normativas de dados pessoais e dos papéis dos agentes envolvidos, é correto afirmar que:</p>",
      "alternativas": {
       "a": "O encarregado é a pessoa física titular dos dados cadastrais que exige a portabilidade das suas informações para outro banco.",
-      "b": "O dado anonimizado continua sendo classificado como dado pessoal e sujeita-se a todas as restrições da lei, independentemente de reversão.",
+      "b": "O dado anonimizado continua sendo classificado como dado pessoal e sujeita-se às restrições da lei, independentemente de reversão.",
       "c": "Dado sensível inclui biometria e saúde, o controlador decide sobre o tratamento e o operador trata os dados em nome dele.",
       "d": "O operador é o órgão público federal responsável por aplicar sanções administrativas de multa simples a instituições financeiras."
      },
@@ -14037,7 +14037,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "enunciado": "<p>No mercado financeiro, a proteção de dados pessoais sob a LGPD (Lei 13.709/2018) coexiste com as regras de preservação do sigilo bancário trazidas pela Lei Complementar 105/2001. Ao comparar o regramento dessas duas legislações, verifica-se que:</p>",
      "alternativas": {
       "a": "A LGPD regula o tratamento de dados pessoais, e a LC 105/2001 cuida do sigilo das operações financeiras, cuja quebra ilícita é crime.",
-      "b": "A LGPD revogou integralmente a Lei Complementar 105/2001, extinguindo o dever de sigilo bancário para operações ativas e passivas.",
+      "b": "A LGPD revogou a Lei Complementar 105/2001, extinguindo o dever de sigilo bancário para operações ativas e passivas.",
       "c": "A quebra de sigilo bancário fora das hipóteses legais é classificada como infração administrativa leve, sendo isenta de sanção penal.",
       "d": "A revelação de dados financeiros autorizada expressamente pelo interessado constitui violação criminosa de sigilo bancário."
      },
@@ -14082,7 +14082,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
      "comentario": "<p>A alternativa B está correta. O direito de eliminação trazido pela LGPD ressalva expressamente a conservação dos dados para o cumprimento de obrigação legal ou regulatória pelo controlador. Na atividade bancária, as normas de prevenção à lavagem de dinheiro exigem a guarda dos cadastros e registros (cinco anos pela Lei 9.613/1998 e dez anos pela norma do BCB), não podendo o cliente exigir a exclusão dessas informações de conformidade.</p><p>As alternativas A, C e D erram ao tratar o direito de eliminação como absoluto, cobrar taxas pelo atendimento aos direitos da LGPD ou autorizar a destruição de históricos exigidos pelo Bacen.</p>",
      "enunciado": "<p>Um ex-cliente comparece à agência bancária um mês após ter encerrado formalmente sua conta corrente e exige a exclusão imediata e definitiva de todos os seus dados pessoais e de seu histórico de transações mantidos pelo banco, invocando o seu direito de eliminação sob a LGPD. O gerente de atendimento deve responder que o pedido:</p>",
      "alternativas": {
-      "a": "Deve ser prontamente cumprido em 24 horas, sendo o banco obrigado a apagar todo o histórico de operações em atendimento ao direito absoluto do titular.",
+      "a": "Deve ser prontamente cumprido em 24 horas, sendo o banco obrigado a apagar o histórico de operações em atendimento ao direito absoluto do titular.",
       "b": "Não pode ser atendido quanto aos registros de guarda obrigatória, pois o dever legal de conservação de PLD se sobrepõe ao pedido.",
       "c": "Só será atendido mediante o pagamento pelo ex-cliente de uma taxa de ressarcimento de custos operacionais de exclusão de banco de dados.",
       "d": "É procedente e autoriza a eliminação imediata de dados exigidos pelas normas de prevenção à lavagem de dinheiro da CVM e do Banco Central."
@@ -14223,7 +14223,7 @@ window.QUESTOES_DATA = Object.assign(window.QUESTOES_DATA || {}, {
       "a": "A multa administrativa da CVM é de no máximo R$ 20 milhões por ser o mesmo teto fixado para o processo administrativo da Lei de Lavagem de Dinheiro.",
       "b": "O teto máximo absoluto da multa administrativa é engessado em R$ 50 milhões, sendo proibido aplicar valor superior mesmo que o prejuízo seja maior.",
       "c": "O valor da multa é limitado rigidamente a três vezes o prejuízo apurado pelos investidores, totalizando R$ 90 milhões como parâmetro único legal.",
-      "d": "Prevalece o maior valor entre os quatro parâmetros legais, e a multa pode chegar a R$ 60 milhões, o dobro do prejuízo dos investidores."
+      "d": "Entre os quatro parâmetros legais de multa, prevalece o que resulta em R$ 60 milhões, o dobro do prejuízo dos investidores."
      },
      "gabarito": "d",
      "feedback": {
