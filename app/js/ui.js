@@ -1543,21 +1543,19 @@ function adiarPwa(){
    página o viewport volta ao normal, porque o pedido foi de trocar a
    visualização do dashboard, e não do app inteiro.
 
-   Fica no localStorage, e não no STATE: é preferência do APARELHO,
-   não da conta. Quem estuda no celular e no computador não quer a
-   escolha de um valendo no outro. Se o localStorage estiver bloqueado
-   (aba anônima), o modo automático assume e nada quebra. */
-const DASH_VIEW_KEY="bussola:dashView";
+   O modo painel NÃO fica salvo (decisão do dono em 29/09/2026). O
+   dashboard é primariamente em coluna: ele abre em coluna sempre, e o
+   painel é uma olhada, não uma configuração. Guardar a escolha fazia o
+   aluno sair para outro menu, voltar ao dashboard e reencontrar o
+   painel, com o menu ocupando parte da tela quando ele já esperava a
+   coluna de volta. Por isso o estado vive só em memória e zera ao sair
+   da tela. */
+let _dashView="auto";
 const DASH_VIEW_LARGURA=1100;
 const VIEWPORT_AUTO="width=device-width, initial-scale=1.0";
 
-function getDashView(){
-  try { return localStorage.getItem(DASH_VIEW_KEY)==="pc"?"pc":"auto"; }
-  catch(e){ return "auto"; }
-}
-function setDashView(v){
-  try { localStorage.setItem(DASH_VIEW_KEY,v); } catch(e){}
-}
+function getDashView(){ return _dashView==="pc"?"pc":"auto"; }
+function setDashView(v){ _dashView=(v==="pc")?"pc":"auto"; }
 /* Chamada em toda troca de página e na carga: o modo computador só
    pode estar ligado com o dashboard na tela. */
 function aplicarDashView(){
@@ -1566,6 +1564,9 @@ function aplicarDashView(){
     const toque=!!(window.matchMedia&&window.matchMedia("(pointer:coarse)").matches);
     document.body.classList.toggle("toque",toque);
   }
+  // sair do dashboard devolve o modo coluna: o painel é uma olhada, não
+  // uma configuração, e voltar já em painel surpreende o aluno
+  if(STATE.pagina!=="dashboard") _dashView="auto";
   const pc=getDashView()==="pc"&&STATE.pagina==="dashboard";
   if(meta){
     const alvo=pc?("width="+DASH_VIEW_LARGURA):VIEWPORT_AUTO;
@@ -1622,10 +1623,13 @@ function navTo(pg){
   if(pg==="conteudo")   renderConteudo();
   if(pg==="coach")      renderCoachPage();
   if(pg==="agenda")     renderAgendaPage();
-  // fechar sidebar no mobile
-  closeSidebarMobile();
-  // o modo computador vale só no dashboard: sair da tela devolve o viewport
+  /* aplicarDashView ANTES de fechar o menu: sair do painel devolve o
+     viewport de 1100px para a largura real do aparelho, e é essa largura
+     que closeSidebarMobile consulta. Na ordem inversa ele media 1100,
+     concluía que não era celular e deixava o menu aberto por cima do
+     conteúdo. */
   aplicarDashView();
+  closeSidebarMobile();
 }
 
 function toggleSidebar(){
